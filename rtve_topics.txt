@@ -1,0 +1,18 @@
+REFERENCIA TEMÁTICA — EDICIÓN, MONTAJE Y PROCESOS AUDIOVISUALES RTVE
+
+Usar como inspiración, sin copiar mecánicamente:
+- Señal de vídeo digital, Y'CbCr, muestreo 4:2:2 y 4:4:4:4, profundidad de bits.
+- Colorimetría, Rec. 709, luma, banding, curvas logarítmicas, HDR.
+- Códecs intraframe/Long GOP, H.264/H.265, XDCAM HD422, MXF, AAF.
+- Avid Media Composer: Match Frame, Audio Mixer, relink, multicámara.
+- Avid Interplay: Dynamic Relink, gestión de medios y metadatos.
+- EVS LSM e IPDirector: clips, playlists, canales y reproducción.
+- Audio digital: dBFS, muestreo, filtros shelving, ducking, balanceado.
+- Medida: vectorscopio, forma de onda y control técnico.
+- Almacenamiento: RAID 0/1/5, LTO, servidores y redes.
+- Código de tiempo, drop-frame, genlock y sincronismo.
+- Edición offline/online, proxies, conformado y exportación.
+- Lenguaje audiovisual, continuidad, ritmo, J-cut y L-cut.
+- Legislación general de RTVE y prevención de riesgos.
+
+Las preguntas deben tener una única respuesta inequívocamente correcta y explicaciones técnicamente rigurosas.
