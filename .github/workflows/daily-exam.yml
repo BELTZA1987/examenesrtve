@@ -1,10 +1,13 @@
-name: Generar examen diario
+  name: Generar examen diario
 
 on:
-  schedule:
-    - cron: "10 8 * * *"
-      timezone: "Europe/Madrid"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Crear otro examen aunque ya exista uno de hoy"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
