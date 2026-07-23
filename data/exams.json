@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-23",
+  "exams": [
+    {
+      "id": "001",
+      "title": "Examen 001",
+      "date": "2026-07-23",
+      "level": "Alto",
+      "timeMinutes": 25,
+      "blocks": [
+        "Vídeo digital",
+        "Audio",
+        "Avid",
+        "EVS",
+        "Broadcast"
+      ],
+      "questions": [
+        {
+          "prompt": "En una señal Y′CbCr 4:2:2 de 10 bits, ¿qué afirmación es correcta?",
+          "options": [
+            "Cada píxel contiene muestras independientes de Y′, Cb y Cr.",
+            "La luminancia mantiene la resolución horizontal completa y cada componente de crominancia se muestrea a la mitad.",
+            "La crominancia se reduce a la mitad horizontal y verticalmente.",
+            "Los cuatro valores indican canales independientes de 2 bits."
+          ],
+          "correctIndex": 1,
+          "explanation": "En 4:2:2, la luminancia conserva todas las muestras horizontales y Cb/Cr tienen la mitad. Los 10 bits indican 1024 niveles posibles por componente.",
+          "category": "Vídeo digital"
+        },
+        {
+          "prompt": "¿Qué característica diferencia principalmente un códec intraframe de uno Long GOP?",
+          "options": [
+            "El intraframe no utiliza compresión.",
+            "El Long GOP solo puede almacenar imágenes progresivas.",
+            "El intraframe codifica cada cuadro con mayor independencia respecto a los cuadros vecinos.",
+            "El Long GOP no admite código de tiempo."
+          ],
+          "correctIndex": 2,
+          "explanation": "En intraframe cada cuadro se comprime con relativa independencia. Long GOP utiliza relaciones temporales entre cuadros.",
+          "category": "Códecs"
+        },
+        {
+          "prompt": "Un archivo MXF puede definirse correctamente como:",
+          "options": [
+            "Un códec de vídeo exclusivamente sin pérdidas.",
+            "Un contenedor profesional capaz de almacenar esencia audiovisual y metadatos.",
+            "Un sistema de archivos utilizado únicamente por XDCAM.",
+            "Una tabla de decisiones de montaje."
+          ],
+          "correctIndex": 1,
+          "explanation": "MXF es un contenedor profesional, no un códec concreto.",
+          "category": "Contenedores"
+        },
+        {
+          "prompt": "En un flujo offline-online, el conformado consiste principalmente en:",
+          "options": [
+            "Convertir el máster final en archivos proxy.",
+            "Reconstruir la secuencia con los originales de alta resolución.",
+            "Eliminar los efectos temporales de la secuencia.",
+            "Mezclar todas las pistas de audio en una sola."
+          ],
+          "correctIndex": 1,
+          "explanation": "El conformado reconstruye la secuencia definitiva utilizando los medios originales o de máxima calidad.",
+          "category": "Posproducción"
+        },
+        {
+          "prompt": "¿Qué elemento es especialmente importante para que un relink automático encuentre correctamente los originales?",
+          "options": [
+            "El nombre visible asignado manualmente al bin.",
+            "La posición de las pistas en la secuencia.",
+            "La coincidencia de identificadores, código de tiempo y metadatos de origen.",
+            "La resolución del monitor de edición."
+          ],
+          "correctIndex": 2,
+          "explanation": "Timecode, identificadores únicos, nombres de bobina y metadatos son fundamentales para un relink fiable.",
+          "category": "Metadatos"
+        },
+        {
+          "prompt": "En Avid Media Composer, la función Match Frame permite:",
+          "options": [
+            "Igualar automáticamente el color de dos planos.",
+            "Cargar en el monitor fuente el fotograma original correspondiente al plano situado en la secuencia.",
+            "Convertir un clip progresivo en entrelazado.",
+            "Sincronizar dos clips únicamente mediante forma de onda."
+          ],
+          "correctIndex": 1,
+          "explanation": "Match Frame permite localizar y cargar el material fuente correspondiente al plano montado.",
+          "category": "Avid"
+        },
+        {
+          "prompt": "Un archivo AAF se utiliza principalmente para:",
+          "options": [
+            "Comprimir un máster para distribución por internet.",
+            "Transferir secuencias, ediciones, pistas y metadatos entre aplicaciones.",
+            "Sustituir un archivo de vídeo por un proxy.",
+            "Crear copias de seguridad en cinta LTO."
+          ],
+          "correctIndex": 1,
+          "explanation": "AAF transporta decisiones de edición, pistas, referencias de medios y metadatos.",
+          "category": "Intercambio"
+        },
+        {
+          "prompt": "En vídeo digital, el banding es más probable cuando:",
+          "options": [
+            "La profundidad de bits es insuficiente para representar una gradación suave.",
+            "La frecuencia de cuadro es demasiado elevada.",
+            "Se emplea muestreo 4:4:4.",
+            "Se utiliza una señal progresiva."
+          ],
+          "correctIndex": 0,
+          "explanation": "Una profundidad de bits baja ofrece menos niveles tonales y puede producir saltos visibles en los degradados.",
+          "category": "Colorimetría"
+        },
+        {
+          "prompt": "En un vectorscopio, la distancia respecto al centro representa principalmente:",
+          "options": [
+            "La luminancia de la imagen.",
+            "La saturación de la crominancia.",
+            "La profundidad de bits.",
+            "La frecuencia de cuadro."
+          ],
+          "correctIndex": 1,
+          "explanation": "En el vectorscopio, la distancia al centro muestra la saturación; el ángulo indica el tono.",
+          "category": "Medida"
+        },
+        {
+          "prompt": "En audio digital, 0 dBFS representa:",
+          "options": [
+            "El nivel nominal recomendado para diálogos.",
+            "El silencio digital absoluto.",
+            "El nivel máximo representable antes del recorte digital.",
+            "El punto de referencia equivalente a −18 LUFS."
+          ],
+          "correctIndex": 2,
+          "explanation": "0 dBFS es el techo del sistema digital. Superarlo provoca clipping.",
+          "category": "Audio"
+        },
+        {
+          "prompt": "Según el teorema de Nyquist, una señal muestreada a 48 kHz puede representar teóricamente frecuencias de hasta:",
+          "options": [
+            "12 kHz.",
+            "24 kHz.",
+            "48 kHz.",
+            "96 kHz."
+          ],
+          "correctIndex": 1,
+          "explanation": "La frecuencia máxima teórica es la mitad de la frecuencia de muestreo.",
+          "category": "Audio"
+        },
+        {
+          "prompt": "La principal ventaja de una conexión de audio balanceada es:",
+          "options": [
+            "Aumentar automáticamente la ganancia.",
+            "Reducir las interferencias comunes inducidas en el cable.",
+            "Convertir el audio analógico en digital.",
+            "Evitar cualquier posibilidad de saturación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La transmisión balanceada permite cancelar gran parte del ruido común captado por el cable.",
+          "category": "Audio"
+        },
+        {
+          "prompt": "En una configuración RAID 1:",
+          "options": [
+            "Los datos se dividen entre varios discos sin redundancia.",
+            "Los datos se duplican en dos unidades.",
+            "Se distribuye paridad entre un mínimo de tres discos.",
+            "Se obtiene el doble de capacidad útil que con un solo disco."
+          ],
+          "correctIndex": 1,
+          "explanation": "RAID 1 duplica los datos. Ofrece redundancia, aunque reduce la capacidad útil.",
+          "category": "Almacenamiento"
+        },
+        {
+          "prompt": "¿Cuál es una utilización habitual de las cintas LTO en un entorno audiovisual?",
+          "options": [
+            "Reproducción multicámara en directo.",
+            "Archivo y copia de seguridad de grandes volúmenes de contenido.",
+            "Monitorización de señales SDI.",
+            "Conversión entre espacios de color."
+          ],
+          "correctIndex": 1,
+          "explanation": "LTO se utiliza principalmente para archivo, preservación y copias de seguridad.",
+          "category": "Almacenamiento"
+        },
+        {
+          "prompt": "El genlock se emplea para:",
+          "options": [
+            "Igualar la resolución de todas las cámaras.",
+            "Sincronizar los equipos de vídeo respecto a una referencia común.",
+            "Generar automáticamente el código de tiempo de los clips.",
+            "Convertir señales SDI en señales IP."
+          ],
+          "correctIndex": 1,
+          "explanation": "El genlock proporciona una referencia temporal común para cámaras, mezcladores, servidores y otros equipos.",
+          "category": "Multicámara"
+        },
+        {
+          "prompt": "Una señal 1080i/25 está formada normalmente por:",
+          "options": [
+            "25 imágenes progresivas por segundo.",
+            "25 campos entrelazados por segundo.",
+            "25 cuadros construidos a partir de 50 campos por segundo.",
+            "50 cuadros progresivos por segundo."
+          ],
+          "correctIndex": 2,
+          "explanation": "En 1080i/25 se generan 25 cuadros entrelazados a partir de 50 campos por segundo.",
+          "category": "Señal"
+        },
+        {
+          "prompt": "En el código de tiempo drop-frame:",
+          "options": [
+            "Se eliminan periódicamente fotogramas reales del vídeo.",
+            "Se omiten determinados números de código de tiempo para compensar frecuencias fraccionarias.",
+            "Se reduce la frecuencia de cuadro a 25 fps.",
+            "Se elimina el desfase entre vídeo y audio mediante resincronización."
+          ],
+          "correctIndex": 1,
+          "explanation": "Drop-frame no borra fotogramas: omite determinados números de código de tiempo.",
+          "category": "Código de tiempo"
+        },
+        {
+          "prompt": "En una señal 4:4:4:4, el cuarto componente suele corresponder a:",
+          "options": [
+            "Una pista de audio asociada.",
+            "Un canal alfa.",
+            "Un código de tiempo longitudinal.",
+            "Una referencia de sincronismo."
+          ],
+          "correctIndex": 1,
+          "explanation": "El cuarto valor suele representar un canal alfa para transparencia o composición.",
+          "category": "Composición"
+        },
+        {
+          "prompt": "En un sistema EVS, una playlist es:",
+          "options": [
+            "Una lista ordenada de clips preparada para su reproducción.",
+            "Una copia de seguridad de todos los canales grabados.",
+            "Una secuencia exclusiva de Avid transferida mediante AAF.",
+            "Una tabla con los códigos de tiempo de las cámaras."
+          ],
+          "correctIndex": 0,
+          "explanation": "Una playlist de EVS organiza varios clips para reproducirlos de forma secuencial.",
+          "category": "EVS"
+        },
+        {
+          "prompt": "Desde el punto de vista del montaje, un L-cut se produce cuando:",
+          "options": [
+            "El audio del plano siguiente comienza antes de cambiar la imagen.",
+            "La imagen del plano siguiente aparece mientras continúa el audio del plano anterior.",
+            "Imagen y sonido cambian exactamente en el mismo fotograma.",
+            "Se elimina por completo el sonido ambiente entre dos planos."
+          ],
+          "correctIndex": 1,
+          "explanation": "En un L-cut continúa el audio del plano anterior mientras ya vemos la imagen siguiente.",
+          "category": "Montaje"
+        }
+      ]
+    }
+  ]
+}
