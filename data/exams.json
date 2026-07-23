@@ -3,6 +3,265 @@
   "updatedAt": "2026-07-23",
   "exams": [
     {
+      "id": "002",
+      "title": "Examen 002",
+      "date": "2026-07-23",
+      "level": "alto",
+      "timeMinutes": 20,
+      "blocks": [
+        "Señal y color",
+        "Códecs y formatos",
+        "Playout y gestión de medios",
+        "Audio",
+        "Medición y almacenamiento",
+        "Redes y sincronización",
+        "Workflow y conformado",
+        "Prevención de riesgos"
+      ],
+      "questions": [
+        {
+          "prompt": "En un flujo de trabajo de retransmisión multicámara en directo, ¿por qué suele elegirse el muestreo Y'CbCr 4:2:2 frente a 4:4:4 para la señal principal de emisión?",
+          "options": [
+            "Porque 4:2:2 reduce la tasa de datos al muestrear la crominancia sólo horizontalmente, conservando la resolución vertical de crominancia y la integralidad de la luminancia, lo que resulta adecuado para emisión sin operaciones intensivas de VFX.",
+            "Porque 4:2:2 elimina por completo la componente de crominancia en campos alternos para ahorrar ancho de banda.",
+            "Porque 4:2:2 permite transmitir un canal alfa adicional en el mismo ancho de banda que 4:4:4.",
+            "Porque 4:2:2 mantiene la misma resolución cromática que 4:4:4 pero reduce la profundidad de bits automáticamente."
+          ],
+          "correctIndex": 0,
+          "explanation": "Y'CbCr 4:2:2 reduce la cantidad de muestras de crominancia en el dominio horizontal (dos muestras de Cb/Cr por cada cuatro muestras de Y) mientras mantiene muestreo completo de luma y sin subsampling vertical; eso reduce el bitrate frente a 4:4:4 pero conserva suficiente información de color para emisión y correcciones ligeras. Las otras opciones son incorrectas: 4:2:2 no mantiene la misma resolución cromática que 4:4:4, no elimina crominancia por campos ni añade canal alfa.",
+          "category": "Señal y color"
+        },
+        {
+          "prompt": "Respecto a espacios de color para producción televisiva, ¿qué característica fundamental distingue al estándar Rec.2020 frente a Rec.709?",
+          "options": [
+            "Rec.2020 es idéntico a Rec.709 salvo por la resolución máxima admitida.",
+            "Rec.2020 ofrece una gama de color (primarias) significativamente más amplia que Rec.709, permitiendo representar colores que Rec.709 no puede cubrir.",
+            "Rec.2020 define una curva de transferencia totalmente negativa respecto a Rec.709.",
+            "Rec.2020 obliga a usar muestreo 4:4:4 y profundidad mínima de 16 bits por componente."
+          ],
+          "correctIndex": 1,
+          "explanation": "Rec.2020 define primarias (gamut) mucho más amplias que Rec.709; por tanto puede representar colores fuera del alcance de Rec.709. No impone obligatoriamente muestreo ni profundidad de bits concretas; la curva de transferencia no es 'totalmente negativa' y no es idéntico a Rec.709.",
+          "category": "Colorimetría"
+        },
+        {
+          "prompt": "¿Cuál es la medida técnica más efectiva para reducir el efecto de banding visible en degradados de cielo en una señal de vídeo durante la postproducción?",
+          "options": [
+            "Reducir la resolución espacial para que las transiciones de color sean menos visibles.",
+            "Aplicar un filtro de enfoque (sharpen) sobre la zona afectada.",
+            "Convertir la señal a 4:4:4 para que el crominance compense el banding de luminancia.",
+            "Incrementar la profundidad de bits del archivo (por ejemplo a 10 o 12 bits) y/o aplicar dithering tonal antes de cuantizar a menor profundidad."
+          ],
+          "correctIndex": 3,
+          "explanation": "El banding se debe a la cuantización insuficiente de niveles tonales. Incrementar la profundidad de bits aumenta los niveles disponibles entre blancos y negros; aplicar dithering añade ruido aleatorio que disimula escalones. Las otras opciones no atacan la causa: el sharpen empeora artefactos, reducir resolución no es solución y 4:4:4 afecta crominancia, no la cuantización tonal de luma.",
+          "category": "Señal y color"
+        },
+        {
+          "prompt": "En la elección entre H.264 (AVC) y H.265 (HEVC) para archivado de material de emisión con limitación de ancho de banda, ¿cuál es la principal ventaja de H.265 y su coste asociado?",
+          "options": [
+            "H.265 permite reducir el bitrate aproximado a la mitad manteniendo calidad visual equivalente, a costa de mucha mayor complejidad de codificación y mayor demanda de cómputo y latencia.",
+            "H.265 garantiza compatibilidad universal en todos los equipos de emisión y edición actuales.",
+            "H.265 es un códec intraframe puro, por lo que no requiere GOPs y facilita la edición con menor CPU.",
+            "H.265 ofrece una compresión con pérdidas mucho menor que H.264 sin aumentar la complejidad de codificación."
+          ],
+          "correctIndex": 0,
+          "explanation": "HEVC (H.265) logra, en condiciones comparables, una eficiencia de compresión aproximadamente superior (hasta ~50% menos bitrate) respecto a AVC (H.264), pero exige mayor potencia de codificación/decodificación y puede introducir mayor latencia y costes de procesamiento. No es intraframe puro y la compatibilidad no es universal.",
+          "category": "Códecs y formatos"
+        },
+        {
+          "prompt": "En Avid Interplay/MediaCentral, ¿qué elemento metadata es crítico para que la función Dynamic Relink asocie correctamente un elemento proxy de edición con su archivo de alto-res original?",
+          "options": [
+            "La presencia del mismo nombre de pista de audio en ambos archivos.",
+            "Un identificador único y metadatos coincidentes (por ejemplo UMID/UID y timecode de inicio) que permitan emparejar proxy y original.",
+            "Que ambos archivos estén en el mismo contenedor (MXF) obligatoriamente.",
+            "Que el archivo original tenga exactamente el mismo tamaño en bytes que el proxy."
+          ],
+          "correctIndex": 1,
+          "explanation": "Dynamic Relink utiliza identificadores y metadatos coincidentes (UMID/UID, timecode de inicio, nombre de clip y otros campos indexados) para emparejar proxies y originales. El nombre de pista, el contenedor o el tamaño en bytes no son criterios fiables por sí solos.",
+          "category": "Gestión de medios"
+        },
+        {
+          "prompt": "Para garantizar una reproducción frame-accurate y modos de shuttle/trick en un servidor EVS, ¿qué información integrada en los clips es esencial?",
+          "options": [
+            "Sólo el nombre del archivo y el codec usado.",
+            "Una tabla de índices y timecode sólido (TC embebido o indexado) por muestra/segmento que permita localizar y reproducir frames individuales y soportar velocidades de reproducción variables.",
+            "Que el clip esté en un contenedor MP4 para que el reproductor lo lea.",
+            "Únicamente la duración total del clip en segundos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los servidores EVS usan timecode embebido/indexado y tablas de índice que permiten localizar frames específicos y gestionar reproducción a distintas velocidades y direcciones. El nombre o el contenedor por sí solos no permiten trick-play frame-accurate.",
+          "category": "Playout y EVS"
+        },
+        {
+          "prompt": "En planificación de mezcla y preparación de señal de audio para emisión, ¿por qué es habitual dejar un margen de cabeza (headroom) con picos objetivo alrededor de -6 dBFS en la etapa de mezcla antes de codificación?",
+          "options": [
+            "Para dejar margen ante picos inter-muestrales y procesados (compresiones, limitadores, conversión a analógico/codec), evitando intermitencias/clipping durante retransmisión y compresión.",
+            "Porque los medidores VU sólo van hasta -6 dBFS.",
+            "Porque los equipos de emisión no aceptan niveles superiores a -6 dBFS por normativa.",
+            "Porque -6 dBFS es equivalente a 0 V en analógico y evita problemas de fase."
+          ],
+          "correctIndex": 0,
+          "explanation": "Dejar headroom (picos nominales alrededor de -6 dBFS) permite absorber picos adicionales producidos por procesados, limitación y conversiones, y reduce el riesgo de inter-sample peaks que producen clipping tras codificación/representación analógica. No es una restricción normativa universal ni tiene relación directa con 0 V ni con limitación de los medidores VU.",
+          "category": "Audio"
+        },
+        {
+          "prompt": "¿Cuál diferencia funcional describe mejor un filtro shelving frente a un filtro paramétrico (peaking) en ecualización de audio?",
+          "options": [
+            "El shelving afecta toda la banda por encima o por debajo de una frecuencia de corte con pendiente ajustable; el paramétrico modifica un rango centrado en una frecuencia con Q variable.",
+            "El shelving ajusta la fase exclusivamente y el paramétrico ajusta sólo la ganancia.",
+            "El shelving sólo atenúa frecuencias graves y el paramétrico sólo agudiza agudos.",
+            "El shelving siempre actúa en tiempo real y el paramétrico no."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un filtro shelving incrementa o atenúa las frecuencias más allá de una frecuencia de corte (baja o alta) formando una 'meseta'; un paramétrico actúa sobre una banda centrada en una frecuencia con control de ancho (Q). Las otras afirmaciones son incorrectas o imprecisas.",
+          "category": "Audio"
+        },
+        {
+          "prompt": "¿Qué presenta de forma principal un monitor de forma de onda (waveform monitor) en un entorno de control técnico de vídeo?",
+          "options": [
+            "Una vista tridimensional del histograma de color por cada canal.",
+            "La representación en tiempo real de la crominancia (Cb/Cr) en coordenadas polares.",
+            "La amplitud de la señal de luminancia (o del canal seleccionado) a lo largo de la posición horizontal del cuadro, permitiendo valorar niveles de negro/blanco y exposición por línea.",
+            "Sólo el contour de la forma de la imagen sin información de nivel."
+          ],
+          "correctIndex": 2,
+          "explanation": "El waveform monitor muestra la amplitud (nivel de señal eléctrica o luma) a lo largo de la posición horizontal del cuadro (por líneas de escaneo), útil para comprobar niveles de negro/blanco, balance de ganancia y errores de sincronía. No es una representación polar de crominancia ni un histograma 3D.",
+          "category": "Medición"
+        },
+        {
+          "prompt": "En un vectorscopio, ¿qué representa principalmente el ángulo de un punto respecto al centro de la pantalla?",
+          "options": [
+            "La frecuencia de muestreo de la señal de vídeo.",
+            "El matiz (hue) del color; la distancia radial indica la intensidad (saturación).",
+            "La saturación de la señal.",
+            "La fase de la subtrama de audio incrustada."
+          ],
+          "correctIndex": 1,
+          "explanation": "En un vectorscopio el ángulo alrededor del centro es la componente de matiz (hue) y la distancia radial representa la magnitud de la crominancia (saturación). No tiene relación con audio ni con frecuencia de muestreo.",
+          "category": "Medición"
+        },
+        {
+          "prompt": "En un sistema de almacenamiento RAID 5 empleado para medios de emisión, ¿qué riesgo principal existe durante el proceso de reconstrucción tras la caída de un disco?",
+          "options": [
+            "Que la matriz quede vulnerable: si durante la reconstrucción falla un segundo disco, se pierde irrecuperablemente la información del conjunto.",
+            "Que la distribución de paridad se pierda permanentemente aunque no falle ningún otro disco.",
+            "Que RAID 5 convierta automáticamente a RAID 1 para proteger los datos.",
+            "Que la reconstrucción sea instantánea sin impacto en rendimiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "RAID 5 soporta la pérdida de un disco gracias a la paridad distribuida; sin embargo, durante la reconstrucción los datos se leen intensamente y la matriz sigue siendo vulnerable: la falla de un segundo disco provoca pérdida total de datos. La reconstrucción no es instantánea y no convierte la matriz a RAID 1.",
+          "category": "Almacenamiento"
+        },
+        {
+          "prompt": "Respecto a la compatibilidad entre generaciones de cintas LTO, ¿qué comportamiento es el más habitual según las especificaciones del consorcio LTO?",
+          "options": [
+            "Las unidades LTO sólo leen su propia generación y no son compatibles con otras.",
+            "Las cintas LTO son idénticas entre generaciones y no existe problema de compatibilidad.",
+            "Las unidades LTO siempre pueden leer y escribir cualquier generación previa y futura sin restricción.",
+            "Las unidades LTO normalmente pueden leer al menos las dos generaciones anteriores y escribir como máximo en la generación inmediatamente anterior (backward read 2 / write 1)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La política habitual del LTO Consortium establece compatibilidad hacia atrás limitada: las unidades suelen poder leer hasta dos generaciones anteriores y escribir en la generación inmediatamente anterior (read-2 / write-1), lo que facilita migraciones pero no garantiza lectura/escritura ilimitada entre generaciones.",
+          "category": "Almacenamiento"
+        },
+        {
+          "prompt": "¿Cuál es la principal diferencia operativa entre una infraestructura SDI tradicional y una basada en SMPTE ST 2110 en un centro de producción?",
+          "options": [
+            "SDI transporta vídeo como paquetes IP mientras que ST 2110 hace multiplexación SDI por cable coaxial.",
+            "SDI sólo soporta definición estándar y ST 2110 sólo soporta UHD.",
+            "En ST 2110 los dispositivos no requieren sincronización de reloj.",
+            "ST 2110 separa vídeo, audio y metadatos en flujos RTP independientes permitiendo enrutamiento y procesamiento por separado; SDI lleva todos los elementos embebidos en un único enlace serial de señal analógica/digital."
+          ],
+          "correctIndex": 3,
+          "explanation": "SMPTE ST 2110 packetiza esencia en flujos RTP separados (vídeo, audio, ANC), lo cual permite enrutar y procesar cada esencia independientemente; SDI transporta vídeo con audio embebido y datos de ancillaries por un único enlace serie. Las otras afirmaciones son incorrectas sobre la naturaleza de ambos estándares.",
+          "category": "Redes y sincronización"
+        },
+        {
+          "prompt": "Sobre el formato XDCAM HD422 utilizado históricamente en entornos broadcast, ¿qué descripción técnica es correcta?",
+          "options": [
+            "XDCAM HD422 es un formato basado en códec MPEG‑2 con muestreo 4:2:2 y tasas típicas (por ejemplo 50 Mbps) diseñado para emisiones profesionales.",
+            "XDCAM HD422 es un códec sin compresión que almacena vídeo en 4:4:4 a más de 1 Gbps.",
+            "XDCAM HD422 es un estándar de archivo equivalente a MXF OP‑ATOM sin compresión.",
+            "XDCAM HD422 es un contenedor propietario que sólo admite audio mono y subtítulos."
+          ],
+          "correctIndex": 0,
+          "explanation": "XDCAM HD422 usa compresión MPEG‑2 en Long GOP con muestreo 4:2:2 y tarifas comunes como 50 Mbps, orientado a entornos profesionales de producción y emisión. No es sin compresión ni limita el audio a mono; además no se define únicamente por el contenedor.",
+          "category": "Códecs y formatos"
+        },
+        {
+          "prompt": "En una estrategia offline/online que emplea proxies, ¿qué ventaja técnica aporta generar proxies a partir de material en curva logarítmica (log) en lugar de convertirlos directamente a Rec.709?",
+          "options": [
+            "Los proxies log hacen innecesaria la aplicación de LUTs en la etapa de online.",
+            "No hay ventaja: los proxies deben ser siempre Rec.709 para evitar confusión visual.",
+            "Los proxies log conservan información de rango dinámico y colorimetría relativos al material original, facilitando la conformidad y evitando clipping tonal al volver a enlazar al material de alto res junto al corrector/LUT de online.",
+            "Los proxies log ocupan menos espacio en disco que los Rec.709."
+          ],
+          "correctIndex": 2,
+          "explanation": "Generar proxies desde la señal log preserva la información de rango dinámico y tonos que son relevantes para la gradación final; al reconectar con los originales se evita pérdida de detalle o clipping inherente a una conversión a Rec.709 aplicada prematuramente. No es una cuestión de tamaño y no elimina la necesidad de LUTs en la online si se requiere una apariencia concreta.",
+          "category": "Workflow y conformado"
+        },
+        {
+          "prompt": "¿Cuál es la diferencia fundamental entre genlock y timecode en un plató de producción?",
+          "options": [
+            "Genlock sincroniza el timing y la fase de los generadores de vídeo (línea/field/frame) para que las señales coincidan electrónicamente; el timecode etiqueta y numera los frames para identificación y edición.",
+            "Genlock sirve sólo para audio y timecode sólo para vídeo.",
+            "Genlock es un sistema de archivo y timecode es un protocolo de red.",
+            "No existe diferencia: ambos son sinónimos."
+          ],
+          "correctIndex": 0,
+          "explanation": "Genlock distribuye una referencia de sincronía (clock) que mantiene alineados los osciladores de vídeo para evitar desfases en cada línea/field/frame; el timecode es un dato que etiqueta la numeración de frames para localización y edición. No son sinónimos ni están limitados a uno u otro medio erroneamente.",
+          "category": "Redes y sincronización"
+        },
+        {
+          "prompt": "En un entorno multicámara profesional donde se exige cero drift entre cámaras para posteriores procesos de conformado, ¿qué se debe garantizar a nivel de sincronización para minimizar la aparición de saltos de cuadro y permitir alineamiento milimétrico?",
+          "options": [
+            "Sólo que todas las cámaras usen baterías del mismo voltaje.",
+            "Que las cámaras compartan el mismo modelo de sensor, sin importar la sincronía.",
+            "Que las cámaras estén conectadas a Internet.",
+            "Que todas las cámaras estén genlockeadas a la misma referencia y/o alimentadas por la misma señal de sincronía junto con timecode embebido coherente; así se evita drift y se aseguran fotogramas coincidentes."
+          ],
+          "correctIndex": 3,
+          "explanation": "Para evitar drift entre múltiples cámaras lo correcto es proporcionar una referencia de genlock común (y generalmente timecode coherente) para que los muestreos de vídeo y la numeración de frames coincidan; baterías, modelo de cámara o conexión a Internet no garantizan esa sincronía temporal precisa.",
+          "category": "Señal y sincronización"
+        },
+        {
+          "prompt": "En el contexto del formato MXF, ¿qué describe correctamente el Operational Pattern OP1a, común en entrega de programas?",
+          "options": [
+            "OP1a es un patrón que almacena cada pista en un archivo separado (uno por essence).",
+            "OP1a produce un único archivo MXF intercalado que contiene todas las essences (vídeo, audio y metadatos) en un solo paquete de entrega; es el habitual para playout y archivo.",
+            "OP1a es un modo de compresión específico similar a H.265.",
+            "OP1a obliga a usar exclusivamente vídeo sin compresión."
+          ],
+          "correctIndex": 1,
+          "explanation": "MXF OP1a crea un único archivo MXF con essence intercalada (interleaved) y metadatos, formato habitual para entregas y archivos que requieren contener todo en un solo archivo. No es un modo de compresión ni obliga a no comprimir ni a separar por pistas.",
+          "category": "Formatos y entrega"
+        },
+        {
+          "prompt": "En gestión de color y conformado, ¿qué papel cumple una especificación ASC CDL (slope, offset, power, saturation) frente a una 3D LUT?",
+          "options": [
+            "ASC CDL define transformaciones matemáticas simples y reversibles para ajustes primarios (slope/offset/power/saturation) que son interoperables entre aplicaciones; una 3D LUT aplica una tabla completa de mapeo no lineal más precisa pero menos portable en cambios puntuales.",
+            "ASC CDL contiene la LUT en formato binario de alta resolución.",
+            "ASC CDL es equivalente a un metadato de audio y no afecta al color.",
+            "No existe diferencia entre ambos."
+          ],
+          "correctIndex": 0,
+          "explanation": "ASC CDL especifica ajustes primarios básicos (slope, offset, power, saturation) que son compactos e interoperables para transmitir decisiones creativas entre dailies y grading. Las 3D LUTs realizan mapeos complejos, tridimensionales y no siempre reversibles, útiles para transformaciones precisas de color.",
+          "category": "Color y conformado"
+        },
+        {
+          "prompt": "Según la normativa de prevención de riesgos laborales aplicable a puestos de edición y postproducción con pantallas (VDT), ¿qué obligación tiene el empleador respecto a la organización del puesto de trabajo?",
+          "options": [
+            "Sólo debe proveer gafas de sol para reducir la fatiga ocular.",
+            "No tiene obligaciones específicas, la prevención la gestiona cada trabajador por su cuenta.",
+            "Realizar una evaluación de riesgos específica del puesto (ergonomía, iluminación, pausas), adaptar mobiliario y equipos, y proporcionar información/formación y pausas planificadas para reducir riesgos musculo‑esqueléticos y visuales.",
+            "Debe prohibir el uso de software de corrección de color por motivos de salud."
+          ],
+          "correctIndex": 2,
+          "explanation": "La normativa obliga al empleador a evaluar riesgos específicos de los puestos con VDT, adoptar medidas ergonómicas (sillas, altura de pantalla, descansos), formar e informar a los trabajadores y organizar pausas para prevenir riesgos físicos y visuales. Las otras respuestas son incorrectas o absurdas.",
+          "category": "Prevención de riesgos"
+        }
+      ]
+    },
+    {
       "id": "001",
       "title": "Examen 001",
       "date": "2026-07-23",
