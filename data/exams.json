@@ -3,6 +3,262 @@
   "updatedAt": "2026-07-24",
   "exams": [
     {
+      "id": "004",
+      "title": "Examen 004",
+      "date": "2026-07-24",
+      "level": "Alto - Oposición técnica",
+      "timeMinutes": 20,
+      "blocks": [
+        "Instrucciones: 20 preguntas. Una sola respuesta correcta por pregunta.",
+        "Bloque A — Señal y color, medición y formatos.",
+        "Bloque B — Códecs, contenedores y flujo de trabajo.",
+        "Bloque C — Audio, sincronismo, almacenamiento y operación broadcast.",
+        "Bloque D — NLEs, gestión de medios y servidores en directo."
+      ],
+      "questions": [
+        {
+          "prompt": "En una señal Y'CbCr 4:2:2 (por línea), ¿cuál es la relación de muestreo horizontal entre la componente de luminancia (Y') y cada componente de crominancia (Cb o Cr)?",
+          "options": [
+            "Cada croma tiene el doble de muestras que Y' (1:2).",
+            "Y' se muestrea a la misma resolución que Cb/Cr (1:1).",
+            "Y' se muestrea con la mitad de resolución vertical que Cb/Cr.",
+            "Y' tiene el doble de muestras horizontales que cada croma (2:1)."
+          ],
+          "correctIndex": 3,
+          "explanation": "En 4:2:2 la luminancia Y' se muestrea a resolución completa horizontal por línea, mientras que Cb y Cr se muestrean a la mitad horizontal (una muestra de croma por cada dos de luminancia). Por tanto la relación horizontal Y':Cb (o Y':Cr) es 2:1.",
+          "category": "Vídeo y formatos"
+        },
+        {
+          "prompt": "¿Qué característica distingue fundamentalmente al espacio de color Rec.2020 respecto a Rec.709?",
+          "options": [
+            "Rec.2020 limita la profundidad a 8 bits mientras que Rec.709 permite 10/12 bits.",
+            "Rec.2020 define curvas de transferencia logarítmica por defecto; Rec.709 es lineal.",
+            "Rec.2020 tiene primarias más dispersas y, por tanto, un gamut de color mucho más amplio que Rec.709.",
+            "Rec.2020 elimina la componente de luminancia y trabaja sólo con RGB."
+          ],
+          "correctIndex": 2,
+          "explanation": "La diferencia clave es el gamut: Rec.2020 adopta primarias mucho más extremas que Rec.709, proporcionando un espacio de color considerablemente más amplio. Aunque Rec.2020 suele usarse con bit depths mayores, la propiedad fundamental es el tamaño del gamut y las coordenadas de las primarias.",
+          "category": "Colorimetría"
+        },
+        {
+          "prompt": "En un flujo offline/online, ¿qué ventaja técnica aporta generar proxies a partir del material en curva logarítmica (log) en lugar de convertirlos directamente a Rec.709?",
+          "options": [
+            "Mantienen más información de rango dinámico y color relativa a la captura original, facilitando conformados y decisiones de edición coherentes con el etalonaje posterior.",
+            "Permiten reproducir directamente HDR en cualquier monitor SDR sin conversiones.",
+            "Los proxies log evitan la necesidad de LUTs durante la conformación final.",
+            "Los proxies log ocupan menos espacio en disco que los proxies en Rec.709."
+          ],
+          "correctIndex": 0,
+          "explanation": "Generar proxies desde los archivos log preserva la información relativa de latitud y color de la cámara (scene-referred), de modo que la apariencia artística y las decisiones de montaje se toman sobre una representación que mantiene la máxima fidelidad al material alto-res. Esto facilita el conformado y evita discrepancias al aplicar la corrección de color en el online.",
+          "category": "Postproducción"
+        },
+        {
+          "prompt": "Al reducir profundidad de bit de 10 bits a 8 bits en gradientes suaves, ¿qué técnica es la más efectiva para minimizar el banding visible sin perder detalle?",
+          "options": [
+            "Aplicar un filtro de desenfoque gaussiano al gradiente.",
+            "Utilizar dithering (ruido con distribución adecuada, preferiblemente blue noise) antes de cuantizar.",
+            "Aumentar el contraste global del clip antes de la conversión.",
+            "Reducir la resolución espacial del material para suavizar los pasos de color."
+          ],
+          "correctIndex": 1,
+          "explanation": "El dithering añade ruido controlado al señal antes de la cuantización reducida, rompiendo los escalones perceptibles y reduciendo el banding sin perder nitidez. Blue-noise o ruido triangular bien aplicado es la técnica estándar. Las otras opciones degradan la calidad o no solucionan la cuantización.",
+          "category": "Procesamiento de imagen"
+        },
+        {
+          "prompt": "Para realizar una composición por croma con máxima conservación de detalle en los bordes y tolerancia a mate, ¿qué formato de captura es el más apropiado?",
+          "options": [
+            "4:4:4:4 (RGB + alfa) con profundidad mínima de 10 bits o formato con canal alfa nativo.",
+            "Y'CbCr 4:2:2 10 bits con compresión Long GOP.",
+            "H.264 4:2:0 de alta tasa de bits.",
+            "Y'CbCr 4:2:2 8 bits."
+          ],
+          "correctIndex": 0,
+          "explanation": "El croma-keying exige máxima fidelidad de crominancia y, cuando es posible, conservación de un canal alfa. Un flujo 4:4:4:4 (o RGB con canal alfa) y profundidad elevada (10-bit o superior) mantiene detalle de color y permite máscaras precisas; 4:2:2 o 4:2:0 reducen información de croma y dificultan el recorte fino.",
+          "category": "Vídeo y chroma"
+        },
+        {
+          "prompt": "En un códec Long GOP (con I, P y B frames), ¿cuál es la consecuencia técnica más habitual si se corrompe o se pierde una P-frame intermedia?",
+          "options": [
+            "La corrupción se propaga a todos los frames dependientes (P y B posteriores) hasta el siguiente I-frame, provocando artefactos o pérdida de frames reproducidos.",
+            "La pérdida de una P-frame no tiene efecto si hay audio embebido; sólo afecta al audio.",
+            "Sólo se pierde la imagen de ese único frame y la reproducción se reanuda sin errores en el siguiente frame.",
+            "El códec automáticamente reconstruye la P-frame usando los B-frames adyacentes sin pérdida de información."
+          ],
+          "correctIndex": 0,
+          "explanation": "En Long GOP las P-frames contienen predicción necesaria para reconstruir frames posteriores; si una P-frame falla, todos los frames que dependan de ella (P y B siguientes dentro del GOP) mostrarán artefactos o no podrán reconstruirse hasta la próxima I-frame, que actúa como punto de referencia independiente.",
+          "category": "Códecs y compresión"
+        },
+        {
+          "prompt": "Respecto al uso del formato MXF en cadenas broadcast, ¿qué ventaja técnica aporta frente a contenedores genéricos como AVI?",
+          "options": [
+            "MXF define estructuras estandarizadas de essence y metadatos (UMID, paquetes, timecode) que facilitan intercambio y automatización entre sistemas broadcast.",
+            "MXF sólo funciona con códecs propietarios de una sola marca.",
+            "MXF no permite incluir metadatos para asegurar interoperabilidad entre sistemas.",
+            "MXF reduce la resolución de vídeo automáticamente para compatibilidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "MXF es un formato normalizado (SMPTE) que separa essence y metadatos, incluye UMID/timecode/structure y patrones operacionales; esto permite interoperabilidad, relink y automatización en flujos broadcast, a diferencia de contenedores genéricos que carecen de estas reglas estandarizadas.",
+          "category": "Contenedores y metadatos"
+        },
+        {
+          "prompt": "En contenedores MXF o en flujos AAF/MXF, ¿qué identificador se emplea habitualmente para reconocer de forma inequívoca una fuente original y así posibilitar un relink fiable entre proxy y alto-res?",
+          "options": [
+            "La tasa de bits del códec utilizada en la captura.",
+            "El nombre de archivo (filename) exclusivamente.",
+            "UMID (Unique Material Identifier) o identificadores de material únicos almacenados en el paquete de metadatos.",
+            "La resolución y el framerate del archivo."
+          ],
+          "correctIndex": 2,
+          "explanation": "UMID o identificadores únicos de 'material' (source mob ID / material package ID) son metadatos diseñados para identificar inequívocamente un elemento a través de sistemas y contenedores, lo que permite operaciones de relink fiables entre proxies y originales sin depender del nombre de archivo ni parámetros técnicos.",
+          "category": "Metadatos y contenedores"
+        },
+        {
+          "prompt": "Durante la reconstrucción de un RAID 5 que almacena material de vídeo tras la caída de un disco, ¿cuál es el riesgo técnico más relevante?",
+          "options": [
+            "Que la reconstrucción aumente automáticamente la velocidad de lectura de todos los discos sin riesgo adicional.",
+            "Que RAID 5 convierta los datos en un formato propietario irreconocible tras la reconstrucción.",
+            "Que la reconstrucción elimine las copias delta del sistema de versiones.",
+            "Que si falla un segundo disco durante la reconstrucción se produzca pérdida total de los datos del conjunto."
+          ],
+          "correctIndex": 3,
+          "explanation": "RAID 5 puede tolerar la falla de un único disco. Durante la reconstrucción el sistema está en estado degradado; si ocurre la pérdida de un segundo disco antes de completar la reconstrucción se produce pérdida de datos del conjunto entero — este es el riesgo principal durante rebuilds largos y de alta carga.",
+          "category": "Almacenamiento"
+        },
+        {
+          "prompt": "Para instalaciones que requieren alta tasa sostenida de I/O, tolerancia a fallos y reconstrucción rápida orientada a edición multitarea en tiempo real, ¿qué configuración RAID es habitualmente más adecuada?",
+          "options": [
+            "JBOD (Just a Bunch Of Disks) para aprovechar todo el espacio disponible.",
+            "RAID 5 por su equilibrio entre espacio y resistencia pero con reconstrucción lenta.",
+            "RAID 0 por su máxima velocidad sin redundancia.",
+            "RAID 10 (1+0) porque combina mirror y stripe: alta I/O, tolerancia a fallos y reconstrucción rápida por espejo."
+          ],
+          "correctIndex": 3,
+          "explanation": "RAID 10 (una combinación de mirroring y striping) ofrece alta velocidad de I/O y menor tiempo de reconstrucción (se replica sólo el disco espejo) y permite continuar operación con discos fallados en distintas parejas, por eso es habitual en entornos de edición en tiempo real donde la latencia y rapidez de rebuild son prioritarias sobre la eficiencia de almacenamiento.",
+          "category": "Almacenamiento"
+        },
+        {
+          "prompt": "En pipelines de composición que requieren mantener transparencia (canal alfa) entre aplicaciones, ¿qué característica técnica del códec/contenedor es imprescindible?",
+          "options": [
+            "Que el códec/contenedor soporte un canal alfa explícito (plano A) y no lo descarte durante ingest/export.",
+            "Que el códec sea Long GOP para maximizar la compresión.",
+            "Que el códec convierta automáticamente el alfa en un canal de luminancia.",
+            "Que el contenedor imponga recorte de color a Rec.709."
+          ],
+          "correctIndex": 0,
+          "explanation": "Para preservar transparencia es imprescindible que tanto códec como contenedor soporten y transporten un canal alfa explícito (por ejemplo ProRes 4444, DNxHR con alpha, o archivos DPX/EXR con canal alfa). Sin ese soporte el canal alfa se perderá o se aplanará.",
+          "category": "Composición y códecs"
+        },
+        {
+          "prompt": "En un vectorscopio, ¿qué representa esencialmente la distancia (radio) desde el centro hacia un punto que representa un color?",
+          "options": [
+            "La luminancia absoluta del píxel.",
+            "El tiempo de persistencia del color en la pantalla.",
+            "La frecuencia espacial del detalle en la imagen.",
+            "La saturación de ese color (magnitud de la crominancia)."
+          ],
+          "correctIndex": 3,
+          "explanation": "En un vectorscopio la distancia radial desde el centro indica la magnitud de las componentes de crominancia (saturación): más lejos del centro, mayor saturación. El ángulo determina la matiz (hue).",
+          "category": "Medición y control técnico"
+        },
+        {
+          "prompt": "¿Qué muestra principalmente un monitor de forma de onda (waveform monitor) en un control técnico de vídeo?",
+          "options": [
+            "La cantidad de frames perdidos durante la captura.",
+            "La evolución temporal de la crominancia en frecuencia.",
+            "La distribución de los niveles de audio en dBFS.",
+            "Los niveles de luminancia (Y) a lo largo del eje horizontal de la imagen, trazando la señal vídeo por posición de píxel."
+          ],
+          "correctIndex": 3,
+          "explanation": "El waveform monitor traza la amplitud de la señal de vídeo (habitualmente la luminancia Y o componentes compuestas) a lo largo del eje horizontal de la imagen, permitiendo valorar exposición, clipping y distribución de niveles cuadro a cuadro. No muestra información de audio ni conteo de frames perdidos.",
+          "category": "Medición y control técnico"
+        },
+        {
+          "prompt": "Una ventaja arquitectónica clara de implantar SMPTE ST 2110 en una instalación nueva frente a una infraestructura SDI tradicional es:",
+          "options": [
+            "Hace que no sea necesario usar gadgets de medidas (vectorscopio, waveform).",
+            "Reduce automáticamente el ancho de banda respecto a SDI por compresión intrínseca.",
+            "Permite transportar por separado vídeo, audio y metadatos sobre IP en streams independientes, facilitando enrutamiento, escalabilidad y virtualización en entornos IT.",
+            "Elimina por completo la necesidad de sincronización y genlock."
+          ],
+          "correctIndex": 2,
+          "explanation": "ST 2110 separa esencia en streams independientes (vídeo sin compresión, audio multicanal, metadatos) sobre redes IP estandarizadas, lo que facilita enrutamiento flexible, escalabilidad, integración con la infraestructura IT y virtualización. No elimina la necesidad de sincronización (PTP/genlock sigue siendo necesaria).",
+          "category": "Infraestructura"
+        },
+        {
+          "prompt": "En la mezcla previa a codificación para emisión se suele dejar un margen de cabeza (headroom) con picos alrededor de -6 dBFS. ¿Por qué se hace esto?",
+          "options": [
+            "Porque los sistemas de transmisión no aceptan niveles por debajo de -6 dBFS.",
+            "Porque -6 dBFS corresponde a 0 VU exactamente y es obligatorio por normativa.",
+            "Para eliminar la necesidad de normalizar en la etapa de masterización.",
+            "Para proporcionar margen ante transitorios y sobre-muestreo/inter-sample peaks en etapas posteriores de codificación y limitación, evitando clipping en el canal de distribución."
+          ],
+          "correctIndex": 3,
+          "explanation": "Dejar headroom (p. ej. picos alrededor de -6 dBFS) reduce la probabilidad de clipping causado por transitorios, inter-sample peaks o procesos posteriores (limitadores, codificación a códecs de transmisión). Es una práctica técnica para asegurar integridad del audio durante procesamiento y delivery.",
+          "category": "Audio"
+        },
+        {
+          "prompt": "En el contexto de sincronización en estudio, ¿qué papel cumple el genlock frente al timecode?",
+          "options": [
+            "Genlock etiqueta cada frame con una marca numérica; timecode sincroniza la frecuencia de muestreo de los equipos.",
+            "Genlock y timecode son exactamente lo mismo en todas las aplicaciones.",
+            "Genlock provee la referencia de sincronismo eléctrico/temporal para que todos los dispositivos reproduzcan líneas/frames al mismo instante; el timecode etiqueta la posición temporal (frame index) para edición y logging.",
+            "Genlock transmite información de color; timecode transmite sólo audio."
+          ],
+          "correctIndex": 2,
+          "explanation": "Genlock distribuye una señal de sincronización para alinear los relojes y el inicio de barridos de equipos de vídeo (sincronía en el muestreo y frames). El timecode (SMPTE TC) es metadata que numera frames y sirve para referenciar y sincronizar edición; ambos son complementarios y no idénticos.",
+          "category": "Sincronismo"
+        },
+        {
+          "prompt": "En Avid Media Composer, ¿qué realiza la función Match Frame cuando se aplica sobre un clip en la secuencia?",
+          "options": [
+            "Exporta el frame seleccionado en formato TIFF con metadatos.",
+            "Convierte el clip al códec intraframe por defecto del proyecto.",
+            "Reemplaza automáticamente el clip por la mejor toma disponible del bin.",
+            "Localiza y abre en el monitor de origen el fotograma exacto del material fuente correspondiente al fotograma seleccionado en la secuencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "Match Frame busca en los bins el material fuente y posiciona el monitor de origen exactamente en el frame que coincide con el seleccionado en la timeline, permitiendo localizar la toma original para trims, cortes o extracción de medios en su contexto de origen.",
+          "category": "NLEs y operación"
+        },
+        {
+          "prompt": "¿Qué metadato es crítico en Avid Interplay / MediaCentral para que la función Dynamic Relink asocie correctamente un elemento proxy con su archivo alto-res original?",
+          "options": [
+            "El Source Mob ID / UMID (identificador único del elemento) almacenado en el archivo de alto-res y en el proxy.",
+            "El lugar físico del archivo en una ruta de red concreta.",
+            "El tamaño del archivo en bytes.",
+            "La duración aproximada en segundos del clip."
+          ],
+          "correctIndex": 0,
+          "explanation": "Dynamic Relink se basa en identificadores únicos de material (Source Mob ID, UMID u otros ID persistentes) que están embebidos en los metadatos del archivo; esos identificadores permiten emparejar proxy y alto-res independientemente de nombres o ubicaciones físicas.",
+          "category": "Gestión de medios"
+        },
+        {
+          "prompt": "En un servidor de reproducción EVS, ¿qué información integrada en los clips es esencial para garantizar reproducción frame-accurate y modos de shuttle/trick sin problemas?",
+          "options": [
+            "El formato del códec en texto plano sin metadatos adicionales.",
+            "El ancho de banda disponible en la red del cliente.",
+            "Timecode de inicio preciso (SMPTE TC) y índices internos de frame que permiten direccionamiento exacto e índices de reproducción.",
+            "Sólo la duración en segundos del clip."
+          ],
+          "correctIndex": 2,
+          "explanation": "Para reproducción frame-accurate y funcionalidades de shuttle/trick el servidor necesita timecode preciso y/o índices de frame que permitan direccionamiento por frame. Estos metadatos integrados aseguran que el servidor reproduzca y recupere fotogramas exactos en funciones de control y play-listing.",
+          "category": "Servidores y emisión"
+        },
+        {
+          "prompt": "¿Cuál es la diferencia operativa más clara que ofrece SMPTE ST 2110 frente a una infraestructura SDI tradicional en un centro de producción?",
+          "options": [
+            "ST 2110 obliga a usar compresión con pérdida mientras que SDI siempre es sin compresión.",
+            "ST 2110 transporta vídeo, audio y metadatos como flujos IP separados y enrutable en redes estándar, mientras que SDI transmite señales multiplexadas por enlace físico punto a punto.",
+            "ST 2110 sólo funciona para 4K y no permite 1080.",
+            "SDI permite virtualización nativa del routing con QoS integrada; ST 2110 no."
+          ],
+          "correctIndex": 1,
+          "explanation": "La distinción operativa clave es que ST 2110 desagrega las essences y las transporta como streams IP independientes (vídeo, audio, datos), lo que facilita enrutado por red, escalabilidad y convergencia IT; SDI es un transporte punto a punto con señales multiplexadas sobre cables coaxiales/ fibre con limitaciones de enrutado físico.",
+          "category": "Infraestructura y operaciones"
+        }
+      ]
+    },
+    {
       "id": "003",
       "title": "Examen 003",
       "date": "2026-07-24",
