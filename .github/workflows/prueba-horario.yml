@@ -1,0 +1,17 @@
+name: Prueba de horario
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar ejecución automática
+        run: |
+          echo "El horario automático funciona"
+          date
