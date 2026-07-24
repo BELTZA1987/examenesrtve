@@ -10,12 +10,8 @@ on:
         type: boolean
 
   schedule:
-    - cron: "55 10 * * *"
-      timezone: "Europe/Madrid"
-
-    - cron: "00 11 * * *"
-      timezone: "Europe/Madrid"
-
+    - cron: "*/5 * * * *"
+    
 permissions:
   contents: write
 
