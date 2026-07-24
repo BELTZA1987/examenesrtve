@@ -1,7 +1,263 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-07-24",
   "exams": [
+    {
+      "id": "003",
+      "title": "Examen 003",
+      "date": "2026-07-24",
+      "level": "Oposición técnica - Alto",
+      "timeMinutes": 20,
+      "blocks": [
+        "Vídeo digital y colorimetría",
+        "Códecs y contenedores",
+        "Sistemas y sincronización",
+        "Almacenamiento y archivo",
+        "Audio y mezcla"
+      ],
+      "questions": [
+        {
+          "prompt": "Al convertir una señal de vídeo desde Y'CbCr 4:4:4 a 4:2:2 mediante un muestreo típico por promedio horizontal, ¿cuál es el efecto principal sobre la información de crominancia?",
+          "options": [
+            "La conversión añade un canal alfa y duplica la resolución de crominancia.",
+            "La resolución horizontal de crominancia se reduce a la mitad, mientras que la resolución vertical de crominancia y la luminancia permanecen intactas.",
+            "La resolución de luminancia se reduce a la mitad, mientras la crominancia permanece igual.",
+            "La resolución vertical de crominancia se reduce a la mitad y la luminancia se ve degradada."
+          ],
+          "correctIndex": 1,
+          "explanation": "El muestreo 4:2:2 reduce la frecuencia de muestreo de las componentes de croma en el sentido horizontal (dos píxeles comparten una muestra de Cb y Cr), por eso la resolución horizontal de crominancia queda dividida por dos. La luminancia (Y') se mantiene íntegra y la resolución vertical de crominancia no se altera con ese esquema.",
+          "category": "Muestreo y crominancia"
+        },
+        {
+          "prompt": "En el proceso de captura para conformidad con Rec.709, ¿qué término técnico describe la función que mapea la luz de la escena a la señal eléctrica digital generada por la cámara?",
+          "options": [
+            "OETF (Opto-Electrical Transfer Function)",
+            "EOTF (Electro-Optical Transfer Function)",
+            "LUT 3D aplicada en el servidor de emisión",
+            "OOTF (Optical to Optical Transfer Function)"
+          ],
+          "correctIndex": 0,
+          "explanation": "La OETF es la función que transforma la radiancia de la escena en valores eléctricos/digitales en la cámara; Rec.709 especifica una OETF para el proceso de captura. La EOTF es la función inversa aplicada por el visor/receptor para convertir la señal a luminancia de visualización; la OOTF es una función de cadena más amplia entre escena y pantalla.",
+          "category": "Colorimetría y transferencia"
+        },
+        {
+          "prompt": "¿Cuántos niveles discretos por componente ofrece una representación de 10 bits lineales por cada canal (por ejemplo, en Y'CbCr de 10 bits sin rango extendido)?",
+          "options": [
+            "512 niveles",
+            "4 096 niveles",
+            "1 024 niveles",
+            "256 niveles"
+          ],
+          "correctIndex": 2,
+          "explanation": "10 bits proporcionan 2^10 = 1024 niveles distintos por componente. Esa es la cuenta de códigos posibles por canal en una cuantización de 10 bits.",
+          "category": "Profundidad de bits"
+        },
+        {
+          "prompt": "Al convertir degradados suaves a una profundidad menor (por ejemplo 10 bits → 8 bits) y minimizar el banding sin sacrificar nitidez, ¿qué técnica es la más efectiva?",
+          "options": [
+            "Aplicar dithering (ruido controlado o dither temporal/shapeado) antes de la cuantización.",
+            "Aplicar un desenfoque gaussiano sobre la imagen antes de cuantizar.",
+            "Incrementar el contraste y luego recortar los extremos.",
+            "Usar un LUT de conversión CRT para suavizar el degradado."
+          ],
+          "correctIndex": 0,
+          "explanation": "El dithering introduce ruido de bajo nivel que evita la aparición de escalones visibles (banding) al distribuir el error de cuantización; las variantes noise-shaped o temporales son especialmente eficaces. El desenfoque suaviza pero reduce detalle; LUTs o cambios de contraste no resuelven la cuantización discreta.",
+          "category": "Postproducción y calidad de imagen"
+        },
+        {
+          "prompt": "Si se va a realizar composición por croma (chroma key) con máxima tolerancia a borde y conservación de detalle, ¿qué formato de captura es más apropiado?",
+          "options": [
+            "Y'CbCr 4:2:0 a 10 bits",
+            "RGB 4:4:4 a 10 bits (o equivalente con canal alfa cuando sea necesario)",
+            "Y'CbCr 4:2:2 a 10 bits",
+            "Y'CbCr 4:2:2 a 8 bits"
+          ],
+          "correctIndex": 1,
+          "explanation": "Para chroma keying es preferible mantener crominancia por píxel y una mayor profundidad de bits: RGB 4:4:4 a 10 bits (o códecs que preserven alfa) conserva información de color por cada píxel, reduce artefactos en bordes y facilita mezclas limpias. 4:2:2 mejora respecto a 4:2:0, pero no iguala a 4:4:4 en control del croma.",
+          "category": "Chroma y workflows de composición"
+        },
+        {
+          "prompt": "En un flujo que utiliza códecs Long GOP con P-frames y B-frames, ¿cuál es la consecuencia típica si se corrompe o se pierde un paquete que contiene una P-frame intermedia?",
+          "options": [
+            "El códec automáticamente reconvierte todos los GOPs a intraframe para evitar errores.",
+            "Solo ese único cuadro queda corrupto y el resto permanece intacto.",
+            "Los cuadros dependientes (predichos) construidos a partir de esa P-frame resultan afectados hasta encontrar el siguiente I-frame, propagándose el error.",
+            "La pista de audio se ve corrupta, pero las imágenes no se ven afectadas."
+          ],
+          "correctIndex": 2,
+          "explanation": "En Long GOP muchos cuadros se construyen por predicción a partir de I/P/B-frames. Si una P-frame se pierde o está corrupta, las imágenes que dependan de ella no podrán reconstruirse correctamente hasta que aparezca un I-frame que rompa la dependencia; por eso la pérdida se propaga y complica la recuperación.",
+          "category": "Códecs y codificación"
+        },
+        {
+          "prompt": "¿Cuál es una ventaja técnica clara del uso del formato MXF (Material eXchange Format) en cadenas broadcast frente a contenedores genéricos como AVI?",
+          "options": [
+            "MXF únicamente contiene vídeo en formato intraframe, evitando Long GOP.",
+            "MXF cifra automáticamente el contenido para entrega segura entre organismos.",
+            "MXF reduce el bitrate por defecto sin pérdida de calidad.",
+            "MXF incorpora un estándar para metadata y particionamiento de essence, facilitando interoperabilidad y gestión en sistemas profesionales."
+          ],
+          "correctIndex": 3,
+          "explanation": "MXF es un contenedor estandarizado que define cómo almacenar essence y metadatos (partitions, headers, index tables), lo que facilita ingest, search y gestión en sistemas broadcast. No implementa cifrado por defecto ni fuerza un tipo de compresión; su valor es la interoperabilidad y estructuración profesional.",
+          "category": "Contenedores"
+        },
+        {
+          "prompt": "En contenedores MXF y en workflows AAF/MXF, ¿qué identificador suele emplearse para reconocer inequívocamente una fuente original entre sistemas y así posibilitar un relink fiable entre proxy y alto-res?",
+          "options": [
+            "Un identificador único en el contenedor tipo 'Source Mob ID' o UUID asociado al essence.",
+            "La longitud del archivo en bytes combinada con el nombre del proyecto.",
+            "Solo el nombre del archivo tal como aparece en disco.",
+            "La tasa de bits del clip y la resolución."
+          ],
+          "correctIndex": 0,
+          "explanation": "Los contenedores MXF y los intercambios AAF usan identificadores únicos (Source Mob ID, UUID u otros IDs de mob) para identificar una fuente sin ambigüedad. Basarse únicamente en nombre de archivo o tamaño no es fiable; el ID único es el elemento que permite a sistemas realizar relink automático con seguridad.",
+          "category": "Metadata y gestión de medios"
+        },
+        {
+          "prompt": "Durante la reconstrucción tras la caída de un disco en un RAID 5 que almacena material de vídeo, ¿cuál es el riesgo técnico más relevante?",
+          "options": [
+            "Si aparece un error de lectura no recuperable (URE) en otro disco durante la reconstrucción, puede producirse pérdida de datos y fallo de la reconstrucción.",
+            "RAID 5 convierte automáticamente los archivos al formato comprimido para ahorrar espacio durante la reconstrucción.",
+            "No existe riesgo porque RAID 5 siempre reconstruye sin pérdida.",
+            "La reconstrucción acelera la transferencia y mejora la integridad de los datos."
+          ],
+          "correctIndex": 0,
+          "explanation": "En RAID 5 la reconstrucción usa paridad distribuida y requiere leer los datos de los discos restantes. Si durante ese proceso hay un URE (un error de lectura no recuperable) en otro disco, la reconstrucción puede fallar y conducir a la pérdida de datos. Por eso RAID5 tiene riesgo en reconstrucciones largas con discos grandes.",
+          "category": "Almacenamiento RAID"
+        },
+        {
+          "prompt": "Para instalaciones que necesitan alta tasa de I/O sostenida y tolerancia a fallo además de una reconstrucción rápida, ¿qué configuración RAID es habitualmente más adecuada para edición de múltiples pistas en tiempo real?",
+          "options": [
+            "RAID 10 (mirror + striping)",
+            "RAID 5 (striping con una paridad)",
+            "RAID 0 (striping sin redundancia)",
+            "RAID 6 (striping con doble paridad)"
+          ],
+          "correctIndex": 0,
+          "explanation": "RAID 10 (striping sobre mirrors) combina rendimiento (striping) con redundancia (mirroring) y permite reconstrucciones y reactivaciones más rápidas y fiables para discos individuales, además de mantener buenas tasas de I/O sostenidas, por eso es frecuente en entornos de edición en tiempo real.",
+          "category": "Almacenamiento y rendimiento"
+        },
+        {
+          "prompt": "¿Cuál es la ventaja técnica de generar proxies a partir de material capturado en curva logarítmica (log) cuando se prevé un posterior conformado y etalonaje?",
+          "options": [
+            "Los proxies en log son automáticamente compatibles con cualquier monitor sin conversión.",
+            "Al partir de log se preserva mejor la relación escena‑referida entre sombras y altas luces, facilitando el reconformado y la aplicación consistente de grades sobre los archivos originales.",
+            "Generar proxies en log reduce el tamaño de fichero mucho más que convertir a Rec.709.",
+            "Los proxies en log evitan la necesidad de LUTs en la etapa de conformado final."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los proxies generados desde material log mantienen la información relativa de rango dinámico y la distribución de valores que es útil para el conformado y el etalonaje: permiten una correspondencia más fiel con el material alto-res y una aplicación consistente de ajustes cromáticos en la etapa final. No son automáticamente display‑ready sin conversiones.",
+          "category": "Offline/Online y conformado"
+        },
+        {
+          "prompt": "En pipelines de composición que requieren mantener transparencia, ¿qué característica técnica de un códec es imprescindible para preservar el canal alfa durante intercambio entre aplicaciones?",
+          "options": [
+            "Que sea Long GOP y tenga baja latencia.",
+            "Que soporte canal alfa nativo (por ejemplo ProRes 4444 o DNxHR con alpha).",
+            "Que soporte una pista de audio multicanal embebida.",
+            "Que sea un códec de 8 bits con compresión con pérdidas."
+          ],
+          "correctIndex": 1,
+          "explanation": "Preservar transparencia exige soporte nativo de canal alfa en el contenedor/códec (por ejemplo ProRes 4444, ProRes 4444 XQ, DNxHR con alfa o formatos DPX/EXR). Los códecs estándar de emisión como H.264/H.265 no llevan canal alfa en su especificación general.",
+          "category": "Códecs y composición"
+        },
+        {
+          "prompt": "Si no hay código de tiempo común entre cámaras, ¿qué método automático utilizan la mayoría de NLEs para sincronizar múltiples ángulos de una grabación multicámara?",
+          "options": [
+            "Sincronización por resolución de imagen y tasa de bits.",
+            "Sincronización exclusiva por nombres de archivo y longitud de clip.",
+            "Sincronización por el primer fotograma no negro detectado en cada clip.",
+            "Sincronización mediante coincidencia de formas de onda de audio (alineamiento por contenido de audio)."
+          ],
+          "correctIndex": 3,
+          "explanation": "Muchos NLEs ofrecen sincronización por análisis de las formas de onda de audio (alineamiento por coincidencia de peak y correlación), método robusto cuando falta TC. Los nombres de archivo o tamaños no aseguran sincronía real.",
+          "category": "Edición multicámara"
+        },
+        {
+          "prompt": "En la cadena de postproducción, ¿qué papel específico cumple una LUT 3D aplicada en la exportación final frente a emplear sólo parámetros ASC CDL (slope/offset/power/saturation)?",
+          "options": [
+            "La CDL guarda información de metadatos de trama, lo que la 3D LUT no hace.",
+            "Una 3D LUT siempre reduce el bitrate del archivo final, mientras que la CDL lo aumenta.",
+            "Una 3D LUT sólo afecta a la luminancia y la CDL sólo a la crominancia.",
+            "Una 3D LUT realiza un mapeo global y no parametrizable de RGB a RGB que puede encapsular transformaciones complejas de color y gamut, mientras que una CDL es un ajuste paramétrico limitado y fácilmente editable."
+          ],
+          "correctIndex": 3,
+          "explanation": "Una 3D LUT aplica un mapeo tridimensional de color que puede transformar de forma no lineal todo el espacio RGB (gamut mapping, correcciones complejas), ideal para output específico. La ASC CDL es un conjunto paramétrico (slope, offset, power, saturation) útil para intercambiar decisiones de color editables y reproducibles, pero menos expresiva que una LUT 3D.",
+          "category": "Gestión de color"
+        },
+        {
+          "prompt": "¿Cuál es la finalidad principal del genlock en un entorno de control de cámaras y mezcladores?",
+          "options": [
+            "Sincronizar la fase de la señal de vídeo (reloj de línea) entre dispositivos para evitar tearing y permitir mezclas y conmutaciones limpias.",
+            "Transporte de metadatos de cámara hacia el servidor de producción.",
+            "Sustituir la necesidad de código de tiempo en todas las grabaciones.",
+            "Marcar la hora civil en formato UTC en todos los dispositivos."
+          ],
+          "correctIndex": 0,
+          "explanation": "Genlock distribuye una referencia temporal de sincronía (generalmente señal de línea/vertical) que alinea la fase de señales de vídeo entre equipos; esto evita desplazamientos y artefactos al conmutar entre fuentes y permite operaciones de mezclado y keying sin tearing. No es lo mismo que timecode ni sustituye su función.",
+          "category": "Sincronización"
+        },
+        {
+          "prompt": "En un vectorscopio, ¿qué información permiten valorar de forma directa las 'distancias' (radio) desde el centro hacia los puntos que representan colores?",
+          "options": [
+            "La luminancia absoluta (Y) de la señal.",
+            "El ratio señal/ruido de la componente de audio.",
+            "La saturación (magnitud de croma) de los colores representados.",
+            "La fase de la sincronización vertical de la señal."
+          ],
+          "correctIndex": 2,
+          "explanation": "En el vectorscopio la distancia radial desde el centro representa la magnitud de la componente de crominancia (saturación): cuanto más alejados están los puntos del centro, mayor saturación. El ángulo representa la tonalidad (hue).",
+          "category": "Medida y control técnico"
+        },
+        {
+          "prompt": "Respecto a la edición no lineal, ¿qué ventaja práctica ofrece trabajar con códecs intraframe frente a códecs Long GOP cuando se busca una experiencia de corte frame-accurate y mínima carga de CPU/decodificación en el puesto de edición?",
+          "options": [
+            "Los códecs intraframe almacenan cada cuadro de forma independiente, facilitando cortes exactos y acceso aleatorio sin necesidad de decodificar cadenas de predicción largas.",
+            "Los códecs intraframe siempre comprimen mejor que Long GOP, reduciendo el tamaño de los archivos.",
+            "Los códecs intraframe requieren menos espacio en disco y por eso son preferidos.",
+            "Los códecs intraframe no permiten color grading avanzado, lo que acelera el flujo de trabajo."
+          ],
+          "correctIndex": 0,
+          "explanation": "Los intraframe codifican cada cuadro por separado (como una imagen completa), por lo que la edición frame-accurate y el scrubbing son inmediatos y demandan menos descodificación dependiente. Long GOP mejora la eficiencia de compresión pero hace que la extracción de un frame aislado exija decodificar dependencias.",
+          "category": "Edición y códecs"
+        },
+        {
+          "prompt": "¿Cuál es una ventaja arquitectónica de implantar SMPTE ST 2110 en una instalación nueva en lugar de una infraestructura SDI tradicional?",
+          "options": [
+            "ST 2110 elimina la necesidad de cualquier sincronización entre dispositivos.",
+            "ST 2110 empaqueta vídeo, audio y metadatos en una única señal multiplexada idéntica a SDI.",
+            "ST 2110 requiere menos ancho de banda que SDI para una misma resolución y frame-rate.",
+            "ST 2110 separa los essences en flujos IP independientes (vídeo, audio, ANC), facilitando enrutamiento flexible, escalabilidad e integración con redes IT."
+          ],
+          "correctIndex": 3,
+          "explanation": "SMPTE ST 2110 transmite cada esencia (vídeo, audio, datos auxiliares) como flujos IP separados, lo que permite enrutado y procesamiento independiente, mayor escalabilidad y uso de infraestructuras basadas en redes. No multiplica las señales como SDI ni elimina la necesidad de sincronía (PTP se usa para sincronización).",
+          "category": "Redes y sistemas de transporte"
+        },
+        {
+          "prompt": "En tratamiento de imagen, ¿qué entendemos por 'banding' y cuál es su causa más habitual en archivos digitales procedentes de cámaras o compresores?",
+          "options": [
+            "Es la visibilidad de escalones o bandas en degradados suaves, causada por insuficiente cuantización (pocos niveles bit) o por compresión fuerte que reduce la resolución tonal.",
+            "Es la aparición de ruido aleatorio en altas frecuencias, causada por filtros de subida de ganancia.",
+            "Es la pérdida de sincronía entre audio y vídeo provocada por variable frame rate.",
+            "Es el parpadeo intermitente causado por sincronización incorrecta entre cámaras."
+          ],
+          "correctIndex": 0,
+          "explanation": "El banding se manifiesta como pasos o bandas visibles en áreas de transición suave por falta de niveles de cuantización (pocos bits) o por artefactos de compresión que reducen la resolución tonal. No es ruido de alta frecuencia ni un problema de sincronía.",
+          "category": "Calidad de imagen"
+        },
+        {
+          "prompt": "En procesos de mezcla automática tipo 'ducking' donde la música rebaja su nivel al aparecer voz mediante sidechain, ¿qué parámetro controla el tiempo que tarda la música en recuperar su nivel una vez cesa la voz?",
+          "options": [
+            "Release",
+            "Attack",
+            "Ratio",
+            "Threshold"
+          ],
+          "correctIndex": 0,
+          "explanation": "En un compresor/ducking sidechain, el parámetro 'release' determina cuánto tiempo tarda la ganancia a volver a su valor normal tras cesar la señal de activación (voz). 'Attack' controla la rapidez de reducción inicial; 'threshold' y 'ratio' determinan el umbral y la profundidad de la compresión.",
+          "category": "Procesado de audio"
+        }
+      ]
+    },
     {
       "id": "002",
       "title": "Examen 002",
