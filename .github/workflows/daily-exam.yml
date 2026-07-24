@@ -12,8 +12,11 @@ on:
 
   # Ejecución automática diaria a las 08:10 de Madrid.
   schedule:
-    - cron: "10 8 * * *"
-      timezone: "Europe/Madrid"
+  - cron: "50 45 * * *"
+    timezone: "Europe/Madrid"
+
+  - cron: "00 11 * * *"
+    timezone: "Europe/Madrid"
 
 # Permite que el workflow modifique data/exams.json
 # y publique el cambio en el repositorio.
