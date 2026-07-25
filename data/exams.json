@@ -1,7 +1,264 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-07-25",
   "exams": [
+    {
+      "id": "005",
+      "title": "Examen 005",
+      "date": "2026-07-25",
+      "level": "Alto (oposición técnica)",
+      "timeMinutes": 20,
+      "blocks": [
+        "Señal y color",
+        "Códecs y contenedores",
+        "Almacenamiento y redes",
+        "Herramientas NLE y workflows",
+        "Medida técnica y audio",
+        "Operaciones en directo y servidores"
+      ],
+      "questions": [
+        {
+          "prompt": "En una estación de montaje que requiere cortes frame-accurate y mínima latencia de respuesta al scrubbing, ¿qué característica técnica de un códec resulta más ventajosa?",
+          "options": [
+            "Que utilice Long‑GOP para mejorar la eficiencia de almacenamiento.",
+            "Que sea intraframe (cada cuadro codificado independientemente).",
+            "Que almacene sólo los I‑frames y descarte P/B‑frames.",
+            "Que implemente compresión con pérdida en el dominio de la frecuencia únicamente."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un códec intraframe codifica cada imagen de forma independiente, por lo que la decodificación para acceso a un solo frame requiere procesar únicamente ese frame. Esto permite búsqueda y corte frame‑accurate con baja carga de CPU y sin necesidad de reconstruir GOPs, aspecto esencial en estaciones de edición interactivas. Long‑GOP ofrece menor tasa de bits pero menor interactividad; las demás opciones no responden a la necesidad de acceso frame‑preciso.",
+          "category": "Códecs y edición"
+        },
+        {
+          "prompt": "Al reducir la profundidad de 10 bits a 8 bits en degradados suaves (cielo, fondos), ¿qué técnica es técnicamente más eficaz para minimizar el banding visible sin sacrificar nitidez?",
+          "options": [
+            "Convertir primero a log y luego a Rec.709 sin añadir ruido.",
+            "Incrementar la compresión para mezclar los niveles de cuantización.",
+            "Usar dithering con ruido distribuido (posiblemente temporal) antes de cuantizar.",
+            "Aplicar un ligero desenfoque espacial para suavizar transiciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "El dithering añade ruido controlado (espacial o temporal) para romper patrones de cuantización y distribuir el error, lo que reduce el banding perceptual manteniendo la nitidez de detalle. El desenfoque reduce nitidez; convertir a log/Rec.709 sin ruido no evita la pérdida de niveles; aumentar compresión suele empeorar banding.",
+          "category": "Color y procesamiento de imagen"
+        },
+        {
+          "prompt": "En un flujo MXF/AAF para garantizar un relink fiable entre proxy y alto‑res a través de sistemas distintos, ¿qué identificador estandarizado se utiliza habitualmente para identificar inequívocamente un material?",
+          "options": [
+            "La marca de tiempo de captura (UTC).",
+            "El UMID (Unique Material Identifier) definido por SMPTE.",
+            "El tamaño en bytes del archivo.",
+            "El nombre de fichero (filename)."
+          ],
+          "correctIndex": 1,
+          "explanation": "El UMID SMPTE es un identificador único normalizado diseñado para identificar material audiovisual de forma inequívoca dentro de contenedores como MXF y permite relink fiable entre proxies y altos‑res. El nombre de fichero o la hora pueden no ser únicos ni persistentes; el tamaño no identifica el contenido.",
+          "category": "Contenedores y metadatos"
+        },
+        {
+          "prompt": "En Avid Media Composer, la función Match Frame aplicada sobre un fotograma de la secuencia realiza principalmente:",
+          "options": [
+            "Crear un marcador con metadatos del fotograma para su exportación.",
+            "Renderizar una imagen de alta calidad del fotograma actual.",
+            "Localizar y cargar en el monitor de origen el fotograma correspondiente del clip fuente y posicionarlo en esa imagen.",
+            "Reemplazar automáticamente el fotograma en la secuencia por la versión de mayor resolución disponible en el disco."
+          ],
+          "correctIndex": 2,
+          "explanation": "Match Frame busca el fotograma exacto de la secuencia en el material fuente y lo abre en el monitor de origen (source monitor), posicionándolo en ese frame: es la herramienta clásica para localizar la toma original asociada a un punto de la edición. No renderiza ni reemplaza automáticamente ni crea marcadores por sí sola.",
+          "category": "NLE (Avid)"
+        },
+        {
+          "prompt": "Durante la reconstrucción de un volumen RAID 5 que contiene material de emisión tras la caída de un disco, ¿cuál es el riesgo técnico más crítico?",
+          "options": [
+            "La posibilidad de fallo de otro disco o un error de lectura no corregible (URE) durante el rebuild, con pérdida total de datos del conjunto.",
+            "Que el sistema cambie la orden de los archivos y los reordene por tamaño.",
+            "Que los permisos POSIX se sobrescriban por defecto durante la reconstrucción.",
+            "Que los metadatos de los archivos queden automáticamente en formato propietario."
+          ],
+          "correctIndex": 0,
+          "explanation": "En RAID 5 la reconstrucción expone al array a una elevada carga de lectura de todos los discos; si durante ese tiempo falla otro disco o aparece una URE (error no corregible), la reconstrucción falla y se puede perder toda la información protegida por la paridad. Los demás enunciados no describen el riesgo técnico principal.",
+          "category": "Almacenamiento y RAID"
+        },
+        {
+          "prompt": "Para una instalación de edición multitrack en tiempo real que exige alta tasa sostenida de I/O, tolerancia a fallo y reconstrucción rápida, ¿qué configuración RAID se considera habitualmente la más adecuada?",
+          "options": [
+            "RAID 0 para máxima velocidad sin redundancia.",
+            "RAID 10 (mirroring + striping).",
+            "RAID 5 (paridad simple) sobre muchos discos.",
+            "RAID 6 (doble paridad) para máxima capacidad."
+          ],
+          "correctIndex": 1,
+          "explanation": "RAID 10 (1+0) combina mirroring y striping: ofrece altas tasas sostenidas de I/O, baja latencia y reconstrucción rápida (gracias a la replicación por espejo), y tolera fallos múltiples en discos de distinto espejo. RAID 5/6 tienen mejor utilización de capacidad pero reconstrucciones más largas y mayor riesgo de URE; RAID 0 carece de redundancia.",
+          "category": "Almacenamiento y RAID"
+        },
+        {
+          "prompt": "En un pipeline de composición que debe mantener transparencia (canal alfa) al pasar clips entre distintas aplicaciones, ¿qué característica técnica debe ofrecer el códec/contenedor elegido?",
+          "options": [
+            "Cálculo automático de chroma key integrado.",
+            "Soporte de muestreo 4:2:2 y compresión Long‑GOP.",
+            "Capacidad de almacenar y preservar un canal alfa por píxel (RGBA) sin descarte.",
+            "Uso exclusivo de perfiles de color Rec.709."
+          ],
+          "correctIndex": 2,
+          "explanation": "Para conservar transparencia es imprescindible que el códec y el contenedor admitan y preserven un canal alfa (RGBA) por píxel, y gestionen si el alfa es premultiplicado o no. El muestreo 4:2:2 o el Long‑GOP no garantizan alfa; chroma key o Rec.709 no sustituyen al almacenamiento de la máscara alfa.",
+          "category": "Composición y formatos"
+        },
+        {
+          "prompt": "En un vectorscopio, ¿qué indica principalmente la distancia radial desde el centro hasta un punto que representa un color?",
+          "options": [
+            "La saturación (magnitud de crominancia) del color.",
+            "La frecuencia espacial del detalle cromático.",
+            "La luminancia (brillo) del color.",
+            "La componente alfa (transparencia) del píxel."
+          ],
+          "correctIndex": 0,
+          "explanation": "La distancia radial en el vectorscopio representa la magnitud de la crominancia, es decir la saturación del color: cuanto más alejado del centro, mayor saturación. El ángulo indica la tonalidad (hue). La luminancia se representa en la forma de onda, no en el vectorscopio.",
+          "category": "Medida técnica y colorimetría"
+        },
+        {
+          "prompt": "¿Qué presenta fundamentalmente un monitor de forma de onda (waveform monitor) en un control técnico de vídeo?",
+          "options": [
+            "La distribución de color en el espacio CIE XYZ.",
+            "El histograma acumulado de todos los canales RGB en tiempo real.",
+            "La curva de gamma aplicada por la LUT 3D.",
+            "La amplitud del componente de luminancia (o Y') a lo largo del eje horizontal de la imagen (posición de píxeles/linea)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El waveform monitor muestra la amplitud de la señal de vídeo (habitualmente la luminancia Y' o componentes individualmente) en función de la posición horizontal/scanline, permitiendo comprobar niveles de negro, blancos y distribución luminosa por posición. No muestra directamente espacio CIE ni la LUT ni el histograma combinado RGB (aunque algunos equipos ofrecen modos adicionales).",
+          "category": "Medida técnica"
+        },
+        {
+          "prompt": "En la mezcla previa a codificación para emisión se suele dejar un margen de cabeza (headroom) con picos alrededor de -6 dBFS. ¿Cuál es la razón técnica principal de esta práctica?",
+          "options": [
+            "Garantizar que el diálogo siempre se sitúe a -6 dBFS para subtitulado automático.",
+            "Cumplir una antigua norma analógica ya obsoleta.",
+            "Permitir que el público escuche picos más altos en sistemas de baja calidad.",
+            "Dejar margen para procesos posteriores (normalización, limitadores, conversión/encoders) y evitar inter‑sample peaks o recorte en la cadena de codificación."
+          ],
+          "correctIndex": 3,
+          "explanation": "El headroom evita saturaciones e inter‑sample peaks que pueden aparecer al procesar o codificar la señal, facilita el trabajo de limitadores/normalizadores y protege frente a conversiones ulteriores (resampling, codificación con picos). No es para hacer que suene más alto ni es una obligación para subtitulado; tiene una base técnica de preservación de integridad de la señal.",
+          "category": "Audio para emisión"
+        },
+        {
+          "prompt": "En un plató de producción, ¿qué función cumple el genlock respecto al código de tiempo (timecode)?",
+          "options": [
+            "Genlock sincroniza las señales de referencia de vídeo (horizonte/vertical) entre equipos; el timecode etiqueta cada frame con una referencia temporal para edición y registro.",
+            "Genlock almacena metadatos de cámara; el timecode controla el genlock.",
+            "Genlock ajusta la ganancia de audio; el timecode gestiona la latencia de red.",
+            "Genlock y timecode son sinónimos y realizan exactamente la misma función."
+          ],
+          "correctIndex": 0,
+          "explanation": "Genlock distribuye una referencia de sincronización (síncronía de horizontes y verticales) para que cámaras y equipos coincidan en los instantes de muestreo de vídeo; el timecode asigna números temporales a frames para identificar y sincronizar en edición. Son funciones complementarias pero distintas.",
+          "category": "Sincronización y timecode"
+        },
+        {
+          "prompt": "En una retransmisión multicámara en directo se suele optar por Y'CbCr 4:2:2 en la señal principal de emisión. ¿Cuál es la razón técnica más habitual para esa elección?",
+          "options": [
+            "Porque 4:2:2 preserva automáticamente el canal alfa para mezclas por croma.",
+            "Porque 4:4:4 sólo es válido para HDR.",
+            "Porque 4:2:2 ofrece mayor luminancia que 4:4:4.",
+            "Porque 4:2:2 reduce el ancho de banda respecto a 4:4:4 manteniendo suficiente resolución cromática para emisión y compatibilidad de equipos broadcast."
+          ],
+          "correctIndex": 3,
+          "explanation": "4:2:2 reduce la información de crominancia horizontal a la mitad respecto a 4:4:4, lo que disminuye el ancho de banda y la tasa de datos manteniendo la información de luminancia intacta; es una elección práctica en broadcast que ofrece buena calidad de color para emisión y es compatible con infraestructura SDI/encoders. No tiene relación directa con canal alfa ni con exclusividad HDR.",
+          "category": "Señal y muestreo"
+        },
+        {
+          "prompt": "En un flujo offline/online donde se prevé etalonaje final, ¿qué ventaja técnica aporta generar proxies a partir del material capturado en curva logarítmica (log) en lugar de convertirlos inmediatamente a Rec.709?",
+          "options": [
+            "Mantener la característica escena‑referida (log) conserva rango dinámico y relaciones tonales, facilitando un conformado y etalonaje fiel sobre los proxies y la correspondencia posterior con los altos‑res.",
+            "La conversión a Rec.709 siempre provoca pérdida irreversible de metadatos del audio.",
+            "Los proxies log ocupan menos espacio que los generados en Rec.709.",
+            "Los proxies en log ya están listos para emisión y no requieren etalonaje."
+          ],
+          "correctIndex": 0,
+          "explanation": "Generar proxies desde material en log preserva la relación escena‑referida y la información de rango dinámico, lo que permite que las decisiones de montaje y conformado se hagan sobre una representación que responde coherentemente al etalonaje final del material alto‑res. Los proxies en log no son necesariamente más pequeños; convertir a Rec.709 demasiado pronto puede limitar opciones en etalonaje y dificultar el conformado exacto.",
+          "category": "Workflows y color"
+        },
+        {
+          "prompt": "¿Qué diferencia funcional y de uso práctica existe entre aplicar una ASC CDL (slope/offset/power/saturation) y una LUT 3D en la cadena de color durante el conformado/etalonaje?",
+          "options": [
+            "La ASC CDL sólo se usa para audio y la LUT 3D para imagen.",
+            "Una ASC CDL define transformaciones no lineales complejas en todo el rango RGB; la 3D LUT sólo modifica luminancia.",
+            "ASC CDL y 3D LUT son equivalentes y pueden sustituirse sin pérdida.",
+            "La ASC CDL es una corrección paramétrica simple (slope/offset/power/saturation) pensada para intercambio de decisiones de color básicas; la 3D LUT realiza un mapeo completo del cubo RGB y aplica transformaciones de gamut y correcciones no lineales complejas."
+          ],
+          "correctIndex": 3,
+          "explanation": "ASC CDL proporciona un conjunto pequeño de parámetros paramétricos útiles para intercambiar decisiones primarias de color entre aplicaciones; una 3D LUT mapea el cubo RGB completo y puede aplicar correcciones complejas, incluidas conversiones de espacio de color y ajuste fino de tonos y gamuts. No son equivalentes ni intercambiables arbitrariamente.",
+          "category": "Gestión de color"
+        },
+        {
+          "prompt": "Para archivado con limitación de ancho de banda, ¿qué ventaja técnica aporta H.265 (HEVC) respecto a H.264 (AVC) y cuál es su coste principal?",
+          "options": [
+            "HEVC elimina la necesidad de contenedores como MXF; el coste es que no soporta audio.",
+            "HEVC ofrece peor compresión pero menor latencia; el coste es menor compatibilidad de colorimetría.",
+            "HEVC ofrece mayor eficiencia de compresión (menor bitrate para la misma calidad) a costa de mayor complejidad de codificación/decodificación y mayor exigencia computacional/licenciamiento.",
+            "HEVC simplifica el montaje frame‑accurate; la desventaja es que no admite 10 bits."
+          ],
+          "correctIndex": 2,
+          "explanation": "HEVC/H.265 logra una eficiencia de compresión superior a H.264, permitiendo reducir significativamente el bitrate para la misma calidad visual—ventaja clave para archivo con limitaciones de ancho—pero exige más potencia CPU/GPU para codificar y decodificar y tiene costes de licencia/implementación mayores. Las demás afirmaciones son incorrectas.",
+          "category": "Códecs y compresión"
+        },
+        {
+          "prompt": "En un servidor EVS, ¿qué se entiende por 'playlist' y cuál es su uso operativo principal en una retransmisión?",
+          "options": [
+            "Un índice de usuarios con permisos de acceso al servidor.",
+            "Un fichero de audio con mezcla precompuesta que reemplaza al soporte físico.",
+            "Un listado ordenado de clips y eventos con tiempos y transiciones que el servidor reproducirá en orden para emisión o grabación programada.",
+            "Un formato de compresión interna propio de EVS para clips largos."
+          ],
+          "correctIndex": 2,
+          "explanation": "En EVS una playlist es una lista secuencial que contiene referencias a clips, puntos de entrada/salida, rutas de reproducción y transiciones; se utiliza para planificar y ejecutar la reproducción en directo de forma controlada. No es un fichero de audio ni un formato de compresión ni un índice de usuarios.",
+          "category": "Servidores y operaciones en directo"
+        },
+        {
+          "prompt": "En un sistema de mezcla automática con side‑chain para ducking (la música baja cuando aparece voz), ¿qué parámetro controla principalmente cuánto tiempo tarda la música en recuperar su nivel original una vez que cesa la voz?",
+          "options": [
+            "El release (tiempo de recuperación) del procesador de dinámica.",
+            "El threshold (umbral) del detector.",
+            "La frecuencia de corte del filtro shelving.",
+            "El ratio de compresión aplicado a la voz."
+          ],
+          "correctIndex": 0,
+          "explanation": "El parámetro 'release' determina la duración que tarda la ganancia en volver al valor previo una vez que la señal que activa el side‑chain (la voz) desaparece. El threshold define el punto de activación; el ratio afecta la cantidad de reducción; el shelving altera la curva de frecuencia pero no el tiempo de recuperación.",
+          "category": "Audio y mezcla"
+        },
+        {
+          "prompt": "Una de las ventajas arquitectónicas de implantar SMPTE ST 2110 en una instalación nueva frente a SDI tradicional es:",
+          "options": [
+            "Que ST 2110 reduce la latencia a cero comparado con SDI.",
+            "Que ST 2110 elimina la necesidad de sincronización temporal entre dispositivos.",
+            "Que ST 2110 distribuye por separado audio, vídeo y datos auxiliares como flujos IP, permitiendo un enrutamiento más flexible y escalable sobre switches de propósito general.",
+            "Que ST 2110 hace innecesaria la gestión de metadatos en postproducción."
+          ],
+          "correctIndex": 2,
+          "explanation": "ST 2110 desagrega las essences (audio, vídeo, ANC) en flujos IP separados, lo que facilita el enrutamiento flexible, escalabilidad y aprovechamiento de infraestructura de red COTS. Aun así requiere sincronización (PTP/genlock) y gestión de metadatos; no elimina latencia ni la reduce a cero, pero ofrece beneficios de arquitectura frente a SDI.",
+          "category": "Redes y arquitectura"
+        },
+        {
+          "prompt": "Según las especificaciones habituales de compatibilidad LTO, ¿qué comportamiento es el más frecuente respecto a lectura/escritura entre generaciones de cintas y unidades?",
+          "options": [
+            "Las cintas LTO son de sólo lectura en cualquier unidad que no sea la original.",
+            "Las unidades LTO pueden leer hasta dos generaciones anteriores y escribir sólo en la generación inmediatamente anterior (política típica de backward compatibility).",
+            "Una unidad LTO sólo lee y escribe su misma generación; no admite otras generaciones.",
+            "Todas las unidades LTO son compatibles hacia adelante y hacia atrás con cualquier generación de cinta sin restricciones."
+          ],
+          "correctIndex": 1,
+          "explanation": "La política de compatibilidad de LTO suele permitir que una unidad lea hasta dos generaciones anteriores y escriba en la generación inmediatamente anterior (por ejemplo, una unidad de generación N puede leer N, N‑1 y N‑2, y escribir en N y N‑1). No existe compatibilidad universal entre todas las generaciones ni sólo lectura en unidades distintas.",
+          "category": "Archivado y soportes"
+        },
+        {
+          "prompt": "En postproducción, ¿qué entendemos por 'banding' y cuál es la causa más habitual en archivos digitales procedentes de cámaras o compresores?",
+          "options": [
+            "Banding es el ruido aleatorio introducido por sensores; su causa principal es siempre un mal ajuste de ganancia en la cámara.",
+            "Banding es una deformación geométrica causada por incorrecta sincronización genlock.",
+            "Banding es el efecto de bandas horizontales de interferencia RF; se debe a pérdidas en cables coaxiales.",
+            "Banding es el contoneado visible en degradados suaves (efecto de posterización del gradiente); su causa más habitual es la insuficiente resolución de cuantización (pocos niveles por canal) o transformaciones de color sin dithering, a veces agravado por compresión fuerte."
+          ],
+          "correctIndex": 3,
+          "explanation": "El banding aparece como bandas o escalones en degradados suaves y se debe a que hay pocos niveles discretos disponibles tras la cuantización (por baja profundidad de bits) o por reescalados/compresiones que eliminan niveles; la solución típica es mayor profundidad, dithering o técnicas de restauración. No es ruido RF ni un efecto de genlock.",
+          "category": "Procesamiento de imagen"
+        }
+      ]
+    },
     {
       "id": "004",
       "title": "Examen 004",
