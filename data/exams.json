@@ -1,7 +1,263 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-25",
+  "updatedAt": "2026-07-26",
   "exams": [
+    {
+      "id": "006",
+      "title": "Examen 006",
+      "date": "2026-07-26",
+      "level": "Oposición técnica - alto",
+      "timeMinutes": 20,
+      "blocks": [
+        "Señal, muestreo y colorimetría",
+        "Códecs y flujo de trabajo de postproducción",
+        "Sistemas de emisión y servidores",
+        "Almacenamiento y redes",
+        "Medida y audio"
+      ],
+      "questions": [
+        {
+          "prompt": "Al convertir una captura en Y'CbCr 4:4:4 a 4:2:2 mediante un submuestreo horizontal típico (filtro y decimación de crominancia), ¿qué efecto técnico sobre los bordes finos con alto contraste cromático es el más probable?",
+          "options": [
+            "Mejora de la nitidez percibida por la reducción de ruido cromático.",
+            "Incremento del banding en degradados de luminancia debido a la pérdida de crominancia.",
+            "Pérdida directa y apreciable de la luminancia (Y') en las zonas de alto contraste.",
+            "Aumento de artefactos de aliasing cromático y ligeros desplazamientos de color en bordes diagonales o finos."
+          ],
+          "correctIndex": 3,
+          "explanation": "Al submuestrear horizontalmente la crominancia se reduce la resolución espacial de Cb/Cr. Si el contenido tiene detalles de color finos (bordes diagonales o patrones), la crominancia puede sufrir aliasing o desplazamiento respecto a la luminancia, produciendo fringing o color bleeding local en los bordes. La luminancia en sí (Y') no se pierde; el banding es más ligado a profundidad de bits que al submuestreo; y la nitidez no mejora por esta operación.",
+          "category": "Señal y muestreo"
+        },
+        {
+          "prompt": "En la cadena de coloreado y conformado, ¿qué limitación funcional tiene una especificación ASC CDL (slope/offset/power/saturation) frente a una LUT 3D aplicada como transformador final?",
+          "options": [
+            "La ASC CDL actúa sólo por canal de forma independiente y no puede modelar transformaciones cruzadas de color ni cambios de tonalidad complejos que una 3D LUT sí puede representar.",
+            "La ASC CDL introduce más latencia de procesamiento que una 3D LUT.",
+            "La ASC CDL requiere archivos de mayor tamaño que una LUT 3D para su intercambio.",
+            "La ASC CDL no puede definirse numéricamente y depende exclusivamente del software de control de cámara."
+          ],
+          "correctIndex": 0,
+          "explanation": "ASC CDL es un conjunto paramétrico sencillo (slope/offset/power/saturation) que ajusta cada canal y la saturación de forma básica; sirve para intercambiar intenciones de color entre herramientas, pero no puede representar transformaciones no lineales complejas ni dependientes del cruce entre canales (por ejemplo cambios de matiz específicos o correcciones dependientes de luminancia) que sí puede mapear una LUT 3D que reubica puntos en el cubo RGB.",
+          "category": "Colorimetría / Etalonaje"
+        },
+        {
+          "prompt": "En estaciones de edición que manejan códecs Long GOP, ¿qué estrategia de almacenamiento reduce de forma más efectiva la latencia de acceso aleatorio a frames individuales sin cambiar el códec original?",
+          "options": [
+            "Aumentar el tamaño de stripe en la matriz RAID para mejorar throughput secuencial.",
+            "Emplear una caché SSD (read-cache) que almacene GOPs recientemente accedidos o índices, reduciendo latencia de scrubbing y accesos aleatorios.",
+            "Convertir inmediatamente todo el material a un códec intraframe en el mismo volumen RAID.",
+            "Usar RAID 5 en lugar de RAID 6 para optimizar IOPS."
+          ],
+          "correctIndex": 1,
+          "explanation": "Sin recodificar el material Long GOP, una caché en SSD que mantenga GOPs, índices y frames clave reduce significativamente la latencia de acceso aleatorio y mejora el scrubbing frame-accurate. Incrementar stripe mejora throughput secuencial (no latencia aleatoria), convertir a intraframe implica recodificación (cambio de códec) y RAID 5 frente a RAID 6 no garantiza menor latencia de lectura aleatoria.",
+          "category": "Códecs y almacenamiento"
+        },
+        {
+          "prompt": "Respecto a la configuración de un códec H.264/H.265 para obtener compresión eficiente sin penalizar excesivamente la interactividad en edición, ¿qué parámetro del diseño del GOP tiene mayor influencia en la necesidad de decodificar múltiples frames para mostrar un único frame solicitado?",
+          "options": [
+            "El contenedor (MP4 frente a MXF).",
+            "La longitud del GOP (número de frames entre I-frames) y el uso de B-frames.",
+            "La resolución de color (4:2:0 frente a 4:2:2).",
+            "La profundidad de bits por canal (8 vs 10 bits)."
+          ],
+          "correctIndex": 1,
+          "explanation": "En códecs Long GOP, la longitud del GOP y la presencia de P- y B-frames determina cuántos frames dependientes hay que decodificar para reconstruir un frame solicitado: cuanto mayor es el GOP y mayor el uso de B-frames, más dependencias temporales y mayor la latencia de acceso. La crominancia, profundidad de bits o el contenedor son relevantes para calidad y metadatos, pero no controlan la dependencia temporal intrínseca del GOP.",
+          "category": "Códecs"
+        },
+        {
+          "prompt": "En mezcla de un programa, ¿qué ventaja operativa y técnica ofrece el uso de buses auxiliares (aux sends) para enviar varias pistas a un proceso común (reverberación, compresión) frente a duplicar y procesar cada pista por separado?",
+          "options": [
+            "Aumenta la separación estéreo entre pistas y evita cualquier filtrado necesario.",
+            "Reduce la carga de CPU y facilita coherencia sonora al compartir un único plugin/instancia para múltiples pistas, además de facilitar control de mezcla ambiental.",
+            "Permite eliminar por completo la necesidad de automatización de faders.",
+            "Evita la latencia introducida por procesos dinámicos porque los aux sends no pasan por la ruta principal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Usar un bus auxiliar para enviar varias pistas a un mismo procesador (p. ej. reverb o compresor de bus) ahorra instancias de plugin (CPU), garantiza que todas las pistas comparten exactamente el mismo procesamiento (coherencia) y simplifica el control y la automatización. No elimina la necesidad de automatización, no incrementa separación estéreo por sí misma y la latencia del procesado sigue existiendo aunque centralizada.",
+          "category": "Audio / Mezcla"
+        },
+        {
+          "prompt": "En el flujo offline/online, ¿en qué consiste exactamente la operación de 'conformado' (conform) aplicada al final del proceso?",
+          "options": [
+            "Aplicar la LUT final de entrega directamente a los proxies para generar el master.",
+            "Simplemente renombrar los archivos proxy para convertirlos en archivos maestros sin recodificación.",
+            "Exportar una copia comprimida para archivado a un formato de baja tasa de bits.",
+            "Sustituir los proxies por los archivos de alto‑res y reconstruir la secuencia final con frames originales y handles exactos según la EDL/AAF/AAF de edición."
+          ],
+          "correctIndex": 3,
+          "explanation": "El conformado consiste en recrear la secuencia final con los archivos de alto‑res: se usan las decisiones de edición (EDL/AAF/AAF/OMF) para ensamblar los medios originales, con handles y efectos aplicados de forma precisa, sustituyendo los proxies por los materiales de precisión para la emisión o etalonaje final. No es renombrado de proxies ni sólo aplicación de LUT ni compresión para archivo.",
+          "category": "Flujo de trabajo / Offline-Online"
+        },
+        {
+          "prompt": "En una instalación SMPTE ST 2110, ¿qué mecanismo estándar proporciona la sincronización temporal y permite al transporte IP mantener alineación entre streams de vídeo, audio y metadatos sin usar SDI embebido?",
+          "options": [
+            "SNMP (Simple Network Management Protocol).",
+            "RTSP (Real Time Streaming Protocol).",
+            "PTP (IEEE 1588 Precision Time Protocol).",
+            "NTP (Network Time Protocol)."
+          ],
+          "correctIndex": 2,
+          "explanation": "SMPTE ST 2110 depende de PTP (IEEE 1588) para distribuir tiempo de alta precisión en la red y sincronizar el muestreo y reproducción de streams de vídeo y audio. NTP no ofrece la precisión necesaria; RTSP y SNMP son protocolos para control/gestión, no para sincronización de clock de alta precisión.",
+          "category": "Redes / ST 2110"
+        },
+        {
+          "prompt": "En un vectorscopio, la desviación de los trazos de color respecto a la denominada 'piel-line' (skinline) suele indicar principalmente:",
+          "options": [
+            "Un problema de sincronización del timecode.",
+            "Un fallo en el clock de genlock entre cámaras.",
+            "Un desajuste de balance de blancos o un desplazamiento de matiz (hue) que afecta a los tonos de piel.",
+            "Un error en la compresión de audio asociado al clip de vídeo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La 'skin-line' en un vectorscopio representa la dirección en ángulo de tonos de piel típicos. Si los puntos de piel del material se desplazan fuera de esa línea, indica un desplazamiento de matiz o un balance de blancos inadecuado; no tiene relación con audio, genlock o timecode.",
+          "category": "Medida / Color"
+        },
+        {
+          "prompt": "Cuando se reduce la profundidad de 10 bits a 8 bits en un pipeline de postproducción, ¿qué técnica es la más eficientemente recomendada para minimizar visualmente el banding sin perder nitidez?",
+          "options": [
+            "Aumentar el contraste global para disimular las bandas.",
+            "Aplicar un desenfoque espacial apreciable en degradados para suavizarlos.",
+            "Aplicar dithering (ruido controlado), preferentemente con difusión de error o dithering temporal cuando sea posible.",
+            "Remuestrear la imagen a resolución inferior para ocultar el banding."
+          ],
+          "correctIndex": 2,
+          "explanation": "El dithering introduce ruido controlado que rompe la estructura de cuantización visible del degradado, distribuye el error y reduce la percepción de banding sin sacrificar nitidez. El desenfoque y la reducción de resolución degradan la definición; incrementar contraste suele empeorar el banding.",
+          "category": "Procesado de imagen"
+        },
+        {
+          "prompt": "Dentro del formato MXF, el patrón operativo OP1a se caracteriza por:",
+          "options": [
+            "Almacenar múltiples pistas de programa separadas en archivos distintos para cada essence.",
+            "Ser exclusivo de contenidos de audio y no contener vídeo.",
+            "Requerir siempre compresión lossy específica del fabricante.",
+            "Empaquetar en un único archivo todo el programa (essence intercalada y metadata) en una estructura autocontenida orientada a entrega lineal."
+          ],
+          "correctIndex": 3,
+          "explanation": "OP1a es un Operational Pattern de MXF que crea un archivo autocontenido por elemento/programa donde las essences (vídeo, audio, etc.) y la metadata se empaquetan, típicamente con essence intercalada en el archivo; es común en entregas broadcast. No obliga a un tipo de compresión y contiene tanto vídeo como audio.",
+          "category": "Contenedores / MXF"
+        },
+        {
+          "prompt": "Para que un servidor de reproducción de clips (tipo EVS) soporte con fiabilidad modos de 'trick play' y shuttle fluido, ¿qué dos características del material o de su indexación son más críticas?",
+          "options": [
+            "Existencia de indexado/frame‑accurate timecode en los clips y preferentemente essence intra‑frame o índices específicos para búsqueda rápida.",
+            "Conversión del material a MP4 con fragmentación por segmentos pequeños.",
+            "Almacenamiento de sólo audio separado del vídeo para reducir carga de datos.",
+            "Uso exclusivo de códecs Long GOP y almacenado en cinta LTO."
+          ],
+          "correctIndex": 0,
+          "explanation": "Los servidores de reproducción en directo requieren índices precisos y timecode frame‑accurate que permitan localizar frames sin ambigüedad, y la presencia de essence intra‑frame o índices que permitan decodificación directa de frames mejora la capacidad de ofrecer shuttle y trick play sin artefactos. Los Long GOP sin índices dificultan el acceso aleatorio; MP4 fragmentado no es garantía; separar audio no soluciona el problema.",
+          "category": "Servidores / EVS"
+        },
+        {
+          "prompt": "En Avid Media Composer, ¿qué realiza principalmente la acción 'Consolidate/Transcode' desde un bin?",
+          "options": [
+            "Sincroniza automáticamente los clips multicámara usando timecode si no hay referencias.",
+            "Elimina todas las copias de seguridad del proyecto para liberar espacio.",
+            "Crea nuevos archivos de media (transcodificados o consolidando material existente) y los enlaza al proyecto, generando archivos con handles adecuados para edición/etalonaje.",
+            "Cambia la resolución del proyecto sin alterar los archivos de media originales."
+          ],
+          "correctIndex": 2,
+          "explanation": "Consolidate/Transcode crea nuevos archivos de media (por ejemplo transcodifica a otro códec o copia sólo la porción usada) y los asocia al proyecto con handles adecuados. No borra backups, no cambia arbitrariamente la resolución del proyecto ni es una función automática de sincronización multicámara.",
+          "category": "Avid Media Composer"
+        },
+        {
+          "prompt": "Comparando RAID 5 y RAID 6 en un almacenamiento de medios para emisión, ¿cuál es la ventaja técnica principal de RAID 6 frente a RAID 5 en términos de seguridad durante el proceso de reconstrucción tras fallo de un disco?",
+          "options": [
+            "RAID 6 realiza reconstrucciones instantáneas sin sobrecarga de I/O.",
+            "RAID 6 soporta la pérdida simultánea de dos discos (paridad dual), reduciendo el riesgo de pérdida de datos si ocurre un fallo adicional durante la reconstrucción.",
+            "RAID 6 requiere menos discos para la misma capacidad usable que RAID 5.",
+            "RAID 6 ofrece más velocidad que RAID 5 en lecturas secuenciales porque elimina la paridad."
+          ],
+          "correctIndex": 1,
+          "explanation": "RAID 6 implementa doble paridad, lo que permite sobrevivir a la pérdida de dos discos simultáneamente o durante la reconstrucción de uno. Esto reduce el riesgo de pérdida de datos frente a RAID 5, que sólo tolera un disco fallado. RAID 6 no elimina paridad ni es más rápido por defecto; además necesita más espacio para paridad.",
+          "category": "Almacenamiento / RAID"
+        },
+        {
+          "prompt": "Según el comportamiento habitual definido por el consorcio LTO, ¿qué compatibilidad entre generaciones es la regla más frecuente para las unidades y cintas?",
+          "options": [
+            "Las unidades LTO sólo pueden leer y escribir la misma generación exacta de cinta y no hay retrocompatibilidad.",
+            "Las unidades LTO pueden escribir en generaciones futuras pero no leer generaciones anteriores.",
+            "Las unidades LTO pueden leer y escribir indistintamente en cualquier generación sin limitaciones.",
+            "Las unidades LTO suelen poder leer al menos la generación inmediatamente anterior y escribir en la generación inmediatamente anterior (compatibilidad hacia atrás limitada)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La política habitual de compatibilidad LTO es que una unidad puede leer la generación inmediatamente anterior y normalmente también escribir en la generación inmediatamente anterior; algunas generaciones permiten además lectura de dos generaciones atrás, pero la regla más segura y habitual es lectura y escritura hacia la generación inmediata anterior solamente. No existe compatibilidad total entre todas las generaciones.",
+          "category": "Archivado / LTO"
+        },
+        {
+          "prompt": "En un monitor de forma de onda (waveform monitor) utilizado en control técnico de vídeo, ¿qué representa fundamentalmente la traza vertical en función de la horizontal?",
+          "options": [
+            "La amplitud de crominancia (Cb/Cr) en función del tiempo.",
+            "Nivel de luminancia (Y') o señal compuesta frente a la posición horizontal de la imagen (scan), permitiendo evaluar exposición y clipping por columnas.",
+            "Distribución espectral del color en el dominio de frecuencia.",
+            "La correlación entre canales de audio izquierdo y derecho en el tiempo."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un waveform monitor muestra la magnitud de la luminancia (o la señal compuesta) en el eje vertical frente a la posición horizontal de la imagen en el eje horizontal, permitiendo valorar niveles, clipping, uniformidad y contraste por áreas de la imagen. No muestra espectro de color ni correlación de audio.",
+          "category": "Medida / Monitorización"
+        },
+        {
+          "prompt": "En un vectorscopio, ¿qué información proporciona principalmente la distancia radial (radio) desde el centro hacia un punto que representa un color concreto?",
+          "options": [
+            "La saturación o magnitud de la crominancia (cuánto color hay respecto a el gris).",
+            "La posición vertical del píxel en la imagen.",
+            "La frecuencia temporal de parpadeo del color.",
+            "La luminosidad absoluta de ese color en nits."
+          ],
+          "correctIndex": 0,
+          "explanation": "En un vectorscopio el radio desde el centro al punto de color indica la magnitud de la crominancia (saturación): puntos más alejados representan colores más saturados; el ángulo indica el matiz (hue). No da luminancia en nits ni información temporal o espacial vertical.",
+          "category": "Medida / Color"
+        },
+        {
+          "prompt": "Desde la perspectiva de la mezcla para entrega, ¿por qué es habitual dejar un margen de cabeza (headroom) con picos objetivo alrededor de -6 dBFS en la etapa de mezcla previa a codificación/emisión?",
+          "options": [
+            "Para que los mezcladores de música puedan aplicar mastering sin necesidad de compresión dinámica.",
+            "Para permitir margen ante picos inter‑muestra, procesos de codificación/limitación y para evitar clipping en etapas posteriores (codificadores/streaming/transmisión).",
+            "Porque los codificadores siempre añaden exactamente +6 dBFS al contenido durante la exportación.",
+            "Porque la mayoría de los medidores y consolas saturan por encima de -3 dBFS y por ello se deja esa zona vacía por tradición."
+          ],
+          "correctIndex": 1,
+          "explanation": "Dejar headroom (p. ej. picos en torno a -6 dBFS) previene clipping por picos inter‑muestra, deja margen para limitadores y procesos de codificación que pueden producir sobrepicos y garantiza compatibilidad con cadenas de transmisión que añaden procesamiento. No es por tradición sin fundamento ni porque los codificadores sumen nivel.",
+          "category": "Audio / Operativa"
+        },
+        {
+          "prompt": "Respecto a la diferencia técnica fundamental entre códecs intraframe (por ejemplo ProRes o DNxHD intra) y códecs Long GOP, ¿qué afirmación es correcta?",
+          "options": [
+            "Un códec intraframe comprime cada frame independientemente (cada frame es autocontenido), mientras que un Long GOP usa predicción temporal entre frames y por tanto genera dependencias entre frames.",
+            "Los códecs intraframe sólo funcionan en resoluciones SD mientras que Long GOP sólo en HD/4K.",
+            "Los códecs intraframe siempre son lossless y los Long GOP siempre son con pérdida.",
+            "Los códecs intraframe requieren menos espacio en disco que Long GOP para la misma calidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La diferencia clave es que intraframe (I-only) comprime cada frame por separado, facilitando acceso frame‑accurate y edición con baja carga de CPU, mientras que Long GOP utiliza I, P y B frames con predicción temporal para mejorar la eficiencia de compresión a costa de dependencias temporales. No es una cuestión de resolución ni garantía absoluta de tamaño o de pérdida/none; ambos pueden ser con pérdida o, en casos, sin pérdida.",
+          "category": "Códecs / Edición"
+        },
+        {
+          "prompt": "Para realizar una composición por chroma key con máxima conservación de detalle en bordes y tolerancia al mate, ¿qué formato de captura es el más apropiado?",
+          "options": [
+            "Un stream de baja resolución pero con muchos keyframes (I-frames).",
+            "Un archivo comprimido 4:2:0 de 8 bits con alto ratio de compresión para ahorrar espacio.",
+            "Un flujo 4:4:4 (o 4:4:4:4 si se necesita canal alfa) a 10 bits o superior, sin submuestreo de crominancia.",
+            "Un archivo mono‑croma (luma-only) de alta resolución."
+          ],
+          "correctIndex": 2,
+          "explanation": "Chroma key exige máxima fidelidad de crominancia para preservar transiciones y detalles de borde; por eso lo ideal es 4:4:4 (sin submuestreo) y preferiblemente 10 bits o más para reducir cuantización y banding; si además se requiere conservar transparencia directamente es útil 4:4:4:4 con canal alfa. 4:2:0 y baja resolución no son adecuados.",
+          "category": "Captura / Composición"
+        },
+        {
+          "prompt": "En un flujo profesional que requiere intercambio certero entre sistemas diferentes (proxy ↔ alto‑res), ¿qué metadato estandarizado es más adecuado para identificar de forma inequívoca un material a través de plataformas y así facilitar relink fiable?",
+          "options": [
+            "La fecha de modificación del archivo en el sistema de ficheros.",
+            "El nombre del archivo tal como fue exportado desde la cámara.",
+            "La resolución y el códec del archivo (por ejemplo '1080p ProRes').",
+            "El identificador universal SMPTE UMID (Universal Material Identifier) o un UUID persistente almacenado en metadata del contenedor."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un identificador persistente y estandarizado como el SMPTE UMID o un UUID almacenado en la metadata proporciona una referencia inequívoca entre sistemas, independientemente del nombre de fichero o cambios en rutas. Nombre de archivo, códec o fecha no garantizan unicidad ni persistencia frente a copias o renombrados.",
+          "category": "Metadatos / Interoperabilidad"
+        }
+      ]
+    },
     {
       "id": "005",
       "title": "Examen 005",
