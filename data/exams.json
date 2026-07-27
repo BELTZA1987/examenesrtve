@@ -1,7 +1,263 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-26",
+  "updatedAt": "2026-07-27",
   "exams": [
+    {
+      "id": "007",
+      "title": "Examen 007",
+      "date": "2026-07-27",
+      "level": "Oposición técnica - alto",
+      "timeMinutes": 28,
+      "blocks": [
+        "Señal y medida de imagen",
+        "Códecs, contenedores y workflow",
+        "Almacenamiento, redes y sincronización",
+        "Audio y mezcla / herramientas NLE y servidores EVS",
+        "Color y etalonaje"
+      ],
+      "questions": [
+        {
+          "prompt": "En una señal Y'CbCr 4:2:2 por línea, ¿cuál es la relación de muestreo horizontal entre la componente de luminancia Y' y cada una de las componentes de crominancia (Cb o Cr)?",
+          "options": [
+            "La luminancia tiene cuatro veces las muestras de cada crominancia (4:1).",
+            "La luminancia tiene el doble de muestras horizontales que cada crominancia (2:1).",
+            "La luminancia y cada crominancia se muestrean a la misma tasa horizontal.",
+            "Cada crominancia tiene el doble de muestras horizontales que la luminancia (1:2)."
+          ],
+          "correctIndex": 1,
+          "explanation": "En 4:2:2, por cada dos muestras horizontales de luminancia (Y') hay una muestra de Cb y una de Cr. Es decir, Y' se muestrea al doble de la resolución horizontal de cada componente de crominancia (relación 2:1). Esto es la definición de 4:2:2 (por línea).",
+          "category": "Señal y medida de imagen"
+        },
+        {
+          "prompt": "En un vectorscopio, ¿qué indica principalmente la distancia radial (radio) desde el centro hasta un punto que representa un color concreto?",
+          "options": [
+            "La fase temporal entre señales de crominancia.",
+            "La saturación (intensidad cromática) del color.",
+            "La temperatura de color en grados Kelvin.",
+            "La luminancia absoluta del color."
+          ],
+          "correctIndex": 1,
+          "explanation": "El vectorscopio representa la crominancia en coordenadas polar: el ángulo indica la fase (matiz) y la distancia radial desde el centro indica la magnitud del vector de crominancia, es decir la saturación del color. La luminancia no se representa por el radio en el vectorscopio.",
+          "category": "Señal y medida de imagen"
+        },
+        {
+          "prompt": "En un monitor de forma de onda (waveform monitor) tradicional usado en control técnico, ¿qué se traza en el eje vertical en función de la posición horizontal de la imagen?",
+          "options": [
+            "La luminancia (o componente Y') de la señal en cada posición horizontal de la imagen.",
+            "El valor de crominancia combinado (Cb+Cr) en función del tiempo.",
+            "La distancia radial del color respecto a la piel en función de la trama.",
+            "La energía espectral por canal de audio en función de la posición horizontal del cuadro."
+          ],
+          "correctIndex": 0,
+          "explanation": "El waveform monitor muestra la amplitud de la señal de luminancia (o de uno de los canales/convertidas a luma) en el eje vertical, mientras que el eje horizontal corresponde a la posición espacial (hacia la derecha) de la imagen. Es la herramienta estándar para medir niveles de luminancia por ubicación horizontal.",
+          "category": "Señal y medida de imagen"
+        },
+        {
+          "prompt": "¿Cuál de las siguientes afirmaciones describe con mayor precisión la diferencia técnica fundamental entre un códec intraframe (por ejemplo ProRes intra) y un códec Long GOP (por ejemplo una configuración típica H.264 con GOP largo)?",
+          "options": [
+            "Un códec intraframe no puede contener audio embebido mientras que Long GOP sí.",
+            "Un códec intraframe requiere menos ancho de banda que Long GOP para la misma calidad visual.",
+            "Un códec intraframe usa compresión sin pérdida, mientras que Long GOP siempre es con pérdida.",
+            "Un códec intraframe comprime cada fotograma de forma independiente; Long GOP emplea predicción entre frames (I, P, B) para mayor eficiencia pero peor acceso aleatorio."
+          ],
+          "correctIndex": 3,
+          "explanation": "Los códecs intraframe comprimen cada frame independientemente (como una imagen JPEG por frame), facilitando acceso y edición frame-accurate a costa de mayor tasa de datos. Los códecs Long GOP usan predicción temporal (I, P, B frames) para reducir tasas pero generan dependencia entre frames, lo que complica el acceso aleatorio y incrementa la latencia de decodificación para frames individuales.",
+          "category": "Códecs, contenedores y workflow"
+        },
+        {
+          "prompt": "Para identificar de forma inequívoca un material entre diferentes sistemas y posibilitar un relink fiable entre proxy y archivo alto‑res, ¿qué identificador estandarizado es el más apropiado y reconocido en entornos broadcast?",
+          "options": [
+            "La hora de creación del archivo (file creation timestamp).",
+            "El nombre de fichero (filename) completo con ruta.",
+            "Un identificador único SMPTE UMID (Unique Material Identifier).",
+            "La resolución y códec del archivo concatenados (p. ej. 1920x1080_PRORES)."
+          ],
+          "correctIndex": 2,
+          "explanation": "El SMPTE UMID (Unique Material Identifier) está diseñado para identificar inequívocamente un objeto de media de forma única a través de sistemas. A diferencia del nombre de fichero o timestamps, un UMID permanece estable y no depende de rutas ni de metadatos modificables, lo que lo convierte en la mejor práctica para relink entre proxies y alto‑res en workflows broadcast.",
+          "category": "Códecs, contenedores y workflow"
+        },
+        {
+          "prompt": "En un flujo offline/online, ¿qué ventaja técnica aporta generar proxies a partir del material capturado en curva logarítmica (log) en lugar de convertirlos inmediatamente a Rec.709?",
+          "options": [
+            "Los proxies en log permiten evitar la necesidad de LUTs en la fase de etalonaje final.",
+            "Los proxies en log garantizan que no será necesario revisar el color en la etapa online.",
+            "Los proxies en log ocupan menos espacio que en Rec.709 con igual calidad visual.",
+            "Generar proxies desde log mantiene mayor rango dinámico y consistencia con el material original facilitando el conformado y etalonaje final."
+          ],
+          "correctIndex": 3,
+          "explanation": "Al generar proxies desde el material en curva log se preserva más rango dinámico y detalle de altas/bajas luces en el archivo proxy. Esto mejora la correspondencia cromática/tonal con los archivos altos‑res durante el conformado y facilita que el etalonaje final trabaje con transformaciones más precisas: el proxy refleja mejor la latitud de la cámara que una conversión precoz a Rec.709 (que recorta y aplana el rango).",
+          "category": "Color y etalonaje"
+        },
+        {
+          "prompt": "Cuando se reduce la profundidad de 10 bits a 8 bits en degradados suaves (por ejemplo cielos) y se quiere minimizar el banding sin perder nitidez, ¿qué técnica es la más eficaz desde el punto de vista técnico?",
+          "options": [
+            "Usar un filtro de desenfoque sobre el degradado para suavizar transiciones.",
+            "Incrementar el contraste global para ocultar el banding.",
+            "Aplicar compresión adicional con Long GOP para camuflar los escalones.",
+            "Aplicar un ligero dithering (ruido de cuantización, preferiblemente noise‑shaped o temporal) antes de la cuantización a 8 bits."
+          ],
+          "correctIndex": 3,
+          "explanation": "El dithering añade ruido controlado antes de la cuantización, rompiendo los escalones regulares y reduciendo la percepción de banding. Las variantes noise‑shaped o combinadas con dithering temporal son las más eficientes porque preservan la nitidez dejando un ruido visualmente menos molesto que los escalones. Los filtros de desenfoque sacrifican nitidez; compresión o subir contraste no solucionan el origen de la cuantización.",
+          "category": "Color y etalonaje"
+        },
+        {
+          "prompt": "Para obtener la máxima conservación de detalle en los bordes y mayor tolerancia al mate en una composición por chroma key, ¿qué formato de captura es el más apropiado?",
+          "options": [
+            "Vídeo de baja resolución con mayor ratio de bits por pixel. ",
+            "Vídeo comprimido Long GOP H.264 4:2:0 a 8 bits.",
+            "4:4:4 (preferiblemente 10+ bits) o captura RAW/ RGB con canal alfa si es posible.",
+            "Y'CbCr 4:2:2 a 10 bits comprimido con XDCAM HD422."
+          ],
+          "correctIndex": 2,
+          "explanation": "Para chroma key es esencial mantener máxima información de crominancia y detalle en los bordes; por ello 4:4:4 (o RGB) a alta profundidad de bits o captura RAW proporciona la mejor conservación de color y gradientes, facilitando extracción fina del matte. 4:2:2 o 4:2:0 reducen crominancia y hacen más difícil el recorte fino en colorido.",
+          "category": "Color y etalonaje"
+        },
+        {
+          "prompt": "En Avid Media Composer, ¿qué realiza principalmente la operación 'Consolidate/Transcode' cuando se ejecuta desde un bin sobre clips seleccionados?",
+          "options": [
+            "Copia y/o transforma los medios seleccionados al destino y codec elegido, creando nuevos archivos y relinkando los clips del bin a esos nuevos medios.",
+            "Elimina las versiones proxy y deja únicamente los archivos alto‑res originales sin generar nuevos archivos.",
+            "Solo actualiza rutas de metadatos sin mover archivos físicos.",
+            "Sincroniza audio y vídeo automáticamente sin crear nuevos ficheros."
+          ],
+          "correctIndex": 0,
+          "explanation": "La acción Consolidate/Transcode copia (consolidate) o recompone/convierte (transcode) los media seleccionados a un destino y códec especificados, generando nuevos archivos y relinkando los clips en el bin para que apunten a esos nuevos medios. No es solo metadata: produce ficheros físicos en el formato elegido.",
+          "category": "NLE / workflow"
+        },
+        {
+          "prompt": "En Avid Media Composer, ¿qué consigue específicamente la función 'Match Frame' cuando se aplica sobre un fotograma dentro de la secuencia?",
+          "options": [
+            "Abre en el monitor de origen el clip fuente que contiene ese fotograma y sitúa la cabeza de reproducción exactamente en ese mismo frame.",
+            "Realiza un análisis automático de color del fotograma y sugiere una LUT.",
+            "Crea automáticamente una copia del frame en un nuevo clip dentro del bin.",
+            "Reemplaza el fotograma de la secuencia por el frame siguiente del clip origen."
+          ],
+          "correctIndex": 0,
+          "explanation": "Match Frame localiza el clip original que aportó ese fotograma a la secuencia y abre dicho clip en el monitor de origen posicionando el playhead en el frame exacto. Es la herramienta estándar para recuperar la fuente original de un frame de la timeline para recortes o referencias.",
+          "category": "NLE / workflow"
+        },
+        {
+          "prompt": "Para que un servidor de reproducción tipo EVS soporte 'trick play' (reproducción lenta/rápida y shuttle fluido) de forma fiable, ¿qué dos características del material o su indexación son más críticas?",
+          "options": [
+            "Que los clips utilicen H.265 con GOP largo y que el servidor realice transcodificación en vuelo.",
+            "Que los clips estén en MXF OP1a y que el servidor disponga de doble alimentación de red.",
+            "Que el material sea intra‑frame (o con keyframes frecuentes) y que exista indexación frame‑accurate/timecode embebido.",
+            "Que los archivos estén almacenados en LTO y que los metadatos incluyan la lista de cámaras."
+          ],
+          "correctIndex": 2,
+          "explanation": "El trick play fluido requiere poder acceder y decodificar frames individuales sin tener que reconstruiros largos GOPs; por eso material intra‑frame o con keyframes frecuentes facilita el proceso. Además, la indexación frame‑accurate (timecode continuo y metadatos de frame) permite realizar saltos y shuttle con precisión. MXF u otros contenedores son relevantes, pero la clave técnica son intra‑frames y metadatos temporales exactos.",
+          "category": "Servidores EVS / Códecs"
+        },
+        {
+          "prompt": "Comparando RAID5 y RAID6 en un sistema de almacenamiento de medios para emisión, ¿cuál es la ventaja técnica principal de RAID6 durante el proceso de reconstrucción tras la caída de un disco?",
+          "options": [
+            "RAID6 reduce el consumo energético del arreglo respecto a RAID5.",
+            "RAID6 puede tolerar la pérdida de dos discos simultáneamente gracias a doble paridad, reduciendo el riesgo durante la reconstrucción.",
+            "RAID6 elimina por completo la necesidad de reconstrucción tras una caída de disco.",
+            "RAID6 ofrece mayor velocidad de escritura que RAID5."
+          ],
+          "correctIndex": 1,
+          "explanation": "RAID6 añade una segunda capa de paridad, lo que permite soportar la falla de dos discos simultáneamente. Durante la reconstrucción de un disco fallado en RAID5 existe riesgo de que otro disco falle y se pierdan datos; RAID6 reduce ese riesgo al poder soportar una segunda pérdida mientras se completa la reconstrucción.",
+          "category": "Almacenamiento y redes"
+        },
+        {
+          "prompt": "Según las especificaciones y práctica habitual del consorcio LTO, ¿qué regla de compatibilidad entre generaciones es la más frecuente para unidades y cartuchos?",
+          "options": [
+            "Una unidad LTO puede escribir en cualquier cinta siempre que tenga capacidad física suficiente.",
+            "Una unidad LTO solo puede leer su misma generación de cinta y no es compatible con otras.",
+            "Una unidad LTO puede leer y escribir todas las generaciones anteriores sin restricciones.",
+            "Una unidad LTO suele leer dos generaciones anteriores y escribir en una generación anterior (backward‑read two / write one)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La política típica de LTO establece que una unidad puede leer cartuchos de hasta dos generaciones anteriores y puede escribir hacia cartuchos de la generación inmediatamente anterior (leer‑dos, escribir‑uno). Esto ha sido la práctica común para compatibilidad hacia atrás en LTO.",
+          "category": "Almacenamiento y redes"
+        },
+        {
+          "prompt": "En el diseño de una instalación que migra a SMPTE ST 2110, ¿cuál es una ventaja arquitectónica clara frente a una infraestructura SDI tradicional?",
+          "options": [
+            "Permite transportar video, audio y metadatos como flujos independientes sobre IP facilitando el enrutamiento flexible y la escalabilidad.",
+            "Hace innecesario cualquier tipo de control de calidad (QC) sobre las señales.",
+            "Reduce a cero la latencia entre cámaras y mezclador.",
+            "Elimina la necesidad de sincronización temporal entre dispositivos."
+          ],
+          "correctIndex": 0,
+          "explanation": "SMPTE ST 2110 packetiza las esencias (vídeo, audio, datos) como flujos IP independientes, permitiendo enrutar/gestionar cada esencia por separado usando infraestructura de red estándar, lo que aporta flexibilidad, escalabilidad y despliegue/desvinculación de señales sin el cableado y limitaciones físicas del SDI. No elimina latencia ni sincronización (usa PTP/genlock equivalentes) ni sustituye QC.",
+          "category": "Almacenamiento y redes"
+        },
+        {
+          "prompt": "En un estudio, ¿qué función específica cumple el genlock respecto al timecode en la sincronización de cámaras para una producción multicámara?",
+          "options": [
+            "Genlock genera el código de tiempo que luego usan todas las cámaras; el timecode ajusta la ganancia de las cámaras.",
+            "Genlock y timecode son intercambiables y cumplen exactamente la misma función.",
+            "Genlock solo se usa para audio; el timecode solo para vídeo.",
+            "Genlock sincroniza las tramas de vídeo (la señal de sincronismo) para evitar drift y facilitar conmutación frame‑accurate; el timecode aporta marcas temporales para edición y registro."
+          ],
+          "correctIndex": 3,
+          "explanation": "Genlock distribuye una referencia de sincronismo que alinea los relojes de vídeo (vertical/horizontal sync) evitando drift y permitiendo conmutación sin tearing. El timecode (LTC/VITC/SMPTE) proporciona etiquetas temporales para los frames y es vital en edición y conformado. Ambos son complementarios: genlock garantiza sincronía de señal, timecode marca la posición temporal.",
+          "category": "Almacenamiento y redes"
+        },
+        {
+          "prompt": "En la etapa de mezcla previa a codificación/emisión es práctica habitual dejar un margen de cabeza (headroom) con picos objetivo alrededor de -6 dBFS. ¿Cuál es la razón técnica principal de esta práctica?",
+          "options": [
+            "Cumplir exclusivamente requisitos estéticos de la cadena de emisión.",
+            "Permitir espacio para inter‑sample peaks y procesamiento posterior (codificadores, limitadores, normalización) evitando clipping en la cadena.",
+            "Maximizar el nivel percibido antes de la codificación AAC.",
+            "Evitar que el medidor VU marque niveles altos durante la grabación."
+          ],
+          "correctIndex": 1,
+          "explanation": "Dejar headroom (p. ej. picos alrededor de -6 dBFS) permite absorber picos inter‑muestrales, aplicar procesamiento dinámico o codificación sin provocar clipping y dejar margen para etapas posteriores (emisores, transcoding, loudness processing). Es una práctica técnica para preservación de integridad de la señal y evitar distorsión por recorte en cadenas de emisión.",
+          "category": "Audio y mezcla"
+        },
+        {
+          "prompt": "¿Qué característica técnica de un códec es la que más reduce la latencia y la carga de decodificación al scrubbing y edición frame‑accurate en una estación de montaje?",
+          "options": [
+            "Uso de perfil Baseline (para compatibilidad móvil).",
+            "Empaquetado en MXF OP1a.",
+            "Compresión intraframe (I‑only) o intervalos cortos entre keyframes que evitan necesitar decodificar múltiples frames para presentar uno.",
+            "Uso obligatorio de B‑frames para mejorar la compresión."
+          ],
+          "correctIndex": 2,
+          "explanation": "Los códecs intraframe (I‑only) o con keyframes frecuentes minimizan la necesidad de decodificar frames anteriores/anteriores‑posteriores para mostrar un frame solicitado, reduciendo latencia y CPU al scrubbing. B‑frames y GOP largos aumentan la dependencia entre frames y la carga de decodificación para acceso aleatorio.",
+          "category": "Códecs, contenedores y workflow"
+        },
+        {
+          "prompt": "¿Qué caracteriza operativamente al patrón OP1a dentro del formato MXF, habitual en entregas broadcast?",
+          "options": [
+            "OP1a significa que el archivo está optimizado para streaming HTTP adaptive (HLS/DASH).",
+            "Es un patrón que almacena cada pista en un fichero separado para multi‑programa.",
+            "OP1a es un archivo autoconclusivo que contiene un único paquete de programa con essences intercaladas (audio y vídeo) listo para entrega.",
+            "OP1a solo es compatible con códecs sin compresión."
+          ],
+          "correctIndex": 2,
+          "explanation": "MXF OP1a es un Operational Pattern que produce un único fichero autosuficiente que contiene las essences (vídeo y audio) intercaladas y los metadatos necesarios para representar un único programa. Es el patrón habitual para entrega de programas porque es fácil de transportar y procesar por sistemas de playout o archivado.",
+          "category": "Códecs, contenedores y workflow"
+        },
+        {
+          "prompt": "En mezcla automática mediante side‑chain para ducking (la música baja cuando aparece voz), ¿qué parámetro controla principalmente cuánto tiempo tarda la música en recuperar su nivel original una vez cesa la voz?",
+          "options": [
+            "La frecuencia de corte del filtro shelving utilizado en la pista de música.",
+            "El ratio del compresor del canal de música.",
+            "El umbral (threshold) del compresor en la pista de voz.",
+            "El tiempo de 'release' del compresor/automático que gobierna la recuperación tras cesar la señal de control."
+          ],
+          "correctIndex": 3,
+          "explanation": "En un ducking por side‑chain la ganancia de la música se controla por un procesador dinámico cuya curva incluye ataque y release. El parámetro 'release' determina el tiempo que tarda el procesador en dejar de atenuar la música y en consecuencia cuánto tarda esta en recuperar su nivel original cuando desaparece la señal de control (voz).",
+          "category": "Audio y mezcla"
+        },
+        {
+          "prompt": "Respecto a la preservación de canal alfa (transparencia) entre aplicaciones de composición, ¿qué característica técnica debe ofrecer el códec o contenedor elegido?",
+          "options": [
+            "Utilizar Long GOP con alpha embebido en B‑frames.",
+            "Capacidad de almacenar canales de color y un canal alfa (p. ej. 4:4:4:4 o contenedor con streams separados) y preservar la precisión de profundidad de bits.",
+            "Obligatoriamente usar MXF OP1a para transmitir alfa.",
+            "Soporte de muestreo 4:2:0 para reducir tamaño."
+          ],
+          "correctIndex": 1,
+          "explanation": "Para mantener transparencia el códec/contenedor debe soportar un canal alfa explícito y preservarlo sin compresión con pérdida de máscara; soluciones típicas son códecs 4:4:4:4 o contenedores que admitan streams separados (EXR, ProRes 4444, DNxHR con alpha). 4:2:0 o Long GOP no son apropiados para un matte preciso.",
+          "category": "Color y etalonaje / Códecs y contenedores "
+        }
+      ]
+    },
     {
       "id": "006",
       "title": "Examen 006",
