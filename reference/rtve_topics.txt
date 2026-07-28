@@ -1,18 +1,168 @@
-REFERENCIA TEMÁTICA — EDICIÓN, MONTAJE Y PROCESOS AUDIOVISUALES RTVE
+TEMARIO OFICIAL COMPLETO
+OCUPACIÓN TIPO: EDICIÓN, MONTAJE Y PROCESOS AUDIOVISUALES
+FUENTE BASE: Anexo 2 de las Bases Específicas adaptadas de la Convocatoria 1/2022 de RTVE,
+publicadas el 23 de abril de 2024.
 
-Usar como inspiración, sin copiar mecánicamente:
-- Señal de vídeo digital, Y'CbCr, muestreo 4:2:2 y 4:4:4:4, profundidad de bits.
-- Colorimetría, Rec. 709, luma, banding, curvas logarítmicas, HDR.
-- Códecs intraframe/Long GOP, H.264/H.265, XDCAM HD422, MXF, AAF.
-- Avid Media Composer: Match Frame, Audio Mixer, relink, multicámara.
-- Avid Interplay: Dynamic Relink, gestión de medios y metadatos.
-- EVS LSM e IPDirector: clips, playlists, canales y reproducción.
-- Audio digital: dBFS, muestreo, filtros shelving, ducking, balanceado.
-- Medida: vectorscopio, forma de onda y control técnico.
-- Almacenamiento: RAID 0/1/5, LTO, servidores y redes.
-- Código de tiempo, drop-frame, genlock y sincronismo.
-- Edición offline/online, proxies, conformado y exportación.
-- Lenguaje audiovisual, continuidad, ritmo, J-cut y L-cut.
-- Legislación general de RTVE y prevención de riesgos.
+IMPORTANTE
+- Esta es la relación completa de materias publicada para esta ocupación.
+- Las bases indicaron que, para aquella convocatoria, la normativa se evaluaría según su texto
+  vigente a 21 de diciembre de 2022.
+- La Convocatoria 1/2025 publicada hasta julio de 2026 contiene oferta y actualizaciones de puestos,
+  pero no se ha localizado todavía un nuevo temario específico oficial para esta ocupación.
+- Hasta que RTVE publique nuevas bases específicas, utilizar este programa como referencia oficial
+  principal y no presentar como epígrafe oficial ningún contenido añadido por el generador.
 
-Las preguntas deben tener una única respuesta inequívocamente correcta y explicaciones técnicamente rigurosas.
+===============================================================================
+A. TEMARIO GENERAL OFICIAL
+===============================================================================
+
+1. Constitución Española de 27 de diciembre de 1978.
+   Texto consolidado indicado en las bases: BOE núm. 311, de 29/12/1978.
+   Última actualización indicada: 27/09/2011.
+
+2. Ley 17/2006, de 5 de junio, de la radio y la televisión de titularidad estatal.
+   Texto consolidado indicado: BOE núm. 134, de 06/06/2006.
+   Última actualización indicada: 08/07/2022.
+
+3. Ley 5/2017, de 29 de septiembre, por la que se modifica la Ley 17/2006 para
+   recuperar la independencia de la Corporación RTVE y el pluralismo en la elección
+   parlamentaria de sus órganos.
+   BOE núm. 236, de 30/09/2017.
+   Última actualización indicada: 31/07/2021.
+
+4. Ley 8/2009, de 28 de agosto, de financiación de la Corporación de Radio y
+   Televisión Española.
+   BOE núm. 210, de 31/08/2009.
+   Última actualización indicada: 08/07/2022.
+
+5. III Convenio Colectivo de la Corporación RTVE:
+   5.1. Resolución de 15 de diciembre de 2020 de la Dirección General de Trabajo.
+        BOE núm. 332, de 22/12/2020.
+   5.2. Resolución de 18 de enero de 2021 por la que se corrigen errores.
+        BOE núm. 25, de 29/01/2021.
+   5.3. Resolución de 28 de noviembre de 2022 por la que se registra y publica el
+        acuerdo de modificación del convenio.
+        BOE núm. 289, de 02/12/2022.
+
+6. II Plan de Igualdad de RTVE (2022-2026) y Guía de Igualdad de RTVE.
+
+7. Ley 13/2022, de 7 de julio, General de Comunicación Audiovisual.
+   BOE núm. 163, de 08/07/2022.
+   Texto inicial indicado en las bases.
+
+8. Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos Laborales.
+   BOE núm. 269, de 10/11/1995.
+   Texto consolidado indicado.
+   Última actualización indicada: 08/09/2022.
+
+===============================================================================
+B. TEMARIO ESPECÍFICO OFICIAL
+===============================================================================
+
+1. CONOCIMIENTOS BÁSICOS
+   1.1. Conocimientos básicos de electrónica aplicada.
+   1.2. Conocimientos básicos de informática aplicada.
+   1.3. Conceptos básicos de colorimetría.
+   1.4. Conceptos básicos de sonido.
+
+2. TRATAMIENTO DIGITAL DE LA SEÑAL DE TELEVISIÓN
+   2.1. Normas de codificación, compresión y soporte.
+   2.2. Soportes y formatos.
+   2.3. Codificadores y sistemas de compresión.
+   2.4. Documentación y catalogación de ficheros.
+
+3. EQUIPOS DE MEDIDA Y CONTROL
+   3.1. Equipos de medida y control de la señal de vídeo.
+   3.2. Equipos de medida y control de la señal de audio.
+   3.3. Matrices de conmutación y conectividad.
+
+4. GRABACIÓN Y REPRODUCCIÓN DE LA SEÑAL DE VÍDEO
+   4.1. Conocimientos básicos de equipos y soportes de grabación.
+   4.2. Equipos de almacenamiento en disco óptico (XDCAM) y disco duro.
+   4.3. Ingesta en servidores de edición y redacción digital.
+   4.4. Formatos de compresión, encapsulado, importación y exportación de ficheros
+        en equipos de edición y compatibilidades.
+        Nota editorial: el PDF publicado contiene “comprensión”; se normaliza a
+        “compresión” por el sentido técnico del epígrafe.
+
+5. EDICIÓN DE VÍDEO
+   5.1. Conceptos básicos de edición lineal, A/B Roll, mezcladores de vídeo,
+        mezcladores de sonido, generadores de efectos y generadores de caracteres.
+   5.2. Sistemas de edición offline y online.
+   5.3. Sistemas de postproducción en servidores de vídeo.
+   5.4. Código de tiempo y edición multicámara.
+   5.5. Incrustaciones: canal alpha, chromakey e integración con aplicaciones de
+        diseño gráfico y tratamiento de imagen.
+   5.6. Colorización.
+   5.7. Gestión de proyectos e importación/exportación de archivos.
+   5.8. Sistemas de edición para producciones en directo y retransmisiones (EVS).
+
+6. LENGUAJE AUDIOVISUAL Y TEORÍA DEL MONTAJE
+   6.1. Lenguaje formal de la edición: ritmo, continuidad y raccord.
+   6.2. Transiciones y efectos de edición.
+   6.3. Estilos de edición según el género y el target del programa.
+   6.4. Sincronización de la edición con la música o el sonido.
+   6.5. Edición de noticias: coordinación con el equipo de redacción.
+   6.6. Edición de programas de ficción: coordinación con realización.
+   6.7. Edición creativa.
+
+7. PREVENCIÓN DE RIESGOS LABORALES APLICADA AL PUESTO
+   7.1. Derechos y obligaciones de los trabajadores en materia de PRL.
+   7.2. Pantallas de visualización de datos: riesgos y medidas preventivas.
+   7.3. Trastornos musculoesqueléticos en la extremidad superior: factores de
+        riesgo y prevención.
+   7.4. Incendios y medidas preventivas.
+   7.5. Accidente in itinere o en misión y medidas preventivas.
+
+===============================================================================
+C. DESARROLLO TÉCNICO ORIENTATIVO PARA GENERAR PREGUNTAS
+NO ES UN LISTADO LITERAL PUBLICADO POR RTVE
+===============================================================================
+
+Usar estos conceptos únicamente como desarrollo razonable de los epígrafes oficiales:
+
+- Electrónica: tensión, corriente, potencia, impedancia, señal analógica/digital,
+  conectores, balanceado/no balanceado, masa, ruido e interferencias.
+- Informática: CPU/GPU, RAM, sistemas de archivos, almacenamiento, RAID, NAS/SAN,
+  redes Ethernet, direccionamiento IP, ancho de banda, protocolos y seguridad básica.
+- Colorimetría: RGB, YCbCr, 4:4:4/4:2:2/4:2:0, profundidad de bits, Rec.709,
+  Rec.2020, gamma, log, LUT, HDR, SDR, vectorscopio y gamut.
+- Sonido: muestreo, cuantificación, PCM, dBFS, LUFS, true peak, fase, estéreo,
+  multicanal, AES/EBU y audio embebido.
+- Vídeo digital: SD/HD/UHD, progresivo/entrelazado, frame rate, raster, bitrate,
+  intraframe/Long GOP, GOP, MPEG-2, AVC/H.264, HEVC/H.265, XAVC, DNxHD/DNxHR,
+  ProRes y principios de compresión.
+- Contenedores y ficheros: MXF OP1a, OP-Atom, MOV, IMF como contexto cuando proceda,
+  metadatos, checksums, proxies, masters y compatibilidad de intercambio.
+- Medida/control: waveform, vectorscopio, monitor de audio, loudness, legalización,
+  sincronismo, black burst, tri-level, SDI y datos auxiliares.
+- Grabación/ingesta: XDCAM, discos, servidores, proxy/alta resolución, transferencias,
+  checksum, consolidación y control de integridad.
+- Edición: Avid Media Composer como herramienta de referencia práctica; bins,
+  proyectos, media, relink, consolidate, transcode, trim, multicámara, EDL, AAF,
+  exportación, conformado offline/online y control de calidad.
+- Gestión colaborativa: Avid NEXIS e Interplay/MediaCentral como ejemplos de
+  servidores, activos, metadatos, versiones, permisos y relink dinámico.
+- Directos: EVS, XT, IPDirector, clips, playlists, grabación en bucle, repeticiones,
+  intercambio con edición y flujos de retransmisión.
+- Lenguaje: eje, raccord, elipsis, continuidad, ritmo, J-cut/L-cut, montaje paralelo,
+  alterno, intelectual, noticias, ficción, música y continuidad narrativa.
+- Archivo: RAID no equivale a copia de seguridad; políticas 3-2-1, LTO, verificación,
+  migración, preservación y catalogación.
+- Normativa: formular preguntas precisas sobre el contenido de los ocho bloques
+  generales; evitar actualidad política y cambios posteriores salvo nueva publicación
+  oficial de RTVE.
+
+===============================================================================
+D. REGLAS DE COBERTURA PARA CADA EXAMEN DE 20 PREGUNTAS
+===============================================================================
+
+- 3 preguntas del temario general/normativo.
+- 17 preguntas del temario específico.
+- Incluir al menos una pregunta de cada uno de los siete bloques específicos.
+- No dedicar más de 4 preguntas al mismo bloque específico.
+- Entre 7 y 10 preguntas deben plantear un caso práctico o una decisión profesional.
+- Alternar conceptos fundamentales, operación real y diagnóstico de incidencias.
+- En una serie de 5 exámenes deben aparecer todos los epígrafes oficiales.
+- Avid, Interplay, EVS, IPDirector y XDCAM son desarrollos prácticos; no presentarlos
+  como si todos figuraran literalmente en el Anexo 2.
