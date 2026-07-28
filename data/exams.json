@@ -1,7 +1,266 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-07-28",
   "exams": [
+    {
+      "id": "008",
+      "title": "Examen 008",
+      "date": "2026-07-28",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "prompt": "Según la Ley 5/2017, ¿cuál fue la intención principal de la modificación introducida respecto a la Corporación RTVE?",
+          "options": [
+            "Unificar la regulación de RTVE con las comunidades autónomas para homogeneizar contenidos.",
+            "Autonomizar la gestión económica de RTVE permitiendo la participación mayoritaria de capital privado.",
+            "Suprimir la supervisión parlamentaria sobre la programación de RTVE para garantizar rapidez ejecutiva.",
+            "Restablecer la independencia de la Corporación y favorecer el pluralismo en la elección de sus órganos de gobierno."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 5/2017 tiene por objeto recuperar la independencia de la Corporación y el pluralismo en la elección parlamentaria de sus órganos, evitando la influencia partidista. Las otras opciones describen medidas que no forman parte de ese cambio legal (privatización, supresión de supervisión parlamentaria o unificación autonómica).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "De acuerdo con la Ley 31/1995 de Prevención de Riesgos Laborales, ¿cuál es una obligación esencial del empresario en materia de prevención?",
+          "options": [
+            "Limitarse a facilitar equipos de protección individual (EPI) sin necesidad de evaluar riesgos.",
+            "Trasladar toda la responsabilidad de la prevención a los delegados de personal y a los trabajadores.",
+            "Evaluar los riesgos laborales de su empresa y aplicar las medidas de prevención y protección necesarias.",
+            "Garantizar la ausencia total de riesgos eliminándolos por completo en todos los procesos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La ley obliga al empresario a evaluar los riesgos y a planificar medidas preventivas. Trasladar la responsabilidad íntegramente a los trabajadores, limitarse solo a facilitar EPI o pretender eliminar todo riesgo absoluto no se ajustan a la obligación legal de evaluación y medidas proporcionales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "El II Plan de Igualdad de RTVE (2022-2026) establece medidas orientadas a:",
+          "options": [
+            "Establecer cuotas obligatorias para puestos directivos a cubrir exclusivamente por personal externo.",
+            "Promover la igualdad de trato y de oportunidades entre mujeres y hombres y prevenir el acoso y la discriminación en el entorno laboral.",
+            "Redistribuir presupuestos de producción en función de la audiencia sin criterios de igualdad.",
+            "Eximir a la empresa de acciones formativas sobre igualdad por motivos de competitividad."
+          ],
+          "correctIndex": 1,
+          "explanation": "El Plan de Igualdad busca promover igualdad de trato y oportunidades y medidas de prevención del acoso y discriminación. Las opciones restantes proponen medidas ajenas al objetivo del plan (cuotas externas, redistribución por audiencia o exenciones formativas).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "Un técnico conecta la salida de audio de una mesa a una cámara y aparece un zumbido de 50/60 Hz. ¿Cuál es la causa técnica más probable y la medida correctora más adecuada?",
+          "options": [
+            "Un bucle de masa (ground loop); usar líneas balanceadas o un transformador de aislamiento para eliminar el bucle.",
+            "La impedancia de salida de la mesa es demasiado baja; subir el nivel de salida para compensar.",
+            "La cámara requiere AES/EBU digital; convertir la señal analógica a digital solventará el zumbido.",
+            "Un desajuste de frecuencia de muestreo; reaplicar el reclocking en la cadena de audio."
+          ],
+          "correctIndex": 0,
+          "explanation": "El zumbido a 50/60 Hz suele indicar un bucle de masa; la solución habitual es utilizar conexiones balanceadas o aislamiento galvánico. Cambiar impedancias o nivel no elimina un ground loop; la cámara no deja de aceptar señales analógicas por esa razón; y el muestreo no causa zumbido a red de alimentación.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "Respecto a espacios y gamas de color en producción televisiva, ¿qué característica técnica distingue al espacio Rec.2020 frente a Rec.709?",
+          "options": [
+            "Una menor profundidad de bits estándar que obliga a usar menos niveles por componente.",
+            "Un gamut cromático notablemente mayor que permite reproducir colores más saturados fuera del alcance de Rec.709.",
+            "Una curva de transferencia gamma idéntica pero diseñada exclusivamente para SD interlazado.",
+            "La imposición de muestreo de crominancia 4:4:4 como único método compatible."
+          ],
+          "correctIndex": 1,
+          "explanation": "Rec.2020 define un espacio de color con gama cromática mucho mayor que Rec.709; las otras opciones son incorrectas: Rec.2020 no exige menor profundidad de bits, no está ligada a SD ni obliga 4:4:4.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En un flujo de trabajo que prevé etalonaje final, ¿qué ventaja técnica aporta generar proxies a partir del material capturado en curva logarítmica (log) en lugar de convertirlos directamente a Rec.709?",
+          "options": [
+            "Reduce de forma determinante el tamaño de los proxies respecto a transcodificar a Rec.709, sin impacto en calidad.",
+            "Los proxies preservan mejor la información de rango dinámico y tonos que permitirá un conformado/etalonaje más fiel al aplicar la misma cadena de color sobre los altos‑res.",
+            "Evita la necesidad de LUTs en la fase de etalonaje, ya que log y Rec.709 son equivalentes para corrección.",
+            "Mejora la compatibilidad con todos los sistemas de emisión, que requieren material en log para ingest."
+          ],
+          "correctIndex": 1,
+          "explanation": "Generar proxies desde log preserva rango dinámico y relación de tonos, facilitando un relink y etalonaje coherente con el material alto‑res. No necesariamente reduce tamaño frente a conversión a Rec.709 ni evita el uso de LUTs: log y Rec.709 no son equivalentes; y la emisión no exige material en log.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Dentro de las prácticas de interchange de archivos en entornos broadcast, ¿qué describe con mayor precisión el patrón operativo MXF OP1a?",
+          "options": [
+            "Un conjunto de archivos separados por pista (vídeo MXF por pista, audio MXF por pista) optimizado para edición atómica de esencias.",
+            "Un fichero MXF por clip que contiene todas las esencias (vídeo, audio, metadatos) intercaladas para facilitar la reproducción secuencial como un único objeto.",
+            "Un contenedor que sólo almacena metadatos y requiere mezclar las esencias externas en tiempo real.",
+            "Un formato propietario que impide la inclusión de metadatos estándar y está pensado solo para ingest en cámaras."
+          ],
+          "correctIndex": 1,
+          "explanation": "OP1a define un MXF intercalado en un único archivo por clip que agrupa vídeo, audio y metadatos, facilitando entrega y reproducción. La opción de archivos separados corresponde a patrones OP-Atom; las otras opciones son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Si en un flujo Long GOP (I/P/B frames) se corrompe o se pierde una P‑frame intermedia, ¿cuál es la consecuencia técnica más habitual sobre la decodificación posterior?",
+          "options": [
+            "El reproductor saltará automáticamente a la siguiente GOP sin afectar la continuidad visual dentro del GOP actual.",
+            "Sólo se perderá visualmente el frame corrompido; todos los demás frames decodificarán perfectamente por ser independientes.",
+            "La corrupción se traducirá únicamente en pérdida de audio hasta que se recupere el GOP.",
+            "Los cuadros dependientes posteriores del GOP sufrirán artefactos o pérdida hasta que se alcance el siguiente I‑frame, porque la P‑frame es referencia para frames posteriores."
+          ],
+          "correctIndex": 3,
+          "explanation": "En Long GOP las P‑frames sirven de referencia, por lo que su corrupción afecta a frames dependientes hasta el siguiente I‑frame. No son frames totalmente independientes, la afectación no se limita al audio, y los reproductores no pueden restaurar visualmente frames dependientes sin la referencia correcta.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Un programa mide -16 LUFS integrados, pero la entrega exige -23 LUFS. ¿Cuál es la estrategia técnica apropiada para cumplir la entrega manteniendo la inteligibilidad y evitando picos excedidos?",
+          "options": [
+            "Reconvertir la señal a mayor frecuencia de muestreo para reducir el nivel integrado sin procesado dinámico.",
+            "Reducir únicamente los picos a -6 dBFS sin tocar la ganancia integrada, ya que la loudness no afecta a la entrega.",
+            "Aplicar una normalización global de ganancia hacia -23 LUFS y complementar con limitador de true peak para controlar picos sin distorsionar la dinámica excesivamente.",
+            "Eliminar pistas musicales para bajar la loudness integrando manualmente los clips restantes."
+          ],
+          "correctIndex": 2,
+          "explanation": "Para adaptar loudness se normaliza la ganancia a la target (–23 LUFS) y se usa limitador para controlar true peaks. Solo reducir picos no ajusta la loudness integrada; cambiar frecuencia de muestreo no afecta la loudness; eliminar pistas es impráctico y destructivo.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "En una instalación de emisión, ¿cuál es la función principal de una matriz de conmutación (router) en el flujo de señales?",
+          "options": [
+            "Permitir enrutar cualquier señal de entrada a cualquier salida de forma controlada, gestionando disponibilidad y señalización.",
+            "Mezclar automáticamente todas las fuentes entrantes para obtener una única salida estéreo sumada.",
+            "Convertir el formato de compresión de todas las entradas a un códec uniforme para emisión.",
+            "Generar metadatos técnicos sobre cada clip para su catalogación automática en el MAM."
+          ],
+          "correctIndex": 0,
+          "explanation": "Una matriz (router) enruta señales entre entradas y salidas controladas; no realiza mezcla automática de audio/video, ni transcodifica códecs por sí misma, ni genera metadatos de catalogación (esa función corresponde a sistemas de MAM o ingest).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Al recibir un lote de medios generados por cámaras XDCAM, ¿por qué es importante conservar exactamente la estructura de carpetas y los ficheros index entregados por la cámara al realizar la ingesta a un servidor o NLE?",
+          "options": [
+            "Porque las aplicaciones de edición no pueden leer el contenido de las tarjetas si no están en su estructura original durante más de 24 horas.",
+            "Porque el servidor sólo reconoce archivos en el formato propietario comprimido fuera de cualquier contenedor estándar.",
+            "Porque al cambiar la estructura se duplican automáticamente los clips en el servidor y se pierde espacio de almacenamiento.",
+            "Porque la estructura y los ficheros de índice contienen metadatos y referencias que permiten identificar, validar y relacionar las esencias MXF con su metadata para importación y relink fiables."
+          ],
+          "correctIndex": 3,
+          "explanation": "La estructura y ficheros index de XDCAM contienen la información necesaria para mapear los MXF y metadatos; romper esa estructura puede impedir la importación correcta. Las otras afirmaciones son incorrectas o exageradas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En un servidor de retransmisión tipo EVS/IPDirector, ¿qué es una 'playlist' y cuál es su uso operativo principal?",
+          "options": [
+            "Un contenedor único que almacena permanentemente todas las tomas de una emisión sin posibilidad de edición.",
+            "Un registro de todas las conexiones de red del servidor para auditoría de tráfico IP en directo.",
+            "Una lista ordenada de clips y timings que se utiliza para programar playout, ejecutar bucles de reproducción y coordinar repeticiones en directo.",
+            "Un índice exclusivo de metadatos que describe solo la duración de cada clip sin referencia a su ubicación física."
+          ],
+          "correctIndex": 2,
+          "explanation": "En EVS, una playlist es precisamente la secuencia ordenada de clips con sus timings para control de playout y repeticiones. No es un registro de red, ni un contenedor inmutable ni un índice limitado a duraciones.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "Durante la ingesta de material a un servidor de edición se recomienda generar checksums y verificarlos. ¿Cuál es la función principal de ese proceso?",
+          "options": [
+            "Reducir el tamaño del archivo mediante compresión por deduplicación de bloques.",
+            "Detectar errores de transferencia o corrupción de bits para garantizar la integridad del archivo copiado respecto al original.",
+            "Acelerar la reproducción en el NLE al reordenar los paquetes para acceso secuencial.",
+            "Encriptar el contenido para impedir su lectura hasta su relink en el proyecto."
+          ],
+          "correctIndex": 1,
+          "explanation": "Checksums permiten verificar que la copia es idéntica al original y detectar corrupciones. No sirven para comprimir, acelerar reproducción ni encriptar contenido.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En Avid Media Composer, ¿qué realiza esencialmente la operación 'Consolidate/Transcode' cuando se aplica desde un bin sobre clips seleccionados?",
+          "options": [
+            "Copia y/o reconvierte las esencias seleccionadas a otro formato o ubicación (consolidar medios o transcodificar a un codec/ubicación elegida) y actualiza las referencias en el proyecto.",
+            "Modifica únicamente los metadatos del bin sin tocar los archivos físicos en disco.",
+            "Fusiona varios clips en uno solo sin tocar el material original ni cambiar códec.",
+            "Elimina todas las versiones proxies y deja sólo los masters originales en el sistema."
+          ],
+          "correctIndex": 0,
+          "explanation": "Consolidate/Transcode copia o transcodifica medios a nueva ubicación o formato y relinkea el proyecto; no se limita a metadatos, no fusiona clips ni borra proxies automáticamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "¿Qué consigue la función 'Match Frame' en un NLE como Avid cuando se aplica sobre un fotograma situado en la secuencia?",
+          "options": [
+            "Sincronizar el fotograma con el proyecto de audio para ajustar el EDL.",
+            "Reemplazar automáticamente el clip de la secuencia por una versión transcodificada del mismo frame.",
+            "Localizar y cargar en el bin el clip maestro y el punto de origen correspondiente al fotograma seleccionado para acceder al material fuente original.",
+            "Crear un nuevo subclip a partir del rango de la secuencia sin referenciar el material original."
+          ],
+          "correctIndex": 2,
+          "explanation": "Match Frame busca el clip fuente y la posición exacta que originó el fotograma en la secuencia, facilitando acceso al material maestro. No transcodifica, no sincroniza con audio ni crea subclips independientes como acción principal.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "¿Cuál es la diferencia operativa principal entre un EDL (Edit Decision List) y un AAF en flujos de trabajo de postproducción?",
+          "options": [
+            "Un AAF es un estándar obsoleto que solo usan sistemas analógicos, el EDL es el formato moderno para NLE actuales.",
+            "Un EDL siempre contiene los archivos de medios embebidos, mientras que un AAF nunca puede contener referencias a los media.",
+            "Un EDL contiene solo decisiones de edición básicas (timecodes y transiciones simples), mientras que un AAF puede transportar múltiples pistas, referencias de medios, metadata y en ocasiones enlazar al propio contenido o parámetros de efectos.",
+            "Un EDL incorpora automáticamente LUTs y ajustes de color que un AAF no puede incluir."
+          ],
+          "correctIndex": 2,
+          "explanation": "EDL es limitado a decisiones básicas (TC, cortes) y no transporta estructura multitrack ni metadata compleja; AAF sí permite más información y referencias. Las otras afirmaciones son incorrectas o inexactas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En entornos de gestión colaborativa de medios (por ejemplo sistemas tipo Interplay/MediaCentral), ¿qué ventaja operativa aporta disponer de un MAM frente a un simple recurso de almacenamiento compartido (NAS/SAN)?",
+          "options": [
+            "Proporciona metadatos centralizados, control de versiones, permisos granulares y búsqueda/indexación que facilitan coordinación colaborativa y relink dinámico, más allá del simple acceso a archivos.",
+            "Duplica automáticamente todo el contenido en múltiples ubicaciones físicas sin gestionar metadatos.",
+            "Sustituye la necesidad de transcodificación porque convierte todos los archivos al mismo códec durante la ingest.",
+            "Limita el número de usuarios simultáneos para evitar conflictos en la edición colaborativa."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un MAM ofrece gestión centralizada de metadatos, versiones y permisos, facilitando workflows colaborativos y relink. No se limita a duplicar contenido ni sustituyen procesos de transcodificación por completo, ni su función principal es limitar usuarios.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En montaje, ¿qué se denomina técnicamente un 'L‑cut' (o su contraparte 'J‑cut')?",
+          "options": [
+            "Un L‑cut es una transición en la que el audio del primer plano continúa sobre el siguiente plano (la imagen cambia pero el audio se mantiene), mientras que un J‑cut es cuando el audio del plano siguiente comienza antes de que aparezca su imagen.",
+            "Un L‑cut consiste en la fundida a negro simultánea del audio y la imagen; un J‑cut aplica solo al subtitulado.",
+            "Un L‑cut y un J‑cut son efectos visuales de disolución usados para ocultar cortes rápidos.",
+            "Son términos equivalentes para describir la eliminación de ruido de fondo en la posproducción de audio."
+          ],
+          "correctIndex": 0,
+          "explanation": "L‑cut/J‑cut describen solapamientos de audio e imagen: el L‑cut mantiene audio del plano anterior tras el corte de imagen; el J‑cut adelanta el audio del plano siguiente. Las otras opciones confunden conceptos técnico‑sonoros con efectos visuales o son erróneas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Quieres sincronizar cortes de plano con la pulsación de la música en montaje musical. ¿Qué técnica de trabajo en el NLE es la más eficaz para lograr cortes frame‑accurate en los momentos de 'beat'?",
+          "options": [
+            "Aplicar un efecto de fundido de 1 fotograma en todos los cortes para que parezca sincronizado aunque no lo esté.",
+            "Reproducir la música y realizar cortes manuales observando la forma de onda sin usar marcadores ni herramientas de análisis.",
+            "Cambiar la velocidad de reproducción del clip musical hasta que coincida con la duración de la secuencia sin ajustar cortes.",
+            "Usar detección de transitorios o análisis de tempo para colocar marcadores en la pista musical y alinear cortes sobre esos marcadores, ajustando con nudge si es necesario."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica estándar es usar análisis de transitorios/tempo para generar marcadores y alinear cortes con precisión; cortar a ojo es impreciso, cambiar velocidad altera la música y los fades no garantizan sincronía.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Respecto a las obligaciones del empleador en puestos con pantallas de visualización (VDT) según la normativa aplicable y el PRL, ¿qué debe garantizar el empleador en la organización del puesto de trabajo?",
+          "options": [
+            "Delegar toda la responsabilidad sobre la ergonomía del puesto en el propio trabajador sin intervención de la empresa.",
+            "Mantener la misma disposición de mobiliario para todos los empleados independientemente de su antropometría.",
+            "Limitar la duración de la jornada exclusivamente mediante reducción de proyectos sin medidas ergonómicas concretas.",
+            "Evaluar el puesto y adoptar medidas ergonómicas y organizativas (ajuste de equipos, pausas, formación) para reducir riesgos derivados del trabajo ante pantallas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La normativa exige evaluación del puesto y medidas ergonómicas y organizativas (ajuste de mobiliario, pausas, formación). Mantener disposición única, delegar totalmente o limitar jornada sin medidas ergonómicas no cumple la obligación empresarial.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "007",
       "title": "Examen 007",
