@@ -1,7 +1,266 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-28",
+  "updatedAt": "2026-07-30",
   "exams": [
+    {
+      "id": "009",
+      "title": "Examen 009",
+      "date": "2026-07-30",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "prompt": "Según el artículo 20 de la Constitución Española, ¿qué derecho relevante para la actividad de radiodifusión y comunicación audiovisual protege expresamente dicho precepto?",
+          "options": [
+            "El derecho de propiedad intelectual.",
+            "La libertad de asociación.",
+            "La libertad de expresión y de información.",
+            "La inviolabilidad del domicilio."
+          ],
+          "correctIndex": 2,
+          "explanation": "El artículo 20 reconoce, entre otros, la libertad de expresión y de información, que es el fundamento jurídico de la actividad de medios. Los otros derechos mencionados son distintos y están recogidos en otros preceptos constitucionales; por ejemplo, la libertad de asociación no es la que habilita directamente la actividad informativa de los medios.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "La Ley 13/2022, de Comunicación Audiovisual, incluye obligaciones específicas para los servicios audiovisuales en relación con la protección de ciertos colectivos. ¿Cuál de las siguientes materias regula claramente dicha Ley?",
+          "options": [
+            "Procedimientos de examen para oposiciones técnicas de la administración.",
+            "Asignación de frecuencia radioeléctrica y concesiones de espectro.",
+            "Contratación laboral y convenios internos de las corporaciones públicas.",
+            "Medidas para la protección de menores y clasificación de contenidos audiovisuales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley General de Comunicación Audiovisual regula, entre otras cosas, la protección de menores y las obligaciones de clasificación y limitación de contenidos. La asignación de espectro es competencia administrativa distinta; las cuestiones laborales y de oposiciones se rigen por normativa laboral y bases específicas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "El II Plan de Igualdad de RTVE (2022-2026) tiene como objetivo principal:",
+          "options": [
+            "Aumentar la cuota de mercado de RTVE mediante medidas comerciales.",
+            "Promover la igualdad efectiva entre mujeres y hombres en la organización y en sus políticas de personal.",
+            "Establecer un nuevo régimen de contratación externa para proveedores.",
+            "Reducir la jornada laboral de todos los empleados sin distinción."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un plan de igualdad tiene por objetivo principal garantizar la igualdad efectiva entre mujeres y hombres y establecer medidas preventivas y correctoras. Las otras opciones son medidas de distinta naturaleza no propias de un plan de igualdad corporativo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "Al conectar la salida de audio de una mesa a la entrada de una cámara y aparecer un zumbido de 50 Hz, la causa técnica más probable es un bucle de masa. ¿Qué solución técnica es la más adecuada para eliminar el zumbido manteniendo la integridad de la señal?",
+          "options": [
+            "Invertir la polaridad de la salida de la mesa.",
+            "Subir el nivel de ganancia en la mesa para enmascarar el zumbido.",
+            "Conectar un filtro de paso alto muy pronunciado en la salida para eliminar 50 Hz.",
+            "Usar una conexión balanceada con diferencial y buena conexión de masa en ambos extremos."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un bucle de masa se reduce mediante conexiones balanceadas y una correcta referencia de masa; la conexión diferencial (balanceada) proporciona rechazo de modo común. Subir ganancia empeora el ruido; un filtro muy pronunciado afectaría la frecuencia fundamental de la voz/instrumento; invertir polaridad no elimina un bucle de masa.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En una señal Y'CbCr 4:2:2 por línea ¿cuál es la relación de muestreo horizontal entre la componente de luminancia Y' y cada una de las componentes de crominancia (Cb o Cr)?",
+          "options": [
+            "La luminancia tiene el doble de muestras horizontales que cada crominancia (2:1).",
+            "La luminancia y las crominancias tienen la misma frecuencia de muestreo (1:1).",
+            "Cada crominancia tiene el doble de muestras que la luminancia (1:2).",
+            "La luminancia tiene cuatro veces las muestras de cada crominancia (4:1)."
+          ],
+          "correctIndex": 0,
+          "explanation": "En 4:2:2, la componente de luminancia se muestrea al doble de tasa horizontal que cada componente de crominancia (proporción 2:1). 4:4:4 sería 1:1; 4:1:1 o 4:2:0 corresponden a otras proporciones distintas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En términos de audio digital para emisión, ¿qué representa 0 dBFS?",
+          "options": [
+            "Un nivel de silencio absoluto en el dominio digital.",
+            "Un nivel de referencia equivalente a 0 dB SPL en sala.",
+            "El nivel máximo que puede representar el sistema digital sin recorte (full scale).",
+            "La unidad de medida del volumen integrado (LUFS)."
+          ],
+          "correctIndex": 2,
+          "explanation": "0 dBFS es el valor máximo representable en un sistema digital (full scale); niveles superiores provocarían clipping. No equivale a 0 dB SPL ni a silencio; LUFS es otra medida de loudness.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En la configuración de un flujo de trabajo con códecs Long‑GOP, ¿qué parámetro del diseño del GOP influye directamente en la necesidad de decodificar múltiples frames previos para mostrar un único frame solicitado en edición?",
+          "options": [
+            "La longitud del GOP (número de frames entre I‑frames).",
+            "La profundidad de color en bits por componente.",
+            "El tipo de contenedor (por ejemplo MXF o MOV).",
+            "La resolución espacial (p. ej. HD vs UHD)."
+          ],
+          "correctIndex": 0,
+          "explanation": "En Long‑GOP, cuanto más larga sea la GOP (más frames entre I‑frames), más dependencias temporales existen y es necesario decodificar más frames anteriores. La profundidad de bits, contenedor o resolución afectan otros aspectos pero no la dependencia temporal entre frames.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Entre las siguientes características, ¿cuál define con mayor precisión el patrón operativo OP1a dentro del formato MXF en entregas broadcast?",
+          "options": [
+            "Formato propietario que no admite metadatos estándares.",
+            "Carpeta por pista con archivos por frame para cada essence (OP‑Atom).",
+            "Un único archivo MXF por clip que contiene las pistas (essences) intercaladas y metadatos (op1a).",
+            "Un contenedor únicamente para proxies con baja resolución."
+          ],
+          "correctIndex": 2,
+          "explanation": "OP1a (Operational Pattern 1a) agrupa las essences en un único archivo MXF intercalado con sus metadatos, adecuado para entregas. OP‑Atom corresponde a archivos por essence; no es propietario ni exclusivo para proxies.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Para minimizar la latencia y la carga de decodificación al realizar scrubbing y edición frame‑accurate en una estación de montaje, ¿qué característica del códec resulta más ventajosa?",
+          "options": [
+            "Uso intensivo de B‑frames y GOP largos.",
+            "Codificación intraframe (cada frame independiente).",
+            "Codificación con perfil de alta compresión variable (VBR extremo).",
+            "Encapsulado en MXF OP‑Atom exclusivamente."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los códecs intraframe permiten acceder y decodificar un solo frame sin depender de previamente decodificados, reduciendo latencia en scrubbing. El uso de B‑frames y GOP largos aumenta dependencias; VBR extremo o el contenedor no evitan la necesidad de decodificar frames adyacentes.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Un monitor de forma de onda (waveform monitor) se utiliza en control técnico para verificar niveles de señal de vídeo. ¿Qué representa esencialmente la traza vertical en función de la posición horizontal de la imagen?",
+          "options": [
+            "El nivel de sonido asociado a esa línea de imagen.",
+            "La fase de la señal de crominancia.",
+            "La información de metadatos embebidos en la línea VANC.",
+            "El nivel de luminancia o señal de vídeo (brillo) del píxel correspondiente a esa posición horizontal."
+          ],
+          "correctIndex": 3,
+          "explanation": "El waveform traza en el eje vertical el valor de luminancia (o señal compuesta) para la posición horizontal de la imagen, facilitando la comprobación de niveles y legalidad. No muestra fase cromática ni metadatos ni audio.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "En medición de loudness y límites de entrega, ¿qué magnitud se expresa habitualmente en dBTP (dB True Peak) y cuál es su utilidad práctica?",
+          "options": [
+            "La media integrada de loudness durante todo el programa; sirve para normalización de LUFS.",
+            "El valor máximo real de pico de señal que puede producirse tras reconstrucción analógica; sirve para evitar sobrepicos en conversión D/A.",
+            "El nivel RMS a 1 kHz para calibración de monitores; sirve en mezcla musical.",
+            "La relación señal/ruido del canal de audición; sirve para diagnóstico de interferencias."
+          ],
+          "correctIndex": 1,
+          "explanation": "dBTP (true peak) mide picos reales tras filtrado/reconstrucción analógica e identifica riesgos de sobrepasar límites en conversión D/A. La media integrada corresponde a LUFS; RMS y SNR son otras medidas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Al recibir un lote de material procedente de cámaras XDCAM para ingesta en un servidor de edición, ¿por qué es importante conservar exactamente la estructura de carpetas original y los ficheros de índice entregados por la cámara?",
+          "options": [
+            "Porque permite reproducir directamente en cualquier NLE sin transcoding.",
+            "Porque elimina la necesidad de generar checksums en el servidor.",
+            "Porque reduce el tamaño de los archivos al copiarse.",
+            "Porque esos ficheros y la estructura contienen metadata y referencias necesarias para que los reproductores/códecs de XDCAM identifiquen y enlacen correctamente las essences."
+          ],
+          "correctIndex": 3,
+          "explanation": "Las cámaras XDCAM generan índices y estructura que contienen metadatos y referencias esenciales para el reproductor/códec; conservarlos garantiza integridad y compatibilidad. No sustituye la verificación por checksum ni garantiza que no se necesite transcodificar para un NLE.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En un servidor de retransmisión tipo EVS/IPDirector, ¿qué es operacionalmente una 'playlist' y para qué se emplea principalmente?",
+          "options": [
+            "Una lista secuenciada de clips o segmentos preparada para control de playout y gestión de repeticiones durante una retransmisión.",
+            "Un registro de metadatos que solo sirve para indexación interna sin uso en emisiones.",
+            "Un formato de archivo que almacena proxies en baja resolución.",
+            "Una herramienta para limpiar y optimizar discos."
+          ],
+          "correctIndex": 0,
+          "explanation": "En entornos EVS, una playlist agrupa y ordena clips para su reproducción/llamada en emisión, repeticiones y operadores. No es solo un registro sin uso en emisión ni un formato de proxy o herramienta de disco.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En Avid Media Composer, al ejecutar la operación 'Consolidate/Transcode' desde un bin sobre clips seleccionados, ¿qué hace esencialmente el sistema?",
+          "options": [
+            "Fusiona varios bins en uno solo.",
+            "Modifica únicamente los metadatos del bin sin tocar los archivos de media.",
+            "Crea nuevos archivos de media en la ubicación y códec seleccionado (copiando o transcodificando) y religa los clips del proyecto a esos archivos.",
+            "Genera automáticamente una copia de seguridad incremental en LTO."
+          ],
+          "correctIndex": 2,
+          "explanation": "Consolidate/Transcode copia o transcodifica el media a la ubicación/códec escogido y religa (relink) los clips del bin a esos nuevos archivos. No solo edita metadatos, ni fusiona bins, ni realiza backups LTO automáticamente.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En Avid Media Composer, ¿qué consigue la función 'Match Frame' cuando se aplica sobre un fotograma situado en la secuencia?",
+          "options": [
+            "Exporta automáticamente ese fotograma como imagen fija en alta resolución.",
+            "Abre en el monitor de origen el clip original y posiciona el cabezal en el fotograma exacto de origen.",
+            "Sustituye el fotograma por una versión proxy.",
+            "Aplica un conformado de color automático según el proyecto."
+          ],
+          "correctIndex": 1,
+          "explanation": "Match Frame localiza el frame exacto en la fuente original y lo abre en el monitor de origen para permitir acciones como crear subclips o revisar el material. No exporta ni sustituye ni aplica etalonaje.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "Para que la función Dynamic Relink de un sistema tipo Interplay/MediaCentral asocie correctamente un elemento proxy con su archivo alto‑res original a través de metadatos, ¿qué identificador estandarizado es crítico y suele emplearse en MXF para esa identificación inequívoca?",
+          "options": [
+            "El nombre de archivo tal cual en el sistema del operador.",
+            "UMID (Unique Material Identifier) incrustado en el archivo MXF.",
+            "La fecha de creación del clip sin ningún otro dato.",
+            "La duración en segundos del clip."
+          ],
+          "correctIndex": 1,
+          "explanation": "El UMID es un identificador único embebido en MXF que permite relacionar proxies y altos‑res de forma fiable. El nombre de archivo, fecha o duración no son identificadores únicos ni fiables para relink automático.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "Si no existe código de tiempo común entre varias cámaras, ¿qué método automático emplean la mayoría de NLEs para sincronizar varios ángulos de una grabación multicámara?",
+          "options": [
+            "Sincronización por coincidencia de forma de onda de audio entre los clips.",
+            "Sincronización por comparación de nombres de archivos.",
+            "Sincronización por tamaño de archivo.",
+            "Sincronización por color dominante de cada clip."
+          ],
+          "correctIndex": 0,
+          "explanation": "La sincronización por audio (comparación de forma de onda) es el método habitual cuando no hay código de tiempo común. Los otros métodos (nombre, tamaño, color) no garantizan alineamiento temporal preciso.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En montaje, ¿qué describe con precisión un 'L‑cut'?",
+          "options": [
+            "El audio del plano A continúa mientras se ve el plano B; el corte de imagen sucede pero la pista de audio se mantiene del plano anterior.",
+            "Ambos planos (A y B) se ven simultáneamente en pantalla con una barra vertical de transición.",
+            "Un fundido a negro seguido de un fundido de audio.",
+            "Una edición en la que el sonido se elimina en el punto de corte."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un L‑cut mantiene la pista de audio del plano anterior al entrar el siguiente plano, creando un solapamiento de audio frente a la imagen. No es una superposición visual ni fundidos ni eliminación de audio.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Para obtener cortes absolutamente ajustados al pulso musical en un montaje con precisión 'frame‑accurate', ¿qué técnica de trabajo en el NLE resulta más eficaz?",
+          "options": [
+            "Aplicar una LUT 3D al timeline antes de cortar.",
+            "Realizar cortes aproximados y confiar en transiciones automáticas del NLE.",
+            "Ajustar el brillo del vídeo en el momento del beat.",
+            "Marcar los tiempos (markers) en la línea de tiempo en los momentos de beat y snapear los cortes a esos marcadores."
+          ],
+          "correctIndex": 3,
+          "explanation": "Colocar marcadores en los beats y ajustar cortes a esos marcadores permite cortes frame‑accurate. Los otros procedimientos no garantizan precisión ni son pertinentes para sincronización musical.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Respecto a pantallas de visualización de datos (VDT) en puestos de edición, ¿qué medida preventiva debe adoptar el empleador para reducir el riesgo de trastornos musculoesqueléticos y fatiga visual?",
+          "options": [
+            "Obligar a usar gafas especiales sin evaluar ergonómicamente el puesto.",
+            "Instalar únicamente filtros de pantalla sin modificar el mobiliario ni la jornada.",
+            "Proveer un mobiliario ajustable (silla, mesa y posición del monitor) y programar pausas/reorganización del trabajo.",
+            "Prohibir el uso de atajos de teclado para reducir movimientos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La prevención en VDT incluye adaptación ergonómica del puesto (sillas, altura, monitores) y pausas/rotación de tareas. Los filtros sin medidas ergonómicas o imponer gafas sin evaluación no son suficientes; prohibir atajos es contraproducente.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "008",
       "title": "Examen 008",
