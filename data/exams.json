@@ -1,7 +1,266 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-07-31",
   "exams": [
+    {
+      "id": "010",
+      "title": "Examen 010",
+      "date": "2026-07-31",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "prompt": "Según la Ley 8/2009, de financiación de la Corporación RTVE, ¿cuál es el objetivo primordial de dicha norma dentro del marco de la Corporación?",
+          "options": [
+            "Determinar la estructura organizativa interna y los procesos de contratación del personal de RTVE",
+            "Regular de forma detallada el contenido editorial y las cuotas de programación de los servicios de RTVE",
+            "Establecer el marco jurídico y las fuentes de financiación que permitan la sostenibilidad económica de la Corporación RTVE",
+            "Crear un sistema de sanciones administrativas para los usuarios por infracciones en el consumo de contenidos"
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley 8/2009 tiene por finalidad principal regular el régimen de financiación de la Corporación (mecanismos y fuentes) para garantizar su sostenibilidad. No se centra en la regulación editorial pormenorizada, ni en definir la estructura interna de personal o sanciones a usuarios, que son materias distintas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "El II Plan de Igualdad de RTVE (2022-2026) es un instrumento que, en su ámbito de aplicación, se dirige a:",
+          "options": [
+            "Solo a las plantillas de las delegaciones territoriales",
+            "Todas las empresas del sector audiovisual que contraten servicios a RTVE",
+            "Exclusivamente al personal directivo y cargos de responsabilidad de RTVE",
+            "El conjunto de trabajadoras y trabajadores y las distintas unidades organizativas de la Corporación RTVE"
+          ],
+          "correctIndex": 3,
+          "explanation": "Un Plan de Igualdad de empresa como el de RTVE se aplica a la totalidad de la plantilla y a las unidades organizativas de la propia Corporación; no se limita a empresas externas ni exclusivamente a directivos o a delegaciones territoriales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "Respecto a la Ley 17/2006, de radio y televisión de titularidad estatal, ¿qué aspecto define de forma esencial el régimen jurídico de RTVE?",
+          "options": [
+            "La delegación total de la producción de contenidos al sector privado mediante concesiones",
+            "Su naturaleza como servicio público audiovisual estatal con responsabilidades en programación, información y servicio a la ciudadanía",
+            "La obligación de RTVE de financiar a todas las televisiones autonómicas",
+            "La subordinación exclusiva de RTVE a decisiones de política económica del gobierno central"
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 17/2006 establece a RTVE como una corporación de titularidad estatal con carácter de servicio público y responsabilidades en la prestación del servicio audiovisual. No supone delegación total al sector privado ni obligaciones de financiación a terceros ni subordinación absoluta en materias económicas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "¿Cuántos niveles discretos por componente proporciona una representación de 10 bits (por canal) en vídeo digital lineal?",
+          "options": [
+            "512 niveles",
+            "2048 niveles",
+            "1024 niveles",
+            "4096 niveles"
+          ],
+          "correctIndex": 2,
+          "explanation": "10 bits ofrecen 2^10 = 1024 niveles por componente. 512 correspondería a 9 bits, 2048 a 11 bits y 4096 a 12 bits.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En colorimetría aplicada a control técnico, ¿qué proporciona primordialmente un vectorscopio?",
+          "options": [
+            "La lectura de tasas de bits y GOP de un flujo de vídeo comprimido",
+            "Un trazado de luminancia por posición horizontal de la imagen para evaluar niveles de negro y blanco",
+            "Una medida directa de la energía sonora relativa por canal de audio",
+            "Una representación de la crominancia que permite evaluar tono (ángulo) y saturación (distancia radial) de los colores"
+          ],
+          "correctIndex": 3,
+          "explanation": "Un vectorscopio muestra la información de crominancia: el ángulo indica el tono y la distancia radial la saturación. La traza de luminancia corresponde al waveform monitor, no al vectorscopio; las otras opciones no están relacionadas con un vectorscopio.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En un códec Long‑GOP, ¿qué parámetro del diseño del GOP afecta directamente a cuántos fotogramas anteriores y posteriores deben decodificarse para reconstruir un frame pedido de manera aleatoria?",
+          "options": [
+            "La longitud del GOP (número de frames entre I‑frames)",
+            "La profundidad de color (bits por componente)",
+            "El espacio de color empleado (Rec.709 vs Rec.2020)",
+            "La tasa de muestreo de audio incorporado"
+          ],
+          "correctIndex": 0,
+          "explanation": "La longitud del GOP determina la frecuencia de I‑frames; cuanto más largo es el GOP, mayor es la dependencia entre frames y más fotogramas deben decodificarse para reconstruir uno. La profundidad de color, espacio de color y la tasa de muestreo de audio no influyen directamente en la dependencia temporal del GOP.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Caso práctico. Necesitas configurar estaciones de montaje para obtener una experiencia de scrubbing y corte 'frame‑accurate' con mínima latencia. ¿Qué estrategia de códec/flujo es la más adecuada para las proxies de trabajo en editorial?",
+          "options": [
+            "Usar códecs Long‑GOP de baja tasa para ahorrar almacenamiento",
+            "Usar códecs intraframe (por ejemplo ProRes o DNxHD/DNxHR intra) para proxies locales",
+            "Usar solo proxies de muy baja resolución sin mantener audio sincronizado",
+            "Comprimir todos los originales en HEVC para reducir la latencia en edición"
+          ],
+          "correctIndex": 1,
+          "explanation": "Los códecs intraframe permiten acceso frame‑accurate y menor carga de decodificación al scrubbing, mejorando la interactividad. Long‑GOP reduce almacenamiento pero penaliza la interactividad; proxies de muy baja resolución o HEVC no garantizan la misma fluidez ni precisión en edición.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "En entregas broadcast el patrón operativo MXF OP1a se caracteriza por:",
+          "options": [
+            "Contener las diferentes pistas (vídeo, audio, datos) intercaladas en un único fichero MXF final por clip/programa",
+            "Generar un fichero por cada esencia (audio, vídeo) en carpetas separadas para cada clip",
+            "Ser un formato propietario de edición no compatible con playout broadcast",
+            "Almacenar sólo proxies y no admitirse para masters de entrega"
+          ],
+          "correctIndex": 0,
+          "explanation": "OP1a es un Operational Pattern que empaqueta las esencias intercaladas en un único archivo MXF apto para entrega broadcast. OPAtom (no OP1a) es el patrón que guarda cada esencia en ficheros separados; las otras opciones son incorrectas o imprecisas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "En un monitor de forma de onda (waveform monitor) tradicional usado en control técnico, ¿qué información se representa esencialmente en el eje vertical en función de la posición horizontal de la imagen?",
+          "options": [
+            "El nivel de luminancia (Y) o componente de señal analógica/digital que corresponde a cada posición horizontal de la imagen",
+            "La intensidad de la señal de crominancia (Cb/Cr) indicando saturación por posición horizontal",
+            "El nivel de ruido audible medido en dBFS por frame",
+            "La longitud del GOP del códec visualizado por cada píxel"
+          ],
+          "correctIndex": 0,
+          "explanation": "El waveform monitor traza el nivel de luminancia (o la señal compuesta) verticalmente según la posición horizontal de la imagen para evaluar negros, blancos y legalidad. La crominancia se evalúa típicamente en vectorscopio; las otras opciones no son función del waveform.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Caso práctico. Un programa mide -16 LUFS integrados, pero la entrega exige -23 LUFS. ¿Qué procedimiento técnico es el más apropiado para cumplir la especificación manteniendo inteligibilidad y evitando picos que excedan el true‑peak permitido?",
+          "options": [
+            "Incrementar el nivel de todas las pistas y confiar en el codificador para reducir a entrega",
+            "Normalizar solo por pico (peak normalisation) hasta -1 dBFS sin cambiar la dinámica general",
+            "Aplicar atenuación global para alcanzar el objetivo de LUFS y añadir un limitador de true‑peak para controlar picos",
+            "Usar pérdida de datos en el bus de mezcla para bajar LUFS sin limitador"
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica recomienda ajustar el nivel integrado (ganancia o normalización basada en LUFS) y aplicar limitación de true‑peak para garantizar que los picos no excedan límites; normalizar por pico no corrige la energía integrada y subir niveles y confiar en el codificador es inseguro; la opción 4 es inadecuada.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Al recibir lotes procedentes de cámaras XDCAM, ¿por qué es importante conservar exactamente la estructura de carpetas y los ficheros de índice generados por la cámara durante la ingesta a servidor/NLE?",
+          "options": [
+            "Porque sin esa estructura no se pueden reproducir imágenes en monitores broadcast aunque el contenido esté presente",
+            "Porque la estructura es necesaria únicamente para evitar pérdidas de licencias del códec en el NLE",
+            "Porque esos ficheros contienen metadatos e índices que permiten identificar clips, tiempos de grabación y rehacer correctos relink/consistencia en el flujo de trabajo",
+            "Porque la cámara inserta protecciones DRM que solo funcionan si se mantiene la carpeta original"
+          ],
+          "correctIndex": 2,
+          "explanation": "Los ficheros y la estructura de XDCAM incluyen índices y metadatos esenciales para mapear clips, timecode y facilitar relink/ingesta fiable. No tiene que ver con licencias de códecs, reproducción hardware obligatoria o DRM.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En un servidor de retransmisión tipo EVS/IPDirector, ¿qué es operativamente una 'playlist' y para qué se emplea principalmente?",
+          "options": [
+            "Una lista ordenada de clips seleccionados para reproducción o envío en continuidad, usada para playout y gestión de highlights en directo",
+            "Un fichero de configuración que almacena únicamente los parámetros de compresión de los clips",
+            "Un registro de usuarios que han accedido a los clips en el servidor",
+            "Un formato de archivo propietario que sustituye a MXF para exportación"
+          ],
+          "correctIndex": 0,
+          "explanation": "En EVS/IPDirector una playlist es una secuencia ordenada de clips preparada para playout o para gestionar repeticiones/highlights en directo. No es un fichero de compresión, ni registro de usuarios ni un contenedor alternativo a MXF.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "Caso operativo en Avid Media Composer: al ejecutar 'Consolidate/Transcode' desde un bin sobre clips seleccionados, ¿qué acción realiza esencialmente el sistema?",
+          "options": [
+            "Elimina las referencias a los clips en el bin y deja solo proxies sin comprimir",
+            "Copia los medios asociados a una ubicación y opcionalmente los transcodifica a un códec/forma de archivo elegida, conservando metadata y referencias",
+            "Borra los originales del servidor y mantiene únicamente los enlaces a los archivos remotos",
+            "Convierte el proyecto completo a un formato de sólo lectura para archivo"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Consolidate/Transcode' copia o consolida los medios a la ubicación seleccionada y puede transcodificarlos al códec elegido, manteniendo metadatos. No borra originales ni convierte proyectos a solo lectura ni elimina referencias arbitrariamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En Avid Media Composer, ¿qué logra la función 'Match Frame' cuando se aplica sobre un fotograma situado en la secuencia?",
+          "options": [
+            "Aplica una corrección de color automática basada en el fotograma seleccionado",
+            "Ajusta automáticamente el frame rate del clip en la secuencia para que coincida con el del proyecto",
+            "Fusiona dos clips adyacentes en la secuencia conservando el primer fotograma",
+            "Localiza y abre en el bin el fotograma exacto en el clip maestro origen correspondiente al fotograma seleccionado en la línea de tiempo"
+          ],
+          "correctIndex": 3,
+          "explanation": "Match Frame busca el fotograma origen en el clip maestro y lo abre en el bin para permitir operaciones sobre el master; no cambia framerate, no fusiona clips ni aplica corrección de color.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En flujos colaborativos que emplean servidores MAM tipo Interplay/MediaCentral, ¿qué identificador estandarizado es crítico para asociar de forma inequívoca un proxy con su archivo alto‑res original?",
+          "options": [
+            "Solo el código de tiempo (timecode) del clip",
+            "Nombre de fichero tal como aparece en la cámara",
+            "Checksum MD5 del archivo proxy",
+            "SMPTE UMID (Unique Material Identifier)"
+          ],
+          "correctIndex": 3,
+          "explanation": "El UMID SMPTE es un identificador estandarizado diseñado para identificar material de forma inequívoca en entornos broadcast y facilitar relink entre proxy y alto‑res. El nombre de fichero o checksum pueden cambiar o no ser únicos, y el timecode no es suficiente por sí solo.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En montaje audiovisual, ¿qué describe con precisión un 'L‑cut'?",
+          "options": [
+            "Un corte donde la banda sonora del primer plano continúa sonando tras el cambio de imagen al siguiente plano",
+            "Un corte donde la acción visual y la sonora se solapan invirtiendo el orden temporal de las tomas",
+            "Un efecto de corrección de color que enlaza dos planos mediante una transición en forma de L",
+            "Un tipo de corte que se utiliza exclusivamente en la edición de noticias"
+          ],
+          "correctIndex": 0,
+          "explanation": "Un L‑cut mantiene el audio del plano A mientras la imagen cambia al plano B, creando continuidad sonora. No es una corrección de color ni un término exclusivo de noticias; la opción 2 describe un solapamiento distinto (J‑cut/L‑cut son formas de solapamiento, pero la definición de la opción 2 es confusa respecto al orden).",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Caso práctico: dispones de varias cámaras sin código de tiempo común. ¿Qué método automático emplean la mayoría de NLEs para sincronizar varios ángulos de una grabación multicámara de manera fiable?",
+          "options": [
+            "Alineamiento manual fotograma a fotograma como única opción viable",
+            "Uso exclusivo de metadatos de cámara basados en nombres de fichero",
+            "Sincronización por comparación de histogramas de cada frame",
+            "Sincronización mediante análisis y alineamiento de las formas de onda de audio (audio‑based sync)"
+          ],
+          "correctIndex": 3,
+          "explanation": "Cuando no hay código de tiempo común, los NLEs sincronizan automáticamente usando las ondas de audio (correlación de audio). Los nombres de fichero o histogramas no proporcionan sincronización temporal fiable; la alineación manual es posible pero no la única opción.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Según la normativa de Prevención de Riesgos Laborales aplicable a puestos con pantallas de visualización (VDT), ¿qué obligación debe asumir el empleador respecto a la organización del puesto de trabajo?",
+          "options": [
+            "Exigir al trabajador que financie el equipo ergonómico que considere necesario",
+            "Evaluar los riesgos, adoptar medidas ergonómicas y proporcionar pausas y formación específicas para reducir riesgos asociados a VDT",
+            "Limitar la duración de los contratos a causa de los riesgos de VDT",
+            "Sustituir pantallas por impresiones en papel para evitar riesgos"
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley de PRL obliga al empleador a evaluar riesgos y adoptar medidas preventivas (ergonomía, pausas, formación) en puestos con VDT. No corresponde cargar al trabajador con la financiación del equipo ni medidas absurdas como sustituir por papel.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "prompt": "En un entorno de gestión de activos (MAM) frente a un simple NAS/SAN compartido, ¿qué ventaja operativa aporta principalmente el MAM en flujos de edición colaborativa?",
+          "options": [
+            "Duplicación automática de archivos en cada estación de trabajo para protección contra fallos",
+            "Gestión centralizada de metadatos, búsqueda avanzada, control de versiones y permisos que facilitan colaboración y relink dinámico",
+            "Reducción de la latencia de acceso por la conversión forzada a códecs intraframe",
+            "Sustitución de la necesidad de backups y políticas de archivado"
+          ],
+          "correctIndex": 1,
+          "explanation": "Un MAM añade gestión de metadatos, indexado, control de versiones y permisos para facilitar la colaboración y relink; no duplica automáticamente medios en cada estación, ni obliga a conversión a intraframe, ni sustituye las copias de seguridad y políticas de archivado.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "Caso práctico. Al recibir material XDCAM con índices, se realiza la ingesta sin conservar los ficheros de índice y aparecen fallos en la asociación de clips y timecodes. ¿Cuál es la consecuencia técnica más probable?",
+          "options": [
+            "Reducción del espacio ocupado en el servidor sin impacto en flujo de trabajo",
+            "Mejora inmediata de la compatibilidad con cualquier NLE por eliminación de ficheros propietarios",
+            "Pérdida de información de metadatos e imposibilidad de hacer relink exacto entre clips y originales, complicando conformados y entregas",
+            "Conversión automática y fiable de todos los clips a MXF OP1a por el servidor"
+          ],
+          "correctIndex": 2,
+          "explanation": "Si se pierden los ficheros de índice de XDCAM se pierde metadatos críticos (timecode, mapeo de clips), impidiendo relink y conformado fiable. No mejora compatibilidad ni reduce impacto de flujo de trabajo; tampoco provoca una conversión automática y garantizada a OP1a.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "009",
       "title": "Examen 009",
