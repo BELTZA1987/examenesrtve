@@ -1,7 +1,266 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-31",
+  "updatedAt": "2026-08-01",
   "exams": [
+    {
+      "id": "011",
+      "title": "Examen 011",
+      "date": "2026-08-01",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "prompt": "El III Convenio Colectivo de la Corporación RTVE (resoluciones citadas en el temario) regula principalmente:",
+          "options": [
+            "Condiciones de trabajo, clasificación profesional, jornada y retribuciones del personal de RTVE",
+            "Normas sobre contenidos editoriales y líneas de programación de la Corporación",
+            "Especificaciones técnicas de equipamiento y estándares de emisión",
+            "Regulación del régimen jurídico y financiación pública de RTVE"
+          ],
+          "correctIndex": 0,
+          "explanation": "El convenio colectivo regula las condiciones laborales (clasificación, jornada, salarios y derechos/obligaciones laborales). Las demás opciones remiten a ámbitos distintos: contenidos editoriales son competencia de políticas internas, especificaciones técnicas corresponden a ingeniería y la financiación se regula por ley.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "Según la Ley 17/2006, de 5 de junio, ¿qué carácter jurídico principal tiene la Corporación RTVE?",
+          "options": [
+            "Fundación pública dedicada únicamente a actividades culturales",
+            "Sociedad mercantil privada sujeta al Derecho privado",
+            "Organismo autónomo dependiente del Gobierno con personalidad administrativa",
+            "Entidad pública empresarial con funciones de servicio público"
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley configura RTVE como una entidad pública empresarial con misión de servicio público audiovisual. No es una sociedad privada, ni una fundación ni un simple organismo administrativo en los términos de las otras opciones.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "La Ley 13/2022, General de Comunicación Audiovisual, introduce obligaciones para los prestadores de servicios audiovisuales en materia de protección de determinados colectivos. Entre las siguientes, ¿cuál es una obligación regulada por esa Ley?",
+          "options": [
+            "Obligación de emitir exclusivamente contenidos nacionales en horario de máxima audiencia",
+            "Medidas para proteger a la infancia frente a contenidos perjudiciales y garantizar accesibilidad de los programas",
+            "Prohibición general de entrevistas a representantes políticos en periodos electorales",
+            "Establecimiento de tarifas públicas para la contratación de espacios de publicidad"
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley contiene disposiciones sobre protección de menores y accesibilidad (subtitulación, audiodescripción), entre otras. Las otras opciones no reflejan obligaciones generales establecidas por esa Ley.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "En control técnico, ¿qué información proporciona primordialmente un vectorscopio?",
+          "options": [
+            "La representación de la crominancia (matiz y saturación) y la posición de los tonos de piel en el diagrama de color",
+            "El nivel de luminancia (brillo) por cada columna de imagen en valores absolutos",
+            "La medición integrada de loudness del audio en LUFS",
+            "La relación señal/ruido y el espectro de frecuencias de la señal de audio"
+          ],
+          "correctIndex": 0,
+          "explanation": "Un vectorscopio visualiza la crominancia (hue y saturation) y permite comprobar tonos de piel; no muestra luminancia por posición horizontal (eso es un waveform), ni mide loudness o espectro de audio.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En audio digital para emisión, ¿qué representa 0 dBFS?",
+          "options": [
+            "La recomendación de nivel de pico en la medición de loudness (LUFS)",
+            "El nivel recomendado de referencia para mezcla de locución en estudio",
+            "Un valor equivalente a 0 dBu en una conexión analógica balanceada",
+            "El máximo nivel digital posible antes de saturación (full scale)"
+          ],
+          "correctIndex": 3,
+          "explanation": "0 dBFS es el tope de la escala digital (full scale); no es una recomendación de mezcla, no equivale directamente a 0 dBu analógico y no describe una magnitud de loudness.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "Caso práctico. En una grabación de exterior la cámara recibe zumbido de 50 Hz en la pista de referencia de audio. ¿Cuál es la solución técnica más adecuada para eliminar la interferencia sin degradar la señal de micrófono?",
+          "options": [
+            "Incrementar la ganancia de la cámara y aplicar un filtro de paso alto en 1 kHz",
+            "Introducir aislamiento de masa (transformador o caja DI balanceada) y usar cableado balanceado",
+            "Sustituir el micrófono por uno con menor sensibilidad sin revisar la conexión eléctrica",
+            "Consolidar pistas en el NLE y aplicar reducción de ruido por software sin tocar la conexión"
+          ],
+          "correctIndex": 1,
+          "explanation": "Un zumbido de red suele deberse a bucle de masa; la solución es aislamiento (transformador) y/o utilizar conexiones balanceadas XLR. Subir ganancia o un filtro a 1 kHz no elimina 50 Hz correctamente; cambiar micrófono o corregir sólo en postarruina calidad y no resuelve la causa.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En un códec Long‑GOP, ¿qué elemento del diseño del GOP determina principalmente cuántos fotogramas previos o posteriores deben decodificarse para reconstruir un frame solicitado de forma aleatoria?",
+          "options": [
+            "La frecuencia de muestreo de audio embebido",
+            "La profundidad de bits por componente (por ejemplo 8 vs 10 bits)",
+            "El contenedor elegido (por ejemplo MXF u OP1a)",
+            "La estructura y longitud del GOP (distancia hasta el I‑frame y presencia de B‑frames)"
+          ],
+          "correctIndex": 3,
+          "explanation": "En Long‑GOP es la organización del GOP (posición de I/P/B y su longitud) la que obliga a decodificar frames relacionados; la profundidad de bits, contenedor o audio no determinan esa dependencia temporal.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Caso práctico. Para obtener una experiencia de scrubbing y corte 'frame‑accurate' con mínima latencia en una estación de montaje, ¿qué estrategia de proxies es la más adecuada?",
+          "options": [
+            "Usar proxies Long‑GOP de muy baja tasa porque ahorran espacio y se editan igual de bien",
+            "Generar proxies intraframe (códec sin GOP largo) con bitrates moderados (por ejemplo ProRes/DNxHD intra) para edición interactiva",
+            "Editar directamente sobre archivos maestros comprimidos en HEVC con GOP largo para evitar transcodificaciones",
+            "Trabajar únicamente con thumbnails y referencias de baja resolución sin archivos proxy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Proxies intraframe permiten scrubbing y cortes frame‑accurate con baja carga de decodificación. Long‑GOP y HEVC alargarían la latencia; thumbnails no ofrecen precisión de frame.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Respecto al patrón operativo MXF OP1a usado en entregas broadcast, ¿qué característica lo define con mayor precisión?",
+          "options": [
+            "Contener todos los flujos de una pieza intercalados en un único fichero MXF listo para reproducción",
+            "Guardar cada pista de esencia (vídeo, audio) en ficheros MXF separados por pista",
+            "Ser un contenedor propietario que no admite metadatos estándar",
+            "Ser específico para proxies de baja resolución y no para masters de emisión"
+          ],
+          "correctIndex": 0,
+          "explanation": "OP1a agrupa todas las esencias en un único archivo intercalado para reproducción. OP‑Atom conserva esencias en ficheros separados; MXF admite metadatos estándar; OP1a no está limitado a proxies.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "En un monitor de forma de onda (waveform monitor) utilizado en control técnico de vídeo, ¿qué representa esencialmente la traza vertical en función de la posición horizontal de la imagen?",
+          "options": [
+            "La saturación de color combinada de Cb y Cr por columna",
+            "El nivel de luminancia o componente Y' de la imagen a cada posición horizontal",
+            "La medida integrada de contraste de la escena (CRF)",
+            "El nivel de loudness de la pista de audio asociada"
+          ],
+          "correctIndex": 1,
+          "explanation": "El waveform muestra la luminancia (Y') a lo largo del eje horizontal de la imagen. La saturación se valora en vectorscopio; las otras opciones se refieren a conceptos distintos (audio o métricas no representadas por waveform).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Caso práctico. Un programa mide -16 LUFS integrado y la entrega final exige -23 LUFS integrados. ¿Cuál es el procedimiento técnico más apropiado para cumplir la especificación manteniendo inteligibilidad y controlando picos?",
+          "options": [
+            "Aumentar la compresión dinámica al máximo para bajar LUFS sin tocar el limitador",
+            "Reducir simplemente el volumen general sin limitador, confiando en que los picos no serán problema",
+            "Aplicar normalización de ganancia para alcanzar -23 LUFS y usar un limitador true‑peak para no superar el umbral de pico permitido",
+            "Exportar a un codec con mayor compresión para que el loudness caiga automáticamente"
+          ],
+          "correctIndex": 2,
+          "explanation": "Para bajar LUFS se ajusta la ganancia (normalización o reasignación) y se emplea limitador true‑peak para controlar picos. Simplemente bajar volumen sin gestionar picos o aumentar compresión indiscriminadamente compromete calidad; la compresión extrema o cambiar codec no garantiza cumplimiento.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "¿Qué mide esencialmente la escala LUFS en el control de audio para emisiones?",
+          "options": [
+            "La relación señal/ruido de la cadena de microfonía",
+            "El valor pico instantáneo que alcanza la señal en el dominio temporal",
+            "La energía espectral de la banda baja por debajo de 100 Hz",
+            "La percepción integrada de loudness del material (nivel percibido a lo largo del tiempo)"
+          ],
+          "correctIndex": 3,
+          "explanation": "LUFS estima la loudness percibida integrada en el tiempo. Los picos instantáneos se miden en dBFS o dBTP, la energía espectral y SNR son otras métricas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Al recibir lotes procedentes de cámaras XDCAM para ingesta en un servidor/NLE, ¿por qué es importante conservar exactamente la estructura de carpetas y los ficheros de índice generados por la cámara?",
+          "options": [
+            "Porque contienen metadatos e índices (timecodes, referencias de clip) que permiten identificar y relinkar los activos sin pérdida de información",
+            "Porque el servidor sólo admite importaciones desde esa estructura y rechazará cualquier otra",
+            "Porque esos ficheros comprimen los clips para ahorrar espacio durante la ingesta",
+            "Porque los ficheros de índice contienen las LUTs de cámara necesarias para la reproducción"
+          ],
+          "correctIndex": 0,
+          "explanation": "La estructura y los índices de XDCAM incluyen timecodes, nombres y referencias que permiten al NLE identificar clips y conservar integridad. Los otros enunciados son falsos: no son requisitos absolutos de todos los servidores, no comprimen y no almacenan LUTs obligatoriamente.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En un servidor de retransmisión tipo EVS/IPDirector, ¿qué es operativamente una 'playlist' y para qué se emplea principalmente?",
+          "options": [
+            "Una lista ordenada de clips y marcas que define la secuencia de reproducción para emisión o highlights en directo",
+            "Un archivo de configuración de red para distribuir flujos SMPTE ST 2110",
+            "Un conjunto de presets de color para etalonaje automático de clips",
+            "Un índice interno que convierte archivos OP‑Atom a OP1a durante la ingesta"
+          ],
+          "correctIndex": 0,
+          "explanation": "En EVS una playlist es la secuencia operativa de reproducción/oxígeno para emisiones y repeticiones. No es un fichero de red, ni presets de color, ni una función de conversión de contenedores.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En Avid Media Composer, ¿qué realiza esencialmente la operación 'Consolidate/Transcode' cuando se ejecuta desde un bin sobre clips seleccionados?",
+          "options": [
+            "Exporta un AAF que contiene la secuencia final para entregar al departamento de mezcla",
+            "Borra las referencias originales de medios del proyecto de forma irreversible",
+            "Crea copias nuevas o transcodifica los medios seleccionados a un códec/ubicación objetivos y relinka los clips a esos nuevos archivos",
+            "Genera automáticamente proxies en la nube sin tocar el almacenamiento local"
+          ],
+          "correctIndex": 2,
+          "explanation": "Consolidate/Transcode crea nuevos archivos (copias o transcodificadas) y relinka las referencias del bin a los nuevos medios. No borra irremediablemente ni exporta AAF por defecto ni genera proxies en la nube sin configuración explícita.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "¿Qué consigue la función 'Match Frame' en un NLE como Avid Media Composer cuando se aplica sobre un fotograma situado en la secuencia?",
+          "options": [
+            "Crea un archivo proxy nuevo y lo enlaza a la posición de edición",
+            "Sustituye automáticamente el clip por una versión de mayor resolución encontrada en disco",
+            "Abre el clip de origen en el monitor de origen en el fotograma exacto correspondiente al de la secuencia",
+            "Inicia la exportación del fotograma como imagen fija en formato TIFF"
+          ],
+          "correctIndex": 2,
+          "explanation": "Match Frame localiza y abre el clip fuente en el fotograma exacto dentro del monitor de origen. No reemplaza ni crea proxies ni exporta imágenes por sí mismo.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En flujos colaborativos con servidores MAM tipo Interplay/MediaCentral, ¿qué identificador estandarizado es crítico para asociar de forma inequívoca un proxy con su archivo alto‑res original?",
+          "options": [
+            "La resolución en píxeles y el frame‑rate combinados",
+            "El nombre comercial del codec usado en la captura",
+            "UMID (identificador único de material) o UUID embebido en el fichero/metadata",
+            "La carpeta física del NAS donde se almacenó originalmente"
+          ],
+          "correctIndex": 2,
+          "explanation": "El UMID/UUID único embebido en el archivo es el identificador estándar que permite relink fiable entre proxy y alto‑res. El nombre del códec, resolución o carpeta física no garantizan unicidad ni persistencia como identificador.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En montaje audiovisual, ¿qué describe con precisión un 'L‑cut'?",
+          "options": [
+            "Una técnica de sincronización de multicámara basada en código de tiempo",
+            "Que la imagen del siguiente plano aparece antes de que cese el sonido del anterior",
+            "Un corte seco sin transición ni superposición de audio",
+            "Que el sonido procedente del siguiente plano comienza mientras aún se muestra el plano anterior en imagen"
+          ],
+          "correctIndex": 3,
+          "explanation": "Un L‑cut consiste en que el audio del plano que entra continúa sonando sobre la imagen del plano anterior. La segunda opción describe un J‑cut (audio anticipado), la tercera no es L‑cut y la cuarta es otra materia.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Caso práctico. Dispones de varias cámaras sin código de tiempo común para montar una pieza multicámara. ¿Qué método automático emplean la mayoría de NLEs para sincronizar los ángulos de forma fiable?",
+          "options": [
+            "Asignación manual de timecodes aleatorios y mezcla por crominancia",
+            "Sincronización por forma de onda de audio (alineación automática usando la huella sonora)",
+            "Uso de genlock para reescribir timecode en cada clip durante la importación",
+            "Conversión a MXF OP1a para que el NLE detecte automáticamente el orden correcto"
+          ],
+          "correctIndex": 1,
+          "explanation": "La mayoría de NLEs sincronizan automáticamente por la similitud de forma de onda de audio cuando no hay timecode común. Las otras opciones no son prácticas: genlock no reescribe retroactivamente timecode de material sin él; convertir contenedores no sincroniza audio.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Según la Ley 31/1995, de Prevención de Riesgos Laborales, aplicada a puestos con pantallas de visualización de datos, ¿qué obligación esencial debe asumir el empleador respecto a la organización del puesto de trabajo?",
+          "options": [
+            "Permitir que el trabajador organice su jornada sin límite de descansos por fatiga visual",
+            "Sustituir obligatoriamente todos los monitores de 24\" por pantallas de 27\"",
+            "Evaluar los riesgos derivados del trabajo con pantallas y adoptar medidas preventivas y de ergonomía (mobiliario, descansos, formación)",
+            "Externalizar toda la edición a proveedores para evitar responsabilidad"
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley exige evaluación de riesgos y medidas preventivas (ergonomía, pausas, formación, exámenes visuales). Las demás opciones son irrelevantes o inadecuadas como obligaciones legales.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "010",
       "title": "Examen 010",
