@@ -1,7 +1,266 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01",
+  "updatedAt": "2026-08-02",
   "exams": [
+    {
+      "id": "012",
+      "title": "Examen 012",
+      "date": "2026-08-02",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "prompt": "Según la Ley 17/2006 de la radio y la televisión de titularidad estatal, ¿qué principio debe presidir la actividad de la Corporación RTVE como servicio público audiovisual?",
+          "options": [
+            "Asignar la programación según cuotas partidistas designadas por el Gobierno",
+            "Maximizar la rentabilidad económica de las emisiones",
+            "Garantizar el pluralismo y el cumplimiento de la misión de servicio público",
+            "Priorizar la producción comercial frente a la información pública"
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley 17/2006 configura RTVE como servicio público cuya actividad debe garantizar pluralismo e interés público. Los distractores aluden a objetivos incompatibles con el carácter público (rentabilidad, control partidista o primacía comercial).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "La Ley 13/2022, de comunicación audiovisual, incorpora obligaciones sobre accesibilidad. ¿Cuál de las siguientes obligaciones recoge con carácter general dicha norma para los servicios audiovisuales?",
+          "options": [
+            "Eliminar toda publicidad en programas de interés general",
+            "Adoptar medidas para la accesibilidad, como subtitulado y audio-descripción para determinados contenidos",
+            "Imponer una cuota mínima de producción local en todos los canales",
+            "Prohibir la emisión de contenidos informativos en horario nocturno"
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 13/2022 establece obligaciones de accesibilidad (subtítulos, audiodescripción, lengua de signos) para ciertos contenidos. Las otras opciones no reflejan obligaciones contenidas en esa Ley.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "Según la Ley 31/1995 de Prevención de Riesgos Laborales, ¿qué obligación básica corresponde al empresario en relación con la prevención?",
+          "options": [
+            "Delegar íntegramente las responsabilidades preventivas en los trabajadores",
+            "Limitar los descansos a lo estrictamente legal sin más medidas de prevención",
+            "Realizar una evaluación de riesgos y establecer las medidas preventivas y formación necesarias",
+            "Proveer exclusivamente equipos de protección individual sin evaluar riesgos"
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley obliga al empresario a evaluar riesgos y establecer medidas de prevención, formación e información. Las demás opciones suponen omisiones o malinterpretaciones de las obligaciones legales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "prompt": "En una señal Y'CbCr 4:2:2 por línea, ¿cuál es la relación de muestreo horizontal entre la componente de luminancia Y' y cada componente de crominancia (Cb o Cr)?",
+          "options": [
+            "Cada crominancia tiene el doble de muestras que la luminancia (ratio 1:2)",
+            "La luminancia y las crominancias tienen el mismo número de muestras (ratio 1:1)",
+            "La luminancia tiene el doble de muestras horizontales que cada crominancia (ratio 2:1)",
+            "La luminancia tiene cuatro veces más muestras que cada crominancia (ratio 4:1)"
+          ],
+          "correctIndex": 2,
+          "explanation": "En 4:2:2, por cada 2 muestras de Y' hay 1 de Cb y 1 de Cr por línea (Y':Cb = 2:1). Las otras relaciones son incorrectas para el muestreo 4:2:2.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En audio digital para procesos de postproducción, ¿qué significa 0 dBFS?",
+          "options": [
+            "Nivel de silencio absoluto en una señal digital",
+            "El nivel máximo digital medible antes de saturación/clipping",
+            "Equivalente a 0 dBu en precisión analógica",
+            "El umbral por debajo del cual no hay información audible"
+          ],
+          "correctIndex": 1,
+          "explanation": "0 dBFS indica el nivel máximo representable en el dominio digital (full scale) antes de recorte. No es silencio, ni una equivalencia directa a 0 dBu, ni un umbral de audición.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "Caso práctico: vas a equipar una estación de edición para reproducir material RAW debayerizado y aplicar efectos en tiempo real con la menor latencia posible. ¿Qué componente del equipo beneficiará más directamente la reproducción y efectos en tiempo real?",
+          "options": [
+            "Incrementar sólo la resolución del monitor",
+            "Aumentar exclusivamente la capacidad de disco duro local sin mejorar GPU/CPU",
+            "La GPU (procesamiento gráfico y aceleración de decodificación/efectos)",
+            "Sólo añadir más puertos USB en la estación"
+          ],
+          "correctIndex": 2,
+          "explanation": "El procesamiento RAW y muchos efectos se benefician de la aceleración por GPU; mejorar sólo disco o periféricos no resuelve la carga de procesamiento. El monitor o puertos USB no aceleran el cálculo de imagen.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "Dentro de los patrones operativos de MXF para entregas broadcast, ¿qué característica define con mayor precisión el OP1a?",
+          "options": [
+            "Fichero único intercalado que contiene todos los essences de un programa (audio+vídeo+metadatos)",
+            "Conjunto de archivos atomizados que separa cada essence en archivos independientes",
+            "Un contenedor específico para material sin timecode",
+            "Un formato propietario que no admite metadatos estándar"
+          ],
+          "correctIndex": 0,
+          "explanation": "OP1a es el patrón que empaqueta un programa en un único archivo MXF intercalado con audio, vídeo y metadatos. No es atomizado (eso sería OP-Atom), ni carece de timecode ni es un formato sin metadatos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "En códecs Long‑GOP, ¿qué parámetro del diseño del GOP influye de forma más directa en el número de fotogramas previos o posteriores necesarios para reconstruir un frame pedido de forma aleatoria?",
+          "options": [
+            "La profundidad de color (bits por componente)",
+            "La longitud del GOP (número de frames entre I-frames)",
+            "El espacio de color (Rec.709 vs Rec.2020)",
+            "La amplitud del grupo de chroma (submuestreo)"
+          ],
+          "correctIndex": 1,
+          "explanation": "La longitud del GOP determina cuántos frames dependientes (P/B) hay entre I-frames; cuanto más largo, mayor dependencia temporal al decodificar un frame aleatorio. Los otros parámetros influyen en calidad o crominancia, no en dependencia temporal.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Caso práctico: necesitas configurar proxies que permitan scrubbing ágil y corte frame‑accurate en estaciones de montaje con CPU limitada. ¿Qué propiedad de los proxies es la más recomendable para conseguir baja latencia en scrubbing?",
+          "options": [
+            "Crear proxies en formato entrelazado con mitad de fps",
+            "Usar códecs Long‑GOP de baja tasa para aprovechar la compresión temporal",
+            "Encapsular los proxies en un contenedor que divida frames en múltiples ficheros",
+            "Usar códecs intraframe I‑only (cada frame independiente) con resolución reducida"
+          ],
+          "correctIndex": 3,
+          "explanation": "Los códecs intraframe (I‑only) permiten decodificar cada frame de forma independiente, mejorando scrubbing y cortes frame‑accurate en equipos con CPU limitada. Long‑GOP aumenta la latencia de acceso. Las demás opciones no aportan la mejora esencial para scrubbing.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "En un monitor de forma de onda (waveform monitor) utilizado en control técnico de vídeo, ¿qué representa esencialmente la traza vertical en función de la posición horizontal de la imagen?",
+          "options": [
+            "La saturación cromática de cada píxel en la imagen",
+            "La amplitud de la señal de luminancia (nivel de luma) para cada posición horizontal de la imagen",
+            "El valor de audio correspondiente al punto de imagen",
+            "El índice de compresión aplicado a cada bloque de imagen"
+          ],
+          "correctIndex": 1,
+          "explanation": "El waveform monitor traza el nivel de luminancia (o señal compuesta) verticalmente en función de la posición horizontal de la imagen. No mide saturación cromática (eso es el vectorscopio), ni audio ni compresión.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Caso práctico: un programa mide -16 LUFS integrados y la entrega exige -23 LUFS integrados. ¿Cuál es el procedimiento técnico más apropiado para adaptarlo preservando inteligibilidad y controlando picos?",
+          "options": [
+            "Editar manualmente cada clip para bajar el nivel medio sin control de picos",
+            "Reducir simplemente el fader master varios dB hasta alcanzar -23 LUFS sin limitador",
+            "Aumentar la compresión con ataque lento y sin limitador para bajar la lectura de LUFS",
+            "Aplicar normalización de loudness seguida de limitación/true‑peak limiting para ajustar a -23 LUFS sin sobrepasar picos"
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica adecuada es normalizar la ganancia para conseguir -23 LUFS e incorporar limitación para controlar true‑peaks; bajar sólo el fader o aplicar compresión sin control de picos puede provocar transitorios no deseados o pérdida de inteligibilidad. Editar clip a clip es ineficiente y arriesga picos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Caso práctico: te entregan un lote de material procedente de cámaras XDCAM para ingesta en servidor/NLE. Durante el proceso, ¿por qué es crítico conservar exactamente la estructura de carpetas y los ficheros de índice generados por la cámara?",
+          "options": [
+            "Porque esos ficheros son necesarios únicamente para la reproducción en la cámara, no para la ingesta",
+            "Porque la estructura sólo es estética y su pérdida no afecta al material",
+            "Porque los ficheros de índice reproducen el códec propietario si se eliminan los medios",
+            "Porque contienen metadatos e índices (timecode, referencias) que permiten identificar y relacionar clips sin perder información de TC y editorial"
+          ],
+          "correctIndex": 3,
+          "explanation": "Las cámaras XDCAM generan índices y metadatos que el NLE/servidor usa para reconocer timecodes y relaciones de clips; perderlos puede impedir relink y producir errores de timecode. Las otras opciones minimizan o malinterpretan la función real de los índices.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "¿Cuál es la función principal de generar checksums durante la ingesta de material a un servidor de edición?",
+          "options": [
+            "Reducir la tasa de datos necesaria en el servidor",
+            "Verificar la integridad de los ficheros transferidos y detectar errores de copia",
+            "Aumentar la velocidad de lectura del disco",
+            "Codificar automáticamente los proxies en el formato final de emisión"
+          ],
+          "correctIndex": 1,
+          "explanation": "Los checksums sirven para asegurar que la copia no se ha corrompido; no reducen tasas, no aceleran discos ni codifican proxies por sí mismos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En un flujo de ingestación a servidor, ¿qué operación describe mejor la fase de 'ingest' propiamente dicha?",
+          "options": [
+            "Transferir los ficheros desde el soporte fuente al almacenamiento del servidor con verificación y registro de metadatos",
+            "Renderizar efectos y etalonaje final sobre los clips",
+            "Realizar la emisión en directo del contenido recién grabado",
+            "Eliminar todos los metadatos embebidos para uniformizar los ficheros"
+          ],
+          "correctIndex": 0,
+          "explanation": "La ingest implica transferencia, verificación (p. ej. checksum) y captura de metadatos. No incluye etalonaje final ni emisión directa, y eliminar metadatos sería contraproducente para la trazabilidad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "prompt": "En un sistema de edición no lineal colaborativo donde se emplea un MAM/Interplay‑tipo, ¿qué identificador estandarizado en MXF se utiliza habitualmente para identificar de forma inequívoca un material y facilitar el relink entre proxy y alto‑res?",
+          "options": [
+            "Checksum MD5 solamente",
+            "Nombre de archivo asignado por el operador",
+            "UMID (Unique Material Identifier)",
+            "Ruta de almacenamiento del archivo en disco"
+          ],
+          "correctIndex": 2,
+          "explanation": "El UMID SMPTE es un identificador estandarizado para identificar material de forma única en MXF y facilita el relink. El nombre de archivo, checksum o ruta no son identificadores estandarizados con la misma interoperabilidad.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En Avid Media Composer, al localizar un fotograma en la secuencia y ejecutar la operación que busca la fuente original para ese fotograma, ¿qué función realiza el sistema?",
+          "options": [
+            "Localiza el clip fuente original y abre el mismo punto en el bin o source monitor (función equivalente a 'Match Frame')",
+            "Duplica el fotograma en una nueva pista en la secuencia",
+            "Rellena automáticamente el intervalo siguiente con un fotograma de puente",
+            "Convierte el fotograma seleccionado a un proxy de baja resolución"
+          ],
+          "correctIndex": 0,
+          "explanation": "La operación conocida como 'Match Frame' localiza el clip fuente y el punto temporal correspondiente en el bin/source; no duplica, ni rellena intervalos ni convierte a proxy.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "Caso práctico: en un entorno de edición colaborativa con MAM tipo MediaCentral, un editor solicita que su proxy se relinquee dinámicamente con el alto‑res; ¿qué metadato estandarizado y persistente debe estar presente para que la asociación sea fiable?",
+          "options": [
+            "El tamaño del fichero en bytes",
+            "El nombre del operador que realizó la ingesta",
+            "La hora del día en que se ingirió el clip (hh:mm:ss)",
+            "Un identificador único material (UMID) embebido en el MXF"
+          ],
+          "correctIndex": 3,
+          "explanation": "Para relink dinámico reliable se usa un identificador único persistente como UMID; el nombre del operador, hora u tamaño no garantizan unicidad ni persistencia entre sistemas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En montaje audiovisual, ¿qué describe con precisión un 'L‑cut'?",
+          "options": [
+            "Que el audio del plano entrante comienza antes del corte visual, o que el audio del plano saliente continúa bajo el plano entrante",
+            "Cortar abruptamente una acción para provocar discontinuidad",
+            "Un fundido a negro simultáneo con la entrada de audio",
+            "La superposición de dos pistas de vídeo en modo pantalla"
+          ],
+          "correctIndex": 0,
+          "explanation": "Un L‑cut mantiene el audio del plano anterior o anticipa el audio del siguiente tras el corte visual, favoreciendo continuidad auditiva. Los otros enunciados no describen un L‑cut.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En teoría del montaje, ¿qué caracteriza esencialmente un 'match on action' como recurso de continuidad?",
+          "options": [
+            "El corte que sigue una acción en curso para que la acción continúe de forma fluida en el plano siguiente",
+            "Eliminar un gesto del personaje mediante salto de plano",
+            "Sustituir la banda sonora por otra inconexa con la acción",
+            "Romper voluntariamente la continuidad para producir shock en el espectador"
+          ],
+          "correctIndex": 0,
+          "explanation": "El 'match on action' corta durante una acción para que ésta continúe fluida en el siguiente plano, manteniendo la continuidad. Las otras opciones describen discontinuidad, montaje sonoro distinto o rupturas deliberadas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Según la normativa de Prevención de Riesgos Laborales aplicada a puestos con pantallas de visualización de datos, ¿qué medida preventiva debe garantizar el empleador en la organización del puesto de trabajo?",
+          "options": [
+            "Obligar al trabajador a suplir cualquier equipamiento ergonómico con material propio",
+            "Prohibir el trabajo con pantallas más de 2 horas seguidas sin excepción",
+            "Sustituir la evaluación por una encuesta anónima de satisfacción",
+            "Evaluación ergonómica del puesto y provisión de medios para adaptar la estación (silla regulable, altura de monitor, pausas)"
+          ],
+          "correctIndex": 3,
+          "explanation": "La normativa exige evaluación de riesgos y medidas ergonómicas (sillas ajustables, descansos, formación). Prohibir tiempo sin evaluación, sustituir la evaluación por encuestas o exigir a los trabajadores que aporten equipamiento no cumple la obligación legal.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "011",
       "title": "Examen 011",
