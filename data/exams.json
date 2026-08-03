@@ -3,6 +3,265 @@
   "updatedAt": "2026-08-03",
   "exams": [
     {
+      "id": "014",
+      "title": "Examen 014",
+      "date": "2026-08-03",
+      "level": "Alto (oposición técnica)",
+      "timeMinutes": 24,
+      "blocks": [
+        "Normativa general",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal",
+        "Equipos de medida y control",
+        "Grabación y reproducción de la señal de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de Riesgos Laborales aplicada al puesto"
+      ],
+      "questions": [
+        {
+          "prompt": "El III Convenio Colectivo de la Corporación RTVE aborda, en su ámbito principal, la regulación de:",
+          "options": [
+            "Las condiciones de trabajo, la estructura retributiva y la regulación de la relación laboral del personal de la Corporación.",
+            "Los procedimientos de contratación administrativa para inversiones en infraestructuras técnicas.",
+            "Los contratos comerciales con proveedores de servicios técnicos y productoras externas.",
+            "La programación editorial y los contenidos de las cadenas en horario de máxima audiencia."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un convenio colectivo regula las condiciones de trabajo: derechos y obligaciones, clasificación profesional, jornada, retribuciones y demás aspectos laborales del personal afectado. No trata programación editorial ni contratos externos.",
+          "category": "Normativa general"
+        },
+        {
+          "prompt": "Según la Ley 13/2022, General de Comunicación Audiovisual, una obligación genérica de los prestadores de servicios audiovisuales en materia de accesibilidad es:",
+          "options": [
+            "Mantener un registro público con la lista completa de subtítulos y audiodescripciones producidas.",
+            "Garantizar medidas de accesibilidad adecuadas a los colectivos con discapacidad, tales como subtitulación para sordos y audiodescripción para personas con discapacidad visual cuando proceda.",
+            "Priorizar la inclusión de signoguías sobre subtitulado en contenidos infantiles.",
+            "Producir obligatoriamente una versión en lengua de signos de todos los informativos de madrugada."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley impone la obligación de garantizar accesibilidad mediante recursos como subtitulado, audiodescripción y lengua de signos según el tipo de servicio y destinatarios; no exige listados públicos ni imposiciones absolutas para todos los informativos.",
+          "category": "Normativa general"
+        },
+        {
+          "prompt": "En virtud de la Ley 31/1995 de Prevención de Riesgos Laborales, ¿cuál es una obligación básica e ineludible del empresario respecto a la seguridad y la salud en el trabajo?",
+          "options": [
+            "Realizar la evaluación de riesgos laborales y planificar las medidas de prevención derivadas de la misma.",
+            "Delegar íntegramente la prevención en los trabajadores mediante formación puntual.",
+            "Permitir al trabajador elegir libremente los equipos sin intervención de la empresa.",
+            "Garantizar jornada reducida a todo el personal que utilice pantallas de visualización de datos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley establece como obligación básica del empresario la evaluación de riesgos y la planificación de la actividad preventiva resultante. Las otras opciones son incorrectas o desproporcionadas: la prevención no se delega totalmente en trabajadores ni implica jornadas reducidas automáticamente.",
+          "category": "Normativa general"
+        },
+        {
+          "prompt": "Técnicamente, ¿cuál es la ventaja principal de una conexión de audio balanceada frente a una no balanceada en instalaciones de transmisión?",
+          "options": [
+            "Permitir niveles de señal más altos sin distorsión armónica.",
+            "Eliminar la necesidad de cualquier puesta a tierra en la instalación.",
+            "Rechazar interferencias por modo común (zumbidos y ruidos de masa) gracias a la simetría de la señal.",
+            "Proporcionar automáticamente corrección de fase entre canales izquierdo y derecho."
+          ],
+          "correctIndex": 2,
+          "explanation": "Una línea balanceada transmite la señal en dos conductores con polaridad opuesta; al recibirla se resta la señal común, cancelando el ruido introducido por modo común (zumbidos), que es la ventaja operativa esencial. No elimina la necesidad de una puesta a tierra ni corrige la fase estéreo.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "Respecto a la muestreo de crominancia en vídeo digital, ¿qué diferencia operativa existe entre 4:4:4 y 4:2:2?",
+          "options": [
+            "4:4:4 sólo se aplica a señales entrelazadas mientras que 4:2:2 es sólo progresivo.",
+            "4:4:4 codifica menos niveles de luminancia que 4:2:2.",
+            "4:2:2 reduce la resolución horizontal de las componentes de crominancia respecto a 4:4:4, manteniendo la luminancia completa.",
+            "4:2:2 incrementa la profundidad de bits efectiva para la crominancia frente a 4:4:4."
+          ],
+          "correctIndex": 2,
+          "explanation": "4:4:4 mantiene tanto luminancia como crominancias a plena resolución por muestra; 4:2:2 reduce la resolución horizontal de las componentes Cb/Cr a la mitad respecto a Y, manteniendo Y a plena resolución. No tiene que ver con entrelazado/progresivo ni con incremento de profundidad de bits.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En términos de acceso aleatorio y edición frame‑accurate, ¿qué característica de códec es la más favorable para minimizar decodificación adicional y latencia?",
+          "options": [
+            "Codificación interlaced para aprovechar redundancia temporal.",
+            "Uso de códecs intraframe (I‑only) que codifican cada frame de forma independiente.",
+            "Uso de Long‑GOP con alta compresión y GOP largo.",
+            "Compresión basada en transformadas con B‑frames abundantes."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los códecs intraframe codifican cada frame independientemente, lo que permite acceso aleatorio y scrubbing frame‑accurate sin necesidad de decodificar frames vecinos. Long‑GOP y B‑frames aumentan la dependencia entre frames y alargan la latencia al solicitar frames aleatorios.",
+          "category": "Tratamiento digital de la señal"
+        },
+        {
+          "prompt": "¿Qué característica define con mayor precisión el patrón operativo MXF OP1a en entregas broadcast?",
+          "options": [
+            "Archivo por pista (archivo por cada pista de audio/visión) conservando independencia física.",
+            "Formato propietario que impide la inclusión de metadatos técnicos dentro del contenedor.",
+            "Un único archivo MXF que contiene los essences (vídeo y audio) intercalados y el metadato asociado del programa completo.",
+            "Conjunto de archivos OP‑Atom con un MXF por cada plano y un índice maestro externo."
+          ],
+          "correctIndex": 2,
+          "explanation": "OP1a (Operational Pattern 1a) se caracteriza por un único archivo MXF por programa en el que los essences están intercalados (interleaved) con su metadato; OP‑Atom es el patrón que crea archivos separados por esencia. OP1a no impide metadatos técnicos.",
+          "category": "Tratamiento digital de la señal"
+        },
+        {
+          "prompt": "En un códec Long‑GOP, ¿qué parámetro del GOP determina de forma más directa cuántos frames previos o posteriores deben decodificarse para reconstruir un frame concreto en edición aleatoria?",
+          "options": [
+            "El tipo de contenedor (MXF, MOV...).",
+            "La tasa de muestreo de audio asociada al archivo.",
+            "La profundidad de bits por componente (bit depth).",
+            "La longitud del GOP y la distancia al fotograma I más cercano."
+          ],
+          "correctIndex": 3,
+          "explanation": "La dependencia temporal en Long‑GOP viene determinada por la estructura del GOP: cuantos más P/B frames separan un frame del I‑frame más frames previos/posteriores serán necesarios para reconstruirlo. Bit depth o contenedor no determinan esa dependencia temporal.",
+          "category": "Tratamiento digital de la señal"
+        },
+        {
+          "prompt": "Caso práctico: necesitas proxies que permitan scrubbing ágil y corte frame‑accurate en estaciones con CPU limitada. ¿Qué propiedad del proxy resulta más adecuada para reducir latencia y carga de decodificación?",
+          "options": [
+            "Que utilicen HDR logarítmico sin conversión a espacio de visualización.",
+            "Que sean RAW o sin compresión para preservar toda la información cromática.",
+            "Que sean Long‑GOP con compresión alta para reducir ancho de banda.",
+            "Que empleen un códec intraframe (I‑only) o con alta frecuencia de fotogramas clave, baja resolución y bitrate moderado."
+          ],
+          "correctIndex": 3,
+          "explanation": "Para scrubbing y edición ágil en CPUs limitadas conviene proxies intraframe (I‑only) o con alta tasa de keyframes, baja resolución y bitrate moderado; esto minimiza la necesidad de decodificar frames vecinos. Long‑GOP aumenta latencia; RAW exige mucha CPU.",
+          "category": "Tratamiento digital de la señal"
+        },
+        {
+          "prompt": "Práctica de control técnico: al inspeccionar en un vectorscopio una señal de cámara con placas de color, observas que la representación de los tonos de piel está desplazada consistentemente respecto a la 'skin‑line' esperada. ¿Cuál es la interpretación técnica más probable?",
+          "options": [
+            "Se ha producido una inversión de fase en la pista de audio que afecta a la crominancia.",
+            "Existe un desplazamiento de matiz (hue) o calibración de color errónea en la cadena de cámara/convertidor.",
+            "La señal de luminancia está comprimida a 10 bits en lugar de 8 bits.",
+            "Hay un error en la sincronización de cuadro (frame rate mismatch)."
+          ],
+          "correctIndex": 1,
+          "explanation": "El vectorscopio muestra información de crominancia (matiz y saturación); un desplazamiento de la posición de tonos de piel respecto a la 'skin‑line' indica un cambio de matiz/calibración. Los problemas citados en las otras opciones no afectan la representación de crominancia de esa forma.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Caso práctico en waveform monitor: al revisar la señal de vídeo en directo observas que las luces altas aparecen recortadas y las cabezas aparecen sin detalle (clipping en la parte superior). ¿Cuál es la acción técnica más adecuada para corregirlo en origen?",
+          "options": [
+            "Aplicar un filtro pasabajas en la señal para eliminar artefactos de alta frecuencia.",
+            "Reducir exposición o ganancia en cámara y/o ajustar la curva de gamma y aplicar limitador/legalizer si procede, antes de la salida de emisión.",
+            "Ignorar el problema porque el conversor de formato en emisión siempre legaliza automáticamente.",
+            "Aumentar el gancho de la matriz de enrutamiento (router) para elevar el nivel de la señal."
+          ],
+          "correctIndex": 1,
+          "explanation": "El clipping en altas luces se corrige en origen reduciendo exposición/ganancia o ajustando gamma; si es necesario se usan limitadores/legalizers en la cadena para cumplir límites de luminancia. Aumentar niveles o filtrar frecuencias no solucionan el recorte; no puede asumirse que la emisora lo arregle automáticamente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "En control de calidad de audio para emisión, ¿qué describe correctamente la magnitud LUFS integrada y su utilidad práctica?",
+          "options": [
+            "Es la medida del nivel máximo instantáneo de la señal en dBFS que controla el clipping digital.",
+            "Es el valor de nivel de fondo (noise floor) medido en dB SPL en sala de control.",
+            "Es una unidad de medida para la fase relativa entre canales en audio multicanal.",
+            "Es una medida ponderada de la loudness percibida promedio durante un periodo prolongado, útil para normalizar niveles entre programas."
+          ],
+          "correctIndex": 3,
+          "explanation": "LUFS integrado es la medición de loudness percibida integrada en el tiempo (estándar ITU‑R BS.1770) usada para normalizar emisiones y asegurar consistencia entre programas. No mide picos instantáneos ni ruido de sala ni fase.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Caso práctico: te entregan un lote procedente de cámaras XDCAM para ingesta en servidor/NLE. ¿Por qué es crítico conservar exactamente la estructura de carpetas y los ficheros de índice generados por la cámara durante la ingesta?",
+          "options": [
+            "Porque el servidor sólo reconoce formatos si la carpeta tiene un nombre idéntico al número de cámara.",
+            "Porque esos ficheros y la estructura contienen índices, timecodes y metadatos que permiten identificar y relinkar los essences correctamente en el NLE; sin ellos se pierden referencias y puede fallar la asociación de clips.",
+            "Porque la estructura de carpetas reduce automáticamente el bitrate durante la ingesta.",
+            "Porque los ficheros de índice contienen la clave de licencia propietaria necesaria para decodificar el códec."
+          ],
+          "correctIndex": 1,
+          "explanation": "Las cámaras XDCAM generan ficheros de índice y una estructura concreta que contienen timecodes, índices de frame y metadatos necesarios para que el NLE o servidor relacione los essences con sus metadatos. Perder esta estructura puede impedir el correcto relink y lectura cronológica de material.",
+          "category": "Grabación y reproducción de la señal de vídeo"
+        },
+        {
+          "prompt": "Durante la ingesta de material a un servidor de edición se recomienda generar checksums. ¿Cuál es la función principal de ese proceso?",
+          "options": [
+            "Convertir los códecs de origen a un formato estándar del servidor.",
+            "Verificar la integridad de los ficheros transferidos para detectar errores o corrupción durante la copia.",
+            "Etiquetar automáticamente los ficheros con metadatos técnicos para el MAM.",
+            "Reducir el tamaño de los ficheros transferidos mediante compresión basada en hashes."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los checksums (hashes) sirven para comprobar que los ficheros copiados coinciden exactamente bit a bit con los originales; así se detectan errores de transferencia o corrupción. No comprimen ni convierten códecs ni etiquetan metadatos por sí mismos.",
+          "category": "Grabación y reproducción de la señal de vídeo"
+        },
+        {
+          "prompt": "En un flujo de trabajo, ¿qué operación describe mejor la fase de 'ingest' propiamente dicha?",
+          "options": [
+            "La edición final y etalonaje de un master para entrega.",
+            "La eliminación de material redundante tras el archivado a LTO.",
+            "La emisión en directo de una señal hacia satélite.",
+            "La transferencia controlada de essences y metadatos desde un soporte fuente al sistema de almacenamiento o servidor, incluyendo captura de timecodes y verificación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La ingesta es la operación de volcar la media desde la cámara/soporte hacia el servidor o sistema de edición, capturando además metadatos, timecodes y realizando verificaciones (checksums), no se refiere a emisión ni a edición final.",
+          "category": "Grabación y reproducción de la señal de vídeo"
+        },
+        {
+          "prompt": "Operativa en NLE (Avid): al situarte sobre un fotograma en la secuencia y ejecutar 'Match Frame', ¿qué realiza esencialmente el sistema?",
+          "options": [
+            "Exporta automáticamente ese fotograma como gráfico en alta resolución.",
+            "Crea una nueva versión proxy del fotograma para uso en la línea de tiempo.",
+            "Agrupa todos los clips con el mismo código de proyecto en una carpeta.",
+            "Localiza y abre en el monitor de origen el clip maestro y la posición exacta del fotograma correspondiente en la bin/proyecto."
+          ],
+          "correctIndex": 3,
+          "explanation": "Match Frame localiza el clip fuente y la posición exacta del fotograma seleccionado en la secuencia, cargándolo en el monitor de origen para operaciones de conformado o para recuperar el clip maestro. No exporta ni crea proxies automáticamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En Avid Media Composer, la operación 'Consolidate/Transcode' ejecutada desde un bin sobre clips seleccionados realiza principalmente:",
+          "options": [
+            "Crear una lista de reproducción para EVS con los clips seleccionados.",
+            "Enviar los clips directamente a emisión sin verificar metadatos.",
+            "Eliminar duplicados en el proyecto sin afectar a los media.",
+            "Copiar o transcodificar los medias seleccionados a nuevo espacio de almacenamiento y relinkear la carpeta/bin y la secuencia a ese nuevo material."
+          ],
+          "correctIndex": 3,
+          "explanation": "Consolidate/Transcode permite copiar (consolidar) o transcodificar medias seleccionados a un nuevo formato o ubicación y relinkear los clips en bins y secuencias a ese nuevo media; no crea playlists de EVS ni envía a emisión directamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "Prevención PRL aplicada al puesto: para los puestos de edición con pantallas de visualización de datos, ¿qué obligación concreta debe cumplir el empleador según la normativa y buenas prácticas de PRL?",
+          "options": [
+            "Evaluar ergonómicamente el puesto (mobiliario, altura de pantalla, teclado), formar al trabajador y facilitar pausas y medidas preventivas específicas para pantallas.",
+            "Sustituir toda pantalla con más de 24 pulgadas independientemente de la tarea.",
+            "Proveer exclusivamente dispositivos móviles en lugar de estaciones fijas para reducir riesgo.",
+            "Permitir que cada trabajador establezca sus propias pausas sin registro ni formación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La normativa exige evaluación de riesgos específicos del puesto VDT, medidas ergonómicas (silla, mesa, posición de pantalla), formación para el trabajador y medidas organizativas como pausas. Las otras opciones son insuficientes o irrelevantes.",
+          "category": "Prevención de Riesgos Laborales aplicada al puesto"
+        },
+        {
+          "prompt": "En montaje audiovisual, ¿qué describe con precisión un 'L‑cut'?",
+          "options": [
+            "Una técnica para sincronizar el ritmo visual con un compás musical mediante marcadores automáticos.",
+            "Un salto de raccord en el eje de acción que rompe la continuidad espacial.",
+            "Un efecto de fundido a negro aplicado únicamente al audio.",
+            "Un corte en el que el audio del plano siguiente comienza antes del corte de imagen y se extiende sobre el plano anterior."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un L‑cut es una técnica de edición donde el audio del plano B inicia mientras sigue en pantalla la imagen del plano A (o el audio de A se alarga sobre B): la forma de la letra L representa la superposición de audio respecto al corte de imagen.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "En teoría del montaje, ¿qué caracteriza esencialmente un 'match on action' como recurso de continuidad?",
+          "options": [
+            "Que una acción iniciada en un plano continúa en el siguiente de forma que el movimiento oculta el corte y mantiene la continuidad espacial y temporal.",
+            "El uso de cortes rápidos sin relación de movimiento para crear shock en el espectador.",
+            "La sincronización obligatoria de la mezcla de audio con la curva de luminancia del siguiente plano.",
+            "La repetición exacta del diálogo entre dos planos consecutivos."
+          ],
+          "correctIndex": 0,
+          "explanation": "El 'match on action' consiste en cortar durante una acción de forma que el movimiento continúa en el siguiente plano, facilitando la continuidad temporal y espacial y disimulando el corte. No se relaciona con diálogo ni con sincronización de audio-luminancia.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
+    {
       "id": "013",
       "title": "Examen 013",
       "date": "2026-08-03",
