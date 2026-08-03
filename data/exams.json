@@ -3,6 +3,265 @@
   "updatedAt": "2026-08-03",
   "exams": [
     {
+      "id": "015",
+      "title": "Examen 015",
+      "date": "2026-08-03",
+      "level": "Alto - Técnico",
+      "timeMinutes": 27,
+      "blocks": [
+        "Normativa general",
+        "Conocimientos básicos (electrónica, informática, color, sonido)",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de la señal de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales aplicada al puesto"
+      ],
+      "questions": [
+        {
+          "prompt": "Según el texto de la Constitución Española, ¿qué derecho fundamental recogido en el artículo 20 es el más directamente relevante para la actividad de radiodifusión y comunicación audiovisual?",
+          "options": [
+            "El derecho a la propiedad privada.",
+            "La libertad de circulación.",
+            "La libertad de expresión e información.",
+            "El derecho a la protección de la salud."
+          ],
+          "correctIndex": 2,
+          "explanation": "El artículo 20 CE garantiza la libertad de expresión y de información, derechos directamente vinculados a la actividad de radiodifusión y comunicación audiovisual. Las otras opciones son derechos distintos no específicos para el ámbito de la información y la comunicación.",
+          "category": "Normativa general"
+        },
+        {
+          "prompt": "Según la Ley 31/1995, de Prevención de Riesgos Laborales, ¿cuál de las siguientes obligaciones es básica e ineludible para el empresario respecto a la seguridad y salud en el trabajo?",
+          "options": [
+            "Mantener una política de solo notificación de accidentes sin medidas correctoras.",
+            "Delegar íntegramente la prevención en el trabajador sin supervisión.",
+            "Evaluar los riesgos y adoptar las medidas preventivas necesarias para eliminarlos o reducirlos.",
+            "Pagar un complemento salarial por tareas de prevención al trabajador."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley 31/1995 obliga al empresario a realizar la evaluación de riesgos y a adoptar las medidas preventivas necesarias para proteger la seguridad y la salud de los trabajadores; las otras opciones son contrarias al contenido de la norma.",
+          "category": "Normativa general"
+        },
+        {
+          "prompt": "El III Convenio Colectivo de la Corporación RTVE regula principalmente:",
+          "options": [
+            "Los contenidos editoriales y la línea informativa de la programación.",
+            "Los mecanismos de financiación externa ajenos a la empresa.",
+            "La política comercial y las concesiones publicitarias de RTVE.",
+            "Las condiciones laborales, retributivas y organizativas del personal de la Corporación."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un convenio colectivo regula las condiciones laborales (clasificación profesional, retribuciones, jornada, permisos, etc.) de la plantilla; no determina contenidos editoriales ni financiación comercial, que son competencias distintas.",
+          "category": "Normativa general"
+        },
+        {
+          "prompt": "En una línea SDI coaxial de 75 Ω, al introducir un conector o empalme con una impedancia distinta (por ejemplo 50 Ω) ¿cuál es el efecto técnico principal que cabe esperar en la señal?",
+          "options": [
+            "Generación de un zumbido a 50 Hz en la pista de audio.",
+            "Incremento de la resolución espacial horizontal del raster.",
+            "Reflexiones e pérdidas por desadaptación (degradación del ojo y errores en la transmisión).",
+            "Cambio en la crominancia que desplaza la línea de tonos de piel en el vectorscopio."
+          ],
+          "correctIndex": 2,
+          "explanation": "SDI es una transmisión por línea con impedancia característica (75 Ω). Una desadaptación provoca reflexiones y pérdida de integridad de la señal (retornos, cierre del 'eye'), lo que afecta la reproducción digital; las otras opciones no son consecuencia directa de una desadaptación de impedancias en SDI.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "En la política de preservación de archivos y proyectos audiovisuales, la regla '3-2-1' establece:",
+          "options": [
+            "Tres copias, en al menos dos tipos de soporte distintos y una copia fuera de la ubicación principal.",
+            "Tres versiones del archivo en el mismo disco con comprobación CRC diaria.",
+            "Tres servidores idénticos en la misma sala para redundancia, sin copia externa.",
+            "Dos copias locales y una copia en la cinta maestra sin verificar integridad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La regla 3-2-1 (estándar en archivística digital) exige al menos 3 copias de los datos, en 2 tipos de soporte distintos y 1 copia fuera del sitio principal para protección frente a fallos y desastres; las demás opciones no cumplen este principio ni garantizan protección adecuada.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "¿Cuántos niveles discretos por componente proporciona una cuantización lineal de 10 bits en vídeo digital (por canal)?",
+          "options": [
+            "1024 niveles.",
+            "512 niveles.",
+            "256 niveles.",
+            "2048 niveles."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un sistema de cuantificación de 10 bits ofrece 2^10 = 1024 niveles discretos por componente. 8 bits son 256, 11 bits 2048, etc.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "prompt": "Técnicamente, ¿qué diferencia operativa principal existe entre un códec intraframe (I‑only) y un códec Long‑GOP respecto a la edición aleatoria y scrubbing?",
+          "options": [
+            "Los códecs I‑only siempre producen archivos más pequeños que Long‑GOP.",
+            "Ambos tipos requieren la misma cantidad de decodificación para acceder a un frame concreto.",
+            "Un códec Long‑GOP requiere la decodificación de cuadros dependientes (I/P/B) para reconstruir un frame aislado, aumentando la latencia, mientras que un códec I‑only contiene la información completa por frame y facilita acceso frame‑accurate y scrubbing más ágil.",
+            "Los códecs Long‑GOP son siempre totalmente intrasponibles entre NLEs, mientras que I‑only no."
+          ],
+          "correctIndex": 2,
+          "explanation": "Long‑GOP emplea predicción inter‑frame (I/P/B), por lo que mostrar un frame aislado puede necesitar decodificar varios frames del GOP, aumentando carga y latencia. Los códecs intraframe contienen toda la información por frame, lo que simplifica acceso aleatorio y scrubbing; las otras aseveraciones son inexactas o exageradas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Respecto a formatos y contenedores usados en entregas broadcast, ¿qué caracteriza operativamente al patrón MXF OP1a?",
+          "options": [
+            "Un formato de streaming en tiempo real sin encapsulado de metadatos.",
+            "Un único archivo MXF que contiene essence intercalada (audio y vídeo) y metadatos, pensado para entregas empaquetadas.",
+            "Una carpeta con un archivo por pista (OP‑Atom) y un índice externo para cada clip.",
+            "Un contenedor derivado de MOV que solo admite vídeo ProRes."
+          ],
+          "correctIndex": 1,
+          "explanation": "MXF OP1a es un patrón de embalaje en un solo fichero que interconsolida audio y vídeo (essence) y metadatos para entregas broadcast. OP‑Atom usa archivos por esencia; las demás opciones no describen OP1a correctamente.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "Caso práctico: Se debe configurar proxies para estaciones de edición con CPU limitada para obtener scrubbing y corte frame‑accurate con la menor latencia posible. ¿Qué característica de los proxies es la más adecuada?",
+          "options": [
+            "Uso de proxies codificados en formato intraframe (I‑only) de baja complejidad y resolución moderada (por ejemplo ProRes LT o DNxHD I‑frame).",
+            "Uso de proxies Long‑GOP con máximo grado de compresión para ahorrar espacio.",
+            "Proxies con alta resolución 4K y códec muy avanzado para preservar el detalle.",
+            "Usar proxies RAW sin debayerizado para mantener máxima calidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "Para scrubbing y edición frame‑accurate en máquinas de CPU limitada, los proxies intraframe (I‑only) con menor complejidad de decodificación permiten acceder rápidamente a frames individuales sin necesidad de decodificar GOP completos; Long‑GOP y RAW incrementan la carga de decodificación; alta resolución eleva igualmente la carga.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "prompt": "En control técnico, ¿qué información proporciona primordialmente un vectorscopio?",
+          "options": [
+            "Representa la componente cromática (hue y saturation) mostrando amplitud y fase de la crominancia, permitiendo comprobar balance de color y la posición de tonos de piel.",
+            "Proporciona el espectro de frecuencias de audio para análisis de ruido.",
+            "Muestra la luminancia absoluta en función del tiempo como lo hace un waveform monitor.",
+            "Mide la continuidad temporal de la señal de audio en unidades LUFS."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un vectorscopio visualiza la crominancia: ángulo (hue) y distancia radial (saturación), útil para verificar correspondencia con referencias (por ejemplo 'skin‑line'). Las otras descripciones corresponden a otras herramientas (waveform, medidor de loudness, analizador de audio).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Caso práctico: En un directo observa en el waveform monitor que las altas luces están recortadas (clipping en la parte superior) y las cabezas de los presentadores pierden detalle. ¿Cuál es la corrección técnica más apropiada en origen?",
+          "options": [
+            "Aplicar un limitador de audio porque es un problema de loudness.",
+            "Reducir la exposición en cámara (ajustar iris/ND o reducir ganancia) o aplicar corrección de cámara para recuperar rango en las altas luces.",
+            "Incrementar el nivel negro en la mesa de mezcla de vídeo para compensar las altas luces.",
+            "Sustituir la cámara por otra sin verificar ajustes."
+          ],
+          "correctIndex": 1,
+          "explanation": "Si hay clipping en altas luces, la corrección debe ser en la captura (bajar iris, aplicar ND o reducir ganancia/ISO) o ajustar la curva (knee) en la cámara para recuperar detalle; soluciones en post o en salidas no devolverán información que ya estaba recortada en origen. Las otras opciones son irrelevantes o ineficaces.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "En control de calidad de audio para entrega de emisión, ¿qué describe con mayor precisión la magnitud 'LUFS integrado'?",
+          "options": [
+            "Es una medida de loudness perceptivo integrada sobre la duración de un programa que refleja el nivel medio percibido y se usa para cumplir objetivos de entrega iguales entre emisiones.",
+            "Es un valor de pico instantáneo que indica el nivel máximo de la señal en dBFS.",
+            "Es un parámetro que mide la impedancia de los auriculares.",
+            "Es un indicador de relación señal/ruido estimado a partir del espectro."
+          ],
+          "correctIndex": 0,
+          "explanation": "LUFS integrado mide la loudness percibida promedio en un intervalo (programa o segmento) y es el parámetro de referencia para normalización y cumplimiento de objetivos de entrega; no es un pico, ni tiene que ver con impedancia ni S/N espectral.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "prompt": "Cuando se recibe un lote procedente de cámaras XDCAM para ingesta en servidor/NLE, ¿por qué es crítico conservar exactamente la estructura de carpetas y los ficheros de índice generados por la cámara durante la ingesta?",
+          "options": [
+            "Porque los ficheros de índice y la estructura contienen metadatos y punteros de tiempo/codecs necesarios para mapear clips, timecodes y acceder frame‑accurate a los tramos de vídeo; perderlos puede impedir relink correcto y provocar desincronías.",
+            "Porque la estructura ocupa menos espacio y así se evita reordenarlo manualmente.",
+            "Porque sólo así se permite cifrar automáticamente los ficheros.",
+            "Porque la estructura impide que otros usuarios accedan a los clips."
+          ],
+          "correctIndex": 0,
+          "explanation": "Las cámaras XDCAM generan archivos de indexación y estructura que describen los clips, timecodes y ubicaciones de los essence. Mantener esa estructura permite una ingesta consistente y relink; perderla puede provocar pérdida de metadatos y fallos en la asociación y navegación frame‑accurate.",
+          "category": "Grabación y reproducción de la señal de vídeo"
+        },
+        {
+          "prompt": "Durante la ingesta de material a un servidor de edición se recomienda generar checksums. ¿Cuál es la función principal de ese proceso?",
+          "options": [
+            "Convertir automáticamente los ficheros al códec del proyecto.",
+            "Verificar la integridad de los ficheros tras la copia para detectar corrupciones o errores bit a bit.",
+            "Reducir el tamaño de los ficheros para ahorrar almacenamiento.",
+            "Ajustar el timecode de los clips a un formato estándar."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un checksum (hash) se calcula antes y después de la copia para confirmar que los ficheros son idénticos y no se han corrompido; no comprime ni cambia códecs ni modifica timecode.",
+          "category": "Grabación y reproducción de la señal de vídeo"
+        },
+        {
+          "prompt": "En Avid Media Composer, al situarte sobre un fotograma en la secuencia y ejecutar 'Match Frame', ¿qué realiza esencialmente el sistema?",
+          "options": [
+            "Exporta inmediatamente ese fotograma en formato JPG.",
+            "Fusiona dos clips distintos en una sola pista.",
+            "Localiza y abre en el monitor de origen el clip y el punto exacto de origen del fotograma seleccionado en la secuencia.",
+            "Borra el clip original del bin tras crear un subclip."
+          ],
+          "correctIndex": 2,
+          "explanation": "Match Frame localiza el clip fuente que aportó el fotograma de la secuencia y carga ese punto en el monitor de origen para operaciones como crear subclips o comprobar metadatos; no exporta ni borra automáticamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "Operativamente, ¿qué realiza la función 'Consolidate/Transcode' en Avid cuando se ejecuta desde un bin sobre clips seleccionados?",
+          "options": [
+            "Elimina todas las versiones proxy y deja solo los originales.",
+            "Copia y/o recodifica los archivos asociados a esos clips a una ubicación destino y formato elegido (consolidación de media o transcodificación), permitiendo relink a media nueva.",
+            "Envía los clips a emisión en tiempo real sin convertirlos.",
+            "Cambia solo el nombre de los clips en el bin sin tocar los archivos de media."
+          ],
+          "correctIndex": 1,
+          "explanation": "Consolidate/Transcode copia (consolidate) y/o recodifica (transcode) el media referenciado por los clips a un drive y formato especificado, creando media independiente. No es una simple renombración ni envía a emisión ni borra indiscriminadamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "Caso práctico: Dispones de varias cámaras que no comparten código de tiempo y debes sincronizar ángulos para montaje multicámara. ¿Qué método automático emplean la mayoría de NLEs para conseguir una sincronización fiable?",
+          "options": [
+            "Uso de metadatos de GPS para alinear frames.",
+            "Sincronización por sentido de movimiento del operador.",
+            "Sincronización forzada por nombre de archivo únicamente.",
+            "Alineación automática por forma de onda de audio (audio‑based sync)."
+          ],
+          "correctIndex": 3,
+          "explanation": "Si no hay timecode común, la mayoría de NLEs sincronizan automáticamente los ángulos alineando las formas de onda de audio (fingerprinting), que suele ser fiable para material con sonido ambiente o micrófono. Las otras técnicas no son métodos automáticos generales o fiables en ausencia de audio significativo.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "prompt": "En montaje audiovisual, ¿qué describe con precisión un 'L‑cut'?",
+          "options": [
+            "Una técnica de sincronización de timecodes entre cámaras.",
+            "Un recurso donde el ritmo del montaje baja drásticamente por la inserción de negro.",
+            "La continuidad en la que el audio del plano A continúa sonando tras el corte a la imagen del plano B (el audio 'se extiende' en el nuevo plano).",
+            "Un corte en el que la imagen del plano A se superpone por fusión con B simultáneamente."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un L‑cut es una técnica de montaje donde el audio del plano A persiste y se escucha mientras ya se muestra la imagen del plano B; su forma en la línea de tiempo recuerda la letra 'L'. Las otras opciones describen efectos o procesos distintos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "En teoría del montaje, ¿qué caracteriza esencialmente un 'match on action' como recurso de continuidad?",
+          "options": [
+            "Un efecto de cámara lenta aplicado solamente a una acción.",
+            "Un tipo de transcode usado en edición offline/online.",
+            "Un corte donde la acción iniciada en un plano se completa en el siguiente manteniendo coherencia de movimiento y continuidad visual.",
+            "Una técnica para normalizar loudness entre dos pasajes."
+          ],
+          "correctIndex": 2,
+          "explanation": "El 'match on action' busca que una acción (por ejemplo, arrancar una puerta) se inicie en un plano y se complete en el siguiente con coincidencia en trayectoria y ritmo, ocultando el corte y preservando la continuidad. No tiene relación con transcodificación ni loudness.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "prompt": "Prevención de riesgos: respecto a pantallas de visualización de datos (VDT) en puestos de edición, ¿qué medida preventiva debe garantizar el empleador según la normativa y buenas prácticas?",
+          "options": [
+            "Evaluación ergonómica del puesto y adopción de medidas (silla ajustable, distancia y altura del monitor, pausas programadas y formación) para reducir fatiga visual y trastornos musculoesqueléticos.",
+            "Permitir al trabajador trabajar sin límites ni descansos para aumentar productividad.",
+            "Instalar solo monitores de gran tamaño sin considerar ergonomía individual.",
+            "Exigir al trabajador que compre su propio mobiliario sin valoración ergonómica."
+          ],
+          "correctIndex": 0,
+          "explanation": "La normativa de PRL y las guías sobre VDT obligan al empleador a evaluar riesgos ergonómicos y aplicar medidas preventivas: mobiliario ajustable, correcta ubicación de pantallas, pausas y formación. Las demás opciones son contrarias a la obligación legal de proteger la salud.",
+          "category": "Prevención de riesgos laborales aplicada al puesto"
+        }
+      ]
+    },
+    {
       "id": "014",
       "title": "Examen 014",
       "date": "2026-08-03",
