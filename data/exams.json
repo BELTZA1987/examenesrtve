@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-04",
   "exams": [
+    {
+      "id": "017",
+      "title": "Examen 017",
+      "date": "2026-08-04",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Indique la afirmación que describe con mayor fidelidad el contenido sustantivo del principio de igualdad y la prohibición de discriminación en la Constitución Española:",
+          "options": [
+            "La Constitución reserva la aplicación del principio de igualdad sólo para la ciudadanía y excluye a residentes extranjeros.",
+            "La Constitución establece la igualdad material obligando al Estado a imponer cuotas proporcionales en todos los ámbitos profesionales.",
+            "La Constitución permite discriminación positiva sin límites para corregir desigualdades históricas en cualquier sector público.",
+            "La Constitución garantiza la igualdad formal ante la ley y prohíbe cualquier trato diferenciado por razones personales o sociales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 expresa la igualdad ante la ley y la prohibición de discriminación como principio general. Las otras opciones exageran (2), restringen indebidamente (3) o excluyen categorías protegidas (4), por lo que no reflejan el contenido sustantivo del principio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Ante la ausencia de imagen en un destino de matriz de conmutación, ¿qué comprobación operativa es la más inmediata para diagnosticar un punto de cruce (crosspoint) erróneo o abierto?:",
+          "options": [
+            "Formatear el puerto de la tarjeta de destino y reiniciar la matriz para restaurar rutas por defecto.",
+            "Desconectar físicamente el cable de origen para forzar un error y así identificar el destino que queda activo.",
+            "Inyectar en la entrada un tono o test de vídeo y comprobar si aparece en el destino indicado en el monitor de la matrix o su interfaz de diagnóstico.",
+            "Cambiar las fuentes en la realización hasta que aparezca la señal en pantalla, identificando así la ruta."
+          ],
+          "correctIndex": 2,
+          "explanation": "La verificación mediante inyección de señal y lectura directa del estado en la interfaz de la matriz permite identificar si el crosspoint está activo o no. Los otros procedimientos son invasivos, imprecisos o no identifican el estado real del crosspoint.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las dependencias de predicción en una estructura GOP (I/P/B) y las consecuencias de errores de codificación:",
+          "options": [
+            "Un error en una P‑frame puede propagarse y afectar a los P y B dependientes hasta el siguiente I‑frame.",
+            "Aumentar la distancia entre I‑frames incrementa la dependencia temporal y puede aumentar el impacto de errores entre I‑frames.",
+            "La pérdida de un I‑frame impide la reconstrucción correcta de las imágenes hasta que aparezca el siguiente I‑frame válido.",
+            "La corrupción de una B‑frame sólo afecta exclusivamente a esa B‑frame y nunca condiciona la decodificación de otras frames."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es la excepción: una B‑frame puede no afectar a otras en todos los diseños, pero afirmar que nunca condiciona la decodificación es incorrecto; las B‑frames dependen de referencias y su corrupción puede complicar presentación o procesos de reconstrucción. Las demás opciones describen dependencias y efectos reales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "¿Qué práctica en un sistema de edición compartido interpreta mejor la prevención de sobrescrituras y la gestión de concurrencia en bins?:",
+          "options": [
+            "Pedir a los usuarios que trabajen siempre en copias locales y fusionen manualmente sus bins al finalizar.",
+            "Confiar únicamente en permisos del sistema de archivos para evitar que varios usuarios abran el mismo bin.",
+            "Implementar bloqueo de bins a nivel de aplicación (check‑out/check‑in) y controlar permisos de escritura por usuario.",
+            "Eliminar permisos de edición para todos y permitir solo al administrador realizar cambios en bins."
+          ],
+          "correctIndex": 2,
+          "explanation": "El bloqueo a nivel de la aplicación (check‑out/check‑in) previene sobrescrituras y gestiona la concurrencia coherentemente. Los permisos de sistema de archivos son insuficientes para la lógica de edición colaborativa (distractor más próximo), mientras que las otras opciones son imprácticas o centralizan innecesariamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la medida preventiva prioritaria para reducir riesgos durante desplazamientos y tareas en misión fuera del centro habitual:",
+          "options": [
+            "Limitar la duración máxima de la misión a un único día sin planificación adicional.",
+            "Realizar una evaluación de riesgos previa al desplazamiento e informar al trabajador de medidas específicas y canales de comunicación de emergencia.",
+            "Exigir siempre desplazamiento en vehículo propio sin alternativas.",
+            "Reducir la carga de trabajo del trabajador al 50 % sin realizar análisis previo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La evaluación de riesgos previa y la comunicación de medidas y canales de emergencia son la medida preventiva prioritaria. Las demás opciones son imprecisas o no sustituyen la evaluación y planificación específicas del destino.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Para dar genlock a una instalación mixta SD/HD, ¿qué criterio técnico aplica correctamente la elección entre black‑burst y tri‑level?:",
+          "options": [
+            "Tri‑level no es adecuado para señales progresivas.",
+            "Tri‑level sólo se usa en SD y black‑burst en HD por compatibilidad con SDI.",
+            "Black‑burst y tri‑level son intercambiables sin impacto en la sincronización.",
+            "Black‑burst para señales SD (interlazadas) y tri‑level para señales HD progresivas por su mayor estabilidad de fase y menor jitter de cruce."
+          ],
+          "correctIndex": 3,
+          "explanation": "Black‑burst se emplea en entornos SD tradicionales; tri‑level es apropiado para HD/progresivo por su precisión de cruce y menor jitter. Las otras opciones confunden compatibilidades o son incorrectas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_xavc",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál de las siguientes afirmaciones refleja correctamente la compatibilidad y aplicaciones de variantes de la familia XAVC respecto a Intra y Long‑GOP?:",
+          "options": [
+            "XAVC‑Long‑GOP no admite perfiles de alta calidad y sólo sirve para proxies.",
+            "XAVC‑Intra es siempre de menor bitrate que XAVC‑Long‑GOP y se emplea sólo para streaming en directo.",
+            "XAVC‑Intra usa codificación intraframe de alta tasa, indicada para edición y postproducción; XAVC‑Long‑GOP reduce bitrate en grabación continua y favorece mayor duración por media.",
+            "Todas las variantes XAVC son idénticas en latencia y aptas por igual para edición frame‑accurate."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 distingue Intra (intraframe, más bitrate y edición directa) de Long‑GOP (mayor compresión y eficiencia para grabación). Las otras opciones son técnicamente incorrectas respecto a bitrate, aplicaciones y capacidades.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Según el II Plan de Igualdad y la Guía de Igualdad de RTVE, ¿qué medida se interpreta como coherente con la prevención del acoso y la representación no sexista?:",
+          "options": [
+            "Establecer protocolos de prevención del acoso, canales confidenciales de denuncia y aplicar criterios de lenguaje y representación no sexista en contenidos y comunicación.",
+            "Limitar la participación de mujeres en determinados géneros televisivos para evitar conflictos de programación.",
+            "Sustituir toda representación de género por etiquetas neutras sin evaluar impacto narrativo.",
+            "Permitir que cada área defina su propio criterio de lenguaje sin una guía corporativa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 describe medidas de prevención y guías de lenguaje representativas y corporativas, coherentes con el Plan. Las otras propuestas son restrictivas, improcedentes o contrarias a la guía.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para reconstruir datos tras la caída de un disco, indique el procedimiento técnicamente correcto según el nivel RAID habitual en instalaciones de medios:",
+          "options": [
+            "RAID0: sustituir disco y reconstruir paridad; RAID1: tolera dos fallos sin pérdida.",
+            "RAID5: sustituir el disco fallado e iniciar reconstrucción a partir de paridad en los discos restantes; RAID6: admitir hasta dos fallos simultáneos y reconstruir usando doble paridad.",
+            "RAID1: reconstrucción por cálculo de paridad distribuida; RAID5: no permite reconstrucción tras fallo.",
+            "Usar RAID5 y considerar que no es necesario sustituir discos inmediatamente porque el sistema mantiene siempre una copia completa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 describe correctamente la acción para RAID5 (reemplazo y reconstrucción por paridad) y la ventaja de RAID6 (tolerancia a dos fallos). Los demás enunciados confunden niveles y capacidades de reconstrucción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción sobre el uso de la elipsis narrativa en montaje para comprimir tiempo manteniendo comprensión:",
+          "options": [
+            "La elipsis siempre obliga a introducir un cartel explicativo para no generar confusión temporal.",
+            "Una elipsis bien resuelta respeta elementos de raccord que habilitan la inferencia del espectador.",
+            "La elipsis permite omitir segmentos temporales no relevantes conservando la continuidad causal entre escenas.",
+            "La elipsis puede apoyarse en recursos visuales o sonoros que indiquen salto temporal."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción: no es cierto que la elipsis requiera siempre un cartel; bien aplicada, la elipsis puede ser comprendida por raccordes visuales/sonoros. Las otras afirmaciones son descripciones válidas del recurso.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_evs_loop",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto al principio operativo de grabación en bucle (loop) en servidores tipo EVS y la gestión de canales y recuperación de acciones, indique la afirmación compatible:",
+          "options": [
+            "El servidor mantiene buffers circulares por canal y permite 'proteger' o marcar clips para evitar su sobrescritura; las acciones de reproducción y playout se gestionan sobre esos clips protegidos o sobre listas.",
+            "La grabación en bucle impide cualquier protección de clips y sobrescribe automáticamente todo sin posibilidad de recuperación.",
+            "Los servidores EVS no soportan múltiples canales independientes en bucle; sólo graban un flujo maestro.",
+            "Para recuperar una acción se debe detener la grabación y reiniciar el servidor obligatoriamente."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 describe el funcionamiento real: buffers circulares por canal, protección de clips y uso de playlists. Las demás opciones niegan capacidades reales o proponen medidas operativas incorrectas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare medidas para reducir fatiga visual y postural en puestos con pantallas:",
+          "options": [
+            "Eliminar pausas para mantener productividad y ajustar únicamente la luminosidad del entorno.",
+            "Aumentar el brillo de la pantalla al máximo y obligar a pausas de 8 horas sin alternancia.",
+            "Organizar pausas periódicas cortas, alternancia de tareas y ejercicios de descanso visual programados.",
+            "Sustituir pantallas por papel impreso siempre que sea posible."
+          ],
+          "correctIndex": 2,
+          "explanation": "La organización de pausas regulares, alternancia de tareas y ejercicios visuales es la medida recomendada. Las demás opciones son inadecuadas, extremas o impracticables.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_metadatos",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "¿Cuál es la función principal de los metadatos técnicos y descriptivos en flujos audiovisuales?:",
+          "options": [
+            "Servir únicamente para generar informes estadísticos internos.",
+            "Reemplazar la necesidad de generar proxies y masters.",
+            "Eliminar la necesidad de checksums en la ingesta.",
+            "Permitir catalogación, búsqueda eficiente, automatización de flujos y el intercambio fiable entre sistemas."
+          ],
+          "correctIndex": 3,
+          "explanation": "Los metadatos facilitan catalogación, búsqueda, automatización y compatibilidad en intercambio. No sustituyen otros procesos como checksums ni tienen un uso tan limitado como los distractores.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Durante la ingesta de material XDCAM ¿qué procedimiento describe correctamente la relación y uso de proxies y esencia de alta resolución para visionado, selección e ingesta?:",
+          "options": [
+            "Ingestar y conservar la esencia de alta resolución y generar proxies para visionado y selección; durante conformado relinkear los proxies a la esencia para consolidar el master.",
+            "Eliminar la esencia de alta resolución y conservar sólo proxies para ahorrar espacio.",
+            "Editar directamente sobre proxies y exportar el proxy como master final sin relink.",
+            "Generar proxies sólo a partir de la versión Rec.709 y no conservar log original."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 es el procedimiento correcto: conservar la esencia alta y generar proxies para offline; luego relink para conformar. Las otras opciones implican pérdida de calidad o eliminación indebida de la esencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En relación con la protección de menores según la Ley 13/2022, ¿cuál de las siguientes obligaciones interpreta mejor el mandato legal sobre contenidos y acceso?:",
+          "options": [
+            "Permitir libre acceso a todos los contenidos con advertencia genérica.",
+            "Prohibir a menores ver cualquier contenido informativo.",
+            "Aplicar medidas de clasificación de contenidos, mecanismos de control de acceso y limitación de emisiones de contenidos perjudiciales para menores.",
+            "Delegar totalmente en las plataformas externas la responsabilidad sobre menores."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 recoge las obligaciones típicas: clasificación, control de acceso y limitación de contenidos perjudiciales. Las demás opciones son manifiestamente inadecuadas y no representan la interpretación de la norma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Al intentar copiar a un disco externo un fichero de grabación de 12 GB, la operación falla inmediatamente. ¿Cuál es la causa técnica más probable?:",
+          "options": [
+            "El sistema de archivos NTFS no admite ficheros superiores a 4 GB.",
+            "El disco externo está formateado en FAT32, cuyo tamaño máximo de fichero individual es inferior a 12 GB.",
+            "El sistema operativo bloquea por defecto ficheros multimedia mayores a 10 GB.",
+            "Todos los discos externos limitan ficheros a 8 GB por compatibilidad con cámaras."
+          ],
+          "correctIndex": 1,
+          "explanation": "La causa técnica más frecuente es el límite de tamaño de fichero de FAT32 (~4 GiB). NTFS soporta ficheros mucho mayores y las otras afirmaciones son incorrectas o genéricas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare montaje paralelo y montaje alterno:",
+          "options": [
+            "El montaje alterno siempre utiliza flashbacks mientras que el paralelo sólo usa cámara lenta.",
+            "El montaje paralelo intercala secuencias no relacionadas temáticamente; el alterno exige sincronía temporal exacta.",
+            "Ambos términos son sinónimos y describen el mismo recurso narrativo.",
+            "El montaje paralelo suele mostrar acciones simultáneas que convergen; el alterno intercala acciones distintas para asociación temática sin exigir simultaneidad exacta."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 distingue correctamente: paralelo sugiere simultaneidad y convergencia; alterno intercala para asociación temática sin simultaneidad estricta. Las otras opciones son incorrectas o confunden los conceptos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Durante un directo con ficheros en crecimiento (growing files) en servidor, ¿qué procedimiento garantiza disponibilidad para edición sin comprometer la integridad de la esencia?:",
+          "options": [
+            "Copiar directamente el fichero en crecimiento con un simple copy del sistema de archivos mientras se está escribiendo.",
+            "Usar proxies generados por el servidor o el sistema de ingest y esperar al cierre del fichero original para consolidar el alto‑res; proteger clips desde la interfaz del servidor.",
+            "Cortar y editar directamente sobre el fichero que sigue en escritura sin coordinación con el servidor.",
+            "Forzar el cierre del fichero deteniendo la grabación en el momento de editar."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 es la práctica correcta: trabajar sobre proxies y respetar los estados de cierre del servidor evita corrupción. Copiar o editar directamente ficheros abiertos o forzar cierre interfiere con la grabación y puede corromper la esencia.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "¿Cuál es la causa técnica más habitual de un bucle de masa (ground loop) que genera zumbido a frecuencia de red en una instalación audiovisual?:",
+          "options": [
+            "Mala calidad de los cables HDMI por debajo de 1 m de longitud.",
+            "Diferencia de potencial de tierra entre equipos interconectados por señales analógicas o no aisladas, creando corriente de bucle.",
+            "Uso de conectores XLR en lugar de RCA para líneas balanceadas.",
+            "Configuración de la matriz de vídeo sin rutas asignadas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La diferencia de potencial de tierra entre equipos conectados provoca corrientes de bucle y zumbidos a 50/60 Hz. Los otros enunciados no describen la causa típica del bucle de masa.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al uso de timecode source, record o auxiliary en flujos de edición y sincronización:",
+          "options": [
+            "El record timecode nunca puede elegirse como timecode maestro en una sesión de rodaje.",
+            "El source timecode identifica el código original del material de cámara y sirve para relink y conformado.",
+            "El auxiliary timecode puede transportar códigos alternativos y emplearse como referencia cuando está correctamente sincronizado con la infraestructura.",
+            "El auxiliary timecode puede coexistir con source y record y proporcionar información adicional sin reemplazarlos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción: el record timecode puede, en ocasiones operativas, emplearse como referencia maestro (por ejemplo al grabar una mezcla o en ciertos flujos), por lo que afirmar que 'nunca' puede ser maestro es incorrecto. Las demás opciones describen usos aceptados del timecode auxiliary, source y record.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "016",
       "title": "Examen 016",
