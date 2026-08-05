@@ -9,11 +9,11 @@ on:
         default: false
         type: boolean
 
+  # GitHub interpreta cron en UTC.
+  # Se programan 06:17-08:47 UTC y después se filtra por hora de Madrid.
+  # Así funciona tanto con horario de verano como de invierno.
   schedule:
-    # Dos intentos diarios. Si el primero crea el examen,
-    # el segundo detecta que ya existe y no consume la API.
-    - cron: "17,47 8 * * *"
-      timezone: "Europe/Madrid"
+    - cron: "17,47 6-8 * * *"
 
 permissions:
   contents: write
@@ -26,7 +26,7 @@ jobs:
   generate_exam:
     name: Generar y publicar examen
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
 
     env:
       DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
@@ -34,28 +34,43 @@ jobs:
       TZ: Europe/Madrid
 
     steps:
-      - name: Mostrar datos de la ejecucion
+      - name: Comprobar ventana horaria
+        id: gate
         shell: bash
         run: |
-          echo "Evento: ${{ github.event_name }}"
-          echo "Rama predeterminada: ${DEFAULT_BRANCH}"
-          echo "Fecha Madrid: $(date '+%Y-%m-%d %H:%M:%S %Z')"
+          set -euo pipefail
+
+          SHOULD_RUN=false
+          MADRID_HOUR="$(TZ=Europe/Madrid date '+%H')"
+          MADRID_DATE="$(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M:%S %Z')"
+
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            SHOULD_RUN=true
+          elif [[ "$MADRID_HOUR" == "08" || "$MADRID_HOUR" == "09" ]]; then
+            SHOULD_RUN=true
+          fi
+
+          echo "run=$SHOULD_RUN" >> "$GITHUB_OUTPUT"
+          echo "Hora de Madrid: $MADRID_DATE"
+          echo "Ejecutar generador: $SHOULD_RUN"
 
           {
             echo "## Ejecucion del examen RTVE"
             echo ""
             echo "- Evento: \`${{ github.event_name }}\`"
-            echo "- Rama: \`${DEFAULT_BRANCH}\`"
-            echo "- Fecha Madrid: \`$(date '+%Y-%m-%d %H:%M:%S %Z')\`"
+            echo "- Hora de Madrid: \`$MADRID_DATE\`"
+            echo "- Ejecutar generador: \`$SHOULD_RUN\`"
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Descargar rama predeterminada
-        uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
 
       - name: Comprobar archivos del proyecto
+        if: steps.gate.outputs.run == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -72,11 +87,11 @@ jobs:
               echo "::error file=$archivo::Falta el archivo obligatorio: $archivo"
               exit 1
             fi
-
             echo "OK: $archivo"
           done
 
       - name: Validar JSON antes de generar
+        if: steps.gate.outputs.run == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -84,6 +99,7 @@ jobs:
           echo "JSON inicial valido."
 
       - name: Configurar Python
+        if: steps.gate.outputs.run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -91,6 +107,7 @@ jobs:
           cache-dependency-path: requirements.txt
 
       - name: Instalar dependencias
+        if: steps.gate.outputs.run == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -98,6 +115,7 @@ jobs:
           python -m pip install --requirement requirements.txt
 
       - name: Comprobar clave de OpenAI
+        if: steps.gate.outputs.run == 'true'
         shell: bash
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -112,6 +130,7 @@ jobs:
           echo "El secreto OPENAI_API_KEY esta configurado."
 
       - name: Generar examen
+        if: steps.gate.outputs.run == 'true'
         shell: bash
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -131,9 +150,21 @@ jobs:
           echo "Evento recibido: ${{ github.event_name }}"
           echo "Creacion forzada: ${FORCE_CREATE}"
 
+          set +e
           python scripts/generate_exam.py
+          STATUS=$?
+          set -e
+
+          if [[ "$STATUS" -eq 4 ]]; then
+            echo "::error::OpenAI ha rechazado la solicitud por limite temporal o falta de cuota. Revisa el detalle inmediatamente anterior y la facturacion de la API."
+          elif [[ "$STATUS" -ne 0 ]]; then
+            echo "::error::El generador termino con el codigo $STATUS."
+          fi
+
+          exit "$STATUS"
 
       - name: Validar JSON generado
+        if: steps.gate.outputs.run == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -141,6 +172,7 @@ jobs:
           echo "JSON final valido."
 
       - name: Publicar examen en el repositorio
+        if: steps.gate.outputs.run == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -151,7 +183,7 @@ jobs:
             {
               echo ""
               echo "### Resultado"
-              echo "No se creo otro examen porque no habia cambios que publicar."
+              echo "No se creo otro examen porque ya existia uno de hoy o no habia cambios."
             } >> "$GITHUB_STEP_SUMMARY"
 
             exit 0
@@ -161,7 +193,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
 
           git add data/exams.json
-          git commit -m "Añadir examen diario $(date '+%Y-%m-%d')"
+          git commit -m "Añadir examen diario $(TZ=Europe/Madrid date '+%Y-%m-%d')"
 
           git pull --rebase origin "${DEFAULT_BRANCH}"
           git push origin "HEAD:${DEFAULT_BRANCH}"
