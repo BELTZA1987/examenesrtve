@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-04",
+  "updatedAt": "2026-08-05",
   "exams": [
+    {
+      "id": "018",
+      "title": "Examen 018",
+      "date": "2026-08-05",
+      "level": "Alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la obligación de la Corporación RTVE que mejor recoge la Ley 17/2006 en su condición de servicio público:",
+          "options": [
+            "Emitir contenidos que respeten y promuevan el pluralismo político, social y cultural, y que respondan al interés general.",
+            "Maximizar la audiencia y la rentabilidad económica por encima de otros criterios editoriales.",
+            "Priorizar la difusión de productos comerciales y de entretenimiento para sostener ingresos publicitarios.",
+            "Actuar como órgano de difusión exclusiva de las políticas del gobierno de turno."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley 17/2006 define a RTVE como servicio público orientado al interés general, con obligaciones de pluralismo y diversidad; los distractores son criterios comerciales o partidistas que la Ley no atribuye a la Corporación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al alternar planos muy breves con planos muy largos en una secuencia, ¿qué aspecto del ritmo altera principalmente esa decisión de montaje?",
+          "options": [
+            "La coherencia espacial entre planos (raccord de eje).",
+            "La duración media de los planos, afectando al ritmo interno de la escena.",
+            "La fidelidad de color entre tomas.",
+            "La frecuencia de muestreo de la imagen."
+          ],
+          "correctIndex": 1,
+          "explanation": "La alternancia de duraciones modifica el ritmo interno (duración y densidad de planos); los otros distractores no describen el efecto principal sobre el ritmo de montaje.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En un vectorscopio, ¿qué indicación revela que los tonos de piel están fuera del rango esperado respecto a la 'skin‑line'?",
+          "options": [
+            "El waveform monitor presenta inversión de crominancia en bajas luces.",
+            "El histogramas de luminancia muestra exceso de negros en la región de la cara.",
+            "El medidor de audio muestra una caída de fase coincidente con la imagen.",
+            "Los puntos que representan piel aparecen desplazados angularmente respecto a la skin‑line y/o con mayor radio (croma distinto)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El vectorscopio representa crominancia por ángulo y radio; un desplazamiento respecto a la skin‑line indica un sesgo de tono. Los otros enunciados no describen una lectura directa del vectorscopio sobre tonos de piel.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "En la transferencia de un proyecto entre distintos NLE, ¿qué ventaja técnica ofrece un AAF frente a un EDL?",
+          "options": [
+            "Permitirá transferir múltiples pistas, transiciones, efectos básicos y metadatos de clip además de los cortes temporales.",
+            "Contendrá únicamente una lista de cortes con timecodes y número de pista para conformar en destino.",
+            "Sustituirá automáticamente todos los códecs por el formato nativo del receptor sin pérdida de metadatos.",
+            "Se limita a exportar metadatos de audio sin información de vídeo."
+          ],
+          "correctIndex": 0,
+          "explanation": "AAF transporta estructura de pistas, referencias a medios, transiciones y metadatos; un EDL es solamente un listado simplificado de cortes/timecodes (segundo distractor).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Al preparar una playlist en EVS/IPDirector para emisión, ¿qué aspecto operativo afecta más directamente a la continuidad entre clips?",
+          "options": [
+            "Los metadatos de cámara (modelo y ajustes de exposición) sin marcadores de edición.",
+            "El códec interno del clip provisionalmente almacenado en el servidor.",
+            "El orden de los clips y los marcadores de transición que determinan crossfades, troceados y puntos de entrada/salida.",
+            "La etiqueta física del medio original donde se grabó el clip."
+          ],
+          "correctIndex": 2,
+          "explanation": "La continuidad en reproducción depende del orden y de los marcadores/transiciones dentro de la playlist; los otros elementos son secundarios o no condicionan la transición entre clips en reproducción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a la compatibilidad de visualización, ¿qué operación es imprescindible para que una señal HDR se presente razonablemente en una pantalla SDR?",
+          "options": [
+            "Reducir simplemente la profundidad de bits a 8 bits sin tocar la curva de luminancia.",
+            "Aplicar un mapeado de tonos (tone‑mapping) y conversión de EOTF adecuada.",
+            "Eliminar la metadata HDR y dejar la señal tal cual.",
+            "Recodificar sólo el espacio de color sin ajustar luminancia ni gamma."
+          ],
+          "correctIndex": 1,
+          "explanation": "La conversión HDR→SDR requiere tone‑mapping y adaptación de la EOTF; reducir bits o eliminar metadata por sí solos no preservan la relación luminancia/contraste y producirán clipping o pérdida de detalle.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al implantar archivo a largo plazo con LTO/LTFS, indique la práctica imprescindible para garantizar acceso y verificación periódica:",
+          "options": [
+            "Catalogar con metadatos, generar y verificar checksums y realizar comprobaciones de lectura periódicas.",
+            "Almacenar cartuchos sin catálogo y confiar en su etiqueta física para localización.",
+            "Conservar una sola copia offline sin plan de migración ni verificación.",
+            "Reescribir cartuchos cada semana sin mantener registro de versiones."
+          ],
+          "correctIndex": 0,
+          "explanation": "LTFS/LTO requiere catálogo y verificación (checksums y lecturas periódicas) para asegurar accesibilidad y detectar degradación; las otras prácticas no aseguran preservación verificable.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Seleccione la formulación que recoge un principio de la Ley 31/1995 sobre la acción preventiva:",
+          "options": [
+            "Delegar la totalidad de la prevención exclusivamente en el trabajador afectado.",
+            "Integrar la prevención en todos los niveles de gestión de la empresa, adaptando métodos de trabajo, medios y formación.",
+            "Aplicar medidas preventivas únicamente después de que ocurra un accidente.",
+            "Eximir a la empresa de coordinación cuando se contrata trabajo externo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 31/1995 exige integrar la prevención en la gestión empresarial (medios, métodos y formación); los demás enunciados son prácticas contrarias a los principios legales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Un monitor consume 0,5 A a 24 V. ¿Cuál es la potencia aproximada y qué ocurre si la resistencia interna que limita la corriente se duplica manteniendo 24 V?",
+          "options": [
+            "Potencia ≈ 12 W; si la resistencia que limita la corriente se duplica, la corriente se reduce aprox. a la mitad y la potencia a ≈ 6 W.",
+            "Potencia ≈ 12 W; si la resistencia se duplica la potencia aumenta a ≈ 24 W.",
+            "Potencia ≈ 12 W; la potencia permanece invariable si la resistencia cambia.",
+            "Potencia ≈ 12 W; la corriente no depende de la resistencia interna."
+          ],
+          "correctIndex": 0,
+          "explanation": "P = V·I = 24·0,5 = 12 W. Con tensión fija, si la resistencia que determina la corriente se duplica, la corriente se reduce ~a la mitad y la potencia cae a ~6 W; los otros enunciados contradicen la ley de Ohm.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la situación que constituye una excepción válida al principio del raccord de mirada:",
+          "options": [
+            "Situación en la que la mirada no coincide con el eje establecido y provoca confusión.",
+            "Un salto de mirada no intencionado por error de rodaje que rompe la coherencia espacial.",
+            "Cambio de eje sin justificación ni planificación previa que desorienta.",
+            "El sujeto mira a cámara como recurso estilístico para dirigirse directamente al espectador."
+          ],
+          "correctIndex": 3,
+          "explanation": "El uso de la mirada a cámara es una excepción deliberada al raccord de mirada por motivos expresivos; los demás enunciados describen rupturas no justificadas de continuidad.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Se copian ficheros desde la tarjeta de cámara al servidor conservando estructura de carpetas y checksums, sin generar proxies ni captura en tiempo real. ¿Qué operación describe mejor esa acción?",
+          "options": [
+            "Ingesta: proceso que siempre genera proxies y reindexa clips en el MAM automáticamente.",
+            "Captura: grabación en tiempo real desde un dispositivo conectado que genera nuevos ficheros en destino.",
+            "Importación: copia directa de los ficheros y estructura a la ubicación de trabajo sin reconversión ni ingest automatizado.",
+            "Enlace: mantención de los ficheros únicamente en la tarjeta original sin movidos al servidor."
+          ],
+          "correctIndex": 2,
+          "explanation": "La importación implica copiar los ficheros y su estructura al servidor sin procesos adicionales; la captura suele ser en tiempo real desde dispositivo, la ingesta puede incluir catalogación o proxy (no siempre), y el enlace deja los ficheros en su ubicación original.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al detectar pérdida de imagen central (sonido débil en mono) en una mezcla estéreo, ¿qué comprobación aplicaría para confirmar cancelación por fase?",
+          "options": [
+            "Aumentar el nivel maestro para enmascarar la pérdida.",
+            "Comprobar la suma mono (L+R) y alternar la inversión de polaridad en uno de los canales para observar si el centro se recupera.",
+            "Aplicar un compresor en el bus principal sin más comprobaciones.",
+            "Sustituir el fichero de audio por otro sin verificar fase."
+          ],
+          "correctIndex": 1,
+          "explanation": "La suma mono y la inversión de polaridad son pruebas directas para diagnosticar cancelación por fase; las otras acciones no diagnostican ni corrigen adecuadamente el problema de fase.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_project_media",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un NLE, ¿qué elemento corresponde a metadatos del proyecto y no forma parte de la esencia del archivo de medios?",
+          "options": [
+            "La estructura de bins, las ediciones de la línea de tiempo y los ajustes del proyecto.",
+            "El códec, el timecode incrustado y el checksum del fichero de esencia.",
+            "La duración real del archivo de vídeo y su dimensión en bytes.",
+            "Los tracks de audio físicos presentes dentro del fichero de vídeo."
+          ],
+          "correctIndex": 0,
+          "explanation": "Bins y ajustes pertenecen al proyecto (metadatos). El códec, timecode, duración y tracks son propiedades del archivo de esencia.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al generar un entregable broadcast en MXF a partir de material fuente en MOV, ¿qué procedimiento es el correcto?",
+          "options": [
+            "Eliminar todos los metadatos y empaquetar el archivo sin timecode.",
+            "Cambiar simplemente la extensión de .mov a .mxf sin reconversión.",
+            "Reproducir el MOV en el NLE y exportar como MP4 para luego renombrarlo a MXF.",
+            "Transcodificar al códec y parámetros exigidos por emisión y encapsular en MXF OP1a manteniendo timecode y metadatos requeridos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La entrega en MXF broadcast requiere transcodificación a códec/parametrización exigida y encapsulado en el patrón operativo correcto conservando timecode/metadata; cambiar extensión o renombrar no produce un MXF válido.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Según el III Convenio Colectivo de RTVE, ¿qué criterio principal se utiliza para clasificar una ocupación profesional?",
+          "options": [
+            "El criterio de preferencia personal del jefe de equipo sin documentación.",
+            "La antigüedad exclusiva del trabajador en la Corporación.",
+            "Las funciones y responsabilidades reales desempeñadas y el nivel de cualificación requerido.",
+            "La presencia en redes sociales del trabajador."
+          ],
+          "correctIndex": 2,
+          "explanation": "La clasificación profesional se basa en funciones, responsabilidades y cualificación; antigüedad o preferencias individuales no son criterios de clasificación profesionales según el convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "prl_postura",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Indique la medida de ajuste postural más eficaz para reducir la tensión lumbar en un puesto de edición:",
+          "options": [
+            "Sentarse con el respaldo reclinado al mínimo sin apoyo lumbar.",
+            "Asiento sin respaldo y mesa elevada al máximo.",
+            "Reposapiés muy alto que obliga a flexionar excesivamente las rodillas.",
+            "Silla con apoyo lumbar ajustable correctamente adaptado a la curvatura lumbar del usuario."
+          ],
+          "correctIndex": 3,
+          "explanation": "El apoyo lumbar ajustable mantiene la curvatura natural y reduce tensión; las demás opciones aumentan riesgo postural.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción (es incorrecta) respecto a los efectos al mezclar cadencias distintas en una misma secuencia:",
+          "options": [
+            "Mezclar cadencias distintas puede producir judder o necesidad de conversión de frames.",
+            "La conversión de cadencia puede introducir frames duplicados o interpolados si no se realiza correctamente.",
+            "Mezclar 24p y 50i sin conversión no produce ningún efecto perceptible en movimiento.",
+            "Algunas conversiones preservan la fluidez mediante pulldown o motion‑compensation."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación 3 es la excepción: mezclar cadencias sin conversión sí produce efectos perceptibles (judder, saltos); las otras opciones describen efectos o métodos reales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "En una lectura RGB Parade, ¿qué resultado indica una dominante azul en las altas luces de la imagen?",
+          "options": [
+            "Los tres canales muestran exactamente la misma altura en las altas luces.",
+            "El canal rojo y verde superan al azul en las altas luces.",
+            "El canal azul muestra niveles más altos que los canales rojo y verde en las zonas de altas luces.",
+            "El canal azul aparece completamente recortado mientras R y G están por debajo del recorte."
+          ],
+          "correctIndex": 2,
+          "explanation": "Una dominante azul se refleja por valores más altos en el canal azul respecto a R y G en altas luces; las demás lecturas no describen un dominante azul típico.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_export_qc",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para detectar una desincronía A/V intermitente tras la exportación, ¿qué comprobación técnica prioritaria debe realizarse?",
+          "options": [
+            "Inspeccionar visualmente la forma de onda de audio sin referencia temporal al vídeo.",
+            "Comprobar únicamente el bitrate y el códec del archivo.",
+            "Verificar sólo los metadatos sin reproducir el contenido.",
+            "Reproducir el archivo y comparar timecode de vídeo con la pista de audio y verificar sincronía con una herramienta de QC o inspección frame‑accurate."
+          ],
+          "correctIndex": 3,
+          "explanation": "La verificación A/V requiere reproducción y medición frame‑accurate del timecode/audio; revisar solo bitrate o metadatos no detectará desincronías intermitentes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción (no es un derecho u obligación recogida en PRL):",
+          "options": [
+            "El trabajador tiene derecho a recibir información y formación en prevención adaptada a su puesto.",
+            "El trabajador puede optar libremente por no utilizar equipos de protección individual cuando le resulten incómodos.",
+            "El empresario debe facilitar los medios de protección y promover la cooperación en PRL.",
+            "La empresa debe organizar actividades de formación y evaluación de riesgos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 3 es la excepción: la normativa obliga al uso correcto de EPI cuando se requiere; no es un derecho del trabajador el negarse por incomodidad. Las demás son obligaciones o derechos previstos en PRL.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "017",
       "title": "Examen 017",
