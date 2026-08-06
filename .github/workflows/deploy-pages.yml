@@ -1,66 +1,104 @@
-name: Publicar web en GitHub Pages
+name: Examen diario RTVE y GitHub Pages
 
 on:
+  # Permite ejecutarlo manualmente desde Actions
   workflow_dispatch:
 
-  push:
-    branches:
-      - main
-    paths:
-      - "index.html"
-      - "app.js"
-      - "styles.css"
-      - "actualizar.html"
-      - "manifest.webmanifest"
-      - "sw.js"
-      - "icons/**"
-      - "data/**"
-      - ".github/workflows/deploy-pages.yml"
+  # Genera y publica el examen diariamente a las 09:17, hora de Madrid
+  schedule:
+    - cron: "17 9 * * *"
+      timezone: "Europe/Madrid"
 
-  workflow_run:
-    workflows:
-      - "RTVE - Examen automatico diario"
-    types:
-      - completed
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
+# Evita que haya dos publicaciones ejecutándose simultáneamente
 concurrency:
-  group: github-pages
+  group: "rtve-editor-github-pages"
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    name: Publicar sitio
-
-    if: >-
-      github.event_name != 'workflow_run' ||
-      github.event.workflow_run.conclusion == 'success'
-
+  generate-and-deploy:
+    name: Generar y publicar examen
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    # Permisos necesarios para guardar el examen y publicar Pages
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Descargar la versión más reciente de main
+      # 1. Descargar el repositorio
+      - name: Descargar repositorio
         uses: actions/checkout@v6
         with:
-          ref: main
-          fetch-depth: 1
+          fetch-depth: 0
 
-      - name: Configurar GitHub Pages
-        uses: actions/configure-pages@v5
+      # 2. Preparar Python
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements.txt
 
-      - name: Preparar archivos públicos
+      # 3. Instalar dependencias, si existe requirements.txt
+      - name: Instalar dependencias
         shell: bash
         run: |
-          set -euo pipefail
+          python -m pip install --upgrade pip
 
+          if [ -f requirements.txt ]; then
+            python -m pip install -r requirements.txt
+          fi
+
+      # 4. Generar el examen diario
+      - name: Generar examen diario
+        shell: bash
+        run: |
+          python scripts/generate_exam.py
+
+      # 5. Comprobar que se han creado los archivos necesarios
+      - name: Comprobar archivos generados
+        shell: bash
+        run: |
+          if [ ! -f "index.html" ]; then
+            echo "::error::No se encuentra index.html"
+            exit 1
+          fi
+
+          if [ ! -f "data/exams.json" ]; then
+            echo "::error::No se encuentra data/exams.json"
+            exit 1
+          fi
+
+          echo "Archivos comprobados correctamente:"
+          ls -lh index.html data/exams.json
+
+      # 6. Guardar el examen generado en el repositorio
+      - name: Guardar examen en GitHub
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/exams.json
+
+          if git diff --cached --quiet; then
+            echo "No hay cambios nuevos que guardar."
+          else
+            git commit -m "Generar examen diario $(date +'%Y-%m-%d')"
+            git push
+          fi
+
+      # 7. Preparar únicamente los archivos de la página web
+      - name: Preparar sitio web
+        shell: bash
+        run: |
+          rm -rf _site
           mkdir -p _site
 
           rsync -av \
@@ -68,23 +106,43 @@ jobs:
             --exclude=".github/" \
             --exclude="_site/" \
             --exclude="scripts/" \
-            --exclude="reference/" \
             --exclude="requirements.txt" \
-            --exclude="netlify.toml" \
-            --exclude="README.md" \
+            --exclude="__pycache__/" \
+            --exclude="*.py" \
+            --exclude="*.pyc" \
             ./ _site/
 
-          test -f _site/index.html
-          test -f _site/data/exams.json
-
-          echo "Archivos preparados:"
+          echo "Contenido que se publicará:"
           find _site -maxdepth 3 -type f | sort
 
-      - name: Subir archivos de GitHub Pages
+          if [ ! -f "_site/index.html" ]; then
+            echo "::error::_site/index.html no existe"
+            exit 1
+          fi
+
+          if [ ! -f "_site/data/exams.json" ]; then
+            echo "::error::_site/data/exams.json no existe"
+            exit 1
+          fi
+
+      # 8. Configurar GitHub Pages
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      # 9. Crear exactamente un artefacto con un nombre único
+      - name: Subir artefacto de GitHub Pages
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _site
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ./_site
+          retention-days: 1
 
-      - name: Publicar
+      # 10. Publicar el artefacto
+      - name: Publicar en GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+
+          # 20 minutos, en vez del límite predeterminado de 10
+          timeout: 1200000
