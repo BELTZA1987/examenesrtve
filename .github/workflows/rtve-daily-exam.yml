@@ -1,29 +1,27 @@
-name: Generar otro examen RTVE
+name: Examen diario RTVE
 
 run-name: Generar y publicar examen RTVE #${{ github.run_number }}
 
 on:
-  # Mantiene disponible el botón "Run workflow"
-  # para generar otro examen manualmente.
+  # Ejecución manual desde la pestaña Actions.
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Crear otro examen aunque ya exista uno de hoy"
+        required: false
+        default: true
+        type: boolean
 
   # Ejecución automática diaria a las 09:17,
-  # usando la hora local de Madrid.
+  # utilizando la hora local de Madrid.
   schedule:
     - cron: "17 9 * * *"
       timezone: "Europe/Madrid"
 
-# Evita que dos publicaciones se solapen.
+# Evita que dos publicaciones se ejecuten simultáneamente.
 concurrency:
   group: rtve-github-pages
   cancel-in-progress: true
-
-# Permisos necesarios para guardar el examen
-# y publicarlo mediante GitHub Pages.
-permissions:
-  contents: write
-  pages: write
-  id-token: write
 
 jobs:
   generate:
@@ -31,21 +29,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
     steps:
-      # Descarga siempre la rama principal del repositorio.
+      # 1. Descargar el repositorio.
       - name: Descargar repositorio
         uses: actions/checkout@v6
         with:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
 
-      # Configura Python.
+      # 2. Configurar Python.
       - name: Configurar Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      # Instala las dependencias del generador.
+      # 3. Instalar las dependencias.
       - name: Instalar dependencias
         shell: bash
         run: |
@@ -58,7 +61,7 @@ jobs:
             python -m pip install openai
           fi
 
-      # Comprueba que GitHub tiene guardada la clave.
+      # 4. Comprobar que existe la clave de OpenAI.
       - name: Comprobar clave de OpenAI
         shell: bash
         env:
@@ -70,24 +73,31 @@ jobs:
             exit 1
           fi
 
-          echo "OPENAI_API_KEY encontrada correctamente."
+          echo "La clave OPENAI_API_KEY está disponible."
 
-      # Genera un examen nuevo.
+      # 5. Mostrar el tipo de ejecución.
+      - name: Comprobar modo de generación
+        shell: bash
+        env:
+          FORCE_CREATE: ${{ github.event_name == 'workflow_dispatch' && inputs.force && 'true' || 'false' }}
+        run: |
+          echo "Evento: ${{ github.event_name }}"
+          echo "Crear otro examen: ${FORCE_CREATE}"
+
+      # 6. Generar el examen.
       #
-      # FORCE_NEW_EXAM y EXAM_GENERATION_ID permiten que el script
-      # diferencie cada ejecución, también cuando se hacen varias
-      # ejecuciones manuales el mismo día.
-      - name: Generar un examen nuevo
+      # IMPORTANTE:
+      # Tu script utiliza FORCE_CREATE, no FORCE_NEW_EXAM.
+      - name: Generar examen
         shell: bash
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          FORCE_NEW_EXAM: "true"
-          EXAM_GENERATION_ID: ${{ github.run_id }}-${{ github.run_attempt }}
+          FORCE_CREATE: ${{ github.event_name == 'workflow_dispatch' && inputs.force && 'true' || 'false' }}
         run: |
           python scripts/generate_exam.py
 
-      # Comprueba que los archivos necesarios existen.
-      - name: Comprobar examen generado
+      # 7. Comprobar que existen los archivos.
+      - name: Comprobar archivos generados
         shell: bash
         run: |
           if [ ! -f "index.html" ]; then
@@ -103,93 +113,12 @@ jobs:
           echo "Archivos encontrados:"
           ls -lh index.html data/exams.json
 
-      # Evita publicar silenciosamente el examen anterior.
-      - name: Comprobar que el examen ha cambiado
+      # 8. Comprobar si realmente se creó un examen nuevo.
+      - name: Comprobar cambios del examen
+        id: changes
         shell: bash
+        env:
+          FORCE_CREATE: ${{ github.event_name == 'workflow_dispatch' && inputs.force && 'true' || 'false' }}
         run: |
-          if [ -z "$(git status --porcelain -- data/exams.json)" ]; then
-            echo "::error::El generador terminó, pero data/exams.json no cambió."
-            echo "::error::El script generate_exam.py podría estar impidiendo crear dos exámenes el mismo día."
-            exit 1
-          fi
-
-          echo "Se ha generado contenido nuevo en data/exams.json."
-
-      # Guarda el nuevo examen en el repositorio.
-      - name: Guardar examen en GitHub
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add data/exams.json
-
-          FECHA_MADRID="$(TZ=Europe/Madrid date +'%Y-%m-%d %H:%M')"
-
-          git commit -m "Nuevo examen RTVE - ${FECHA_MADRID}"
-
-          git push origin HEAD:${{ github.event.repository.default_branch }}
-
-      # Prepara exclusivamente los archivos de la página.
-      - name: Preparar página web
-        shell: bash
-        run: |
-          rm -rf "_site"
-          mkdir -p "_site"
-
-          rsync -av \
-            --exclude=".git/" \
-            --exclude=".github/" \
-            --exclude="_site/" \
-            --exclude="scripts/" \
-            --exclude="requirements.txt" \
-            --exclude="__pycache__/" \
-            --exclude="*.py" \
-            --exclude="*.pyc" \
-            ./ "_site/"
-
-          touch "_site/.nojekyll"
-
-          if [ ! -f "_site/index.html" ]; then
-            echo "::error::No existe _site/index.html."
-            exit 1
-          fi
-
-          if [ ! -f "_site/data/exams.json" ]; then
-            echo "::error::No existe _site/data/exams.json."
-            exit 1
-          fi
-
-          echo "Contenido preparado para GitHub Pages:"
-          find "_site" -maxdepth 4 -type f | sort
-
-      # Configura GitHub Pages.
-      - name: Configurar GitHub Pages
-        uses: actions/configure-pages@v6
-
-      # Sube exactamente un artefacto con nombre único.
-      - name: Subir página como artefacto
-        uses: actions/upload-pages-artifact@v5
-        with:
-          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ./_site
-          retention-days: 1
-          include-hidden-files: true
-
-  deploy:
-    name: Publicar en GitHub Pages
-    needs: generate
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Publicar página
-        id: deployment
-        uses: actions/deploy-pages@v5
-        with:
-          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
-          timeout: 1200000
+          if git diff --quiet -- data/exams.json; then
+            echo "changed=false
