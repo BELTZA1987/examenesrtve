@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-05",
+  "updatedAt": "2026-08-06",
   "exams": [
+    {
+      "id": "019",
+      "title": "Examen 019",
+      "date": "2026-08-06",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que mejor refleja el espíritu del sistema de financiación previsto por la Ley 8/2009 para RTVE en cuanto a fuentes, restricciones y principios:",
+          "options": [
+            "Financiación diversificada mediante aportaciones directas del Estado, publicidad limitada y tasas sectoriales, con prohibición absoluta de financiación mediante deuda a corto plazo.",
+            "Compatibilidad de varias fuentes (fondos públicos, ingresos comerciales y tasas específicas) con límites que impiden dependencia exclusiva de la publicidad y establecen control presupuestario y transparencia.",
+            "Financiación exclusivamente por fondos públicos asignados en los Presupuestos Generales, sin posibilidad de ingresos por explotación comercial, para garantizar independencia.",
+            "Sistema basado en autofinanciación por comercialización de derechos y venta de contenidos, sin intervención ni restricciones del sector público."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 8/2009 establece un modelo mixto: varias fuentes (públicas y comerciales) con límites para evitar dependencia publicitaria y con exigencias de control y transparencia. La opción 1 es demasiado rígida; la 2 resume la diversidad y las restricciones; la 3 y la 4 son incompatibles con el marco legal que combina financiación pública y actividades comerciales bajo límites.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_fiction",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "¿Qué decisión de montaje favorece mejor la continuidad dramática entre dos planos de una escena de ficción en la que el actor inicia una acción y la completa en el plano siguiente?",
+          "options": [
+            "Insertar un fundido encadenado entre ambos planos para suavizar la discontinuidad física.",
+            "Cortar antes de que comience la acción en el plano siguiente para acelerar el ritmo y generar sorpresa.",
+            "Alternar ángulos radicalmente distintos para enfatizar fragmentación interpretativa y romper la continuidad.",
+            "Mantener el mismo punto de inicio de la acción y cortar cuando la acción haya avanzado, asegurando coincidencia de gestos y ejes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La continuidad dramática requiere que la acción y los gestos coincidan entre planos para mantener la ilusión de unidad temporal y de interpretación. Los distractores rompen o transforman la continuidad (aceleración, fragmentación o fundido innecesario).",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Indique la diferencia esencial entre RGB y YCbCr en vídeo digital:",
+          "options": [
+            "RGB codifica componentes primarias de color por separado; YCbCr separa luminancia (Y) de dos componentes de diferencia de color (Cb/Cr) optimizando compresión y compatibilidad con la percepción visual.",
+            "RGB utiliza luminancia y dos diferencias de crominancia para reducir la información; YCbCr representa rojo, verde y azul sin separación de luminancia.",
+            "RGB es un espacio pensado sólo para cámaras; YCbCr es exclusivo de monitores y no se emplea en compresión.",
+            "RGB y YCbCr son equivalentes; sólo cambia el nombre de las componentes sin impacto en compresión ni en procesos."
+          ],
+          "correctIndex": 0,
+          "explanation": "RGB representa directamente las tres señales primarias; YCbCr extrae la luminancia (Y) y dos diferencias cromáticas (Cb, Cr), lo que permite muestrear la crominancia con menor resolución y optimizar la compresión. Las otras opciones son incorrectas o engañosas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_intelectual",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Ante la yuxtaposición breve y consecutiva de una escena de una fábrica con ruidos mecánicos y, a continuación, un plano de un hombre sentado frente a una ventana en silencio: diagnóstico probable del montaje intelectual:",
+          "options": [
+            "Se crea una asociación simbólica que contrapone el entorno industrial con el estado emocional del personaje, invitando a una lectura crítica o metafórica.",
+            "Se sugiere una relación causal directa: el hombre es responsable de la fábrica.",
+            "El montaje pretende distraer: no existe intención de relación temática entre ambas tomas.",
+            "Se busca continuidad temporal estricta: ambas imágenes ocurren simultáneamente y muestran la misma acción desde distintos puntos."
+          ],
+          "correctIndex": 0,
+          "explanation": "El montaje intelectual genera significado por yuxtaposición; enlazar fábrica y personaje crea una lectura simbólica o metafórica. Las otras alternativas confunden causalidad directa, ausencia de relación o continuidad temporal literal.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_true_peak",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para garantizar que un entregable no supere picos entre muestras en la entrega broadcast, la medida y acción más adecuada es:",
+          "options": [
+            "Reducir el nivel según un medidor de VU tradicional y confiar en que el muestreo evitará picos entre muestras.",
+            "Conformar el archivo ajustando únicamente los sample peaks medidos en el DAW sin considerar interpolación entre muestras.",
+            "Medir con un medidor de True Peak (dBTP) y aplicar limitación/normalización que tenga en cuenta inter‑sample peaks antes de exportar.",
+            "Usar compresión dinámica general del canal maestro sin medición específica de true peak."
+          ],
+          "correctIndex": 2,
+          "explanation": "Los picos entre muestras pueden exceder los sample peaks; la medición True Peak (dBTP) detecta y permite limitar esos picos. Los otros métodos no garantizan control de inter‑sample peaks.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Indique la opción que cumple la política 3‑2‑1 para preservación segura de proyectos audiovisuales:",
+          "options": [
+            "Tres copias: principal en servidor de trabajo, copia redundante en RAID del mismo servidor y tercera copia en la nube sin verificación de integridad.",
+            "Mantener tres copias independientes: original en producción, copia en otro tipo de medio (disco/ cinta/LTO) y copia adicional almacenada físicamente fuera del sitio, con verificación periódica.",
+            "Hacer RAID 6 en el almacenamiento principal y considerar que la redundancia del RAID ya sustituye la necesidad de copias externas.",
+            "Conservar dos copias en distintos discos locales y una copia en la misma sala sobre otro servidor para facilitar accesos rápidos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La regla 3‑2‑1 exige tres copias, en al menos dos tipos de soporte y una copia fuera de sitio. La opción 1 falla en independencia y verificación; la 3 confunde RAID con política de backup; la 4 mantiene todas las copias en la misma ubicación física.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Al dimensionar red para visionado bajo demanda con N usuarios concurrentes, la estimación correcta del ancho de banda necesario es:",
+          "options": [
+            "Considerar únicamente la latencia de la red; el bitrate agregado no es relevante para concurrencia.",
+            "Tomar el bitrate de un solo flujo y asumir que la red gestionará la concurrencia sin incremento.",
+            "Multiplicar el bitrate por usuario concurrente y añadir un margen de red (overhead) para picos y protocolos.",
+            "Calcular el bitrate medio y multiplicarlo por la mitad del número de usuarios simultáneos."
+          ],
+          "correctIndex": 2,
+          "explanation": "El ancho de banda requerido es la suma de los bitrates de los flujos concurrentes más un margen para overhead y picos. Las otras opciones subestiman o ignoran la concurrencia.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Respecto a la Constitución y la libertad de información, señale la afirmación que mejor distingue el derecho a la libertad de expresión y las garantías que lo limitan:",
+          "options": [
+            "El texto constitucional reserva el control previo por la Administración sobre contenidos informativos antes de su difusión.",
+            "La Constitución garantiza libertad absoluta de expresión sin posibilidad de restricción para salvaguardar el pluralismo.",
+            "La libertad de información se ejerce exclusivamente por órganos del Estado y no por particulares o medios privados.",
+            "El artículo protege la libertad de expresión y el derecho a la información, sujetos a límites legales para proteger otros derechos como el honor, la intimidad y la seguridad; el ejercicio exige responsabilidad y control jurídico."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Constitución reconoce libertades de expresión e información pero admite límites legales para proteger otros derechos; las otras opciones presentan garantías absolutas o atribuciones de control no previstas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Indique la modalidad de trim que modifica simultáneamente los puntos de salida e entrada entre dos clips sin alterar la duración total de la secuencia:",
+          "options": [
+            "Slide: mueve un clip completo en la línea temporal ajustando los clips adyacentes para mantener continuidad.",
+            "Ripple: ajusta un punto de corte y desplaza todos los clips posteriores, cambiando la duración de la secuencia.",
+            "Slip: desplaza el contenido interno de un clip manteniendo in/out en timeline, sin alterar puntos anteriores o posteriores.",
+            "Roll: mueve el punto de corte entre dos clips afectando ambos puntos de salida/entrada sin cambiar la duración total."
+          ],
+          "correctIndex": 3,
+          "explanation": "El roll trim ajusta los puntos de salida e ingreso de dos clips en el límite común sin variar la duración de la secuencia. Ripple cambia la duración; slip cambia el contenido interno; slide desplaza el clip afectando vecinos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para dimensionar un servidor de vídeo que atiende M canales concurrentes con streams a bitrate constante, el cálculo operativo más apropiado es:",
+          "options": [
+            "Dimensionar solo la capacidad de disco en TB; el ancho de banda puede gestionarse posteriormente.",
+            "Tomar el bitrate del canal más exigente y multiplicarlo por M/2 asumiendo distribuciones uniformes.",
+            "Calcular la suma de los bitrates de todos los canales concurrentes y añadir un margen por overhead y picos, además de considerar IOPS y capacidad de contención de red.",
+            "Basar el cálculo únicamente en el número de licencias de reproducción concurrente sin considerar bitrates."
+          ],
+          "correctIndex": 2,
+          "explanation": "El dimensionamiento exige sumar los bitrates concurrentes y prever margen por overhead y picos, junto a IOPS y capacidad de red. Las demás opciones omiten factores esenciales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique el conjunto de elementos que caracteriza un accidente 'in itinere':",
+          "options": [
+            "Cualquier accidente ocurrido fuera del puesto de trabajo aunque sea por ocio o compras personales.",
+            "Desplazamiento habitual entre domicilio y centro de trabajo por ruta razonable, sin interrupciones voluntarias apreciables y durante el trayecto directo habitual.",
+            "Accidente ocurrido durante una misión profesional exclusivamente cuando existe vehículo de empresa.",
+            "Solo los accidentes que ocurren dentro de las instalaciones de la empresa se consideran 'in itinere'."
+          ],
+          "correctIndex": 1,
+          "explanation": "Accidente in itinere es el que ocurre en el traslado habitual entre domicilio y trabajo en la ruta y tiempo habituales sin desviaciones voluntarias. Las otras opciones amplían o restringen incorrectamente el concepto.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_chromakey",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la secuencia de proceso correcta en una incrustación por chromakey:",
+          "options": [
+            "Extracción de matte (key) → limpieza y refinado de bordes → corrección de spill → composición final.",
+            "Aplicar corrección de color general → generar spill → extraer matte → composición final.",
+            "Composición sobre fondo nuevo → generar matte a posteriori → ajustar bordes.",
+            "Eliminar spill antes de generar la matte, y solo después extraer el canal alpha."
+          ],
+          "correctIndex": 0,
+          "explanation": "El flujo habitual es extraer la matte, refinar bordes y luego mitigar spill antes de componer. El resto altera el orden y dificulta un key limpio.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la correspondencia operativa correcta entre tipos de bitrate y escenarios de uso:",
+          "options": [
+            "CBR es preferible para transmisión en vivo o streaming con capacidad de canal garantizada; VBR es más eficiente para archivos y entrega cuando se busca calidad variable por complejidad de escena.",
+            "VBR es obligatorio en todas las emisiones en directo; CBR solo se usa en archivos maestros.",
+            "CBR siempre ofrece mejor calidad que VBR a igual tasa promedio; por tanto, es la elección universal.",
+            "VBR impide cualquier control de ancho de banda y no debe emplearse en redes con límite de capacidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "CBR aporta estabilidad de uso de ancho de banda en transmisiones en tiempo real; VBR optimiza calidad/bitrate en archivos según complejidad. Las otras afirmaciones generalizan o son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Respecto a soportes de estado sólido (SSD/CFexpress) y su gestión tras la grabación, cuál de las prácticas siguientes es la recomendada:",
+          "options": [
+            "Realizar borrado a bajo nivel (low‑level format) en el ordenador como práctica rutinaria antes de cada nueva grabación.",
+            "Descargar íntegramente los ficheros y verificarlos mediante checksums; a continuación efectuar el formateo rápido o rebaselining con la cámara para preparar el soporte, evitando reescrituras in situ sin verificación.",
+            "Mantener siempre los ficheros en la tarjeta y utilizarla como único repositorio para ahorro operativo.",
+            "Usar utilidades de terceros para sobrescribir varias veces los bloques para asegurar integridad antes de reutilizar."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica recomendada es descargar y verificar (checksums) antes de formatear con la herramienta/cámara correspondiente (formato rápido), evitando usar la tarjeta como único repositorio. El low‑level o sobrescritura múltiple son innecesarios y pueden desgastar el soporte.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Según la Ley 13/2022 sobre accesibilidad audiovisual, una obligación concreta de los prestadores de servicios audiovisuales es:",
+          "options": [
+            "Eximir de cualquier obligación de accesibilidad a los servicios internacionales emitidos por plataformas fuera del territorio.",
+            "Limitar la accesibilidad solo a contenidos infantiles y deportivos, dejando el resto como opción voluntaria.",
+            "Obligar a los usuarios a descargar herramientas externas para acceder a versiones accesibles de los contenidos.",
+            "Facilitar, según el tipo de servicio y exigencias técnicas, medidas de accesibilidad como subtitulado, audiodescripción y lengua de signos para asegurar acceso efectivo a contenidos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley impone medidas concretas (subtitulado, audiodescripción, lengua de signos) según el servicio y condiciones técnicas. Las otras opciones restringen, externalizan o eximen obligaciones que la norma no contempla.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Si varias cámaras muestran saltos, micro‑cortes o desajustes de sincronía al mezclar fuentes, la causa más probable y su corrección son:",
+          "options": [
+            "Solo un fallo de codec; solución: cambiar códec de entrada de las cámaras.",
+            "Problema exclusivo de balance de blancos; solución: recalibrar colorimetría de cada cámara.",
+            "Falta de genlock (referencia común) causando framing y jitter; solución: proporcionar genlock o usar frame‑syncs para alinear temporización.",
+            "Defecto en el mezclador de audio; solución: reconfigurar la matriz de audio."
+          ],
+          "correctIndex": 2,
+          "explanation": "La ausencia de referencia común provoca framing/jitter; la corrección pasa por genlock o frame sync. Las otras opciones tratan problemas distintos (color, codec, audio) que no responden a síntomas de temporización.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción (es decir, incorrecta) respecto al uso de checksums para verificación de integridad en ingesta:",
+          "options": [
+            "Un checksum detecta cambios bit a bit entre origen y copia, permitiendo verificar integridad tras transferencia.",
+            "Generar checksums antes y después de la copia y compararlos es una práctica que reduce el riesgo de corrupción inadvertida.",
+            "Un checksum garantiza que el contenido es semánticamente correcto y libre de errores lógicos en la interpretación del archivo por aplicaciones.",
+            "Los checksums no sustituyen procedimientos de verificación humana sobre la reproducción del material; detectan alteraciones de bits pero no validan la idoneidad editorial."
+          ],
+          "correctIndex": 2,
+          "explanation": "La excepción falsa es creer que un checksum garantiza corrección semántica o interpretación por aplicaciones; en realidad detecta cambios bit a bit. Las demás afirmaciones son verdaderas: comparaciones antes/después detectan corrupción y checksums no sustituyen verificación humana.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a la edición lineal A/B Roll con mezclador, señale la afirmación que constituye una excepción (incorrecta):",
+          "options": [
+            "En A/B Roll cada fuente (A y B) puede previsualizarse en bus de previo y el mezclador realiza la transición real al cortar o disolver.",
+            "La prelectura de la cinta o fuente en espera permite ajustar el punto de corte y sincronizar efectos antes de pasar al programa.",
+            "El operador del mezclador puede gestionar transiciones y efectos entre canales A y B sin alterar la fuente original.",
+            "En A/B Roll no es posible realizar superposición de imágenes; solo se alternan íntegramente fuentes completas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La afirmación incorrecta es que no es posible superponer imágenes: los mezcladores A/B sí permiten transiciones y composiciones (dependiendo del equipo). Las otras descripciones son correctas sobre previsualización y control.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_incendio",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la opción que relaciona correctamente tipos de fuego y medidas/extintores adecuados, junto a una consideración de evacuación:",
+          "options": [
+            "Fuego en materiales sólidos (madera, papel): extintor de agua o espuma; fuego en instalaciones eléctricas: extintor de CO2 o polvo seco; prioridad de evacuación organizada y corte de alimentación eléctrica si es seguro.",
+            "Fuego en grasas de cocina: usar agua a presión; eléctricos: siempre intentar apagar con agua; evacuación solo si el fuego alcanza el techo.",
+            "Fuego en líquidos inflamables: usar siempre extintor de agua; eléctricos: no es necesario cortar la corriente; evacuación discriminada no requerida.",
+            "Cualquier fuego se debe atacar inicialmente con extintor de polvo universal sin preocuparse de la clase; la evacuación solo es necesaria si falla el extintor."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 asocia correctamente clases y extintores (sólidos→agua/espuma; eléctricos→CO2/polvo) y destaca la necesidad de evacuación y corte eléctrico si es seguro. Las otras opciones proponen acciones peligrosas o incorrectas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor describe el uso de ProRes y DNxHR como códecs intermedios en postproducción:",
+          "options": [
+            "Son códecs de entrega final pensados exclusivamente para emisión en vivo y no adecuados para edición.",
+            "Son códecs intraframe optimizados para edición y etalonaje que ofrecen perfiles con distintos equilibrios entre calidad y tamaño y buena compatibilidad con NLEs.",
+            "Son formatos sin compresión que duplican el tamaño del archivo original para máxima fidelidad.",
+            "Son formatos propietarios que no admiten metadatos técnicos ni perfiles de calidad."
+          ],
+          "correctIndex": 1,
+          "explanation": "ProRes y DNxHR son códecs intraframe pensados como intermediarios para edición/etalonaje, con múltiples perfiles de calidad y amplia compatibilidad. Las demás opciones confunden propósito, compresión y capacidades.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "018",
       "title": "Examen 018",
