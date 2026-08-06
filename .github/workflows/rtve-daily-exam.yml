@@ -1,4 +1,7 @@
-name: Examen diario RTVE
+- name: Generar examen diario
+  shell: bash
+  run: |
+    python scripts/generate_exam.py
 
 on:
   workflow_dispatch:
