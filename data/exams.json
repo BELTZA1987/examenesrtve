@@ -3,6 +3,345 @@
   "updatedAt": "2026-08-06",
   "exams": [
     {
+      "id": "020",
+      "title": "Examen 020",
+      "date": "2026-08-06",
+      "level": "Alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál fue la finalidad central de la modificación introducida por la Ley 5/2017 respecto a los órganos de RTVE y su elección parlamentaria?",
+          "options": [
+            "Transferir la gestión de RTVE al sector privado mediante concesiones administrativas.",
+            "Reforzar la independencia y el pluralismo mediante un procedimiento de elección parlamentaria de los órganos de gobierno.",
+            "Establecer un sistema de financiación íntegramente basado en publicidad comercial.",
+            "Suprimir la responsabilidad pública de RTVE y reducir su control parlamentario."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 5/2017 persigue recuperar la independencia y el pluralismo de RTVE mediante un procedimiento de elección parlamentaria de sus órganos, mientras que las otras opciones describen medidas incompatibles con el objetivo real de la reforma (privatización, financiación por publicidad o supresión del control público).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la relación funcional y los cuellos de botella entre CPU, GPU y memoria en estaciones de edición con efectos acelerados por GPU:",
+          "options": [
+            "La CPU gestiona tareas secuenciales y la GPU acelera operaciones altamente paralelas; la RAM insuficiente provoca intercambio y latencia incluso si CPU y GPU son potentes.",
+            "La GPU sustituye completamente a la CPU en todas las operaciones de edición; la RAM sólo importa para almacenamiento a largo plazo.",
+            "Incrementar sólo la frecuencia de CPU siempre resuelve los problemas de scrubbing cuando la GPU está en uso.",
+            "Si la RAM es limitada, basta reducir la resolución de los proxies para eliminar cualquier cuello de botella sin tocar CPU o GPU."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación correcta refleja el reparto típico: CPU para control y cómputos secuenciales; GPU para operaciones paralelas (deblayer, efectos); RAM insuficiente provoca swapping y alto retardo. Las otras opciones son exageraciones o soluciones parciales que no describen la relación real entre los tres elementos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "De las siguientes prácticas relacionadas con soportes XDCAM, señale la que constituye una excepción respecto a operaciones necesarias para conservar y acceder al material original:",
+          "options": [
+            "Conservar íntegra la estructura de carpetas y los ficheros índice generados por la cámara.",
+            "Preservar los ficheros de metadatos y los identificadores persistentes asociados a cada clip.",
+            "Renombrar manualmente los ficheros de esencia y descartar los índices generados por la cámara como redundantes.",
+            "Asegurar el manejo correcto de spanning cuando un clip se reparte entre varios ficheros físicos."
+          ],
+          "correctIndex": 2,
+          "explanation": "Renombrar y descartar índices es una excepción porque rompe los mecanismos de referencia de la cámara y dificulta el relink; las otras tres prácticas son necesarias para mantener acceso fiable a material XDCAM (estructura, metadatos y spanning).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Indique el procedimiento técnico correcto y más adecuado para corregir violaciones de gamut y niveles no legales antes de una salida a emisión:",
+          "options": [
+            "Aplicar un dispositivo legalizer dedicado en la cadena final que limite niveles y recorra el gamut respetando la matización.",
+            "Recortar los valores de canal directamente en el NLE mediante clip duro de RGB sin proceso específico de remapeo.",
+            "Incrementar el contraste y la saturación para forzar los valores dentro de rango.",
+            "Convertir el material a un espacio de color distinto sin uso de limitadores ni medidores."
+          ],
+          "correctIndex": 0,
+          "explanation": "La acción correcta es emplear un legalizer/limitador diseñado para remapear niveles y gamut preservando la apariencia; recortar directamente o alterar contraste/saturación puede cambiar la intención cromática y no garantiza cumplimiento; cambiar espacio sin limitación no corrige violaciones de gamut y niveles.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Señale la afirmación que constituye una excepción respecto a la regla de los 180° y la continuidad espacial:",
+          "options": [
+            "Cruzar el eje de acción sin recurso compensador rompe la continuidad direccional entre personajes.",
+            "Mantener las posiciones relativas respecto al eje ayuda a conservar la lectura de los ejes y las miradas.",
+            "El cambio de eje está formalmente prohibido en todos los ejercicios de documental porque siempre genera confusión.",
+            "Insertar un plano neutral en el eje puede permitir un cambio de sentido sin pérdida total de continuidad."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 3 es correcta (insertar un plano en el eje permite cambiar el sentido); la opción 4 es la excepción incorrecta: el cambio de eje no está universalmente prohibido en documentales; las primeras dos opciones describen principios válidos de la regla de los 180°.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la secuencia de operaciones que corresponde a una ingesta verificada y con control de calidad completo:",
+          "options": [
+            "Generar checksums en la cámara → borrar ficheros originales → copiar al servidor → registrar la ingesta.",
+            "Copiar la esencia al servidor → generar checksums → validar la estructura e índices → registrar la ingesta en el sistema de gestión.",
+            "Registrar la ingesta en el sistema → convertir a proxies → validar checksums → copiar la esencia física.",
+            "Copiar la esencia al servidor → editar directamente sobre la copia → generar registros de edición → validar estructura."
+          ],
+          "correctIndex": 1,
+          "explanation": "La secuencia correcta comienza con la copia, seguida del cálculo de checksums para comprobar integridad, la validación de estructura/índices y el registro en el MAM/log; las otras opciones alteran el orden o omiten pasos críticos de verificación o conservación del original.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "En un medidor de correlación de fase, ¿qué lectura indica mayor probabilidad de cancelación por fase cuando se reduce a una mezcla mono?",
+          "options": [
+            "Valor cercano a +1: señal altamente correlada y totalmente compatible en mono.",
+            "Valor cercano a 0: señal parcialmente decorrelada sin riesgo de cancelación extrema.",
+            "Valor cercano a +0,5: correlación moderada con ligera diferencia entre canales.",
+            "Valor cercano a -1: señales en oposición de fase con alto riesgo de cancelación en mono."
+          ],
+          "correctIndex": 3,
+          "explanation": "Una lectura cercana a -1 indica inversión de fase entre canales y riesgo de cancelación al mezclar a mono; +1 indica compatibilidad total (no cancelación). El distractor más próximo (0) indica pérdida de correlación pero no la inversión de fase completa que causa cancelación severa.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Respecto al III Convenio Colectivo de la Corporación RTVE, ¿qué materia regula de forma directa?",
+          "options": [
+            "Los procedimientos de contratación externa de proveedores.",
+            "Los criterios de programación editorial y contenidos.",
+            "La normativa sobre propiedad intelectual de programas.",
+            "La organización de la jornada, los descansos y la turnicidad del personal."
+          ],
+          "correctIndex": 3,
+          "explanation": "El III Convenio regula aspectos laborales como jornada, descansos y turnos; las otras opciones (programación editorial, propiedad intelectual, contratación externa) no son la materia central del convenio colectivo laboral.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione el conjunto de medidas que, en su conjunto, resulta compatible y más adecuado para prevenir trastornos musculoesqueléticos en tareas continuas con teclado, ratón y tableta gráfica:",
+          "options": [
+            "Sustituir el teclado y ratón por dispositivos completamente táctiles sin evaluación ergonómica.",
+            "Solo uso de reposamuñecas y aumento de la sensibilidad del ratón para reducir movimientos.",
+            "Incrementar la velocidad de tecleo mediante técnicas de mecanografía intensiva sin cambiar el equipamiento.",
+            "Ajuste ergonómico del puesto (altura y apoyo de brazos), uso de dispositivos alternativos (trackball/pad), descansos programados y formación postural."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta combina ajuste del puesto, alternativas de dispositivos, pausas y formación, abordando factores de riesgo. Los distractores son incompletos o proponen cambios sin evaluación ergonómica que pueden no disminuir el riesgo.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_lut_log",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare la función de una LUT de visualización (display LUT) frente a una LUT creativa (look LUT):",
+          "options": [
+            "Ambas LUT realizan exactamente la misma operación y son intercambiables sin impacto en el proceso de color.",
+            "La display LUT aplica un look artístico predeterminado; la look LUT normaliza niveles para emisión.",
+            "La display LUT transforma señales logarítmicas a un espacio display‑referenced para monitorización precisa; la look LUT aplica una corrección estilística una vez corregidos niveles y balance.",
+            "La look LUT debe aplicarse antes de cualquier corrección primaria para garantizar consistencia técnica."
+          ],
+          "correctIndex": 2,
+          "explanation": "La display LUT convierte material log a visualización correcta para monitor; la look LUT es una transformación creativa posterior a la corrección técnica. Las otras opciones confunden funciones o proponen un orden incorrecto (look antes de corrección técnica no es práctica estándar).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Qué organización de la jornada y tareas reduce de forma más eficaz la fatiga visual y postural en puestos con pantallas de visualización:",
+          "options": [
+            "Reducir el tamaño de fuente y el brillo para minimizar el tiempo de exposición sin cambiar la organización de tareas.",
+            "Concentrar todo el trabajo de edición en bloques ininterrumpidos largos para mantener flujo de trabajo.",
+            "Eliminar pausas formales y confiar en descansos voluntarios del trabajador.",
+            "Alternancia periódica entre tareas frente a pantalla y tareas no‑visuales, micro‑pausas frecuentes y ajustes ergonómicos del puesto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La alternativa correcta combina alternancia de tareas, micro‑pausas y ergonomía, medidas recomendadas para reducir fatiga visual y postural. Las otras opciones o bien fomentan esfuerzo continuado o aplican soluciones insuficientes sin reorganización del trabajo.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_color_order",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Indique el orden de operaciones en un flujo de colorización que facilita normalización y matching antes de aplicar el look creativo:",
+          "options": [
+            "Aplicación directa del look creativo → ajustes finales de exposición → matching entre planos → corrección primaria.",
+            "Normalización de niveles legales → corrección primaria (balance y exposición) → matching entre planos → correcciones secundarias → aplicación del look.",
+            "Matching entre planos → aplicación del look → normalización de niveles → corrección primaria.",
+            "Corrección secundaria → aplicación del look → normalización → corrección primaria."
+          ],
+          "correctIndex": 1,
+          "explanation": "El flujo correcto comienza normalizando niveles legales, luego corrección primaria de balance/exposición, matching entre planos, correcciones secundarias y finalmente el look creativo. Los distractores ordenan mal los pasos, lo que dificultaría un matching técnico antes del look.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estrategias de preservación de archivos frente a la obsolescencia de soportes:",
+          "options": [
+            "Confiar exclusivamente en la conservación física de los soportes originales sin verificar o migrar.",
+            "Programa periódico de verificación de integridad (checksums) y migraciones planificadas a formatos y soportes actuales.",
+            "Mantener copias en discos locales sin catálogo ni control de versiones.",
+            "Duplicar ficheros en el mismo tipo de soporte sin comprobar integridad ni plan de migración."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica adecuada incluye verificación periódica y migración planificada para evitar obsolescencia; los distractores confían en almacenamiento pasivo o copias sin control, que no garantizan preservación a largo plazo.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En un intercambio entre EVS e NLE durante una retransmisión, si un clip importa pero faltan 'handles' suficientes para un recorte correcto, ¿cuál es el diagnóstico más probable?",
+          "options": [
+            "El problema es de permisos en el NLE y no está relacionado con handles.",
+            "El códec del clip es incompatible y por eso faltan frames en la importación.",
+            "El clip fue recortado en el servidor EVS al exportarse, eliminando pre/post‑roll necesarios (falta de handles).",
+            "La cámara grabó en un formato progresivo que impide handles en EVS."
+          ],
+          "correctIndex": 2,
+          "explanation": "La causa típica de ausencia de handles es que el clip fue exportado desde EVS con trims que eliminaron pre/post‑roll; los demás distractores no explican la pérdida de handles: incompatibilidad de códec no borra frames, permisos no afectan contenido, y progresivo no impide handles.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Indique la medida que, según el II Plan de Igualdad y la Guía de Igualdad de RTVE, resulta coherente con la prevención del acoso y la representación no sexista:",
+          "options": [
+            "Implantar un protocolo de prevención y actuación frente al acoso complementado por pautas de lenguaje y representación no sexista en contenidos.",
+            "Priorizar estrictamente la cuota de personal femenino en todos los puestos técnicos sin formación ni protocolos.",
+            "Limitar la formación en igualdad a un documento informativo sin procedimientos de denuncia.",
+            "Prohibir toda representación de roles de género en pantalla para evitar estereotipos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La medida correcta combina protocolo de actuación frente al acoso y directrices sobre lenguaje/representación; las demás son medidas incompletas, extremas o impracticables que no implementan prevención ni actuación efectiva.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_umid",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "¿Cuál es la función principal de un identificador persistente UMID en material audiovisual?",
+          "options": [
+            "Indicar el códec y el bitrate utilizados en la grabación.",
+            "Identificar de manera única e inequívoca un objeto o clip a lo largo del flujo de trabajo y sistemas distintos.",
+            "Servir como checksum para verificar integridad de bytes del fichero.",
+            "Definir los puntos de entrada y salida para trims en NLE."
+          ],
+          "correctIndex": 1,
+          "explanation": "El UMID es un identificador único persistente para el material a través de sistemas; no informa de códec/bitrate, no es un checksum y no define trims, que son funciones diferentes.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Señale la afirmación que constituye una excepción respecto a la elección motivada de transiciones (corte, fundido, encadenado) según su función narrativa:",
+          "options": [
+            "El corte suele comunicar inmediatez y continuidad de acción entre planos.",
+            "El fundido a negro tiende a señalar el fin de una unidad narrativa o un paso de tiempo amplio.",
+            "Siempre usar encadenados entre escenas contiguas mejora la comprensión temporal del espectador.",
+            "Un encadenado (dissolve) puede sugerir una superposición temporal o una relación lírica entre escenas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 3 es válida (dissolve sugiere superposición o lirismo); la opción 4 es la excepción incorrecta: usar encadenados siempre no mejora la comprensión temporal y puede confundir si se abusa; las primeras dos opciones describen funciones narrativas válidas de corte y fundido.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un almacenamiento compartido tipo NEXIS, si varios editores experimentan una notable pérdida de rendimiento durante operaciones concurrentes de lectura/escritura, ¿cuál es el diagnóstico técnico más probable?",
+          "options": [
+            "Error de sincronización de timecode entre estaciones de edición.",
+            "Fallo en la GPU de los clientes que impide decodificación local.",
+            "Configuración errónea del firewall que bloquea paquetes SMB.",
+            "Saturación del ancho de banda disponible del sistema de almacenamiento o ausencia de reservas de rendimiento por proyecto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La causa más habitual de ralentización concurrente en NEXIS/SAN es la saturación del throughput del almacenamiento o falta de QoS/reservas; las otras opciones afectan a clientes o red pero no explican un patrón de caída de rendimiento general del almacenamiento compartido.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál es el principio operativo básico de una conexión de audio balanceada y su ventaja frente a una no balanceada?",
+          "options": [
+            "Transmite dos señales iguales en magnitud pero opuestas en polaridad por un par trenzado, permitiendo a la entrada diferencial rechazar ruido en modo común.",
+            "Utiliza un único conductor con blindaje para reducir totalmente el ruido de red en cualquier circunstancia.",
+            "Emplea dos conductores para duplicar la potencia de la señal y aumentar el nivel de salida.",
+            "Añade un tercer conductor que modula la señal con el propósito de enmascarar interferencias."
+          ],
+          "correctIndex": 0,
+          "explanation": "La conexión balanceada transmite señales en polaridad opuesta para que el receptor diferencial cancele el ruido común (rechazo en modo común). Las otras opciones confunden blindaje, potencia o describen funciones inexistentes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe correctamente la diferencia temporal y los artefactos de movimiento entre entrelazado y progresivo:",
+          "options": [
+            "El entrelazado muestra campos con desplazamiento temporal entre pares de líneas, provocando artefactos de 'combing' en movimiento; el progresivo presenta cada frame completo evitando ese comportamiento.",
+            "El progresivo divide cada frame en dos campos temporales provocando combing; el entrelazado siempre presenta frames completos.",
+            "Ambos sistemas son equivalentes en temporalidad; sólo difieren en la resolución vertical real.",
+            "El entrelazado elimina por completo el aliasing temporal frente al progresivo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta explica que el entrelazado presenta campos capturados en instantes distintos (temporal offset) que generan combing en movimiento; el progresivo captura frames completos evitando ese tipo de artefacto. Las otras opciones son incorrectas respecto a la relación temporal y los artefactos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
+    {
       "id": "019",
       "title": "Examen 019",
       "date": "2026-08-06",
