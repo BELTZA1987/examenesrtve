@@ -21,6 +21,13 @@ MODEL = os.getenv("OPENAI_MODEL", "gpt-5-mini")
 FORCE_CREATE = os.getenv("FORCE_CREATE", "false").lower() in {"1", "true", "yes"}
 TODAY = date.today().isoformat()
 
+# Umbrales y reintentos de robustez.
+# Una pregunta histórica solo se rechaza si es prácticamente una reformulación.
+EXAM_SIMILARITY_THRESHOLD = 0.92
+HISTORY_SIMILARITY_THRESHOLD = 0.94
+MAX_FULL_ATTEMPTS = 3
+MAX_REPAIR_ROUNDS = 8
+
 BANNED_OPTION_PATTERNS = (
     "todas las anteriores",
     "ninguna de las anteriores",
@@ -1234,6 +1241,75 @@ def build_schema(plan: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+
+def build_single_question_schema(item: dict[str, Any]) -> dict[str, Any]:
+    """Esquema estricto para regenerar solo una pregunta del plan."""
+    return {
+        "type": "object",
+        "additionalProperties": False,
+        "properties": {
+            "planIndex": {"type": "integer", "enum": [item["planIndex"]]},
+            "conceptId": {"type": "string", "enum": [item["id"]]},
+            "difficulty": {"type": "string", "enum": [item["difficulty"]]},
+            "questionType": {"type": "string", "enum": [item["questionType"]]},
+            "prompt": {"type": "string"},
+            "options": {
+                "type": "array",
+                "minItems": 4,
+                "maxItems": 4,
+                "items": {"type": "string"},
+            },
+            "correctIndex": {"type": "integer", "minimum": 0, "maximum": 3},
+            "explanation": {"type": "string"},
+            "category": {"type": "string", "enum": [item["category"]]},
+        },
+        "required": [
+            "planIndex",
+            "conceptId",
+            "difficulty",
+            "questionType",
+            "prompt",
+            "options",
+            "correctIndex",
+            "explanation",
+            "category",
+        ],
+    }
+
+
+def request_structured_json(
+    client: OpenAI,
+    prompt: str,
+    schema: dict[str, Any],
+    schema_name: str,
+) -> dict[str, Any]:
+    """Llama a OpenAI y devuelve el JSON estructurado."""
+    response = client.responses.create(
+        model=MODEL,
+        input=prompt,
+        store=False,
+        text={
+            "format": {
+                "type": "json_schema",
+                "name": schema_name,
+                "strict": True,
+                "schema": schema,
+            }
+        },
+    )
+
+    if response.status not in {None, "completed"}:
+        raise RuntimeError(f"La respuesta terminó con estado {response.status!r}.")
+
+    try:
+        parsed = json.loads(response.output_text)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"OpenAI devolvió JSON no válido: {exc}") from exc
+
+    if not isinstance(parsed, dict):
+        raise ValueError("OpenAI no devolvió un objeto JSON.")
+    return parsed
+
 def recent_prompt_list(existing: list[dict[str, Any]], limit: int = 320) -> list[str]:
     prompts: list[str] = []
     for exam in existing:
@@ -1259,94 +1335,161 @@ def similarity(a: str, b: str) -> float:
     return max(sequence, jaccard)
 
 
+def question_validation_error(
+    question: dict[str, Any],
+    assigned: dict[str, Any],
+    accepted_prompts: list[str],
+    recent_prompts: list[str],
+) -> str | None:
+    """Devuelve el motivo de rechazo de una pregunta o None si es válida."""
+    if not isinstance(question, dict):
+        return "la pregunta no es un objeto JSON"
+
+    index = question.get("planIndex")
+    concept_id = str(question.get("conceptId", ""))
+    prompt = str(question.get("prompt", "")).strip()
+    options = question.get("options")
+    correct = question.get("correctIndex")
+    explanation = str(question.get("explanation", "")).strip()
+    category = str(question.get("category", "")).strip()
+    difficulty = str(question.get("difficulty", "")).strip()
+    question_type = str(question.get("questionType", "")).strip()
+
+    if index != assigned["planIndex"]:
+        return f"planIndex incorrecto: {index!r} != {assigned['planIndex']!r}"
+    if concept_id != assigned["id"]:
+        return f"conceptId incorrecto: {concept_id!r} != {assigned['id']!r}"
+    if category != assigned["category"]:
+        return "categoría incorrecta"
+    if difficulty != assigned["difficulty"]:
+        return "dificultad incorrecta"
+    if question_type != assigned["questionType"]:
+        return "tipo de pregunta incorrecto"
+
+    normalized_prompt = normalize_text(prompt)
+    if len(prompt) < 22:
+        return "el enunciado es demasiado breve"
+    if any(
+        normalized_prompt.startswith(normalize_text(prefix))
+        for prefix in BANNED_PROMPT_PREFIXES
+    ):
+        return "el enunciado usa una etiqueta artificial"
+
+    if accepted_prompts:
+        nearest_exam_prompt, nearest_exam = max(
+            ((old, similarity(prompt, old)) for old in accepted_prompts),
+            key=lambda pair: pair[1],
+        )
+        if nearest_exam >= EXAM_SIMILARITY_THRESHOLD:
+            return (
+                "se parece demasiado a otra pregunta del mismo examen "
+                f"(similitud {nearest_exam:.2f}): {nearest_exam_prompt[:220]}"
+            )
+
+    if recent_prompts:
+        nearest_history_prompt, nearest_history = max(
+            ((old, similarity(prompt, old)) for old in recent_prompts),
+            key=lambda pair: pair[1],
+        )
+        if nearest_history >= HISTORY_SIMILARITY_THRESHOLD:
+            return (
+                "se parece demasiado a una pregunta histórica "
+                f"(similitud {nearest_history:.2f}): {nearest_history_prompt[:220]}"
+            )
+
+    if not isinstance(options, list) or len(options) != 4:
+        return "no tiene exactamente cuatro opciones"
+
+    normalized_options = [normalize_text(str(option)) for option in options]
+    if any(not option for option in normalized_options):
+        return "contiene una opción vacía"
+    if len(set(normalized_options)) != 4:
+        return "contiene opciones repetidas"
+    if any(
+        banned in option
+        for option in normalized_options
+        for banned in BANNED_OPTION_PATTERNS
+    ):
+        return "contiene una opción global no permitida"
+    if not isinstance(correct, int) or correct not in range(4):
+        return "el índice de respuesta correcta es inválido"
+    if len(explanation) < 45:
+        return "la explicación es insuficiente"
+
+    return None
+
+
+def classify_questions(
+    exam: dict[str, Any],
+    plan: list[dict[str, Any]],
+    recent_prompts: list[str],
+) -> tuple[dict[int, dict[str, Any]], dict[int, str]]:
+    """
+    Separa preguntas válidas e inválidas por planIndex.
+
+    Las válidas se conservan. Las inválidas o ausentes se pueden regenerar
+    individualmente sin tirar el resto del examen.
+    """
+    questions = exam.get("questions")
+    if not isinstance(questions, list):
+        questions = []
+
+    grouped: defaultdict[int, list[dict[str, Any]]] = defaultdict(list)
+    for question in questions:
+        if isinstance(question, dict):
+            index = question.get("planIndex")
+            if isinstance(index, int):
+                grouped[index].append(question)
+
+    valid: dict[int, dict[str, Any]] = {}
+    invalid: dict[int, str] = {}
+    accepted_prompts: list[str] = []
+
+    for assigned in sorted(plan, key=lambda item: item["planIndex"]):
+        index = assigned["planIndex"]
+        candidates = grouped.get(index, [])
+
+        if not candidates:
+            invalid[index] = "falta la pregunta correspondiente a este planIndex"
+            continue
+        if len(candidates) > 1:
+            invalid[index] = "hay varias preguntas con el mismo planIndex"
+            continue
+
+        question = candidates[0]
+        error = question_validation_error(
+            question,
+            assigned,
+            accepted_prompts,
+            recent_prompts,
+        )
+        if error is not None:
+            invalid[index] = error
+            continue
+
+        valid[index] = question
+        accepted_prompts.append(str(question.get("prompt", "")).strip())
+
+    return valid, invalid
+
+
 def validate_generated(
     exam: dict[str, Any],
     plan: list[dict[str, Any]],
     recent_prompts: list[str],
 ) -> None:
-    questions = exam.get("questions")
-    if not isinstance(questions, list) or len(questions) != 20:
-        raise ValueError("El modelo no generó exactamente 20 preguntas.")
+    valid, invalid = classify_questions(exam, plan, recent_prompts)
 
-    expected = {item["planIndex"]: item for item in plan}
-    seen_indices: set[int] = set()
-    seen_ids: set[str] = set()
-    seen_prompts: list[str] = []
-    category_counts: Counter[str] = Counter()
-    difficulty_counts: Counter[str] = Counter()
+    if invalid:
+        index = min(invalid)
+        raise ValueError(f"La pregunta {index} no es válida: {invalid[index]}.")
 
-    for number, question in enumerate(questions, start=1):
-        index = question.get("planIndex")
-        concept_id = str(question.get("conceptId", ""))
-        prompt = str(question.get("prompt", "")).strip()
-        options = question.get("options")
-        correct = question.get("correctIndex")
-        explanation = str(question.get("explanation", "")).strip()
-        category = str(question.get("category", "")).strip()
-        difficulty = str(question.get("difficulty", "")).strip()
-        question_type = str(question.get("questionType", "")).strip()
+    if len(valid) != 20:
+        raise ValueError(f"Solo hay {len(valid)}/20 preguntas válidas.")
 
-        if index not in expected or index in seen_indices:
-            raise ValueError(f"planIndex inválido o repetido en la pregunta {number}.")
-        seen_indices.add(index)
-
-        assigned = expected[index]
-        if concept_id != assigned["id"]:
-            raise ValueError(
-                f"La pregunta {number} no respeta el concepto asignado: "
-                f"{concept_id!r} != {assigned['id']!r}."
-            )
-        if concept_id in seen_ids:
-            raise ValueError(f"Concepto repetido en la pregunta {number}.")
-        seen_ids.add(concept_id)
-
-        if category != assigned["category"]:
-            raise ValueError(f"Categoría incorrecta en la pregunta {number}.")
-        if difficulty != assigned["difficulty"]:
-            raise ValueError(f"Dificultad incorrecta en la pregunta {number}.")
-        if question_type != assigned["questionType"]:
-            raise ValueError(f"Tipo incorrecto en la pregunta {number}.")
-
-        normalized_prompt = normalize_text(prompt)
-        if len(prompt) < 22:
-            raise ValueError(f"La pregunta {number} es demasiado breve.")
-        if any(normalized_prompt.startswith(normalize_text(prefix)) for prefix in BANNED_PROMPT_PREFIXES):
-            raise ValueError(f"La pregunta {number} usa una etiqueta artificial.")
-
-        for previous in seen_prompts:
-            if similarity(prompt, previous) >= 0.90:
-                raise ValueError(f"La pregunta {number} se parece demasiado a otra del examen.")
-        seen_prompts.append(prompt)
-
-        # Filtro textual adicional: el conceptId evita la repetición conceptual;
-        # este umbral bloquea además reformulaciones muy próximas del historial.
-        nearest = max((similarity(prompt, old) for old in recent_prompts), default=0.0)
-        if nearest >= 0.88:
-            raise ValueError(
-                f"La pregunta {number} se parece demasiado a una pregunta histórica "
-                f"(similitud {nearest:.2f})."
-            )
-
-        if not isinstance(options, list) or len(options) != 4:
-            raise ValueError(f"La pregunta {number} no tiene cuatro opciones.")
-        normalized_options = [normalize_text(str(option)) for option in options]
-        if any(not option for option in normalized_options):
-            raise ValueError(f"La pregunta {number} contiene una opción vacía.")
-        if len(set(normalized_options)) != 4:
-            raise ValueError(f"La pregunta {number} contiene opciones repetidas.")
-        if any(
-            banned in option
-            for option in normalized_options
-            for banned in BANNED_OPTION_PATTERNS
-        ):
-            raise ValueError(f"La pregunta {number} contiene una opción global no permitida.")
-        if not isinstance(correct, int) or correct not in range(4):
-            raise ValueError(f"Índice de respuesta inválido en la pregunta {number}.")
-        if len(explanation) < 45:
-            raise ValueError(f"La explicación de la pregunta {number} es insuficiente.")
-
-        category_counts[category] += 1
-        difficulty_counts[difficulty] += 1
+    ordered_questions = [valid[index] for index in sorted(valid)]
+    category_counts = Counter(question["category"] for question in ordered_questions)
+    difficulty_counts = Counter(question["difficulty"] for question in ordered_questions)
 
     if category_counts[OFFICIAL_BLOCKS[0]] != 3:
         raise ValueError("El examen debe contener exactamente 3 preguntas normativas.")
@@ -1356,6 +1499,159 @@ def validate_generated(
         raise ValueError("Un bloque específico supera cuatro preguntas.")
     if difficulty_counts != Counter({"media": 10, "fácil": 5, "difícil": 5}):
         raise ValueError(f"Distribución de dificultad incorrecta: {difficulty_counts}.")
+
+    exam["questions"] = ordered_questions
+
+
+def build_repair_prompt(
+    exam_id: str,
+    item: dict[str, Any],
+    reference: str,
+    recent_prompts: list[str],
+    accepted_prompts: list[str],
+    rejected_prompt: str,
+    rejection_reason: str,
+) -> str:
+    recent_text = "\n".join(f"- {prompt}" for prompt in recent_prompts[:220])
+    accepted_text = "\n".join(f"- {prompt}" for prompt in accepted_prompts[:40])
+
+    return f"""
+Actúas como tribunal técnico de una oposición de RTVE para Edición, Montaje y
+Procesos Audiovisuales.
+
+Debes regenerar ÚNICAMENTE la pregunta {item['planIndex']} del examen {exam_id}.
+No redactes el examen completo.
+
+ASIGNACIÓN CERRADA
+- planIndex: {item['planIndex']}
+- conceptId: {item['id']}
+- categoría: {item['category']}
+- concepto: {item['label']}
+- enfoque obligatorio: {item['focus']}
+- tipo: {item['questionType']}
+- dificultad: {item['difficulty']}
+
+MOTIVO POR EL QUE SE RECHAZÓ LA VERSIÓN ANTERIOR
+{rejection_reason}
+
+ENUNCIADO RECHAZADO
+{rejected_prompt or "No había una pregunta utilizable para esta posición."}
+
+REGLAS
+- Conserva exactamente planIndex, conceptId, categoría, tipo y dificultad.
+- Evalúa el mismo concepto, pero cambia de verdad el ángulo de la pregunta.
+- No hagas una simple paráfrasis del enunciado rechazado.
+- Redacción sobria, directa y técnica, semejante a un test oficial de oposición.
+- No uses etiquetas como «Caso práctico», «Fundamento», «Concepto»,
+  «Operación» o «Diagnóstico».
+- Exactamente cuatro opciones y una sola correcta.
+- Distractores verosímiles, próximos y técnicamente distinguibles.
+- No uses «todas las anteriores», «ninguna de las anteriores» ni combinaciones A+B.
+- La explicación debe justificar la correcta y distinguirla del distractor más próximo.
+- No inventes normas, artículos, formatos, prestaciones ni datos.
+
+OTRAS PREGUNTAS YA ACEPTADAS EN ESTE EXAMEN
+No redactes una pregunta que se parezca demasiado a estas:
+{accepted_text or "Todavía no hay otras preguntas aceptadas."}
+
+HISTÓRICO RECIENTE
+No copies ni reformules de forma casi literal estas preguntas:
+{recent_text or "No hay historial."}
+
+TEMARIO OFICIAL Y DESARROLLO ORIENTATIVO
+{reference}
+
+Devuelve únicamente el objeto JSON de esta pregunta.
+""".strip()
+
+
+def repair_candidate(
+    client: OpenAI,
+    exam_id: str,
+    candidate: dict[str, Any],
+    plan: list[dict[str, Any]],
+    reference: str,
+    recent_prompts: list[str],
+) -> dict[str, Any]:
+    """
+    Conserva las preguntas válidas y regenera únicamente las rechazadas.
+    Repite el proceso hasta que las 20 sean válidas o se agoten las rondas.
+    """
+    candidate = dict(candidate)
+    plan_by_index = {item["planIndex"]: item for item in plan}
+
+    for repair_round in range(1, MAX_REPAIR_ROUNDS + 1):
+        valid, invalid = classify_questions(candidate, plan, recent_prompts)
+
+        if not invalid:
+            candidate["questions"] = [valid[index] for index in sorted(valid)]
+            validate_generated(candidate, plan, recent_prompts)
+            return candidate
+
+        print(
+            f"Ronda de reparación {repair_round}: "
+            f"{len(invalid)} pregunta(s) a sustituir."
+        )
+
+        # Conservamos todas las válidas y generamos únicamente las rechazadas.
+        repaired: dict[int, dict[str, Any]] = dict(valid)
+        accepted_prompts = [
+            str(question.get("prompt", "")).strip()
+            for _, question in sorted(repaired.items())
+        ]
+
+        old_questions = candidate.get("questions")
+        if not isinstance(old_questions, list):
+            old_questions = []
+
+        for index in sorted(invalid):
+            item = plan_by_index[index]
+            old_candidates = [
+                question
+                for question in old_questions
+                if isinstance(question, dict) and question.get("planIndex") == index
+            ]
+            rejected_prompt = ""
+            if old_candidates:
+                rejected_prompt = str(old_candidates[0].get("prompt", "")).strip()
+
+            print(
+                f"  - Sustituyendo pregunta {index}: {invalid[index]}"
+            )
+
+            repair_prompt = build_repair_prompt(
+                exam_id=exam_id,
+                item=item,
+                reference=reference,
+                recent_prompts=recent_prompts,
+                accepted_prompts=accepted_prompts,
+                rejected_prompt=rejected_prompt,
+                rejection_reason=invalid[index],
+            )
+
+            replacement = request_structured_json(
+                client=client,
+                prompt=repair_prompt,
+                schema=build_single_question_schema(item),
+                schema_name=f"rtve_repair_q{index:02d}",
+            )
+            repaired[index] = replacement
+            accepted_prompts.append(str(replacement.get("prompt", "")).strip())
+
+        candidate["questions"] = [
+            repaired[index]
+            for index in sorted(repaired)
+            if index in plan_by_index
+        ]
+
+    valid, invalid = classify_questions(candidate, plan, recent_prompts)
+    details = "; ".join(
+        f"P{index}: {reason}" for index, reason in sorted(invalid.items())
+    )
+    raise ValueError(
+        f"No se pudieron reparar todas las preguntas tras {MAX_REPAIR_ROUNDS} rondas. "
+        f"Quedan {len(invalid)} inválidas. {details}"
+    )
 
 
 def balance_correct_answers(exam: dict[str, Any], seed: int) -> None:
@@ -1488,66 +1784,78 @@ def main() -> int:
             f"{item['questionType']} — {item['difficulty']}"
         )
 
+    print(
+        "Control de similitud: "
+        f"mismo examen >= {EXAM_SIMILARITY_THRESHOLD:.2f}; "
+        f"histórico >= {HISTORY_SIMILARITY_THRESHOLD:.2f}."
+    )
+
     client = OpenAI(max_retries=2, timeout=180.0)
 
     generated: dict[str, Any] | None = None
     last_validation_error: Exception | None = None
 
-    for attempt in range(1, 3):
-        attempt_prompt = prompt
-        if last_validation_error is not None:
-            attempt_prompt += (
-                "\n\nLa propuesta anterior fue rechazada por este motivo: "
-                f"{last_validation_error}. Redacta de nuevo el examen completo, "
-                "manteniendo exactamente el mismo plan cerrado."
-            )
+    try:
+        for attempt in range(1, MAX_FULL_ATTEMPTS + 1):
+            attempt_prompt = prompt
+            if last_validation_error is not None:
+                attempt_prompt += (
+                    "\n\nLa propuesta completa anterior no pudo quedar validada incluso "
+                    "después de reparar las preguntas problemáticas. Motivo final: "
+                    f"{last_validation_error}. Genera una nueva propuesta completa "
+                    "manteniendo exactamente el mismo plan cerrado."
+                )
 
-        try:
-            response = client.responses.create(
-                model=MODEL,
-                input=attempt_prompt,
-                store=False,
-                text={
-                    "format": {
-                        "type": "json_schema",
-                        "name": "rtve_daily_exam_v3",
-                        "strict": True,
-                        "schema": schema,
-                    }
-                },
-            )
-        except AuthenticationError as exc:
-            print("ERROR: OPENAI_API_KEY no es válida o no tiene acceso.", file=sys.stderr)
-            print(str(exc), file=sys.stderr)
-            return 3
-        except RateLimitError as exc:
-            print("ERROR: falta saldo, cuota o se alcanzó un límite de API.", file=sys.stderr)
-            print(str(exc), file=sys.stderr)
-            return 4
-        except APIError as exc:
-            print(f"ERROR de OpenAI API: {exc}", file=sys.stderr)
-            return 5
-
-        if response.status not in {None, "completed"}:
-            raise RuntimeError(f"La respuesta terminó con estado {response.status!r}.")
-
-        candidate = json.loads(response.output_text)
-        try:
-            validate_generated(candidate, plan, recent_prompts)
-        except (ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:
-            last_validation_error = exc
             print(
-                f"Intento {attempt} rechazado por validación: {exc}",
-                file=sys.stderr,
+                f"Generando propuesta completa "
+                f"{attempt}/{MAX_FULL_ATTEMPTS}..."
             )
-            continue
 
-        generated = candidate
-        break
+            candidate = request_structured_json(
+                client=client,
+                prompt=attempt_prompt,
+                schema=schema,
+                schema_name="rtve_daily_exam_v4",
+            )
+
+            try:
+                candidate = repair_candidate(
+                    client=client,
+                    exam_id=exam_id,
+                    candidate=candidate,
+                    plan=plan,
+                    reference=reference,
+                    recent_prompts=recent_prompts,
+                )
+                validate_generated(candidate, plan, recent_prompts)
+            except (ValueError, TypeError, KeyError, json.JSONDecodeError) as exc:
+                last_validation_error = exc
+                print(
+                    f"Propuesta completa {attempt} rechazada tras reparaciones: {exc}",
+                    file=sys.stderr,
+                )
+                continue
+
+            generated = candidate
+            break
+
+    except AuthenticationError as exc:
+        print("ERROR: OPENAI_API_KEY no es válida o no tiene acceso.", file=sys.stderr)
+        print(str(exc), file=sys.stderr)
+        return 3
+    except RateLimitError as exc:
+        print("ERROR: falta saldo, cuota o se alcanzó un límite de API.", file=sys.stderr)
+        print(str(exc), file=sys.stderr)
+        return 4
+    except APIError as exc:
+        print(f"ERROR de OpenAI API: {exc}", file=sys.stderr)
+        return 5
 
     if generated is None:
         raise RuntimeError(
-            "No se obtuvo un examen válido después de dos intentos. "
+            "No se obtuvo un examen válido después de "
+            f"{MAX_FULL_ATTEMPTS} propuestas completas y hasta "
+            f"{MAX_REPAIR_ROUNDS} rondas de reparación por propuesta. "
             f"Último error: {last_validation_error}"
         )
 
