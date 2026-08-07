@@ -114,11 +114,13 @@ jobs:
           ls -lh index.html data/exams.json
 
       # 8. Comprobar si realmente se creó un examen nuevo.
-      - name: Comprobar cambios del examen
-        id: changes
+      - name: Comprobar que se generó el examen
         shell: bash
-        env:
-          FORCE_CREATE: ${{ github.event_name == 'workflow_dispatch' && inputs.force && 'true' || 'false' }}
         run: |
           if git diff --quiet -- data/exams.json; then
-            echo "changed=false
+            echo 'ERROR: El generador terminó, pero data/exams.json no cambió.'
+            echo 'No se ha creado ningún examen nuevo.'
+            exit 1
+          fi
+
+          echo 'OK: data/exams.json ha cambiado correctamente.'
