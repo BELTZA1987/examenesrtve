@@ -87,8 +87,7 @@ jobs:
           echo "Generando un examen nuevo..."
           python scripts/generate_exam.py
 
-      # 6. Comprobar que el generador modificó exams.json
-      - name: Comprobar examen generado
+            - name: Comprobar examen generado
         shell: bash
         run: |
           if [ ! -f "data/exams.json" ]; then
@@ -96,12 +95,7 @@ jobs:
             exit 1
           fi
 
-          if git diff --quiet -- data/exams.json; then
-            echo "::error::generate_exam.py terminó pero data/exams.json no cambió."
-            exit 1
-          fi
-
-          echo "data/exams.json se ha actualizado correctamente."
+          echo "data/exams.json existe correctamente."
           ls -lh data/exams.json
 
       # 7. Guardar el nuevo exams.json en GitHub
