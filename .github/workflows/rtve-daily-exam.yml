@@ -87,6 +87,7 @@ jobs:
           echo "Generando un examen nuevo..."
           python scripts/generate_exam.py
 
+
             - name: Comprobar examen generado
         shell: bash
         run: |
