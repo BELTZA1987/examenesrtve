@@ -1880,5 +1880,4 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    print(
-        f"Creado {exam['title']} con 20 conceptos distintos usando 
+    print(f"Creado {exam['title']} y guardado en {DATA_FILE}")
