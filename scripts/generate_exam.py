@@ -1759,9 +1759,9 @@ def main() -> int:
     data = load_data()
     existing: list[dict[str, Any]] = data["exams"]
 
-    if not FORCE_CREATE and any(exam.get("date") == TODAY for exam in existing):
-        print(f"Ya existe un examen con fecha {TODAY}; no se crea un duplicado.")
-        return 0
+    if already_exists_today and not FORCE_CREATE:
+    print("Ya existe un examen para hoy. No se genera otro.")
+    return
 
     numeric_ids = [
         int(str(exam.get("id", "")).strip())
