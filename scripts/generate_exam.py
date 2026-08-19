@@ -1750,7 +1750,6 @@ TEMARIO OFICIAL Y DESARROLLO ORIENTATIVO
 Devuelve únicamente el JSON del esquema.
 """.strip()
 
-
 def main() -> int:
     if not os.getenv("OPENAI_API_KEY"):
         print("ERROR: falta el secreto OPENAI_API_KEY.", file=sys.stderr)
@@ -1759,18 +1758,6 @@ def main() -> int:
     data = load_data()
     existing: list[dict[str, Any]] = data["exams"]
 
-    # El workflow puede forzar la creación de otro examen,
-    # aunque ya exista uno generado el mismo día.
-    force_create = os.getenv("FORCE_CREATE", "false").strip().lower() in {
-        "1",
-        "true",
-        "yes",
-        "on",
-    }
-
-    print(f"FORCE_CREATE={force_create}")
-
-    # Calcular el siguiente número de examen
     numeric_ids = [
         int(str(exam.get("id", "")).strip())
         for exam in existing
@@ -1779,7 +1766,6 @@ def main() -> int:
     next_number = max(numeric_ids, default=0) + 1
     exam_id = f"{next_number:03d}"
 
-    # Preparar referencia, histórico y planificación temática
     reference = REFERENCE_FILE.read_text(encoding="utf-8")
     recent_prompts = recent_prompt_list(existing)
     plan = choose_concepts(existing, next_number)
