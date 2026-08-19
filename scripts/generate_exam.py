@@ -1876,3 +1876,8 @@ def main() -> int:
     )
 
     print(f"Creado {exam['title']} y guardado en {DATA_FILE}")
+    
+        return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())
