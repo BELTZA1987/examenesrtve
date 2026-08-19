@@ -1759,7 +1759,18 @@ def main() -> int:
     data = load_data()
     existing: list[dict[str, Any]] = data["exams"]
 
-    # Comprobar si ya existe un examen generado hoy
+    # El workflow puede forzar la creación de otro examen,
+    # aunque ya exista uno generado el mismo día.
+    force_create = os.getenv("FORCE_CREATE", "false").strip().lower() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }
+
+    print(f"FORCE_CREATE={force_create}")
+
+    # Comprobar si ya existe un examen de hoy.
     today = datetime.now().strftime("%Y-%m-%d")
 
     already_exists_today = any(
@@ -1767,19 +1778,18 @@ def main() -> int:
         for exam in existing
     )
 
-    # Si ya existe un examen y FORCE_CREATE no está activado,
-    # no generamos otro.
-    if already_exists_today and not FORCE_CREATE:
-        print("Ya existe un examen para hoy. No se genera otro.")
-        return 0
-
-    # Si FORCE_CREATE está activado, permitimos generar otro
-    # aunque ya exista un examen del mismo día.
-    if already_exists_today and FORCE_CREATE:
-        print(
-            "Ya existe un examen hoy, pero FORCE_CREATE=True: "
-            "se generará otro."
-        )
+    if already_exists_today:
+        if force_create:
+            print(
+                "Ya existe un examen de hoy, pero FORCE_CREATE=True. "
+                "Se generará un examen nuevo."
+            )
+        else:
+            print(
+                "Ya existe un examen para hoy y FORCE_CREATE=False. "
+                "No se genera otro."
+            )
+            return 0
 
     # Calcular el siguiente número de examen
     numeric_ids = [
