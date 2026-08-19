@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-06",
+  "updatedAt": "2026-08-19",
   "exams": [
+    {
+      "id": "021",
+      "title": "Examen 021",
+      "date": "2026-08-19",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Ante prácticas de programación que sistemáticamente excluyen a determinados grupos colectivos, cuál de las siguientes respuestas se ajusta mejor al contenido sustantivo del principio constitucional de igualdad y prohibición de discriminación:",
+          "options": [
+            "Garantizar igualdad de trato y, cuando proceda, adoptar medidas positivas temporales para corregir desventajas.",
+            "Imponer idéntico tratamiento en todos los casos sin posibilidad de medidas específicas.",
+            "Permitir decisiones editoriales discriminatorias si se justifican por audiencias objetivo.",
+            "Restringir la libertad de expresión para evitar cualquier diferencia de tratamiento entre colectivos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Constitución exige igualdad y prohíbe la discriminación, pero admite medidas positivas y proporcionales para corregir desigualdades. La diferencia decisiva respecto al distractor más próximo (A) es que la igualdad no exige trato idéntico en todos los casos cuando medidas específicas son necesarias para garantizar igualdad real.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Respecto a la sincronización multicámara basada en la forma de onda de audio, cuál de las siguientes afirmaciones describe mejor sus condiciones de fiabilidad y sus limitaciones:",
+          "options": [
+            "Funciona igual de fiable independientemente de la relación de muestreo y la codificación de audio de cada cámara.",
+            "Es fiable cuando existen transientes acústicos coincidentes y relación señal/ruido adecuada; resulta poco fiable con ruido continuo, reverberación intensa o fuentes distintas sin eventos compartidos.",
+            "Garantiza sincronía absoluta incluso si las cámaras graban a velocidades de fotogramas distintas.",
+            "No se ve afectada por cancelaciones por fase entre canales estéreo de distintas cámaras."
+          ],
+          "correctIndex": 1,
+          "explanation": "La sincronización por forma de onda exige transientes o eventos comunes y buena S/N para alinear con precisión; falla con ruido continuo, reverberación o ausencia de eventos coincidentes. Los distractores más próximos proponen condiciones técnicas incorrectas (por ejemplo la independencia de muestreo o frame rate), que no garantizan fiabilidad.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Durante la ingesta de material XDCAM para selección y visionado previo, cuál es la relación de uso apropiada entre proxy y esencia de alta resolución:",
+          "options": [
+            "La esencia de alta resolución puede prescindir de timecode si los proxies lo mantienen.",
+            "Durante la ingesta la esencia original puede ser sustituida por proxies para ahorrar espacio en el archivo maestro.",
+            "Los proxies contienen siempre metadatos distintos y no permiten identificar la esencia original.",
+            "Los proxies se usan para visionado y selección; la esencia de alta resolución se conserva para conformado y entrega final."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica correcta es utilizar proxies para revisión y selección y conservar la esencia original para conformar y entregar. Los distractores erran porque proponen sustituir la esencia, negar identificación por metadatos o prescindir de timecode, lo que compromete integridad y trazabilidad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Ante la ausencia de señal en un destino de una matriz de vídeo, cuál es la comprobación operativa más eficaz para identificar y verificar si existe un punto de cruce (crosspoint) erróneo u abierto:",
+          "options": [
+            "Consultar el estado del crosspoint en el sistema de control del router y, a continuación, inyectar una señal de prueba en la entrada indicada para verificar que sale en el destino.",
+            "Comprobar físicamente la continuidad del cableado del destino sin intervenir en el control de la matriz.",
+            "Reiniciar el router y observar si la salida del destino se recupera automáticamente.",
+            "Sustituir el destino por otro monitor para descartar fallo del receptor."
+          ],
+          "correctIndex": 0,
+          "explanation": "La verificación eficaz combina consulta del mapeo en el control del router y la inyección de una señal de prueba en la entrada para confirmar si el crosspoint está activo y funciona; los otros distractores (comprobar sólo cableado, reiniciar, o cambiar monitor) pueden ser útiles, pero no identifican ni verifican el estado del crosspoint de forma concluyente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_elipsis",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Para comprimir treinta minutos de preparación en una secuencia breve manteniendo la comprensión narrativa, la opción de montaje más apropiada es:",
+          "options": [
+            "Sustituir la compresión temporal por montaje paralelo de acciones no relacionadas.",
+            "Insertar planos breves y heterogéneos sin relación causal para acelerar el ritmo.",
+            "Eliminar por completo fases intermedias clave sin establecer vínculos sonoros o visuales que indiquen continuidad.",
+            "Seleccionar y encadenar fragmentos representativos que mantengan la cadena causal y los hitos causales de la acción."
+          ],
+          "correctIndex": 3,
+          "explanation": "La elipsis eficaz conserva la comprensión al seleccionar beats representativos que mantienen la causalidad; los distractores rompen la cadena causal o no proporcionan anclas narrativas (por ejemplo eliminar fases clave) y por tanto dificultan la comprensión.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Señale la excepción respecto a criterios razonables al diseñar proxies para edición:",
+          "options": [
+            "Seleccionar un bitrate extremadamente bajo con compresión Long‑GOP para minimizar almacenamiento incluso si perjudica scrubbing y precisión.",
+            "Reducir resolución y usar un códec intraframe ligero para facilitar edición sin exigir mucha decodificación.",
+            "Mantener metadatos, timecode y sincronía de audio para permitir relink y conform posterior.",
+            "Elegir una resolución y bitrate que equilibren calidad visual para corte y carga de CPU."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es usar bitrate ultrabajo con Long‑GOP porque deteriora scrubbing y precisión de edición; las demás opciones son criterios apropiados: intraframe ligero, metadatos correctos y equilibrio entre resolución/bitrate.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para corregir una discrepancia entre numeración de timecode y tiempo real debida a interpretación drop‑frame vs non‑drop‑frame sin eliminar ni añadir fotogramas, cuál es el procedimiento técnico correcto:",
+          "options": [
+            "Volver a grabar la toma con el código de tiempo correcto para reemplazar la anterior.",
+            "Editar el clip recortando o insertando fotogramas para que coincidan los números con el tiempo real.",
+            "Reinterpretar/metadatar el timecode en el NLE o con herramienta de conversión SMPTE para ajustar la bandera DF/NDF y recalcular las etiquetas temporales, sin retimar la esencia.",
+            "Cambiar la velocidad de reproducción del clip hasta que la numeración coincida con el tiempo real."
+          ],
+          "correctIndex": 2,
+          "explanation": "La corrección correcta es reinterpretar el flag DF/NDF y recalcular las etiquetas temporales mediante herramientas de timecode; los otros procedimientos alteran la esencia o la velocidad y son incorrectos para resolver la discrepancia de numeración.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Según la Ley 17/2006, compare las funciones del Consejo de Administración y del Presidente de RTVE:",
+          "options": [
+            "El Consejo es un órgano meramente consultivo y todo el poder ejecutivo recae en la Dirección General.",
+            "El Presidente define la política general y el Consejo sólo ejecuta las órdenes del Presidente.",
+            "El Consejo establece la estrategia y controla la gestión; el Presidente ejecuta la gestión diaria y representa a la Corporación.",
+            "El Consejo se ocupa únicamente de asuntos económicos mientras que la dirección editorial es competencia exclusiva del Presidente."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley distingue funciones de supervisión y definición estratégica (Consejo) de ejecución y representación (Presidente). Las otras opciones atribuyen funciones exclusivas o imprecisas que no coinciden con la estructura legal.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a AVC/H.264 frente a HEVC/H.265, cuál afirmación es correcta:",
+          "options": [
+            "HEVC es siempre preferible por su completa compatibilidad con todos los dispositivos de emisión actuales.",
+            "AVC es más eficiente que HEVC y requiere menos potencia de decodificación.",
+            "HEVC ofrece mayor eficiencia de compresión (aprox. reducción de bitrate respecto a AVC) a costa de mayor complejidad de codificación/decodificación y menor compatibilidad en equipos antiguos.",
+            "AVC y HEVC tienen idéntica complejidad de decodificación y rendimiento."
+          ],
+          "correctIndex": 2,
+          "explanation": "HEVC logra mayor eficiencia a cambio de mayor complejidad de decodificación y menor compatibilidad en dispositivos antiguos; los demás distractores contradicen la realidad técnica de eficiencia y compatibilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Según el teorema de Nyquist, cuál de las siguientes afirmaciones es correcta respecto a frecuencia de muestreo, banda audible y aliasing:",
+          "options": [
+            "Cualquier frecuencia de muestreo por encima de 20 kHz evita automáticamente aliasing.",
+            "32 kHz garantiza captura sin aliasing hasta 20 kHz porque los filtros anti‑aliasing lo corrigen totalmente.",
+            "Una frecuencia de muestreo de 44,1 kHz es suficiente para captar hasta 20 kHz sin aliasing; usar una frecuencia inferior (p. ej. 32 kHz) puede ocasionar aliasing de las componentes por encima de la mitad del muestreo.",
+            "La relación de muestreo no influye en la posibilidad de aliasing si se usa cuantización de 24 bits."
+          ],
+          "correctIndex": 2,
+          "explanation": "Nyquist exige muestrear al menos al doble de la máxima frecuencia; 44,1 kHz supera el mínimo para 20 kHz. Frecuencias menores (32 kHz) no alcanzan Nyquist y pueden producir aliasing. Los demás distractores confunden filtros o profundidad de bits con muestreo.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que describe correctamente el principio operativo de grabación en bucle (loop) en servidores EVS y la gestión de canales y recuperación de acciones:",
+          "options": [
+            "Los servidores graban continuamente en buffers circulares por canal; sólo cuando un operador marca o 'preserva' una sección se crea un clip persistente que evita sobreescritura.",
+            "La grabación en bucle mantiene indefinidamente todos los datos grabados hasta que se alcanza la capacidad del RAID.",
+            "Al grabar en bucle no es posible realizar recuperaciones ni operaciones de instant replay.",
+            "Cada canal de grabación en bucle duplica automáticamente su contenido en un servidor espejo para archivado en tiempo real."
+          ],
+          "correctIndex": 0,
+          "explanation": "La operación estándar es buffer circular por canal y preservación explícita para crear clips persistentes. Los distractores confunden carácter temporal del buffer, imposibilidad de replay o duplicación automática que no es el principio operativo básico.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_music_sync",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Respecto a la sincronización del montaje con música, señale la excepción (práctica no recomendable):",
+          "options": [
+            "Alinear cortes y cambios de plano con acentos rítmicos relevantes.",
+            "Respetar la frase musical para cambios estructurales de la escena.",
+            "Emplear contrapunto sonoro de forma intencional para generar contraste narrativo.",
+            "Forzar cortes repetidos en medio de una misma frase musical sin relación narrativa para acelerar ritmo."
+          ],
+          "correctIndex": 3,
+          "explanation": "Forzar cortes dentro de una frase musical sin motivación narrativa suele romper coherencia y comprensión; las otras prácticas son técnicas habituales para sincronizar y articular montaje y música.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las consecuencias de una adaptación incorrecta de impedancias en una cadena audiovisual:",
+          "options": [
+            "Aumenta automáticamente la frecuencia de muestreo requerida para evitar aliasing.",
+            "Pueden incrementarse ruidos e interferencias por mal acoplamiento entre etapas.",
+            "Se produce alteración de la respuesta en frecuencia y pérdidas selectivas en bandas.",
+            "Aparecen reflexiones y pérdidas por desadaptación que pueden degradar la transferencia de señal."
+          ],
+          "correctIndex": 0,
+          "explanation": "La exigencia de una mayor frecuencia de muestreo no es consecuencia de una mala adaptación de impedancias; las otras opciones describen efectos reales (reflexiones, ruido, alteración de respuesta) de una desadaptación.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a riesgos y prevención durante tareas en misión o desplazamientos profesionales, cuál de las siguientes medidas debe priorizar el empleador antes del desplazamiento:",
+          "options": [
+            "Delegar totalmente la responsabilidad al trabajador sin protocolos de comunicación.",
+            "Limitar las medidas preventivas al suministro de equipo de oficina estándar en destino.",
+            "No es necesaria evaluación si el trabajador conoce el itinerario.",
+            "Realizar evaluación de riesgos específica y proporcionar información y formación sobre medidas preventivas y condiciones del trabajo en destino."
+          ],
+          "correctIndex": 3,
+          "explanation": "La prevención en misión exige evaluación específica, información y formación; los distractores minimizan o trasladan indebidamente responsabilidades al trabajador.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En materia de protección de menores y clasificación/acceso a contenidos, cuál opción refleja mejor las obligaciones introducidas por la Ley 13/2022:",
+          "options": [
+            "La ley sólo recomienda políticas voluntarias de autorregulación sin obligaciones concretas.",
+            "Los prestadores deben establecer clasificación por edad y medidas de control de acceso, así como limitar la disponibilidad en franjas u accesos cuando sea pertinente.",
+            "Se prohíbe la emisión de cualquier contenido con violencia dirigida a menores en cualquier horario.",
+            "Las obligaciones se aplican únicamente a radiodifusión lineal, no a servicios bajo demanda."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley impone obligaciones de clasificación y medidas de protección de acceso; no se limita a recomendaciones ni prohíbe de forma absoluta ni restringe exclusivamente a un tipo de servicio, por lo que las otras opciones son incorrectas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para preparar un entregable final broadcast frente a un paquete para edición colaborativa, cuál elección de MXF es la más adecuada:",
+          "options": [
+            "OP‑Atom es incompatible con workflows de edición no lineal.",
+            "Usar OP‑Atom para consolidar pistas en un único fichero por clip y facilitar entrega final.",
+            "OP1a crea siempre múltiples ficheros por pista, lo que lo hace ideal para edición en equipo.",
+            "Usar MXF OP1a para empaquetar la esencia en un único fichero por clip adecuado para entrega y archivo final."
+          ],
+          "correctIndex": 3,
+          "explanation": "OP1a agrupa las pistas en un único fichero por archivo, siendo habitual en entregas; OP‑Atom mantiene archivos por pista/essence y resulta más apropiado para edición. Los distractores confunden la estructura y compatibilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un vectorscopio, qué indica principalmente el desplazamiento angular de un clúster respecto a la 'skin‑line':",
+          "options": [
+            "Un aumento de la saturación sin variación del tono.",
+            "Un cambio de matiz/hue (tono) respecto a la referencia esperada para la piel.",
+            "Un problema de sincronismo horizontal en la señal de vídeo.",
+            "Una reducción de la luminancia media del plano."
+          ],
+          "correctIndex": 1,
+          "explanation": "El ángulo en vectorscopio representa el matiz; si el clúster de tonos de piel se desplaza angularmente respecto a la skin‑line, indica un cambio de hue. La distancia al centro refleja saturación; las otras opciones no describen ese fenómeno.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_relink",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Si al relinkar material en un NLE aparecen enlaces incorrectos entre clips y ficheros con nombres idénticos procedentes de distintas fuentes, cuál es el diagnóstico más probable:",
+          "options": [
+            "El relink detecta por checksum y por tanto los nombres no influyen en el resultado.",
+            "El relink siempre utiliza UMID y no puede fallar por nombres idénticos.",
+            "El relink se ha ejecutado basándose únicamente en el nombre de fichero y timecode, lo que provoca coincidencias erróneas entre archivos con nombres repetidos.",
+            "El relink se realiza por códec y resolución únicamente, por eso se han enlazado archivos distintos."
+          ],
+          "correctIndex": 2,
+          "explanation": "El problema típico es el uso de criterios insuficientes como nombre/timecode que generan falsos positivos cuando existen nombres idénticos; los distractores afirman mecanismos (UMID/checksum/códec) que no se han aplicado en este diagnóstico.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Respecto a derechos y obligaciones en PRL, cuál de las siguientes corresponde al trabajador:",
+          "options": [
+            "Diseñar e implementar el plan de prevención de la empresa de forma independiente.",
+            "Participar en la formación y utilizar adecuadamente los equipos y EPIs facilitados, además de informar de riesgos y colaborar en las medidas de prevención.",
+            "Establecer las políticas de PRL para el centro de trabajo.",
+            "Eximir al empresario de realizar evaluaciones de riesgo documentadas."
+          ],
+          "correctIndex": 1,
+          "explanation": "El trabajador debe formarse, usar correctamente los medios y colaborar/informar; las demás opciones atribuyen al trabajador funciones que son responsabilidad del empresario.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Comparando niveles RAID y su tolerancia a fallos y reconstrucción, cuál afirmación es correcta:",
+          "options": [
+            "RAID 0 ofrece tolerancia a un disco fallido y reconstrucción mediante espejo automático.",
+            "RAID 6 tolera la pérdida simultánea de dos discos; su reconstrucción implica cálculos de doble paridad y suele ser más lenta y exigente que la reconstrucción de RAID 5.",
+            "RAID 1 no permite reconstrucción después de fallo de disco.",
+            "RAID 5 tolera la pérdida de dos discos simultáneamente sin riesgo de pérdida de datos."
+          ],
+          "correctIndex": 1,
+          "explanation": "RAID 6 permite dos fallos simultáneos y requiere cálculos de doble paridad para reconstruir, por lo que la reconstrucción es más lenta que en RAID 5. Los otros distractores describen comportamientos erróneos de RAID 0, RAID 1 y RAID 5.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "020",
       "title": "Examen 020",
