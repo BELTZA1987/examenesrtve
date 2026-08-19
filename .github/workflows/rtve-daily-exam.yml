@@ -3,7 +3,7 @@ name: Examen diario RTVE
 run-name: Generar y publicar examen RTVE #${{ github.run_number }}
 
 on:
-  # Permite generar un examen nuevo manualmente
+  # Permite generar un examen manualmente cuando quieras
   workflow_dispatch:
 
   # Generación automática todos los días a las 09:17
@@ -12,20 +12,22 @@ on:
     - cron: "17 9 * * *"
       timezone: "Europe/Madrid"
 
-# Impide que dos generaciones/publicaciones se solapen
+# Evita que dos publicaciones se solapen
 concurrency:
   group: rtve-github-pages
   cancel-in-progress: true
+
 
 jobs:
 
   # ============================================================
   # GENERAR EXAMEN
   # ============================================================
+
   generate:
     name: Generar examen
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     permissions:
       contents: write
@@ -60,7 +62,7 @@ jobs:
             python -m pip install openai
           fi
 
-      # 4. Comprobar que existe OPENAI_API_KEY
+      # 4. Comprobar que existe la clave de OpenAI
       - name: Comprobar clave de OpenAI
         shell: bash
         env:
@@ -74,10 +76,10 @@ jobs:
 
           echo "OPENAI_API_KEY encontrada correctamente."
 
-      # 5. Generar SIEMPRE un examen nuevo
+      # 5. Generar un examen nuevo
       #
-      # FORCE_CREATE=true hace que generate_exam.py cree
-      # un examen aunque ya exista otro del mismo día.
+      # FORCE_CREATE=true permite generar otro examen
+      # aunque ya haya uno del mismo día.
       - name: Generar examen nuevo
         shell: bash
         env:
@@ -87,8 +89,10 @@ jobs:
           echo "Generando un examen nuevo..."
           python scripts/generate_exam.py
 
-
-            - name: Comprobar examen generado
+      # 6. Comprobar únicamente que exams.json existe
+      #
+      # Ya NO detenemos el workflow usando git diff.
+      - name: Comprobar examen generado
         shell: bash
         run: |
           if [ ! -f "data/exams.json" ]; then
@@ -99,7 +103,7 @@ jobs:
           echo "data/exams.json existe correctamente."
           ls -lh data/exams.json
 
-      # 7. Guardar el nuevo exams.json en GitHub
+      # 7. Guardar el examen en GitHub si existen cambios
       - name: Guardar examen en GitHub
         shell: bash
         run: |
@@ -108,11 +112,17 @@ jobs:
 
           git add data/exams.json
 
-          FECHA_MADRID="$(TZ=Europe/Madrid date +'%Y-%m-%d %H:%M:%S')"
+          if git diff --cached --quiet; then
+            echo "No hay cambios nuevos en data/exams.json."
+          else
+            FECHA_MADRID="$(TZ=Europe/Madrid date +'%Y-%m-%d %H:%M:%S')"
 
-          git commit -m "Nuevo examen RTVE - ${FECHA_MADRID}"
+            git commit -m "Nuevo examen RTVE - ${FECHA_MADRID}"
 
-          git push origin HEAD:${{ github.event.repository.default_branch }}
+            git push origin HEAD:${{ github.event.repository.default_branch }}
+
+            echo "Nuevo examen guardado en GitHub."
+          fi
 
       # 8. Comprobar que existe index.html
       - name: Comprobar página web
@@ -123,9 +133,9 @@ jobs:
             exit 1
           fi
 
-          echo "index.html encontrado."
+          echo "index.html encontrado correctamente."
 
-      # 9. Preparar los archivos que se publicarán
+      # 9. Preparar los archivos de la página
       - name: Preparar página web
         shell: bash
         run: |
@@ -143,6 +153,7 @@ jobs:
             --exclude="*.pyc" \
             ./ "_site/"
 
+          # Evita que GitHub Pages procese el sitio mediante Jekyll
           touch "_site/.nojekyll"
 
           if [ ! -f "_site/index.html" ]; then
@@ -156,6 +167,7 @@ jobs:
           fi
 
           echo "Página preparada correctamente."
+
           echo ""
           echo "Archivos que se publicarán:"
           find "_site" -maxdepth 4 -type f | sort
@@ -164,10 +176,10 @@ jobs:
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
-      # 11. Crear el artefacto de GitHub Pages
+      # 11. Crear el artefacto de la página
       #
-      # El nombre incluye run_id y run_attempt para evitar
-      # el problema anterior de dos artefactos github-pages.
+      # Cada ejecución utiliza un nombre diferente
+      # para evitar el antiguo problema de artefactos duplicados.
       - name: Subir página
         uses: actions/upload-pages-artifact@v5
         with:
@@ -177,8 +189,9 @@ jobs:
 
 
   # ============================================================
-  # PUBLICAR GITHUB PAGES
+  # PUBLICAR EN GITHUB PAGES
   # ============================================================
+
   deploy:
     name: Publicar en GitHub Pages
     needs: generate
