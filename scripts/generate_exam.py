@@ -1770,27 +1770,6 @@ def main() -> int:
 
     print(f"FORCE_CREATE={force_create}")
 
-    # Comprobar si ya existe un examen de hoy.
-    today = datetime.now().strftime("%Y-%m-%d")
-
-    already_exists_today = any(
-        str(exam.get("date", "")).startswith(today)
-        for exam in existing
-    )
-
-    if already_exists_today:
-        if force_create:
-            print(
-                "Ya existe un examen de hoy, pero FORCE_CREATE=True. "
-                "Se generará un examen nuevo."
-            )
-        else:
-            print(
-                "Ya existe un examen para hoy y FORCE_CREATE=False. "
-                "No se genera otro."
-            )
-            return 0
-
     # Calcular el siguiente número de examen
     numeric_ids = [
         int(str(exam.get("id", "")).strip())
