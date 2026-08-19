@@ -1759,9 +1759,29 @@ def main() -> int:
     data = load_data()
     existing: list[dict[str, Any]] = data["exams"]
 
-    if already_exists_today and FORCE_CREATE:
-    print("Ya existe un examen hoy, pero FORCE_CREATE=True: se generará otro.")
+    # Comprobar si ya existe un examen generado hoy
+    today = datetime.now().strftime("%Y-%m-%d")
 
+    already_exists_today = any(
+        str(exam.get("date", "")).startswith(today)
+        for exam in existing
+    )
+
+    # Si ya existe un examen y FORCE_CREATE no está activado,
+    # no generamos otro.
+    if already_exists_today and not FORCE_CREATE:
+        print("Ya existe un examen para hoy. No se genera otro.")
+        return 0
+
+    # Si FORCE_CREATE está activado, permitimos generar otro
+    # aunque ya exista un examen del mismo día.
+    if already_exists_today and FORCE_CREATE:
+        print(
+            "Ya existe un examen hoy, pero FORCE_CREATE=True: "
+            "se generará otro."
+        )
+
+    # Calcular el siguiente número de examen
     numeric_ids = [
         int(str(exam.get("id", "")).strip())
         for exam in existing
@@ -1770,6 +1790,7 @@ def main() -> int:
     next_number = max(numeric_ids, default=0) + 1
     exam_id = f"{next_number:03d}"
 
+    # Preparar referencia, histórico y planificación temática
     reference = REFERENCE_FILE.read_text(encoding="utf-8")
     recent_prompts = recent_prompt_list(existing)
     plan = choose_concepts(existing, next_number)
