@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19",
+  "updatedAt": "2026-08-20",
   "exams": [
+    {
+      "id": "022",
+      "title": "Examen 022",
+      "date": "2026-08-20",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Según el modelo de financiación previsto en Ley 8/2009, señale la restricción que condiciona de forma directa la gestión económica de la Corporación RTVE:",
+          "options": [
+            "La autorización para recibir aportaciones privadas condicionadas por patrocinadores bajo contrato mercantil.",
+            "La posibilidad de contratar publicidad ilimitada para equilibrar déficits operativos.",
+            "La obligación de financiarse preferentemente mediante recursos públicos estables, limitando la dependencia de ingresos comerciales.",
+            "La libertad para crear filiales comerciales que capten la mayor parte de los ingresos de explotación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La ley establece un modelo basado en recursos públicos estables para reducir la dependencia de ingresos comerciales; las otras opciones describen fuentes o prácticas que aumentarían la dependencia comercial y no forman la restricción central del modelo. La diferencia clave frente al distractor más cercano (B) es que la ley prioriza fuentes públicas estables frente a ingresos publicitarios no limitados.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "basic_red_ip",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Para diagnosticar la falta de acceso a un recurso compartido en una red de edición, compare las comprobaciones y elija la secuencia más adecuada:",
+          "options": [
+            "Verificar enlace físico y luces de enlace, comprobar dirección IP y máscara, probar puerta de enlace y finalmente DNS.",
+            "Comprobar únicamente el servidor de archivos, reiniciar estación y luego verificar la DNS.",
+            "Cambiar la máscara de subred al azar, verificar la puerta de enlace y luego el cableado.",
+            "Deshabilitar el firewall del equipo de edición, cambiar la IP y, si falla, reinstalar el sistema operativo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La secuencia correcta comienza por enlace físico, sigue con comprobación de IP/máscara (errores de subnet son comunes), luego puerta de enlace y finalmente DNS. El distractor más próximo (B) omite pasos básicos de conectividad (enlace físico y configuración IP), que son imprescindibles.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_export_qc",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "En el control de calidad de una exportación para entrega, ¿qué comprobación es la más pertinente para verificar específicamente campos y sincronía audiovisual?",
+          "options": [
+            "Comprobar el flag de entrelazado/orden de campos y comparar audio frente a timecode en varios puntos de la secuencia.",
+            "Verificar únicamente la tasa de bits del códec y la resolución de la imagen.",
+            "Comprobar que el contenedor sea MOV independientemente de los metadatos de video.",
+            "Confirmar que el proyecto original y el exportado tengan nombres de archivo idénticos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La verificación de la señal entrelazada y del orden de campos, junto a chequeos de sincronía audio‑timecode, es la comprobación específica para campos y sincronía. Los distractores obvian campos/sincronía o se centran en elementos no determinantes para ese control (B y C).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a soportes de estado sólido usados en grabación, ¿cuál de las siguientes prácticas es la más compatible con conservación e integridad del material tras la descarga?",
+          "options": [
+            "Formatear inmediatamente el soporte en cámara con bajo nivel de formato para mantener rendimiento.",
+            "Generar checksums e incorporar la copia verificada al sistema de archivos de archivo antes de formatear el soporte.",
+            "Ejecutar borrado seguro (secure erase) varias veces antes de copiar el material a archivo.",
+            "Conservar la tarjeta sin duplicar mientras se confía en la única copia original en la tarjeta."
+          ],
+          "correctIndex": 1,
+          "explanation": "Generar checksums y verificar las copias antes de formatear es la práctica recomendada; garantiza integridad y permite liberar el soporte. Los distractores implican pérdida de datos (D), ejecución innecesaria de borrado que puede dañar el soporte (C) o formateo prematuro sin verificar (B).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En un RGB Parade el canal rojo muestra consistentemente 3–5% más nivel en altas luces que verde y azul. ¿Cuál es el diagnóstico técnico más probable?",
+          "options": [
+            "Un error en el vectorscopio que desplaza la 'skin‑line' sin afectar a la parade.",
+            "Clipping general del master por limitador de luminancia aplicado sobre la luminancia Y únicamente.",
+            "Desplazamiento del balance de blancos o ganancia elevada en el canal rojo de la cámara/cadena de captura.",
+            "Un problema de sincronización tri‑level que afecta selectivamente al canal rojo."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un exceso en el canal rojo en las altas luces suele deberse a ganancia o balance de blancos desplazado en la cámara o en la cadena de captura. El distractor más cercano (B) habla de limitador sobre Y, que afectaría la luminancia global y no discriminaría por canal como lo hace un exceso en rojo.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación correcta sobre la diferencia práctica entre J‑cut y L‑cut en cuanto al momento relativo del audio respecto a la imagen:",
+          "options": [
+            "En ambos casos el audio del plano siguiente nunca puede introducirse antes de su imagen.",
+            "En un J‑cut el audio del plano siguiente se prolonga sobre el plano anterior después del corte.",
+            "En un J‑cut el audio del plano siguiente se escucha antes de que aparezca su imagen.",
+            "Ambas técnicas implican que el audio y la imagen cambian exactamente al mismo fotograma."
+          ],
+          "correctIndex": 2,
+          "explanation": "La característica operativa del J‑cut es que el audio del plano siguiente precede a su imagen; las otras opciones son incorrectas: B describe la técnica opuesta, C y D contradicen la práctica de montaje. La diferencia decisiva con el distractor más próximo (B) es que B invierte el orden temporal del audio respecto a la imagen.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Ante un conato de incendio en una sala técnica con equipos eléctricos energizados, ¿cuál es la actuación prioritaria y adecuada?",
+          "options": [
+            "Apagar con agua corriente la zona afectada para refrigerar los equipos.",
+            "Si es seguro hacerlo, cortar la alimentación eléctrica y usar extintor adecuado para fuegos eléctricos (CO2 o polvo) o evacuar si no se controla.",
+            "Intentar desmontar y retirar manualmente equipos en llamas para evitar propagación.",
+            "Esperar a la activación del sistema de detección contra incendios sin intervenir."
+          ],
+          "correctIndex": 1,
+          "explanation": "En incendios de origen eléctrico la acción prioritaria, si es segura, es cortar la alimentación y utilizar un extintor adecuado (CO2 o polvo); si no puede controlarse, evacuar. El distractor más cercano (D) deja pasar tiempo, lo que puede agravar el riesgo; B y C son acciones peligrosas con equipos eléctricos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a los principios y obligaciones de la acción preventiva según Ley 31/1995:",
+          "options": [
+            "Integrar la prevención en la gestión y organización del trabajo.",
+            "Evaluar riesgos y planificar medidas preventivas antes de iniciar actividades.",
+            "Formar e informar a los trabajadores sobre los riesgos específicos de su puesto.",
+            "El empresario tiene la obligación de eliminar toda posibilidad de riesgo en cualquier circunstancia sin condiciones."
+          ],
+          "correctIndex": 3,
+          "explanation": "La última opción es una exageración: la ley exige medidas de prevención, evaluación y adaptación, no la eliminación absoluta e incondicional de todo riesgo. Los tres primeros enunciados reflejan principios y obligaciones reales; la diferencia clave es que el distractor incorrecto presenta una exigencia inalcanzable y no prevista.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a LTO con LTFS para archivo a largo plazo, señale la afirmación correcta sobre acceso y limitaciones:",
+          "options": [
+            "LTO/LTFS es adecuado para acceso de baja latencia en edición interactiva multipista.",
+            "LTO ofrece acceso aleatorio instantáneo comparable a discos SSD sin necesidad de catálogo.",
+            "LTFS elimina la necesidad de mantener copias verificadas porque la cinta mantiene siempre integridad perfecta.",
+            "LTFS permite montar la cinta como sistema de ficheros, pero el acceso aleatorio es significativamente más lento y requiere catálogo/índice y verificación de integridad."
+          ],
+          "correctIndex": 3,
+          "explanation": "LTFS permite tratar la cinta como FS pero mantiene la limitación de acceso secuencial que hace lento el acceso aleatorio; por ello son necesarios catálogos y verificaciones. Los distractores exageran prestaciones (B,D) o consideran la cinta infalible (C). La diferencia crucial frente a D es la latencia inherente al medio cinta.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Para minimizar artefactos al mezclar cadencias distintas o convertir cadencias entre formatos, ¿qué método técnico es el más adecuado?",
+          "options": [
+            "Sencillo duplicado o eliminación de fotogramas (drop/duplicate) sin ajuste de movimiento.",
+            "Conversión con interpolación por movimiento (motion‑compensated frame interpolation).",
+            "Pulldown clásico sin proceso de adaptación de movimiento.",
+            "Aplicar solo ajuste de audio sin tocar la tasa de fotogramas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La conversión por interpolación con compensación de movimiento reduce judder y artefactos al adaptar cadencias distintas. Los métodos de duplicado/ eliminación o pulldown introducen más artefactos; el distractor más próximo (C) mantiene patrones de repetición que generan judder perceptible.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_news",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al editar un despacho informativo de última hora, ¿qué criterio debe primar para decidir la duración, la voz en off y los recursos incluidos?",
+          "options": [
+            "Evitar cualquier cambio solicitado por redacción para preservar la versión del editor.",
+            "Priorizar efectos visuales y musicales por encima del contenido informativo para captar audiencia.",
+            "Mantener siempre la pieza a la duración máxima disponible independientemente de la noticia.",
+            "La prioridad informativa y la coordinación con redacción para ajustar locución, totales y tiempos de emisión."
+          ],
+          "correctIndex": 3,
+          "explanation": "En noticias la prioridad es el valor informativo y la coordinación con redacción para adaptar locución, planos totales y tiempos. Los distractores subordinan la información a lo estético o ignoran la coordinación con redacción; la diferencia decisiva es la jerarquía informativa frente a criterios meramente estéticos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Para dimensionar un servidor de vídeo que atiende N canales concurrentes con streams de bitrate constante, cuál es la consideración operativa principal:",
+          "options": [
+            "El número de canales concurrentes no afecta al almacenamiento, sólo al códec.",
+            "Basta con dimensionar la CPU, la red no es relevante si los discos son rápidos.",
+            "El ancho de banda de red necesario es la suma de los bitrates de todos los canales simultáneos; además el servidor debe soportar I/O y conexiones concurrentes suficientes.",
+            "Sólo es necesario duplicar el espacio de disco por seguridad; el ancho de red queda fijo."
+          ],
+          "correctIndex": 2,
+          "explanation": "Operativamente el ancho de banda requerido es la suma de los bitrates de los canales concurrentes y además hay que garantizar I/O/disco y capacidad de conexiones. Los distractores subestiman la importancia de la red o confunden almacenamiento con ancho de banda; la diferencia clave frente a B es que la red sí es crítica.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción (incorrecta) respecto al manejo de alpha premultiplicado frente a straight en composición de gráficos:",
+          "options": [
+            "Al convertir premult a straight basta dividir los canales RGB por el valor alfa sin condiciones adicionales.",
+            "En straight (unpremult) los canales RGB se guardan sin multiplicar por alfa y la multiplicación se aplica en la composición.",
+            "En premultiplied (premult) los valores RGB ya están multiplicados por el canal alfa.",
+            "Si se compone contenido premult sin respetar el modo premult se generan halos o bordes incorrectos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación 3 es incorrecta: dividir RGB por alfa en presencia de alfa = 0 requiere manejo especial (evitar división por cero y criterios de remuestreo); no es una operación 'basta' sin condiciones. Las demás opciones describen principios correctos; la diferencia decisiva frente al distractor más cercano (4) es que el error típico son los halos por falta de tratamiento premult.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Para dar genlock a una instalación mixta SD/HD, ¿qué criterio técnico se aplica al elegir entre black‑burst y tri‑level?",
+          "options": [
+            "Utilizar siempre black‑burst para todas las señales por compatibilidad universal.",
+            "Usar tri‑level para señales HD progresivas y black‑burst para señales SD entrelazadas, con conversores de sincronismo cuando conviven ambas.",
+            "Emplear tri‑level sólo en instalaciones analógicas y black‑burst en digitales.",
+            "Evitar cualquier sincronismo externo y confiar en los timecodes locales de cada equipo."
+          ],
+          "correctIndex": 1,
+          "explanation": "El criterio correcto es usar tri‑level para HD progresivo y black‑burst para SD entrelazado; en instalaciones mixtas se emplean convertidores de sincronismo. Los distractores son incorrectos: B generaliza indebidamente, C confunde el sentido y D elimina la sincronización externa necesaria.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Según el III Convenio Colectivo de RTVE, ¿qué criterio es determinante para la clasificación profesional de una ocupación?",
+          "options": [
+            "La temporalidad del contrato como elemento único de clasificación.",
+            "El salario histórico percibido por la persona en ese puesto sin tomar en cuenta funciones.",
+            "La edad del trabajador como criterio de clasificación.",
+            "Las funciones y responsabilidades asignadas al puesto, junto con la cualificación necesaria."
+          ],
+          "correctIndex": 3,
+          "explanation": "La clasificación profesional se determina por funciones, responsabilidades y cualificación exigida al puesto; los otros elementos no son criterios primarios. La diferencia frente al distractor más cercano (B) es que la clasificación es funcional, no meramente salarial.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Al copiar un fichero de 12 GB desde una cámara a un disco externo y la copia falla inmediatamente por límite de sistema de ficheros, cuál es la operación técnica más adecuada:",
+          "options": [
+            "Reducir la resolución del fichero fuente para que ocupe menos de 4 GB.",
+            "Formatear el disco con un sistema de archivos que soporte ficheros mayores (por ejemplo exFAT o NTFS) y volver a copiar tras verificar checksums.",
+            "Crear un enlace simbólico en el disco y mover el fichero original.",
+            "Usar compresión ZIP rápida en la propia cámara antes de copiar."
+          ],
+          "correctIndex": 1,
+          "explanation": "El procedimiento correcto ante límites de tamaño (p. ej. FAT32) es usar un sistema de ficheros que soporte ficheros >4 GB (exFAT/NTFS) y verificar la copia con checksums. Los distractores reducen calidad o son inviables en cámara; la diferencia decisiva respecto a B es que formatear evita pérdida de calidad.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para reducir la tensión lumbar y mejorar ergonomía en un puesto de edición, indique la medida de ajuste postural más eficaz:",
+          "options": [
+            "Usar siempre un taburete sin respaldo para fortalecer la musculatura lumbar.",
+            "Colocar el monitor lo más bajo posible para forzar la espalda hacia atrás.",
+            "Ajuste de la altura del asiento con apoyo lumbar, ajuste de antebrazos a la altura del escritorio y apoyo de pies si procede.",
+            "Evitar cualquier reposapiés aunque las piernas queden en tensión."
+          ],
+          "correctIndex": 2,
+          "explanation": "La medida más eficaz combina ajuste de altura de silla con apoyo lumbar, ajuste de antebrazos y apoyo de pies cuando necesario. Los distractores proponen posturas no ergonómicas o contrarias a buenas prácticas; la diferencia clave es que la opción correcta aborda los cuatro puntos mencionados en el temario.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Compare de forma básica PQ y HLG en su principio y compatibilidad de distribución:",
+          "options": [
+            "PQ (ST2084) es una EOTF display‑referenced con gestión de metadatos; HLG es una EOTF híbrida diseñada para compatibilidad con pantallas SDR sin metadatos.",
+            "HLG requiere metadatos de nivel de exposición para cada clip; PQ es totalmente compatible con SDR sin transformación.",
+            "Ambas curvas son idénticas en comportamiento y no requieren transformaciones para diferentes pantallas.",
+            "PQ está pensada exclusivamente para emisión en internet, HLG para cine."
+          ],
+          "correctIndex": 0,
+          "explanation": "PQ es una EOTF con referencia absoluta (ST2084) que suele requerir metadata para mapeo; HLG es un enfoque híbrido que permite cierta compatibilidad con pantallas SDR sin metadatos. Los distractores contienen afirmaciones falsas o exageradas; la diferencia decisiva frente al más cercano (B) es la necesidad típica de metadata en PQ y la naturaleza híbrida de HLG.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En un mezclador de vídeo, ¿qué enunciado describe correctamente la interacción entre programa, previo, key y la transición durante una operación de incrustación?",
+          "options": [
+            "El previo y el programa son la misma salida física y no existe intervención del operador.",
+            "La señal de programa siempre está desconectada del keyer y no se ve afectada por la transición desde previo.",
+            "La key sólo se aplica en modo fade, no en cut o wipe.",
+            "El previo permite preparar la fuente y la key define la máscara; durante la transición el contenido del previo pasa a programa aplicando la key según la configuración del keyer."
+          ],
+          "correctIndex": 3,
+          "explanation": "Correcto: el previo sirve para preparar la fuente, la key define la máscara y durante la transición el previo pasa a programa aplicando la key si está configurada. Los distractores niegan funciones básicas del mezclador o presentan limitaciones falsas; la diferencia clave frente al más cercano (B) es que la key sí afecta la señal mostrada en programa durante la transición.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Respecto a una estructura GOP con fotogramas I, P y B, indique la consecuencia correcta de errores de codificación en elementos predictivos:",
+          "options": [
+            "La corrupción de un I frame afecta a todos los cuadros dependientes hasta el siguiente I, propagando la pérdida hasta ese punto.",
+            "La corrupción de un B frame siempre provoca fallo permanente en el decodificador hasta reinicio.",
+            "Un error en un P frame no afecta a otros frames porque sólo los I dependen de P.",
+            "Los errores en P o I no tienen impacto en la reconstrucción de audio embebido."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un I corrupto normalmente provoca errores en todos los frames dependientes hasta el siguiente I; P corrupto también afecta a los frames predictivos que dependen de él. El distractor más cercano (2) es falso: un B corrupto afecta la calidad visual en su entorno pero no suele bloquear permanentemente la decodificación. La diferencia decisiva es la propagación de errores por dependencia predictiva.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "021",
       "title": "Examen 021",
