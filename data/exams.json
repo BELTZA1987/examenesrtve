@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-20",
+  "updatedAt": "2026-08-21",
   "exams": [
+    {
+      "id": "023",
+      "title": "Examen 023",
+      "date": "2026-08-21",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Indique la afirmación que describe con mayor precisión la finalidad central de la modificación introducida por la Ley 5/2017 respecto a la elección de los órganos de RTVE:",
+          "options": [
+            "Aumentar la influencia del Gobierno en la designación de los órganos para acelerar decisiones ejecutivas.",
+            "Transferir la elección de los órganos de RTVE a un órgano judicial para garantizar neutralidad técnica.",
+            "Restablecer la independencia y pluralismo en la elección parlamentaria de los órganos, buscando mecanismos que reduzcan la dependencia directa del poder ejecutivo.",
+            "Eliminar la intervención parlamentaria y delegar la designación en el propio Consejo de Administración para agilizar nombramientos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La reforma buscó recuperar independencia y pluralismo mediante un procedimiento parlamentario que reduzca la dependencia del Ejecutivo; las otras opciones proponen controles contrarios (mayor influencia gubernamental), o cambios no previstos (órgano judicial o autoadministración del Consejo). La diferencia decisiva es la intención de reforzar independencia frente al Ejecutivo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la causa que mejor explica la aparición de un zumbido a 50/60 Hz atribuible a un bucle de masa en una instalación audiovisual:",
+          "options": [
+            "Problema de sincronización de reloj digital entre cámaras que provoca distorsión audible.",
+            "Interferencia RF procedente de emisoras cercanas inducida en cables no apantallados.",
+            "Fallo en la alimentación phantom de micrófonos que introduce ruido térmico.",
+            "Diferencia de potencial entre las masas de equipos conectados por múltiples rutas de tierra que genera corriente de bucle entre chasis y se traduce en zumbido de red."
+          ],
+          "correctIndex": 3,
+          "explanation": "El bucle de masa suele deberse a diferencias de potencial entre tierras conectadas por varios caminos; provoca corriente de red y zumbido. Los distractores son ruidos de origen distinto (RF, alimentación phantom o sincronismo digital) y no explican la corriente de loop entre masas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Indique cuál de las siguientes parejas corresponde a una corrección primaria y a una corrección secundaria, respectivamente:",
+          "options": [
+            "Ajustar el balance de blancos de todo el plano; crear una máscara para reducir la saturación de una zona concreta.",
+            "Aplicar una curva local en la sombra de una chaqueta; normalizar el nivel de negros de la imagen completa.",
+            "Saturar selectivamente un logotipo; cambiar la matriz de color de toda la toma.",
+            "Aplicar un keyer para eliminar un fondo; ajustar el contraste global de la imagen."
+          ],
+          "correctIndex": 0,
+          "explanation": "La corrección primaria actúa sobre ajustes globales (balance de blancos global), la secundaria sobre áreas concretas mediante máscaras (reducir saturación en zona). Los distractores invierten o mezclan ámbitos: p. ej. aplicar curva local no es primaria; cambiar matriz global como segunda no corresponde al contraste entre global/selectivo.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a las consecuencias prácticas del submuestreo de crominancia en 4:2:0 frente a 4:4:4, indique la afirmación correcta:",
+          "options": [
+            "Elimina por completo la posibilidad de banding en degradados de color.",
+            "Afecta directamente a la resolución de luminancia, degradando el detalle de imagen en altas luces.",
+            "Evita la necesidad de convertir espacios de color al realizar transcodificaciones profesionales.",
+            "Reduce la resolución de crominancia en horizontal y vertical, limitando la precisión en etalonaje y el resultado de chroma‑key en bordes finos."
+          ],
+          "correctIndex": 3,
+          "explanation": "4:2:0 reduce la resolución de crominancia (no de luminancia), lo que limita la precisión en corrección de color y keying en detalles finos. Los distractores atribuyen efectos incorrectos: la luminancia no se degrada por crominancia; no evita conversiones ni elimina banding.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Al preparar una playlist en EVS/IPDirector destinada a emisión, ¿qué operación afecta más directamente a la continuidad de reproducción entre clips consecutivos?",
+          "options": [
+            "Modificar únicamente los user bits sin alterar puntos de entrada/salida.",
+            "Renombrar los metadatos descriptivos de los clips para mejorar búsqueda.",
+            "Definir el modo de transición y los puntos de 'splice' entre clips (handles y tipo de transición).",
+            "Cambiar el códec de los clips en origen sin ajustar puntos de entrada."
+          ],
+          "correctIndex": 2,
+          "explanation": "La continuidad entre clips depende de cómo se ensamblan (splice, handles y tipo de transición). Renombrar metadatos o alterar user bits no altera la continuidad de reproducción; cambiar códec sin ajustar puntos tampoco asegura continuidad si los splice no están bien definidos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Señale la afirmación que constituye una excepción respecto a las variantes de la familia XAVC (Intra/Long‑GOP, perfiles y aplicaciones):",
+          "options": [
+            "XAVC‑Long‑GOP es esencialmente intraframe y no requiere decodificación de fotogramas vecinos para access aleatorio.",
+            "Las variantes Long‑GOP optimizan bitrate para grabación prolongada a costa de decodificación dependiente de GOP.",
+            "XAVC‑Intra está orientado a edición profesional por su compresión intraframe que facilita acceso aleatorio.",
+            "XAVC‑S se presenta en contenedores orientados a mercado prosumer y puede usar Long‑GOP para eficiencia."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es la afirmación de que XAVC‑Long‑GOP es intraframe: en realidad utiliza interframe (dependencias GOP) y requiere decodificar fotogramas vecinos para acceso aleatorio. Las otras afirmaciones describen usos y características correctas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_backup_321",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que cumple correctamente la política 3‑2‑1 aplicada a la preservación de proyectos audiovisuales:",
+          "options": [
+            "Tres discos en RAID dentro del mismo armario son suficientes como 3‑2‑1 si usan distintos controladores.",
+            "Tres copias totales, en al menos dos soportes distintos, con al menos una copia almacenada fuera del sitio original.",
+            "Hacer un RAID 1 local más una única copia en el mismo servidor cumple 3‑2‑1.",
+            "Tres copias en la misma ubicación pero con distintos nombres de archivo satisfacen la regla."
+          ],
+          "correctIndex": 1,
+          "explanation": "La regla 3‑2‑1 exige tres copias, dos tipos de soporte y una copia off‑site. RAID local no sustituye a copias independientes ni a almacenamiento externo; las otras opciones incumplen la exigencia de soportes y ubicación independientes.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Respecto a la libertad de información y expresión en la Constitución, cuál de las siguientes afirmaciones es la correcta:",
+          "options": [
+            "Reconoce libertad de expresión sin límites ni restricciones legales sobre contenidos.",
+            "Reconoce la libertad de expresión y el derecho a comunicar información, con límites legales como la protección del honor, la intimidad y la ley aplicable para su garantía.",
+            "Restringe el derecho a la libertad de información exclusivamente a ciudadanos con plena mayoría de edad.",
+            "Establece la obligatoriedad de censura previa por parte de los poderes públicos antes de la difusión de contenidos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Constitución protege libertad de expresión e información pero las somete a límites legales (honor, intimidad, protección de menores, etc.). Las otras opciones son manifiestamente incorrectas: no hay libertad absoluta ni censura previa ni limitación por edad en esos términos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "language_match_action",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál de las siguientes estrategias de montaje es compatible con el recurso del raccord de movimiento (match on action) para preservar continuidad perceptiva?",
+          "options": [
+            "Romper la continuidad del movimiento para enfatizar discontinuidad psicológica en montajes de continuidad clásica.",
+            "Cortar únicamente cuando la iluminación y el encuadre coinciden exactamente, sin considerar el movimiento del actor.",
+            "Sustituir el corte por una disolución larga para ocultar la falta de coincidencia en la acción.",
+            "Cortar en el punto donde la acción sigue la misma dirección y timing entre plano A y plano B para mantener la continuidad del movimiento."
+          ],
+          "correctIndex": 3,
+          "explanation": "El raccord de movimiento busca cortar durante la acción manteniendo dirección y sincronía temporal; las otras opciones o bien ignoran el movimiento (centradas en iluminación/encuadre), usan disoluciones (no son la técnica típica de match on action) o describen intencional ruptura.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Al diagnosticar la ausencia de audio embebido en una salida SDI, ¿qué comprobación técnica es la más pertinente?",
+          "options": [
+            "Verificar en la traza ANC/packet de la señal SDI con un probe si existen los paquetes de audio embebido y los descriptores correspondientes.",
+            "Comprobar únicamente la ruta AES/EBU externa sin revisar la señal SDI.",
+            "Sustituir directamente el cable coaxial por USB para evitar problemas de audio embebido.",
+            "Reiniciar la cámara sin realizar pruebas sobre la señal SDI."
+          ],
+          "correctIndex": 0,
+          "explanation": "Para audio embebido la comprobación clave es inspeccionar los paquetes ANC en SDI y sus descriptores; comprobar solo AES/EBU o acciones de sustitución/reinicio no diagnostican la presencia/ausencia en SDI.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que distingue correctamente las operaciones: captura, importación, enlace e ingesta:",
+          "options": [
+            "Captura: enviar ficheros a emisión directa; Importación: sincronizar timecode; Enlace: mezclar pistas; Ingesta: transcodificar automáticamente todo el material.",
+            "Captura: crear proxies manuales; Importación: captura en tiempo real; Enlace: conversión de códec; Ingesta: eliminar metadatos no deseados.",
+            "Captura: sólo transferencia de audio; Importación: sólo vídeo; Enlace: combinación de ficheros; Ingesta: sólo copia en cinta.",
+            "Captura: transferencia en tiempo real desde dispositivo controlado; Importación: copiar ficheros desde soporte a proyecto; Enlace: crear referencia al fichero sin duplicarlo; Ingesta: proceso completo de entrada con registro de metadatos y control de calidad en servidor."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta distingue cada operación: captura en tiempo real desde dispositivo, importación como copia de ficheros, enlace como referencia y ingesta como flujo completo con registro y QC. Los distractores confunden funciones y asignaciones.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para mostrar simultaneidad en dos líneas narrativas y conducirlas a una convergencia temática, ¿qué estrategia de montaje es la más adecuada?",
+          "options": [
+            "Intercalar planos sin relación rítmica ni temporal para crear confusión deliberada entre acciones.",
+            "Presentar cada línea en bloques largos y sin alternancia hasta el final para mantener claridad cronológica.",
+            "Alternar planos de ambas líneas manteniendo ritmo y aumentando la frecuencia de cortes hasta un plano que las converge, subrayando similitudes temporales y temáticas.",
+            "Usar únicamente disolvencias largas entre planos para sugerir continuidad temporal."
+          ],
+          "correctIndex": 2,
+          "explanation": "Para marcar simultaneidad se alternan planos con ritmo controlado y se aumenta frecuencia hasta converger; las otras opciones rompen la percepción de simultaneidad (bloques largos), crean confusión o abusan de disoluciones sin precisión temporal.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_metadatos",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a la función de metadatos técnicos y descriptivos en flujos audiovisuales, cuál afirmación es la más adecuada para facilitar catalogación, búsqueda e intercambio entre plataformas:",
+          "options": [
+            "Limitarse a nombres de archivo legibles por humanos y notas en texto libre sin usar identificadores persistentes.",
+            "Incluir identificadores persistentes técnicos (UMID/UUID), descriptores de formato y campos descriptivos estandarizados para permitir relink y búsquedas interplataforma.",
+            "Emplear únicamente metadatos propietarios no documentados para optimizar velocidad de ingesta.",
+            "Omitir metadatos técnicos para reducir el tamaño de los ficheros durante intercambio."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los metadatos útiles combinan identificadores persistentes y descriptores técnicos y descriptivos estandarizados para relink y búsqueda; los distractores proponen prácticas que impiden interoperabilidad o eliminan información necesaria.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Se producen sobrescrituras accidentales en bins compartidos en un entorno Avid/NEXIS. ¿Qué medida técnica previene de forma más directa la concurrencia indebida?",
+          "options": [
+            "Implementar bloqueo de bins (check‑out/check‑in) y control de permisos con versión por usuario.",
+            "Permitir que todos los editores trabajen simultáneamente en el mismo bin sin control para agilizar la producción.",
+            "Duplicar el servidor NEXIS cada hora sin mecanismos de check‑out.",
+            "Borrar periódicamente los bins antiguos para evitar conflictos."
+          ],
+          "correctIndex": 0,
+          "explanation": "El bloqueo de bins y el control de permisos con check‑out/check‑in y versionado evitan sobrescrituras por concurrencia; las otras opciones no resuelven la condición de acceso simultáneo y pueden empeorarla.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según la Ley 13/2022 sobre accesibilidad audiovisual, indique cuál de las siguientes obligaciones corresponde a los prestadores de servicios audiovisuales:",
+          "options": [
+            "Limitarse exclusivamente a añadir metadatos de accesibilidad sin ofrecer recursos al usuario.",
+            "Excluir cualquier subtitulado para evitar duplicidades con servicios de terceros.",
+            "Facilitar modos de accesibilidad como subtitulado, audiodescripción y lengua de signos en los contenidos sujetos a las obligaciones previstas por la norma.",
+            "Aplicar accesibilidad sólo en la web corporativa y no en las emisiones lineales."
+          ],
+          "correctIndex": 2,
+          "explanation": "La ley impone obligaciones concretas como subtitulado, audiodescripción o lengua de signos en determinados contenidos; las demás opciones son incorrectas porque eliminan o restringen prestaciones exigidas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_checksum",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "En un flujo de transferencia de ficheros, ¿cuál es el procedimiento correcto de uso de checksums y cuál es su limitación principal?",
+          "options": [
+            "Generar checksum sólo en destino después de copiar; limitación: sustituye a cualquier control de calidad visual.",
+            "Generar checksum en origen, verificar checksum tras la copia en destino; limitación: un checksum igual confirma copia bit‑a‑bit pero no garantiza que el archivo sea reproducible ni libre de corrupción semántica o errores en contenedores.",
+            "No usar checksum; limitación: acelera la ingesta pero previene toda verificación posterior.",
+            "Usar checksum para detectar errores y automáticamente reparar ficheros corruptos sin copias adicionales."
+          ],
+          "correctIndex": 1,
+          "explanation": "El procedimiento correcto es generar en origen y verificar en destino; la limitación es que un checksum igual sólo garantiza integridad binaria, no que el contenido sea funcional o que no exista corrupción lógica o metadatos dañados. Los distractores proponen prácticas incompletas o imposibles.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione el conjunto de elementos que caracteriza correctamente un accidente 'in itinere':",
+          "options": [
+            "Accidente durante un desplazamiento por motivos de vacaciones sin relación con prestación laboral.",
+            "Accidente ocurrido en misión fuera de jornada laboral con el trabajador realizando actividades personales no relacionadas con el trabajo.",
+            "Accidente sufrido en trayecto a un lugar de ocio tras jornada laboral; ruta no vinculada al centro de trabajo.",
+            "Desplazamiento habitual entre domicilio y lugar de trabajo por la ruta normal y durante el tiempo ordinario de desplazamiento, sin interrupciones personales significativas."
+          ],
+          "correctIndex": 3,
+          "explanation": "Accidente in itinere se caracteriza por ocurrir en el desplazamiento habitual entre domicilio y trabajo, por la ruta y tiempo normales y sin interrupciones personales. Las otras opciones describen situaciones no encuadradas en in itinere (misión, ocio, vacaciones).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En la gestión de loudness durante mezcla de programas, ¿qué medición es la más apropiada para cada necesidad: control del nivel medio del programa, detección de variaciones de segmentos y supervisión rápida de picos momentáneos?",
+          "options": [
+            "Nivel medio del programa: LUFS integrado; variaciones de segmentos: LUFS short‑term; supervisión momentánea de transitorios: LUFS momentary.",
+            "Nivel medio: LUFS momentary; variaciones: LUFS integrated; transitorios: LUFS short‑term.",
+            "Nivel medio: True Peak; variaciones: LUFS momentary; transitorios: LUFS integrated.",
+            "Nivel medio: LUFS short‑term; variaciones: True Peak; transitorios: LUFS integrated."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica estándar asigna LUFS integrado para el nivel global del programa, short‑term para variaciones en ventanas intermedias y momentary para lecturas rápidas de eventos transitorios; las otras combinaciones mezclan ventanas y usos incorrectamente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Durante una retransmisión con ficheros en crecimiento (growing files), ¿qué procedimiento garantiza disponibilidad para edición sin comprometer la integridad de la esencia?",
+          "options": [
+            "Esperar a que finalice la emisión y no disponer de material editable hasta el cierre total sin generar proxies.",
+            "Abrir directamente el fichero creciendo y sobrescribir puntos de entrada/salida mientras sigue grabando.",
+            "Usar la funcionalidad del servidor para generar proxies o ingestas parciales de porciones cerradas y marcar/forzar el 'close' del fichero final antes de operaciones de edición que alteren la esencia.",
+            "Copiar el fichero en bruto a otro disco mientras sigue creciendo y editar la copia en paralelo sin coordinación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica segura es usar herramientas del servidor que permitan ingestiones parciales/proxies y cerrar (finalizar) la esencia antes de edición que modifique el fichero; abrir o sobrescribir ficheros en crecimiento o copiar sin coordinación puede corromper esencia o perder datos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción (incorrecta) respecto a medidas sobre pantallas de visualización y reflejos:",
+          "options": [
+            "La pantalla debe orientarse para minimizar reflejos desde focos y ventanas, regulando iluminación ambiental y posición del monitor.",
+            "Colocar el monitor perpendicular a las ventanas es la práctica preferente para eliminar reflejos y mejorar contraste.",
+            "Es recomendable disponer la pantalla a una distancia y altura ajustables para reducir fatiga visual y postural.",
+            "Se debe controlar la intensidad y orientación de la iluminación para evitar deslumbramientos y contrastes excesivos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Colocar la pantalla perpendicular a ventanas aumenta los reflejos, por lo que es la afirmación incorrecta. Las otras opciones describen prácticas correctas: orientar para minimizar reflejos, permitir ajuste de distancia/altura y controlar iluminación.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "022",
       "title": "Examen 022",
