@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-21",
+  "updatedAt": "2026-08-22",
   "exams": [
+    {
+      "id": "024",
+      "title": "Examen 024",
+      "date": "2026-08-22",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a medidas coherentes con la prevención del acoso y la representación no sexista en el ámbito de RTVE:",
+          "options": [
+            "Impartir formación anual obligatoria sobre igualdad y prevención del acoso para todo el personal con registro de asistencia.",
+            "Establecer protocolos de denuncia confidenciales con garantía de no represalias y seguimiento documentado.",
+            "Aplicar lenguaje y recursos visuales no sexistas en materiales institucionales y campañas internas.",
+            "Promover la presencia equilibrada de géneros en contenidos incluyendo cuotas fijas rígidas para todas las emisiones informativas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la tercera: imponer cuotas fijas rígidas para todas las emisiones informativas es una medida excesiva y no coherente con la guía, que favorece acciones proporcionales y evaluadas; las otras tres son medidas habituales de prevención, formación y representación no sexista.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Un técnico observa en el medidor de correlación una lectura persistente alrededor de −0,8 mientras escucha la mezcla centrada. ¿Cuál es el diagnóstico más pertinente respecto a compatibilidad mono?",
+          "options": [
+            "El medidor está calibrado en modo surround; la lectura no es relevante para compatibilidad mono.",
+            "Señal perfectamente compatible con mono; la lectura negativa indica una separación estéreo saludable.",
+            "Problema de nivel: los canales están balanceados en fase pero con ganancia diferente; la correlación negativa no afecta a mono.",
+            "Alta probabilidad de cancelación parcial o total al sumar a mono; hay inversión o desfase significativo entre canales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La lectura cercana a −1 indica señales en oposición de fase que tienden a cancelarse al mezclarse a mono; el distractor inmediato (lectura negativa como separación) confunde correlación negativa con separación estéreo, la diferencia decisiva es la probabilidad de cancelación al sumar.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para convertir material entrelazado 50i con movimiento rápido a progresivo 25p minimizando artefactos de movimiento, indique el procedimiento más adecuado:",
+          "options": [
+            "Combinar campos adyacentes por blending simple (mezcla de campos) para producir fotogramas progresivos.",
+            "Aplicar un desentrelazado por interpolación temporal (motion‑compensated deinterlace) que reconstruya campos considerando movimiento.",
+            "Descartar siempre un campo y duplicar el otro para formar cada fotograma progresivo (bob/simple drop‑repeat).",
+            "Reproyectar campos como semitransparencias y aplicar reducción de ruido fuerte para ocultar artefactos."
+          ],
+          "correctIndex": 1,
+          "explanation": "El desentrelazado con compensación de movimiento reconstruye fotogramas prog. preservando contornos en movimiento; el distractor más cercano (blending simple) introduce ghosting en movimiento, la diferencia decisiva es el tratamiento del desplazamiento temporal con estimación de movimiento.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la secuencia de operaciones más adecuada para una política de migración que minimice la obsolescencia y garantice integridad y accesibilidad:",
+          "options": [
+            "Programar migración periódica a formatos actuales, verificar integridad con checksums tras cada copia y mantener registro de versiones y metadatos.",
+            "Almacenar soportes originales sin tocar hasta que sean necesarios y realizar migración masiva solo cuando un formato deje de ser reproducible.",
+            "Convertir todos los ficheros a un único códec propietario y almacenar múltiples copias en el mismo tipo de soporte para simplificar gestión.",
+            "Eliminar metadatos redundantes antes de migrar para reducir espacio y regenerarlos automáticamente en destino según necesidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta combina migración periódica, verificación bit‑a‑bit y registro de metadatos; las demás son prácticas riesgosas: conservar sin acción arriesga obsolescencia, usar códec propietario centraliza riesgo, y eliminar metadatos pierde información esencial.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_ritmo",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En una escena dialogada de tensión con planos largos y un plano breve de reacción, ¿qué decisión de montaje favorece mantener ritmo interno sin romper la estructura externa de la escena?",
+          "options": [
+            "Sustituir los planos largos por una serie de planos cortos que reproduzcan exactamente la misma información para acelerar el ritmo externo.",
+            "Alternar sistemáticamente planos de igual duración para conservar un ritmo externo constante independientemente del movimiento interno.",
+            "Inserta cortes rápidos continuos durante toda la escena para aumentar sensación de velocidad y tensión, sin atender duración de planos.",
+            "Mantener planos largos pero cortar a un plano corto solo cuando el movimiento interno o la acción lo requiera, usando micro‑cortes para enfatizar puntos clave."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta preserva la estructura externa (planos largos) y aprovecha cortes puntuales motivados por movimiento interno para controlar el ritmo; los distractores confunden ritmo externo e interno o aplican cortes no motivados que alteran la comprensión.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál de las siguientes afirmaciones describe con mayor precisión el uso operativo típico del auxiliary timecode (TC aux) en flujo de edición?",
+          "options": [
+            "TC aux se utiliza para transportar un código de tiempo alternativo (por ejemplo cámara original) mientras el timecode source conserva el código de la mesa de grabación.",
+            "TC aux es idéntico al timecode record y no aporta información adicional; es redundante en la mayoría de flujos.",
+            "TC aux suele emplearse exclusivamente para la sincronización de iluminación y no para medios audiovisuales.",
+            "TC aux reemplaza al timecode source cuando se graba en simultáneo audio multicanal y vídeo."
+          ],
+          "correctIndex": 0,
+          "explanation": "El auxiliary TC sirve como canal adicional para portar un código alternativo (p. ej. cámara) compatible con el material mientras se mantiene el TC de origen; los distractores niegan su función o asignan usos incorrectos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare legalización de señal y limitación automática de gamut. ¿Cuál afirmación describe mejor la diferencia operativa?",
+          "options": [
+            "La legalización es un proceso offline que no se aplica en tiempo real; el gamut‑legalizer solo se usa en cámaras.",
+            "La legalización modifica metadatos para declarar conformidad; el gamut‑legalizer reconstruye luminancia a partir de crominancia.",
+            "La legalización ajusta niveles para cumplir límites legales de luminancia y croma; el gamut‑legalizer limita crominancia para evitar out‑of‑gamut sin alterar significativamente luminancia.",
+            "Ambos procesos son idénticos: corrigen niveles y crominancias de la misma forma y con los mismos parámetros."
+          ],
+          "correctIndex": 2,
+          "explanation": "La legalización tiene por objeto ajustar niveles legales (luma/chroma) mientras que un gamut‑legalizer actúa específicamente sobre crominancia para mantener colores dentro del gamut; los distractores confunden funciones o afirman identidad inexistente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "¿Cuál de las siguientes afirmaciones distingue mejor la misión y obligaciones de servicio público impuestas a la Corporación RTVE por la Ley 17/2006?",
+          "options": [
+            "Garantizar pluralismo y objetividad informativa, ofrecer programación cultural y educativa accesible y atender criterios de interés general no supeditados a la sola rentabilidad comercial.",
+            "Operar exclusivamente con criterios comerciales y maximizar beneficios, delegando la pluralidad informativa a prestadores privados.",
+            "Focalizar la programación en entretenimiento masivo sin obligaciones específicas en materia de protección de menores o accesibilidad.",
+            "Ser un prestador privado con obligaciones limitadas a cumplimiento fiscal y sin exigencias de servicio público."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley impone misión de servicio público: pluralismo, contenido cultural/educativo y obligaciones de interés general; los distractores plantean enfoques comerciales o ausencia de obligaciones contrarios al texto legal.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Un monitor necesita 12 V y consume 2 A. ¿Cuál es la resistencia aproximada del circuito y la potencia disipadda?",
+          "options": [
+            "Resistencia 6 Ω; potencia 24 W.",
+            "Resistencia 24 Ω; potencia 6 W.",
+            "Resistencia 0,17 Ω; potencia 14,4 W.",
+            "Resistencia 12 Ω; potencia 2 W."
+          ],
+          "correctIndex": 0,
+          "explanation": "Aplicando R=V/I => 12/2 = 6 Ω; P=V·I => 12·2 = 24 W. Los distractores confunden fórmulas o intercambian cantidades; la diferencia decisiva es el uso correcto de Ley de Ohm y definición de potencia eléctrica.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En ingesta verificada, ¿qué operación proporciona la comprobación bit‑a‑bit de integridad de los ficheros inmediatamente después de la copia?",
+          "options": [
+            "Comprobar la fecha y hora de modificación de los ficheros.",
+            "Calcular y comparar checksums (hash) entre origen y copia.",
+            "Comparar únicamente el tamaño en bytes de los ficheros.",
+            "Verificar reproducción visual/aural de una muestra aleatoria sin registro."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los checksums permiten verificar integridad bit‑a‑bit; comparar fechas o tamaños no garantiza integridad, y la reproducción no detecta alteraciones bit‑a‑bit de forma sistemática.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Respecto al intercambio de proyectos entre sistemas, ¿qué diferencia opera entre un EDL (Edit Decision List) y un AAF en términos de alcance transferible?",
+          "options": [
+            "El EDL transporta metadatos extendidos y efectos complejos; el AAF solo contiene cortes simples sin pistas.",
+            "El EDL transfiere cortes y referencias básicas; el AAF puede incluir múltiples pistas, efectos, transiciones y metadatos más completos.",
+            "Ambos formatos transportan idénticos datos técnicos y pueden sustituirse sin pérdida de información en proyectos complejos.",
+            "El AAF es un contenedor de medios comprimidos; el EDL contiene los ficheros de media embebidos."
+          ],
+          "correctIndex": 1,
+          "explanation": "El EDL traduce decisiones de corte básicas (tiempos, pistas) mientras que AAF soporta intercambio más rico (pistas múltiples, efectos y metadatos); los distractores atribuyen funciones equivocadas o igualan formatos que no son equivalentes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione el conjunto de medidas compatible y más adecuado para prevenir trastornos musculoesqueléticos en tareas continuas con teclado, ratón y tableta gráfica:",
+          "options": [
+            "Instalar más pantallas sin cambio postural, reducir altura de la mesa por estética y exigir trabajo continuo sin pausas.",
+            "Aumentar jornada sin pausas, uso exclusivo de atajos de teclado para reducir movimiento, y amortiguadores blandos en el suelo.",
+            "Prohibir el uso de tableta gráfica, imponer teclados rígidos y eliminar descansos para mejorar productividad.",
+            "Ajuste ergonómico del asiento y mesa, uso de reposamuñecas y soporte lumbar, pausas activas programadas y alternancia de tareas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta agrupa medidas preventivas reconocidas: ajuste postural, apoyos, pausas y cambio de tareas; los distractores incluyen prácticas contraproducentes o absurdas que aumentan el riesgo.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Se reproduce una señal HDR en una pantalla SDR sin conversión adecuada. ¿Cuál es el síntoma más probable?",
+          "options": [
+            "Restauración exacta del rango dinámico original sin diferencias perceptibles.",
+            "Mejor reproducción de sombras con detalle aumentado en SDR respecto a HDR.",
+            "Pérdida de detalle en altas luces y contraste reducido por sobreintensidad o remapeo incorrecto.",
+            "Aparición de latencia de audio no relacionada con cambios en luminancia."
+          ],
+          "correctIndex": 2,
+          "explanation": "Sin conversión EOTF/Tone‑mapping adecuado, las altas luces HDR suelen saturarse o perder detalle en SDR; los distractores afirman mejoras imposibles, identidad total o problemas no relacionados.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a derechos y obligaciones en prevención, cuál conjunto describe correctamente responsabilidades recíprocas de empresa y trabajador:",
+          "options": [
+            "El trabajador puede elegir no seguir instrucciones de seguridad si le resultan incómodas; la empresa no exige control.",
+            "La empresa solo informa; el trabajador asume todas las medidas físicas y económicas para su protección.",
+            "La empresa debe informar, formar y proporcionar medios preventivos; el trabajador debe usar dichos medios, colaborar y comunicar riesgos.",
+            "La empresa delega toda la formación a terceros y no mantiene registro ni seguimiento de acciones preventivas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La primera opción resume las obligaciones básicas: información/formación por la empresa y cooperación/uso correcto por el trabajador; los distractores describen responsabilidades unilaterales o ausencia de obligaciones.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "En materia de jornada y descansos según el III Convenio Colectivo de RTVE, indique la afirmación veraz:",
+          "options": [
+            "El convenio prohíbe cualquier modalidad de trabajo por turnos y exige jornada única diaria para todo el personal.",
+            "El convenio sólo establece recomendaciones no vinculantes sobre jornada y no menciona descansos ni turnos.",
+            "La jornada queda sin regulación por convenio y se rige únicamente por acuerdos individuales con cada trabajador.",
+            "El convenio regula horarios, duración máxima de jornada, descansos y provisions específicas para turnicidad y servicios especiales."
+          ],
+          "correctIndex": 3,
+          "explanation": "El convenio establece normas concretas sobre jornada, descansos y turnicidad; los distractores minimizan o contradicen su función normativa.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Ante una pérdida de energía al sumar dos canales estéreo a mono, ¿qué comprobación técnica confirma si el problema es inversión de polaridad en uno de los canales?",
+          "options": [
+            "Aumentar la ganancia de ambos canales simultáneamente y observar si el problema persiste.",
+            "Invertir la polaridad de un canal y comprobar si el nivel en mono se recupera.",
+            "Cambiar el cableado por otro sin medir la fase ni comparar los canales.",
+            "Aplicar compresión fuerte al máster para intentar recuperar presencia en mono."
+          ],
+          "correctIndex": 1,
+          "explanation": "Invertir la polaridad de un canal es la prueba directa para detectar cancelación por inversión; los otros métodos no diagnostican específicamente inversión de polaridad.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál afirmación distingue correctamente contenedor y códec en relación con MOV, MP4 y MXF?",
+          "options": [
+            "MXF es un formato de compresión propietario que reemplaza a MP4 y MOV en todas las aplicaciones.",
+            "MOV y MP4 son códecs; MXF es un contenedor que no admite cambio de códec.",
+            "MOV, MP4 y MXF son contenedores que pueden encapsular distintos códecs; la compatibilidad depende tanto del contenedor como del códec usado.",
+            "El contenedor determina la compresión y no es posible cambiar el códec dentro de un contenedor sin recomprimir."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación correcta distingue contenedores de códecs: los contenedores (MOV/MP4/MXF) pueden llevar distintos códecs; los distractores confunden roles o afirman imposibilidades técnicas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que no se corresponde con una motivación narrativa habitual para elegir una transición (corte, fundido, encadenado) respecto al tratamiento del tiempo diegético.",
+          "options": [
+            "El corte suele emplearse para indicar continuidad temporal inmediata o la continuación de una acción dentro de la misma unidad diegética, sin señalar el paso del tiempo.",
+            "El encadenado o el fundido se usan habitualmente para producir cortes secos y rupturas abruptas de continuidad sin intención de marcar desplazamiento o duración temporal. ",
+            "El encadenado (cross‑dissolve) se utiliza frecuentemente para sugerir un paso gradual del tiempo, una relación asociativa entre dos imágenes o una superposición temporal entre planos, suavizando la transición.",
+            "El fundido a negro o a blanco suele utilizarse para clausurar una unidad narrativa o señalar una elipsis temporal prolongada entre secuencias distintas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción marcada es la excepción porque encadenados y fundidos son transiciones suaves que sugieren duración, elipsis gradual o vínculos asociativos; no se emplean para provocar un corte seco y una ruptura abrupta (esa función corresponde al corte). La opción más próxima es la C, que describe correctamente el uso habitual del encadenado para paso temporal o superposición; las A y B también son motivaciones narrativas habituales y por tanto verdaderas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Tras copiar carpetas XDCAM al servidor conservando la estructura, un editor no puede reproducir ciertos clips en software estándar. ¿Cuál es el diagnóstico más probable relacionado con la estructura XDCAM?",
+          "options": [
+            "Los ficheros de vídeo fueron renombrados correctamente pero los fotogramas fueron cifrados por la cámara.",
+            "Los ficheros de audio están comprimidos en un códec no soportado por ningún software moderno.",
+            "Faltan o no se importaron los ficheros de índice y metadatos de spanning que permiten reconstruir clips divididos (spanning) y acceso lógico.",
+            "El servidor no admite tamaños de fichero superiores a 1 GB, provocando truncado de todos los clips."
+          ],
+          "correctIndex": 2,
+          "explanation": "XDCAM depende de índices y metadatos (spanning/clip metadata) para reconstruir clips; si faltan, la reproducción falla aunque las carpetas existan. Los distractores introducen causas menos probables o incompatibles con la descripción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_offline_online",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En un flujo offline/online, ¿qué operación describe con mayor precisión el proceso de reconformado a partir de la lista de decisiones (EDL/AAF) y proxies al trabajar con originales?",
+          "options": [
+            "Aplicar la lista de decisiones sobre el material original (conform) reemplazando proxies por las referencias timecode de los archivos de alta resolución, comprobando sincronía y media‑links.",
+            "Volver a editar íntegramente la pieza usando los originales desde cero sin usar la lista de decisiones ni las marcas del offline.",
+            "Transcodificar los proxies a otro formato y entregar ese archivo como master final sin referencia a originales.",
+            "Concatenar manualmente los originales según orden alfabético de ficheros para generar el master."
+          ],
+          "correctIndex": 0,
+          "explanation": "El reconformado aplica la lista de decisiones del offline sobre las pistas de alta resolución para generar el master; los distractores describen rehacer la edición, sustituir proxies sin reconformar o métodos arbitrarios incorrectos.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "023",
       "title": "Examen 023",
