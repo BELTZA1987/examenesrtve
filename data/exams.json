@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "exams": [
+    {
+      "id": "025",
+      "title": "Examen 025",
+      "date": "2026-08-23",
+      "level": "Alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que refleja con mayor precisión una obligación impuesta por la Ley 13/2022 respecto a la protección de menores y el acceso a contenidos:",
+          "options": [
+            "Corresponde exclusivamente al progenitor la responsabilidad de impedir el acceso de menores a contenidos inadecuados; la ley no exige medidas por parte de prestadores.",
+            "Los prestadores deben segmentar horarios de emisión lineal y aplicar medidas tecnológicas que limiten el acceso a contenidos que puedan perjudicar a menores, además de facilitar clasificación y advertencias.",
+            "La Ley 13/2022 prohíbe totalmente la explotación publicitaria durante franjas de programación familiar sin establecer otros mecanismos de control de acceso.",
+            "Los prestadores deben etiquetar contenidos, pero no están obligados a implantar sistemas de verificación o bloqueo técnico en plataformas bajo su control."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 13/2022 obliga a los prestadores a clasificar contenidos, advertir sobre su idoneidad y adoptar medidas técnicas o de gestión (p. ej. limitaciones horarias y controles de acceso) para proteger a menores; la opción 0 recoge ese conjunto. El distractor más próximo (4) reconoce etiquetado pero omite la exigencia de medidas técnicas o de bloqueo, que la ley sí prevé, por lo que es incorrecto.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_target",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique la adaptación de ritmo y recursos indicada para un programa informativo orientado a público juvenil frente a uno de audiencia general:",
+          "options": [
+            "Incrementar pausas largas y planos de apoyo narrativo en la versión para público juvenil para favorecer reflexión.",
+            "Reducir la dinámica visual y usar planos estáticos; mantener piezas largas y explicativas para favorecer comprensión en público juvenil.",
+            "Emplear el mismo ritmo y recursos en ambos públicos, variando solo la tonalidad del lenguaje spoken‑word.",
+            "Aumentar la densidad de planos, cortes más rápidos y recursos gráficos impactantes para el target juvenil; reducir duración de piezas y priorizar ritmo visual."
+          ],
+          "correctIndex": 3,
+          "explanation": "La adaptación al target juvenil suele exigir mayor densidad de planos, cortes más rápidos y recursos gráficos para mantener atención (opción 0). El distractor más próximo (2) propone exactamente lo contrario y por tanto no responde al objetivo de adaptación al público joven.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_en_mision",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Señale la excepción entre medidas de prevención aplicables durante desplazamientos profesionales (misión):",
+          "options": [
+            "Proporcionar información previa sobre riesgos y medidas específicas del destino.",
+            "Realizar una evaluación de riesgos del lugar antes del desplazamiento si la tarea lo requiere.",
+            "Eximir al trabajador de recibir formación en riesgos cuando la jornada en misión sea inferior a una hora.",
+            "Facilitar medios de comunicación y apoyo logístico para emergencias durante la misión."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es excepción: la empresa no puede eximir la formación en riesgos por la duración del desplazamiento; la obligación de información/formación es previa y adecuada. Las otras opciones son medidas coherentes y exigibles.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la combinación de resolución, bitrate y códec para proxies orientados a edición ágil sin sacrificar identificación visual ni eficiencia de almacenamiento:",
+          "options": [
+            "Resolución 4K, códec H.265 con VBR y bitrate variable según escena para optimizar calidad.",
+            "Resolución completa del material (sin reducción), códec intraframe pesado (ProRes HQ), bitrate alto (>50 Mbps) para evitar cualquier perdida visual.",
+            "Resolución 320×240, códec con alta compresión Long‑GOP y bitrate mínimo (<0.5 Mbps) para máxima compresión.",
+            "Resolución 720×480 (o 960×540), códec intraframe ligero (p. ej. ProRes Proxy o H.264 Baseline con GOP corto), bitrate moderado (1–5 Mbps) según formato."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 describe criterios adecuados: resolución reducida pero suficiente para reconocimiento, códec ligero y bitrate moderado para scrubbing y ahorro de espacio. El distractor más cercano (3) reduce resolución excesivamente y compromete identificación de planos; (1) y (4) son inapropiados por sobredimensionar proxies o mantener tamaño original.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare los modos de trim: ¿qué afirmación describe correctamente el efecto de ripple, roll y slip/slide sobre duración de la secuencia y sincronía?",
+          "options": [
+            "Ripple ajusta un punto de corte y desplaza la duración total de la secuencia; Roll mueve un punto de corte entre dos clips sin alterar duración total; Slip/Slide desplazan el contenido dentro de un clip sin cambiar sus puntos en la secuencia.",
+            "Ripple mueve el contenido interno de un clip sin cambiar duración; Roll altera la duración total de la secuencia; Slip/Slide eliminan fotogramas automáticamente.",
+            "Roll y Ripple realizan la misma operación pero con nombres distintos; Slip/Slide sólo se usa en audio.",
+            "Slip modifica la duración total de la secuencia, Slide sólo altera metadatos temporales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 define correctamente: ripple cambia duración y desplaza material posterior; roll ajusta límites entre dos clips manteniendo la duración global; slip/slide alteran el contenido visible dentro del clip sin cambiar su posición ni duración en la secuencia. El distractor más próximo invierte efectos de ripple/roll y por ello es incorrecto.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que distingue con mayor precisión las funciones y los cuellos de botella típicos de CPU, GPU y memoria en una estación de edición con efectos acelerados por GPU:",
+          "options": [
+            "La RAM determina exclusivamente la velocidad de scrubbing; ni CPU ni GPU influyen en latencia de interfaz.",
+            "GPU controla exclusivamente el almacenamiento y la transferencia en disco; la CPU realiza todo el render; la RAM sólo guarda el sistema operativo.",
+            "CPU gestiona hilos de control, I/O y cómputo secuencial; GPU acelera procesamiento paralelo de efectos y decodificación de frames; RAM actúa como buffer para datos activos; cuello de botella aparece en CPU para operaciones de lógica/IO, en GPU para efectos complejos y en RAM cuando no cabe la working set.",
+            "CPU y GPU son intercambiables: aumentar uno siempre compensa la carencia del otro sin limitaciones de memoria."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 detalla correctamente roles y cuellos de botella: CPU para control y operaciones secuenciales/I‑O, GPU para cómputo paralelo (efectos/decodificación), RAM para almacenar la working set; la limitación ocurre cuando cada recurso es insuficiente. Los distractores simplifican o confunden funciones críticas (p. ej. 1 y 2 son incorrectos).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_project_media",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la opción que distingue correctamente metadatos de proyecto y archivos de esencia en un NLE:",
+          "options": [
+            "Metadatos de proyecto: ajustes de secuencia, marcadores de bins y decisiones de edición; archivos de esencia: ficheros de vídeo/audio originales con su timecode y codec.",
+            "Metadatos de proyecto: contenido de vídeo y audio; archivos de esencia: solo descripciones textuales.",
+            "Metadatos de proyecto: copias físicas de los clips; archivos de esencia: los presets de exportación del proyecto.",
+            "Metadatos de proyecto: checksum y bitstream de la esencia; archivos de esencia: únicamente miniaturas generadas por el NLE."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 esclarece la diferencia: el proyecto contiene decisiones, estructura y referencias; la esencia son los ficheros de medios reales con timecode y códec. Los distractores confunden roles o invierten la relación.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique la afirmación que mejor representa el principio general del modelo de financiación previsto por la Ley 8/2009 para RTVE:",
+          "options": [
+            "La Ley 8/2009 obliga a financiar RTVE exclusivamente mediante publicidad comercial sin aportación pública.",
+            "El modelo combina aportaciones públicas y recursos propios con restricciones sobre la explotación publicitaria, garantizando financiación estable y control público.",
+            "La financiación de RTVE se basa únicamente en suscripciones privadas y donaciones, excluyendo fondos públicos.",
+            "El modelo prescinde de cualquier control público sobre ingresos y permite gestión total de mercados para maximizar beneficios."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 recoge la idea central: financiación mixta con papel del sector público y limitaciones en explotación publicitaria para asegurar servicio público. Las demás opciones son incompatibles con el espíritu y requisitos de la ley.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Ante la ausencia de señal en un destino de una matriz de vídeo, indique la comprobación operativa que identifica y verifica si existe un punto de cruce (crosspoint) erróneo u abierto:",
+          "options": [
+            "Reiniciar la matriz y esperar que el crosspoint se reconfije automáticamente sin más comprobaciones.",
+            "Solicitar al origen un patrón de prueba continuo y observar en el destino si llega el patrón; simultáneamente verificar el estado lógico del crosspoint en la interfaz de control de la matriz.",
+            "Cambiar el cable del origen por otro al azar y asumir que la señal se restablece si el problema persiste.",
+            "Modificar el formato de salida del destino desde la consola de control sin verificar la salida del origen ni el estado del crosspoint."
+          ],
+          "correctIndex": 1,
+          "explanation": "La comprobación correcta es enviar un patrón desde el origen y verificar tanto la llegada física en el destino como el estado lógico del crosspoint en la matriz (opción 0). Reiniciar o cambiar parámetros sin verificar origen/estado puede ocultar la causa y no identifica el crosspoint erróneo.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare prácticas sobre gestión de soportes de estado sólido tras la grabación: ¿cuál es la práctica recomendada?",
+          "options": [
+            "No realizar comprobaciones de integridad; basarse en la apariencia visual de los archivos tras la copia.",
+            "Formatear inmediatamente el soporte en la cámara tras una sola copia, ya que el formateo reduce errores futuros.",
+            "Usar exclusivamente el propio dispositivo como única copia segura y eliminar inmediatamente archivos en disco externo para liberar espacio.",
+            "Generar y verificar checksums tras la copia, conservar la imagen original hasta verificar integridad y mantener una copia de seguridad antes de cualquier formateo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 describe la práctica correcta: checksums y verificación antes de formatear, y conservar copias de seguridad. Los distractores son prácticas arriesgadas que ponen en peligro integridad y redundancia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Seleccione la afirmación que diagnostica mejor la ventaja principal de CBR frente a VBR y la limitación principal de VBR en entornos de transmisión en tiempo real:",
+          "options": [
+            "VBR es obligatoriamente preferible para emisiones en directo por su estabilidad; CBR sólo se usa en almacenamiento físico.",
+            "CBR siempre proporciona mejor calidad visual que VBR a igual tamaño de archivo; VBR elimina completamente la variabilidad del bitrate.",
+            "CBR ofrece previsibilidad del uso de ancho de banda y es preferible en streaming en tiempo real; VBR optimiza calidad/espacio pero introduce variaciones de demanda que pueden causar buffering si no se gestiona.",
+            "CBR reduce la latencia de codificación a cero; VBR obliga a diferencial de frame rate."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 identifica correctamente: CBR es estable y predecible para redes en tiempo real; VBR es eficiente en calidad/espacio pero variable en ancho de banda, lo que puede afectar transmisión en directo si no se dispone de buffer o control. Los otros enunciados son incorrectos o confusos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la fórmula operativa más adecuada para estimar el ancho de banda de red necesario para atender N usuarios concurrentes con streams de bitrate constante y un margen de seguridad:",
+          "options": [
+            "Ancho requerido = N × bitrate por stream × (1 + margen de overhead), donde el margen incluye protocolos y picos (p. ej. 10–20%).",
+            "Ancho requerido = bitrate por stream ÷ N, ya que la red comparte capacidad equitativamente.",
+            "Ancho requerido = bitrate por stream × N ÷ número de switches de red, porque los switches reducen la carga agregada.",
+            "Ancho requerido = bitrate por stream × N × 0.5 para compensar compresión y redundancia."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 es la estimación correcta: sumar bitrates concurrentes y aplicar margen por overhead/picos. Las otras fórmulas dividen o multiplican por factores incorrectos que subestiman o malinterpretan la concurrencia.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la organización de pausas y alternancia de tareas que reduce de forma más eficaz la fatiga visual y postural en puestos con pantallas de visualización:",
+          "options": [
+            "Sustituir pausas por ejercicios de fuerza intensos de 10 minutos cada hora sin variar la tarea antepantalla.",
+            "Mantener sesiones continuas de 90–120 minutos sin pausas para maximizar productividad, con un único descanso largo al final de la jornada.",
+            "Eliminar alternancia de tareas y aumentar la densidad informativa para reducir el número de interrupciones y así reducir esfuerzo ocular.",
+            "Incluir micro‑pausas de 1–2 minutos cada 20–30 minutos para descanso visual y cambios posturales, alternar tareas que requieran diferente atención y programar descansos de 10–15 minutos cada 2 horas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 combina micro‑pausas frecuentes, alternancia de tareas y descansos mayores periódicos, medidas recomendadas para reducir fatiga visual y postural. Los distractores proponen prácticas contraproducentes o extremas que no responden a la prevención adecuada.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Para dimensionar un servidor de vídeo según concurrencia, ¿qué criterio operativo es el más directo y necesario?",
+          "options": [
+            "Dimensionar únicamente por número de usuarios, sin considerar bitrate individual ni tasas de I/O.",
+            "Calcular la suma de los bitrates de todos los canales concurrentes previstos y garantizar que el enlace de red y la tasa de I/O de disco soporten ese agregado con margen.",
+            "Basarse en el número de codecs instalados en el servidor como único criterio.",
+            "Dimensionar por espacio en disco total disponible, sin tener en cuenta la velocidad de lectura/escritura."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 es la medida operativa correcta: dimensionamiento por bitrate agregado y capacidad de I/O/red. Los otros distractores ignoran parámetros críticos como bitrate y rendimiento de disco/red.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que expresa con mayor fidelidad el principio de igualdad y la prohibición de discriminación en la Constitución Española:",
+          "options": [
+            "La igualdad ante la ley se aplica solo en el ámbito civil y no en el acceso a servicios públicos.",
+            "La Constitución permite discriminar por razones de origen geográfico si resulta conveniente para política pública.",
+            "Todas las personas son iguales ante la ley y está prohibida la discriminación por nacimiento, raza, sexo, religión, opinión o cualquier otra condición personal o social.",
+            "La prohibición de discriminación es orientativa y no exige medidas concretas por parte de las administraciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 refleja literalmente el principio constitucional de igualdad y la prohibición de discriminación por motivos personales o sociales. Las demás opciones contradicen el alcance efectivo de la norma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En el vectorscopio, ¿qué indica fundamentalmente el desplazamiento respecto a la 'skin‑line' y cómo debe interpretarse para evaluar tonos de piel?",
+          "options": [
+            "El vectorscopio no aporta información sobre piel; la 'skin‑line' es irrelevante para evaluación de tonos.",
+            "El desplazamiento solo indica la luminosidad de la piel y no guarda relación con el crominancia.",
+            "Si el clúster de piel está fuera de la skin‑line, la imagen es automáticamente no legal y debe descartarse.",
+            "El desplazamiento angular indica un cambio de matiz/hue en los tonos de piel; la distancia radial indica saturación; se usa como referencia orientativa, no como límite absoluto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 es correcta: la skin‑line referencia el ángulo de hue; la magnitud radial muestra saturación; su uso es orientativo porque iluminación y balance alteran la posición. Los distractores confunden luminancia con crominancia o exageran la obligatoriedad.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al uso de ProRes y DNxHR como códecs intermedios en postproducción:",
+          "options": [
+            "ProRes y DNxHR son códecs diseñados para flujos de postproducción con perfiles que equilibran calidad y tamaño, y suelen ser ampliamente compatibles entre NLEs.",
+            "ProRes y DNxHR son siempre formatos de compresión sin pérdida (lossless) en todos sus perfiles.",
+            "Ambos códecs se usan como formatos intermediarios para reducir carga de decodificación en edición y conservar calidad visual durante generaciones múltiples.",
+            "Existen perfiles de mayor o menor calidad dentro de cada familia que permiten ajustar rendimiento y tamaño según necesidades del flujo de trabajo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 2 es la excepción: ProRes y DNxHR ofrecen variantes desde alta calidad hasta más comprimida, pero no son necesariamente lossless en todos los perfiles; muchos perfiles son 'visually lossless' pero no sin pérdida. Las otras opciones describen usos y características correctas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un servidor EVS configurado para grabación continua (modo loop) con varios canales simultáneos, ¿qué determina que un fragmento siga disponible para recuperación y qué medida operativa evita su pérdida por sobreescritura?",
+          "options": [
+            "Los clips reproducidos o añadidos a una playlist quedan automáticamente protegidos frente a sobreescrituras en loop; incluir un clip en la lista impide su pérdida sin necesidad de acciones adicionales del operador.",
+            "Los canales comparten un único histórico central que replica automáticamente los clips recientes en volúmenes secundarios; por tanto, cualquier fragmento puede recuperarse incluso después de sobreescritura mediante la reconstrucción desde la réplica.",
+            "La grabación en loop funciona como un buffer circular por canal: al agotarse la capacidad se sobrescribe el material más antiguo; un fragmento es recuperable mientras no haya sido sobrescrito, por lo que el operador debe proteger/guardar o exportar el clip antes de que el buffer lo sobrescriba.",
+            "El servidor mantiene un registro de todas las acciones de edición que permite restaurar versiones previas de un clip aunque la esencia haya sido físicamente sobrescrita; por tanto no es necesario proteger los clips en tiempo real."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respuesta A es correcta: el modo loop opera como un buffer circular (por canal o área de grabación) y, cuando se llena, se sobrescribe el material más antiguo. Por tanto un fragmento sólo está disponible hasta que no haya sido reemplazado por nueva grabación. Para garantizar conservación y recuperación hay que tomar una acción explícita (proteger/guardar/exportar el clip o marcarlo como no sobrescribible) antes de que el buffer lo borre. El distractor más próximo (C) es incorrecto porque la mera inclusión en una playlist no garantiza por sí sola la protección frente a la política de loop; la protección requiere la operación explícita de guardar/asegurar el clip o su extracción fuera del buffer circular.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál es la interpretación operativa correcta sobre la sincronización multicámara cuando todas las cámaras comparten un código de tiempo común?",
+          "options": [
+            "Si las cámaras comparten el mismo timecode continuo y la misma velocidad de cuadro, la sincronización multicámara permite alinear ángulos por TC directamente, aunque es necesario comprobar drift o fotogramas perdidos.",
+            "Si las cámaras comparten timecode común no es necesario verificar tasa de frames ni realizar comprobaciones adicionales.",
+            "La presencia de un TC común implica que las cámaras están genlocked y no puede producirse deriva temporal.",
+            "El TC común sustituye la necesidad de tomar cualquier referencia de audio para sincronización."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 es la interpretación adecuada: TC común facilita el alineado directo si coinciden frame rate y se verifica ausencia de drift o errores; los demás distractores suponen garantías absolutas que no siempre existen.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_elipsis",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al uso de la elipsis narrativa para comprimir tiempo manteniendo la comprensión:",
+          "options": [
+            "La elipsis siempre exige el uso de fundidos encadenados para evitar confusión temporal.",
+            "La elipsis puede apoyarse en recursos sonoros y visuales que indiquen la duración omitida sin mostrarla íntegramente.",
+            "La elipsis elimina fragmentos temporales manteniendo la continuidad causal entre eventos para que el espectador reconstruya lo sucedido.",
+            "La elipsis suele requerir signos narrativos claros (p. ej. cambios de atrezzo, locación o música) que permitan la interpretación del salto temporal."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción: la elipsis no exige el uso de fundidos; puede resolverse mediante cortes, montaje, sonido u otros recursos. Las otras opciones describen usos coherentes y habituales de la elipsis.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "024",
       "title": "Examen 024",
