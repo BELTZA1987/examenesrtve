@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-23",
+  "updatedAt": "2026-08-24",
   "exams": [
+    {
+      "id": "026",
+      "title": "Examen 026",
+      "date": "2026-08-24",
+      "level": "Alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la obligación concreta que corresponde al empresario según la Ley de Prevención de Riesgos Laborales:",
+          "options": [
+            "Contratar seguros de accidente que eximan a la empresa de adoptar medidas organizativas o formativas.",
+            "Limitar la prevención a la compra de equipos de protección individual y delegar íntegramente la formación en los trabajadores.",
+            "Registrar únicamente los accidentes con baja y notificar al trabajador que gestione por su cuenta las medidas preventivas.",
+            "Realizar la evaluación de riesgos del puesto, planificar medidas preventivas y facilitar medios y formación adecuados a la plantilla."
+          ],
+          "correctIndex": 3,
+          "explanation": "La obligación primaria del empresario es evaluar riesgos y planificar medidas preventivas incluyendo medios y formación. Los distractores omiten la obligación de evaluación y planificación o plantean externalizar responsabilidades, que no eximen al empresario.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_postura",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare ajustes posturales: ¿qué conjunto es el más adecuado para reducir tensión lumbar y cervical en un puesto de edición?",
+          "options": [
+            "Silla baja sin ajuste lumbar, mesa regulable en altura y antebrazos elevados por falta de reposabrazos.",
+            "Asiento fijo con respaldo alto, reposabrazos fijos altos, antebrazos en ángulo elevado y uso de reposapiés opcional.",
+            "Asiento regulable en profundidad sólo, sin apoyo lumbar, antebrazos apoyados en la mesa y pies en puntas.",
+            "Asiento regulable en altura, apoyo lumbar ajustable, reposabrazos a la altura de los antebrazos y pies apoyados en superficie plana."
+          ],
+          "correctIndex": 3,
+          "explanation": "El conjunto correcto incluye asiento regulable, apoyo lumbar, reposabrazos que mantengan antebrazos en posición neutra y pies apoyados; los distractores omiten uno o más elementos ergonómicos clave.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "¿Cuál es el principio operativo esencial de una conexión de audio balanceada para rechazar interferencias?",
+          "options": [
+            "Un conductor principal transporta la señal y el otro actúa solo como masa, empleando el blindaje para bloquear interferencias externas.",
+            "El receptor diferencia la tensión entre conductor 'hot' y 'cold' y cancela las señales comunes, de modo que interferencias presentes por igual en ambos conductores se suprimen.",
+            "Se basa en duplicar la señal en fase y sumarlas en destino para aumentar la relación señal/ruido y superar interferencias.",
+            "La conversión a digital en el origen elimina cualquier interferencia analógica, por lo que la conexión balanceada solo sirve para alimentación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La conexión balanceada utiliza la diferencia entre conductores para cancelar señales en común (rejection). Los distractores describen esquemas no balanceados, sumar señales en fase o atribuyen la función a la digitalización, que no es el principio de rechazo de modo común.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_color_order",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En un flujo de etalonaje orientado a obtener consistencia técnica entre planos antes de aplicar un tratamiento creativo, ¿cuál es la secuencia operativa correcta entre las etapas siguientes: conversión/log→espacio de trabajo (normalización), corrección primaria (exposición y balance de blancos), ajuste de contraste/curvas, matching entre planos/cámaras y aplicación del look creativo?",
+          "options": [
+            "Corrección primaria de exposición y balance de blancos; conversión/log→espacio de trabajo (normalización); ajuste de contraste y curvas; matching; aplicación del look creativo.",
+            "Conversión al espacio de trabajo (normalización); corrección primaria de exposición y balance de blancos; matching entre planos/cámaras; ajuste de contraste y curvas; aplicación del look creativo.",
+            "Conversión al espacio de trabajo (normalización); corrección primaria de exposición y balance de blancos; ajuste de contraste y curvas (tonalidad/saturación primaria); matching entre planos/cámaras; aplicación del look creativo (LUT final).",
+            "Conversión al espacio de trabajo (normalización); corrección primaria; aplicación del look creativo; ajuste de contraste y matching final antes de legalizar salida."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica estándar es primero normalizar la señal al espacio de trabajo (p. ej. log→Rec.709) para disponer de una base coherente; a continuación ajustar primarias (exposición y balance de blancos) para corregir desviaciones zonales; después definir el contraste/curvas y saturación primarias que establecen la relación tonal; con estos parámetros asentados se realiza el matching entre planos/cámaras para igualar colorimetría y rango dinámico; por último se aplica el look creativo. El distractor más próximo (opción 2) adelanta el matching antes del ajuste de contraste: si se igualan imágenes sobre curvas y contraste no estabilizados, las correcciones tonales posteriores desharán o complicarán el emparejado, produciendo inconsistencias que luego afectan al look final.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Durante la ingesta de material XDCAM para selección y visionado previo:",
+          "options": [
+            "Se usan proxies para visionado y selección ágil; la esencia de alta resolución se conserva para conformado y archivo tras la selección.",
+            "Se convierte la esencia de alta resolución en proxies permanentes y se descarta la esencia original para ahorrar espacio.",
+            "Sólo se ingesta la esencia de alta resolución; los proxies no se emplean si la estación dispone de suficiente CPU.",
+            "Los proxies deben reemplazar los metadatos de la cámara para facilitar el control de versiones durante la ingesta."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica correcta es usar proxies para revisión y selección ágil y mantener la esencia alta resolución para conformado y archivo. Los distractores proponen descartar originales, omitir proxies o alterar metadatos, acciones incorrectas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la función de las fuentes A/B, la prelectura y el mezclador en edición lineal:",
+          "options": [
+            "La prelectura permite cargar y avanzar una cinta o fuente A/B sin interrumpir la salida en programa.",
+            "El mezclador de vídeo ejecuta transiciones y puede combinar programa y previo usando keyers y faders.",
+            "La prelectura facilita el timing y el punto de entrada para operaciones de corte o insert sin afectar el programa en emisión.",
+            "Las fuentes A y B actúan sólo como alternativas mutuamente excluyentes y no pueden servir simultáneamente para insertar elementos sobre el programa."
+          ],
+          "correctIndex": 3,
+          "explanation": "La excepción es la opción 2ª (índice 2): en realidad las fuentes A y B sí pueden combinarse para realizar insertos o efectos (no son únicamente excluyentes). Las otras afirmaciones describen funciones correctas de prelectura y mezclador.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Compare niveles RAID: ¿qué afirmación interpreta mejor la tolerancia a fallos y la reconstrucción?",
+          "options": [
+            "RAID 0 ofrece tolerancia a fallos mediante paridad distribuida; RAID 1 necesita tres discos para tolerar una falla; RAID 6 no proporciona reconstrucción automática.",
+            "RAID 1 (mirror) tolera la pérdida de un disco y permite reconstrucción rápida leyendo del espejo; RAID 5 tolera un disco y reconstruye distribuyendo paridad; RAID 6 tolera dos discos pero requiere mayor cálculo y tiempo de reconstrucción.",
+            "RAID 5 tolera dos discos fallados simultáneamente sin pérdida de datos; RAID 1 no admite reconstrucción; RAID 6 sólo mejora rendimiento, no tolerancia.",
+            "Todos los niveles RAID mencionados ofrecen la misma velocidad de reconstrucción y tolerancia a fallos; la diferencia es sólo de capacidad utilizable."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta describe con precisión tolerancia y costes de reconstrucción: RAID1 (mirror) permite reconstrucción rápida desde el espejo; RAID5 tolera un disco; RAID6 tolera dos pero con mayor coste. Los distractores contienen afirmaciones técnicas incorrectas sobre tolerancia y reconstrucción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare criterios del III Convenio Colectivo: ¿qué par describe mejor la relación entre clasificación profesional y organización del trabajo?",
+          "options": [
+            "La organización del trabajo establece categorías profesionales y retribuciones; la clasificación profesional sólo regula sanciones y disciplina interna.",
+            "La clasificación profesional determina exclusivamente la jornada laboral individual; la organización del trabajo sólo define los nombres de los puestos sin vinculación con responsabilidades.",
+            "La clasificación profesional ordena ocupaciones por funciones, responsabilidades y cualificación; la organización del trabajo regula turnos, distribución de tareas y coordinación entre departamentos.",
+            "La clasificación profesional y la organización del trabajo son términos intercambiables que significan lo mismo en la práctica del convenio."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta distingue la clasificación por funciones y cualificación y la organización por turnos y distribución de tareas. Los distractores confunden funciones con jornada o reducen la clasificación a aspectos que no son su finalidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_true_peak",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para garantizar que un entregable no supera picos entre muestras en una entrega broadcast:",
+          "options": [
+            "Se utiliza la medición True Peak con algoritmo de sobremuestreo y, si es necesario, se aplica limitación en True Peak antes de la entrega.",
+            "Se mide únicamente el sample peak del fichero mono a mono; ese valor asegura ausencia de picos entre muestras.",
+            "La comprobación se basa en LUFS integrado, porque controla explícitamente los picos entre muestras.",
+            "Basta con normalizar al 0 dBFS de canal, ya que el formato de emisión ajustará los picos entre muestras automáticamente."
+          ],
+          "correctIndex": 0,
+          "explanation": "La medición True Peak detecta picos entre muestras mediante sobremuestreo y permite limitar antes de entrega. Los distractores confunden sample peak con true peak, o atribuyen esa función a LUFS o a procesos automáticos de emisión.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique el efecto principal de mezclar cadencias diferentes sin conversión adecuada:",
+          "options": [
+            "No se produce ningún artefacto perceptible; las cadencias se mezclan de forma transparente en todos los casos.",
+            "Aparecerán saltos o judder en el movimiento y discontinuidades temporales; la conversión más adecuada para preservar fluidez es la conversión con interpolación de movimiento (motion‑compensated).",
+            "La única consecuencia es una variación de color, que se corrige con una LUT de cámara.",
+            "La mezcla de cadencias convierte automáticamente el timecode y evita cualquier ajuste adicional."
+          ],
+          "correctIndex": 1,
+          "explanation": "Mezclar cadencias sin convertir correctamente provoca judder y artefactos temporales; la mejor solución para movimiento complejo suele ser la conversión con interpolación de movimiento. Los distractores niegan o confunden el efecto con color o timecode.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_dbfs",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación operativa de alcanzar 0 dBFS en picos de mezcla digital:",
+          "options": [
+            "0 dBFS es un umbral medio recomendable para el nivel integrado de programa; debe perseguirse como objetivo de loudness.",
+            "Alcanzar 0 dBFS garantiza que no habrá distorsión en la cadena analógica siguiente y que el fichero es óptimo para cualquier conversión.",
+            "0 dBFS indica que muestras individuales alcanzan el máximo representable; excederlo provoca recorte digital inmediato en la zona de muestreo y riesgo de distorsión tras reconstrucción, por lo que se requiere margen y/o limitación.",
+            "Si las señales alcanzan 0 dBFS, no hay riesgo de artefactos entre muestras, por lo que no es necesario controlar true peaks."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta indica que 0 dBFS corresponde al máximo de muestra y puede causar recorte digital; exige headroom o limitación. Los distractores confunden 0 dBFS con objetivo de loudness, con ausencia de distorsión o con garantía de conversión analógica.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_lut_log",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "¿Cómo se distingue operativamente una LUT de monitorizado (display) aplicada a señal logarítmica de una LUT creativa?",
+          "options": [
+            "La display LUT transforma log a espacio de visualización para revisar exposiciones y contraste sin alterar la imagen fuente; la LUT creativa modifica crominancia y contraste como look aplicado en corrección final.",
+            "Ambas LUT actúan de forma idéntica y deben aplicarse siempre directamente a los archivos maestros definitivos.",
+            "La LUT creativa convierte log a Rec.709 exclusivamente, mientras que la display LUT añade corrección de difusión de color.",
+            "La display LUT añade efecto estético permanente; la LUT creativa sólo corrige balance de blancos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La display LUT es para visualización temporal (monitoring) y no pretende sustituir correcciones creativas; la LUT creativa establece aspecto final. Los distractores invierten funciones o atribuyen efectos permanentes o únicos no correctos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a LTO/LTFS y archivo a largo plazo:",
+          "options": [
+            "LTFS presenta las cintas como un sistema de ficheros y facilita acceso por archivo, pero el acceso es significativamente más lento que en disco y requiere verificación y migración periódica.",
+            "Las limitaciones de cinta incluyen tiempo de seek y dependencia de hardware específico para lectura, lo que condiciona estrategias de preservación.",
+            "Para archivo a largo plazo es necesario un catálogo y procesos de verificación (checksums) y periódica migración a soportes actuales.",
+            "La cinta LTO con LTFS garantiza que no es necesaria ninguna verificación o migración ulterior para mantener la integridad indefinidamente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La excepción es la opción que afirma que no se necesita verificación ni migración; es incorrecto. Las demás opciones describen limitaciones y prácticas correctas para LTO/LTFS.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_chromakey",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que describe la compatibilidad operativa correcta entre matte, spill y bordes en un proceso de chromakey:",
+          "options": [
+            "Ignorar la matte y trabajar solo con máscaras manuales; el despill no es necesario si se usa tanta corrección primaria.",
+            "Aplicar despill antes de generar la matte; los bordes se deben tratar con corrección de color únicamente al final sin ajuste de la matte.",
+            "Secuenciar: generar la matte → extraer y limpiar bordes → aplicar despill sobre reflejos de color → realizar corrección de color en la integración final.",
+            "Realizar la corrección de color del fondo y del sujeto antes de extraer la matte para evitar fricciones en bordes."
+          ],
+          "correctIndex": 2,
+          "explanation": "El orden correcto es crear la matte, limpiar bordes, aplicar despill y luego ajustar color para integrar. Los distractores alteran el orden lógico o proponen omitir pasos clave.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique la finalidad esencial de la reforma introducida por la Ley 5/2017 respecto a RTVE:",
+          "options": [
+            "Recuperar la independencia editorial y pluralismo mediante procedimientos de elección parlamentaria de sus órganos de gobierno.",
+            "Privatizar parcialmente la Corporación y transferir la selección de directivos al sector privado.",
+            "Eliminar toda supervisión externa sobre contenidos y concentrar poderes en la dirección ejecutiva sin control parlamentario.",
+            "Establecer un sistema de elección interna por empleados en sustitución del control parlamentario."
+          ],
+          "correctIndex": 0,
+          "explanation": "La reforma buscó recuperar independencia y pluralismo mediante un nuevo sistema de elección parlamentaria de órganos. Los distractores proponen privatización, eliminación de controles o elección interna, que no reflejan la finalidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_umid",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En la gestión de activos audiovisuales, ¿qué capacidad específica facilita un identificador UMID embebido en la esencia de un clip?",
+          "options": [
+            "Permitir reconocer de forma inequívoca la misma unidad de material entre copias o migraciones aunque cambien nombre, contenedor o ruta de almacenamiento.",
+            "Proporcionar una huella criptográfica (checksum o hash) que permite verificar la integridad bit a bit del fichero.",
+            "Registrar automáticamente la ubicación física o la URL del fichero dentro del sistema de almacenamiento para localización directa.",
+            "Describir de forma fiable el códec y los parámetros técnicos de compresión del fichero para garantizar la reproducción."
+          ],
+          "correctIndex": 0,
+          "explanation": "La finalidad operativa del UMID es identificar de manera persistente y única una unidad de material, de modo que diferentes copias o instancias puedan ser relacionadas aunque varíen nombre, contenedor o ubicación. No es un mecanismo de verificación de integridad: checksums/hashes son procesos distintos usados para comprobar bit a bit (opción B es incorrecta). Tampoco actúa como localizador físico (C) ni como descriptor técnico de códec/parametrización (D), que son metadatos independientes.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para mantener continuidad espacial respetando la regla de los 180° al cambiar de plano:",
+          "options": [
+            "Cruzar el eje sin preparación siempre que los dos planos tengan la misma focal y exposición para que no se note el cambio.",
+            "Mantener a todas las cámaras en el mismo lado del eje imaginario entre actores o, si se cruza el eje, establecer explícitamente un nuevo eje mediante planos puente que reafirmen la nueva dirección.",
+            "Colocar una cámara exactamente sobre el eje para facilitar el cambio de sentido sin necesidad de plano puente.",
+            "Cambiar el eje únicamente en planos secuencia largos sin cortes intermedios, lo que garantiza continuidad automática."
+          ],
+          "correctIndex": 1,
+          "explanation": "Mantener cámaras en el mismo lado del eje o reestablecer un nuevo eje con planos puente asegura continuidad espacial. Los distractores proponen cruzar el eje sin preparación, situarse en el eje (lo que produce confusión espacial) o suponer que la continuidad se mantiene por duración.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "prl_incendio",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que relaciona correctamente clases de fuego, evacuación y extintores adecuados:",
+          "options": [
+            "Para cualquier clase de fuego es adecuado siempre aplicar agua a presión directamente, incluso en equipos eléctricos energizados.",
+            "Fuego clase A (sólidos combustibles): agua o polvo seco; fuego sobre aparato eléctrico requiere extintor de CO2 o polvo indicado para riesgos eléctricos; evacuar siguiendo rutas y cortar alimentación si es seguro.",
+            "Los extintores portátiles no son relevantes; la única medida eficaz es sellar la sala y esperar la llegada del servicio de extinción.",
+            "En caso de conato eléctrico, abrir el tablero y aplicar manualmente un extintor de agua para enfriar los componentes."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta empareja clases y extintores apropiadamente (agua/polvo para A; CO2 o polvo para eléctricos) y recuerda evacuación y corte de alimentación cuando sea seguro. Los distractores proponen acciones peligrosas o ineficaces con electricidad y agua.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_intelectual",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Ante la yuxtaposición sonora y visual entre una fábrica ruidosa y, a continuación, un hombre en silencio mirando por la ventana: diagnóstico del montaje intelectual producido:",
+          "options": [
+            "Produce únicamente un contraste de niveles sonoros sin aportar asociación narrativa entre escenas.",
+            "Es un raccord clásico que asegura continuidad espacial entre ambos planos sin crear significado adicional.",
+            "Se trata de un empalme técnico para ocultar un error de rodaje y no tiene efecto semántico en el espectador.",
+            "Se genera una asociación simbólica que sugiere relación temática o emocional (por ejemplo opresión o alienación), más allá de continuidad temporal directa."
+          ],
+          "correctIndex": 3,
+          "explanation": "La yuxtaposición crea un significado por asociación (montaje intelectual). Los distractores reducen la función a continuidad espacial, error técnico o mero contraste sonoro, que no capturan la creación de significado.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interprete la idoneidad de Black‑burst frente a Tri‑level sync en instalaciones mixtas SD/HD:",
+          "options": [
+            "Black‑burst y Tri‑level son intercambiables en todas las instalaciones; su elección no afecta a la sincronización de cámaras HD.",
+            "Tri‑level sync sólo se usa en instalaciones analógicas y no es compatible con HD digital; Black‑burst cubre HD y SD por igual.",
+            "Black‑burst es adecuado para genlock en entornos SD entrelazados; Tri‑level ofrece sincronismo para señales HD progresivas y tiene menor contenido DC, por lo que es preferible en HD.",
+            "Tri‑level sync introduce más latencia que Black‑burst, por lo que nunca debe usarse en transmisiones en vivo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta distingue usos: black‑burst para SD entrelazado, tri‑level para HD progresivo por su forma y menor contenido DC. Los distractores equivocan compatibilidad, sustitubilidad o introducen afirmaciones técnicas incorrectas sobre latencia.",
+          "category": "Equipos de medida y control"
+        }
+      ]
+    },
     {
       "id": "025",
       "title": "Examen 025",
