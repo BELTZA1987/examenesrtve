@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-24",
+  "updatedAt": "2026-08-25",
   "exams": [
+    {
+      "id": "027",
+      "title": "Examen 027",
+      "date": "2026-08-25",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Según la Ley 13/2022, indique cuál de las siguientes obligaciones corresponde concretamente a los prestadores de servicios audiovisuales respecto a accesibilidad:",
+          "options": [
+            "Subtitular todos los contenidos lineales y a la carta desde el primer día de emisión sin excepciones.",
+            "Proporcionar subtitulado, audiodescripción y lengua de signos para una proporción mínima de la programación y del catálogo a la carta, con plazos de implantación.",
+            "Limitarse a adaptar únicamente la página web y los menús de la plataforma sin tocar los contenidos audiovisuales.",
+            "Garantizar intérprete de lengua de signos en tiempo real en todos los informativos de cualquier emisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley obliga a implantar medidas de accesibilidad (subtítulos, audiodescripción y lengua de signos) con porcentajes y plazos, no exige su presencia inmediata y universal en todos los contenidos; las otras opciones son excesivas o incorrectas respecto al mandato legal.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Durante una retransmisión, ¿qué conjunto de medidas asegura mejor que un clip exportado desde EVS sea utilizable en el NLE con suficientes 'handles' y compatibilidad de códec?",
+          "options": [
+            "Eliminar el clip del EVS tras la primera copia para liberar espacio y reconstruir handles en el NLE mediante rewrap.",
+            "Copiar solo el fichero contenedor original sin handles y confiar en que el NLE aplicará automáticamente los frames faltantes.",
+            "Exportar desde EVS con handles y metadatos, transcodificar a un códec de edición compatible (ProRes/DNxHR) y mantener la esencia original accesible en el servidor EVS hasta emisión.",
+            "Transferir únicamente proxies de baja resolución al NLE y realizar la conformación en remoto sin conservar metadatos de handles."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta es exportar con handles y metadatos y, si es necesario, transcodificar a un códec de edición; mantener la esencia en EVS durante la retransmisión asegura disponibilidad. Los distractores omiten handles, eliminan la fuente o dependen de proxies sin metadatos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para convertir correctamente RGB 4:4:4 a YCbCr 4:2:0 en un flujo de entrega broadcast, ¿qué secuencia de operaciones es la adecuada?",
+          "options": [
+            "Aplicar una LUT creativa en RGB, luego convertir a YCbCr y realizar submuestreo sin corrección de aliasing.",
+            "Primero reducir resolución espacial al 4:2:0; después convertir RGB→YCbCr sobre la señal ya submuestreada; finalmente ajustar luminancia.",
+            "Convertir a YCbCr 4:4:4, aplicar compresión long‑GOP y luego descartar muestras de crominancia sin filtrado.",
+            "Aplicar la matriz de conversión RGB→YCbCr; filtrar y aplicar submuestreo cromático (4:2:0) sobre Cb/Cr; ajustar quantización/bit‑depth y aplicar dithering si procede."
+          ],
+          "correctIndex": 3,
+          "explanation": "La conversión correcta aplica primero la matriz RGB→YCbCr preservando Y, luego un filtrado y submuestreo controlado de Cb/Cr a 4:2:0 y ajustes de cuantización; las otras opciones alteran orden o omiten filtrado, provocando artefactos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación correcta en relación con AVC/H.264 frente a HEVC/H.265 en flujos audiovisuales:",
+          "options": [
+            "HEVC ofrece calidad equivalente a menor bitrate (aprox. 30–50 % menos) pero aumenta la complejidad de codificación y las exigencias de decodificación en equipos antiguos.",
+            "HEVC reduce sistemáticamente la latencia de codificación y es siempre más simple de implementar en transmisiones en directo.",
+            "AVC proporciona mejores tasas de compresión que HEVC en todos los escenarios actuales.",
+            "HEVC es universalmente compatible con todos los decodificadores y therefore no plantea problemas de compatibilidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "HEVC mejora la eficiencia de compresión a costa de mayor complejidad de codificador/decoder y compatibilidad limitada en equipos legacy; las otras afirmaciones son incorrectas o absolutas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_export_qc",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En el control de calidad de una exportación para entrega broadcast, ¿qué comprobación verifica específicamente campos y sincronía A/V?",
+          "options": [
+            "Medición del nivel medio LUFS del programa para cumplir la norma de loudness.",
+            "Comprobación del bitrate medio del fichero para asegurar que cumple el máximo permitido.",
+            "Verificación de que los metadatos técnicos contienen el título y el autor del proyecto.",
+            "Reproducción en salida SDI configurada para señales entrelazadas y verificación cuadro a cuadro del orden de campos comparando timecode con la pista de audio."
+          ],
+          "correctIndex": 3,
+          "explanation": "La comprobación cuadro a cuadro en salida entrelazada y la comparación de timecode/audio detecta inversiones de campo y desincronías; las otras pruebas controlan aspectos distintos (bitrate, metadatos, loudness).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a diferencias operativas entre MXF OP1a y OP‑Atom:",
+          "options": [
+            "OP‑Atom es preferido para entrega final broadcast por su único fichero contenedor que simplifica recepción.",
+            "OP1a reduce el número de ficheros y facilita la entrega de paquetes completos al agrupar esencias en un contenedor único.",
+            "OP‑Atom facilita la edición y el reconformado al mantener un archivo por esencia.",
+            "OP1a puede dificultar reconformado al encapsular múltiples esencias en un mismo archivo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación marcada es falsa: OP‑Atom produce múltiples archivos (uno por esencia) y OP1a es el que agrupa en un único fichero; por tanto decir que OP‑Atom tiene un único fichero es la excepción. Las demás son correctas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un almacenamiento compartido NEXIS varios editores sufren pérdida de rendimiento durante operaciones concurrentes. ¿Cuál es el diagnóstico técnico más probable?",
+          "options": [
+            "Avería física en un concentrador USB conectado a una estación de trabajo.",
+            "Fallo exclusivo del software del NLE en una sola estación sin impacto en el resto de editores.",
+            "Saturación del enlace ascendiente del switch o del trunk entre nodos de almacenamiento que limita el ancho de banda agregado disponible para clientes.",
+            "Configuración incorrecta de la frecuencia de muestreo de audio en las estaciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La descripción clásica es un cuello de botella en la red (uplink/trunk) o en la agregación hacia el SAN que reduce el rendimiento para múltiples clientes; las otras opciones son aisladas o no relacionadas con rendimiento compartido.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique la afirmación que mejor describe la naturaleza jurídica y la estructura básica de la Corporación RTVE según la Ley 17/2006:",
+          "options": [
+            "Órgano consultivo sin responsabilidad de gestión ejecutiva ni patrimonio propio.",
+            "Empresa privada con fines lucrativos sometida exclusivamente al derecho mercantil, sin órganos específicos de control público.",
+            "Agencia independiente internacional dependiente de la Unión Europea con normativa supranacional.",
+            "Corporación de titularidad estatal con personalidad jurídica propia y órganos como el Consejo de Administración y el Presidente, encargada de la gestión estratégica y la dirección ejecutiva."
+          ],
+          "correctIndex": 3,
+          "explanation": "RTVE es una corporación de titularidad estatal con personalidad propia y órganos (Consejo de Administración, Presidente) que articulan su gobierno; las otras opciones son inespecíficas o incorrectas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación operativa: ¿cuál es la consecuencia principal de una adaptación de impedancias incorrecta en una cadena con enlaces coaxiales de vídeo?",
+          "options": [
+            "Reflexiones e impedancia reflejada que provocan pérdidas selectivas de frecuencia, degradación de la relación señal‑ruido y artefactos en la imagen (ghosting, caídas de nivel).",
+            "Aumento exclusivo de la velocidad de transmisión sin efecto en la calidad de imagen.",
+            "Generación de un offset DC que desplaza la línea de base de luminancia únicamente.",
+            "No tiene efectos perceptibles salvo una leve variación de colorimetría."
+          ],
+          "correctIndex": 0,
+          "explanation": "Una adaptación errónea produce reflexiones y pérdidas por desadaptación (standing waves) afectando SNR y provocando artefactos visibles; las otras opciones no describen las consecuencias físicas correctas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Seleccione el conjunto de elementos que caracteriza apropiadamente un accidente 'in itinere'.",
+          "options": [
+            "Accidente derivado de actividad recreativa fuera del horario de trabajo.",
+            "Accidente ocurrido en jornada laboral dentro de las instalaciones del centro de trabajo exclusivamente.",
+            "Accidente durante una misión profesional fuera del trayecto habitual del trabajador.",
+            "Desplazamiento habitual entre domicilio y lugar de trabajo, por ruta razonable y sin interrupciones voluntarias relevantes, y durante el trayecto habitual."
+          ],
+          "correctIndex": 3,
+          "explanation": "El accidente in itinere se refiere al accidente en el trayecto habitual domicilio‑trabajo sin interrupciones no relacionadas; las otras opciones describen accidentes in‑mission, en centro de trabajo o fuera de horario.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "En un RGB Parade, el canal verde muestra consistentemente 6 dB más en altas luces que rojo y azul. ¿Cuál es el diagnóstico técnico más pertinente?",
+          "options": [
+            "Correcta calibración de monitor; no hay problema técnico que corregir.",
+            "Dominante de canal verde en altas luces probablemente por ganancia del sensor/canal o ajuste erróneo del balance de blancos en la cadena de captura.",
+            "Ruido de baja frecuencia en la señal que sólo afecta a la componente azul.",
+            "Fallo en el códec de entrega que sólo altera metadatos y no los niveles de luminancia."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un exceso sostenido en el canal verde indica una dominante por ganancia o balance de blancos incorrecto en captura/procesado; las otras opciones no explican un desplazamiento consistente por canal en altas luces.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a límites y uso de checksums en las comprobaciones antes/después de transferencia:",
+          "options": [
+            "Recalcular checksums tras la transferencia permite detectar cualquier alteración bit‑a‑bit entre origen y destino.",
+            "Un checksum por sí solo garantiza la recuperación y preservación a largo plazo frente a degradación física del soporte.",
+            "La comparación de checksums antes y después identifica errores de copia o corrupción transmitida durante la transferencia.",
+            "Las colisiones de hash son una limitación teórica: checksums no son invulnerables a coincidencias entre ficheros distintos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Decir que un checksum garantiza la recuperación/preservación a largo plazo es incorrecto: verifica integridad bit‑a‑bit en el momento, pero no asegura preservación ni recuperación; las demás afirmaciones sobre uso y límites son correctas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que describe correctamente la operación de 'ingesta' distinguiéndola de captura, importación y enlace:",
+          "options": [
+            "Importación: grabación directa desde cámara a soporte físico durante la toma.",
+            "Captura: referencia al fichero en su ubicación original sin copiarlo al sistema.",
+            "Ingesta: copia verificada y registro del material en el sistema de almacenamiento con metadatos y, si procede, transcodificación y generación de proxies.",
+            "Enlace: copia bit‑a‑bit con verificación y catalogación en el archivo maestro."
+          ],
+          "correctIndex": 2,
+          "explanation": "La ingesta implica la copia controlada y registro del material en el sistema con metadatos/QC; 'captura' es grabación en origen, 'importación' y 'enlace' se usan en contextos distintos y las otras opciones mezclan definiciones incorrectas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_music_sync",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Si el montaje debe marcar acentos dramáticos en la frase musical, ¿qué estrategia de sincronización es la más adecuada?",
+          "options": [
+            "Cortar en los acentos y en los límites de frase musical alineando los golpes visuales con los acentos sonoros para reforzar la tensión dramática.",
+            "Ignorar los acentos musicales y cortar siempre en silencios para evitar dependencia musical.",
+            "Realizar cortes arbitrarios cada cuatro compases sin referencia a frase o acentos.",
+            "Aplicar siempre contrapunto: cortar en partes inesperadas justo entre los acentos para ocultarlos."
+          ],
+          "correctIndex": 0,
+          "explanation": "Para enfatizar acentos dramáticos la práctica es alinear cortes con acentos y frases musicales; las otras opciones rompen la relación música‑imagen o la anulan, salvo elección estilística deliberada.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Frente a un conflicto entre libertad de información y derecho al honor, ¿cuál es el procedimiento constitucional adecuado para su reparación?",
+          "options": [
+            "La Constitución permite censura previa cuando la información pueda lesionar el honor.",
+            "La libertad de información se reconoce pero puede limitarse por ley para proteger el honor; la tutela procede mediante acciones civiles o rectificación y, en su caso, responsabilidades penales conforme a la ley.",
+            "No existen límites legales a la libertad de información en materia de hechos noticiables.",
+            "La única vía de reparación es la sanción administrativa impuesta por la empresa titular del medio."
+          ],
+          "correctIndex": 1,
+          "explanation": "El derecho a la información es protegido pero sujeto a límites legales (honor, intimidad) con tutela judicial y derecho de rectificación; la censura previa o ausencia de límites son incompatibles con el marco constitucional.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la estrategia que cumple correctamente la política 3‑2‑1 de copias de seguridad:",
+          "options": [
+            "Mantener una sola copia en un disco local y otra en la nube sin versiones históricas.",
+            "Configurar un RAID 1 con espejo local y considerarlo como tres copias distintas.",
+            "Tener tres copias de los datos, almacenadas en al menos dos tipos de soporte distintos y con al menos una copia almacenada fuera del sitio principal.",
+            "Usar únicamente almacenamiento en la misma sala con tres discos distintos conectados en el mismo controlador."
+          ],
+          "correctIndex": 2,
+          "explanation": "3‑2‑1 requiere 3 copias, 2 tipos de soportes distintos y 1 copia off‑site; RAID no reemplaza copias independientes ni la ubicación externa, por eso las otras opciones no cumplen la política.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En un vectorscopio, ¿qué indica principalmente el ángulo de un clúster respecto a la 'skin‑line'?",
+          "options": [
+            "Presencia de ruido en la señal de crominancia.",
+            "Nivel de luminancia absoluta del píxel.",
+            "Desplazamiento de tono (hue) respecto al tono de piel de referencia.",
+            "Dirección del tiempo en la señal de vídeo."
+          ],
+          "correctIndex": 2,
+          "explanation": "El ángulo en el vectorscopio representa el tono (hue); la distancia al centro representa saturación. Las otras opciones no describen la interpretación angular correcta.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Indique la obligación que corresponde al trabajador en materia de prevención de riesgos laborales:",
+          "options": [
+            "Diseñar el plan de prevención de la empresa.",
+            "Utilizar correctamente los medios de protección facilitados y participar en la formación e información proporcionada por la empresa.",
+            "Poder imponer sanciones disciplinarias a los encargados de prevención.",
+            "Garantizar el archivo y custodia del registro de accidentes de la empresa."
+          ],
+          "correctIndex": 1,
+          "explanation": "El trabajador debe usar correctamente los equipos y seguir la formación e instrucciones preventivas; las otras responsabilidades corresponden a la empresa o a órganos competentes.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_fiction",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para respetar la continuidad dramática y la cobertura en la edición de una escena de ficción, ¿qué criterio de montaje es el más adecuado?",
+          "options": [
+            "Priorizar la continuidad de interpretación y el ritmo interno del actor, conformando la elección de planos con la cobertura disponible y evitando cortes que rompan la acción física o la intención dramática.",
+            "Cortar independientemente de la cobertura disponible para imponer un ritmo externo sin consultar a realización.",
+            "Eliminar siempre planos medios y utilizar sólo primeros planos para intensificar la emoción.",
+            "Sustituir planos por insertos de recursos gráficos para disimular falta de cobertura sin atender a la interpretación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica correcta es conservar la continuidad de interpretación y ajustar la edición a la cobertura y a la intención dramática; las demás opciones ignoran la continuidad actoral o utilizan atajos inapropiados.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "En EVS/IPDirector, ¿qué operación afecta directamente a la continuidad de reproducción (gapless) entre clips consecutivos de una playlist de emisión?",
+          "options": [
+            "Transcodificar los clips a un códec distinto después de la publicación de la playlist sin regenerar índices.",
+            "Solo modificar los metadatos descriptivos de los clips sin tocar la configuración de reproducción.",
+            "Reordenar clips cambiando únicamente sus nombres manualmente sin actualizar la playlist.",
+            "Configurar el modo de splicing/gapless en la playlist para eliminar pausas entre clips."
+          ],
+          "correctIndex": 3,
+          "explanation": "La continuidad entre clips depende de la configuración de splicing/gapless y de índices de reproducción; editar solo metadatos o renombrar sin actualizar no garantiza reproducción continua y la transcodificación sin regenerar índices puede introducir interrupciones.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "026",
       "title": "Examen 026",
