@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-26",
   "exams": [
+    {
+      "id": "028",
+      "title": "Examen 028",
+      "date": "2026-08-26",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a los principios y restricciones del sistema de financiación previsto por la Ley 8/2009 para RTVE:",
+          "options": [
+            "Prioriza mecanismos de financiación estables y previsibles frente a ingresos comerciales volátiles.",
+            "Permite la financiación exclusiva mediante contratación libre de publicidad sin límites ni requisitos de control.",
+            "Establece obligaciones de transparencia y control público sobre la gestión de los fondos.",
+            "Combina aportaciones públicas con recursos propios sujetos a reglas y restricciones para garantizar independencia."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta (excepción) es la que afirma financiación exclusiva por publicidad: la Ley 8/2009 no dispone financiación ilimitada por publicidad; al contrario, prioriza financiación pública y controles. La diferencia decisiva frente al distractor más próximo (combinación pública/propia) es que éste describe la regla general de fuentes y límites, no una supuesta libertad publicitaria absoluta.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la corrección de una discrepancia entre numeración de timecode y tiempo real por interpretación drop‑frame vs non‑drop‑frame sin eliminar fotogramas:",
+          "options": [
+            "Eliminar fotogramas concretos para que la numeración de timecode coincida con el tiempo real.",
+            "Reetiquetar la interpretación del timecode (flag drop/non‑drop) o regenerar metadatos de timecode para que coincida con tiempo real, sin alterar la esencia.",
+            "Aplicar una conversión de tiempo (relabel) en metadata manteniendo la secuencia de imágenes intacta.",
+            "Usar herramientas que ajusten solo la representación del timecode (display) sin reordenar ni suprimir fotogramas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es la eliminación de fotogramas: la corrección debe realizarse cambiando la interpretación del timecode (relabeling), no suprimiendo imágenes. La diferencia clave respecto al distractor más próximo (ajustar metadata) es que eliminar fotogramas altera la esencia, mientras que la corrección adecuada sólo modifica la numeración/interpretación.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Un servidor de vídeo atiende streams constantes de 8 Mbps a 120 usuarios concurrentes; el enlace de agregación del servidor es de 1 Gbps. Diagnostique la limitación técnica más relevante:",
+          "options": [
+            "El cuello de botella principal es el ancho de banda de red, porque el caudal agregado (≈960 Mbps) deja escaso margen para overhead y picos.",
+            "El principal problema será la IOPS del almacenamiento, ya que los accesos aleatorios superarán la capacidad del disco.",
+            "La limitación crítica será la CPU de transcodificación en servidor, que no soportará 120 decodificaciones simultáneas.",
+            "El número de licencias de sesión del software es la causa más habitual de este comportamiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "El diagnóstico correcto es el ancho de banda: 120×8 Mbps ≈ 960 Mbps aproxima la capacidad de 1 Gbps sin margen para overhead, retransmisiones o picos, por lo que la red es el cuello de botella. Difícil se confunde con IOPS o CPU; esos pueden influir, pero la razón decisiva aquí es la saturación del enlace agregado.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_red_ip",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Secuencia de comprobaciones básica para diagnosticar que un puesto de edición no accede a un recurso compartido en la misma subred:",
+          "options": [
+            "Verificar dirección IP del puesto y máscara; comprobar que la IP del recurso está en la misma subred; hacer ping al recurso y al gateway; revisar conexiones físicas y VLAN en el switch.",
+            "Reiniciar el servidor de archivos; reinstalar drivers de red; eliminar cachés del NLE; volver a mapear la unidad.",
+            "Comprobar solo el DNS y reiniciar el servicio de nombre; si falla, reinstalar el sistema operativo del puesto.",
+            "Cambiar la puerta de enlace del puesto por la del proveedor de Internet; comprobar si el recurso responde por Internet."
+          ],
+          "correctIndex": 0,
+          "explanation": "La secuencia correcta es comprobar IP y máscara para asegurar pertenencia a la misma subred, luego probar conectividad (ping a recurso y gateway) y finalmente revisar infraestructura de conmutación/VLAN. Los distractores plantean acciones poco pertinentes o destructivas (reinstalaciones, cambios de gateway externos).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación correcta sobre la diferencia operativa entre legalización de señal y limitación de gamut:",
+          "options": [
+            "Ambos procesos son idénticos: limitan exclusivamente el nivel de audio embebido y el crominance.",
+            "Un legalizador sólo añade metadata de legalidad; el limitador corrige luma.",
+            "Un legalizador actúa sobre niveles de luminancia y componentes de señal para asegurar límites legales (clipping o scaling); un limitador de gamut restringe saturación cromática para mantener colores dentro del espacio permitido.",
+            "El limitador de gamut elimina cuadros que exceden saturación y los sustituye por negros para cumplir normas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación correcta distingue que el legalizador corrige valores de nivel (luma/chroma) mediante clipping o scaling para cumplir límites legales, mientras que el limitador de gamut actúa sobre la saturación y la crominancia. El distractor más cercano (metadata) es incorrecto porque la legalización modifica valores de señal, no sólo etiquetas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Motivación narrativa que hace preferible un encadenado (dissolve) frente a un corte seco:",
+          "options": [
+            "Marcar una relación temporal o asociativa entre dos planos, sugiriendo progresión o fundido de un momento a otro.",
+            "Reforzar la sensación de simultaneidad absoluta entre dos acciones inmediatas.",
+            "Priorizar la máxima sutileza rítmica eliminando cualquier conexión temporal entre los planos.",
+            "Crear un efecto de choque y ruptura abrupta en el tessitura dramática."
+          ],
+          "correctIndex": 0,
+          "explanation": "El encadenado se emplea para señalar paso del tiempo o vinculación asociativa entre planos; es una transición que suaviza el cambio. La diferencia decisiva respecto al distractor más próximo (simultaneidad) es que el encadenado sugiere continuidad temporal/relacional, no coincidencia instantánea que normalmente se resuelve con corte.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Organización de pausas y alternancia de tareas para reducir fatiga visual y postural en un puesto con pantallas de visualización:",
+          "options": [
+            "Concentrar toda la jornada en tareas de pantalla sin pausas intermedias, compensando con un único descanso largo a mitad del turno.",
+            "Alternar tareas visuales y posturales (visión de pantalla / tareas de pie o manipulación) e introducir micro‑pausas breves frecuentes junto a descansos periódicos más largos.",
+            "Programar trabajos continuos de 3 horas seguidas sin cambios posturales para aumentar productividad, seguido de una pausa única de 30 minutos.",
+            "Evitar cualquier pausa y compensar con estiramientos al final de la jornada laboral."
+          ],
+          "correctIndex": 1,
+          "explanation": "El procedimiento recomendado combina alternancia de tareas con micro‑pausas frecuentes y descansos periódicos, reduciendo carga visual y postural. Los distractores plantean pausas insuficientes o única al final del turno, que no abordan la fatiga acumulada durante la jornada; esa es la diferencia decisiva.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación compatible con la regulación de jornada, descansos y turnicidad en el III Convenio Colectivo de RTVE:",
+          "options": [
+            "Permite la supresión de descansos entre jornadas según necesidades del empleado sin compensación.",
+            "Establece que la jornada máxima anual es discrecional y no sujeta a negociación colectiva.",
+            "Su única finalidad es fijar las retribuciones sin referencia expresa a descansos ni turnos.",
+            "Regula la distribución de la jornada, los periodos de descanso y la organización de turnos mediante negociación colectiva y criterios de servicio."
+          ],
+          "correctIndex": 3,
+          "explanation": "La afirmación compatible es la que indica regulación sobre jornada, descansos y turnos mediante negociación colectiva; el Convenio aborda organización del trabajo. Los distractores son incompatibles: no se permite supresión arbitraria de descansos ni ausencia de regulación sobre turnos y retribuciones.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que describe correctamente la interpretación operativa de lecturas de un medidor de correlación de fase respecto a compatibilidad mono/estéreo:",
+          "options": [
+            "Valores alrededor de 0 significan que la mezcla es completamente mono y no existen componentes estéreo.",
+            "Lectura próxima a +1 indica cancelación en mono; −1 indica máxima compatibilidad.",
+            "Lectura cercana a +1 indica alta correlación y buena compatibilidad mono; cercana a 0 indica señales poco correladas; cercana a −1 indica riesgo de cancelación al sumar a mono.",
+            "Cualquier lectura distinta de +1 invalidará automáticamente la mezcla estéreo y obliga a rehacer la mezcla en mono."
+          ],
+          "correctIndex": 2,
+          "explanation": "La lectura cerca de +1 indica buena correlación y compatibilidad mono; valores próximos a −1 señalan riesgo de cancelación al mezclar a mono. El distractor más cercano invierte la interpretación de signos; la diferencia decisiva es el significado físico de la correlación respecto a suma mono.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Respecto a la relación temporal entre audio e imagen, el J‑cut se caracteriza por:",
+          "options": [
+            "El audio del siguiente plano permanece después de que su imagen haya cambiado (L‑cut).",
+            "El audio del plano siguiente comienza antes de que su imagen aparezca en pantalla.",
+            "El audio y la imagen del plano siguiente siempre se muestran exactamente al mismo tiempo en J‑cut.",
+            "El J‑cut es una técnica en la que se elimina completamente la pista sonora anterior antes de cortar."
+          ],
+          "correctIndex": 1,
+          "explanation": "El rasgo del J‑cut es que el audio del siguiente plano se introduce anticipadamente respecto a su imagen; los otros enunciados son incorrectos o describen otras técnicas. La diferencia clave frente al distractor más próximo es el momento de entrada del audio respecto a la imagen.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la estrategia compatible con la preservación frente a obsolescencia que incluya verificación periódica y migración de soportes:",
+          "options": [
+            "Depender exclusivamente del proveedor del formato para actualizaciones futuras sin registrar procedimientos internos.",
+            "Conservar los soportes originales indefinidamente sin migración, confiando en su longevidad.",
+            "Realizar una única copia en disco y confiar en ella como archivo definitivo sin verificaciones posteriores.",
+            "Plan de migración periódico a formatos y soportes actuales con verificaciones de integridad y documentación de cada ciclo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La estrategia correcta es la migración periódica combinada con verificaciones y documentación; eso previene obsolescencia. Los distractores omiten migración, verificación o delegan totalmente en terceros, lo que compromete preservación y compatibilidad a largo plazo.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que describe correctamente una limitación práctica de sistemas de archivos en soportes audiovisuales:",
+          "options": [
+            "ext4 no permite más de 1000 ficheros por directorio, lo que limita proyectos audiovisuales.",
+            "NTFS no admite ficheros mayores de 2 GB, por lo que está limitada para vídeo moderno.",
+            "FAT32 no permite ficheros individuales mayores de 4 GB, por lo que no es adecuada para masters de gran tamaño.",
+            "Todos los sistemas de archivos actuales permiten tamaños de fichero ilimitados sin consideraciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación correcta es la limitación de FAT32 (≈4 GB por fichero), una restricción práctica para contenidos audiovisuales grandes. Los distractores son incorrectos: NTFS admite ficheros muy grandes, ext4 no tiene el límite citado y no existen sistemas con tamaño absolutamente ilimitado sin consideraciones de implementación.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Medida preventiva más adecuada frente a riesgo de trastornos musculoesqueléticos en tareas continuas con teclado, ratón y tableta gráfica:",
+          "options": [
+            "Colocar teclado en ángulo pronunciado y elevar hombros para mejorar la visibilidad del monitor.",
+            "Usar reposamuñecas rígidos para inmovilizar la muñeca y evitar movimiento durante toda la jornada.",
+            "Incrementar sensibilidad del ratón al máximo para reducir movimiento de mano sin modificar la ergonomía del puesto.",
+            "Ajustar altura y posición de teclado/ratón para mantener muñecas en posición neutra, apoyar antebrazos y alternar manos y tareas con pausas activas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La medida correcta es mantener muñecas neutras, apoyar antebrazos y alternar tareas y pausas activas; eso reduce tensión y riesgo. Los distractores proponen medidas contraproducentes (inmovilización, posturas forzadas o ajustes que aumentan tensión), diferenciándose en su impacto ergonómico negativo.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Tras completar la descarga verificada de clips desde una tarjeta de estado sólido, la práctica operativa más adecuada respecto al soporte original es:",
+          "options": [
+            "Sobrescribir la tarjeta con nuevos rodajes sin comprobación previa.",
+            "Formatear inmediatamente la tarjeta en cámara para liberar espacio cuanto antes.",
+            "Conservar la tarjeta sin formatear hasta comprobar integridad y backups; formatear en cámara sólo tras verificación completa.",
+            "Ejecutar un formateo de bajo nivel que borre y destruya metadatos de la tarjeta inmediatamente."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta es mantener la tarjeta sin formatear hasta verificar integridad y copias de seguridad; formatear sólo después de confirmación. Los distractores implican pérdida potencial de datos o destrucción de metadatos, lo que contraviene conservación e integridad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Indique la medida coherente con la prevención del acoso y la representación no sexista conforme al II Plan de Igualdad y la Guía de Igualdad de RTVE:",
+          "options": [
+            "Permitir que la selección de contenidos y representación recaiga exclusivamente en la libertad creativa sin controles institucionales.",
+            "Limitar la comunicación sobre igualdad a un documento informativo sin acciones formativas obligatorias.",
+            "Implantar protocolos de denuncia claros, formación obligatoria sobre acoso y revisión de contenidos para evitar estereotipos y lenguaje discriminatorio.",
+            "Establecer cuotas de revisión de contenidos solo en horas punta de emisión sin formación ni protocolos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La medida correcta incluye protocolos de denuncia, formación y revisión de contenidos para prevenir acoso y representación sexista. Los distractores son insuficientes o contrarios al objetivo (pasividad, ausencia de controles o medidas simbólicas sin formación), lo que los invalida frente a la exigencia de medidas activas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a condiciones de fiabilidad y limitaciones de la sincronización multicámara por forma de onda de audio:",
+          "options": [
+            "Es fiable cuando todas las cámaras capturan audio directo de la misma fuente con relación señal/ruido adecuada.",
+            "Requiere coincidencia temporal suficiente de contenidos sonoros y una calidad de audio comparable entre fuentes.",
+            "La técnica pierde fiabilidad en presencia de ruido de fondo elevado o en grabaciones con latencias distintas entre dispositivos.",
+            "Funciona correctamente incluso si únicamente una cámara dispone de pista de audio y las demás no registran sonido."
+          ],
+          "correctIndex": 3,
+          "explanation": "La excepción es afirmar que funciona si solo una cámara tiene audio: la sincronización por forma de onda requiere audio en las pistas a sincronizar. Los distractores válidos indican condiciones esperadas (misma fuente, problemas por ruido o latencia y necesidad de calidad comparable); la diferencia decisiva es la presencia de audio en las fuentes a alinear.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al comparar una captura de la misma escena en 50i (entrelazado, 50 campos/s) y en 25p (progresivo, 25 fotogramas/s) con movimiento rápido, ¿cuál de las siguientes afirmaciones describe correctamente la relación temporal de muestreo y los artefactos de movimiento esperables?",
+          "options": [
+            "El entrelazado reduce sistemáticamente los artefactos de movimiento porque cada campo contiene la información espacial completa del fotograma, mientras que el progresivo divide la información temporal en dos semimuestras que aumentan el riesgo de combing.",
+            "Los campos entrelazados se muestrean en instantes alternos (50 instantes/s), lo que puede representar mejor eventos de movimiento rápido pero provoca 'combing' y discontinuidades verticales si no se deinterlaza correctamente; la señal 25p captura el marco completo en un único instante (25 instantes/s), evitando combing pero pudiendo mostrar judder o más desenfoque de movimiento por menor frecuencia de muestreo.",
+            "Ambas modalidades muestrean temporalmente al mismo ritmo efectivo (25 instantes por segundo); por tanto, las diferencias en artefactos de movimiento dependen exclusivamente del algoritmo del monitor o del conversor y no de la estructura entrelazada o progresiva.",
+            "La conversión simple de 50i a 25p mediante mezcla de campos (field blending) elimina el combing pero introduce doble imagen en movimiento ('ghosting'); en cambio, el deinterlazado por interpolación de movimiento preserva siempre los detalles de movimiento sin añadir desenfoque ni artefactos de fantasma."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respuesta 1: En 50i los campos representan instantes alternos (50 muestras temporales por segundo) lo que puede ofrecer mejor respuesta a movimientos rápidos, pero al combinar dos campos separados en tiempo aparecen discontinuidades verticales o 'combing' si no se aplica un deinterlazado adecuado. En 25p cada fotograma es coherente en tiempo (un solo instante) por lo que no hay combing, pero la frecuencia de muestreo temporal es menor (25 instantes/s), lo que puede producir judder o mayor dependencia de desenfoque de obturación para suavizar movimiento. El distractor más próximo (opción 4) es parcialmente cierto respecto a que field blending causa ghosting, pero es incorrecto afirmar que la interpolación de movimiento preserva siempre los detalles sin introducir desenfoque o artefactos: los métodos de interpolación o deinterlazado por compensación de movimiento reducen combing a costa de posibles errores de estimación, suavizado o artefactos de interpolación.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_relink",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Si al relinkar aparecen enlaces incorrectos entre clips y ficheros con nombres idénticos procedentes de distintas fuentes, cuál es el diagnóstico técnico más probable:",
+          "options": [
+            "La red está saturada impidiendo la verificación de checksums durante el relink.",
+            "El algoritmo de relink está empleando solamente el nombre de fichero como clave; falta uso de identificadores únicos (UMID/metadata) o rutas completas.",
+            "Los codecs de los archivos son incompatibles y por ello se enlazan incorrectamente.",
+            "Se ha producido corrupción física en el almacenamiento que renombra automáticamente ficheros."
+          ],
+          "correctIndex": 1,
+          "explanation": "El diagnóstico más probable es que el relink usa sólo el nombre de fichero como criterio, provocando colisiones entre fuentes; la corrección implica usar identificadores únicos o metadatos. Los otros distractores describen causas menos coherentes con enlaces erróneos por homonimia de nombres.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que describe correctamente la dependencia predictiva en una estructura GOP (I, P, B) y la consecuencia práctica de errores de codificación:",
+          "options": [
+            "Un error en un I‑frame puede propagarse a P y B dependientes hasta el siguiente I, causando corrupción prolongada; B depende de I/P vecinos y P depende de frames anteriores para predicción.",
+            "Los errores en P o B siempre se limitan al único frame afectado y no influyen en frames posteriores.",
+            "Una estructura GOP contiene solo frames independientes que no comparten información predictiva entre sí.",
+            "La existencia de B‑frames evita totalmente cualquier propagación de errores entre frames."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación correcta reconoce que I, P y B están en cadena de dependencia predictiva: un error en I afecta a P y B hasta el siguiente I; B depende de I/P adyacentes. Los distractores son incorrectos porque niegan la propagación o malinterpretan la dependencia predictiva.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe mejor la diferencia de principio y la compatibilidad de distribución entre PQ y HLG:",
+          "options": [
+            "HLG elimina la necesidad de gestión de color y metadatos en producción HDR, garantizando precisión absoluta.",
+            "PQ es inherentemente compatible con pantallas SDR sin conversión; HLG requiere metadata obligatoria para cualquier reproducción.",
+            "Ambas curvas son equivalentes en principio y compatibles indistintamente con cualquier display sin transformación.",
+            "PQ es una curva de cuantificación perceptual diseñada para masterización absoluta (requiere metadatos y entorno controlado); HLG es una solución híbrida con mejor compatibilidad hacia pantallas SDR y sin metadatos obligatorios."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta diferencia que PQ (ST‑2084) es una OETF para masterización en referencia absoluta y suele requerir gestión/metadata; HLG es híbrida y ofrece mayor compatibilidad hacia pantallas SDR sin metadatos. Los distractores equivocan la compatibilidad o exageran la ausencia de gestión necesaria.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "027",
       "title": "Examen 027",
