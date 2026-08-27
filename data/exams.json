@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-26",
+  "updatedAt": "2026-08-27",
   "exams": [
+    {
+      "id": "029",
+      "title": "Examen 029",
+      "date": "2026-08-27",
+      "level": "Muy alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Un servicio audiovisual bajo demanda incorpora contenidos con calificaciones por edad. Según las obligaciones de protección de menores introducidas por la normativa, indique la medida que debe implantar el prestador para cumplir la clasificación y control de acceso:",
+          "options": [
+            "Bloqueo general de todos los contenidos que incluyan lenguaje soez durante franjas nocturnas, sin clasificación por edad.",
+            "Publicación de recomendaciones de edad en la ficha técnica del contenido sin mecanismos técnicos de restricción de acceso ni control parental.",
+            "Marcado visual de advertencia al inicio del vídeo, sin necesidad de información estructurada ni API para intercambio de metadatos con agregadores.",
+            "Etiquetado de contenidos con descriptors de clasificación por edad y un sistema de control de acceso que permita restringir visionado por franja horaria y mediante control parental verificable."
+          ],
+          "correctIndex": 3,
+          "explanation": "La obligación incluye clasificación formal por edad y medidas técnicas de control de acceso (p. ej. control parental y franja), con metadatos estructurados; los distractores son insuficientes porque omiten mecanismos técnicos verificables o confunden medidas parciales con la obligación completa.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a criterios habituales para diseñar proxies orientados a edición, señale la excepción:",
+          "options": [
+            "Usar siempre un proxy con la menor profundidad de color posible para maximizar ahorro de espacio, aun si elimina información cromática necesaria para matching.",
+            "Bitrate y códec que garanticen reproducción fluida y compatibilidad NLE sin sacrificar conservación de motion: códec intraframe de baja compresión o VBR moderado.",
+            "Incluir metadatos técnicos y temporales embebidos en el proxy para facilitar relink y conformado automatizado.",
+            "Resolución reducida que preserve suficiente detalle para identificación de planos y recorte (por ejemplo 1/4 ó 1/3 de resolución de origen)."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es la opción 4: reducir profundidad de color hasta eliminar información cromática puede impedir identificación y matching; los demás son criterios válidos (resolución identificable, bitrate/códec compatibles y metadatos útiles).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre fuentes no sincronizadas y corrección mediante frame‑sync:",
+          "options": [
+            "Fuentes no sincronizadas sólo causan pérdida de audio embebido; el frame‑sync resamplea audio para mantener sincronía.",
+            "Fuentes no sincronizadas sólo afectan al color; un frame‑sync corrige tono sin alterar la temporización ni introducir latencia.",
+            "Fuentes no sincronizadas impiden totalmente el enrutado por matriz; el frame‑sync sustituye la señal por una generación interna idéntica sin latencia.",
+            "Fuentes no sincronizadas producen saltos o mismatches temporales en el conmutado; un frame‑sync realinea fotogramas introduciendo latencia y evitando microcortes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La afirmación correcta indica que la falta de sincronización causa discrepancias temporales y que el frame‑sync realinea añadiendo latencia controlada; los distractores minimizan o equivocan el efecto (no es sólo color ni audio, ni elimina latencia).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Para un proyecto de ficción que exigirá corrección de color exigente y cortes frecuentes a nivel de fotograma, ¿qué variante de la familia XAVC resulta más adecuada y por qué?",
+          "options": [
+            "XAVC Intra (intraframe, mayor tasa de datos y 4:2:2/10‑bit cuando disponible), porque facilita edición fotograma a fotograma y grading con menor dependencia predictiva.",
+            "XAVC Long‑GOP 4:2:0 8‑bit, porque reduce la carga de almacenamiento y mejora el rendimiento en la línea de tiempo sin pérdida de calidad en grading pesado.",
+            "XAVC S‑Long‑GOP, porque su alta compresión elimina la necesidad de proxies y preserva crominancia para etalonaje de alta exigencia.",
+            "XAVC HD en modo interlazado para mantener compatibilidad con emisión y evitar artefactos al cortar a nivel de fotograma."
+          ],
+          "correctIndex": 0,
+          "explanation": "XAVC Intra es apropiado para edición fotograma a fotograma y color grading por su intraframe (cada fotograma independiente) y mayor fidelidad; el distractor más próximo (Long‑GOP) es menor en tamaño pero introduce dependencia predictiva que complica recortes y etalonaje.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Tras copiar la carpeta de una tarjeta XDCAM al servidor manteniendo la estructura, ¿cuál de las siguientes afirmaciones constituye una excepción respecto a aspectos que afectan al acceso y uso de los clips?",
+          "options": [
+            "El spanning (división de un clip en múltiples ficheros de tamaño fijo) requiere herramientas compatibles para reconstruir la esencia si los índices no se han consolidado.",
+            "Los metadatos embebidos y los ficheros de índice son necesarios para que software estándar reconozca y relacione los clips con su nombre y timecode.",
+            "Algunas aplicaciones requieren conversión o reindexado porque XDCAM puede usar sidecars y estructuras propietarias no visibles sólo con la copia de carpetas.",
+            "Conservar únicamente la jerarquía de carpetas y nombres de fichero garantiza reproducción inmediata en cualquier reproductor estándar sin más comprobaciones."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 3 es la excepción: conservar sólo carpetas y nombres no garantiza reproducción porque XDCAM usa índices, spanning y metadatos que ciertas herramientas requieren; las otras opciones describen condiciones reales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Ante un conato de incendio en un rack de servidores con componentes eléctricos energizados, indique el procedimiento operativo correcto:",
+          "options": [
+            "Consumar equipos afectados intencionadamente para cortar oxígeno, no detener la alimentación eléctrica y apagar los extintores de forma manual.",
+            "Rociar el equipo con agua para enfriar, intentar extraer servidores mientras están energizados y continuar trabajo hasta apagarlo.",
+            "Desconectar la alimentación general si es posible con seguridad, alertar por la alarma, usar extintor CO2 o polvo para fuegos eléctricos y evacuar si no se controla; no usar agua.",
+            "Apagar únicamente los equipos cercanos y utilizar un extintor de clase A (agua) porque da mejor cobertura sobre todos los materiales."
+          ],
+          "correctIndex": 2,
+          "explanation": "El procedimiento correcto prioriza cortar alimentación de forma segura, activar alarma y usar extintores apropiados para fuegos eléctricos (CO2 o polvo); los distractores recomiendan agua o acciones peligrosas que están contraindicadas en incendios eléctricos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_metadatos",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a la función de metadatos técnicos y descriptivos en flujos audiovisuales, cuál de las siguientes afirmaciones es la más adecuada para facilitar catalogación, búsqueda e intercambio:",
+          "options": [
+            "Los metadatos sustituyen la necesidad de preservación de la esencia, ya que contienen una representación completa del contenido.",
+            "Los metadatos permiten identificar, clasificar y localizar activos, automatizar relink/reconformado y facilitar intercambio entre sistemas mediante campos estandarizados.",
+            "Los metadatos obligan a reducir bitrate para mejorar la búsqueda en plataformas de streaming.",
+            "Los metadatos únicamente sirven para etiquetar contenidos con información comercial y no afectan procesos técnicos de ingesta."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 define correctamente la función técnica y operativa de los metadatos; los distractores son incorrectos porque exageran o minimizan su alcance (no sustituyen la esencia ni afectan bitrate).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estas formulaciones sobre el principio constitucional de igualdad y prohibición de discriminación; cuál refleja con mayor precisión su contenido sustantivo:",
+          "options": [
+            "El principio exige trato idéntico en todos los casos; cualquier diferencia de trato está prohibida salvo autorización expresa por ley específica.",
+            "La prohibición de discriminación se aplica sólo a la legislación estatal, no a actuaciones administrativas o privadas reguladas.",
+            "La Constitución exige únicamente igualdad formal en el acceso a los cargos públicos, sin prever medidas de acción positiva.",
+            "La igualdad constitucional prohíbe discriminaciones arbitrarias y admite tratamientos diferenciados razonados y proporcionados para corregir desigualdades o proteger derechos fundamentales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 2 recoge la interpretación jurídica: se prohíbe la discriminación arbitraria y se admite trato diferenciado proporcionado para lograr igualdad efectiva; los demás errores simplifican o restringen indebidamente el principio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Al componer un gráfico PNG con alpha premultiplicado sobre un fondo oscuro aparecen halos claros en los bordes del gráfico. Diagnóstico más probable:",
+          "options": [
+            "El problema viene de una baja resolución del PNG y no tiene relación con manejo de alpha.",
+            "El archivo contiene alpha premultiplicado pero se está tratando como straight (no premultiplied), provocando restos del color de fondo original alrededor del borde.",
+            "El software está interpretando correctamente premultiplied; los halos son causados por un exceso de anti‑aliasing en la imagen fuente.",
+            "Se ha invertido la máscara alpha; el efecto de halos claros indica que la transparencia se ha aplicado al canal incorrecto."
+          ],
+          "correctIndex": 1,
+          "explanation": "Halos claros son característicos de interpretar premultiplicado como straight (o viceversa); en este caso, tratar premultiplied como straight deja canales RGB con color de fondo mezclado. Los distractores atribuyen la causa a resolución, anti‑aliasing o inversión de máscara, menos precisos ante este síntoma.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_en_mision",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Antes de desplazar a un técnico a una grabación fuera del centro habitual (misión), ¿qué medida preventiva debe priorizar el empleador?",
+          "options": [
+            "Sustituir la evaluación de riesgos por un seguro de viaje y prescindir de formación específica para minimizar trámites.",
+            "Dejar al trabajador que gestione de forma autónoma los detalles operativos del traslado y comunicar solo la hora de regreso.",
+            "Realizar evaluación de riesgos específica del desplazamiento y coordinar medidas preventivas (transporte, alojamiento seguro, equipos de protección y contacto de emergencias) y formar/informar al trabajador sobre riesgos previstos.",
+            "Limitar las medidas preventivas a disponer de un botiquín en el vehículo y entregar una autorización para la misión."
+          ],
+          "correctIndex": 2,
+          "explanation": "El empleador debe priorizar una evaluación de riesgos de la misión y coordinar medidas concretas y formación; los distractores reducen responsabilidades a seguros o elementos puntuales y no cumplen la obligación preventiva previa.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Según el teorema de Nyquist, ¿cuál es la frecuencia de muestreo mínima teórica para evitar aliasing en una señal cuya banda audible útil llega hasta 20 kHz?",
+          "options": [
+            "40 kHz",
+            "32 kHz",
+            "44.1 kHz",
+            "48 kHz"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nyquist exige muestrear al menos al doble de la máxima frecuencia presente: 2 × 20 kHz = 40 kHz. 44,1 kHz y 48 kHz son muestras prácticas por encima de ese mínimo; 32 kHz queda por debajo y provocarí­a aliasing.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Ordene la secuencia de operaciones adecuada para una ingesta verificada con control de calidad y registro permanente:",
+          "options": [
+            "Copiar archivos a destino, calcular y comparar checksum origen/destino, validar estructura y códec, registrar metadatos y resultado en el sistema de control.",
+            "Calcular checksum en origen, borrar origen, validar estructura en destino, luego copiar de nuevo si procede.",
+            "Validar estructura y formato en origen, copiar a destino sin checksum y registrar sólo los ficheros que fallaron la visualización manual.",
+            "Copiar a destino, realizar conformado automático sin comparación de checksum, y registrar sólo si la reproducción falla."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica correcta es copiar, verificar integridad mediante checksum comparado origen/destino, validar estructura/códec y registrar resultados; los distractores omiten la verificación bit‑a‑bit o proponen eliminar origen antes de confirmar la integridad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Secuencia: se alternan planos de dos personajes en lugares distintos realizando acciones simultáneas que convergen en un suceso común al final. ¿Qué tipo de montaje predomina?",
+          "options": [
+            "Elipsis narrativa, porque comprime el tiempo entre acciones no relacionadas.",
+            "Montaje alterno, porque sólo busca contrastar sin relación temporal entre acciones.",
+            "Montaje paralelo, porque muestra simultaneidad y conduce a una convergencia temática o causal.",
+            "Montaje intelectual, porque prioriza asociaciones simbólicas sin simultaneidad."
+          ],
+          "correctIndex": 2,
+          "explanation": "La descripción corresponde al montaje paralelo: alternancia para mostrar simultaneidad y convergencia; el montaje alterno enfatiza alternancia sin necesariamente simultaneidad causal, la elipsis comprime tiempo y el montage intelectual centra asociaciones simbólicas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "En un servidor EVS configurado para grabación continua (modo loop) con múltiples canales, señale la afirmación que constituye una excepción respecto a su principio operativo y gestión de recuperación:",
+          "options": [
+            "El servidor sobreescribe los fragmentos más antiguos cuando se alcanza la capacidad asignada al canal, a menos que fragmentos hayan sido marcados o exportados para preservación.",
+            "El modo loop garantiza que todos los clips se mantendrán indefinidamente aunque se agote la capacidad física del disco.",
+            "La disponibilidad de un fragmento para recuperación depende de la asignación de espacio por canal y de acciones de bloqueo (save/lock) realizadas por el operador.",
+            "La recuperación de acciones (replay) requiere que el fragmento no haya sido sobrescrito y que exista referencia de índice accesible por el sistema."
+          ],
+          "correctIndex": 1,
+          "explanation": "La excepción es la opción 3: el modo loop no garantiza retención indefinida; sobrescribe cuando se alcanza capacidad salvo bloqueo/archivado. Las otras opciones describen correctamente el principio operativo y las condiciones de recuperación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la interpretación operativa más ajustada a la finalidad de la reforma introducida por la modificación:",
+          "options": [
+            "Recuperar independencia y pluralismo en RTVE mediante un procedimiento de elección de sus órganos de dirección con participación parlamentaria que reduzca la dependencia del Gobierno en ejercicio.",
+            "Concentrar la elección de los órganos de RTVE en el Ejecutivo para agilizar nombramientos y dotar de mayor control político al Gobierno.",
+            "Privatizar parcialmente la gestión de contenidos para eliminar interferencias políticas en la programación.",
+            "Eliminar el control parlamentario sobre RTVE y trasladarlo a organismos internacionales para garantizar neutralidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La reforma buscó reforzar independencia y pluralismo mediante elección parlamentaria de los órganos, reduciendo la dependencia directa del Ejecutivo; los otros enunciados distorsionan la finalidad real.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "En la edición de una conversación, qué requisito operativa asegura la coherencia espacial en el raccord de mirada entre dos planos consecutivos:",
+          "options": [
+            "Ajustar únicamente la escala de los planos sin considerar la dirección de la mirada, porque el montaje compensa la continuidad de espacio.",
+            "Cambiar libremente el punto de mirada para crear tensión, aunque desplace la posición espacial aparente del otro interlocutor.",
+            "Mantener la dirección implícita de la mirada en el eje lateral y respetar la posición relativa de los sujetos dentro del campo para que la línea de mirada sea consistente entre planos.",
+            "Invertir el eje de cámara si los planos son de duración breve para mejorar dinamismo, sin más comprobaciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La coherencia espacial exige respetar la dirección de la mirada respecto al eje y la posición relativa de los sujetos; los distractores proponen violaciones del raccord o sustitutos insuficientes.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Ante la ausencia de señal en un destino de una matriz de vídeo, ¿qué comprobación operativa identifica de forma directa si existe un punto de cruce (crosspoint) erróneo u abierto?",
+          "options": [
+            "Reiniciar el servidor de reproducción y confiar en que el router restablezca automáticamente todas las rutas sin verificar el estado del crosspoint.",
+            "En el panel o interfaz de control del router, solicitar la lectura de estado del crosspoint y ejecutar un enrutado temporal de un patrón de prueba desde la fuente sospechosa al destino comprobando la presencia del patrón en el destino.",
+            "Cambiar el codec de la fuente para forzar una renegociación y observar si aparece señal en el destino.",
+            "Desconectar física y permanentemente la fuente para obligar al router a utilizar una ruta alternativa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La comprobación operativa directa es leer el estado del crosspoint y enrutar un patrón de prueba para verificar presencia; los distractores proponen reinicios o cambios irrelevantes que no identifican específicamente un crosspoint erróneo u abierto.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Causa y diagnóstico más probable de un zumbido a 50/60 Hz audible al conectar múltiples equipos de audio en un mismo sistema:",
+          "options": [
+            "Interferencia RF de emisoras de radio que se demodula en la etapa de entrada y aparece como 50/60 Hz.",
+            "Ruido térmico del circuito puenteado por operación normal, independiente de conexiones a tierra.",
+            "Clipping digital por niveles de entrada excesivos en la tarjeta de sonido produciendo armónicos a 50/60 Hz.",
+            "Bucles de masa: diferencias de potencial de tierra entre equipos conectados por varias rutas (por ejemplo, cables XLR y conexiones de alimentación) que generan corriente de bucle y ronroneo a frecuencia de red."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un zumbido a la frecuencia de la red es característico de bucles de masa por diferencias de potencial entre tierras; los otros distractores describen ruidos de distinta naturaleza no coincidentes con el síntoma primario.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "En un mezclador de vídeo, compare las funciones de programa, previo, key y la transición durante una operación de incrustación:",
+          "options": [
+            "La key actúa exclusivamente en el bus de previo y nunca puede aplicarse en el programa durante una transición.",
+            "El bus programa sólo se usa para previsualizar y no afecta la señal emitida; la transición se ejecuta siempre en el bus key.",
+            "El bus previo permite preparar la fuente y la llave; la operación de transición desplaza la señal del previo al programa y aplica la key en el momento de pasar a programa.",
+            "La transición intercambia automáticamente solo los keys sin afectar a las señales de programa o previo."
+          ],
+          "correctIndex": 2,
+          "explanation": "Correcto: se prepara en previo (previsualización) y la transición lleva la fuente al programa aplicando la key; los distractores confunden funciones o restringen erróneamente la aplicación de la key.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la correspondencia correcta entre corrección primaria y secundaria de color:",
+          "options": [
+            "Primaria: aplicación de LUTs creativas por máscara; Secundaria: corrección de blancos y niveles generales.",
+            "Primaria: ajustes globales de exposición, balance de blancos y contraste; Secundaria: selección y modificación de gamas tonales o máscaras para alterar sólo regiones o colores concretos.",
+            "Primaria: retoque puntual de píxeles aislados; Secundaria: cambio del espacio de color de todo el clip.",
+            "Primaria: eliminación de ruido temporal; Secundaria: gestión de metadatos de color para compatibilidad entre cámaras."
+          ],
+          "correctIndex": 1,
+          "explanation": "La corrección primaria trabaja a nivel global (exposición, balance y contraste) y la secundaria aplica ajustes selectivos mediante máscaras o rangos cromáticos; los distractores invierten o asignan funciones impropias.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "028",
       "title": "Examen 028",
