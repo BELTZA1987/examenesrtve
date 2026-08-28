@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-27",
+  "updatedAt": "2026-08-28",
   "exams": [
+    {
+      "id": "030",
+      "title": "Examen 030",
+      "date": "2026-08-28",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Según el III Convenio Colectivo de RTVE, ¿qué criterio determina primordialmente la clasificación profesional de una ocupación?",
+          "options": [
+            "La titulación académica genérica sin relación con funciones.",
+            "La antigüedad del trabajador en la Corporación.",
+            "El horario y turnicidad asignados al puesto.",
+            "El nivel de responsabilidad funcional y el contenido de las tareas asignadas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La clasificación profesional en el convenio se articula por niveles de responsabilidad y funciones concretas del puesto; la antigüedad, el horario o la titulación pueden ser factores complementarios pero no son el criterio determinante. La diferencia decisiva frente al distractor más próximo (antigüedad) es que la antigüedad no define el nivel profesional ni las competencias del puesto.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Indique la diferencia operativa principal entre un EDL y un AAF en el intercambio de proyectos:",
+          "options": [
+            "Un EDL encapsula audio y vídeo; un AAF solo contiene metadatos descriptivos.",
+            "Un EDL contiene básicamente una lista de cortes y timecodes; un AAF puede trasladar múltiples pistas, referencias a media, efectos básicos y metadatos.",
+            "Un EDL preserva transiciones y efectos complejos; AAF solo lista clips sin pistas.",
+            "Un EDL y un AAF son equivalentes en alcance y metadatos transferibles."
+          ],
+          "correctIndex": 1,
+          "explanation": "El EDL es una lista de decisiones de edición básica (cortes y timecodes); el AAF ofrece mayor alcance: referencias a varias pistas, enlaces a media, algunos efectos y metadatos. La diferencia clave frente al distractor más cercano (que invierte funciones) es que el AAF traslada estructura de pistas y metadatos que el EDL no.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En el vectorscopio, la 'skin‑line' sirve para:",
+          "options": [
+            "Detectar automáticamente defectos de compresión en pieles.",
+            "Medir la luminancia absoluta de los tonos de piel en cd/m².",
+            "Indicar el nivel máximo legal de crominancia en emisión.",
+            "Referenciar el ángulo de matiz y una banda de saturación habitual donde se localizan la mayoría de tonos de piel."
+          ],
+          "correctIndex": 3,
+          "explanation": "La 'skin‑line' en el vectorscopio es una guía angular de matiz y rango de saturación típico de los tonos de piel; no mide luminancia ni es un límite legal ni una herramienta de detección de compresión. La diferencia decisiva frente al distractor más próximo (medición de luminancia) es que el vectorscopio representa crominancia (matiz/saturación), no niveles de luminancia.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_news",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al editar un despacho informativo breve, ¿qué criterio debe primar en la coordinación con redacción?",
+          "options": [
+            "La jerarquía informativa y la claridad del mensaje dentro de la duración disponible.",
+            "La inclusión máxima de recursos gráficos aunque alargue la pieza.",
+            "Priorizar la voz en off extensa por encima de locución en plató.",
+            "Mantener siempre una duración estándar fija independientemente del contenido."
+          ],
+          "correctIndex": 0,
+          "explanation": "En noticias, la coordinación con redacción prioriza ordenar la información según su relevancia y claridad dentro del tiempo disponible; incluir recursos o alargar voz puede perjudicar la jerarquía informativa. La diferencia frente al distractor más cercano (uso de recursos gráficos) es que éstos son secundarios respecto a priorizar el contenido y su comprensibilidad.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Diagnostique el efecto principal de mezclar material 25p con 29,97p sin conversión de cadencia:",
+          "options": [
+            "Mejora de la nitidez por interpolación automática.",
+            "Desajuste cromático localizado en altas luces.",
+            "Pérdida inmediata de sincronía audio‑vídeo por diferencia de sample rate.",
+            "Aparición de judder y micro‑saltos temporales por frames repetidos u omitidos."
+          ],
+          "correctIndex": 3,
+          "explanation": "Sin conversión de cadencia, la mezcla de 25p y 29,97p provoca irregularidad temporal perceptible (judder) al repetirse u omitirse frames; no causa cambios cromáticos ni mejora de nitidez. A diferencia del distractor sobre sincronía A/V, la diferencia de frame rate no implica necesariamente pérdida de sync de audio (que depende de timecode/sample rate) sino artefactos de movimiento.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Compare niveles RAID: ¿qué configuración ofrece tolerancia a la falla de dos discos y reconstrucción tras reemplazo?",
+          "options": [
+            "RAID0: tolera un fallo de disco mediante espejo.",
+            "RAID5: tolera dos fallos de disco y reconstrucción rápida.",
+            "RAID6: tolera dos fallos de disco con paridad distribuida.",
+            "RAID1: tolera dos fallos en arreglos con más de tres discos."
+          ],
+          "correctIndex": 2,
+          "explanation": "RAID6 incorpora doble paridad y tolera la pérdida de dos discos; RAID5 tolera solo un fallo; RAID0 no ofrece tolerancia; RAID1 (mirroring) suele tolerar un fallo por conjunto. La diferencia clave frente al distractor más próximo (RAID5) es el número de discos fallables: uno vs dos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Seleccione la afirmación que distingue correctamente 'contenedor' de 'códec' aplicable a MOV, MP4 y MXF:",
+          "options": [
+            "El contenedor encapsula pistas, sincronización y metadatos; el códec es el algoritmo que comprime/descomprime la esencia.",
+            "El contenedor determina el algoritmo de compresión empleado por la esencia.",
+            "MXF es un códec especializado para broadcast.",
+            "MP4 no puede incluir vídeo en alta tasa de bits."
+          ],
+          "correctIndex": 0,
+          "explanation": "La distinción es que el contenedor agrupa pistas y metadatos mientras que el códec define cómo se comprime la imagen/sonido. El distractor más cercano (contenedor determina compresión) es incorrecto porque el contenedor solo admite distintos códecs pero no los define.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Entre las siguientes formulaciones relativas a los principios y obligaciones de la acción preventiva establecidos por la Ley 31/1995, señale la que constituye una excepción (es decir, NO corresponde a un principio u obligación recogido en la norma):",
+          "options": [
+            "Realizar una evaluación de riesgos laboral efectiva y planificar las medidas preventivas, revisándolas cuando se produzcan cambios en las condiciones de trabajo.",
+            "Priorizar, siempre que sea aplicable, las medidas de protección colectiva frente a las individuales como criterio de actuación preventiva.",
+            "Facultar al empresario para exigir la supresión temporal de equipos de protección individual cuando ello resulte necesario para mantener los objetivos de producción.",
+            "Proporcionar a los trabajadores información y formación adecuada y específica sobre los riesgos de su puesto y las medidas preventivas aplicables."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta (D) es una excepción porque la normativa prohibe subordinar las medidas preventivas a objetivos productivos; no concede al empresario la facultad de exigir la retirada o supresión de equipos de protección individual por razones de producción. Las otras opciones describen principios u obligaciones previstos por la Ley: A corresponde a la obligación de evaluar y planificar la prevención y actualizarla; B refleja el principio de preferencia de medidas colectivas sobre las individuales; C expresa la obligación de informar y formar a la plantilla sobre riesgos y medidas preventivas. La proximidad técnica mayor es con B, pero B establece un criterio de jerarquía de medidas preventivas reconocido por la norma, mientras que D propone una excepción contraria al espíritu y contenido de las obligaciones empresariales en prevención.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Al reproducir HDR en una pantalla SDR sin conversión adecuada, el síntoma más probable sobre luminancia y contraste es:",
+          "options": [
+            "Reducción exclusiva de la saturación sin afectar la luminancia.",
+            "Aumento uniforme del contraste sin pérdida de detalle.",
+            "Desplazamiento del espacio cromático hacia Rec.2020 sin efectos en luminancia.",
+            "Recorte de altas luces y pérdida de detalle en zonas muy brillantes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La reproducción HDR en SDR sin mapeo provoca clipping en highlights y pérdida de detalle por rango dinámico mayor; no produce una mejora de contraste ni sólo cambios cromáticos. Frente al distractor más cercano (aumento de contraste), la diferencia es que en realidad hay recorte de valores que supera la capacidad SDR, no una mejora controlada.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En bins compartidos con varios editores, la medida técnica que previene sobrescrituras accidentales es:",
+          "options": [
+            "Incrementar la velocidad del RAID para evitar conflictos.",
+            "Imponer bloqueo por comprobación (checkout) y permisos de escritura por usuario.",
+            "Desactivar metadatos para reducir cambios concurrentes.",
+            "Eliminar el control de versiones para simplificar accesos."
+          ],
+          "correctIndex": 1,
+          "explanation": "El control de concurrencia mediante bloqueo/checkout y permisos evita sobrescrituras; aumentar velocidad de RAID o eliminar metadatos no previene concurrencia. La diferencia clave frente al distractor técnico (RAID) es que éste afecta rendimiento físico, no control de edición concurrente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para localizar y recuperar rápidamente un único clip en un archivo LTO con LTFS, la limitación operativa más relevante es:",
+          "options": [
+            "LTO no soporta comprobación de integridad mediante checksums.",
+            "LTFS no permite almacenar metadatos junto a la esencia.",
+            "El acceso aleatorio es limitado: la cinta es un medio lineal y la búsqueda física es más lenta que en disco.",
+            "Las cintas LTFS permiten acceso aleatorio instantáneo similar a un disco."
+          ],
+          "correctIndex": 2,
+          "explanation": "LTFS facilita organización por archivos y metadatos, pero la cinta sigue siendo un soporte físico lineal; la búsqueda y posicionamiento son más lentos que en disco. A diferencia del distractor cercano (acceso instantáneo), la limitación es precisamente la latencia de transporte físico.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Según la normativa de prevención de riesgos laborales y considerando los principios de información, formación, cooperación y uso correcto de medios, ¿qué actuación corresponde al trabajador tras recibir formación específica para su puesto?",
+          "options": [
+            "Sustituir por su cuenta equipos defectuosos o adoptar soluciones propias sin informar al servicio técnico cuando estime que corrigen un riesgo inmediato.",
+            "Diseñar y aprobar las medidas preventivas del área de trabajo, incluyendo la selección e implantación de los equipos a suministrar por la empresa.",
+            "Participar en la formación, aplicar en su trabajo las medidas y procedimientos aprendidos, utilizar correctamente los equipos y EPIs facilitados y colaborar con la empresa en las actuaciones preventivas.",
+            "Limitarse a comunicar de forma ocasional molestias o disconformidades con los medios facilitados y prescindir de su uso mientras no reciba una respuesta formal."
+          ],
+          "correctIndex": 2,
+          "explanation": "La actuación correcta (A) recoge las obligaciones del trabajador: asistir a la formación, aplicar lo aprendido, usar adecuadamente los equipos y EPIs facilitados y cooperar con la empresa en materia preventiva. Las opciones B, C y D atribuyen al trabajador funciones de gestión o comportamientos contrarios a la normativa: diseñar y aprobar medidas es responsabilidad empresarial/servicio de prevención (B); sustituir equipos sin informar (C) y prescindir del uso de medios entregados mientras se espera respuesta (D) vulneran la obligación de uso correcto y de cooperación y comunicación exigible al trabajador.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Un servidor debe atender 250 usuarios concurrentes, cada uno recibiendo un stream constante de 3,5 Mbps. Se exige un margen de red del 20 % sobre la suma de bitrates para cubrir variaciones y overhead. ¿Cuál debe ser la capacidad mínima del enlace de salida (uplink) en Mbps para asegurar servicio sin saturación?",
+          "options": [
+            "875 Mbps",
+            "1 050 Mbps (≈1,05 Gbps)",
+            "1 000 Mbps (1 Gbps)",
+            "1 125 Mbps"
+          ],
+          "correctIndex": 1,
+          "explanation": "Cálculo: ancho de banda agregado = N × R = 250 × 3,5 Mbps = 875 Mbps. Aplicando el margen del 20 %: 875 × 1,20 = 1 050 Mbps. Por tanto la capacidad mínima es 1 050 Mbps. El distractor más próximo (1 000 Mbps) corresponde a redondear a 1 Gbps, pero esa capacidad es inferior a la requerida (1 050 Mbps) y por tanto puede provocar saturación; 875 Mbps omite el margen requerido; 1 125 Mbps excede la necesidad y no corresponde al cálculo correcto con los datos proporcionados.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al ritmo interno y externo del montaje:",
+          "options": [
+            "Aumentar la duración de un plano siempre incrementa el ritmo interno de una secuencia.",
+            "El ritmo externo organiza la estructura global de escenas y escenas‑secundarias en el montaje.",
+            "El ritmo interno se define por la duración de los planos y el movimiento dentro del encuadre.",
+            "El movimiento de cámara y de personajes influye en la percepción del ritmo interno."
+          ],
+          "correctIndex": 0,
+          "explanation": "Afirmaciones 1, 2 y 4 son correctas según teoría del montaje; decir que aumentar la duración de un plano 'siempre' incrementa el ritmo interno es falso: planos más largos suelen ralentizar el ritmo interno, no aumentarlo. La diferencia decisiva es la confusión entre duración y percepción de ritmo.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 17/2006, la función de servicio público de RTVE implica principalmente:",
+          "options": [
+            "Priorizar contenidos internacionales frente a los locales.",
+            "Buscar exclusivamente la máxima rentabilidad económica por encima de criterios de pluralidad.",
+            "Coordinar y controlar otras cadenas privadas en materia de programación.",
+            "Emitir contenidos con pluralismo, objetividad y carácter no discriminatorio, garantizando accesibilidad y diversidad."
+          ],
+          "correctIndex": 3,
+          "explanation": "La ley define el servicio público como prestación plural, objetiva y accesible; no se trata de maximizar rentabilidad ni controlar cadenas privadas. La diferencia frente al distractor más cercano (rentabilidad) es que el mandato legal subordina criterios económicos a la misión de servicio público.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Ajustes posturales prioritarios en un puesto de edición para reducir tensión lumbar, de antebrazos y pies:",
+          "options": [
+            "Altura de silla y apoyo lumbar, reposabrazos a la altura de la mesa y apoyo plantar estable.",
+            "Elevación del teclado por encima del codo, sentado lo más adelantado posible y pies en punta.",
+            "Silla al máximo reclinada, pantalla demasiado baja y brazos extendidos sin apoyo.",
+            "Uso exclusivo de almohadas improvisadas para soporte sin ajuste de silla."
+          ],
+          "correctIndex": 0,
+          "explanation": "La ergonomía postural recomienda ajustar altura y apoyo lumbar, apoyar antebrazos y mantener los pies apoyados; las otras opciones describen posturas inadecuadas o improvisadas. La diferencia crítica respecto al distractor inmediato (elevación del teclado) es que esa elección aumenta tensión en hombros y muñecas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_true_peak",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para asegurar que un entregable no supere picos entre muestras en la entrega broadcast, la medición más adecuada es:",
+          "options": [
+            "Medición con VU meter analógico.",
+            "Medición de sample peak en el dominio original sin sobremuestreo.",
+            "Medición True Peak con sobremuestreo y detector de picos entre muestras.",
+            "Medición sólo por LUFS integrado."
+          ],
+          "correctIndex": 2,
+          "explanation": "True Peak con sobremuestreo detecta picos entre muestras que los sample peaks no ven; VU o LUFS no controlan picos inter‑muestra. La diferencia clave frente al distractor más cercano (sample peak) es la capacidad de detectar energía por interpolación entre muestras.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique la limitación principal al editar un fichero en crecimiento (growing file) durante un directo:",
+          "options": [
+            "La esencia aún no está cerrada: puede faltar índice/footers y existir riesgo de corrupción o cambios en duración final.",
+            "No se puede visualizar ningún fotograma hasta que el fichero concluya.",
+            "Los metadatos finales están bloqueados y no se actualizan hasta 24 horas después.",
+            "El codec cambia dinámicamente y requiere transcoding continuo."
+          ],
+          "correctIndex": 0,
+          "explanation": "El principal limitador de growing files es que la esencia puede no estar finalizada (índices/footers pendientes), lo que afecta a fiabilidad de cortes y conformado; habitualmente sí es posible reproducir parcial, por lo que la opción de visualización completa es incorrecta. La diferencia frente al distractor más cercano (metadatos bloqueados) es que el problema central es la integridad de la esencia, no un retraso arbitrario de 24 h.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "En un flujo XDCAM para selección y visionado previo: relación correcta entre proxy y esencia de alta resolución.",
+          "options": [
+            "El proxy sustituye a la esencia en la entrega final por compatibilidad.",
+            "El proxy sirve para selección/visión ágil y se vincula al essence de alta resolución para conformado y exportación final.",
+            "La esencia se usa solo para visionado y el proxy se emplea para etalonaje final.",
+            "Proxies y esencia son idénticos en resolución y usan el mismo espacio de color."
+          ],
+          "correctIndex": 1,
+          "explanation": "El workflow típico usa proxies de baja carga para selección y la esencia de alta resolución para conformado y acabado; no se intercambian roles para entrega final ni son equivalentes en resolución. La diferencia frente al distractor más cercano (proxy para etalonaje final) es que el etalonaje se realiza sobre la esencia o en conform con ésta.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Un monitor necesita 12 V y consume 2 A. Resuelva resistencia del circuito y potencia disipada:",
+          "options": [
+            "Resistencia ≈ 0,17 Ω; potencia ≈ 6 W.",
+            "Resistencia ≈ 6 Ω; potencia ≈ 24 W.",
+            "Resistencia ≈ 14 Ω; potencia ≈ 144 W.",
+            "Resistencia ≈ 6 Ω; potencia ≈ 6 W."
+          ],
+          "correctIndex": 1,
+          "explanation": "Por Ley de Ohm R = V/I = 12/2 = 6 Ω; potencia P = V×I = 12×2 = 24 W. Los distractores presentan cálculos erróneos (divisiones/inversiones incorrectas o productos equivocados).",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "029",
       "title": "Examen 029",
