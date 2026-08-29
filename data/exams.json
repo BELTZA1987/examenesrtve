@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-28",
+  "updatedAt": "2026-08-29",
   "exams": [
+    {
+      "id": "031",
+      "title": "Examen 031",
+      "date": "2026-08-29",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que distingue correctamente la libertad de expresión de la libertad de información y sus límites constitucionales:",
+          "options": [
+            "La libertad de expresión se aplica únicamente a medios escritos; la libertad de información es un derecho individual sin garantías específicas.",
+            "Ambas libertades tienen idéntico alcance y ninguna admite limitación frente a derechos como el honor o la intimidad.",
+            "La libertad de información obliga solo a las administraciones a facilitar datos públicos; no protege la actividad periodística.",
+            "La libertad de expresión protege la manifestación de ideas y opiniones; la libertad de información protege la obtención y difusión de hechos veraces, y ambas deben ponderarse con derechos al honor y garantías de pluralismo y protección de fuentes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta diferencia el ámbito: expresión = ideas/opiniones; información = recogida y difusión de hechos con obligaciones (pluralismo, protección de fuentes) y límites frente a derechos como el honor. El distractor más cercano (2) reduce indebidamente la aplicación y omite la ponderación con otros derechos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Señale cuál de las siguientes situaciones constituye un accidente 'in itinere'.",
+          "options": [
+            "Accidente ocurrido durante una parada no planificada para hacer compras personales en el trayecto.",
+            "Accidente sufrido al seguir el recorrido habitual y razonable entre domicilio y centro de trabajo sin desviaciones personales.",
+            "Accidente durante el desplazamiento entre dos centros diferentes de la empresa en el transcurso de la jornada de trabajo.",
+            "Accidente al desplazarse a un lugar distinto por encargo del empresario (misión)."
+          ],
+          "correctIndex": 1,
+          "explanation": "In itinere se refiere al accidente en el trayecto habitual casa‑trabajo sin desvíos personales. Los otros supuestos corresponden a desvíos personales, desplazamiento entre centros o misiones, que no encajan en la definición específica de in itinere.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En una salida SDI con vídeo, audio embebido y datos ANC, ¿qué comprobación confirma que el receptor interpreta correctamente los datos auxiliares (ANC)?",
+          "options": [
+            "Comprobar que el vectorscopio presenta barras correctas; con eso se asume correcto el ANC.",
+            "Comprobar únicamente que el audio embebido se reproduce en las salidas AES/EBU del receptor.",
+            "Verificar que el receptor muestra en su monitor de ANC paquetes con los identificadores y número de línea esperados y que los paquetes no aparecen corruptos.",
+            "Verificar que el bitrate total de la señal SDI coincide con la tasa nominal esperada."
+          ],
+          "correctIndex": 2,
+          "explanation": "La comprobación directa de ANC consiste en leer los paquetes ANC y confirmar identificadores y número de línea correctos; los otros distractores son insuficientes o indirectos para validar la interpretación de datos auxiliares.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la práctica recomendada respecto al formateo de soportes de estado sólido tras completar una descarga verificada.",
+          "options": [
+            "Formatear o sobrescribir la tarjeta inmediatamente sin realizar verificación previa de la copia.",
+            "Borrar individualmente los archivos desde el sistema operativo y reutilizar inmediatamente el soporte.",
+            "Realizar siempre un low‑level format y reparticionar el soporte tras cada descarga.",
+            "Formatear la tarjeta en la cámara siguiendo el procedimiento del fabricante únicamente después de una copia y verificación bit‑a‑bit."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica recomendada es conservar el soporte hasta verificar la copia y, una vez verificada, formatearlo con la utilidad del dispositivo (cámara) según fabricante. Los otros procedimientos son inseguros o innecesarios y pueden provocar pérdida o corrupción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al efecto típico de los modos de trim ripple, roll y slip/slide sobre duración y sincronía:",
+          "options": [
+            "Ripple altera la duración de la secuencia desplazando clips posteriores a fin de mantener continuidad temporal.",
+            "Roll modifica simultáneamente el punto final de un clip y el inicial del siguiente sin cambiar la duración total de la secuencia.",
+            "Slide cambia el contenido del clip manteniendo sus puntos de corte originales y modifica la duración total de la secuencia.",
+            "Slip desplaza el contenido interno del clip manteniendo sus puntos de entrada y salida en la secuencia, sin alterar la duración total."
+          ],
+          "correctIndex": 2,
+          "explanation": "Slide desplaza la posición del clip dentro de la secuencia manteniendo su duración y la duración total; no modifica la duración total. La opción 4 es por tanto la excepción; las otras describen correctamente ripple, roll y slip.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento adecuado para elegir entre CBR y VBR en una transmisión en tiempo real con capacidad de canal limitada:",
+          "options": [
+            "Seleccionar VBR en un pase único para minimizar latencia y garantizar tasa constante.",
+            "Seleccionar CBR y dimensionar el bitrate por encima del pico de complejidad esperado, incluyendo margen para overhead y variaciones.",
+            "Usar VBR sin considerar la capacidad del enlace, limitando picos únicamente en el receptor.",
+            "Elegir siempre VBR si se busca máxima calidad para almacenamiento, sin tener en cuenta restricciones de transmisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "En tiempo real con canal limitado, debe elegirse CBR y dimensionar el bitrate con margen para asegurar estabilidad; VBR optimiza calidad pero puede generar picos incompatibles con enlaces fijos. Los distractores ignoran la restricción de enlace o confunden objetivos de transmisión y almacenamiento.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál de estas estrategias de montaje es compatible con el uso de la elipsis para comprimir tiempo manteniendo comprensión narrativa?",
+          "options": [
+            "Eliminar secuencias enteras sin conexión causal y sustituirlas por títulos sin indicar el salto.",
+            "Suprimir intervalos no informativos mediante cortes que respeten la continuidad causal y reforzar la transición con elementos sonoros o visuales.",
+            "Mantener todos los eventos cronológicos aunque se ralentice el ritmo para no perder información.",
+            "Reordenar eventos cronológicos para favorecer ritmo aun a costa de alterar la causalidad principal."
+          ],
+          "correctIndex": 1,
+          "explanation": "La elipsis elimina tiempo no relevante preservando causalidad; reforzar la transición evita confusión. Los demás distractores rompen la continuidad causal o no comprimen tiempo manteniendo comprensión.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Según la Ley 13/2022, indique cuál obligación concreta corresponde a los prestadores de servicios audiovisuales respecto a accesibilidad:",
+          "options": [
+            "Proveer versión íntegra en lengua de signos para la totalidad de los contenidos emitidos sin excepciones.",
+            "Eliminar todo contenido que no cumpla requisitos de accesibilidad en un plazo inmediato.",
+            "Incorporar subtitulado para personas sordas y audiodescripción y asegurar accesibilidad de interfaces y señalización de contenidos accesibles en sus servicios.",
+            "Obligar a los usuarios a registrarse para acceder a funciones de accesibilidad."
+          ],
+          "correctIndex": 2,
+          "explanation": "La ley exige medidas efectivas de accesibilidad (subtitulado, audiodescripción, accesibilidad de interfaces y marcación de contenidos accesibles). Las otras opciones son desproporcionadas o incorrectas respecto a las obligaciones reales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare source, record y auxiliary timecode: ¿cuál uso describe mejor el auxiliary TC en flujos de edición?",
+          "options": [
+            "El source TC es el timecode generado por la cámara; el record TC corresponde al dispositivo de grabación; el auxiliary TC se emplea para preservar el timecode original de cámara como referencia para relink y metadatos.",
+            "El auxiliary TC sustituye al record TC y debe usarse como la única referencia durante el conformado final.",
+            "El record TC y el source TC siempre coinciden en configuración estándar, por lo que el auxiliary TC es redundante.",
+            "El auxiliary TC se usa exclusivamente para generar timecode cuando no existe source TC."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta describe usos habituales: source = cámara, record = grabador, aux = TC adicional para referencia/relacionado con relink. Los distractores son incorrectos porque sobrestiman, simplifican o malinterpretan la función del TC auxiliar.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Indique la posición y condiciones recomendadas para una pantalla de visualización para reducir reflejos y fatiga visual en un puesto de edición:",
+          "options": [
+            "Situar el monitor a menos de 30 cm para mayor detalle y colocar la parte superior del panel por encima del nivel de los ojos para mejor visión.",
+            "Distancia de 50–70 cm; centro del monitor ligeramente por debajo del nivel de los ojos (10–20° hacia abajo); orientar perpendicular a fuentes luminosas y emplear iluminación difusa sin reflejos directos.",
+            "Colocar la pantalla enfrentada a ventanas para aprovechar luz natural directa y reducir necesidad de iluminación artificial.",
+            "Mantener la pantalla a distancia indefinida siempre que el brillo esté al máximo para compensar reflejos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La distancia 50–70 cm y el ligero descenso del centro del monitor reducen esfuerzo visual; orientación para evitar reflejos y luz difusa son medidas preventivas. Las otras opciones proponen prácticas perjudiciales o contradictorias con ergonomía visual.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo directo para dimensionar la capacidad de salida (uplink) de un servidor de vídeo que atenderá N conexiones simultáneas con streams de bitrate constante:",
+          "options": [
+            "Calcular la suma de los bitrates máximos de todos los streams concurrentes y añadir un margen de seguridad (por ejemplo 20 %) para overhead y picos.",
+            "Tomar el bitrate medio de un stream y multiplicarlo por N sin añadir margen.",
+            "Dimensionar el enlace por el bitrate del usuario con mayor prioridad, ignorando concurrencia.",
+            "Configurar siempre un enlace de 10 Gbps independientemente de la concurrencia prevista."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica correcta es sumar bitrates concurrentes y aplicar margen para overhead/picos. Los otros distractores omiten margen, ignoran concurrencia real o proponen soluciones no justificadas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_checksum",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las capacidades y límites de un checksum en comprobaciones antes/después de transferencia:",
+          "options": [
+            "Un checksum reproducible antes y después confirma que los bits del fichero son idénticos.",
+            "Un checksum garantiza que el contenido semántico y la validez del formato interno del fichero son correctos.",
+            "Los checksums detectan errores de transferencia pero no sustituyen políticas de preservación con copias y verificación periódica.",
+            "Diferentes algoritmos tienen distintas probabilidades de colisión; ninguno elimina totalmente la posibilidad de colisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación correcta como excepción es que el checksum no garantiza la corrección semántica o la validez del formato; solo confirma identidad bit a bit. Las otras opciones describen funciones reales y límites técnicos de checksums.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En EVS/IPDirector, ¿qué operación afecta directamente al orden y a las transiciones entre clips en una playlist de emisión?",
+          "options": [
+            "Copiar físicamente los clips a otro almacenamiento.",
+            "Transcodificar un clip en el servidor sin actualizar la playlist.",
+            "Cambiar la posición de un clip dentro de la playlist.",
+            "Eliminar metadatos administrativos del clip sin modificar su entrada en la playlist."
+          ],
+          "correctIndex": 2,
+          "explanation": "Modificar la posición de un clip en la playlist altera el orden y por tanto las transiciones. Las otras operaciones pueden influir en disponibilidad o metadata, pero no cambian directamente el orden de reproducción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Si la reproducción es fluida pero el render de efectos acelerados por GPU es notablemente lento, ¿cuál es el cuello de botella más probable?",
+          "options": [
+            "RAM del sistema: insuficiencia de RAM es la causa exclusiva si el render es lento.",
+            "CPU: frecuencia de CPU insuficiente, aún con reproducción fluida.",
+            "Disco: I/O insuficiente, aunque la reproducción sea fluida indica lo contrario.",
+            "GPU: capacidad de cómputo o memoria de vídeo (VRAM) insuficiente afectando renderizado acelerado."
+          ],
+          "correctIndex": 3,
+          "explanation": "Cuando la reproducción (lectura/decodificación) es correcta pero el render acelerado es lento, lo más probable es limitación de la GPU (capacidad de cómputo o VRAM). Los otros distractores no explican tan directamente la discrepancia observada.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que refleja con mayor fidelidad un principio del modelo de financiación de RTVE según la Ley 8/2009:",
+          "options": [
+            "La financiación se basa únicamente en cuotas obligatorias de los ciudadanos por receptor.",
+            "El modelo depende exclusivamente de la recaudación por publicidad y no de aportaciones públicas.",
+            "El modelo combina recursos públicos y actividades comerciales y establece límites y controles sobre la explotación publicitaria y la gestión financiera.",
+            "No existen controles ni restricciones sobre el destino de los fondos públicos asignados."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley 8/2009 establece un modelo mixto (recursos públicos y otras fuentes) con principios y limitaciones sobre explotación comercial; las otras opciones simplifican o contradicen el modelo real.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que distingue correctamente fase y polaridad y sus efectos en la mezcla:",
+          "options": [
+            "La inversión de polaridad (flip) invierte la señal completa y puede producir cancelación total en suma mono; los problemas de fase son desplazamientos temporales que producen cancelación parcial dependiente de frecuencia.",
+            "Polaridad y fase son sinónimos y causan idénticos artefactos.",
+            "Solo la inversión de polaridad afecta al sonido; la fase no tiene efecto perceptible.",
+            "La cancelación por fase solo ocurre en señales monoaurales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta explica la diferencia operativa: polaridad = inversión instantánea; fase = desplazamiento temporal dependiente de frecuencia que produce cancelaciones parciales. Los demás distractores confunden o minimizan conceptos clave.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_project_media",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al mover un proyecto de un NLE a otro sistema compartido, ¿qué operación diferencia metadatos de proyecto de los archivos de esencia?",
+          "options": [
+            "Exportar el proyecto (XML/AAF) para trasladar metadatos y copiar/consolidar los archivos de esencia por separado.",
+            "Copiar únicamente el archivo de proyecto garantiza acceso a los medios en el nuevo sistema sin más acciones.",
+            "Renombrar los archivos de esencia preserva automáticamente los metadatos de proyecto.",
+            "Modificar metadatos en el NLE actual cambia los archivos de esencia a nivel binario."
+          ],
+          "correctIndex": 0,
+          "explanation": "El proyecto contiene metadatos (bins, cortes, efectos) que se exportan; los archivos de esencia deben copiarse o consolidarse aparte. Los otros distractores confunden alcance o efectos de esas operaciones.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un RGB Parade, si el canal rojo aparece consistentemente 6 dB por encima de verde y azul en altas luces, ¿cuál es el diagnóstico técnico más pertinente?",
+          "options": [
+            "Problema de impedancia en el cable coaxial que afecta selectivamente al canal rojo.",
+            "Fallo del gamut clipper del monitor que incrementa únicamente el canal rojo.",
+            "Desincronización de la señal VANC que provoca subida localizada del rojo.",
+            "Existe una dominante roja en la captura o un balance de blancos incorrecto que eleva el canal rojo en altas luces."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un exceso consistente del canal rojo en altas luces indica una dominante en la captura o un balance de blancos incorrecto. Las otras opciones son poco plausibles o no explicarían de forma directa la lectura consistente en el parade.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_match_action",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la estrategia de montaje que mejor preserva la continuidad perceptiva en un match on action entre dos planos:",
+          "options": [
+            "Cortar antes de que la acción comience en el segundo plano para enfatizar contexto distinto.",
+            "Interrumpir la acción con un primer plano de reacción antes de completar el movimiento.",
+            "Sustituir el movimiento por un recurso gráfico que indique el paso del tiempo.",
+            "Cortar en mitad de la acción de modo que el movimiento continúe de forma coherente entre planos, manteniendo ritmo y dirección del gesto."
+          ],
+          "correctIndex": 3,
+          "explanation": "El match on action exige cortar durante la acción para mantener continuidad perceptiva del movimiento; los demás enfoques interrumpen o rompen la continuidad del gesto.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción (incorrecta) respecto a perfiles, compatibilidad y aptitud de ProRes y DNxHR en flujos habituales de postproducción (edición, etalonaje y composición).",
+          "options": [
+            "Ambos son por defecto el formato recomendado e independiente para archivo maestro de preservación a largo plazo, sin necesidad de copias adicionales ni empaquetado específico.",
+            "Ofrecen perfiles escalonados adaptados a distintas exigencias de resolución y bitrate (por ejemplo Proxy/LT/422/HQ/444 en ProRes y LB/SQ/HQ/HQX/444 en DNxHR) para equilibrar rendimiento y calidad.",
+            "ProRes 4444 admite canal alpha; las variantes 4:4:4 y de mayor profundidad de DNxHR proporcionan crominancia completa y bit‑depth adecuados para compositing y etalonaje exigente.",
+            "Son códecs intraframe optimizados para edición: cada fotograma es accesible de forma independiente, lo que facilita recortes frame‑accurate y conformado sin depender de GOPs."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta (excepción) es la cuarta: afirmar que ProRes y DNxHR son por defecto el formato recomendado e independiente para archivo maestro de preservación a largo plazo es incorrecto. Ambos son códecs intermedios/mezzanine ampliamente usados en postproducción por su eficiencia y calidad, pero la preservación a largo plazo suele exigir políticas de archivo (copias redundantes, checksums, empaquetado documental y, en muchos casos, formatos de mayor fidelidad o lossless) y no depender de un único códec como único master. Las otras afirmaciones son veraces: son intraframe (opción 1) y ofrecen perfiles escalonados (opción 2). La opción más próxima es la tercera; ésta es correcta porque ProRes 4444 efectivamente soporta canal alpha y las variantes 4:4:4 de DNxHR ofrecen crominancia completa y profundidad de bits adecuadas para compositing y etalonaje, de modo que no constituye una excepción.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "030",
       "title": "Examen 030",
