@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-29",
+  "updatedAt": "2026-08-30",
   "exams": [
+    {
+      "id": "032",
+      "title": "Examen 032",
+      "date": "2026-08-30",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Según el III Convenio Colectivo de RTVE, indique la afirmación que se ajusta a la regulación sobre jornada, descansos y turnicidad:",
+          "options": [
+            "El convenio obliga a que las horas extraordinarias se abonarán siempre con una cuantía fija única independiente de categoría y circunstancias.",
+            "El convenio impone una jornada fija e invariable de ocho horas diarias para todo el personal, sin posibilidad de turnos.",
+            "El convenio prohíbe explícitamente conceder descansos compensatorios por trabajo en días festivos.",
+            "El convenio admite la organización por turnos que modifiquen horarios habituales, estableciendo criterios de rotación y descansos compensatorios vinculados a la organización del servicio."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta reconoce que el convenio regula la turnicidad permitiendo la organización por turnos con criterios de rotación y descansos compensatorios adaptados al servicio. Las otras opciones son incompatibles: no existe imposición general de jornada fija sin posibilidad de turnos, ni una prohibición absoluta de descansos compensatorios por festivos, ni una única fórmula fija para todas las horas extraordinarias.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Al verificar la compatibilidad mono/estéreo con un medidor de correlación de fase, ¿qué lectura y comportamiento del indicador asegura que la suma a mono no provocará atenuaciones por cancelación de fase?",
+          "options": [
+            "Lectura estable en −1 (correlación negativa máxima) — indica inversión de fase entre canales y alto riesgo de cancelación al sumar a mono.",
+            "Lectura próxima a 0 con pequeñas fluctuaciones — indica falta de correlación; la imagen estéreo es reducida pero no implica cancelación total en mono.",
+            "Lectura estable y próxima a +1 (correlación máxima) a lo largo del material — indica señal L y R en fase y suma a mono segura.",
+            "Lectura que oscila rápidamente entre valores positivos y negativos — indica componentes en fase y en contrafase simultáneos; la compatibilidad mono es impredecible y requiere corrección."
+          ],
+          "correctIndex": 2,
+          "explanation": "Una lectura estable cercana a +1 indica que los canales izquierdo y derecho están en fase (alta correlación), por lo que la suma mono preservará nivel y contenido sin cancelaciones. La lectura −1 (distractor más próximo) representa correlación negativa máxima: canales en contrafase con riesgo de cancelación total al mezclar a mono. Un valor alrededor de 0 señala decorrelación (pérdida de imagen estéreo pero no necesariamente cancelación completa), y oscilaciones entre positivos y negativos indican componentes temporales fuera de fase que pueden causar cancelaciones parciales e impredecibles; por eso la condición segura y deseable es la lectura estable cerca de +1.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "¿Cuál de las siguientes descripciones corresponde operativamente a la operación de 'enlace' (link) en un flujo de edición?",
+          "options": [
+            "Digitalizar una señal analógica o decodificar una salida de cámara directamente a un fichero nuevo dentro del sistema de edición.",
+            "Copiar y registrar los ficheros en el servidor de ingesta, generar proxies y almacenar metadatos con verificación bit‑a‑bit.",
+            "Crear una referencia en el proyecto hacia los ficheros existentes en su ubicación original sin copiar la esencia al almacén del NLE.",
+            "Importar ficheros aplicando transcodificación inmediata a un códec de trabajo y ubicarlos físicamente en la carpeta del proyecto."
+          ],
+          "correctIndex": 2,
+          "explanation": "El 'enlace' crea referencias en el proyecto que apuntan a los ficheros en su ubicación original sin duplicar la esencia. La ingesta (opción 1 en distractores) implica copia y registro con generación de proxies y verificación; la captura digitaliza señales; la importación suele implicar transcodificación y movimiento de ficheros.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Para sugerir el paso perceptible de varias semanas entre dos escenas manteniendo continuidad emocional, ¿qué transición es la más adecuada y por qué?",
+          "options": [
+            "Corte seco: mantiene inmediatez y evita cualquier sugerencia temporal adicional.",
+            "Jump cut: comprime el tiempo sin aportar indicación de duración y favorece el salto temporal abrupto.",
+            "Wipe u otros efectos geométricos: enfatizan la duración y aseguran comprensión temporal clara.",
+            "Fundido encadenado (dissolve): sugiere progresión temporal y permite asociar tiempo transcurrido con continuidad emocional."
+          ],
+          "correctIndex": 3,
+          "explanation": "El fundido encadenado es la transición clásica que sugiere paso de tiempo manteniendo una continuidad asociada a la emoción; el corte seco comunica simultaneidad o continuidad inmediata, el wipe es más estilístico pero no suele indicar el paso de semanas, y el jump cut comprime o fragmenta tiempo sin la connotación de paso prolongado.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En una edición lineal A/B Roll con mezclador de vídeo, ¿qué describe mejor la función de la fuente A, la prelectura y el mezclador durante la emisión de una inserción?",
+          "options": [
+            "La fuente A siempre está en previo; la prelectura sustituye al mezclador; el mezclador solo registra.",
+            "La fuente A contiene el plano al aire; la prelectura permite validar y preparar la toma B; el mezclador ejecuta la transición y envía programa a emisión.",
+            "La fuente A almacena metadatos; la prelectura aplica correcciones de color; el mezclador duplica señales para registro.",
+            "La fuente A solo sirve como copia de seguridad; la prelectura es obligatoria para efectos; el mezclador no interviene en la transición."
+          ],
+          "correctIndex": 1,
+          "explanation": "En A/B Roll, la fuente A suele ser la señal de programa y B la alternativa; la prelectura (preview) sirve para comprobar y preparar la toma antes de enviarla a programa; el mezclador realiza la transición entre A y B y determina la salida de programa. Las otras opciones atribuyen funciones incorrectas o incompatibles con el flujo lineal.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Desde el punto de vista operativo en cumplimiento broadcast, ¿cuál es la diferencia principal entre un legalizador de señal y un limitador automático de gamut?",
+          "options": [
+            "El legalizador ajusta niveles de luminancia y croma para cumplir límites técnicos preservando hue; el limitador de gamut actúa específicamente sobre la magnitud cromática y puede recortar saturación alterando matiz.",
+            "El legalizador solo actúa sobre audio, mientras que el limitador de gamut actúa solo sobre vídeo.",
+            "El limitador de gamut normaliza niveles de luminancia y contraste; el legalizador únicamente reduce el bitrate para cumplir especificaciones.",
+            "Ambos realizan exactamente la misma operación: recortar valores fuera de rango sin diferencia operativa."
+          ],
+          "correctIndex": 0,
+          "explanation": "El legalizador está diseñado para ajustar luminancia y componentes de croma dentro de límites técnicos manteniendo coherencia tonal; un limitador de gamut se centra en la magnitud cromática y, al recortar valores fuera de gamut, puede reducir saturación o desplazar matiz. Las otras opciones son incorrectas o confunden dominios de aplicación.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_umid",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que describe mejor la función operativa de un UMID embebido en la esencia de un clip:",
+          "options": [
+            "Sustituye el nombre de fichero como referencia principal para la reproducción en todos los reproductores.",
+            "Método estándar para emparejar automáticamente proxies con sus altas resoluciones en cualquier NLE.",
+            "Identificador único persistente que facilita el rastreo y gestión del activo a través de sistemas y migraciones.",
+            "Codifica el código de tiempo de grabación como único dato de sincronización entre cámaras."
+          ],
+          "correctIndex": 2,
+          "explanation": "El UMID es un identificador único persistente embebido que facilita seguimiento y gestión del activo; no es una solución automática universal para relink de proxies, no reemplaza el nombre de fichero como referencia operativa ni codifica exclusivamente el código de tiempo.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "¿Cuál refleja con mayor precisión la finalidad de la reforma de la Ley 5/2017 y el mecanismo de elección introducido para los órganos de RTVE?",
+          "options": [
+            "Restablecer independencia y pluralismo reforzando la elección parlamentaria de los órganos de gobierno de RTVE mediante procedimientos previstos en la ley.",
+            "Privatizar parte de las funciones de RTVE y permitir la designación directa por el Gobierno central sin intervención parlamentaria.",
+            "Sustituir la dirección de RTVE por una comisión de expertos externos elegidos por sindicatos y productoras.",
+            "Transferir la financiación de RTVE exclusivamente a cuotas publicitarias gestionadas por los propios órganos de la Corporación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La reforma de la Ley 5/2017 persigue recuperar la independencia y pluralismo institucional y establece mecanismos de elección parlamentaria de sus órganos; las otras opciones describen medidas que no forman parte de esa reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_chromakey",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la secuencia de pasos correcta para diagnosticar y corregir artefactos comunes en un proceso de chromakey:",
+          "options": [
+            "Generar y afinar la máscara (matte), limpiar bordes y áreas sobrantes, aplicar supresión de spill, finalizar con ajuste de bordes y compósito.",
+            "Aplicar supresión de spill primero, luego generar la máscara, y por último limpiar bordes sin más correcciones.",
+            "Ajustar únicamente la saturación del fondo hasta que el sujeto desaparezca, evitando generar máscara.",
+            "Aplicar corrección de color completa al sujeto antes de cualquier operación de key para evitar necesidad de matte."
+          ],
+          "correctIndex": 0,
+          "explanation": "El flujo correcto es producir un matte preciso, limpiarlo (garbage matte, shrink/grow, feather), aplicar despill para eliminar contaminación cromática y rematar bordes antes de componer. Aplicar despill antes de generar una máscara o limitarse a saturación son procedimientos insuficientes o erróneos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_intelectual",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Yuxtaposición: secuencia de una fábrica ruidosa seguida inmediatamente por un primer plano de un hombre en silencio mirando por la ventana. Diagnóstico del tipo de montaje producido:",
+          "options": [
+            "Montaje paralelo: indica simultaneidad estricta de acciones en dos espacios distintos.",
+            "Montaje intelectual: la yuxtaposición crea una asociación conceptual que genera significado adicional (contraste/ironía).",
+            "Raccord de continuidad: asegura continuidad espacial y temporal entre las dos tomas.",
+            "Montaje analítico: fragmenta una acción única en sus distintos planos para mantener la continuidad."
+          ],
+          "correctIndex": 1,
+          "explanation": "La combinación fábrica ruidosa / hombre silencioso produce una asociación de ideas propia del montaje intelectual (significado metafórico o irónico). No expresa simultaneidad estricta ni continuidad espacial, y no es un simple análisis de una misma acción.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a diferencias entre entrelazado y progresivo en términos de relación temporal y artefactos de movimiento:",
+          "options": [
+            "El entrelazado divide cada imagen en dos campos temporales separados, lo que puede causar 'combing' en objetos con movimiento rápido.",
+            "La conversión de progresivo a entrelazado siempre mejora la representación del movimiento sin introducir artefactos adicionales.",
+            "El progresivo captura la imagen completa en un solo instante temporal, reduciendo típicamente artefactos de combing en movimiento.",
+            "Técnicas como motion compensation o telecine pueden emplearse para minimizar artefactos al convertir entre formatos entrelazado y progresivo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación seleccionada es la excepción: convertir progresivo a entrelazado no garantiza mejora del movimiento y frecuentemente puede introducir artefactos; las demás enuncian diferencias y técnicas correctas entre los modos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En una línea de audio balanceada (dos conductores 'hot'/'cold' más blindaje), ¿qué condición sobre una interferencia inducida debe cumplirse para que el amplificador diferencial del receptor la cancele eficazmente?",
+          "options": [
+            "Que la perturbación afecte únicamente a uno de los conductores; la alta ganancia diferencial del receptor compensará la diferencia.",
+            "Que la perturbación se induzca con la misma amplitud y fase en ambos conductores (señal de modo común).",
+            "Que el blindaje esté conectado a masa en ambos extremos, de modo que todo el ruido quede derivado a tierra antes de llegar al receptor.",
+            "Que exista una ligera diferencia de impedancia entre los dos conductores para facilitar la detección y eliminación de la interferencia."
+          ],
+          "correctIndex": 1,
+          "explanation": "La cancelación en una conexión balanceada depende de que el ruido se presente como señal de modo común (misma amplitud y fase) en ambos conductores; el amplificador diferencial resta las dos entradas y elimina ese componente común. Si el ruido sólo afecta a un conductor se transforma en componente diferencial y no se rechaza. Conectar el blindaje a masa puede ayudar a reducir la inducción, pero no es la condición que garantiza la cancelación y, si se hace incorrectamente en ambos extremos, puede crear bucles de masa. Diferencias de impedancia entre conductores convierten ruido de modo común en diferencial, empeorando el rechazo.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para cada situación indicada, seleccione la opción que relaciona correctamente la clase de fuego, el tipo de extintor más adecuado y la medida de seguridad eléctrica o de evacuación aplicable.",
+          "options": [
+            "Fuego por metales reactivos (magnesio, sodio): clase D; extintor de CO2 o espuma; si no hay medios específicos, no es necesario evacuar y puede atajarse por personal no especializado.",
+            "Fuego por líquidos inflamables (gasolina, disolventes): clase B; extintor de agua a chorro para enfriamiento; cortar inmediatamente la alimentación eléctrica cercana y permanecer en sala hasta control completo del fuego.",
+            "Fuego en equipo eléctrico energizado: clase C; extintor de CO2 o polvo seco no conductor; atacar con agua pulverizada simultáneamente mientras se aísla la tensión desde el cuadro más próximo.",
+            "Fuego originado por materiales sólidos combustibles (madera, papel, telas): clase A; extintor de agua pulverizada o espuma de baja presión; desconectar alimentaciones próximas sólo si puede hacerse sin riesgo eléctrico y proceder a evacuación ordenada si hay humo o propagación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la primera: los incendios de clase A (sólidos combustibles) se extinguen eficazmente con agua pulverizada o espuma y la intervención debe acompañarse de medidas de seguridad eléctrica (desconectar sólo si es seguro) y evacuación ordenada cuando hay humo o riesgo de propagación. El distractor más próximo es el tercero (equipo eléctrico): si bien CO2 o polvo seco son los agentes adecuados frente a incendios con elementos eléctricos energizados, es incorrecto recomendar simultanear agua pulverizada; el agua puede conducir la electricidad y agravar el riesgo, y la desconexión sólo debe intentarse desde un punto seguro o realizarse por personal cualificado; además, si no es posible aislar la energía, debe priorizarse la evacuación y la actuación de servicios especializados. Las otras opciones contienen errores técnicos (agua a chorro contra líquidos inflamables; agentes incorrectos para metales; indicaciones de permanencia sin evacuar) que las invalidan.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a consecuencias visuales y operativas del submuestreo de crominancia, indique la afirmación correcta:",
+          "options": [
+            "4:4:4 ofrece máxima información de croma y es preferible para composición y keying; 4:2:2 reduce resolución horizontal de croma pero mantiene calidad profesional para etalonaje; 4:2:0 es más eficiente en almacenamiento pero limita correcciones y keys exigentes.",
+            "4:2:0 proporciona más detalle cromático que 4:4:4 y es ideal para chroma keying profesional.",
+            "4:2:2 y 4:2:0 son equivalentes en todas las operaciones de posproducción y no tienen diferencias operativas relevantes.",
+            "4:4:4 reduce el número de canales de color para ahorrar ancho de banda frente a 4:2:2."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta describe las consecuencias operativas: 4:4:4 conserva croma por píxel y es preferible para composición; 4:2:2 es adecuado para edición y corrección; 4:2:0 limita la capacidad para tareas cromáticas exigentes. Las demás opciones son incorrectas o contradictorias.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las medidas recogidas en el II Plan de Igualdad y la Guía de Igualdad de RTVE:",
+          "options": [
+            "Promover medidas de prevención del acoso y canales de denuncia con protección para la persona denunciante.",
+            "Incorporar medidas de prevención, detección y protocolos de actuación frente a situaciones discriminatorias.",
+            "Formación continua en igualdad y revisión de lenguaje y representación no sexista en contenidos y procesos internos.",
+            "Establecer cuotas obligatorias y uniformes para la representación de género en todas las categorías profesionales sin análisis de contexto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta (excepción) es la que no se ajusta: el plan promueve igualdad y medidas preventivas, pero imponer cuotas uniformes sin análisis de contexto no es la medida típica del Plan. Las otras opciones son compatibles con el contenido del Plan de Igualdad y la Guía.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para una jornada continuada de edición con teclado, ratón y tableta gráfica, ¿qué conjunto de medidas preventivas es el más eficaz para reducir riesgo de trastornos musculoesqueléticos de la extremidad superior?",
+          "options": [
+            "Sujetar el brazo en una postura fija apoyada en el borde de la mesa durante largos periodos para estabilizar la escritura y evitar cambio de dispositivo.",
+            "Mantener intensidad de trabajo constante sin descansos para completar tareas más rápidamente; usar un único dispositivo sin ajustar postura para acostumbrarse.",
+            "Aumentar la sensibilidad del ratón al máximo para reducir movimientos y evitar descansos; elevar la pantalla por encima de la línea de visión.",
+            "Alternar tareas con descansos micro‑pausa programados, ajustar altura y distancia del teclado/ratón/tableta para mantener muñeca neutra y utilizar apoyo para antebrazo; variar postura y usar superficies antideslizantes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta combina alternancia de tareas y pausas, ajuste ergonómico para mantener muñeca neutra, apoyo de antebrazo y variación postural, medidas recomendadas para prevenir TME. Las otras opciones proponen prácticas que incrementan riesgo o no son preventivas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que cumple la política 3‑2‑1 de copias de seguridad:",
+          "options": [
+            "Mantener exactamente dos copias idénticas en el mismo dispositivo para mayor velocidad de restauración.",
+            "Tener al menos tres copias de los datos, en dos soportes distintos como disco y cinta, y al menos una copia fuera del sitio principal.",
+            "Almacenar tres copias en el mismo rack con RAID para garantizar redundancia y no duplicar fuera del centro.",
+            "Confiar en un único sistema RAID sin copias adicionales porque RAID es suficiente como política 3‑2‑1."
+          ],
+          "correctIndex": 1,
+          "explanation": "La política 3‑2‑1 exige tres copias, en dos medios distintos y una copia fuera del sitio. Las otras opciones confunden RAID con copia de seguridad o prescinden del almacenamiento fuera del sitio.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_lut_log",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un flujo profesional con material registrado en gamma log, ¿cuál es la consecuencia operativa principal de 'bakear' (aplicar de forma permanente) una LUT creativa sobre los archivos originales, en contraposición a utilizarla únicamente como LUT de monitorizado?",
+          "options": [
+            "La aplicación permanente de una LUT creativa modifica los valores de píxel del master (se 'bakea' la corrección), puede provocar clipping y pérdida de rango dinámico y de información de color, y dificulta o impide la re‑etalonación posterior; por eso se evita sobre los masters log.",
+            "Si la LUT creativa se aplica en ficheros con profundidad adecuada (10/12 bits) y espacio log, la operación es esencialmente reversible y no produce pérdida apreciable de información, por lo que es equivalente a mantenerla sólo en monitorizado.",
+            "Una LUT de monitorizado no altera el fichero, pero por normativas de entrega siempre es obligatorio aplicar la LUT creativa y grabar ese aspecto final sobre el master antes de la exportación.",
+            "Guardar la LUT creativa como archivo auxiliar (.cube) y vincularla al clip en los metadatos es equivalente a no modificar los píxeles; al incluir la referencia en el master la corrección puede siempre retirarse sin pérdida."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta (A) describe la consecuencia técnica real: 'bakear' una LUT creativa transforma los valores de píxel resultantes, lo que puede reducir headroom, provocar clipping y eliminar información necesaria para correcciones posteriores, por lo que en flujos profesionales se prefiere aplicar looks creativos en la etapa de etalonaje o mantenerlos sólo en la cadena de monitorizado. El distractor más próximo (B) confunde la capacidad de mayor profundidad de bits con reversibilidad: aunque 10/12 bits reducen posterización, la aplicación permanente sigue cambiando los valores almacenados y no garantiza reversibilidad completa; los metadatos o la profundidad no recuperan la información original perdida por clipping o por transformaciones no lineales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para minimizar obsolescencia y preservar accesibilidad e integridad de un archivo audiovisual a largo plazo, indique la política más completa:",
+          "options": [
+            "Almacenar únicamente en el soporte físico original y evitar cualquier copia para preservar autenticidad, sin migración.",
+            "Confiar en un único formato propietario actualizado en el momento de archivo y no realizar verificaciones periódicas para ahorrar costes.",
+            "Mantener múltiples copias en soportes distintos, verificar periódicamente integridad mediante checksums y realizar migraciones planificadas a formatos y soportes actuales documentando cada operación.",
+            "Realizar migraciones solo cuando un soporte falle, sin registro ni verificación adicional tras la copia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta combina copias redundantes en soportes distintos, verificación periódica (checksums) y migraciones planificadas con documentación, que son prácticas esenciales para mitigar obsolescencia. Las otras opciones descuidan verificación, redundancia o planificación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Si todas las cámaras de una producción comparten un código de tiempo común correctamente jam‑sync en el mismo frame rate, ¿qué ventaja operativa directa ofrece para la sincronización multicámara?",
+          "options": [
+            "El código común sustituye la necesidad de conservar audio de referencia para sincronizar clips.",
+            "Obliga a genlock obligatorio; sin genlock no es posible sincronizar con código de tiempo común.",
+            "Permite la sincronización automática en el NLE por coincidencia de timecode, facilitando cortes multicámara siempre que no haya frames perdidos o discrepancias de formato.",
+            "Impide cualquier corrección posterior porque fija definitivamente el punto de edición en origen."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un código de tiempo común y correcto permite al NLE alinear automáticamente clips por TC facilitando la edición multicámara; no exige genlock en todos los casos, no sustituye obligatoriamente el uso de audio de referencia en flujos problemáticos y no impide correcciones posteriores.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "031",
       "title": "Examen 031",
