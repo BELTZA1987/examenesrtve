@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-30",
+  "updatedAt": "2026-08-31",
   "exams": [
+    {
+      "id": "033",
+      "title": "Examen 033",
+      "date": "2026-08-31",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al detectarse que una programación trata de forma desigual a un colectivo protegido, indique la actuación operativa que debe adoptarse de inmediato:",
+          "options": [
+            "Solicitar dictamen previo de un comité jurídico externo antes de adoptar cualquier medida preventiva.",
+            "Mantener la emisión hasta concluir una auditoría externa y solo comunicar los resultados a la dirección al término de la misma.",
+            "Remitir el caso exclusivamente al departamento de audiencia para gestionar la respuesta pública sin modificar la programación.",
+            "Interrumpir o corregir la emisión si vulnera la prohibición de discriminación, abrir investigación interna, notificar a la dirección y aplicar medidas correctoras y formativas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La respuesta correcta exige actuación inmediata para evitar la persistencia de un trato discriminatorio: suspender o corregir el contenido y activar investigación y medidas internas. Es decisiva la urgencia y la obligación de corregir la vulneración, frente al distractor más próximo (esperar una auditoría externa) que retarda la protección efectiva y permite que continúe la vulneración.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En un NEXIS/SAN con varios editores y pérdida de rendimiento en operaciones concurrentes, señale la afirmación que mejor describe la solución técnica eficaz:",
+          "options": [
+            "La contención suele deberse a saturación de throughput/IOPS del backend y a bloqueos de metadatos; reservar ancho de banda por cliente mitiga la saturación de throughput pero no resuelve bloqueos por contención de metadatos.",
+            "La causa habitual es siempre un fallo de switch; reservar ancho de banda en el almacenamiento resuelve por completo la latencia y los locks de metadatos.",
+            "El problema se corrige cambiando todos los clientes a trabajo local; las reservas de ancho en SAN son irrelevantes para operaciones concurrentes.",
+            "Los backups programados en horario de trabajo son la única causa; detenerlos es siempre suficiente para recuperar rendimiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "La respuesta correcta distingue dos causas distintas: saturación de throughput/IOPS (ameliorable con reservas de ancho) y contención de metadatos/locks (no resuelta por reservas). El distractor más próximo afirma que la reserva lo arregla todo; falla al ignorar la limitación específica que suponen los locks de metadatos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Para entrega final que exige un único fichero autocontenido frente a un flujo de trabajo de edición que requiere manipulación independiente de pistas y metadatos: ¿qué elección es la más adecuada?",
+          "options": [
+            "MXF OP‑Atom para entrega final en un único fichero; MXF OP1a para edición con pistas independientes.",
+            "MXF OP1a para entrega única autocontenida; MXF OP‑Atom para edición que necesita elementos separados por esencia y metadatos.",
+            "Ninguno de los dos es apropiado para entrega; hay que convertir a MOV para conseguir un único fichero.",
+            "Usar OP‑Atom siempre, porque ofrece mejor compatibilidad con todos los sistemas de emisión y edición."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta asigna OP1a a la entrega como paquete intercalado único y OP‑Atom al flujo de edición con essences separadas, que facilita manipulación independiente. El distractor inmediato que invierte usos es incorrecto porque confunde las finalidades prácticas de cada estructura.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_music_sync",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Para marcar un acento dramático en montaje coincidente con la frase musical, ¿qué técnica de sincronización resulta más apropiada?",
+          "options": [
+            "Retener imagen fija (freeze frame) justo antes del acento y realizar el corte al silencio posterior.",
+            "Aplicar un crossfade largo que desvanezca la continuidad sonora y visual durante la frase musical.",
+            "Cortar exactamente en el acento fuerte (downbeat) de la frase musical para sincronizar corte e impacto visual.",
+            "Aumentar el tempo del fragmento musical para que el corte coincida por aproximación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La sincronización directa del corte con el acento fuerte preserva la frase musical y refuerza el contrapunto entre música y montaje. El distractor más próximo (crossfade largo) difumina el acento y rompe la claridad rítmica necesaria para marcar el impacto.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Ante la ausencia de señal en un destino de una matriz de vídeo, ¿qué comprobación identifica directamente si existe un punto de cruce erróneo u abierto?",
+          "options": [
+            "Cambiar temporalmente la salida a otra fuente para verificar audio embebido; si el audio cambia, el crosspoint de vídeo es correcto.",
+            "Reiniciar la matriz y observar si reaparece la señal en el destino; la restauración tras reinicio prueba que el crosspoint funcionaba originalmente.",
+            "Comprobar exclusivamente las conexiones físicas en el patch panel, ya que un crosspoint erróneo siempre deriva de un cable mal conectado.",
+            "Inyectar una señal de prueba conocida en la entrada fuente y verificar su presencia en la salida de destino o en el monitor de diagnóstico del crosspoint; si aparece en entrada y no en salida, el crosspoint está abierto o direccionado erróneamente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La verificación por inyección de señal en la entrada y observación en la salida/monitor de diagnóstico deduce de forma directa si el crosspoint está activo o no. El distractor más próximo (reinicio) puede ocultar la causa y no identifica si hay un punto de cruce erróneo u abierto.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Organice las tareas y pausas en una jornada de edición con pantallas para reducir fatiga visual y postural:",
+          "options": [
+            "Alternancia de tareas visuales y no visuales cada 20–30 min (micro‑pausas de 1–2 min), pausas de 10–15 min cada 90–120 min, cambios de distancia de enfoque entre tareas y breve ejercicio postural entre pausas.",
+            "Trabajo continuado durante 2–3 horas con una única pausa larga de 30–45 min, manteniendo postura fija para favorecer concentración.",
+            "Pausas únicamente cuando aparezca molestia; evitar cambios de tarea que rompan el flujo de trabajo.",
+            "Reducir brillo de la pantalla al mínimo y suprimir pausas para mantener rendimiento; programar ejercicios posturales solo al finalizar la jornada."
+          ],
+          "correctIndex": 0,
+          "explanation": "La alternativa correcta combina micro‑pausas frecuentes, pausas más largas intercaladas y alternancia de tareas que varían enfoque y postura, medidas que reducen fatiga visual y musculoesquelética. Los distractores minimizan pausas o retrasan la intervención hasta la aparición de molestias, lo que es incorrecto preventivamente.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_export_qc",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Para el control técnico de una exportación destinada a emisión, indique el checklist que verifica formato, niveles, sincronía, campos y metadatos:",
+          "options": [
+            "Comprobar solo que el fichero se reproduce en el reproductor del editor y que el nombre del archivo cumple la convención interna.",
+            "Confirmar contenedor y códec, comprobar niveles de video y audio (legalización y loudness), verificar A/V sync con referencia de timecode, comprobar orden de campos y flags de interlazado, y validar metadatos necesarios de entrega.",
+            "Validar únicamente el bitrate y el tamaño del fichero; formatos y sincronía se asumen correctos si la reproducción es fluida.",
+            "Realizar una conversión a MP4 para compatibilidad y subir el fichero al servidor sin comprobación adicional."
+          ],
+          "correctIndex": 1,
+          "explanation": "El checklist completo incluye contenedor/códec, niveles (video y audio), sincronía A/V, orden de campos y metadatos. Los distractores omiten comprobaciones esenciales (sincronía, campos, o metadatos) que pueden invalidar una entrega broadcast.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Según la Ley 13/2022, ¿qué obligación se aplica concretamente a prestadores de servicios audiovisuales en relación con menores y acceso a contenidos?",
+          "options": [
+            "Garantizar subtitulado automático de todos los contenidos para menores.",
+            "Prohibir de forma general la emisión de cualquier contenido que pueda ofender a menores sin excepciones.",
+            "Limitarse a incluir un aviso en la web sin implementar controles técnicos efectivos.",
+            "Clasificar contenidos por edades y aplicar medidas técnicas de control de acceso que aseguren que los menores no accedan a contenidos para los que no están autorizados."
+          ],
+          "correctIndex": 3,
+          "explanation": "La obligación concreta es clasificar y aplicar controles de acceso técnicos para proteger a menores. El distractor más próximo (solo aviso en web) es insuficiente ante la exigencia de medidas efectivas de control de acceso.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "language_fiction",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En edición de ficción, ¿qué estrategia de coordinación con realización prioriza continuidad dramática y cobertura de interpretación?",
+          "options": [
+            "Priorizar planos que preserven la intención actoral y la continuidad interpretativa (match de mirada y acción), usando cobertura superpuesta que permita cortes sin romper la interpretación.",
+            "Imponer cortes técnicos estrictos basados únicamente en la regla de los 180° sin considerar la actuación.",
+            "Reducir al mínimo la cobertura para forzar un montaje rápido y evitar problemas de raccord.",
+            "Usar siempre planos largos para evitar cortar la interpretación y prescindir de close‑ups."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta prioriza la continuidad dramática y cobertura adecuada para preservar la interpretación al cortar. Los distractores aplican reglas de forma rígida o reducen recursos de cobertura, comprometiendo continuidad dramática y posibilidades de montaje.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En una instalación mixta SD/HD, ¿qué criterio técnico es el más adecuado para elegir referencia de genlock?",
+          "options": [
+            "Usar siempre black‑burst para toda la instalación porque es compatible con HD sin necesidad de conversión.",
+            "Usar tri‑level como referencia principal para señales HD y mantener black‑burst para equipos SD sólo si existe conversor de referencia; tri‑level es el adecuado para HD por sus márgenes de sincronismo.",
+            "No es necesario genlock en señales HD si se emplean timecodes comunes; black‑burst o tri‑level son irrelevantes.",
+            "Seleccionar black‑burst para HD y tri‑level para SD, ya que cada uno funciona mejor fuera de su rango nativo."
+          ],
+          "correctIndex": 1,
+          "explanation": "Tri‑level es la referencia técnica apropiada para HD por su precisión temporal; en instalaciones mixtas puede mantenerse black‑burst para equipos SD mediante convertidores o distribuidores de sync. Los distractores afirman incompatibilidades o irrelevancias técnicas incorrectas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Respecto a dependencias predictivas en una GOP con I, P y B, ¿qué consecuencia práctica produce un error de codificación en un fotograma P?",
+          "options": [
+            "Un error en P provoca siempre la pérdida completa del GOP y hace irreconocible todo el segmento hasta el siguiente I.",
+            "El error afecta únicamente al propio P y no influye en ningún otro fotograma.",
+            "El error se propaga a los fotogramas que dependen del P (P y B posteriores) hasta el siguiente I, distorsionando varios frames en la reproducción.",
+            "Los fotogramas B transmiten correcciones automáticas que evitan cualquier propagación del error del P."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un P es referencia para predicción de siguientes P y B; un error en P provoca propagación hasta el siguiente I. El distractor más cercano (afirmar que afecta solo al P) ignora la dependencia predictiva que causa la propagación.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_color_order",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la secuencia de operaciones correcta para un flujo de colorización orientado a consistencia técnica antes del look creativo:",
+          "options": [
+            "Matching entre planos→aplicación del look→normalización→corrección primaria→ajuste de contraste.",
+            "Aplicación del look creativo→matching entre planos→corrección primaria→normalización/log→ajuste de contraste.",
+            "Normalización/log→corrección primaria (exposición y balance)→ajuste de contraste/curvas→matching entre planos/cámaras→aplicación del look creativo/LUT.",
+            "Ajuste de contraste→aplicación del look→corrección primaria→normalización→matching final."
+          ],
+          "correctIndex": 2,
+          "explanation": "La secuencia correcta primero normaliza al espacio de trabajo, corrige exposición y balance, ajusta contraste, hace el matching técnico entre planos y finalmente aplica el look creativo. Los distractores alteran el orden y pueden enmascarar diferencias técnicas entre cámaras antes del look.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "En un servidor EVS configurado para grabación en bucle con varios canales, señale la afirmación que constituye una excepción respecto a su principio operativo y gestión de recuperación:",
+          "options": [
+            "Un fragmento protegido o marcado permanece disponible para recuperación aunque el buffer general haga overwrites según política; la grabación en bucle no garantiza retención indefinida sin protección.",
+            "La grabación en bucle impide en cualquier circunstancia que un fragmento protegido sea sobrescrito por otro canal si la capacidad total se agota.",
+            "La grabación en bucle permite grabar continuamente múltiples canales y cada canal gestiona su buffer según configuración.",
+            "Cuando el buffer se llena, los fragmentos más antiguos se sobrescriben automáticamente para liberar espacio de grabación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 4 es falsa: la grabación en bucle no impide sobrescrituras si políticas y capacidad no han protegido explícitamente el fragmento; la excepción es asegurar retención absoluta sin medidas de protección. El distractor próximo (proteger mantiene disponible) describe la operación real y válida.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_en_mision",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Al planificar una grabación o cualquier trabajo fuera del centro habitual (misión), ¿qué actuación preventiva debe priorizar el empresario para reducir de manera sistemática los riesgos inherentes al desplazamiento y al lugar de trabajo?",
+          "options": [
+            "Realizar una evaluación de riesgos específica de la misión y planificar las medidas preventivas y recursos necesarios.",
+            "Facilitar a los trabajadores un seguro de viaje y cobertura médica durante la misión.",
+            "Organizar transporte privado para todo el equipo en lugar de usar transporte público.",
+            "Entregar equipos de protección individual (EPI) estándar a los técnicos sin más acciones previas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La actuación prioritaria es realizar una evaluación de riesgos específica de la misión y establecer las medidas preventivas y recursos necesarios: es la base para identificar peligros (desplazamientos, condiciones del emplazamiento, horarios, exposición a agentes, trabajo en altura, etc.), adaptar la planificación, formación, medios de protección y procedimientos de emergencia. Entregar EPI (opción D) es una medida válida pero debe responder a riesgos previamente identificados y no sustituye la evaluación; por eso es el distractor más próximo. El seguro de viaje (opción B) cubre consecuencias, no previene los riesgos; y organizar transporte privado (opción C) puede mitigar algunos riesgos de desplazamiento pero no aborda de forma integral los peligros del lugar ni la planificación preventiva.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la naturaleza jurídica, órganos y estructura básica de la Corporación RTVE:",
+          "options": [
+            "RTVE es un ente público de naturaleza jurídica propia y está dotado de órganos de gobierno y gestión según la ley.",
+            "La Ley establece órganos como un consejo de administración y un presidente con responsabilidades definidas por norma.",
+            "RTVE funciona como una sociedad mercantil anónima privada con capital repartido entre inversores externos.",
+            "La norma configura una estructura orgánica y funciones específicas para garantizar su servicio público."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación 3 es la excepción: RTVE no es una sociedad anónima privada con capital externo; su naturaleza es la de entidad pública con órganos y funciones definidos legalmente. Los otros enunciados describen rasgos propios de su regulación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Tras copiar íntegramente la carpeta XDCAM al servidor, algunos clips no se reproducen en el software estándar. Indique la causa técnica más probable relacionada con la estructura XDCAM (excluya la mera conservación de carpetas e índices):",
+          "options": [
+            "La única causa posible es corrupción del sistema de ficheros del servidor durante la copia.",
+            "El servidor no reconoce la extensión .mp4, por lo que ningún clip XDCAM es reproducible tras la copia.",
+            "Los clips XDCAM siempre requieren transcodificación obligatoria para su reproducción; la copia no afecta.",
+            "Se trata de clips 'spanned' divididos en múltiples segmentos; falta el fichero de metadatos o herramientas compatibles que ensamblen los fragmentos en la reproducción."
+          ],
+          "correctIndex": 3,
+          "explanation": "Los clips spanned pueden dividirse en varios fragmentos que necesitan metadatos o un reproductor compatible para ensamblaje; esa es la causa más habitual aparte de la estructura de carpetas. Los distractores atribuyen el fallo a causas generales o incorrectas (extensión mp4 universal, necesidad incondicional de transcodificación).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare AVC/H.264 y HEVC/H.265 en eficiencia, complejidad y compatibilidad en flujos audiovisuales:",
+          "options": [
+            "HEVC ofrece mayor eficiencia de compresión a igual calidad pero implica mayor complejidad de codificación/decodificación y menor compatibilidad de hardware/software que AVC.",
+            "HEVC y AVC tienen idéntica complejidad y compatibilidad en equipos de emisión actuales.",
+            "AVC es más eficiente que HEVC en todos los casos y además menos complejo.",
+            "HEVC es completamente incompatible con streaming y por tanto no se usa en flujos de distribución."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación correcta reconoce la mayor eficiencia de HEVC contra el coste de mayor complejidad y compatibilidad menos extendida; esto explica decisiones prácticas en flujos. Los distractores simplifican erróneamente igualdad de complejidad, superioridad de AVC o incompatibilidad absoluta de HEVC.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En una cadena audiovisual con enlaces coaxiales, ¿cuál es la consecuencia operativa más directa de una adaptación de impedancias incorrecta?",
+          "options": [
+            "Protección completa del equipo gracias a la mayor disipación de potencia en la línea.",
+            "Aumento directo del nivel de loudness en la mezcla final sin afectar la imagen.",
+            "Generación automática de un bucle de masa que produce exclusivamente zumbido a 50 Hz en audio.",
+            "Reflexiones y desadaptación (return loss) que provocan anchos de banda reducidos, cancelaciones y artefactos de imagen como ringing o ghosting."
+          ],
+          "correctIndex": 3,
+          "explanation": "La desadaptación de impedancias provoca reflexiones y pérdida de integridad de la señal (ringing, ghosting, pérdida de banda). Los distractores atribuyen efectos no relacionados o beneficios inexistentes (aumento de loudness, protección del equipo).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Ordene la secuencia mínima correcta para una ingesta verificada con control de calidad y registro permanente:",
+          "options": [
+            "Comprobar reproducción en origen → formatear destino → copiar sin verificaciones → registrar después de 24 h.",
+            "Copiar ficheros → calcular y guardar checksum → comparar checksums → validar estructura y reproducción → registrar metadatos y resultado de QC.",
+            "Copiar ficheros → editar inmediatamente → calcular checksum al final del día → registrar si no hay errores.",
+            "Registrar metadatos → calcular checksum → copiar ficheros → validar estructura."
+          ],
+          "correctIndex": 1,
+          "explanation": "La secuencia correcta asegura copia seguida de checksum y comparación, verificación de estructura y reproducción y registro del resultado. Los distractores alteran el orden o omiten la verificación inmediata bit‑a‑bit esencial para integridad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_red_ip",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Un puesto de edición con IP 192.168.10.25/24 no alcanza un recurso compartido en 192.168.11.50/24 aunque la puerta de enlace del puesto es 192.168.10.1. ¿Cuál es la solución de compatibilidad más directa para restaurar conectividad sin cambiar la IP del recurso?",
+          "options": [
+            "Deshabilitar la puerta de enlace en el puesto, ya que provoca conflicto con la otra subred.",
+            "Cambiar la IP del puesto a la misma subred 192.168.11.x sin más comprobaciones.",
+            "Configurar una ruta en la puerta de enlace o en el router para enrutar entre 192.168.10.0/24 y 192.168.11.0/24, o cambiar la máscara a /23 si la topología lo permite.",
+            "Modificar únicamente el DNS del puesto para que resuelva la dirección del recurso."
+          ],
+          "correctIndex": 2,
+          "explanation": "El problema es incompatibilidad de subred por máscara /24; la solución práctica es enrutar entre subredes o ampliar máscara a /23 si procede. Cambiar la IP del puesto es una alternativa invasiva; los otros distractores (deshabilitar gateway o tocar DNS) no resuelven la falta de enrutamiento entre subredes.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "032",
       "title": "Examen 032",
