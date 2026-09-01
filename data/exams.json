@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-31",
+  "updatedAt": "2026-09-01",
   "exams": [
+    {
+      "id": "034",
+      "title": "Examen 034",
+      "date": "2026-09-01",
+      "level": "Alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las afirmaciones sobre el modelo de financiación de RTVE previsto por la Ley 8/2009:",
+          "options": [
+            "Se basa exclusivamente en ingresos por explotación comercial y publicidad sin aportación presupuestaria pública.",
+            "Depende fundamentalmente de ingresos por venta de contenidos internacionales y no contempla controles de equilibrio presupuestario.",
+            "Financiación derivada únicamente de tasas a operadores y obligaciones de cofinanciación impuestas por terceros prestadores.",
+            "Combina financiación pública con recursos propios y regula límites a la dependencia comercial, estableciendo principios de suficiencia y transparencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 8/2009 establece un modelo mixto en el que concurren aportaciones públicas y recursos propios y fija principios como suficiencia y transparencia; las otras opciones describen esquemas exclusivos o inexistentes en el modelo legal.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la configuración RAID que ofrece tolerancia a la pérdida de dos discos y permite reconstrucción tras su reemplazo:",
+          "options": [
+            "RAID 5 con paridad simple.",
+            "RAID 0 por striping.",
+            "RAID 6 con paridad dual.",
+            "RAID 1 (mirroring) en configuración simple."
+          ],
+          "correctIndex": 2,
+          "explanation": "RAID 6 utiliza paridad dual y permite fallos simultáneos de dos discos; RAID 5 tolera sólo un fallo, RAID 0 no ofrece tolerancia y RAID 1 tolera fallo de un disco por espejo.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al uso de la 'línea de tono de piel' en el vectorscopio:",
+          "options": [
+            "Permite evaluar de forma fiable la luminancia absoluta de la piel en la imagen.",
+            "Es una referencia orientativa que ayuda a comparar tonos de piel entre cámaras y ajustar balance de piel.",
+            "Sirve para comprobar que la crominancia y el matiz de los tonos de piel se mantienen dentro de un ángulo y una saturación esperables.",
+            "Su posición y tolerancia varían según fenotipos y no debe usarse como único criterio de corrección de piel."
+          ],
+          "correctIndex": 0,
+          "explanation": "La 'skin line' orienta sobre crominancia (matiz/saturación), no sobre luminancia absoluta; las otras opciones describen usos y límites correctos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes formulaciones sobre derechos y obligaciones en materia de prevención de riesgos laborales:",
+          "options": [
+            "La empresa debe informar y formar, pero no es necesaria la consulta o participación de los trabajadores en la gestión preventiva.",
+            "La obligación principal del trabajador es evitar reclamaciones, dejando a la empresa la decisión exclusiva sobre medidas sin necesidad de coordinación.",
+            "Solo el delegado de prevención recibe formación; el resto de trabajadores solo recibe instrucciones puntuales en caso de riesgo evidente.",
+            "El trabajador tiene obligación de colaborar y utilizar adecuadamente los medios de protección; la empresa debe informar, formar y facilitar participación activa en medidas preventivas."
+          ],
+          "correctIndex": 3,
+          "explanation": "El régimen normativo combina deberes empresariales de información, formación y promoción de la participación con la obligación del trabajador de colaborar y usar los medios; las otras opciones omiten o falsean la obligación de consulta y cooperación.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la descripción que interpreta correctamente los tipos de medición de loudness LUFS y sus aplicaciones:",
+          "options": [
+            "Short‑term y momentary son equivalentes en ventana y uso; integrated aplica solo a publicidad.",
+            "Integrated mide picos instantáneos; short‑term mide el total del programa; momentary promedia todo el contenido de emisión.",
+            "Momentary se usa para normalizar el programa final; integrated sirve solo para alertas locales; short‑term detecta errores de fase.",
+            "Integrated mide la energía promedio de todo el programa; short‑term evalúa ventanas de varios segundos (≈3 s) para segmentos; momentary ofrece lecturas muy rápidas (≈400 ms) para observar cambios instantáneos."
+          ],
+          "correctIndex": 3,
+          "explanation": "Integrated representa el valor medio del programa completo; short‑term (≈3 s) valora segmentos cortos; momentary (≈400 ms) ofrece lecturas rápidas; las demás opciones mezclan usos y ventanas incorrectamente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_metadatos",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Indique la secuencia operativa correcta para asegurar catalogación, búsqueda e intercambio usando metadatos técnicos y descriptivos:",
+          "options": [
+            "Generar metadatos descriptivos en fase de entrega, indexar en el MAM y posteriormente extraer metadatos técnicos al exportar.",
+            "Eliminar metadatos técnicos tras transcodificación para reducir tamaño y conservar solo descriptores para búsqueda.",
+            "Registrar metadatos técnicos en ingesta, añadir metadatos descriptivos y de derechos, indexar en el sistema de activos y exportar junto a la esencia para intercambio.",
+            "Añadir metadatos descriptivos únicamente en la estación editorial y no incorporarlos al archivo maestro ni al intercambio."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta es capturar metadatos técnicos en ingesta, enriquecer con descriptores y derechos, indexar en el MAM y exportar con la esencia; las otras opciones omiten pasos clave o proponen prácticas que impiden búsqueda e intercambio fiables.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_offline_online",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Ordene las operaciones correctas en un flujo offline/online con montaje en proxies y reconformado a originales:",
+          "options": [
+            "Conformar con originales → editar proxies → exportar proxy final → sustituir por originales sin reconformar.",
+            "Editar con proxies → generar EDL/AAF con handles → utilizar EDL/AAF para reconformar con originales → verificar y ajustar en online.",
+            "Editar en proxies → publicar versión proxy final sin EDL/AAF → reemplazar manualmente clips en originales.",
+            "Transcodificar originales a proxy idéntico y usar ese proxy como master final sin reconformado."
+          ],
+          "correctIndex": 1,
+          "explanation": "El flujo correcto es editar sobre proxies, exportar lista de decisiones con handles, reconformar a los originales y verificar en online; las demás opciones omiten EDL/AAF y reconformado o proponen procesos incorrectos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la formulación compatible con los principios y obligaciones de la acción preventiva recogidos en la Ley 31/1995:",
+          "options": [
+            "Solo son obligatorios los equipos de protección individual; la evaluación de riesgos es opcional cuando existen pocos incidentes.",
+            "La prevención se limita a cumplir trámites burocráticos y la empresa puede delegar la responsabilidad final a contratistas sin coordinación.",
+            "La empresa debe evaluar riesgos, planificar la prevención, adoptar medidas prioritarias de carácter técnico y organizar formación y vigilancia; la participación y coordinación con trabajadores es obligatoria.",
+            "El trabajador está obligado a garantizar por sí mismo su seguridad sin recibir formación ni información de la empresa."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley exige evaluación de riesgos, planificación preventiva, medidas técnicas prioritarias, formación, vigilancia y participación; las otras opciones contradicen obligaciones legales o las minimizan.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para dimensionar un servidor de vídeo que atiende accesos concurrentes, ¿qué conjunto describe mejor los parámetros determinantes de concurrencia?  ",
+          "options": [
+            "Capacidad de salida de red (uplink), throughput de almacenamiento (I/O) y cómputo/decodificación del servidor, en relación con el bitrate por canal.",
+            "Número de conexiones simultáneas solamente; la CPU no influye en concurrencia de streams.",
+            "Sólo la capacidad del sistema de archivos; el enlace de red puede aplicarse después sin impacto.",
+            "La latencia de la red exclusivamente; I/O y CPU son secundarios si existe suficiente almacenamiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "La concurrencia viene limitada por la suma de bitrates respecto al uplink, por el rendimiento de I/O del almacenamiento y la carga de CPU/GPU para servir o transcodificar; las otras opciones ignoran factores cruciales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare los ajustes posturales recomendados para reducir tensión lumbar, de antebrazos y de pies en un puesto de edición:",
+          "options": [
+            "Silla ajustada en altura con apoyo lumbar, antebrazos apoyados y paralelos al escritorio, pies apoyados planos en el suelo o reposapiés.",
+            "Silla baja sin apoyo lumbar, antebrazos elevados y apoyados en la mesa con pies colgando para favorecer movilidad.",
+            "Reposapiés sin ajuste de silla, brazo en ángulo cerrado sobre teclado y monitor colocado por debajo del nivel ocular.",
+            "Usar únicamente cojín lumbar; mantener antebrazos en ángulo de 90° sin apoyo y monitor extremadamente cercano."
+          ],
+          "correctIndex": 0,
+          "explanation": "La configuración correcta combina altura de silla con apoyo lumbar, antebrazos apoyados y pies apoyados; las otras opciones proponen posturas que aumentan carga lumbar o tensión de antebrazos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique la afirmación que mejor describe la diferencia operativa entre PQ y HLG y su compatibilidad para distribución:",
+          "options": [
+            "HLG exige metadata de gamut y mastering; PQ no requiere metadatos y es intrínsecamente compatible con pantallas SDR sin conversión.",
+            "PQ (ST 2084) es una curva de transferencia diseñada para mastering con referencia absoluta y requiere metadata para reproducción; HLG es una curva híbrida diseñada para compatibilidad hacia pantallas SDR sin metadatos, facilitando distribución directa.",
+            "Ambas curvas son idénticas en principio y son intercambiables sin conversión o metadata.",
+            "PQ está pensado únicamente para emisiones en directo; HLG solo para archivo y no para transmisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "PQ es una OETF de referencia (ST 2084) usada en mastering y normalmente acompañada de metadata y mapas de tonos; HLG es diseñado para mayor compatibilidad SDR sin metadata; las demás afirmaciones son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_dbfs",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la interpretación operativa más adecuada sobre alcanzar 0 dBFS en una mezcla digital:",
+          "options": [
+            "0 dBFS es un valor relativo sin implicaciones de distorsión; los picos más altos siempre son tolerables en reproducción analógica.",
+            "0 dBFS representa el máximo valor de muestra representable; alcanzar o superar ese nivel en muestras provoca clipping digital y distorsión, y los true‑peaks pueden exceder el valor de muestra medido.",
+            "Superar 0 dBFS aumenta la relación señal/ruido sin riesgo de artefactos si se aplica compresión dinámica en la salida.",
+            "0 dBFS sólo afecta a la fase de la señal; la amplitud puede excederse indefinidamente con limitadores."
+          ],
+          "correctIndex": 1,
+          "explanation": "0 dBFS es el límite digital de representación; excederlo produce clipping; además, el true‑peak puede superar el pico de muestra por inter‑sample peaks; las otras opciones son técnicamente incorrectas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación técnica: ¿qué efecto produce mezclar material 25p con 29,97p sin conversión adecuada y cuál es un método habitual para convertir cadencias?  ",
+          "options": [
+            "No se produce ningún artefacto perceptible; la mezcla de cadencias es siempre transparente.",
+            "Producirá judder e irregularidades temporales; métodos de conversión incluyen pulldown, interpolación de fotogramas y re‑muestreo por motion‑compensation.",
+            "Mezclar cadencias aumenta la resolución espacial; la única conversión posible es duplicar fotogramas sin ajustar tiempo.",
+            "La conversión de cadencia siempre elimina el audio; el método recomendado es cambiar el frame rate en el contenedor sin re‑muestrear."
+          ],
+          "correctIndex": 1,
+          "explanation": "Mezclar 25p y 29,97p sin conversión introduce judder y discrepancias temporales; las conversiones comunes incluyen pulldown, frame interpolation y motion‑compensated frame rate conversion; las otras opciones son falsas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación más adecuada sobre la preparación de una tarjeta de estado sólido para su reutilización tras la descarga y verificación de sus contenidos:",
+          "options": [
+            "Evitar cualquier formateo y limitarse a eliminar manualmente los archivos desde el ordenador para reducir ciclos de escritura y prolongar la vida útil del soporte.",
+            "Ejecutar un borrado seguro (secure erase) de bajo nivel desde un ordenador tras cada descarga para garantizar la ausencia total de datos residuales antes de reutilizarla.",
+            "Formatear la tarjeta usando la función de formateo de la propia cámara antes de la siguiente grabación, ya que garantiza la estructura y metadatos esperados por el equipo.",
+            "Formatear la tarjeta en el ordenador con un sistema de archivos estándar (p. ej. exFAT) para estandarizar su uso entre equipos y garantizar compatibilidad universal con cámaras."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica recomendada es formatear en la propia cámara: el formateo del equipo asegura la estructura de carpetas, el sistema de archivos y metadatos (índices, nombres de carpeta utilizados por la cámara) necesarios para un funcionamiento fiable. El borrado seguro desde ordenador es innecesario y aumenta ciclos de escritura y desgaste; eliminar archivos manualmente puede dejar entradas o metadatos residuales que provoquen errores; y formatear en el ordenador puede crear parámetros (tamaños de clúster, estructuras) que no coincidan con los que espera la cámara, comprometiendo compatibilidad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según el III Convenio Colectivo de RTVE, ¿qué criterio define la clasificación profesional y la organización del trabajo?",
+          "options": [
+            "Cada trabajador decide su propia clasificación profesional según preferencia personal.",
+            "La clasificación profesional depende únicamente de la antigüedad del trabajador sin referencia a funciones.",
+            "La clasificación se realiza por grupos y niveles profesionales en función de funciones, responsabilidades y ocupaciones tipo, que determinan organización y condiciones de trabajo.",
+            "La clasificación se basa exclusivamente en la titulación académica sin considerar tareas desarrolladas."
+          ],
+          "correctIndex": 2,
+          "explanation": "El convenio estructura la clasificación por grupos/niveles vinculados a funciones y organización del trabajo; las otras opciones simplifican o contradicen los criterios formales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Durante una retransmisión, ¿qué conjunto de acciones asegura que un clip transferido desde EVS sea utilizable en el NLE con 'handles' suficientes y disponibilidad segura?:",
+          "options": [
+            "Transferir clip sin handles, convertir códec al vuelo y no bloquear el origen para mantener espacio.",
+            "Exportar desde EVS con handles adecuados, seleccionar códec compatible/conservador, bloquear o marcar el clip en EVS para evitar sobreescritura y verificar integridad antes de importarlo al NLE.",
+            "Copiar el fichero directamente del disco de EVS al NLE sin comprobar codec ni handles y eliminar el original una vez importado.",
+            "Enviar solo un enlace al clip y confiar en que el NLE resolverá automáticamente los handles y el códec durante la retransmisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica correcta incluye exportar con handles, elegir códec compatible, bloquear/retener el clip en EVS y verificar integridad; las otras opciones omiten handles, verificación o seguridad contra sobreescritura.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En términos de entrada o permanencia del audio, indique la formulación que corresponde a un J‑cut:",
+          "options": [
+            "Se utiliza una pista separada de efectos para ocultar diálogos entre planos.",
+            "El audio del plano anterior se prolonga sobre la imagen del plano siguiente.",
+            "El audio y la imagen cambian exactamente al mismo tiempo sin solapamiento.",
+            "El audio del plano siguiente comienza antes de que aparezca su imagen en pantalla."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un J‑cut presenta el audio del siguiente plano antes de su imagen; la opción más próxima describe L‑cut (permanencia del audio previo), que no se debe presentar como definición del J‑cut.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_relink",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál es el criterio operativamente más fiable para resolver enlaces incorrectos al relinkar material con nombres idénticos procedentes de distintas fuentes?",
+          "options": [
+            "Priorizar identificadores únicos y metadatos (timecode, ID de origen, UUID/UID de archivo) y complementar con tamaño/duración para detectar enlaces incorrectos.",
+            "Basarse exclusivamente en el nombre de fichero para relinkar clips.",
+            "Relinkar por fecha de copia en el sistema de ficheros sin atender metadatos internos.",
+            "Seleccionar al azar entre ficheros con el mismo nombre hasta que la reproducción sea correcta."
+          ],
+          "correctIndex": 0,
+          "explanation": "El relink fiable usa identificadores únicos y metadatos de origen; apoyarse sólo en nombres o fechas suele causar enlaces erróneos; las otras opciones no resuelven conflictos entre fuentes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_eje_180",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique la consecuencia principal de cruzar el eje de acción sin cobertura que establezca el nuevo lado:",
+          "options": [
+            "Garantiza mejor contraste entre personajes y fondo.",
+            "Aumenta automáticamente la resolución y mejora la percepción de profundidad.",
+            "Produce únicamente una variación de color sin efecto sobre la posición espacial.",
+            "Se rompe la continuidad espacial: la posición izquierda/derecha de los personajes se invierte y puede confundir al espectador."
+          ],
+          "correctIndex": 3,
+          "explanation": "Cruzar el eje invierte la percepción izquierda/derecha y rompe continuidad espacial; las otras opciones describen efectos no relacionados con la regla de 180°.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a sistemas de archivos habituales en soportes audiovisuales, ¿cuál afirmación es correcta sobre tamaño máximo de fichero y compatibilidad?",
+          "options": [
+            "FAT32 limita el tamaño máximo de fichero a 4 GiB menos 1 byte; exFAT y sistemas modernos soportan ficheros mucho mayores y suelen emplearse para entregas de vídeo de gran tamaño.",
+            "FAT32 soporta ficheros de tamaño ilimitado, por lo que es la mejor opción para masters de gran duración.",
+            "exFAT impone un límite estricto de 2 GB por fichero y no es recomendable para vídeo contemporáneo.",
+            "NTFS y exFAT no son compatibles con sistemas de edición ni con cámaras modernas, por lo que nunca deben usarse."
+          ],
+          "correctIndex": 0,
+          "explanation": "FAT32 tiene límite ≈4 GiB; exFAT y sistemas como NTFS admiten ficheros mayores; las otras afirmaciones son incorrectas sobre límites o compatibilidades.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "033",
       "title": "Examen 033",
