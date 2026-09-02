@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-02",
   "exams": [
+    {
+      "id": "035",
+      "title": "Examen 035",
+      "date": "2026-09-02",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que mejor distingue la libertad de expresión de la libertad de información y sus límites constitucionales:",
+          "options": [
+            "La libertad de expresión protege únicamente la difusión institucional de información, mientras que la libertad de información protege opiniones personales sin límites.",
+            "La libertad de información es un derecho individual idéntico a la libertad de expresión, sin régimen jurídico diferenciado ni límites aplicables.",
+            "La libertad de expresión ampara la manifestación de pensamientos y opiniones; la libertad de información garantiza la difusión de noticias e información veraz; ambas admiten límites constitucionales como la protección del honor y garantías procesales.",
+            "La libertad de expresión prohíbe toda regulación sobre contenidos de los medios; la libertad de información obliga a los medios a publicar toda la información recibida sin depuración."
+          ],
+          "correctIndex": 2,
+          "explanation": "La correcta distingue función: expresión = opiniones; información = difusión de hechos noticiosos; además ambas están sujetas a límites (derecho al honor, etc.) y garantías procesales, frente a las opciones que equiparan o eliminan límites.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Cuál de las siguientes afirmaciones refleja con mayor precisión las capacidades y límites de un checksum en comprobaciones antes/después de transferencia:",
+          "options": [
+            "Un checksum idéntico antes y después garantiza la autenticidad del fichero y que no ha sido modificado por un tercero.",
+            "Si el checksum difiere tras la transferencia, indica exclusivamente cambios en metadatos y nunca variación en la esencia audiovisual.",
+            "Un checksum es suficiente para detectar cualquier tipo de corrupción lógica en el fichero, incluidos errores en la estructura interna del formato.",
+            "Un checksum coincidente confirma copia bit‑a‑bit durante la transferencia; no garantiza autenticidad previa al cálculo ni protege frente a colisiones o manipulación intencional si el proceso de cálculo no está asegurado."
+          ],
+          "correctIndex": 3,
+          "explanation": "La afirmación correcta reconoce que un checksum igual verifica integridad bit‑a‑bit de la copia, pero no acredita la autenticidad ni elimina la posibilidad de colisiones o de corrupción previa al cálculo; los distractores atribuyen garantías excesivas o falsas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En un RGB Parade con el canal rojo consistently 6 dB por encima de verde y azul en altas luces, cuál es el diagnóstico operativo más pertinente:",
+          "options": [
+            "Indica un fallo de compresión que afecta exclusivamente al canal rojo y requiere transcodificación a un códec intra‑frame.",
+            "Sugiere un dominante rojo en balance de blancos o en ganancia de cámara; proceder a revisar ajuste de balance/gamma y comprobar LUTs o correcciones aplicadas en cadena de señal.",
+            "Señala necesariamente un problema de sincronización de genlock entre cámaras que provoca desfasaje de color en altas luces.",
+            "Implica que el vectorscopio está mal calibrado; ajustar el vectorscopio resolverá la desviación sin modificar la señal de cámara."
+          ],
+          "correctIndex": 1,
+          "explanation": "La correcta identifica un dominante de color (balance o ganancia/LUT) como causa más probable y orienta a revisar ajustes de cámara o procesos de color; los distractores atribuyen a compresión, genlock o calibración del equipo de medida sin relación directa.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione el conjunto de criterios más adecuado para diseñar proxies orientados a edición ágil sin sacrificar identificación visual y eficiencia de almacenamiento:",
+          "options": [
+            "Resolución 1280×720 intraframe (ProRes Proxy o DNxHD LB), bitrate moderado y archivo por clip: equilibrio entre fluidez de edición, scrubbing y fidelidad visual para conformado.",
+            "Resolución 640×360, códec H.264 de alta compresión VBR a bajo bitrate, para minimizar espacio aunque con alta latencia de scrubbing.",
+            "Resolución nativa, Long‑GOP H.265 con bitrate variable alto para conservar máxima calidad y reducir tareas de reconformado.",
+            "Resolución 320×180, códec MJPEG con bitrate muy alto para priorizar visualización cuadro a cuadro sobre almacenamiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta propone proxy 720p en códec intraframe ligero (ProRes Proxy/DNxHD LB) y bitrate moderado, que ofrece buena identificación visual y fluidez en scrubbing sin ocupar tanto espacio; los distractores sacrifican demasiado calidad, confunden propósitos o son ineficientes.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a los elementos que caracterizan un accidente 'in itinere' (desplazamiento habitual domicilio‑trabajo):",
+          "options": [
+            "Se produce durante un desplazamiento entre el domicilio habitual y el centro de trabajo siguiendo el itinerario o medios habituales.",
+            "Ocurre en el trayecto habitual aunque el trabajador realice una parada breve y razonable por una necesidad personal imprevista.",
+            "Ocurre al utilizar medios de transporte habituales y dentro de la franja horaria habitual de entrada o salida del trabajo.",
+            "Sucede durante un desplazamiento entre domicilio y trabajo cuando el trayecto es extraordinario y realizado por motivos de ocio no relacionados con la actividad laboral."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un accidente 'in itinere' exige relación directa entre origen/destino (domicilio‑centro de trabajo), uso del itinerario o medios habituales y temporalidad compatible con el desplazamiento al/desde el puesto. La opción C describe un trayecto extraordinario por motivos de ocio, que rompe la relación necesaria con el desplazamiento laboral y, por tanto, es la excepción. La opción B es el distractor más próximo: una parada breve y razonable por necesidad personal no suele alterar la condición de in itinere, mientras que un desvío o trayecto extraordinario por ocio sí la invalida.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un flujo EVS controlado desde IPDirector, para eliminar un hueco entre dos elementos consecutivos de una playlist y lograr reproducción continua sin fundido ni solapamiento, ¿qué acción debe realizar el operario sobre la playlist?",
+          "options": [
+            "Insertar un encadenado (dissolve) entre los dos clips.",
+            "Publicar/exportar la playlist al servidor de emisión para que aplique la continuidad.",
+            "Cambiar el orden de reproducción de los clips en la playlist.",
+            "Ajustar los puntos de entrada/salida (trim) de los clips para eliminar el espacio."
+          ],
+          "correctIndex": 3,
+          "explanation": "Ajustar los puntos de entrada/salida (trim) modifica las fronteras temporales de cada clip y permite eliminar el espacio entre ellos, logrando reproducción gapless. Insertar un encadenado genera una transición visual (solapamiento) en lugar de continuidad sin efecto; cambiar el orden solo altera la secuencia pero no corrige huecos entre clips; publicar/exportar traslada la playlist al playout pero no repara los puntos de entrada/salida que causan el hueco.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_elipsis",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la estrategia de montaje compatible con el uso de la elipsis para comprimir tiempo manteniendo comprensión narrativa:",
+          "options": [
+            "Cortar directamente escenas sin señal visual o sonora que indique el avance temporal para acelerar el ritmo sin más apoyos.",
+            "Eliminar segmentos intermedios mostrando únicamente un recurso que indique el salto temporal (título temporal, cambio de vestuario o de estación) y conservar la continuidad causal de la acción.",
+            "Sustituir secuencias por fragmentos de archivo aleatorio sin relación temática para crear una sensación de tiempo indeterminado.",
+            "Mantener todos los instantes cronológicos aunque sean redundantes para evitar cualquier pérdida de información temporal."
+          ],
+          "correctIndex": 1,
+          "explanation": "La elipsis requiere eliminar tiempo narrativo pero conservar claves que permitan comprender el salto (indicadores visuales/sonoros o continuidad causal); los otros distractores son incompatibles con la comprensión o innecesariamente verbosos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Cuál refleja con mayor precisión la finalidad esencial de la reforma introducida por la Ley 5/2017 y el mecanismo de elección de los órganos de RTVE:",
+          "options": [
+            "Privatizar parcialmente RTVE y delegar la elección de sus órganos en administraciones autonómicas.",
+            "Reforzar la independencia y pluralismo mediante un procedimiento de elección parlamentaria de sus órganos de gobierno con criterios de proporcionalidad y mayor control democrático.",
+            "Concentrar la designación de los órganos de RTVE en el Gobierno central sin intervención del Parlamento.",
+            "Eliminar cualquier limitación temporal a los mandatos de los órganos de RTVE para asegurar continuidad."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 5/2017 buscó recuperar independencia y pluralismo introduciendo un procedimiento parlamentario de elección de los órganos de RTVE; las otras opciones distorsionan el propósito o atribuyen poderes distintos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Durante selección y visionado previo en un flujo XDCAM, cuál es la relación operativa correcta entre proxy y esencia de alta resolución:",
+          "options": [
+            "Emplear proxies para selección y rough edit; mantener el enlace a la esencia alta resolución para conformado y entrega final tras la ingesta verificada.",
+            "Usar la esencia de alta resolución para todo el visionado y eliminar proxies para ahorrar espacio.",
+            "Generar proxies sólo tras el conformado final para asegurar que los metadatos originales no cambian.",
+            "Sustituir la esencia de alta resolución por proxies de menor calidad en el archivo maestro para acelerar accesos y evitar reconformado."
+          ],
+          "correctIndex": 0,
+          "explanation": "Los proxies sirven para visionado y selección ágiles; la esencia alta se reserva para conformado y entrega final, manteniendo enlaces entre ambas; las demás opciones implican uso inadecuado o pérdida de calidad/archivo maestro.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Cuál es la consecuencia operativa de mezclar fuentes no sincronizadas y cómo la corrige un frame‑sync:",
+          "options": [
+            "La falta de sincronización puede producir saltos de imagen, tearing y desincronía A/V; un frame‑sync recompone temporalmente la fuente respecto a la referencia aportando buffer y alineación de cuadros a costa de introducir latencia.",
+            "Fuentes no sincronizadas sólo generan diferencias de color; el frame‑sync aplica corrección de color para homogeneizar tonos.",
+            "Fuentes no sincronizadas provocan exclusivamente pérdida de audio embebido; el frame‑sync restaura automáticamente el audio perdido.",
+            "La ausencia de genlock se corrige cambiando el estándar de raster de las cámaras sin necesidad de equipos de sincronismo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta identifica problemas temporales (saltos, tearing, desincronía) y explica que el frame‑sync re‑temporaliza la señal alineándola con la referencia a cambio de latencia; los distractores son incorrectos o parciales.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la diferencia entre montaje paralelo y alterno:",
+          "options": [
+            "Ambos términos son sinónimos y siempre indican simultaneidad temporal exacta entre las acciones mostradas.",
+            "Montaje alterno intercala acciones no necesariamente simultáneas buscando contraste o comparación; puede no converger en un mismo suceso.",
+            "Montaje paralelo presenta acciones que ocurren simultáneamente en diferentes espacios mostrando simultaneidad o asociación temática.",
+            "El montaje paralelo suele sugerir simultaneidad y convergencia temática; el alterno enfatiza alternancia y comparación, sin obligación de simultaneidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta (excepción) es la que afirma erróneamente que son sinónimos y siempre indican simultaneidad; en realidad paralelo sugiere simultaneidad/convergencia y alterno alternancia/contraste.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que integra correctamente clases de fuego, extintor apropiado y medida de seguridad eléctrica o de evacuación:",
+          "options": [
+            "Fuego en equipos eléctricos: extinguir con agua a presión y mantener el equipo energizado; evacuar usando ascensor para rapidez.",
+            "Fuego de combustibles sólidos (Clase A): agua o espuma; líquidos inflamables (Clase B): espuma o polvo; en fuegos con riesgo eléctrico usar polvo o CO2 tras desconectar alimentación si es posible; evacuar por rutas establecidas sin usar ascensores.",
+            "Fuego de cocina (aceites): apagar con agua inmediatamente; en incendios eléctricos priorizar el enfriamiento con agua sobre extintores específicos; dejar puertas abiertas durante evacuación.",
+            "En todos los casos usar el mismo tipo de extintor polivalente sin considerar la naturaleza del material o la presencia de electricidad; cortar la ventilación nunca es necesario."
+          ],
+          "correctIndex": 1,
+          "explanation": "La segunda opción combina correctamente clases y agentes extintores adecuados y recoge la precaución eléctrica y la necesidad de evacuar por rutas seguras; las demás contienen prácticas peligrosas o incorrectas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Causa y diagnóstico más probable de un zumbido a 50/60 Hz presente al conectar múltiples equipos de audio:",
+          "options": [
+            "Fallo de compresión en la codificación de audio; solucionar reasignando códec a cada pista.",
+            "Error de sample rate entre dispositivos digitales; el zumbido desaparece al cambiar sample rate a 48 kHz.",
+            "Bucle de masa causado por diferencia de potencial entre tierras; diagnóstico mediante desconexión selectiva de la conexión de tierra de señal o separación de las tomas para comprobar si el zumbido desaparece.",
+            "Problema exclusivo de fase invertida en uno de los canales que no se detecta en la escucha mono."
+          ],
+          "correctIndex": 2,
+          "explanation": "La respuesta correcta identifica un bucle de masa (diferencia de potencial entre tierras) como causa típica y propone un diagnóstico operativo (aislar/desconectar tierras de señal); los demás distractores atribuyen causas distintas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que mejor describe limitaciones y prácticas operativas de LTO/LTFS para archivo a largo plazo:",
+          "options": [
+            "LTFS ofrece acceso inmediato y baja latencia equivalente a disco; no requiere catálogo ni verificaciones posteriores a la escritura.",
+            "LTO elimina la necesidad de mantener copias múltiples y permite restauración instantánea de cualquier fichero sin planificación adicional.",
+            "LTO con LTFS permite acceso por fichero en cinta y facilita búsquedas básicas, pero presenta latencias y tiempos de búsqueda elevados; requiere catálogo/registro y verificación tras escritura; limitación crítica: dependencia de hardware y plan de migración periódica.",
+            "LTFS no admite metadatos y sólo es útil para copias temporales; no es apto para preservación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La segunda opción describe correctamente ventajas (acceso por fichero) y limitaciones (latencia, necesidad de catálogo y verificación, obsolescencia de hardware) y la necesidad de migración; las otras opciones exageran o falsean capacidades.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Cuál de las siguientes obligaciones corresponde concretamente a los prestadores de servicios audiovisuales según la Ley 13/2022 en materia de accesibilidad:",
+          "options": [
+            "No existen obligaciones concretas; la ley deja todas las medidas de accesibilidad a la decisión voluntaria de los prestadores.",
+            "Obligar a emitir siempre en lengua de signos todos los contenidos en vivo sin posibilidad de planificación ni criterios de proporcionalidad.",
+            "Limitar la accesibilidad únicamente a plataformas de pago y eximir a la televisión pública de cualquier prestación accesible.",
+            "Garantizar progresivamente la accesibilidad mediante subtitulado, lengua de signos y audiodescripción en los servicios audiovisuales, conforme a los niveles y plazos fijados en la norma y su desarrollo reglamentario."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta refleja que la Ley impone obligaciones concretas (subtítulos, lengua de signos, audiodescripción) con requisitos y plazos progresivos; las demás opciones niegan obligaciones o proponen exigencias inverosímiles.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_xavc",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que diferencia correctamente variantes de la familia XAVC y sus aplicaciones:",
+          "options": [
+            "XAVC‑Intra aplica compresión por grupos de cuadros (Long‑GOP) y es preferible para grabaciones largas con ahorro de espacio.",
+            "XAVC‑Intra y Long‑GOP son equivalentes en carga de CPU para edición y ofrecen la misma latencia en conformado.",
+            "XAVC no tiene variantes; todas sus versiones son idénticas en estructura de GOP y perfil de color.",
+            "XAVC‑Long‑GOP utiliza compresión inter‑frame para mayor eficiencia en bitrate; XAVC‑Intra usa compresión intra‑frame (cada frame codificado independientemente) y resulta más adecuada para edición y efectos por cuadro."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta distingue Intra (intraframe, mejor para edición) de Long‑GOP (interframe, más eficiente en bitrate), mientras que las otras opciones son incorrectas o confusas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Al componer un gráfico PNG con transparencia sobre fondos de distinto brillo se observan halos o fringing en los bordes. Respecto a causas relacionadas con la interpretación del canal alpha y la composición de color, señale la afirmación que constituye una excepción (NO explica el fenómeno):",
+          "options": [
+            "El PNG fue exportado con canales RGB ya multiplicados por el alpha (premultiplied), pero el compositor lo interpreta como 'straight', provocando residuos del color original en los bordes.",
+            "La combinación se realiza en espacio gamma (no lineal) mientras el gráfico se generó y esperaba una composición en espacio lineal; la diferencia de gamma altera la luminancia de las transiciones y puede percibirse como halo.",
+            "La submuestreo cromático 4:2:0 aplicado en una codificación posterior afecta al canal alpha del PNG y provoca fringing en los bordes.",
+            "El gráfico se exportó con el color de fondo 'bakeado' (RGB contiene píxeles sobre fondo blanco) y el alpha no refleja ese fondo, por lo que al colocarlo sobre un fondo oscuro aparecen bordes claros."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación correcta como excepción es la referente al submuestreo 4:2:0. El 4:2:0 es un esquema de submuestreo de crominancia utilizado en codificaciones de vídeo (afecta a Cb/Cr), no al canal alpha de una imagen PNG; además, PNG es un formato sin submuestreo cromático por píxel, de modo que 4:2:0 no es una causa válida de halos al componer un PNG. Las otras tres opciones sí son causas plausibles: la interpretación errónea entre premultiplied y straight genera bordes incorrectos porque las componentes RGB están o no ya multiplicadas por alpha; la composición en espacio gamma frente a lineal modifica la mezcla de luminancias en los bordes; y exportar la imagen con el color de fondo 'bakeado' deja RGB con valores del fondo (p. ej. blanco) que se muestran como halos cuando se colocan sobre fondos oscuros. Estas últimas explicaciones distinguen operativamente el problema de la opción marcada como excepción.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Seleccione la afirmación que refleja con mayor precisión la diferencia operativa entre RGB y YCbCr en flujos de producción y compresión:",
+          "options": [
+            "YCbCr separa luminancia (Y) de componentes de color (Cb/Cr) permitiendo submuestreo de crominancia para compresión; RGB mantiene componentes de color por canal y se emplea habitualmente en etapa de captura o composición donde se requiere resolución de color completa.",
+            "RGB separa luminancia y crominancia para favorecer la compresión; YCbCr almacena canales R, G y B independientemente para calibración de color.",
+            "No existe diferencia técnica entre RGB y YCbCr; son nombres intercambiables para el mismo espacio de color.",
+            "YCbCr siempre produce colores más fieles que RGB y debe usarse en todas las etapas de postproducción."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta explica que YCbCr separa luminancia y crominancia y permite submuestreo en compresión, mientras que RGB mantiene tres componentes completos, útil en captura/composición; las otras opciones son incorrectas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Cuál es la corrección operativa que realiza el timecode drop‑frame frente al non‑drop‑frame en 29,97 fps:",
+          "options": [
+            "El drop‑frame elimina físicamente fotogramas para ajustar el timecode al tiempo real.",
+            "El non‑drop‑frame altera la velocidad de reproducción para sincronizar numeración y tiempo real.",
+            "Drop‑frame corrige la numeración saltando códigos de cuadro determinados para que la numeración del timecode se aproxime al tiempo real sin eliminar fotogramas de imagen.",
+            "El drop‑frame duplica ciertos fotogramas para mantener la coincidencia entre numeración y reloj en tiempo real."
+          ],
+          "correctIndex": 2,
+          "explanation": "Drop‑frame ajusta la numeración del timecode mediante la omisión de ciertos números de cuadro (no la eliminación de fotogramas reales), igualando la cuenta del TC al tiempo real; las otras afirmaciones confunden numeración con eliminación o manipulación de imágenes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un mezclador de vídeo, indique la correspondencia operativa correcta entre programa, previo, key y transición:",
+          "options": [
+            "Previo es la salida en emisión; programa se utiliza únicamente para monitorizar; la key no participa en mezclas de caracteres; la transición modifica el códec de la señal.",
+            "Programa es la salida en emisión; previo permite previsualizar y preparar fuentes; key controla la señal de máscara (incrustación) y la transición ejecuta el paso del previo al programa aplicando la operación de key si está configurada.",
+            "Key es la salida en emisión y programa es la señal de control de inserción de gráficos; previo es una función de grabación fuera de línea.",
+            "Transición solo cambia niveles de audio y no afecta al pase de imágenes entre previo y programa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La primera opción define correctamente las funciones: programa = salida en directo; previo = preparación; key = control de incrustación; transición = ejecución del pase del previo al programa. Los distractores invierten funciones o contienen falsedades.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "034",
       "title": "Examen 034",
