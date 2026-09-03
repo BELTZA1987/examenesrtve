@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-03",
   "exams": [
+    {
+      "id": "036",
+      "title": "Examen 036",
+      "date": "2026-09-03",
+      "level": "Muy alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Respecto a la función de servicio público atribuida a RTVE, indique la afirmación que mejor recoge sus obligaciones operativas frente a la ciudadanía:",
+          "options": [
+            "Garantizar pluralismo, objetividad y accesibilidad, manteniendo disponibilidad universal y continuidad del servicio.",
+            "Emitir contenidos orientados únicamente a la generación de ingresos comerciales del operador.",
+            "Actuar como canal privilegiado de comunicación del Gobierno, priorizando directrices políticas por encima de criterios editoriales.",
+            "Limitar su actividad a la simple retransmisión de señales privadas sin responsabilidad sobre veracidad o diversidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La función de servicio público obliga a garantizar pluralismo, veracidad y accesibilidad y a mantener continuidad de servicio; las otras opciones contradicen esa obligación (orientación comercial exclusiva, subordinación política o ausencia de responsabilidad).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Política de preservación a largo plazo: seleccione la opción que define correctamente las acciones necesarias para gestionar obsolescencia y asegurar accesibilidad e integridad de fondos audiovisuales:",
+          "options": [
+            "Realizar migraciones sólo cuando un soporte alcance fallo físico; mantener una copia maestra y conservar formatos originales sin comprobaciones periódicas.",
+            "Confiar exclusivamente en RAID en cabina centralizada y reemplazar el hardware al detectar incremento de errores sin crear copias externas.",
+            "Planificar migraciones a formatos y soportes mantenibles antes de que caduquen, ejecutar verificaciones de integridad periódicas (checksums), documentar versiones y pruebas de reproducción, y conservar registros de control de la migración.",
+            "Almacenar archivos en el mismo contenedor y ubicación; realizar verificaciones puntuales sólo al recuperar material para emisión."
+          ],
+          "correctIndex": 2,
+          "explanation": "La política correcta combina migración proactiva antes de obsolescencia, verificaciones periódicas y documentación; confiar solo en RAID o verificar únicamente al recuperar no garantiza preservación. La opción 2 contiene las acciones necesarias y coordinadas. ",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_target",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para un magazine informativo dirigido a público juvenil, ¿qué adaptación del montaje responde mejor al enfoque de ritmo, densidad y recursos exigido por ese target?",
+          "options": [
+            "Planos largos y ritmo lento para favorecer reflexión prolongada; escasa grafismo y música discreta.",
+            "Uso exclusivo de planos exteriores y steadycam para ofrecer sensación de naturalidad, prescindiendo de recursos gráficos y musicales.",
+            "Incrementar duración de piezas y reducir recursos visuales para priorizar profundidad informativa sobre atractivo visual.",
+            "Ritmo más rápido con planos más cortos, mayor densidad de cortes por bloque, grafismos dinámicos y recursos sonoros que marquen acentos; coherencia para no saturar."
+          ],
+          "correctIndex": 3,
+          "explanation": "El target juvenil requiere ritmo más ágil, cortes más frecuentes y recursos visuales/sonoros que faciliten atención; las otras opciones son o demasiado lentas o prescinden de los recursos que aumentan captación sin perder comprensión. ",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Al trasladar un proyecto entre dos NLE distintos para preservar estructura y metadatos, cuál de las siguientes afirmaciones diagnostica mejor la diferencia operativa entre un EDL y un AAF:",
+          "options": [
+            "Un EDL exporta múltiples pistas de vídeo y audio, efectos nativos y metadatos completos; un AAF sólo contiene una lista de cortes simple.",
+            "Tanto EDL como AAF contienen exactamente las mismas capacidades de transferencia de transiciones, efectos y metadatos; la elección es irrelevante.",
+            "Un EDL es esencialmente una lista de cortes con referencias a reels/timecode y pérdidas de información sobre pistas múltiples y efectos; un AAF transporta mapeo de pistas, clips enlazados, algunos efectos y metadatos más ricos.",
+            "Un AAF sólo sirve para audio y no incluye información de edición de vídeo; el EDL contiene automáticamente conformado multicámara."
+          ],
+          "correctIndex": 2,
+          "explanation": "El EDL ofrece un cutlist básico con limitaciones en pistas y efectos; el AAF permite transferir estructura de pistas, referencias de clips y metadatos más completos. Las otras opciones sobrestiman o falsean las capacidades de uno u otro. ",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Posición recomendada de una pantalla de visualización para minimizar reflejos y tensión visual:",
+          "options": [
+            "Situar el borde superior de la pantalla por encima de la línea de visión, distancia mínima de 20 cm y orientación perpendicular a las fuentes luminosas.",
+            "Colocar el borde superior de la pantalla al nivel o ligeramente por debajo de la línea de visión, distancia de visualización aproximada de un brazo (50–70 cm), y orientar/regular la iluminación para evitar reflexiones directas.",
+            "Colocar la pantalla al nivel de los ojos y la distancia más corta posible para reducir el parpadeo; orientar hacia ventanas para aprovechar luz natural.",
+            "Disponer la pantalla muy inclinada hacia atrás para reducir ángulo de visión y acercarla por debajo de 30 cm para mejorar detalle."
+          ],
+          "correctIndex": 1,
+          "explanation": "La recomendación técnica es pantalla al nivel o ligeramente por debajo de la vista, distancia 50–70 cm y control de iluminación para evitar reflejos; las otras opciones proponen distancias o orientaciones que aumentan fatiga o reflejos. ",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Elija la ecuación que resume correctamente la relación operativa entre tensión (V), corriente (I), resistencia (R) y potencia (P) aplicable a equipos audiovisuales eléctricos:",
+          "options": [
+            "P = V · R = I² / V",
+            "P = V + I + R",
+            "P = V / I = R / I",
+            "P = V · I = I² · R = V² / R"
+          ],
+          "correctIndex": 3,
+          "explanation": "La relación eléctrica correcta es P = V·I y sus formas equivalentes I²·R y V²/R. Las demás fórmulas son incorrectas algebraicamente y no representan la relación entre magnitudes eléctricas. ",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_backup_321",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Respecto a la política 3‑2‑1 de copias de seguridad, indique la afirmación que constituye una excepción (es decir, NO cumple la política):",
+          "options": [
+            "Guardar tres copias en la misma sala física pero en distintos sistemas idénticos sin copia externa.",
+            "Conservar dos copias duplicadas en el mismo servidor RAID y una única copia en cinta fuera de sitio.",
+            "Tener al menos tres copias de los datos, en al menos dos tipos de soporte, con una copia almacenada fuera de sitio.",
+            "Mantener tres copias, dos en soportes diferentes (por ejemplo disco y cinta) y una copia remota almacenada fuera del centro."
+          ],
+          "correctIndex": 0,
+          "explanation": "Guardar las tres copias en la misma sala en sistemas idénticos incumple la exigencia de diversidad de soportes y ubicación fuera de sitio; las opciones 1, 2 y 4 describen esquemas compatibles con 3‑2‑1 (la 2 incluye cinta offsite).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Para evaluar cumplimiento práctico del II Plan de Igualdad y la Guía de Igualdad de RTVE, qué medida constituye un indicador fiable de aplicación efectiva:",
+          "options": [
+            "Difusión puntual de mensajes genéricos sobre igualdad en la intranet sin formación ni procedimientos sancionadores.",
+            "Existencia de un protocolo de actuación formalizado que incluya prevención del acoso, canales confidenciales de denuncia, formación obligatoria y controles periódicos sobre lenguaje y representación en contenidos.",
+            "Solo exigir a las productoras externas la etiqueta 'paridad' en sus dossiers, sin auditoría interna.",
+            "Publicar listas de personal por género sin medidas de prevención del acoso ni revisión de contenidos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un protocolo que combine prevención del acoso, canales de denuncia, formación y auditoría de lenguaje/representación es indicador de aplicación efectiva; las otras opciones son medidas parciales o meramente formales. ",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al preparar un master HDR para distribución también en SDR, cuál es la consecuencia técnica más relevante que debe abordarse en el proceso de conversión:",
+          "options": [
+            "Eliminar información de color para cumplir con SDR sin alterar luminancia máxima.",
+            "Convertir directamente la curva PQ a gamma de SDR sin ajuste de luminancia ni de colorimetría.",
+            "Aplicar tone‑mapping para reducir rango dinámico y ajustar luminancia pico y curvas de transferencia, preservando relación de contraste perceptual en pantalla SDR.",
+            "Sustituir metadata HDR por metadata SDR sin transformación de señal."
+          ],
+          "correctIndex": 2,
+          "explanation": "La conversión HDR→SDR requiere tone‑mapping que reduzca el rango dinámico y ajuste luminancia pico y curvas para preservar contraste perceptual; las opciones restantes omiten el tratamiento necesario y producirían sobre/ subexposición o pérdida de detalle. ",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al legalizar una señal para cumplimiento broadcast respecto a gamut y niveles, cuál es la operación que define correctamente la función de un legalizador frente a un limitador simple:",
+          "options": [
+            "Un legalizador remapea selectivamente croma fuera de gamut y adapta saturación para mantener matiz y luminancia; un limitador simple recorta canales sin preservar matiz.",
+            "Un legalizador elimina metadatos de color para forzar Rec.709; un limitador aumenta el contraste global.",
+            "Un legalizador convierte la señal a blanco y negro para garantizar cumplimiento; un limitador compensa con filtros de ruido.",
+            "Un legalizador comprime la señal de luminancia y crominancia en bloques sin consideración de hue, mientras que un limitador ajusta únicamente el balance de blancos."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un legalizador reubica colores fuera de gamut ajustando saturación y preservando el matiz/luminancia; un limitador que simplemente recorta canales produce shifts cromáticos. Las otras opciones son técnicas incorrectas o extremas. ",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a MOV, MP4 y MXF: identifique la afirmación correcta sobre su función técnica:",
+          "options": [
+            "MOV, MP4 y MXF son códecs que definen la compresión de la imagen y el audio.",
+            "MOV solo sirve para audio y no para vídeo.",
+            "MXF es un formato propietario que no admite metadatos; MP4 siempre contiene H.264.",
+            "MOV, MP4 y MXF son contenedores que encapsulan esencia codificada (códecs) y metadatos; la compatibilidad depende del códec dentro del contenedor."
+          ],
+          "correctIndex": 3,
+          "explanation": "MOV/MP4/MXF son contenedores que empaquetan códecs y metadatos; la interoperabilidad depende del códec y del perfil usado dentro del contenedor. Las otras afirmaciones confunden contenedor con códec o son incorrectas. ",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Sea r (Mbps) el bitrate constante por usuario, C (Mbps) la capacidad del enlace y m el margen de red en porcentaje aplicado multiplicando la suma agregada por (1 + m/100). Para garantizar que el enlace no se sature y considerando que N_max debe ser un número entero de usuarios concurrentes, ¿qué expresión determina N_max?",
+          "options": [
+            "N_max = C * (1 + m/100) / r",
+            "N_max = C / ( r * (1 + m/100) )",
+            "N_max = ceil( C / ( r * (1 + m/100) ) )",
+            "N_max = floor( C / ( r * (1 + m/100) ) )"
+          ],
+          "correctIndex": 3,
+          "explanation": "La condición de no saturación es N·r·(1 + m/100) ≤ C, por tanto N ≤ C / (r·(1 + m/100)). Como N debe ser entero, el número máximo seguro de usuarios es la parte entera inferior: floor(C / (r·(1 + m/100))). La opción 2 da el límite real (no entero); la 3 (ceil) puede redondear hacia arriba y violar la desigualdad (provocar saturación); la 4 aplica el margen a la capacidad en lugar de al consumo, sobreestimando la concurrencia. ",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "language_ritmo",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Distinción operativa entre ritmo interno y ritmo externo del montaje:",
+          "options": [
+            "Ritmo interno y externo son sinonimia técnica en edición.",
+            "Ritmo interno es siempre más lento que el externo; ambos son medidos en fotogramas por segundo.",
+            "Ritmo interno se refiere únicamente a la banda sonora; ritmo externo solo al color de los planos.",
+            "Ritmo interno alude a duración y movimiento dentro de un plano; ritmo externo es la duración de los planos y su sucesión en la estructura del montaje."
+          ],
+          "correctIndex": 3,
+          "explanation": "Ritmo interno describe la dinámica dentro de un plano (acción, movimiento), y ritmo externo la duración y cadencia de los cortes; las otras opciones confunden o falsean la distinción. ",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la definición que distingue correctamente ingest, capture, import y link en un flujo de trabajo de edición:",
+          "options": [
+            "Ingest: transferencia controlada a un sistema con registro y metadatos; Capture: grabación en tiempo real desde fuente; Import: copia de ficheros desde soporte a proyecto; Link: referencia al fichero original sin duplicarlo.",
+            "Ingest y capture son sinónimos; import crea una referencia; link copia archivos al almacenamiento central.",
+            "Capture es siempre archivo físico en cinta; ingest solo aplica a grabación en directo; import y link son equivalentes.",
+            "Link importa el fichero físico al NLE; import crea solo metadatos; ingest borra el origen tras copiar."
+          ],
+          "correctIndex": 0,
+          "explanation": "Ingest implica registro y control en un sistema, capture es la grabación en tiempo real, import copia ficheros a proyecto y link crea referencias sin duplicar. Las otras descripciones mezclan o alteran operaciones. ",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a la regulación de jornada, descansos y turnicidad en el III Convenio Colectivo de RTVE, señale la afirmación que constituye una excepción (NO corresponde):",
+          "options": [
+            "El convenio regula horarios de trabajo, descansos y criterios de turnicidad adaptados a la actividad propia de RTVE.",
+            "Establece directamente las tablas salariales estatales de todo el sector público nacional.",
+            "Incluye mecanismos para compensación y programación de descansos derivados de turnos y guardias.",
+            "Regula condiciones específicas de jornada y organización del trabajo en servicios sujetos a emisión y retransmisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "El convenio regula jornada, descansos y turnicidad y condiciones específicas de organización; no tiene por objeto establecer las tablas salariales estatales generales del conjunto del sector público, que son competencia de otra normativa. Por eso esa afirmación es la excepción. ",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las características y adecuación de CBR y VBR:",
+          "options": [
+            "CBR ofrece un uso de ancho de banda constante y predecible útil en transmisión en tiempo real.",
+            "VBR permite mayor calidad por bitrate medio dado, adaptando tasa según complejidad de la escena.",
+            "VBR garantiza que todos los fotogramas tendrán idéntica calidad visual independientemente de la complejidad de la escena.",
+            "CBR limita la variabilidad de tasa útil en entornos con restricción de capacidad de canal."
+          ],
+          "correctIndex": 2,
+          "explanation": "VBR mejora calidad media adaptando bitrate; no garantiza idéntica calidad por fotograma — esa declaración es falsa y, por tanto, la excepción. Las demás opciones describen características correctas de CBR/VBR. ",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Conjunto de medidas preventivas más eficaz para reducir riesgo de trastornos musculoesqueléticos en tareas continuas con teclado, ratón y tableta gráfica:",
+          "options": [
+            "Silla estática alta, realizar tareas sin descansos, usar teclado plano sin reposamuñecas.",
+            "Silla ajustable, reposamuñecas y apoyo antebrazos, pantalla a altura adecuada, alternancia de tareas, pausas micro y ejercicios de estiramiento frecuentes.",
+            "Colocar teclado y ratón lo más cerca posible sin ajuste ergonómico; evitar pausas para mantener ritmo de trabajo.",
+            "Usar únicamente atajos de teclado y prescindir de tableta; mantener postura fija durante toda la jornada."
+          ],
+          "correctIndex": 1,
+          "explanation": "La combinación de mobiliario ajustable, apoyo ergonómico, posicionamiento correcto de pantalla, alternancia de tareas y pausas reduce de forma eficaz el riesgo; las otras opciones prescinden de medidas preventivas básicas o proponen conductas perjudiciales. ",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Comparación de sincronización multicámara por forma de onda de audio frente a sincronización por timecode compartido:",
+          "options": [
+            "La sincronización por forma de onda es fiable cuando existe señal de audio común con buena relación señal/ruido y transientes claros; el timecode compartido ofrece robustez superior en ausencia de audio utilizable.",
+            "La sincronización por forma de onda es preferible siempre, pues no necesita condiciones adicionales y sustituye al timecode.",
+            "Ambos métodos son equivalentes en fiabilidad y no presentan limitaciones relevantes en entornos profesionales.",
+            "La sincronización por timecode es inútil si las cámaras comparten la misma tasa de fotogramas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La sincronización por waveforms funciona con audio común y buena SNR; falla con ruido, pistas diferentes o ausencia de transientes. El timecode jam‑sync es más robust cuando hay falta de audio compartido. Las otras opciones generalizan o falsean la comparación. ",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En la verificación de compatibilidad mono/estéreo con un medidor de correlación de fase, ¿qué lectura y comportamiento del indicador aseguran que la suma a mono no provocará atenuaciones por cancelación de fase?",
+          "options": [
+            "Lectura cercana a 0 indica fase invertida completa y cancelación total al sumar a mono.",
+            "Lectura cercana a +1 (valor positivo alto): canales en fase coincidente; suma a mono segura sin pérdidas significativas por cancelación.",
+            "Lectura negativa cercana a −1 indica perfecta correlación y seguridad al convertir a mono.",
+            "Lectura fluctuante entre +1 y −1 garantiza que no habrá problemas al sumar a mono."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un valor cercano a +1 indica alta correlación y compatibilidad mono; valores cercanos a −1 indican posible cancelación al sumar y 0 indica fuentes decorreladas. Por tanto la opción 1 es correcta; las demás interpretaciones son erróneas. ",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un entorno con bins compartidos entre varios editores, medida técnica más eficaz para prevenir sobrescrituras y resolver concurrencia:",
+          "options": [
+            "Permitir edición simultánea sin bloqueo y resolver conflictos manualmente tras cada sesión.",
+            "Confiar en normas de nombrado de archivos y comunicación verbal entre editores sin control técnico.",
+            "Implementar bloqueo de archivo a nivel de servidor (checkout/check‑out) que obliga a marcar y reservar un bin antes de editar y desplegar permisos por usuario.",
+            "Duplicar bins localmente en cada estación y sincronizar por FTP al finalizar la jornada sin control de versiones."
+          ],
+          "correctIndex": 2,
+          "explanation": "El bloqueo o checkout a nivel de servidor con control de permisos impide sobrescrituras y gestiona concurrencia; las otras opciones dependen de procedimientos manuales o riesgosos que no garantizan integridad colaborativa. ",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "035",
       "title": "Examen 035",
