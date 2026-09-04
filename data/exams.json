@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-04",
   "exams": [
+    {
+      "id": "037",
+      "title": "Examen 037",
+      "date": "2026-09-04",
+      "level": "Alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Indique cuál de las siguientes afirmaciones representa una restricción del modelo de financiación que pretende preservar la independencia editorial de RTVE según el espíritu de la Ley 8/2009:",
+          "options": [
+            "La dependencia prioritaria de ingresos por publicidad comercial para sostener la programación.",
+            "La financiación mediante asignación presupuestaria estatal con mecanismos de control y transparencia.",
+            "La financiación exclusiva mediante suscripción directa de los usuarios.",
+            "La implantación de micro‑pagos por cada visionado para financiar contenidos puntuales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La asignación presupuestaria pública con control y transparencia es la medida que reduce la influencia comercial y protege la independencia editorial. El distractor más próximo (dependencia de publicidad) es justamente la situación que la restricción pretende evitar: dependencia comercial que puede condicionar contenidos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para un flujo de edición y etalonaje en 4K que requiere 10‑bit y máxima compatibilidad con estaciones Avid, ¿qué códec intermedio y perfil es el más adecuado?",
+          "options": [
+            "Apple ProRes 422 LT",
+            "Apple ProRes 4444 XQ",
+            "Avid DNxHR HQX",
+            "Avid DNxHR LB"
+          ],
+          "correctIndex": 2,
+          "explanation": "DNxHR HQX proporciona perfil de alta calidad orientado a 4K y 10‑bit con buena compatibilidad nativa en entornos Avid. El distractor más cercano, ProRes 4444 XQ, ofrece calidad superior en entornos Apple pero no es la opción nativa preferida en una cadena Avid; ProRes LT y DNxHR LB son perfiles de baja calidad inadecuados para etalonaje exigente.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a prácticas tras verificar la integridad de los datos descargados de una tarjeta de estado sólido, indique la opción que constituye una práctica NO recomendada:",
+          "options": [
+            "Realizar un 'quick format' desde el sistema operativo del ordenador sin comprobar errores de superficie.",
+            "Formatear la tarjeta en la cámara con su sistema de archivos nativo tras comprobación de checksums.",
+            "Conservar respaldos antes de cualquier formateo definitivo.",
+            "Retirar la tarjeta del servicio si tras la verificación aparecen errores o bad blocks."
+          ],
+          "correctIndex": 0,
+          "explanation": "El 'quick format' del sistema operativo sin comprobación puede ocultar errores y no restablece correctamente la estructura nativa de la cámara; por tanto no es recomendable. La diferencia clave respecto al distractor más próximo (formatear en cámara) es que el formateo en cámara respeta la estructura y rutinas del dispositivo y suele acompañarse de verificación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Comparando medidas preventivas, ¿cuál reduce específicamente los riesgos asociados a una misión fuera del centro habitual frente a las medidas aplicables al transporte cotidiano al puesto de trabajo?:",
+          "options": [
+            "Suministro de EPIs genéricos en el centro de trabajo.",
+            "Pago de dietas y kilometraje por desplazamiento.",
+            "Cobertura del seguro de accidentes del trabajador durante el trayecto habitual.",
+            "Realización de una evaluación de riesgos del lugar de destino y adopción de medidas específicas in situ."
+          ],
+          "correctIndex": 3,
+          "explanation": "La evaluación de riesgos específica del lugar de destino y la adopción de medidas in situ son acciones dirigidas a las condiciones propias de la misión. Los distractores más próximos (dietas, seguro de trayecto o EPIs genéricos) no abordan las medidas preventivas adaptadas al lugar y a las tareas desarrolladas durante la misión.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Entre las siguientes afirmaciones sobre CPU, GPU y RAM en postproducción, señale la que constituye una excepción (falsa):",
+          "options": [
+            "La CPU gestiona operaciones secuenciales y la lógica del NLE, afectando a export y tareas de cómputo no paralelizables.",
+            "Aumentar únicamente la GPU garantiza siempre una mejora proporcional en todos los exports y renders de proyecto.",
+            "Una mayor cantidad de RAM reduce la necesidad de recurrir a cacheo en disco y mejora la edición con múltiples capas y high‑res.",
+            "La GPU acelera procesos altamente paralelizables como efectos en tiempo real y composición de píxeles."
+          ],
+          "correctIndex": 1,
+          "explanation": "No es cierto que aumentar sólo la GPU mejore siempre todos los exports: muchos códecs y procesos son CPU‑bound o limitados por I/O y memoria. La diferencia decisiva frente al distractor más próximo es que la aceleración real depende de la naturaleza del proceso (paralelizable o no) y de cuellos de botella en CPU/RAM/I/O.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_metadatos",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Cuál es la función principal de los metadatos técnicos y descriptivos en un flujo audiovisual profesional:",
+          "options": [
+            "Sustituir la necesidad de backups físicos.",
+            "Mejorar la compresión reduciendo el bitrate necesario.",
+            "Aumentar la resolución visual durante el etalonaje.",
+            "Facilitar la catalogación, búsqueda e intercambio de archivos entre sistemas."
+          ],
+          "correctIndex": 3,
+          "explanation": "Los metadatos permiten identificar y localizar activos, describir características técnicas y facilitar el intercambio entre sistemas. Los distractores confunden metadatos con funciones de compresión, mejora de imagen o copia de seguridad; la diferencia clave es que los metadatos son información sobre el activo, no operaciones sobre el contenido.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento correcto para verificar un punto de cruce (crosspoint) concreto en una matriz de vídeo y confirmar que la fuente A llega al destino B:",
+          "options": [
+            "Reiniciar la matriz, volcar la configuración completa y esperar a que todos los crosspoints se restablezcan antes de confiar en el estado mostrado por el panel.",
+            "Enviar una señal de test desde la fuente A, seleccionar en la matriz la unión A→B, comprobar el LED de crosspoint y verificar la aparición del test en el monitor del destino B o mediante loopback de señal.",
+            "Desconectar todas las fuentes y destinos, y reconectar únicamente A y B; si el destino muestra señal, asumir que el resto de ruteos son correctos.",
+            "Comprobar únicamente la tabla de ruteo en la consola de control sin enviar señal de prueba física al destino."
+          ],
+          "correctIndex": 1,
+          "explanation": "La secuencia correcta incluye rutar la fuente A al destino B, confirmar estado del crosspoint en la matriz y verificar en el monitor del destino (o mediante loopback) la presencia real de la señal. El distractor más cercano (solo comprobar LEDs o tablas) es insuficiente porque no garantiza que la señal llegue correctamente al receptor.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique cuál de las siguientes formulaciones recoge con mayor fidelidad el principio constitucional de igualdad y prohibición de discriminación:",
+          "options": [
+            "La igualdad implica tratar siempre a todos exactamente de la misma manera sin medidas específicas de acción positiva.",
+            "El Estado puede establecer privilegios para determinados colectivos con independencia de justificación para equilibrar estadísticas.",
+            "Todas las personas son iguales ante la ley y los poderes públicos deben promover condiciones que efectivamente permitan el acceso equitativo a derechos y oportunidades, prohibiendo discriminaciones por motivos como sexo, raza o opinión.",
+            "La prohibición de discriminación solo se aplica en el ámbito laboral y no afecte a contenidos informativos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción seleccionada resume el principio constitucional: igualdad ante la ley, obligación de los poderes públicos y prohibición de discriminación por motivos protegidos. Los distractores fallan al justificar privilegios no fundamentados, confundir igualdad con trato idéntico en todos los casos, o restringir la prohibición a un ámbito limitado.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Para mantener coherencia espacial en un raccord de mirada entre dos planos consecutivos, ¿qué elemento debe conservarse entre ambos planos?:",
+          "options": [
+            "La dirección del vector de mirada respecto al eje de acción y la posición relativa entre sujetos y off‑screen.",
+            "La misma profundidad de campo exacta y la misma distancia focal.",
+            "Que ambos planos estén rodados con la misma lente y sensibilidad ISO.",
+            "Que el segundo plano incluya la misma información de diálogo que el primero."
+          ],
+          "correctIndex": 0,
+          "explanation": "El raccord de mirada exige mantener la dirección del vector de mirada y la relación espacial entre sujetos y el off‑screen para que el espectador ubique la referencia. Los distractores confunden requisitos técnicos de cámara o de contenido que no son esenciales para la coherencia de la mirada.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Cuál de las siguientes afirmaciones distingue mejor capacidad de almacenamiento, ancho de banda y concurrencia en un servidor de vídeo:",
+          "options": [
+            "Concurrencia se define como el espacio libre en disco; ancho de banda como número de discos en RAID; capacidad como la cantidad de conexiones por segundo.",
+            "Capacidad determina directamente la latencia de conexión; ancho de banda es irrelevante para streams constantes; concurrencia solo depende del CPU del servidor.",
+            "Capacidad es volumen total almacenable; ancho de banda es la tasa de datos disponible para transferencias simultáneas; concurrencia es el número de accesos simultáneos que el sistema puede atender sin degradar servicio.",
+            "Ancho de banda y concurrencia son sinónimos; capacidad es únicamente el número de ficheros que caben en el servidor."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación correcta diferencia claramente las tres magnitudes: almacenamiento total, tasa de transferencia y número de accesos simultáneos soportables. El distractor más próximo confunde conceptos (por ejemplo, alegar que capacidad determina latencia) y por tanto es incorrecto.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Tras recibir la información y formación específica para su puesto, ¿cuál de las siguientes actuaciones corresponde al trabajador como obligación en materia de prevención?:",
+          "options": [
+            "Delegar la responsabilidad de su seguridad exclusivamente al responsable de prevención.",
+            "Exigir al empresario medidas adicionales sin aplicar inmediatamente las recibidas.",
+            "Utilizar correctamente los equipos de protección individual y seguir las instrucciones de seguridad proporcionadas.",
+            "Omitir el uso de medios de protección cuando la tarea requiera rapidez."
+          ],
+          "correctIndex": 2,
+          "explanation": "El trabajador tiene la obligación de utilizar correctamente los EPIs y seguir las instrucciones de seguridad. Los distractores describen conductas indebidas: delegar responsabilidad, incumplir medidas o condicionar su uso a conveniencia.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_true_peak",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Respecto a True Peak frente a sample peak, señale la afirmación que constituye una excepción (incorrecta):",
+          "options": [
+            "True Peak estima picos entre muestras que pueden superar la lectura de sample peak.",
+            "True Peak puede determinarse correctamente utilizando únicamente un medidor que solo calcule sample peaks.",
+            "True Peak es relevante para evitar clipping tras conversión D/A y codecs con reconstrucción de forma de onda.",
+            "Sample peak mide el valor máximo de muestras discretas del audio digital."
+          ],
+          "correctIndex": 1,
+          "explanation": "Determinar True Peak requiere interpolación entre muestras; un medidor que solo calcula sample peaks no ofrece medición True Peak válida. La diferencia decisiva frente al distractor más próximo es que True Peak detecta picos inter‑muestra que el sample peak no refleja.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare corrección primaria y secundaria de color. ¿Cuál de las siguientes afirmaciones distingue correctamente su función operativa?:",
+          "options": [
+            "La corrección primaria actúa sobre parámetros globales de una toma (exposición, balance de blancos, contraste); la secundaria selecciona y modifica rangos de color o zonas concretas sin alterar todo el fotograma.",
+            "La corrección primaria se aplica sólo al master final; la secundaria solo en monitor de sala.",
+            "La corrección secundaria siempre implica rotoscopia manual; la primaria nunca admite máscaras.",
+            "La corrección primaria corrige solo el color y la secundaria sólo el brillo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La corrección primaria busca uniformidad global (exposición, balance, contraste), mientras la secundaria trabaja selectivamente sobre gamas tonales o áreas mediante máscaras o selecciones. El distractor más cercano confunde métodos o limita indebidamente las capacidades de cada etapa.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Al reproducir material entrelazado en un monitor progresivo sin tratamiento adecuado, cuál de los siguientes problemas es el más expectable:",
+          "options": [
+            "Aparición de artefactos de 'combing' en objetos en movimiento y pérdida de definición vertical si no se deinterlaza correctamente.",
+            "Pérdida instantánea de metadatos técnicos en el contenedor del fichero.",
+            "Cambios permanentes en la relación de aspecto del vídeo.",
+            "Mejora automática de la fluidez sin necesidad de conversión."
+          ],
+          "correctIndex": 0,
+          "explanation": "La reproducción de material entrelazado en pantallas progresivas sin deinterlace genera 'combing' y pérdida de resolución en movimiento. Los otros distractores no describen las consecuencias típicas de la incompatibilidad temporal entrelazado/progresivo.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 13/2022, ¿qué medida corresponde a la obligación de protección de menores respecto a contenidos audiovisuales en plataformas bajo demanda?:",
+          "options": [
+            "Permitir el acceso irrestricto y dejar a los usuarios la responsabilidad exclusiva del control.",
+            "Limitar la libertad editorial suprimiendo toda referencia a temas sensibles sin posibilidad de contextualización.",
+            "Eliminar automáticamente todo contenido publicado que haya recibido una queja de un menor sin evaluación.",
+            "Clasificar contenidos por edades y aplicar controles de acceso y medidas técnicas para restringir disponibilidad según clasificación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La ley obliga a clasificar contenidos por edad y adoptar controles de acceso y medidas técnicas para proteger a menores. Los distractores plantean medidas desproporcionadas, inapropiadas o negligentes respecto a la obligación legal.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "¿Qué motivación narrativa justifica preferir un fundido encadenado (dissolve) frente a un corte seco?:",
+          "options": [
+            "Sustituir una solución de montaje multicámara para sincronizar audio.",
+            "Ocultar un error de continuidad en el raccord de mirada.",
+            "Acelerar el ritmo de montaje en una secuencia de acción intensa.",
+            "Indicar un paso de tiempo gradual o una continuidad temática que conecta dos tomas de manera perceptiva."
+          ],
+          "correctIndex": 3,
+          "explanation": "El fundido encadenado se emplea para sugerir una transición temporal gradual o vincular dos planos por afinidad temática; no es una herramienta para acelerar ritmo ni para corregir fallos de sincronía. La diferencia frente al distractor más cercano es la intención narrativa de continuidad temporal o tonal.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En un EVS configurado para grabación en bucle, procedimiento para recuperar una acción registrada en un canal de loop y convertirla en clip conservado en disco:",
+          "options": [
+            "Apagar el canal de loop y esperar a que el servidor reescriba sectores libres para que el segmento se convierta en clip.",
+            "Localizar la región deseada en el loop, marcar In/Out, ejecutar 'save' o 'transfer' para archivar el segmento en el almacenamiento permanente y actualizar índices para su recuperación.",
+            "Copiar manualmente los paquetes de datos del disco del loop a un pendrive sin usar funciones del EVS.",
+            "Renombrar el fichero en el sistema de archivos del servidor sin extraerlo desde el interfaz del EVS."
+          ],
+          "correctIndex": 1,
+          "explanation": "El procedimiento operativo correcto es identificar el segmento en el loop, marcarlo y usar la función de guardado/transferencia del EVS para convertirlo en clip permanente. Los distractores proponen acciones fuera de procedimiento o que no garantizan la integridad y el registro del clip.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a la edición de ficheros en crecimiento (growing files) durante directos, cuál es la afirmación correcta sobre su compatibilidad con NLEs:",
+          "options": [
+            "Muchos NLE permiten edición y reproducción mientras el fichero crece, pero ciertas operaciones (render final o reconformado a originales) requieren que la esencia se cierre o se consolide.",
+            "Los growing files no pueden visualizarse ni editarse hasta que el archivo se cierra definitivamente por el servidor.",
+            "Editar un growing file garantiza que los 'handles' finales serán idénticos a los de un fichero ya cerrado.",
+            "Todos los formatos de códec soportan edición en crecimiento sin limitaciones operativas."
+          ],
+          "correctIndex": 0,
+          "explanation": "Los NLE suelen soportar reproducción y cortes básicos sobre growing files, pero operaciones que requieren tamaño y metadatos finales (renders, reconformado) precisan que la esencia esté cerrada. El distractor más cercano (que no pueden editarse) es demasiado absoluto y por tanto incorrecto.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Cuál es la consecuencia operativa más probable al sumar a mono dos señales estéreo desfasadas 180° entre sí:",
+          "options": [
+            "Mejora del ancho de banda estéreo con mayor brillo en altas frecuencias.",
+            "Aumento de la inteligibilidad del diálogo sin cambios de nivel.",
+            "Cancelación significativa de componentes comunes y atenuación o pérdida de señal (nulling).",
+            "No hay efecto perceptible en la mezcla mono."
+          ],
+          "correctIndex": 2,
+          "explanation": "Una inversión de fase o desfase de 180° entre dos señales que se suman a mono produce cancelación de las componentes en común, provocando atenuación o pérdida de la señal. El distractor más próximo (no hay efecto) es incorrecto porque contradice el principio de suma de ondas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnostique cuál de los modos de trim siguientes altera la duración total de la secuencia en la línea de tiempo:",
+          "options": [
+            "Slide trim",
+            "Roll trim",
+            "Slip trim",
+            "Ripple trim"
+          ],
+          "correctIndex": 3,
+          "explanation": "El ripple trim desplaza el punto de corte y desplaza todos los clips posteriores, por lo que modifica la duración total de la secuencia. Los otros modos (roll, slip y slide) no cambian la duración global: roll mueve el punto de corte entre dos clips; slip cambia los puntos internos del clip sin mover sus bordes; slide desplaza el clip manteniendo la duración total.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "036",
       "title": "Examen 036",
