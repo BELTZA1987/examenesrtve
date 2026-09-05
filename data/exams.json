@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-05",
   "exams": [
+    {
+      "id": "038",
+      "title": "Examen 038",
+      "date": "2026-09-05",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la formulación que mejor recoge los principios y obligaciones de la acción preventiva según la Ley 31/1995:",
+          "options": [
+            "Limitar la prevención a los controles médicos periódicos del personal y su registro documental.",
+            "Exigir al trabajador el uso exclusivo de equipos de protección individual para eliminar los riesgos inherentes a su puesto.",
+            "Evaluar riesgos, planificar la actividad preventiva mediante medidas técnicas y organizativas, formar e informar a la plantilla y realizar vigilancia de la salud cuando proceda.",
+            "Trasladar la responsabilidad de la prevención a subcontratas y proveedores, eximiendo a la empresa principal de acciones concretas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta sintetiza evaluación de riesgos, medidas técnicas y organizativas, formación/información y vigilancia de la salud, que son obligaciones y principios centrales. Los distractores fallan: el uso de EPI es una medida residual (B); la prevención no se reduce a controles médicos (C); y la empresa no puede eludir sus obligaciones trasladándolas a terceros (D).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a configuraciones RAID que permiten tolerancia a fallo de dos discos y reconstrucción tras su sustitución:",
+          "options": [
+            "RAID 6 emplea paridad doble distribuida; puede soportar la pérdida simultánea de dos unidades cualquiera y permite reconstrucción completa al sustituirlas.",
+            "RAID 10 (striping de pares espejados) garantiza la tolerancia a la pérdida de dos discos en cualquier combinación y siempre permite reconstrucción tras su sustitución.",
+            "RAID‑Z2 (implementación ZFS de doble paridad) garantiza tolerancia a dos fallos de disco y reconstrucción equivalente a RAID 6.",
+            "Una configuración de RAID 1 con espejo triple (tres copias) soporta la pérdida de hasta dos discos simultáneamente y permite reconstrucción a partir de la copia restante."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción incorrecta es RAID 10: aunque RAID 10 puede tolerar dos fallos de disco en muchas situaciones, esa tolerancia no es garantizada para cualquier combinación de dos discos (si fallan ambos discos del mismo par espejo se pierde la información). En cambio, RAID 6 y RAID‑Z2 usan paridad doble distribuida y garantizan supervivencia ante la pérdida de cualesquiera dos discos, y un espejo triple (tres réplicas) mantiene una copia intacta aunque fallen dos unidades, permitiendo reconstrucción a partir de la réplica remanente. La distinción clave es que RAID 10 ofrece tolerancia condicional (dependiente de qué discos fallen), mientras que RAID 6/RAID‑Z2 y el espejo triple ofrecen tolerancia garantizada a dos fallos y reconstrucción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_project_media",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento correcto para trasladar un proyecto de un NLE a otro sistema diferenciando metadatos de proyecto y archivos de esencia:",
+          "options": [
+            "Copiar únicamente la carpeta de proyecto (bins y ajustes) al nuevo sistema y esperar que el NLE encuentre automáticamente las essences.",
+            "Exportar el fichero de proyecto (metadatos, bins y ajustes) e incorporar en el nuevo sistema una operación de 'Consolidate/Collect' o 'Relink' para trasladar o reconectar las essences en su ubicación física.",
+            "Copiar solo los archivos de esencia (vídeo/audio) a la nueva máquina; recrear manualmente los bins en el NLE receptor.",
+            "Transcodificar todo a un único formato intermedio y eliminar metadatos del proyecto para evitar incompatibilidades."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta distingue metadatos (exportar proyecto/bins) y esencia (consolidar o relinkear medios), que es el procedimiento estandarizado. A falla porque no garantiza encontrar essences; C exige rehacer manualmente los bins; D elimina metadatos útiles y puede degradar trazabilidad.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_news",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Al editar un despacho informativo breve con límite estricto de tiempo, ¿qué criterio operativo debe primar en la coordinación con redacción?",
+          "options": [
+            "Priorizar la jerarquía informativa — titular y datos esenciales primero— ajustar la locución para respetar el tiempo asignado y reservar planos totales y recursos sonoros que atiendan comprobación y cierre en continuidad temporal.",
+            "Construir la pieza siguiendo un arco narrativo largo con varios recursos secundarios para mayor atractivo visual, aunque suponga recortar datos en la locución.",
+            "Entregar sempre el máximo número de imágenes posibles y reducir la locución al mínimo para que redacción complete la información en emisión.",
+            "Priorizar la estética del plano y la musicalización por encima de la jerarquía informativa para captar la atención del espectador."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta prioriza la información esencial, ajusta la locución al tiempo y distribuye recursos visuales (totales, sonoros) de forma que la pieza cumpla la función informativa. Los distractores anteponen estética o cantidad de recursos por encima de la prioridad informativa y de la sincronía con redacción.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En un vectorscopio, ¿qué indican respectivamente el ángulo de un clúster y su distancia al centro?",
+          "options": [
+            "Ángulo = balance de blancos; distancia al centro = nivel de ruido de crominancia.",
+            "Ángulo = luminancia; distancia al centro = nivel de negro.",
+            "Ángulo = tono/hue (fase de croma); distancia al centro = saturación (magnitud cromática).",
+            "Ángulo = ancho de banda de la señal; distancia al centro = retardo de sincronización."
+          ],
+          "correctIndex": 2,
+          "explanation": "En vectorscopio el ángulo corresponde a la fase (hue/tono) y la distancia al centro a la saturación. Los distractores confunden luminancia (que no se representa por ángulo), ruido o parámetros de sincronía que no son lo que mide el vectorscopio.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En una línea de audio balanceada, ¿qué principio permite el rechazo eficaz de interferencias inducidas?",
+          "options": [
+            "Aumentar la impedancia de la línea para que no se induzcan corrientes de interferencia.",
+            "Usar un único conductor blindado para referencia a masa y así derivar la interferencia a tierra.",
+            "Transmitir dos señales iguales y opuestas (hot/cold) y que el receptor extraiga la diferencia, cancelando cualquier señal común a ambas.",
+            "Aplicar un filtro pasivo en el origen para eliminar todas las frecuencias ajenas al audio."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta describe el diferencial (hot/cold) y la cancelación de modo común que proporciona rechazo de interferencias. Los distractores describen técnicas distintas: blindaje (B) ayuda pero no es el principio diferencial; C y D no son la explicación operativa del balanceado.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Si en una GOP compuesta por I, P y B frames se produce un error de codificación en un fotograma P, ¿cuál es la consecuencia práctica sobre la decodificación de los frames siguientes dentro de esa GOP?",
+          "options": [
+            "El error se corrige automáticamente durante reproducción sin repercusiones visuales.",
+            "Solo el fotograma P afectado mostrará error; los B posteriores no se ven comprometidos.",
+            "Los frames P y los B que dependan de ese P mostrarán artefactos hasta que aparezca el siguiente I que rompa la dependencia predictiva.",
+            "Un error en P solo afecta a la reconstrucción de audio, no de imagen."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un P erróneo propaga la corrupción a los frames que lo tomen como referencia (P y B) hasta que reaparece un I que restablece codificación independiente. Los distractores minimizan o niegan la dependencia predictiva o atribuyen el efecto al audio.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Elija la afirmación que mejor resume la finalidad de la reforma de la Ley 5/2017 y el mecanismo de elección de los órganos de RTVE:",
+          "options": [
+            "Recuperar la independencia editorial mediante la elección parlamentaria de los órganos de gobierno y mecanismos que reduzcan la dependencia del Ejecutivo.",
+            "Fortalecer la intervención directa del Gobierno en la gestión cotidiana de RTVE para mejorar eficiencia.",
+            "Transferir la designación de los órganos de RTVE a comités técnicos independientes no sometidos a control parlamentario.",
+            "Privatizar la financiación de RTVE para evitar la influencia política en su órgano de control."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta refleja la finalidad de la reforma: reforzar independencia y pluralismo mediante elección parlamentaria de órganos. Los distractores proponen mayor control gubernamental, comités técnicos sin control parlamentario o cambios de financiación que no describen la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la configuración postural adecuada en un puesto de edición para reducir tensión lumbar, de antebrazos y pies:",
+          "options": [
+            "Silla ajustada para apoyo lumbar, altura de asiento que deje los pies planos y firmes en el suelo, antebrazos apoyados y paralelos al teclado con hombros relajados.",
+            "Asiento muy alto para favorecer la circulación, pies en puntillas para mejor movilidad y antebrazos elevados sin reposabrazos.",
+            "Silla rígida sin apoyo lumbar para reforzar musculatura, pies apoyados en una barra alta y antebrazos colgando para libertad de movimientos.",
+            "Reposapiés elevado obligando a una flexión de rodillas pronunciada y apoyabrazos muy bajos para forzar el estiramiento de espalda."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta indica ajuste de silla con apoyo lumbar, pies planos, antebrazos apoyados y paralelo al teclado: medidas ergonómicas recomendadas. Los distractores proponen posturas incómodas o que inducen tensión muscular.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_lut_log",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Flujo correcto con material en gamma log para mantener posibilidades de corrección y asegurar visualización de referencia:",
+          "options": [
+            "Usar una LUT de monitor (display LUT) para visualización durante conformado y etalonaje, aplicar corrección primaria sobre señal linealizada y reservar la LUT creativa para etapa de output o para archivos derivados.",
+            "Aplicar permanentemente la LUT creativa sobre los originales (bake) para garantizar que las decisiones de look sean irreversibles y uniformes.",
+            "Convertir directamente a Rec.709 mediante LUT y trabajar únicamente sobre ese material como si fuera original para evitar complejidad.",
+            "Ignorar LUTs y trabajar sin monitor calibrado para mantener el archivo 'puro' hasta la entrega final."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta distingue el uso de LUTs para monitorización versus aplicar correcciones sobre señal correctamente transformada, manteniendo los originales no 'bakeados' para preservar posibilidad de corrección. El 'bake' (A) elimina flexibilidad; C y D son prácticas que perjudican control técnico y creativo.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Tras transferir a un servidor la estructura de carpetas de un soporte XDCAM (preservando nombres e índices visibles), algunos clips no se reproducen o se interrumpen a mitad de reproducción. Excluya problemas de conservación básica de carpetas o índices y señale la causa técnica más probable relacionada con la estructura XDCAM:",
+          "options": [
+            "La operación de copia ha alterado el UMID (identificador único) contenido en los encabezados MXF, de forma que el software estándar no reconoce los ficheros como clips válidos.",
+            "Los clips afectados están grabados en modo 'spanning' (fragmentados en varios extent/segmentos físicos) y requieren los fragmentos y las referencias de metadatos que los ensamblan; la copia no incluyó o no mantuvo la relación entre esos fragmentos.",
+            "Los ficheros están intactos pero usan un códec XDCAM distinto o variante de perfil no soportado por el software estándar; por tanto el reproductor no puede decodificar la esencia.",
+            "Los permisos o atributos del sistema de ficheros en el servidor impiden al reproductor acceder al contenido, provocando fallos de reproducción aunque la estructura aparente esté completa."
+          ],
+          "correctIndex": 1,
+          "explanation": "Correcta: XDCAM puede almacenar clips largos divididos en varios fragmentos físicos (spanning) y utiliza metadatos para referenciar y recomponer esos extents. Si faltan fragmentos o la relación entre fragmentos y su índice no se conserva exactamente, el reproductor no puede ensamblar la esencia y la reproducción falla o se corta. Distinción con el distractor más próximo (códec): un problema de códec produciría errores de decodificación o mensaje de formato no soportado aunque el fichero esté completo; el síntoma típico es que el fichero se abre pero no puede decodificarse, mientras que en spanning la reproducción suele fallar indicando datos ausentes o se interrumpe en el punto donde falta un fragmento. Los otros distractores (UMID alterado o permisos) son técnicamente posibles en otras circunstancias, pero una copia preservando nombres/índices no cambia UMID y los permisos se comprueban fácilmente; la causa más característica y específica de la estructura XDCAM es el spanning/fragmentación y sus referencias de metadatos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En una instalación mixta SD/HD que debe sincronizar equipos correctamente, ¿qué señal de referencia es la adecuada para sincronizar fuentes HD y cuál para SD?",
+          "options": [
+            "Usar tri‑level para sincronizar fuentes HD y black‑burst para fuentes SD; emplear conversores de referencia si es necesario adaptar entre dominios.",
+            "Usar black‑burst para todas las señales porque es retrocompatible con HD y evita conversión.",
+            "Usar tri‑level únicamente para señales interlazadas y black‑burst para progresivo.",
+            "No utilizar señal de referencia, sincronizar por audio para garantizar compatibilidad entre SD y HD."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta asigna tri‑level a HD (necesita señal de sincronía con mayor precisión y sin componente de color subcarrier) y black‑burst a SD; si se mezclan dominios se emplean adaptadores/conversores de referencia. Los distractores son incorrectos: black‑burst no es adecuado para sincronizar HD directamente; tri‑level/no aplica según entrelazado/progresivo; sincronizar por audio no sustituye a genlock.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En edición lineal A/B Roll durante una inserción en emisión: ¿qué papel cumplen las fuentes A y B, la prelectura y el mezclador?",
+          "options": [
+            "La fuente A solo sirve de sincronía, la fuente B contiene video; la prelectura genera el audio final y el mezclador solo monitorea.",
+            "Fuentes A y B suministran las dos señales fuente; la prelectura permite preparar la entrada siguiente en el bus previo; el mezclador ejecuta la transición y envía programa a emisión.",
+            "Fuentes A y B se usan alternadamente sin mezclador; la prelectura transcodifica y el mezclador no interviene en la inserción.",
+            "La prelectura sustituye al mezclador en la emisión; A y B permanecen inactivas hasta el corte."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta describe la función clásica: A/B como fuentes, prelectura para preparar la señal previa y el mezclador para realizar la transición hacia programa. Los distractores presentan roles incorrectos o inexistentes del mezclador y la prelectura.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_red_ip",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Estación con IP 192.168.50.10/25 no alcanza recurso en 192.168.50.200/25 aunque comparten tercer octeto. Diagnóstico y solución de compatibilidad más directa sin cambiar la IP del recurso:",
+          "options": [
+            "Deshabilitar la puerta de enlace de la estación para forzar comunicación local.",
+            "Cambiar la máscara de la estación a /24 para que ambas queden en la misma subred sin más acciones.",
+            "Reiniciar la estación y borrar la caché ARP para forzar la resolución.",
+            "Asignar en la estación una dirección secundaria dentro de la red 192.168.50.128/25 (por ejemplo 192.168.50.201/25) en la misma interfaz para comunicarse directamente."
+          ],
+          "correctIndex": 3,
+          "explanation": "Con /25 las direcciones 192.168.50.0–127 y 192.168.50.128–255 son subredes distintas; la solución directa sin tocar el recurso es añadir una IP secundaria en la subred del recurso para permitir comunicación. Cambiar máscara del host puede requerir permisos o afectar rutas (B) y no siempre es factible; C y D son irrelevantes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a la clasificación profesional en el III Convenio Colectivo de RTVE, señale la afirmación que constituye una excepción (NO corresponde):",
+          "options": [
+            "La clasificación profesional se organiza por niveles y grupos que describen ocupaciones tipo y responsabilidades, y sirve para estructurar la organización del trabajo.",
+            "La clasificación profesional influye en la ordenación de tareas, formación y movilidad funcional dentro de la corporación.",
+            "El convenio incluye referencias a ocupaciones tipo y a criterios de organización del trabajo vinculados al puesto.",
+            "La clasificación se determina exclusivamente por la antigüedad del trabajador en la empresa, sin considerar funciones ni responsabilidades."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 (índice 1) es la excepción: el convenio no basa la clasificación exclusivamente en antigüedad; utiliza niveles, grupos y funciones. Las otras opciones describen aspectos compatibles con la regulación del convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_intelectual",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Cuál de las siguientes prácticas de montaje es un ejemplo claro de montaje intelectual (juxtaposición que genera nuevo significado):",
+          "options": [
+            "Aplicar un fundido encadenado entre dos planos de la misma escena para suavizar el paso del tiempo.",
+            "Cortar entre dos planos de la misma acción para mantener continuidad espacial y temporal.",
+            "Usar cortes rápidos al ritmo de la música para aumentar dinamismo sin establecer metáfora.",
+            "Insertar una secuencia de fábricas ruidosas seguida de un plano de un hombre en silencio mirando por la ventana para sugerir contraste social o reflexión."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta muestra yuxtaposición de imágenes distintas que, al colocarse en secuencia, generan un significado nuevo (montaje intelectual). Las otras opciones son técnicas de continuidad, ritmo o transición que no producen por sí solas una asociación intelectual.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Comparando medidas para reducir fatiga visual y postural en trabajos con pantallas, ¿qué organización de tareas es la más eficaz?",
+          "options": [
+            "Concentrar todas las tareas de visión intensa en bloques largos para optimizar concentración y reducir interrupciones.",
+            "Reducir la iluminación de la sala al mínimo para disminuir brillo y evitar pausas durante la jornada.",
+            "Alternar tareas en la pantalla con tareas no visuales cada 20–30 minutos, e incluir micropausas y ejercicios oculomotores además de pausas mayores a mitad de la jornada.",
+            "Sustituir pausas por mayor ergonomía del mobiliario sin modificar la organización del trabajo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta combina alternancia de tareas, micropausas y ejercicios oculomotores, medidas recomendadas para reducir fatiga visual y postural. Los distractores proponen medidas insuficientes o contraproducentes: oscurecer sala, concentrar tareas largas o depender solo de mobiliario.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_checksum",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Al verificar la integridad de ficheros mediante checksums antes y después de una transferencia, ¿cuál de las siguientes afirmaciones constituye una excepción (es decir, NO es correcta respecto a las capacidades o limitaciones de un checksum)?",
+          "options": [
+            "Un algoritmo de checksum criptográfico moderno (por ejemplo SHA‑256) detecta con altísima probabilidad modificaciones accidentales en los bits de un fichero; la coincidencia de hashes no garantiza absolute certeza, pero reduce drásticamente la probabilidad de alteración no detectada.",
+            "Existe la posibilidad teórica de colisiones (ficheros diferentes con el mismo valor de checksum); para requisitos de seguridad altos se recomienda usar algoritmos criptográficos robustos y, si procede, métodos adicionales de verificación.",
+            "La coincidencia de checksum entre origen y destino no garantiza que el fichero sea reproducible o correcto a nivel lógico (índices corruptos, metadatos internos dañados o incompatibilidad de códec); por eso debe complementarse con pruebas funcionales de reproducción cuando sea necesario.",
+            "Un checksum calculado exclusivamente sobre la lista de nombres y tamaños de los ficheros permitirá detectar modificaciones internas del contenido de un fichero aunque su tamaño no haya cambiado."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta (excepción) es la segunda: un checksum calculado solo sobre nombres y tamaños no detecta cambios internos si el tamaño permanece igual. Las otras afirmaciones describen limitaciones o garantías reales: la primera reconoce la alta fiabilidad práctica de algoritmos modernos sin afirmar infalibilidad; la tercera señala correctamente que igualdad de bits no asegura la reproducibilidad lógica o compatibilidad; y la cuarta apunta la posibilidad de colisiones y la práctica de usar algoritmos fuertes o verificaciones adicionales, que es técnicamente válida. El distractor más próximo es la cuarta, pero esta última es verdadera al advertir sobre colisiones y proponer mitigación; la segunda es la única que afirma incorrectamente una capacidad que no existe.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_chromakey",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Orden lógico de operaciones para diagnosticar y corregir una incrustación por chromakey (mattes, spill y bordes):",
+          "options": [
+            "Renderizar primero la secuencia completa y solo en caso de error rehacer la clave desde el principio.",
+            "Aplicar corrección de color general, añadir background y luego intentar generar la matte con efectos finales.",
+            "Primero insertar background final, después crear matte intentando que el sujeto se adapte al fondo y, por último, ajustar spill.",
+            "Detectar y crear matte (clave), limpiar spill de color en bordes, refinar el contorno (feather/edge), aplicar corrección de color final para integrar sujeto y fondo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta sigue el orden técnico: generar matte precisa, corregir spill, refinar bordes y finalmente integrar mediante colorización. Los distractores plantean órdenes ineficaces o reactivos que dificultan el diagnóstico y la corrección correcta.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "En un flujo de ingesta verificada desde una tarjeta (por ejemplo XDCAM) a un servidor de edición, tras completar la copia íntegra preservando la estructura de carpetas, ¿qué acción inmediata garantiza correctamente integridad, control de calidad y registro permanente?",
+          "options": [
+            "Ejecutar primero el control de calidad visual y sonoro sobre los ficheros copiados y, si pasan QC, calcular y almacenar los checksums antes de registrar la ingesta.",
+            "Calcular y almacenar checksums de origen y destino, comparar los valores para verificar la integridad; a continuación validar la estructura e índices del formato (p. ej. carpetas, archivos de clip y metadatos), realizar el control de calidad técnico y documentar todos los resultados y los checksums en el registro permanente.",
+            "Validar únicamente la estructura de carpetas y reproducibilidad de los clips en el servidor; si todo se reproduce correctamente, marcar la ingesta como completada en el registro y conservar la tarjeta sin más verificaciones.",
+            "Generar proxies y adjuntar metadatos descriptivos en el servidor inmediatamente; la verificación de integridad mediante checksums y el control de calidad se realizarán posteriormente según necesidades de archivado."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica correcta comienza por comprobar integridad mediante checksums comparados entre origen y destino para detectar corrupciones antes de consumir recursos en QC. Tras verificar integridad se valida la estructura e índices del formato (p. ej. XDCAM) para asegurar accesibilidad de la esencia, se ejecuta el control de calidad técnico/documental y se registra de forma permanente tanto los resultados del QC como los checksums. El distractor más próximo (opción 1) invierte el orden: realizar QC antes del checksum puede hacer que se detecte un fallo tras haber dedicado tiempo a la verificación visual/auditiva; además no garantiza que los ficheros examinados sean idénticos al origen en ausencia de comparación de checksum.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "037",
       "title": "Examen 037",
