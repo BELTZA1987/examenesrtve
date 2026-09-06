@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-05",
+  "updatedAt": "2026-09-06",
   "exams": [
+    {
+      "id": "039",
+      "title": "Examen 039",
+      "date": "2026-09-06",
+      "level": "Muy alto",
+      "timeMinutes": 42,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la secuencia operativa correcta para comprobar la legitimidad organizativa de una decisión adoptada por un órgano de RTVE:",
+          "options": [
+            "Revisar únicamente las actas internas del órgano; solicitar confirmación por correo; ejecutar la decisión si existe consenso interno.",
+            "Consultar el texto vigente de la Ley 17/2006; identificar el órgano competente; verificar en el Boletín Oficial la validez de los nombramientos y la fecha de publicación; contrastar la decisión con el acta o resolución del órgano.",
+            "Comprobar la normativa europea aplicable; aplicar criterios de buenas prácticas; archivar la decisión sin comprobación del nombramiento del órgano.",
+            "Consultar la web de la corporación para ver si la decisión aparece; si aparece, considerarla válida sin más comprobaciones."
+          ],
+          "correctIndex": 1,
+          "explanation": "La verificación correcta exige (1) consultar la Ley 17/2006 vigente para identificar la estructura y competencias; (2) identificar el órgano concreto; (3) comprobar la validez de los nombramientos y su publicación oficial; (4) contrastar la decisión con el acta o resolución. Los distractores omiten pasos formales esenciales (publicación oficial, acta) o sustituyen comprobaciones por fuentes informales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Durante la selección y visionado previo de material XDCAM, ¿cuál es la relación operativa correcta entre proxy y esencia de alta resolución?",
+          "options": [
+            "La esencia alta resolución solo sirve para archivo y no es necesaria en los procesos de ingesta ni conformado cuando existen proxies.",
+            "El proxy contiene la misma calidad de audio y vídeo que la esencia y puede sustituirla en conformado final sin comprobaciones.",
+            "El proxy facilita reproducción ágil y selección; la esencia de alta resolución conserva la calidad y metadatos para conformado; la decisión final de selección debe verificarse siempre sobre la esencia.",
+            "El proxy debe generarse únicamente desde versión ya transcodificada de la esencia y no desde la carpeta XDCAM original."
+          ],
+          "correctIndex": 2,
+          "explanation": "Correcto: el proxy se usa para visionado y selección rápido; la esencia alta resolución es la fuente para conformado y entrega y debe ser usada para verificación final. Los distractores confunden capacidades del proxy (no igual calidad que la esencia), niegan la función del original o imponen procesos innecesarios.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare frecuencia de muestreo, banda audible y aliasing: ¿cuál afirmación refleja correctamente el teorema de Nyquist aplicado a audio?",
+          "options": [
+            "La frecuencia de muestreo debe ser exactamente el doble de la banda máxima para garantizar ausencia de aliasing incluso sin filtros antialias.",
+            "Para evitar aliasing la frecuencia de muestreo debe ser mayor que el doble de la máxima frecuencia útil de la señal; si no se cumple, las componentes por encima de Nyquist se pliegan dentro de la banda audible.",
+            "Un muestreo a 44,1 kHz garantiza ausencia de aliasing hasta 20 kHz sin necesidad de filtrado previo.",
+            "El aliasing solo afecta a frecuencias superiores a 44,1 kHz y no tiene efecto audible si la banda audible es 20 kHz."
+          ],
+          "correctIndex": 1,
+          "explanation": "La formulación correcta aplica Nyquist: f_s debe ser mayor que 2·f_max para evitar plegamientos; en la práctica se usan filtros antialias porque igualar exactamente 2·f_max no evita problemas. Los distractores son imprecisos o falsos respecto a requisitos de filtrado y a qué frecuencias afectan aliasing.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al aplicar una elipsis temporal en montaje para comprimir horas de acción en pocos planos, indique la operación editorial más adecuada para mantener la comprensión narrativa:",
+          "options": [
+            "Sustituir la secuencia por un único plano largo de varios minutos que resuma toda la acción sin cortes.",
+            "Eliminar sistemáticamente todos los planos intermedios sin recurso sonoro o gráfico: la comprensión se mantiene por sí misma.",
+            "Introducir un plano de referencia que establezca el paso del tiempo, mantener continuidad de personajes/objetos y usar puentes sonoros o recursos gráficos que indiquen la compresión temporal.",
+            "Colocar rótulos con la hora exacta en cada corte sin otra ayuda visual o sonora."
+          ],
+          "correctIndex": 2,
+          "explanation": "Mantener comprensión exige señalización temporal (plano de referencia, continuidad de elementos reconocibles) y apoyos sonoros o gráficos; los distractores dependen exclusivamente de una única técnica que suele ser insuficiente o inadecuada narrativamente.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_export_qc",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe correctamente la comprobación de compatibilidad técnica en una exportación destinada a emisión:",
+          "options": [
+            "Exportar siempre en el formato con menor tamaño posible para facilitar transferencia, sin verificar sincronía ni campos.",
+            "Comprobar solo el códec y el bitrate; el resto de parámetros se ajustan automáticamente en emisión.",
+            "Limitar la verificación a que el fichero sea reproducible en un reproductor del estudio; los metadatos no son relevantes.",
+            "Verificar contenedor y códec según especificación, comprobar niveles y loudness, confirmar sincronía audio‑vídeo y campo/orden de escaneo si procede, y asegurar metadatos obligatorios."
+          ],
+          "correctIndex": 3,
+          "explanation": "La comprobación de compatibilidad debe cubrir contenedor/códec, niveles/loudness, sincronía y orden de campos en material entrelazado, además de metadatos exigidos. Los distractores omiten verificaciones esenciales o priorizan tamaño sobre cumplimiento técnico.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción (incorrecta) respecto a efectos de mezclar cadencias y métodos habituales de conversión:",
+          "options": [
+            "La conversión mediante 'frame blending' puede generar imágenes fantasma en movimiento rápido.",
+            "El proceso 3:2 pulldown es un método estándar para convertir 24p a 29,97 fps.",
+            "La simple réplica de campos al convertir 25p a 50i preserva siempre la integridad temporal sin artefactos.",
+            "Mezclar cadencias sin conversión suele producir judder o irregularidad en el movimiento percibido."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación falsa es la que asegura que replicar campos preserva siempre la integridad temporal: esa técnica puede producir combing u otros artefactos. Las otras frases describen efectos y métodos correctos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En un almacenamiento compartido NEXIS/SAN con varios editores, ¿qué factor interpreta mejor la degradación de rendimiento observado en operaciones concurrentes?",
+          "options": [
+            "Fallo inmediato de discos físicos en el array RAID sin impacto en rendimiento de metadatos.",
+            "Contención en operaciones de metadatos y gran número de accesos aleatorios pequeños en paralelo combinado con saturación del ancho de banda de red entre clientes y servidores.",
+            "Incompatibilidad de códecs en los clientes que no afecta al rendimiento del sistema de almacenamiento.",
+            "Limitación exclusiva de potencia de GPU de los puestos de edición."
+          ],
+          "correctIndex": 1,
+          "explanation": "La degradación concurrente suele deberse a contención en la gestión de metadatos y a numerosos accesos I/O pequeños que exigen mucho al sistema y a la red; las otras opciones no explican adecuadamente la congestión concurrente del NEXIS/SAN.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor distingue libertad de expresión, derecho a la información veraz y sus límites constitucionales:",
+          "options": [
+            "El derecho a la información impone únicamente obligaciones a los ciudadanos y no a los medios de comunicación.",
+            "La libertad de expresión y el derecho a la información son idénticos y no admiten límites en ningún caso.",
+            "La libertad de expresión protege la manifestación de opiniones; el derecho a la información obliga a garantías de veracidad y pluralismo; ambos están limitados por la protección del honor, la intimidad, la seguridad pública y la normativa penal.",
+            "Los límites a la libertad de expresión solo proceden por razones administrativas internas y no por protección de derechos individuales."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta distingue funciones y límites: libertad de expresión (opiniones), derecho a la información (obligaciones sobre veracidad y pluralismo) y recoge límites constitucionales (honor, intimidad, orden público). Los distractores falsean identidad de derechos o niegan límites.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En una salida SDI con vídeo, audio embebido y datos ANC, ¿qué comprobación directa confirma que el audio embebido llega correctamente al receptor?",
+          "options": [
+            "Comprobar únicamente la presencia de paquetes ANC con DID/SDID específicos en el flujo.",
+            "Extraer (de‑embed) las señales de audio en el receptor y comprobar mapeo de canales y niveles en un medidor de audio.",
+            "Medir la tensión DC en el conector BNC para comprobar integridad del audio.",
+            "Verificar la duración total del fichero de vídeo sin analizar audio."
+          ],
+          "correctIndex": 1,
+          "explanation": "La comprobación correcta es el de‑embed y la verificación de mapeo y niveles por canal; la presencia de paquetes ANC no garantiza que el audio embebido se esté decodificando ni que el mapeo sea correcto. Las otras opciones no verifican el audio embebido.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En un flujo de ingesta donde los ficheros reciben un 'record' timecode en el servidor pero se preservan metadatos adicionales, ¿qué función operativa desempeña específicamente el campo auxiliary timecode en relación con source y record timecode?",
+          "options": [
+            "Preservar el timecode original de la cámara (source TC) dentro del fichero cuando el record TC aplicado en ingest o transcodificación difiere, facilitando el relink y el reconformado a los masters.",
+            "Sustituir al record timecode como referencia principal de la línea de tiempo durante el montaje y reproducción en la estación de edición.",
+            "Almacenar el timecode procedente de una grabadora de sonido externa para sincronizar posteriormente audio y vídeo cuando la cámara carece de timecode propio.",
+            "Registrar la modalidad drop‑frame o non‑drop‑frame empleada en la sesión para decidir automáticamente la conversión de cadencias en conformado."
+          ],
+          "correctIndex": 0,
+          "explanation": "El auxiliary timecode suele emplearse para conservar una referencia adicional —habitualmente el timecode original de cámara— cuando el fichero en el servidor muestra un record TC distinto tras ingesta o transcode; esa conservación permite relinkar o reconformar con exactitud a los masters. El distractor más próximo (opción 3) describe una aplicación plausible —guardar un TC de grabadora de sonido para sincronizar audio— pero esa sincronización suele basarse en el timecode primario del dispositivo de origen (source TC) o en pistas de audio/LTC específicas; la función operativa típica y más crítica del auxiliary TC en flujos de edición es preservar la referencia original para relink/reconformado, no actuar como canal primario de sincronía en lugar del source/record TC.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione el conjunto que combina correctamente una clase de fuego, el extintor apropiado y una medida de seguridad aplicable:",
+          "options": [
+            "Fuego en líquido inflamable (clase B): extintor de polvo o CO2; cortar alimentación eléctrica y evacuar zona si hay riesgo de propagación.",
+            "Fuego en aceites de cocina (clase A): extintor de agua a presión; usar agua corriente para refrigerar el área sin aislar la alimentación.",
+            "Fuego eléctrico sin materiales combustibles (clase D): siempre emplear agua pulverizada y mantener equipos energizados.",
+            "Fuego en materiales sólidos (clase B): utilizar extintor de CO2 y permitir intervención con herramientas metálicas mientras la corriente esté activa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta empareja clase B con extintores de polvo o CO2 y la necesidad de cortar alimentación/evacuar si procede. Los distractores mezclan clases y agentes inadecuados (agua sobre aceites o equipos eléctricos, medidas inseguras).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción (incorrecta) respecto a diferencias entre MXF OP1a y OP‑Atom y su idoneidad para entrega o edición:",
+          "options": [
+            "OP‑Atom organiza cada pista de esencia en archivos independientes, facilitando la edición y el relink de medios en workflows.",
+            "OP‑Atom es preferible como formato de entrega autocontenida para emisión cuando se requiere un único fichero por programa.",
+            "OP1a agrupa múltiples essences en un único fichero autocontenido, lo que facilita entregas únicas y archivado.",
+            "OP1a suele emplearse para paquetes de entrega finales donde se desea un único fichero por elemento."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación incorrecta es la 3: OP‑Atom no es preferible para entrega autocontenida; es precisamente OP1a la que agrupa essences en un único fichero para entregas. Las otras opciones describen correctamente las diferencias estructurales y usos habituales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "En un RGB Parade con dominante en altas luces (canal rojo consistentemente 6 dB por encima de verde y azul), ¿cuál es el diagnóstico operativo más pertinente?",
+          "options": [
+            "Indica una pérdida de sincronismo vertical en la señal que requiere reajuste de genlock.",
+            "El problema es exclusivamente de contraste y debe corregirse subiendo el master black sin tocar canales RGB.",
+            "Es síntoma de compresión errónea del códec y se corrige volviendo a transcodificar con mayor bitrate.",
+            "Existe un dominante rojo en la captura o balance de blancos; la corrección técnica pasa por equilibrar ganancia de canales en altas luces, no por ajustar únicamente el offset."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un rojo 6 dB por encima en altas luces señala desequilibrio de color o un balance de blancos incorrecto en captura; la corrección técnica adecuada es ajustar las ganancias de canal en altas luces. Los distractores atribuyen erróneamente el síntoma a contraste, códec o sincronismo.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_music_sync",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "En una secuencia con diálogo continuo sobre una pista musical, se desea que los cortes de imagen coincidan con los acentos de la frase musical sin romper la continuidad sonora del diálogo (contrapunto entre imagen y música). ¿Qué técnica de edición es la más adecuada?",
+          "options": [
+            "Corte seco de imagen y audio sincronizado estrictamente con cada acento musical.",
+            "Modificar la duración de la pista musical (time‑stretch/slip) para que los acentos coincidan exactamente con los cortes de imagen sin tocar la pista de diálogo.",
+            "Aplicar crossfades de audio en los puntos de acento para enmascarar cambios y suavizar el contrapunto.",
+            "Uso de L‑cut/J‑cut: cortar la imagen en los acentos musicales manteniendo la pista de diálogo solapada para preservar su continuidad."
+          ],
+          "correctIndex": 3,
+          "explanation": "La técnica correcta es el uso de L‑cut/J‑cut (opción 2): permite que la imagen se empalme en los acentos musicales mientras el audio de diálogo se mantiene continuo, preservando la inteligibilidad y la continuidad sonora y creando el contrapunto buscado. La opción más próxima (3) —crossfades de audio— tiende a suavizar y difuminar los acentos rítmicos, debilitando el impacto musical y pudiendo generar desajustes de fase o pérdida de claridad del diálogo. La opción 1 rompe la continuidad del diálogo; la 4 altera la música (o su calidad) y no es la solución editorial preferible cuando se puede trabajar la continuidad mediante cortes de imagen y solapado de audio.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Según la Ley 13/2022, ¿qué obligación concreta corresponde a prestadores de servicios audiovisuales en materia de accesibilidad?",
+          "options": [
+            "No aplicar medidas de accesibilidad en servicios bajo demanda.",
+            "Limitarse únicamente a incluir subtítulos automatizados sin control de calidad en todos los contenidos.",
+            "Ofrecer accesibilidad solo en plataformas extranjeras y no en servicios bajo jurisdicción nacional.",
+            "Facilitar alternativas de acceso (por ejemplo, subtitulado, audiodescripción o lengua de signos) para usuarios con discapacidad en los contenidos que la normativa exige, según los plazos y porcentajes reglamentarios."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley impone la obligación de proporcionar alternativas de accesibilidad (subtítulos, audiodescripción, lengua de signos) conforme a lo establecido; los distractores minimizan, limitan de forma incorrecta o niegan obligaciones reales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique cuál de las siguientes condiciones caracteriza un accidente 'in itinere':",
+          "options": [
+            "Ocurre al realizar recados personales no relacionados con el trabajo durante el trayecto.",
+            "Sucede durante una misión autorizada fuera del centro de trabajo al realizar tareas laborales expresas fuera de la ruta habitual.",
+            "Se produce durante una pausa recreativa voluntaria fuera del recorrido habitual.",
+            "Ocurre durante el desplazamiento habitual entre domicilio y lugar de trabajo por la ruta más directa sin interrupciones voluntarias, en tiempo razonable de desplazamiento."
+          ],
+          "correctIndex": 3,
+          "explanation": "Accidente in itinere se caracteriza por ocurrir en el desplazamiento habitual y directo entre domicilio y puesto de trabajo sin desviaciones voluntarias; las otras opciones describen casos distintos (misión, pausa voluntaria, desviaciones personales) que no encajan.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En EVS/IPDirector, para eliminar un hueco entre dos elementos consecutivos de una playlist y lograr reproducción continua sin fundido ni solapamiento, ¿qué acción debe realizar el operario sobre la playlist?",
+          "options": [
+            "Ajustar o eliminar el gap entre los elementos y fijar la transición como 'cut' para que la reproducción pase directamente del primer clip al siguiente.",
+            "Modificar los metadatos de los clips en disco sin tocar la playlist; la playlist recalculará automáticamente las transiciones.",
+            "Reexportar los clips como un solo fichero desde el NLE y volver a crear la playlist.",
+            "Cambiar el formato de los clips a un códec de mayor compresión para que encajen sin hueco."
+          ],
+          "correctIndex": 0,
+          "explanation": "La operación que afecta directamente a orden y transición en una playlist es ajustar gaps/transitions y establecer 'cut'; los otros procedimientos son indirectos, innecesarios o no resuelven el hueco operativo en la playlist.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: ¿cuál es la consecuencia más probable de una adaptación de impedancias incorrecta en una cadena coaxial de vídeo?",
+          "options": [
+            "Reflexiones en la línea (standing waves) que provocan pérdida de nivel en ciertas frecuencias, ghosting en vídeo analógico y aumento de BER en señales digitales.",
+            "Aumento exclusivo de la latencia de la señal sin efectos sobre niveles o artefactos visuales.",
+            "Generación de ruido térmico permanente independiente de la potencia de la señal.",
+            "Transformación del formato de color (por ejemplo, de RGB a YCbCr) por la desadaptación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La principal consecuencia de desadaptación de impedancias son reflexiones y pérdidas selectivas de nivel que causan ghosting y problemas de BER en digital; los distractores atribuyen efectos incorrectos (latencia, ruido térmico, cambio de formato de color).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que resume correctamente diferencias operativas entre AVC/H.264 y HEVC/H.265 en flujos audiovisuales:",
+          "options": [
+            "HEVC suele ofrecer comparable calidad a menor bitrate que AVC (mejor eficiencia), pero requiere mayor complejidad de codificación/decodificación y tiene compatibilidad de hardware/software más limitada en equipos heredados.",
+            "AVC es siempre más eficiente en compresión que HEVC y por tanto preferible para todos los flujos modernos.",
+            "HEVC reduce la latencia a cero en todas las aplicaciones y es compatible nativamente con todos los reproductores antiguos.",
+            "AVC y HEVC tienen idéntica complejidad de cómputo y compatibilidad de hardware."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta destaca la mayor eficiencia de HEVC a costa de mayor complejidad y menor compatibilidad en equipos antiguos; los distractores falsean la ventaja comparativa, compatibilidad y complejidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe mejor la compatibilidad práctica de LTO con LTFS para archivo a largo plazo:",
+          "options": [
+            "LTFS elimina la necesidad de catalogación y verificación de integridad en políticas de archivo a largo plazo.",
+            "LTFS convierte la cinta en un disco SSD virtual con tiempos de acceso y throughput equivalentes a almacenamiento en línea.",
+            "LTFS permite exponer la cinta como sistema de archivos (acceso por archivo) facilitando recuperación individual, pero mantiene latencias elevadas y rendimiento aleatorio limitado frente a discos; por tanto es adecuado para archivo con alta capacidad pero no para acceso frecuente.",
+            "LTFS exige que todos los ficheros se agrupen en un único gran contenedor para ser legibles."
+          ],
+          "correctIndex": 2,
+          "explanation": "LTFS expone la cinta como sistema de archivos permitiendo recuperar archivos individuales, pero las cintas siguen teniendo alta latencia y bajo rendimiento en accesos aleatorios; los distractores exageran prestaciones o contradicen prácticas de verificación y catálogo.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "038",
       "title": "Examen 038",
