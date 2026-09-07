@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-07",
   "exams": [
+    {
+      "id": "040",
+      "title": "Examen 040",
+      "date": "2026-09-07",
+      "level": "Muy alto",
+      "timeMinutes": 32,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Indique la medida operativa que más contribuye a prevenir el acoso y garantizar lenguaje y representación no sexista en la producción de contenidos:",
+          "options": [
+            "Delegar la revisión de guiones exclusivamente en el equipo de realización sin criterios técnicos comunes.",
+            "Limitarse a impartir una sesión informativa anual sobre igualdad sin registro de asistencia.",
+            "Implantar un canal interno de comunicación y denuncia confidencial con garantías de protección y seguimiento.",
+            "Aumentar la presencia de mujeres en determinados puestos creativos sin protocolos de selección."
+          ],
+          "correctIndex": 2,
+          "explanation": "La implantación de un canal confidencial con garantías y seguimiento es una medida preventiva y reactiva efectiva conforme a un plan de igualdad; los otros distractores son acciones parciales, insuficientes o meramente cuantitativas que no aseguran prevención ni tratamiento de denuncias.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "¿Cuál de las siguientes actuaciones corresponde principalmente a la obligación del trabajador tras recibir información y formación en prevención?",
+          "options": [
+            "Diseñar la evaluación de riesgos del puesto de trabajo.",
+            "Usar correctamente los medios de protección y cooperar con las medidas preventivas.",
+            "Proporcionar formación específica a nuevos empleados.",
+            "Adoptar la regulación interna de la empresa sobre prevención."
+          ],
+          "correctIndex": 1,
+          "explanation": "El trabajador debe utilizar correctamente los medios y cooperar en prevención; las otras opciones son competencias del empresario o de la organización preventiva.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_umid",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "¿Cuál es la función operativa principal de un UMID embebido en la esencia de un clip:",
+          "options": [
+            "Permitir el relink por nombre de archivo entre distintos sistemas.",
+            "Sustituir la necesidad de checksums para comprobar integridad de bits.",
+            "Controlar automáticamente licencias y derechos de explotación.",
+            "Proveer una identificación única y persistente del material independientemente de nombre o ubicación."
+          ],
+          "correctIndex": 3,
+          "explanation": "El UMID identifica de forma única el material a nivel de esencia; no reemplaza checksums, no gestiona por sí mismo derechos ni depende del nombre de archivo para relink.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Ante molestias en antebrazo y muñeca tras jornadas prolongadas de edición con teclado, ratón y tableta, la medida preventiva más eficaz es:",
+          "options": [
+            "Sustituir el teclado por uno mecánico de mayor recorrido y aumentar la sensibilidad del ratón sin cambiar la postura.",
+            "Ajustar la ergonomía del puesto (altura de mesa/silla, soporte de antebrazo), alternar tareas y programar pausas activas regulares.",
+            "Incrementar la duración de la jornada para repartir tareas y reducir descansos entre bloques de trabajo.",
+            "Evitar el uso de la tableta gráfica y realizar toda la interacción con touchpad del portátil."
+          ],
+          "correctIndex": 1,
+          "explanation": "La prevención eficaz combina ajuste ergonómico, alternancia de tareas y pausas; las demás opciones son paliativas, contraproducentes o empeoran el riesgo.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Seleccione la afirmación correcta sobre soportes de estado sólido (SSD) y su gestión tras la descarga de material:",
+          "options": [
+            "Aunque ofrecen resistencia mecánica y velocidad, los SSD tienen ciclos de escritura limitados; formateos y reescrituras frecuentes reducen su vida útil.",
+            "Los SSD no requieren verificación de integridad tras copia porque no sufren errores físicos.",
+            "Cualquier sistema de archivos funciona de igual modo en todas las cámaras que emplean tarjetas SSD.",
+            "Un formateo rápido elimina de forma segura todos los datos y previene recuperaciones forenses."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación sobre ciclos de escritura limitados es correcta; las demás son falsas o imprecisas sobre verificación, compatibilidad de sistemas de archivos y seguridad de formateos rápidos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_color_order",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Orden operativo correcto para una corrección técnica de color antes de aplicar el look creativo:",
+          "options": [
+            "Corrección de exposición → aplicación del look → normalización de espacios → matching entre planos.",
+            "Aplicación del look → matching entre planos → balance de blancos → normalización de espacios.",
+            "Matching entre planos → aplicación del look → corrección de exposición → ajuste de blancos.",
+            "Normalización de espacios y resolución → balance/ajuste de blancos y negros → corrección de exposición/contraste → matching entre planos → aplicación del look."
+          ],
+          "correctIndex": 3,
+          "explanation": "La secuencia técnica empieza por normalizar el material y resolver balance y exposición, luego se igualan planos y finalmente se aplica el look creativo; las otras opciones alteran el orden técnico requerido.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que distingue correctamente PQ (ST2084) de HLG en términos de principio y compatibilidad de distribución:",
+          "options": [
+            "PQ es una EOTF basada en medición absoluta pensada para mastering HDR con metadatos y tone‑mapping; HLG es una solución híbrida diseñada para compatibilidad directa en difusión sin metadatos.",
+            "PQ está optimizada para emisión en directo sin metadatos; HLG requiere mastering en sala controlada y metadatos por escena.",
+            "PQ y HLG son idénticos en comportamiento; la diferencia es únicamente de nombres comerciales.",
+            "HLG ofrece mayor rango dinámico que PQ en monitores calibrados para HDR y requiere metadatos de contenido."
+          ],
+          "correctIndex": 0,
+          "explanation": "PQ es una función de transferencia absoluta para mastering HDR con dependencias de metadatos y tone‑mapping; HLG fue concebida para compatibilidad broadcast sin metadatos. Las otras opciones son incorrectas sobre requisitos y diseño.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál de las siguientes materias está regulada por el III Convenio Colectivo de la Corporación RTVE?",
+          "options": [
+            "Propiedad intelectual de contenidos adquiridos por RTVE.",
+            "Procedimiento de concesión de subvenciones a terceros.",
+            "Normativa estatal de financiación general del sector audiovisual.",
+            "Jornada ordinaria, descansos y condiciones específicas para la turnicidad."
+          ],
+          "correctIndex": 3,
+          "explanation": "El III Convenio regula condiciones laborales como jornada, descansos y turnos; las demás opciones corresponden a otras normas o políticas ajenas al convenio colectivo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a los factores determinantes de concurrencia en un servidor de vídeo:",
+          "options": [
+            "La capacidad de la salida de red (ancho de banda) y la suma de bitrates de streams concurren en limitar usuarios simultáneos.",
+            "El número de CPUs del servidor determina por sí solo la concurrencia máxima sin dependencia de red ni disco.",
+            "Las licencias o límites de sesión del software de servidor influyen en el número de conexiones concurrentes.",
+            "El número de operaciones de I/O y el rendimiento de disco (IOPS) condicionan la concurrencia efectiva."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación 4 es la excepción: la CPU por sí sola no determina la concurrencia; red, disco y licencias son factores clave. Las otras tres son factores determinantes reales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Qué lectura del medidor de correlación de fase indica compatibilidad segura al sumar a mono:",
+          "options": [
+            "Una lectura constante en torno a 0, con picos momentáneos positivos.",
+            "Lecturas fluctuantes entre +1 y -1 con picos regulares hacia -1.",
+            "Una lectura estable próxima a +1, sin migraciones hacia valores cercanos a 0 o negativos.",
+            "Lecturas persistentes inferiores a -0,5 en pasajes musicales."
+          ],
+          "correctIndex": 2,
+          "explanation": "Valores próximos a +1 indican fases coherentes y ausencia de cancelaciones al sumar a mono; lecturas en torno a 0 o negativas señalan riesgo de atenuaciones por desfase, por tanto son incorrectas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En términos de entrada o permanencia del audio, ¿qué describe un J‑cut?",
+          "options": [
+            "Se superponen dos pistas de audio con fundido cruzado prolongado tras ambos cortes.",
+            "El audio de la escena anterior se mantiene después del corte de imagen.",
+            "El audio y la imagen cambian exactamente al mismo instante en el corte.",
+            "El audio de la siguiente escena comienza antes de que el corte de imagen la muestre."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un J‑cut introduce el audio de la próxima escena antes del corte de imagen; la opción 1 describe correctamente la entrada anticipada del audio; la 2 describe un L‑cut.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la opción que interpreta correctamente la política 3‑2‑1 de copias de seguridad:",
+          "options": [
+            "Tener al menos tres copias de los datos, en al menos dos tipos de soporte diferentes, y una copia almacenada fuera del sitio primario.",
+            "Mantener tres réplicas en la misma ubicación física para recuperación rápida, en idéntico soporte.",
+            "Contar con tres versiones diarias en disco local sin copias fuera de la red corporativa.",
+            "Hacer tres backups incrementales en un único servidor RAID que sustituya la copia externa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La 3‑2‑1 exige 3 copias, 2 soportes distintos y 1 copia offsite; las demás opciones incumplen la exigencia de diversidad de soportes u offsite.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál es la ventaja operativa principal de un bitrate constante (CBR) frente a VBR en una emisión en tiempo real con capacidad limitada de enlace?",
+          "options": [
+            "Ofrece siempre mayor calidad visual que VBR para el mismo bitrate medio.",
+            "Permite planificación y asignación previsibles de ancho de banda por canal, evitando variaciones que puedan saturar el enlace.",
+            "Reduce la latencia de decodificación frente a VBR sin necesidad de buffers.",
+            "Optimiza calidad al asignar más bits a escenas estáticas y menos a las complejas."
+          ],
+          "correctIndex": 1,
+          "explanation": "CBR es útil para previsibilidad y dimensionado de enlace en tiempo real; VBR puede mejorar calidad media pero introduce variabilidad de ancho de banda.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "¿En qué se diferencia operativamente un legalizador de señal de un simple limitador de niveles/gamut?",
+          "options": [
+            "Ambos aplican el mismo algoritmo y no existe diferencia práctica en emisión.",
+            "El limitador ajusta color y matiz para mantener pieles; el legalizador solo atenúa luminancia extrema.",
+            "El legalizador re-mapea y preserva la fidelidad de tono dentro de límites legales con correcciones de crominancia; el limitador solo recorta o clipea valores fuera de rango.",
+            "El legalizador se aplica únicamente al audio mientras que el limitador actúa sobre vídeo."
+          ],
+          "correctIndex": 2,
+          "explanation": "El legalizador realiza correcciones tonales y de crominancia para mantener apariencia mientras ajusta a límites; un limitador simple tiende a recortar sin preservar matices.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción (NO se corresponde) respecto al modelo de financiación previsto por la Ley 8/2009:",
+          "options": [
+            "Obligar a RTVE a distribuir beneficios entre accionistas privados como parte del modelo de financiación.",
+            "Establecer principios que limiten la dependencia exclusiva de la publicidad comercial como única fuente.",
+            "Introducir diversas fuentes de ingreso para RTVE con restricciones destinadas a garantizar independencia y sostenibilidad.",
+            "Incluir condiciones que preserven la autonomía editorial frente a presiones económicas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 3 es la excepción: RTVE no distribuye beneficios a accionistas privados; las demás reflejan principios y restricciones reales en el modelo de financiación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a compatibilidad y límites de tamaño de fichero en sistemas de archivos habituales:",
+          "options": [
+            "FAT32 tiene un límite máximo de tamaño de fichero aproximado de 4 GB menos 1 byte.",
+            "exFAT y NTFS soportan ficheros de tamaño muy superior a 4 GB, adecuados para masters de larga duración.",
+            "ext4 admite ficheros de varios terabytes y es común en sistemas de archivo en servidores Linux.",
+            "FAT32 admite ficheros de hasta 16 TB, por lo que es idóneo para material 4K de gran tamaño."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 4 es falsa (excepción): FAT32 no admite ficheros tan grandes; las otras afirmaciones describen límites y compatibilidades correctas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para respetar la regla de los 180° y mantener continuidad espacial entre dos planos de una conversación, la cámara nueva debe situarse:",
+          "options": [
+            "En cualquier punto del espacio, siempre que la altura de la cámara cambie de forma notable.",
+            "Dentro del mismo semicírculo respecto al eje de acción, sin cruzar la línea imaginaria entre los personajes.",
+            "En el lado opuesto del eje si se desea ampliar el campo visual sin pérdida de continuidad.",
+            "Directamente sobre la línea del eje para maximizar la cercanía entre personajes."
+          ],
+          "correctIndex": 1,
+          "explanation": "Mantener la cámara dentro del semicírculo evita invertir el lado de mirada y rompe la continuidad; las otras opciones indican cruzar el eje o colocar la cámara en posiciones que generan confusión espacial.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Orden operativo correcto para exportar desde EVS a un NLE garantizando 'handles' suficientes y disponibilidad durante retransmisión:",
+          "options": [
+            "Marcar in/out con handles en EVS → exportar media con códec y metadatos compatibles → transferir a servidor de playout/NLE → actualizar catálogo y confirmar disponibilidad en playlist.",
+            "Transferir directamente desde EVS al NLE sin marcar in/out → montaje en NLE → solicitar handles posteriores al operador de EVS.",
+            "Exportar solo la referencia proxy desde EVS al NLE y realizar recorte final en emisión sin transferencia de esencia.",
+            "Eliminar handles en EVS para reducir tamaño, transferir la versión recortada y generar handles en el NLE durante conformado."
+          ],
+          "correctIndex": 0,
+          "explanation": "La secuencia 1 asegura que el clip lleve handles, el códec y metadatos sean compatibles y que la disponibilidad se confirme; las otras opciones omiten pasos esenciales o generan riesgos en retransmisión.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a consecuencias visuales y operativas del submuestreo de crominancia, ¿qué efecto es típico al emplear 4:2:0 frente a 4:4:4 en material para etalonaje y keying?",
+          "options": [
+            "El submuestreo 4:2:0 duplica la gama de color disponible en el master.",
+            "Aumento de resolución espacial de luminancia que mejora el recorte por chroma.",
+            "Pérdida de detalle de color que limita el keying fino y exige precauciones en etalonaje por menor resolución cromática.",
+            "No existe diferencia perceptible ni operativa entre ambos en workflows profesionales."
+          ],
+          "correctIndex": 2,
+          "explanation": "4:2:0 reduce la resolución de crominancia, afectando keying y corrección de color; las otras opciones son incorrectas o inexactas sobre efectos y capacidades.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia mínima operativa para sincronizar material multicámara que comparte código de tiempo común:",
+          "options": [
+            "Crear proxies sin conservar TC, montar y luego intentar relink con originales por nombres de archivo.",
+            "Ignorar timecode y sincronizar únicamente por forma de onda de audio para todas las cámaras.",
+            "Verificar frame rate y referencia TC → jam‑sync o comprobar continuidad de TC en cámaras → importar media al NLE → agrupar clips por timecode y generar multicam utilizando el TC compartido.",
+            "Sincronizar por manual match visual cuadro a cuadro desde el primer fotograma sin usar metadatos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 describe el flujo correcto: comprobar frame rate y TC, asegurar sincronía física, importar y agrupar por timecode; las demás ignoran la ventaja de un TC común o introducen prácticas manuales ineficientes.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "039",
       "title": "Examen 039",
