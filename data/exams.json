@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-08",
   "exams": [
+    {
+      "id": "041",
+      "title": "Examen 041",
+      "date": "2026-09-08",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre el principio constitucional de igualdad y la prohibición de discriminación:",
+          "options": [
+            "La prohibición de discriminación en la Constitución solo se aplica a actos de la Administración pública, no a particulares.",
+            "La Constitución garantiza una igualdad material absoluta entre todas las personas sin posibilidad de medidas específicas de acción positiva.",
+            "La Constitución reconoce la igualdad ante la ley y prohíbe todo trato discriminatorio por motivo de sexo, raza, religión u opinión.",
+            "La Constitución permite excepciones amplias a la prohibición de discriminación si se justifican por razones de organización interna."
+          ],
+          "correctIndex": 2,
+          "explanation": "La primera opción recoge el contenido sustantivo: igualdad ante la ley y prohibición de discriminación por motivos protegidos. Las otras son incorrectas: la Constitución admite medidas de acción positiva proporcionadas (2), la prohibición tiene efecto frente a poderes públicos y también orienta la interpretación en la esfera privada (3) y no admite excepciones amplias de organización que vulneren derechos fundamentales (4).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "¿Qué conjunto de parámetros de proxy es más compatible con un flujo de edición ágil que busca equilibrio entre identificación visual y ahorro de espacio?:",
+          "options": [
+            "480p, H.264 interframe, bitrate muy bajo (~1 Mbps).",
+            "1080p, Long‑GOP H.264 a bitrate reducido.",
+            "720p, códec intraframe ligero (ProRes Proxy o DNxHR LB), bitrate medio adaptativo.",
+            "720p, HEVC Long‑GOP con bitrate muy bajo y alto nivel de compresión."
+          ],
+          "correctIndex": 2,
+          "explanation": "La segunda opción combina resolución suficiente (720p) y un códec intraframe ligero que facilita scrubbing y recortes precisos sin ocupar tanto espacio como masters. Las otras opciones sacrifican identificación visual (1), imponen I/O y CPU mayores o artefactos por Long‑GOP a baja tasa (3 y 4).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En un vectorscopio, un clúster de piel aparece desplazado claramente hacia el azul respecto a la 'línea de tono de piel'. Diagnóstico operacional más probable:",
+          "options": [
+            "Compresión excesiva que reduce saturación y centra el clúster en el origen.",
+            "Ruido cromático en altas ISOs que desplaza aleatoriamente el clúster.",
+            "Desbalance de blancos hacia temperaturas más frías o dominante azul en la captura.",
+            "Problema de sincronización entre campos que solo afecta a la luminancia."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un desplazamiento sistemático del clúster de piel hacia azul indica un desbalance de blancos o dominante de color en la cadena de captura. El ruido sería más disperso y no un desplazamiento consistente (2); la compresión típicamente reduce saturación sin desplazar direccionalmente hacia azul (3); la desincronización de campos afecta luminancia y artefactos temporales, no el hue cromático del clúster (4).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Indique la secuencia operativa correcta en un mezclador de vídeo para realizar una transición en la que se introduce una fuente con incrustación por clave (key):",
+          "options": [
+            "Colocar la fuente directamente en programa y activar la key; la transición aplica automáticamente lo preparado en previsualización.",
+            "Asignar la fuente al previo, preparar la correspondiente key en el bus de key, ejecutar la transición (previo pasa a programa con key aplicada).",
+            "Primero ejecutar la transición entre fuentes A y B; después habilitar la key en programa para ajustar bordes.",
+            "Preparar la key en el bus de programa sin usar previa; el mezclador copia la previa al programa durante la transición."
+          ],
+          "correctIndex": 1,
+          "explanation": "La operación correcta es preparar la fuente en previo y configurar la key en su bus; al ejecutar la transición el previo pasa a programa con la key aplicada. Las demás opciones invierten el flujo operativo o asumen acciones posteriores que impiden previsualizar y ajustar la key antes de salir en programa. ",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estas posibles causas de zumbido a 50/60 Hz en un sistema audio‑vídeo y seleccione la más probable responsable de un bucle de masa:",
+          "options": [
+            "Interferencia por radiofrecuencia captada por cables no apantallados.",
+            "Diferencia de potencial entre tierras de dos equipos alimentados en distintas tomas de la misma instalación.",
+            "Impedancia elevada en el cable de altavoz provocando distorsión en altas frecuencias.",
+            "Desajuste de niveles de línea entre salidas y entradas digitales."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un bucle de masa clásico se debe a diferencias de potencial entre tierras de equipos conectados a distintas tomas, originando zumbido a 50/60 Hz. Las otras opciones describen problemas distintos: RF (2) suele producir ruido intermitente o siseo; impedancia alta (3) afecta respuesta y distorsión, no zumbido de red; desajuste digital (4) no genera loop de tierra audible a 50/60 Hz.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Recomendación operativa para la colocación de una pantalla de visualización y control de reflejos:",
+          "options": [
+            "Colocar la pantalla lo más cerca posible para reducir movimiento ocular, con la parte superior al nivel de la frente y orientada hacia ventanas para aprovechar luz natural.",
+            "Ubicar la pantalla a una distancia equivalente al brazo extendido (aprox. 50–70 cm), con la línea superior ligeramente por debajo del nivel de los ojos y orientación para evitar fuentes de luz directa; controlar iluminación ambiente.",
+            "Fijar la pantalla a la máxima altura posible para alinear cuello erguido y reducir parpadeo; compensar con brillo máximo.",
+            "Mantener la pantalla directamente frente a una fuente de luz intensa para garantizar contraste y evitar reflejos colocando un filtro polarizador."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 resume las recomendaciones ergonomía: distancia de visualización, altura del borde superior por debajo del nivel ocular y orientación/iluminación para reducir reflejos. Las otras opciones proponen prácticas contraproducentes: acercar excesivamente (2), elevar demasiado (3) o situar frente a luz intensa (4) aumentan fatiga y deslumbramiento.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En visionado en monitor progresivo, se observan líneas tipo peine en bordes móviles de una señal entrelazada sin tratamiento de salida. Diagnóstico correcto:",
+          "options": [
+            "Combing por visualización de campos entrelazados sin deinterlaced adecuado.",
+            "Judder producido por mezcla de velocidades de cuadro entre 25p y 50i.",
+            "Efecto de ghosting por mismatch de impedancias en la salida SDI.",
+            "Pérdida de crominancia debida a submuestreo 4:2:0 aplicada durante conversión."
+          ],
+          "correctIndex": 0,
+          "explanation": "Las líneas tipo peine en movimiento son el síntoma de 'combing' cuando campos entrelazados se muestran en un monitor progresivo sin deinterlace. Judder está ligado a cadencias irregulares (2), ghosting por impedancia afecta imagen completa y no produce peine (3), y submuestreo cromático (4) afecta detalle de color, no produce peine de movimiento.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la opción que NO corresponde a un principio u obligación recogida en la Ley 31/1995 sobre prevención de riesgos laborales:",
+          "options": [
+            "Evaluación y planificación de la actividad preventiva adaptada a los riesgos de la empresa.",
+            "Formación e información adecuada y periódica a los trabajadores sobre los riesgos y medidas preventivas.",
+            "Integración de la prevención en la organización del trabajo y en la toma de decisiones empresariales.",
+            "Obligación del empresario de eliminar todos los riesgos, cualquiera que sea su naturaleza, de forma inmediata."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley fija obligaciones de evaluación, planificación, formación e integración de la prevención. No exige la eliminación inmediata e absoluta de todos los riesgos (opción 3), sino la evaluación y adopción de medidas proporcionales y técnicamente viables; por eso es la excepción. ",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la definición operativa correcta de 'ingesta' en contraste con 'capture', 'import' y 'link':",
+          "options": [
+            "Ingesta: transferencia automatizada a servidor con registro de metadatos y posible transcodificación; Capture: grabación directa desde dispositivo a fichero; Import: copia manual al pool del proyecto; Link: referencia al archivo en su ubicación original sin copiar.",
+            "Ingesta: proceso de crear proxies desde originales; Capture: solo captura de audio; Import: captura desde cinta; Link: consolidación de ficheros en el proyecto.",
+            "Ingesta: verificación checksum exclusiva; Capture: proceso de ingestar a servidor; Import: automatización de metadatos; Link: copia física del fichero.",
+            "Ingesta: operación de cortar y unir clips en servidor; Capture: importar clips al NLE; Import: creación de LUTs; Link: renombrado masivo de ficheros."
+          ],
+          "correctIndex": 0,
+          "explanation": "La primera opción distingue correctamente las operaciones: ingesta es la transferencia controlada a servidor con metadatos/transcodificación; capture es grabación directa; import copia al pool; link crea referencias. Las otras descripciones mezclan o maldefinen las operaciones.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Comparación operativa entre montaje paralelo y montaje alterno:",
+          "options": [
+            "Montaje paralelo: fundidos encadenados entre escenas no relacionadas; montaje alterno: siempre indica flashback.",
+            "Montaje paralelo: alternancia de planos para mostrar una sola acción desde distintos ángulos; montaje alterno: uso exclusivo en documentales.",
+            "Montaje paralelo: secuencias distintas mostradas simultáneamente para subrayar simultaneidad o contraste; montaje alterno: cortes que alternan acciones en distintos lugares que pueden no ser simultáneas y que convergen argumentalmente.",
+            "Montaje paralelo: técnica propia del montaje intelectual sin relación temporal; montaje alterno: técnica que respeta siempre la cronología."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 define correctamente las diferencias: paralelo enfatiza simultaneidad o asociación temática; alterno alterna acciones que pueden no ser simultáneas y tienden a converger en la trama. Las demás opciones contienen generalizaciones o errores sobre su uso y temporalidad.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la relación entre bitrate agregado, concurrencia y margen de red:",
+          "options": [
+            "La capacidad requerida se calcula sobre la suma de bitrates de usuarios concurrentes más un margen para overhead y variaciones.",
+            "El número máximo de usuarios concurrentes se determina dividiendo la capacidad del enlace entre el bitrate por usuario teniendo en cuenta el margen.",
+            "Para garantizar no saturación conviene redondear N_max al entero inferior tras aplicar margen y overhead.",
+            "El margen de red se aplica exclusivamente a picos individuales de usuario y no debe añadirse al cálculo agregado."
+          ],
+          "correctIndex": 3,
+          "explanation": "La afirmación 3 es incorrecta: el margen de red no se aplica solo a picos individuales; debe considerarse sobre la suma agregada para cubrir overhead y variaciones. Las otras opciones describen prácticos correctos de dimensionamiento.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_fiction",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En edición de ficción, ¿qué aspecto debe priorizar la coordinación con realización?:",
+          "options": [
+            "Continuidad dramática y cobertura de la interpretación para asegurar montaje coherente.",
+            "Reemplazar tomas según preferencia del editor sin consultar a realización.",
+            "Maximizar el número de planos por personaje para facilitar remontajes extensos.",
+            "Priorizar planos técnicos de realización sobre la coherencia interpretativa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La coordinación con realización en ficción debe priorizar continuidad dramática y cobertura interpretativa que permitan mantener la intención actoral y montar de forma coherente. Las demás opciones descuidan la prioridad de interpretación y coherencia narrativa.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_relink",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al relinkar material con nombres idénticos procedentes de distintas fuentes, ¿qué criterio operativo resulta más fiable para resolver enlaces incorrectos?:",
+          "options": [
+            "Coincidencia de timecode de origen y duración combinada con metadatos de identificador de cámara o fuente.",
+            "Coincidencia exclusiva por nombre de fichero y fecha de creación.",
+            "Coincidencia por tamaño de fichero únicamente.",
+            "Coincidencia por códec y resolución sin consultar timecode."
+          ],
+          "correctIndex": 0,
+          "explanation": "La coincidencia de timecode y duración junto con un identificador de cámara/fuente es el criterio más fiable para distinguir archivos con el mismo nombre. Basarse solo en nombre, fecha o tamaño (2,3) o en códec/resolución (4) puede producir enlaces erróneos entre fuentes distintas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Un operario sufre molestias por postura y tropieza en un local alquilado durante una grabación en misión. ¿Qué medida preventiva prioriza la reducción sistemática de riesgos relativos a misiones?:",
+          "options": [
+            "Esperar a que el trabajador comunique cualquier incidente tras la misión para tomar medidas.",
+            "Exigir al trabajador que firme una declaración de responsabilidad por su conducta fuera del centro.",
+            "Limitar la duración de la misión sin realizar evaluación del lugar.",
+            "Evaluación previa del lugar y comunicación de riesgos específicos al equipo antes del desplazamiento."
+          ],
+          "correctIndex": 3,
+          "explanation": "La evaluación previa del lugar y la comunicación de riesgos permiten identificar y mitigar condiciones específicas de la misión; las otras opciones delegan responsabilidad en el trabajador o no prevén medidas activas adecuadas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según la Ley 13/2022, ¿qué obligación concreta tienen los prestadores de servicios audiovisuales respecto a menores y contenidos?:",
+          "options": [
+            "Emitir todos los contenidos para menores en horario de máxima audiencia para visibilidad.",
+            "Clasificar contenidos y aplicar mecanismos que limiten el acceso de menores a contenidos no aptos.",
+            "Excluir cualquier contenido que trate temas difíciles si puede incomodar a menores.",
+            "Permitir libre acceso a todos los contenidos siempre que exista aviso en pantalla."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 13/2022 impone obligaciones de clasificación y medidas técnicas o de control que limiten el acceso de menores a contenidos no aptos. Las demás opciones son equivocadas o contrarias a las obligaciones legales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Relaciona correctamente las mediciones de loudness LUFS con su ventana y aplicación:",
+          "options": [
+            "Integrated: promedio móvil de 100 ms; Short‑term: 50 ms; Momentary: 10 ms.",
+            "Integrated: ventana de 1 s para control en directo; Short‑term: toda la pieza; Momentary: usada solo en broadcast extremo.",
+            "Integrated: medida instantánea al inicio del programa; Short‑term: 10 s; Momentary: 5 s.",
+            "Integrated: medida acumulada durante todo el programa para cumplimiento; Short‑term: ventana de ~3 s usada para evaluación dinámica; Momentary: ventana corta (~400 ms) para control inmediato."
+          ],
+          "correctIndex": 3,
+          "explanation": "La descripción 1 es la correcta: integrated evalúa el loudness medio del programa completo; short‑term usa ~3 s para dinámica de segmentos; momentary emplea ventana corta (~400 ms) para respuesta inmediata. Las demás combinaciones asignan ventanas o aplicaciones erróneas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al componer un gráfico con canal alpha premultiplicado sobre un fondo oscuro aparecen halos claros en los bordes. Interprete la causa correcta:",
+          "options": [
+            "La resolución del PNG es insuficiente, provocando aliasing que se percibe como halo.",
+            "La imagen RGB fue almacenada ya multiplicada por alpha (premultiplied) pero se interpreta como straight, produciendo halos por sobrecomposición del color de fondo.",
+            "El problema es siempre causado por el códec de video; el alpha no tiene relación.",
+            "Se trata de un fallo en el gamut del monitor que sobreexpone las altas luces en los bordes."
+          ],
+          "correctIndex": 1,
+          "explanation": "Si un recurso premultiplicado se interpreta como straight (o viceversa), los bordes muestran halos por composición errónea: los componentes RGB no coinciden con la opacidad esperada. Las otras opciones describen causas distintas que no explican este síntoma específico del manejo de alpha.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_xavc",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para una producción 4K que necesita alta calidad por toma y rapidez en conformado, ¿qué variante de la familia XAVC es la más adecuada y por qué?:",
+          "options": [
+            "XAVC‑S: variante para consumo doméstico con metadatos profesionales completos.",
+            "XAVC‑Long‑GOP: interframe, menor tasa pero idóneo para edición frame‑accurate sin carga adicional.",
+            "XAVC‑HD: pensado exclusivamente para SD workflows y no recomendable para 4K.",
+            "XAVC‑Intra: intraframe, mayor bitrate por cuadro, facilita edición y conformado frame‑accurate."
+          ],
+          "correctIndex": 3,
+          "explanation": "XAVC‑Intra usa codificación intraframe que facilita edición y conformado precisos en 4K a costa de mayor bitrate; por eso es preferible cuando se exige calidad y rapidez de conformado. Long‑GOP reduce bitrate pero complica ciertas operaciones frame‑accurate (2). Las otras opciones describen variantes no adecuadas o incorrectas para 4K pro (3 y 4).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Ante riesgo de obsolescencia de un formato y almacenamiento en soportes físicos, cuál es la política operativa adecuada para preservación a largo plazo:",
+          "options": [
+            "Depositar una única copia en cinta LTO y considerarla garantía definitiva.",
+            "Conservar los soportes originales sin tocar hasta que vuelva a ser necesario acceder.",
+            "Planificar migraciones periódicas a formatos y soportes actuales con verificación de integridad y copias distribuidas.",
+            "Reducir calidad para ahorrar espacio y evitar migraciones futuras."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 recoge los principios: migración periódica, verificación (checksums) y copias distribuidas para mitigar obsolescencia. Las otras opciones son riesgosas: conservar sin acción (2), única copia (3) o degradar calidad (4) comprometen preservación e integridad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un servidor EVS configurado en grabación en bucle (loop), ¿cómo se recupera operacionalmente una acción concreta para convertirla en clip conservado?:",
+          "options": [
+            "Marcar o archivar la sección deseada en el canal de loop y promovernla a clip persistente en disco con metadatos y UID.",
+            "Reiniciar el servidor para que guarde automáticamente los últimos minutos como clip.",
+            "Copiar manualmente el buffer circular completo a otra unidad sin marcar.",
+            "Esperar a que el loop llegue a fin de disco para que el servidor genere automáticamente clips conservados."
+          ],
+          "correctIndex": 0,
+          "explanation": "La operación típica es marcar/archivar la porción del buffer en el canal de loop y convertirla en clip almacenado en disco con metadatos; las otras opciones describen procedimientos incorrectos o no operativos para conservación selectiva.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "040",
       "title": "Examen 040",
