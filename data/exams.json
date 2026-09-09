@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-09-09",
   "exams": [
+    {
+      "id": "042",
+      "title": "Examen 042",
+      "date": "2026-09-09",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las obligaciones de servicio público atribuidas a la Corporación RTVE:",
+          "options": [
+            "Garantizar pluralismo y respeto a la libertad de información.",
+            "Producir contenidos informativos veraces y equilibrados.",
+            "Facilitar el acceso universal mediante medidas de accesibilidad y audiencias diversas.",
+            "Priorizar contenidos comerciales con finalidad lucrativa por encima del interés general."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la tercera: priorizar fines comerciales por encima del interés general es una excepción a las obligaciones de servicio público. Las otras opciones recogen obligaciones propias de RTVE (pluralismo, veracidad e accesibilidad). La diferencia decisiva es que la tercera propone anteponer un objetivo mercantil frente al mandato público, lo que contraviene la función de servicio público.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_postura",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Al configurar un puesto de edición, ¿qué combinación de ajustes es compatible con una postura ergonómica que reduzca la tensión lumbar, en antebrazos y en pies?",
+          "options": [
+            "Silla elevada haciendo que las rodillas queden por debajo de las caderas (ángulo <90°); apoyo lumbar colocado en la zona dorsal media; antebrazos apoyados pero con las muñecas en extensión por teclado alto; sólo los metatarsos apoyados en el suelo.",
+            "Altura de silla que deje los muslos aproximadamente horizontales y las rodillas a ~90°–100°; apoyo lumbar situado en la región lumbar baja para conservar la lordosis; antebrazos apoyados y paralelos al plano de trabajo con codos ≈90°; pies apoyados planos en el suelo o en reposapiés si no alcanzan.",
+            "Silla baja con muslos descendentes y rodillas por encima de las caderas (ángulo >110°); ausencia de apoyo lumbar; antebrazos sin apoyo descansando sobre los muslos; pies cruzados bajo la silla.",
+            "Respaldo reclinado ≈120° sin apoyo lumbar efectivo; antebrazos apoyados en reposabrazos elevados que provocan abducción de hombros y codos >100°; pies deslizados parcialmente bajo la mesa sin apoyo plantar. "
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es correcta porque combina altura de asiento que mantiene ángulo de rodilla cercano a 90° (favorece alineación pélvica), apoyo lumbar en la zona baja que preserva la curva lumbar natural, antebrazos apoyados y paralelos al plano de trabajo que reducen extensión de muñeca y elevación de hombros, y apoyo plantar completo que distribuye la carga. El distractor más próximo (opción 2) falla en varios puntos operativos: una silla demasiado alta (rodillas por debajo de las caderas) aumenta la presión en el borde del asiento y dificulta el apoyo plantar; el apoyo lumbar en zona dorsal media no sostiene la lordosis lumbar; la extensión de muñeca por un teclado demasiado alto incrementa tensión en antebrazos y riesgo de síndrome compresivo; y el apoyo sólo con los metatarsos proporciona soporte insuficiente de los pies.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Cuál es la consecuencia operativa más probable de mezclar fuentes de vídeo no sincronizadas y cómo lo corrige un frame‑sync:",
+          "options": [
+            "Se genera pérdida de audio embebido; el frame‑sync reencapsula audio para restaurarlo.",
+            "Se produce una deriva del color entre fuentes; el frame‑sync corrige el espacio de color.",
+            "Aparecen saltos o jitter en los cambios de fuente; el frame‑sync re‑temporiza la señal y alinea la salida para mantener continuidad.",
+            "Se incrementa la compresión de la señal en el instante de conmutación; el frame‑sync reduce el bitrate temporalmente."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es correcta: fuentes sin genlock producen jitter o saltos al conmutar; un frame‑sync recompone la temporización de la señal (reclocking y retardo controlado) para alinear fotogramas y evitar discontinuidades. Los demás distractores confunden problemas de color, audio o compresión que no son la consecuencia primaria del des‑sincronismo de trama.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Al preparar ficheros para entrega o intercambio en un flujo profesional, ¿cuál de las siguientes afirmaciones describe con mayor precisión la diferencia operativa entre MOV/MP4 y MXF respecto a encapsulado y compatibilidad?",
+          "options": [
+            "MXF está diseñado para contener pistas de esencia y metadatos profesionales (por ejemplo timecode y UMID) y es el contenedor habitual en intercambio/archivo de emisión; MOV y MP4 son contenedores de uso general orientados a reproducción y distribución; el códec (compresión) es independiente del contenedor.",
+            "MOV y MP4 derivan del mismo estándar base y son igualmente adecuados para entrega a sistemas de emisión profesional sin necesidad de reencapsulado o conversión de códec.",
+            "MOV obliga al uso de códecs de Apple (por ejemplo ProRes) y MP4 obliga al uso de H.264/AAC; MXF solo admite códecs intraframe como DNxHD/DNxHR o ProRes.",
+            "La única diferencia práctica entre MOV/MP4 y MXF es la extensión del fichero; todos almacenan audio, vídeo y metadatos de la misma forma y tienen la misma compatibilidad operativa en entornos de emisión. "
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la segunda. MXF es un estándar profesional pensado para intercambio en emisión/archivo que incorpora mecanismos para pistas independientes, timecode, identificadores (UMID) y metadatos orientados a workflows broadcast; por eso suele exigirse para entrega en sistemas profesionales. MOV y MP4 son contenedores de propósito general (ISO base media / QuickTime) orientados a reproducción y distribución. El códec utilizado (H.264, ProRes, DNxHR, etc.) es una capa de compresión separada del contenedor: por tanto la idoneidad para emisión depende tanto del contenedor como del códec y de los perfiles admitidos por el receptor. El distractor más próximo (primero) falla porque no todos los sistemas de emisión aceptan MOV/MP4 sin reempaquetado o requisitos de códec; la equivalencia operativa no se cumple en entornos broadcast donde se requiere el encapsulado y los metadatos que ofrece MXF.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para indicar, entre dos planos consecutivos, que ha transcurrido un lapso de tiempo indeterminado pero manteniéndose una continuidad causal entre las acciones (no se desea ruptura abrupta de escena), ¿qué transición es la más adecuada desde el punto de vista narrativo y por qué?",
+          "options": [
+            "Corte seco — mantiene inmediatez y continuidad temporal directa entre planos.",
+            "Fundido encadenado (dissolve) — superpone y mezcla progresivamente las imágenes para sugerir paso de tiempo conservando vínculo causal.",
+            "Fundido a negro (fade out / fade in) — marca una ruptura clara o cierre de unidad temporal antes de reanudar.",
+            "Barrido/iris u otra transición geométrica — aporta signo estilístico o espacial más que indicación temporal."
+          ],
+          "correctIndex": 1,
+          "explanation": "El fundido encadenado (dissolve) es la opción correcta: mediante la superposición gradual de la imagen saliente y la entrante sugiere que el tiempo avanza sin cortar bruscamente la relación causal entre ambas tomas, facilitando una elipsis temporal suave. El distractor más próximo, el fundido a negro, también puede implicar paso de tiempo pero comporta una ruptura más tajante o cierre de unidad (indica fin de una sección o salto temporal más rotundo), por lo que transmite una discontinuidad mayor que la buscada. El corte seco mantiene inmediatez temporal y continuidad directa (no sugiere elipsis), y el barrido/iris actúa como recurso espacial o estilístico más que como señal narrativa primaria de paso de tiempo.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a medidas de prevención y actuación ante incendios en un centro de trabajo:",
+          "options": [
+            "Los extintores clase A son adecuados para combustibles sólidos (madera, papel).",
+            "Siempre debe intentarse la extinción con agua corriente en presencia de riesgo eléctrico antes de cortar la alimentación.",
+            "Para riesgos eléctricos se recomiendan extintores de CO2 o polvo en lugar de agua corriente.",
+            "Mantener rutas de evacuación señalizadas y libres es una medida preventiva obligatoria."
+          ],
+          "correctIndex": 1,
+          "explanation": "La tercera opción es la excepción: intentar extinguir con agua corriente en presencia de riesgo eléctrico es una práctica insegura. Las otras tres son correctas: clasificación de extintores, uso de CO2/polvo ante electricidad y mantener rutas de evacuación son medidas válidas. La diferencia clave es el riesgo de electrocución asociado al uso de agua sobre instalaciones energizadas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un entorno colaborativo donde varios editores acceden a los mismos bins (archivos de proyecto) almacenados en un servidor compartido (por ejemplo NEXIS/Interplay u otro SAN/NAS), ¿qué medida técnica operativa es la más eficaz para prevenir sobrescrituras accidentales y gestionar la concurrencia en el trabajo sobre bins y metadatos asociados?",
+          "options": [
+            "Restringir mediante permisos del sistema de archivos que solo un usuario tenga permiso de escritura sobre la carpeta que contiene los bins, dejando al resto en solo lectura.",
+            "Gestionar bins y ficheros de proyecto con un sistema de control de versiones tipo Git, almacenando los bin como objetos versionados y resolviendo conflictos mediante merges manuales.",
+            "Trabajar con copias locales de los bins en cada estación y sincronizarlas periódicamente con el servidor (por ejemplo mediante rsync fuera de horas pico) para evitar accesos simultáneos en línea.",
+            "Implementar y usar la función de checkout/check‑in o bloqueo de bins proporcionada por el NLE y el gestor de medios del servidor (bloqueo a nivel de bin/usuario y control de versiones asociado)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la implementación del mecanismo de checkout/check‑in o bloqueo nativo del NLE y del gestor de medios del servidor. Este método garantiza bloqueo a nivel de bin (o elemento), registra el usuario que lo tiene en edición, evita escrituras simultáneas sobre el mismo bin y suele incluir historial/versionado y opciones de desbloqueo controlado. \nPor contraste, restringir permisos de sistema de archivos (opción A) impide escrituras simultáneas pero es tosca: bloquea por carpeta en lugar de por elemento, no registra versiones ni autoría de cambios y dificulta la colaboración controlada. La sincronización de copias locales (opción C) introduce latencia y riesgos de sobrescritura y pérdida de cambios porque no opera en tiempo real ni conoce el estado de edición del resto de usuarios. Usar Git (opción D) no es adecuado en práctica para bins y archivos binarios de NLE: esos ficheros son mayoritariamente binarios, no mergeables, y Git no integra el control de bloqueo/versionado con el propio NLE ni con el servidor de medios, por lo que no resuelve eficazmente la concurrencia en un flujo de edición audiovisual.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Elija la afirmación que constituye una excepción respecto a la finalidad de la reforma introducida por la Ley 5/2017 y al mecanismo de elección parlamentaria de los órganos de RTVE:",
+          "options": [
+            "La reforma busca reforzar la independencia y el pluralismo de la corporación.",
+            "Introduce mecanismos de elección parlamentaria para los órganos de dirección con mayor transparencia.",
+            "Establece el nombramiento directo del presidente de RTVE por parte del Gobierno sin intervención parlamentaria.",
+            "Busca garantizar criterios objetivos y publicidad del proceso de designación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La tercera afirmación es la excepción: la Ley 5/2017 persigue reducir la influencia gubernamental y reforzar la elección parlamentaria, no el nombramiento directo por el Gobierno. Las demás opciones describen la finalidad real de la reforma (independencia, elección parlamentaria y publicidad de criterios).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la secuencia operativa correcta en una ingesta verificada para garantizar integridad, control de calidad y registro permanente:",
+          "options": [
+            "Registro en sistema → copia parcial → verificación manual visual sin checksum.",
+            "Cálculo de checksum en origen → eliminación del soporte → copia al servidor → registro.",
+            "Copia íntegra → cálculo de checksum → verificación de checksum → registro en sistema y control de calidad.",
+            "Copia al servidor → edición inmediata → cálculo de checksum posterior al conformado."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es correcta: la secuencia adecuada es copiar íntegramente, calcular checksum, verificar que el checksum coincide y registrar el ingreso y resultados de QC. Las otras secuencias omiten la verificación previa o calculan checksums en momentos inapropiados, lo que compromete la garantía de integridad. La diferencia clave es la verificación antes de cualquier eliminación o manipulación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Cuál es la diferencia operativa principal entre un master HDR y uno SDR respecto a luminancia y compatibilidad de visualización:",
+          "options": [
+            "Un master HDR contiene un rango de luminancia mucho mayor y suele requerir tone‑mapping en pantallas SDR no compatibles.",
+            "Un master SDR contiene metadatos de luminancia nativa que las pantallas HDR usan directamente sin conversión.",
+            "HDR reduce el contraste para facilitar su reproducción en televisores SDR.",
+            "SDR necesariamente usa más bits por canal que HDR para evitar banding."
+          ],
+          "correctIndex": 0,
+          "explanation": "La primera opción es correcta: HDR maneja un rango de luminancia superior y, para verse correctamente en pantallas SDR, requiere mapeo de tonos (tone‑mapping) o conversión que adapte luminancia y saturación. Los demás distractores hacen afirmaciones incorrectas sobre metadatos, reducción de contraste o mayor profundidad de bits de SDR; la diferencia decisiva es el rango dinámico y la necesidad de conversión para dispositivos no compatibles.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_dbfs",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que interpreta correctamente las consecuencias operativas de alcanzar 0 dBFS en una señal digital:",
+          "options": [
+            "0 dBFS es el nivel objetivo para todas las señales porque no tiene consecuencias prácticas.",
+            "0 dBFS representa el máximo límite digital: excederlo produce recorte (clipping) y operar sistemáticamente al máximo reduce margen frente a picos intersample que pueden distorsionar en reproducción.",
+            "Alcanzar 0 dBFS convierte automáticamente la señal a analógica.",
+            "0 dBFS indica el nivel medio esperado de una mezcla bien equilibrada."
+          ],
+          "correctIndex": 1,
+          "explanation": "La primera opción es correcta: 0 dBFS es el techo representable; excederlo produce clipping. Además, acercarse constantemente al 0 dBFS reduce margen para picos intersample o true peaks, provocando distorsión en la conversión DAC. Los demás distractores son falsos o imprecisos: 0 dBFS no es obligatoriamente objetivo de mezcla, ni convierte señales, ni describe un nivel medio. La diferencia decisiva es la pérdida de headroom y riesgo de clipping.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Tras copiar íntegramente la estructura de carpetas XDCAM al servidor, algunos clips se interrumpen a mitad de reproducción. Excluida la conservación de carpetas e índices, ¿qué causa técnica relacionada con la estructura XDCAM es la más probable?",
+          "options": [
+            "Los permisos de archivos impiden la lectura secuencial completa.",
+            "El códec usado por los clips no es compatible con el reproductor del servidor.",
+            "Clips 'spanned' divididos en varios fragmentos cuyo archivo de segmento faltante impide reproducción continua.",
+            "Las entradas del sistema de archivos superan el número máximo soportado por el servidor."
+          ],
+          "correctIndex": 2,
+          "explanation": "La primera opción es correcta: XDCAM puede usar spanning (clips distribuidos en múltiples segmentos y archivos); si falta un segmento, la reproducción se detiene a mitad. Los otros distractores (incompatibilidad de códec, permisos o límite de entradas) son posibles pero menos específicos al comportamiento típico de XDCAM tras mantener la estructura; la diferencia decisiva es la fragmentación/spanning de clip.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la corrección operativa que realiza el timecode drop‑frame frente al non‑drop‑frame en 29,97 fps:",
+          "options": [
+            "Elimina fotogramas reales del material para ajustar el tiempo real.",
+            "Omite ciertos números de frame en la numeración para alinear el contador con el tiempo real sin eliminar fotogramas.",
+            "Cambia físicamente la velocidad de reproducción del material a 30 fps exactos.",
+            "Duplica los fotogramas clave cada minuto para compensar la diferencia."
+          ],
+          "correctIndex": 1,
+          "explanation": "La segunda opción es correcta: el timecode drop‑frame ajusta la numeración (omitiendo marcas de frame en momentos determinados) para que la cuenta de timecode coincida con el tiempo real en 29,97 fps, sin eliminar fotogramas reales. Los demás distractores describen manipulaciones físicas de la señal que no forman parte del método drop‑frame.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare niveles RAID: ¿Cuál de las siguientes descripciones corresponde a RAID 5?",
+          "options": [
+            "RAID 0: distribución sin paridad; no tolera fallo de disco.",
+            "RAID 1: espejo completo entre dos discos; tolera fallo de un disco con capacidad usable del 50%.",
+            "RAID 6: doble paridad distribuida; no permite reconstrucción tras fallo.",
+            "RAID 5: bloques distribuidos con paridad; tolera fallo de un disco y permite reconstrucción tras su sustitución con impacto de rendimiento."
+          ],
+          "correctIndex": 3,
+          "explanation": "La tercera opción describe correctamente RAID 5: utiliza paridad distribuida, tolera la pérdida de un disco y permite reconstrucción tras reemplazo, con coste en rendimiento durante la reconstrucción. Las otras descripciones son incorrectas o incompletas (RAID6 sí permite tolerar dos fallos y reconstruir). La diferencia decisiva es la presencia de paridad distribuida y tolerancia a un fallo en RAID5.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Para asignar una \"ocupación tipo\" y determinar la categoría profesional de un puesto de edición en RTVE conforme al III Convenio Colectivo, ¿qué criterio debe prevalecer en la evaluación del puesto?",
+          "options": [
+            "Antigüedad del trabajador en la Corporación.",
+            "La jornada de trabajo y el sistema de turnos asignado al puesto.",
+            "Contenido efectivo del puesto: funciones y responsabilidades, y la cualificación profesional exigida.",
+            "La retribución histórica o la categoría profesional anterior del trabajador que ocupa el puesto."
+          ],
+          "correctIndex": 2,
+          "explanation": "La clasificación profesional se fundamenta en el contenido del puesto: las funciones y responsabilidades asignadas y la cualificación o competencias requeridas para desempeñarlas. La antigüedad, la jornada o la retribución pueden influir en otros derechos o en la situación individual del trabajador, pero no son el criterio primario para definir la ocupación tipo y la categoría profesional según la organización del trabajo establecida en el convenio; por ello la opción más cercana (antigüedad o retribución) se descarta como criterio de clasificación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Procedimiento operativo directo para verificar un punto de cruce (crosspoint) concreto en una matriz de vídeo:",
+          "options": [
+            "Enviar una señal de prueba desde la fuente A al destino B mediante el control de la matriz y comprobar visualmente en el monitor del destino que la señal recibida coincide con la fuente.",
+            "Reiniciar la matriz y confiar en que recupera automáticamente todas las rutas.",
+            "Cambiar la dirección IP de la matriz y verificar la conectividad de red para inferir el cruce.",
+            "Desconectar físicamente el cable de la fuente y observar si el destino se queda en negro para asumir que el crosspoint estaba abierto."
+          ],
+          "correctIndex": 0,
+          "explanation": "La primera opción es la correcta: la verificación precisa implica enrutar la fuente A al destino B mediante el control de matriz y comprobar la señal en el monitor destino (o mediante inserción de patrón/test). Las otras opciones son indirectas, arriesgadas o insuficientes para verificar un punto de cruce específico. La diferencia decisiva es la comprobación funcional directa.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Para dimensionar conductores o protecciones en una instalación de equipos audiovisuales dispone de la potencia nominal P (vatios) y la tensión de alimentación V (voltios). ¿Qué expresión permite calcular directamente la intensidad I (amperios) que circulará?",
+          "options": [
+            "I = sqrt(P / R)",
+            "I = V / R",
+            "I = V / P",
+            "I = P / V"
+          ],
+          "correctIndex": 3,
+          "explanation": "A partir de la relación P = V · I (potencia = tensión por corriente) se despeja I = P / V, que permite calcular la intensidad cuando se conocen P y V. La opción I = V / R corresponde a la Ley de Ohm (I = V/R) pero requiere conocer la resistencia R; no es una expresión directa en función de P y V. I = sqrt(P / R) se obtiene de P = I²·R y sería válida sólo si se conoce R además de P. I = V / P es dimensionalmente incorrecta y no corresponde a ninguna relación operativa útil.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "language_ritmo",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En la decisión de dónde cortar un plano para incrementar tensión sin alterar la duración total de la escena, ¿qué criterio se considera característico del ritmo interno (frente al ritmo externo) del montaje?",
+          "options": [
+            "La relación entre la duración del plano y el movimiento, la intensidad dramática o los cambios dentro del propio plano: se acorta el plano cuando aumenta la energía interna y se alarga cuando domina la quietud.",
+            "La duración absoluta del plano en segundos, tomada como único parámetro operativo para establecer la cadencia general de la secuencia.",
+            "La duración media de los planos a lo largo de la escena o la alternancia regular entre planos de parecido tiempo para fijar una cadencia global de la secuencia.",
+            "La elección de transiciones (fundido, disolvencia) entre escenas para indicar el paso del tiempo o cambios de ubicación, como herramienta principal para modular el ritmo de la narración."
+          ],
+          "correctIndex": 0,
+          "explanation": "El ritmo interno se determina por lo que ocurre dentro de cada plano (movimiento, intensidad, textura dramática) y cómo la duración del plano responde a esos factores; por tanto la opción 2 es correcta. La opción 3 describe el ritmo externo (cadencia promedio y estructura temporal de la secuencia). La opción 1 es un distractor cercano porque menciona la duración del plano, pero falla al ignorar el contenido interno que define el ritmo interno. La opción 4 se refiere a transiciones entre escenas y a la modulación del tiempo narrativo, que corresponde también al ritmo externo o a cambios macroestructurales, no al ritmo interno.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_checksum",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Al verificar integridad antes y después de una transferencia, seleccione la afirmación que describe límites operativos de un checksum:",
+          "options": [
+            "Un checksum detecta modificaciones accidentales y confirma identidad bit a bit; no garantiza que el archivo sea funcionalmente reproducible ni impide colisiones si el algoritmo es débil.",
+            "Un checksum garantiza que un archivo es compatible con cualquier reproductor y evita siempre corrupciones inducidas deliberadamente.",
+            "Un checksum reemplaza la necesidad de comprobación visual y control de calidad técnico del contenido.",
+            "Un checksum incrementa la calidad perceptual del vídeo al corregir errores de compresión durante la transferencia."
+          ],
+          "correctIndex": 0,
+          "explanation": "La primera afirmación es correcta: un checksum comprueba integridad bit a bit y detecta errores accidentales; sin embargo no garantiza que el archivo sea reproducible en todos los contextos ni que no existan colisiones (por eso se eligen algoritmos fuertes). Los otros distractores atribuyen capacidades que no tiene un checksum (compatibilidad de reproducción, sustitución de QC o corrección de errores). La diferencia clave es entre verificación bitwise y verificación funcional/anticolisión.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Al trasladar un proyecto entre dos NLE distintos para preservar estructura y metadatos: cuál diagnóstico distingue mejor el alcance comparado entre EDL y AAF:",
+          "options": [
+            "EDL y AAF ofrecen exactamente el mismo nivel de transferencia de pistas, efectos y metadatos.",
+            "AAF sólo contiene imágenes y no referencias de audio ni metadatos.",
+            "EDL incorpora efectos complejos y automatizaciones que AAF no puede manejar.",
+            "Un EDL transfiere esencialmente listas de cortes y timecodes (monotrack o multilayer muy limitado) sin efectos complejos; un AAF permite transferencia de múltiples pistas, referencias a media, metadatos y algunos efectos/ajustes de mezcla."
+          ],
+          "correctIndex": 3,
+          "explanation": "La segunda opción es correcta: un EDL es un formato sencillo que contiene principalmente cortes y timecodes (limitado en pistas y efectos), mientras que AAF es un formato más rico que puede transportar múltiples pistas, referencias a essence, metadatos y cierta información de efectos/mezcla. Los demás distractores son incorrectos (equivalencia total, inversión de capacidades o negación de funcionalidades de AAF). La diferencia decisiva es el alcance de metadatos y la complejidad transferible.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "041",
       "title": "Examen 041",
