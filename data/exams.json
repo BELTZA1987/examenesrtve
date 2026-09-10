@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-09",
+  "updatedAt": "2026-09-10",
   "exams": [
+    {
+      "id": "043",
+      "title": "Examen 043",
+      "date": "2026-09-10",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación compatible con los principios y restricciones del sistema de financiación previsto por la Ley 8/2009:",
+          "options": [
+            "La financiación acepta ingresos mixtos que combinan aportaciones públicas previstas por la Ley, recursos propios y mecanismos legalmente regulados para limitar dependencia de un único origen.",
+            "El modelo permite la libre entrada de patrocinadores comerciales sin límites para compensar déficit presupuestario.",
+            "La financiación se basa exclusivamente en una cuota periódica obligatoria impuesta a todos los ciudadanos.",
+            "Se fomenta la dependencia de aportaciones privadas de terceros como principal fuente para garantizar autonomía financiera."
+          ],
+          "correctIndex": 0,
+          "explanation": "La primera opción recoge la combinación de fuentes y la limitación de dependencia de un único origen, coherente con los principios de equilibrio y control normativo. Los distractores proponen extremos incompatibles con las restricciones legales: publicidad sin límites, una cuota exclusiva o dependencia privada predominante, que vulnerarían los principios de regulación y control del modelo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "measure_true_peak",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación que describe correctamente la función práctica del True Peak frente al sample peak en control de entregas de audio:",
+          "options": [
+            "Sample peak detecta picos entre muestras y es más preciso que True Peak para evitar clipping.\n",
+            "True Peak estima y controla picos entre muestras para evitar clipping tras la reconstrucción D/A; sample peak solo mide muestras discretas.",
+            "True Peak y sample peak son equivalentes cuando se usan codificadores con re‑muestreo interno.\n",
+            "True Peak mide exclusivamente el RMS y no sirve para controlar transitorios."
+          ],
+          "correctIndex": 1,
+          "explanation": "True Peak estima picos que pueden aparecer entre muestras tras la interpolación D/A, por eso se usa para evitar clipping en entrega. El distractor más cercano afirma la superioridad de sample peak, que es incorrecta porque sample peak ignora picos inter‑muestra; los otros distractores contienen errores conceptuales sobre RMS o equivalencia.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al uso correcto de la elipsis para comprimir tiempo manteniendo comprensión narrativa:",
+          "options": [
+            "Sustituir largas acciones sucesivas por planos que sugieran la continuidad causal y la consecuencia de los actos.",
+            "Eliminar fragmentos de acción esenciales para la comprensión de la motivación del personaje.",
+            "Usar cortes que mantengan puntos de referencia espaciales o temporales reconocibles para el espectador.",
+            "Introducir planos de transición (cutaways) que indiquen el paso del tiempo sin romper la relación causal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Eliminar acciones esenciales rompe la causalidad y dificulta la comprensión; es la excepción a un uso correcto de la elipsis. Las otras opciones son prácticas habituales que mantienen continuidad o indican paso del tiempo sin perder la comprensión.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Tras la descarga y verificación de los contenidos de un soporte de estado sólido, ¿cuál de las siguientes prácticas es la recomendada desde el punto de vista operativo y de seguridad de los datos?",
+          "options": [
+            "Ejecutar un borrado seguro inmediato (secure erase) sobre la tarjeta antes de verificar copias y checksums.",
+            "Formatear inmediatamente con un formato rápido para liberar el soporte y acelerar su reutilización, sin conservar registros de integridad.",
+            "Mantener el soporte sin formatear hasta confirmar integridad de las copias y registros, y solo entonces reformatar con el sistema de archivos requerido.",
+            "Depositar el soporte en archivo a largo plazo sin realizar comprobaciones adicionales ni registros tras la copia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta es conservar el soporte intacto hasta verificar integridad y registros; reformatar solo después. El distractor más próximo propone borrado seguro inmediato, que puede destruir evidencias necesarias para verificar copias; los otros son prácticas que comprometen la integridad o el control.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la distinción operativa entre corrección primaria y secundaria de color:",
+          "options": [
+            "La corrección primaria aborda ajustes globales de exposición, contraste y balance de blancos que afectan a todo el cuadro.",
+            "La corrección secundaria se aplica a selecciones o máscaras para modificar color y tonos de zonas concretas sin alterar el resto.",
+            "La corrección secundaria siempre debe aplicarse antes de la primaria para garantizar coherencia tonal.",
+            "La corrección primaria persigue normalizar la imagen; la secundaria perfecciona o enfatiza elementos puntuales."
+          ],
+          "correctIndex": 2,
+          "explanation": "Decir que la secundaria debe aplicarse siempre antes de la primaria es incorrecto; normalmente se normaliza con la primaria y luego se afinan áreas con la secundaria. Los otros enunciados describen correctamente funciones operativas de cada etapa.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un RGB Parade la forma de onda muestra que, en sombras, el canal azul está aproximadamente 4 dB por debajo de rojo y verde, mientras que en medios y altas luces los tres canales están alineados. ¿Cuál es el diagnóstico operativo más pertinente?",
+          "options": [
+            "Problema de gamma que afecta uniformemente a todos los canales.",
+            "Clipping en altas luces provocado por exceso de rojo.",
+            "Submuestreo de crominancia inapropiado en todo el fotograma.",
+            "Desbalance cromático localizado en sombras que tenderá a un tinte cálido/magenta en las zonas oscuras."
+          ],
+          "correctIndex": 3,
+          "explanation": "La caída del canal azul en sombras indica un desbalance cromático localizado que producirá tonos más cálidos o magenta en las sombras. Los distractores describen clipping en altas luces, submuestreo de crominancia o un problema de gamma global, que no se corresponden con el patrón observado (desalineación solo en sombras).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_metadatos",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Al transferir un activo audiovisual entre dos sistemas MAM en un flujo profesional, ¿qué elemento de los metadatos técnicos y descriptivos resulta crítico para identificar de forma inequívoca una versión concreta del clip y permitir su ingest automático en el sistema receptor?",
+          "options": [
+            "El checksum criptográfico del fichero para verificar su integridad tras la transferencia.",
+            "Un identificador único persistente embebido en el clip (por ejemplo UMID/UUID).",
+            "Los campos descriptivos (título, sinopsis, etiquetas) usados para búsquedas semánticas y clasificación.",
+            "Los metadatos técnicos que especifican códec, contenedor y perfil de compresión para garantizar compatibilidad de reproducción."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un identificador único persistente (UMID/UUID) es la pieza de metadatos que permite distinguir sin ambigüedad una versión concreta de un activo y automatizar operaciones de ingest, deduplicación y correlación entre sistemas. El checksum es importante pero sólo para verificar integridad del fichero, no para identificar versiones; los campos descriptivos facilitan la búsqueda humana pero son ambivalentes y propensos a duplicados; y los metadatos técnicos (códec/contenedor) informan sobre compatibilidad de reproducción, pero no identifican de forma inequívoca la versión del clip.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Entre las siguientes formulaciones, ¿cuál distingue mejor la relación entre libertad de expresión, derecho a la información veraz y sus límites constitucionales?",
+          "options": [
+            "El derecho a la información incorpora la obligación de veracidad y puede sujetarse a límites legalmente establecidos para proteger otros derechos y garantías constitucionales.",
+            "La libertad de expresión es absoluta y excluye cualquier limitación para proteger el honor o la seguridad pública.",
+            "La Constitución delega íntegramente la regulación de la libertad de información a normas administrativas sin límites constitucionales.",
+            "El derecho a la información permite la difusión de cualquier dato de interés público aunque vulnere la intimidad sin posibilidad de restricción."
+          ],
+          "correctIndex": 0,
+          "explanation": "La segunda formulación refleja que la libertad de expresión y la información veraz están protegidas pero sujetas a límites legales para proteger otros derechos (honor, intimidad, seguridad). Los demás enunciados presentan absolutismos o negaciones incompatibles con el marco constitucional.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Si la transmisión presenta errores de decodificación por corrupción en un fotograma P dentro de una GOP, ¿qué procedimiento operativo minimiza la degradación perceptible hasta el siguiente I‑frame disponible?",
+          "options": [
+            "Aplicar concealment/error concealment local sobre los macrobloques afectados y continuar decodificando los frames siguientes hasta el I‑frame.",
+            "Forzar la decodificación completa desde el I‑frame anterior hasta restablecer todos los P y B afectados.",
+            "Detener la reproducción hasta retransmitir la GOP completa.",
+            "Ignorar el error y continuar porque los B‑frames no dependen del P‑frame."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica operativa es emplear mecanismos de error concealment para suavizar artefactos hasta recuperar la referencia en el siguiente I‑frame; forzar decodificación completa o detener la reproducción son medidas más disruptivas. La opción que afirma que B‑frames no dependen del P‑frame es incorrecta.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Durante reproducción en tiempo real con múltiples efectos GPU‑acelerados, el monitor de sistema muestra CPU ~40%, RAM con margen y alta latencia en render de efectos. Diagnóstico más probable del cuello de botella:",
+          "options": [
+            "RAM insuficiente provocando swapping intensivo.",
+            "CPU saturada por decodificación de codecs y gestión de I/O.",
+            "GPU insuficiente (capacidad o memoria) para los efectos acelerados en tiempo real.",
+            "Ancho de banda de disco insuficiente en lectura secuencial."
+          ],
+          "correctIndex": 2,
+          "explanation": "Cuando la CPU no está saturada, la RAM no es limitante y sólo los efectos GPU‑acelerados fallan en tiempo real, el cuello de botella recae en la GPU (potencia o memoria). Los otros distractores contradicen los indicadores de uso presentados.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la descripción que corresponde operativamente al modo de trim 'roll':",
+          "options": [
+            "Elimina o añade material a uno de los clips desplazando la duración total de la secuencia (ripple).",
+            "Mueve un clip en la línea de tiempo alterando sus puntos de entrada y salida relativos en el mismo tiempo (slide).",
+            "Desplaza el contenido interno de un clip manteniendo fijos sus puntos de entrada y salida en la línea de tiempo (slip).",
+            "Ajusta simultáneamente el punto de corte entre dos clips sin modificar la duración total de la secuencia (roll)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El 'roll' cambia el punto de corte entre dos clips sin variar la duración total de la secuencia. Los otros enunciados describen ripple (alteración de duración), slip (mover contenido interno sin cambiar puntos de timeline) y slide (desplazar clip afectando contiguos de forma diferente).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la diferencia operativa entre RGB y YCbCr:",
+          "options": [
+            "RGB almacena componentes directas de color (rojo, verde, azul) y es preferido en tratamiento de imagen sin compresión de crominancia.",
+            "YCbCr separa luminancia (Y) y crominancias (Cb, Cr) permitiendo submuestreo de crominancia para ahorro de ancho de banda.",
+            "YCbCr facilita conservar la luminancia intacta al comprimir color, lo que beneficia percepción de detalle en vídeo.",
+            "YCbCr representa el color como dos luminancias separadas y no incluye componente de color."
+          ],
+          "correctIndex": 3,
+          "explanation": "La cuarta afirmación es falsa: YCbCr no representa color como 'dos luminancias' ni carece de componente de color; tiene una componente de luminancia y dos de crominancia. Las primeras tres describen correctamente diferencias y usos operativos entre RGB y YCbCr.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál de las siguientes organizaciones de tareas es la más eficaz para reducir fatiga visual y postural en trabajos continuados frente a pantallas de visualización?",
+          "options": [
+            "Intervalos regulares cortos: pausas de 5–10 minutos cada 50–60 minutos y alternancia de tareas que permitan variar postura y distancia de visión.",
+            "Bloques de trabajo de 90–120 minutos sin pausa con comprobación puntual de visión al finalizar.",
+            "Realizar tareas visuales intensas durante toda la jornada y concentrar pausas largas al final del turno.",
+            "Evitar pausas y compensar con iluminación ambiente más intensa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La alternativa que propone pausas cortas y alternancia de tareas cada ~50–60 minutos es la más eficaz para reducir fatiga visual y postural. Las otras opciones concentran la carga o prescindien de pausas, incrementando riesgos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación compatible con condiciones de fiabilidad y limitaciones al sincronizar multicámara por la forma de onda de audio:",
+          "options": [
+            "Es independiente de la presencia de pista de referencia y siempre supera al timecode para sincronización precisa.",
+            "Funciona con igual fiabilidad aunque las cámaras tengan ruido ambiental alto y reverberación intensa.",
+            "Requiere necesariamente que todas las cámaras lleven timecode jam‑syncido al mismo frame para ser fiable.",
+            "La sincronización por forma de onda es fiable cuando las pistas presentan transitorios claros (diálogo o golpes) y buena relación señal/ruido en todas las cámaras."
+          ],
+          "correctIndex": 3,
+          "explanation": "La sincronización por forma de onda es fiable con transitorios claros y buena S/N; el ruido o reverberación la degradan. No requiere siempre timecode ni es superior en todos los casos; por tanto los otros distractores son incorrectos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare obligaciones concretas derivadas de la Ley 13/2022 en materia de accesibilidad audiovisual y elija la que mejor refleja dichas obligaciones:",
+          "options": [
+            "La ley exige únicamente subtitulado en todos los contenidos sin otras medidas complementarias.",
+            "No establece obligaciones concretas; deja toda la regulación a normas autonómicas.",
+            "Impone obligaciones concretas que incluyen subtitulado, audiodescripción y, en determinados casos, lengua de signos para determinados servicios y contenidos.",
+            "Obliga a eliminar todo tipo de publicidad en contenidos accesibles."
+          ],
+          "correctIndex": 2,
+          "explanation": "La segunda opción recoge las obligaciones concretas previstas: medidas como subtitulado y audiodescripción y, en casos concretos, lengua de signos. Los otros enunciados omiten medidas complementarias, atribuyen totalmente la regulación a autonomías o incluyen obligaciones irrelevantes como eliminar publicidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_match_action",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un raccord de movimiento (match on action), ¿qué elemento es clave para mantener la continuidad perceptiva del movimiento entre dos planos?",
+          "options": [
+            "Que los planos sean del mismo tamaño relativo del encuadre.",
+            "La coincidencia exacta de distancia focal y apertura entre las cámaras.",
+            "Que ambos planos tengan idéntica iluminación sin variación de contraste.",
+            "La coherencia en la dirección y el vector principal del movimiento entre ambos planos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La dirección y el vector principal del movimiento son esenciales para que el ojo perciba continuidad de la acción. Coincidencias técnicas como distancia focal, iluminación o tamaño pueden ayudar pero no son el elemento clave de continuidad de movimiento.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo correcto para dimensionar un servidor de vídeo destinado a atender N canales concurrentes de reproducción:",
+          "options": [
+            "Fijar N en función de número de cores CPU únicamente, asumiendo que el disco y la red siempre serán suficientes.",
+            "Dimensionar exclusivamente según la capacidad de almacenamiento total en TB sin considerar bitrate ni concurrencia.",
+            "Calcular la suma agregada de bitrate de todos los flujos concurrentes, aplicar un margen de red y almacenamiento I/O, y dimensionar CPU, red y subsistema de disco para el pico resultante.",
+            "Estimar N de manera optimista y ajustar en producción sin pruebas previas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta obliga a calcular el bitrate agregado de streams concurrentes y a dimensionar red, CPU y subsistema de disco con margen. Los distractores ignoran parámetros esenciales (bitrate/IO) o proponen procedimientos inadecuados e inseguros.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que mejor caracteriza un accidente 'in itinere':",
+          "options": [
+            "Un accidente que ocurre en el desplazamiento habitual entre el domicilio y el lugar de trabajo, realizado por la ruta y medio habituales.",
+            "Un accidente que ocurre fuera del horario laboral en actividades de ocio no relacionadas con el trabajo.",
+            "Un accidente producido dentro del centro de trabajo durante la ejecución de una tarea asignada.",
+            "Un accidente que sucede durante una comida en un restaurante ajeno al puesto de trabajo sin relación con desplazamiento al trabajo."
+          ],
+          "correctIndex": 0,
+          "explanation": "El accidente in itinere se define por ocurrir en el desplazamiento habitual entre domicilio y trabajo por ruta y medio habituales. Los demás casos describen accidentes en misión, en centro de trabajo o en ocio, no in itinere.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "¿Cuál de las siguientes afirmaciones describe con mayor precisión el uso de ProRes y DNxHR como códecs intermedios en postproducción?",
+          "options": [
+            "Son códecs de entrega final específicamente diseñados para transmisión en streaming de baja latencia.",
+            "Son códecs intra‑frame optimizados para edición y etalonaje, disponibles en perfiles que equilibran calidad y tamaño de fichero y con amplia compatibilidad entre NLEs.",
+            "Carecen de perfiles y siempre generan ficheros de tamaño constante independientemente de calidad.",
+            "Son formatos contenedor sin compresión para preservar exactamente cada muestra original."
+          ],
+          "correctIndex": 1,
+          "explanation": "ProRes y DNxHR son códecs intra‑frame pensados para edición, con varios perfiles que permiten ajustar calidad/espacio y amplia compatibilidad en estaciones de postproducción. Los distractores confunden su propósito con streaming, aflora información incorrecta sobre perfiles o afirmaciones de ausencia de compresión.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En una política de archivo con LTO/LTFS, ¿qué limitación operativa debe diagnosticarse y mitigarse específicamente al diseñar acceso y verificación de ficheros?",
+          "options": [
+            "LTFS proporciona acceso aleatorio instantáneo comparable a disco y no requiere verificaciones posteriores.",
+            "El acceso aleatorio es mucho más lento que en disco; por tanto es necesario catalogar y verificar con índices y checksums tras la escritura.",
+            "Las cintas LTO no permiten almacenar metadatos separados; todo debe ir embebido en la esencia.",
+            "Las cintas LTO son inmunes a la degradación física y no necesitan migración periódica."
+          ],
+          "correctIndex": 1,
+          "explanation": "Las cintas ofrecen acceso aleatorio limitado y latencias mayores; es obligatorio diseñar catálogos y verificaciones (checksums) tras escritura. Los otros enunciados son falsos: LTFS no iguala a disco en acceso instantáneo, sí permite metadatos pero conviene gestionarlos, y las cintas requieren migración y mantenimiento.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "042",
       "title": "Examen 042",
