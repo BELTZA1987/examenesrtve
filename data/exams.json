@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-10",
+  "updatedAt": "2026-09-11",
   "exams": [
+    {
+      "id": "044",
+      "title": "Examen 044",
+      "date": "2026-09-11",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la medida operativa prioritaria para la prevención del acoso y asegurar lenguaje y representación no sexista en una producción:",
+          "options": [
+            "Implantar y difundir un protocolo de prevención y actuación con canales de denuncia confidenciales, plazos de respuesta y seguimiento documentado.",
+            "Incluir en contratos una cláusula genérica sobre igualdad sin articulado operativo adicional.",
+            "Encargar a dirección de arte la supervisión del lenguaje en guiones sin formación previa al personal.",
+            "Aplicar sanciones automáticas a cualquier expresion sexista sin procedimiento de instrucción y defensa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La correcta es la implantación de un protocolo operativo con canales confidenciales y seguimiento: es una medida preventiva y reactiva concreta que permite detectar, investigar y corregir situaciones. El distractor más cercano (3) propone sanciones automáticas pero carece de procedimiento garantista y de prevención; por eso no cumple la exigencia de medidas efectivas, formativas y de registro contempladas en un plan de igualdad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Tiene un archivo maestro en un servidor local. Indique cuál de las siguientes estrategias, aplicada de forma continuada y verificable, cumple la política 3‑2‑1 de copias de seguridad (copias independientes, soportes y ubicación).",
+          "options": [
+            "Realizar copias diarias dentro del mismo servidor mediante RAID y snapshots incrementales, conservando el historial 30 días en la misma instalación.",
+            "Replicar en tiempo real el volumen del servidor a un segundo servidor espejo situado en la misma sala y mantener versiones diarias en esa réplica durante 30 días.",
+            "Conservar el archivo maestro en el servidor local y generar al menos dos copias independientes: una copia en disco (NAS) ubicada en la misma instalación y otra copia completa periódica en cinta LTO guardada en una sede distinta (offsite); verificar integridad mediante checksums.",
+            "Realizar una única copia en un proveedor de almacenamiento en la nube y confiar en la replicación entre zonas del mismo proveedor para redundancia y restauraciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la B: combina al menos tres copias (original + copia en disco + copia en cinta), utiliza al menos dos soportes distintos (disco y cinta) y sitúa una copia fuera de la ubicación principal (offsite), además incluye verificación (checksums). Eso satisface los requisitos operativos de 3‑2‑1: copias independientes, diversidad de soportes y copia en ubicación separada. La opción D es el distractor más próximo porque aporta redundancia geográfica dentro del proveedor, pero si solo existe el original y una única copia en la nube no se alcanzan las 'tres copias' requeridas; además la replicación interna del proveedor no sustituye la diversidad de soporte (disk vs tape) ni garantiza una copia gestionada e independiente por el responsable del activo. Las opciones A y C fallan porque se basan en redundancia/replicación en el mismo sitio o en el mismo tipo de soporte (RAID/espejo/snapshots), que no constituyen por sí solos copias de seguridad independientes y no satisfacen la exigencia de offsite y diversidad de medios.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_news",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En la edición de un despacho informativo con límite estricto de duración, ¿qué criterio debe primar al recortar para mantener prioridad informativa?",
+          "options": [
+            "Priorizar siempre planos cortos y rápidos para aumentar ritmo, aunque se pierdan totales explicativos.",
+            "Mantener íntegros los testimonios completos aunque ello reduzca el número de planos ilustrativos.",
+            "Conservar la estructura original del reportaje sin comprimir tiempo, para respetar la narrativa del cámara.",
+            "Preservar la entrada informativa (lead) y los totales que contienen la información esencial, aunque se reduzcan recursos secundarios."
+          ],
+          "correctIndex": 3,
+          "explanation": "Debe primar la preservación del lead y los totales, que contienen la información esencial para el espectador; los demás elementos son secundarios y pueden reducirse. El distractor más cercano (3) prioriza forma sobre contenido; sin embargo en noticia la prioridad es informativa, no formal.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En EVS/IPDirector una playlist para emisión presenta un hueco entre dos elementos consecutivos produciendo un negro de 1 s. Diagnóstico operativo y acción correcta:",
+          "options": [
+            "Exportar ambos clips como un nuevo clip combinado y reemplazarlos en la playlist.",
+            "Aplicar un crossfade automático entre los dos elementos para enmascarar el hueco.",
+            "Ajustar los puntos de entrada/salida (in/out) de los elementos afectados y republicar la playlist para eliminar el hueco.",
+            "Cambiar el orden de reproducción sin modificar puntos de entrada ni republicar la playlist."
+          ],
+          "correctIndex": 2,
+          "explanation": "La acción correcta es ajustar los in/out de los elementos y republicar la playlist para eliminar el hueco; es la operación directa sobre la playlist que solventa discontinuidades. El distractor más cercano (1) propone crossfade, que resolvería visualmente pero no es la operación indicada cuando la emisión exige cortes secos sin fundidos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las diferencias operativas entre MXF OP1a y OP‑Atom:",
+          "options": [
+            "OP‑Atom almacena cada esencia (vídeo, audio, timecode) en ficheros separados, facilitando el reemplazo a nivel de frame.",
+            "OP1a encapsula múltiples esencias en un único fichero MXF autocontenido, adecuado para entrega como un solo archivo.",
+            "OP1a es preferible cuando se requiere edición frame‑a‑frame y gestión independiente de pistas por el NLE.",
+            "OP‑Atom facilita el manejo de versiones y la ingest selectiva de esencias independientes."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 3 es la excepción: OP1a no es la opción preferible cuando se necesita manipular esencias de forma independiente para edición frame‑a‑frame; esa ventaja corresponde a OP‑Atom. Las demás afirmaciones describen diferencias correctas entre OP‑Atom (esencias separadas) y OP1a (contenedor único).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_chromakey",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Secuencia operativa correcta para diagnosticar y corregir una incrustación por chroma con halo de color y bordes recortados:",
+          "options": [
+            "Construir primeramente un matte limpio (extraer key), aplicar despill para eliminar restos de color y finalmente refinar bordes mediante contracción y feathering.",
+            "Aplicar despill primero sobre la imagen original, luego crear el matte y, por último, aumentar la saturación del fondo para camuflar bordes.",
+            "Aumentar el umbral del keyer hasta eliminar halos, luego suavizar bordes y por último recortar el matte drásticamente.",
+            "Sustituir inmediatamente la capa de fondo y ajustar niveles RGB en la capa de primer plano sin modificar el matte."
+          ],
+          "correctIndex": 0,
+          "explanation": "La secuencia recomendada es: generar un matte limpio, aplicar despill y luego ajustar bordes (contracción/feather) para evitar halos y mantener contorno. El distractor más próximo realiza el despill antes del matte (opción 2), lo que es menos eficaz porque el despill actúa sobre píxeles ya seleccionados por el matte; sin un matte correcto, el despill puede afectar zonas no deseadas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál es el efecto habitual de mezclar material 25p con 29,97p sin conversión y qué método es habitual para resolver la incompatibilidad?",
+          "options": [
+            "Se elimina banda sonora; solución: convertir audio a 48 kHz.",
+            "No existe efecto perceptible; ambos cadencias son intercambiables sin conversión.",
+            "La mezcla mejora nitidez; solución: aplicar telecine 3:2 directamente.",
+            "Se producen saltos y variaciones perceptibles en el movimiento; método habitual: conversión de cadencia mediante motion‑compensated frame rate conversion."
+          ],
+          "correctIndex": 3,
+          "explanation": "Mezclar 25p con 29,97p sin conversión provoca judder y discrepancias de ritmo de movimiento; la conversión habitual y profesional es la conversión de cadencia con interpolación de movimiento (motion‑compensated). Los distractores son imprecisos o incorrectos: por ejemplo, telecine 3:2 se aplica a 24->29,97, no a 25->29,97.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Según la organización prevista por la Ley 17/2006, indique la afirmación que describe correctamente un aspecto estructural de la Corporación RTVE:",
+          "options": [
+            "RTVE constituye una empresa privada sujeta únicamente a criterios del mercado, con elección directa de su dirección por los trabajadores.",
+            "La Corporación RTVE es un ente público con personalidad jurídica propia y su órgano de gobierno es un Consejo de Administración encargado de dirigir y supervisar la entidad.",
+            "La gestión de RTVE depende exclusivamente de un ministerio que nombra directamente a todos los responsables operativos sin órgano colegiado.",
+            "RTVE no posee autonomía de gestión ni patrimonio propio; todos los recursos pertenecen al Estado centralizado."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 refleja la naturaleza y la existencia de un órgano de gobierno colegiado (Consejo de Administración) y la personalidad patrimonial propia. Las demás opciones contradicen la estructura pública y la autonomía reconocida por la Ley 17/2006.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_offline_online",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En un flujo offline/online, ¿qué elemento contiene las decisiones de montaje necesarias para reconformar el proyecto a los originales en el online?",
+          "options": [
+            "Un archivo de imagen estática por cada corte realizado en el offline.",
+            "Un conjunto de proxies sin lista de decisiones, usado solo para visionado.",
+            "El bin del editor con metadatos propietarios sin exportación interoperable.",
+            "AAF con timecode y referencias a media original, incluyendo handles para reconformado."
+          ],
+          "correctIndex": 3,
+          "explanation": "El AAF (o equivalente interoperable) exporta las decisiones de montaje con timecode y referencias que permiten reconformar a las originales; los proxies o bins por sí solos no contienen la información estructurada necesaria para un reconformado fiable.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un flujo XDCAM, para que las decisiones de selección y visionado realizadas sobre proxies puedan reconformarse de forma fiable sobre la esencia de alta resolución durante la ingesta/online, ¿qué requisito operativo es imprescindible?",
+          "options": [
+            "Que los archivos proxy conserven exactamente el mismo nombre de fichero que las MXF de alta resolución; el NLE utiliza el nombre para localizar y sustituir automáticamente la esencia.",
+            "Que los proxies incluyan y preserven metadatos de identificación del clip (por ejemplo UMID o identificador único) y el timecode fuente, y que la ingesta conserve esos metadatos en la esencia HD para permitir relink/conform preciso.",
+            "Que la copia al servidor respete la estructura de carpetas e índices del soporte XDCAM tal cual; mantener la jerarquía original es suficiente para que las decisiones en proxy se apliquen a la esencia HD.",
+            "Que durante la ingesta se reemplace la proxy por un códec intermedio transcodificado desde la esencia HD, sobrescribiendo la proxy original para asegurar calidad y evitar la necesidad de relink."
+          ],
+          "correctIndex": 1,
+          "explanation": "Correcto: la reconformación fiable exige un identificador único del clip y referencias temporales preservadas (UMID/ID y timecode) que permitan al NLE emparejar los segmentos de proxy con la esencia HD. Mantener solo nombres de fichero (A) o la estructura de carpetas (C) puede fallar si se renombra o reestructura material; son útiles pero no garantizan enlace inequívoco. Sobrescribir proxies con un códec intermedio (D) altera el flujo de trabajo y no responde al requisito de preservación de la relación origen‑proxy para reconformado.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Tras recibir información y formación en prevención para su puesto, ¿qué actuación corresponde al trabajador como obligación en materia de PRL?",
+          "options": [
+            "Evitar comunicar incidentes si no causaron lesión inmediata para no interrumpir la producción.",
+            "Delegar la responsabilidad de seguridad únicamente en el servicio de prevención sin colaboración activa.",
+            "Modificar los equipos de protección a criterio propio para mejorar comodidad sin comunicarlo.",
+            "Utilizar correctamente los medios y equipos de protección facilitados, participar en la formación y comunicar las situaciones de riesgo detectadas."
+          ],
+          "correctIndex": 3,
+          "explanation": "El trabajador está obligado a usar los medios de protección, participar en la formación y colaborar informando de riesgos. Los distractores son conductas contrarias a las obligaciones de cooperación y comunicación previstas en la normativa.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Qué principio técnico permite el rechazo eficaz de interferencias en una línea de audio balanceada?",
+          "options": [
+            "La transmisión diferencial: la señal se envía por dos conductores con polaridad invertida y el receptor amplifica la diferencia rechazando la componente común (modo común).",
+            "El uso de un tercer conductor para señal de referencia que elimina interferencias por tierra.",
+            "Aumentar la ganancia de entrada para superar la relación señal/ruido y suprimir interferencias.",
+            "La transmisión por un único conductor con blindaje activo que cancela la señal de modo común."
+          ],
+          "correctIndex": 0,
+          "explanation": "La transmisión diferencial (dos conductores con polaridad opuesta) permite que el receptor ignore la componente común inducida (modo común), logrando rechazo de interferencias. Los otros distractores describen medidas incorrectas o ineficaces en comparación con el principio balanceado.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_lut_log",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Si imágenes en log aparecen débiles en contraste durante el visionado y se necesita referencia para etalonaje sin alterar archivos, ¿qué LUT aplicar y por qué?",
+          "options": [
+            "Aplicar una LUT de visualización (display LUT) para normalizar la apariencia en monitor sin 'bakear' la transformación en el material original.",
+            "Aplicar una LUT creativa definitiva directamente sobre los masters log para obtener el look final.",
+            "No usar ninguna LUT; trabajar únicamente con curvas de contraste en la imagen baked.",
+            "Convertir las imágenes log a 8‑bit con una LUT de salida antes de etalonar para mejorar rendimiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "Para referencia y corrección técnica se usa una display LUT que facilita la visualización correcta sin modificar los archivos originales; la opción 2 (aplicar LUT creativa a masters) altera o 'bakea' la transformación y reduce posibilidades de corrección posterior, por eso no es apropiada en etapa de referencia.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_red_ip",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Estación 10.0.0.5/24 con puerta 10.0.0.1 no alcanza recurso 10.0.1.20/24. Diagnóstico básico de conectividad e intervención más directa sin cambiar IP del recurso:",
+          "options": [
+            "El DNS está mal configurado; cambiar el servidor DNS de la estación resolverá la conectividad.",
+            "El recurso está caído físicamente; la única solución es reemplazar el equipo remoto.",
+            "Falta una ruta hacia la subred 10.0.1.0/24; añadir una ruta en la puerta de enlace o configurar máscara/segmentación adecuada en la red.",
+            "La estación debe cambiar su IP para coincidir con la del recurso."
+          ],
+          "correctIndex": 2,
+          "explanation": "El problema corresponde a red en subred distinta; la solución es añadir la ruta adecuada en el router/gateway o adaptar la segmentación. Los otros distractores no abordan la falta de ruta entre subredes (DNS incorrecto o suposición de fallo físico).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a lo regulado por el III Convenio Colectivo sobre jornada, descansos y turnicidad:",
+          "options": [
+            "Establece límites sobre la duración de la jornada laboral y regula descansos y turnicidad aplicables al personal de la Corporación.",
+            "Define criterios para la organización de turnos y posibles compensaciones por trabajo nocturno o festivo conforme a lo pactado.",
+            "Fija el salario mínimo interprofesional nacional como parte de su contenido reglamentario.",
+            "Regula pausas y periodos de descanso diario y semanal en el ámbito del convenio."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 3 es la excepción: el salario mínimo interprofesional es una norma de alcance general estatal y no forma parte de las materias reguladas por un convenio en cuanto a su fijación. Las otras afirmaciones (jornada, descansos y turnicidad) sí corresponden al contenido típico del convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Al reproducir una mezcla, el medidor de correlación de fase muestra frecuentemente valores negativos (por ejemplo −0,5 a −1) en secciones con elementos panoramizados hacia los extremos. ¿Qué interpretación técnica es la más adecuada respecto a la compatibilidad al sumar a mono?",
+          "options": [
+            "Indica que la energía estéreo se refuerza al combinarse en mono, por lo que la suma mono presentará mayor nivel en esas secciones.",
+            "Indica desfase/antifase entre canales con riesgo de cancelación parcial o total al sumar a mono, provocando pérdida de nivel o huecos en la señal.",
+            "Indica que la señal está perfectamente en fase y, por tanto, máxima compatibilidad para suma a mono sin riesgo de cancelación.",
+            "Es un indicador exclusivo de monitorización que no afecta la suma a mono; valores negativos solo reflejan diferencias tonales entre los canales."
+          ],
+          "correctIndex": 1,
+          "explanation": "El medidor de correlación varía entre +1 (canales en fase), 0 (no correlacionados) y −1 (antifase). Valores negativos indican presencia de componente en oposición de fase entre canales; al sumar a mono esas componentes se cancelan parcial o totalmente, produciendo pérdida de nivel o huecos. La opción 2 es incorrecta porque la antifase no aumenta nivel sino que produce interferencia destructiva; la 3 describe el extremo opuesto (+1); la 4 es falsa porque el medidor refleja la relación de fase que afecta directamente al resultado de la suma a mono.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Comparación: ¿cuál de las siguientes intervenciones reduce de forma más específica el riesgo de trastornos musculoesqueléticos en tareas continuas con teclado, ratón y tableta gráfica?",
+          "options": [
+            "Sustituir todos los periféricos por modelos inalámbricos sin cambios posturales ni pausas.",
+            "Proveer almohadillas de gel para la muñeca sin modificar la organización del tiempo de trabajo.",
+            "Aumentar la velocidad de trabajo reduciendo pausas para mejorar productividad.",
+            "Diseñar pausas programadas breves y alternancia de dispositivos (ratón, tableta, teclado) combinada con ajuste ergonómico del puesto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La intervención más eficaz combina pausas periódicas, alternancia de tareas/dispositivos y ajuste ergonómico del puesto; reduce exposición repetitiva y posturas estáticas. El distractor más cercano (solo almohadilla) actúa sobre un solo factor y no aborda la exposición temporal ni la alternancia, por eso es inferior.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a archivos en crecimiento ('growing files') durante directos, cuál afirmación describe mejor su compatibilidad con NLEs y flujo de grabación:",
+          "options": [
+            "Los growing files son idénticos a archivos finales; no existe diferencia operativa y pueden sustituir directamente a ficheros cerrados sin limitaciones.",
+            "Algunos NLE permiten reproducción y edición parcial de growing files, pero el reconformado y la exportación completa suelen requerir cierre del fichero (archivo finalizado) para asegurar integridad de esencia.",
+            "Un growing file es inmediatamente apto para todas operaciones de conformado y entrega, incluso mientras continúa grabando.",
+            "Los NLE prohíben totalmente abrir archivos en crecimiento; es imposible acceder a ellos hasta su cierre."
+          ],
+          "correctIndex": 1,
+          "explanation": "Es habitual que NLEs permitan reproducir o visionar growing files pero que operaciones críticas (reconformado, exportación final) requieran el cierre del fichero para garantizar integridad; afirmar que son idénticos a archivos finales o que son inaccesibles en todo momento es incorrecto.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_intelectual",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Cuál de los siguientes ejemplos constituye claramente montaje intelectual por yuxtaposición de ideas:",
+          "options": [
+            "Plano de un ejecutivo sonriendo seguido inmediatamente de imágenes de despidos en la fábrica, creando una nueva interpretación crítica.",
+            "Cortar entre dos acciones simultáneas de la misma escena para mantener continuidad física del movimiento.",
+            "Insertar un fundido para indicar el paso del tiempo entre dos secuencias cronológicas distintas.",
+            "Empatar dos cámaras del mismo plano continuo para elegir el mejor ángulo sin cambiar el sentido narrativo."
+          ],
+          "correctIndex": 0,
+          "explanation": "El montaje intelectual se produce cuando la yuxtaposición de dos planos genera un nuevo significado (ejecutivo sonriente + despidos sugiere insensibilidad). Las otras opciones describen continuidad, elipsis o cobertura técnica, no creación de un significado adicional por contraste.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare legalizador de señal y un limitador simple: ¿qué operación caracteriza específicamente a un legalizador frente a un limitador?",
+          "options": [
+            "Un legalizador solo actúa sobre audio mientras que un limitador opera exclusivamente en vídeo.",
+            "El legalizador realiza mapeo y corrección de gamut y niveles (incluyendo ajuste de croma) para mantener legalidad sin recorte brusco; el limitador solo atenúa picos o recorta niveles sin mapear gamut.",
+            "El legalizador elimina todo el color por encima de un umbral, y el limitador aplica una ganancia negativa uniforme.",
+            "No hay diferencia operativa; ambos realizan clipping agresivo para cumplir niveles."
+          ],
+          "correctIndex": 1,
+          "explanation": "El legalizador aplica mapeo de gamut y transformaciones más completas para mantener colores dentro de límites legales sin producir artefactos severos, mientras que un limitador simple atenúa o recorta niveles puntuales. Las demás opciones son incorrectas o simplificaciones inexactas.",
+          "category": "Equipos de medida y control"
+        }
+      ]
+    },
     {
       "id": "043",
       "title": "Examen 043",
