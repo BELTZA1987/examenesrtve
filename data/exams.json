@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-11",
+  "updatedAt": "2026-09-12",
   "exams": [
+    {
+      "id": "045",
+      "title": "Examen 045",
+      "date": "2026-09-12",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las obligaciones de los prestadores de servicios audiovisuales en materia de protección de menores y clasificación o acceso a contenidos:",
+          "options": [
+            "Eliminar automáticamente todo material que pueda ser considerado no apropiado para menores sin análisis previo.",
+            "Adoptar medidas técnicas y organizativas razonables para evitar que menores accedan a contenidos nocivos.",
+            "Implantar mecanismos de clasificación por edades y filtros de acceso acordes al tipo de contenido.",
+            "Proveer información clara sobre la clasificación y las restricciones de acceso aplicables a cada contenido."
+          ],
+          "correctIndex": 0,
+          "explanation": "La eliminación automática sin análisis previo es una medida desproporcionada e incompatibe con la obligación de establecer criterios y procedimientos; las otras tres opciones corresponden a obligaciones razonables: clasificación por edades, filtros y transparencia informativa. La diferencia decisiva es que la opción correcta propone una acción indiscriminada y no prevista como obligación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en una instalación mixta SD/HD donde aparecen saltos de sincronismo y retrasos en conmutaciones multicámara, ¿qué origen y medida correctora es la más probable?",
+          "options": [
+            "Uso exclusivo de black burst como referencia para todas las unidades HD; corregir seleccionando black burst en el mezclador HD.",
+            "Desfase de audio‑embed respecto al vídeo causado por la tasa de bits; limitar el bitrate del flujo para resolver el problema.",
+            "Fallo en el formato de cuadro (fields) de las cámaras SD; forzar salida progresiva en todas las cámaras SD para compatibilizarlas con el sistema HD.",
+            "Presencia de señales de referencia incompatibles: emplear tri‑level para equipos HD y black burst para SD, o convertir y distribuir una única referencia adecuada a cada dominio."
+          ],
+          "correctIndex": 3,
+          "explanation": "La causa más habitual en instalaciones mixtas es el empleo de referencias incompatibles: tri‑level debe usarse para equipos HD y black burst para SD, y la corrección práctica es convertir o distribuir la referencia adecuada. El distractor más cercano (opción 0) es incorrecto porque black burst no sincroniza correctamente equipos nativos HD; las otras opciones no abordan la incompatibilidad de referencia.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare CBR y VBR: indique la afirmación que describe correctamente sus ventajas y limitaciones respecto a transmisión en tiempo real y eficiencia de almacenamiento.",
+          "options": [
+            "VBR es obligatorio en emisiones lineales por su compatibilidad con multiplexado; CBR solo se usa en archivos archivados.",
+            "CBR maximiza la calidad instantánea ajustando bitrate a la complejidad de cada escena; VBR mantiene bitrate constante sacrificando picos de calidad.",
+            "CBR ofrece ancho de banda predecible, adecuado para emisión en directo con enlaces limitados; VBR proporciona mejor eficiencia de compresión pero introduce variaciones de flujo que pueden requerir mayor buffering.",
+            "CBR permite siempre mejor calidad visual que VBR para un mismo promedio de bitrate, sin necesidad de ajustes en el codificador."
+          ],
+          "correctIndex": 2,
+          "explanation": "CBR aporta predictibilidad de uso de enlace, útil en emisión en tiempo real; VBR mejora eficiencia y calidad media pero varía el flujo y puede exigir buffering. La diferencia clave frente al distractor más próximo es la predicción del ancho de banda (CBR) frente a la variabilidad de VBR.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál de las siguientes afirmaciones describe correctamente la operación 'link' en un flujo de edición?",
+          "options": [
+            "Graba en el dispositivo de ingest generando proxies y reasignando file IDs para control del MAM.",
+            "Copia físicamente los ficheros de cámara al servidor y registra nuevo record timecode asignado por el servidor.",
+            "Crea referencias en el proyecto hacia ficheros existentes sin duplicar la esencia en almacenamiento del proyecto.",
+            "Transfiere los archivos originales y genera checksums para verificación obligatoria antes de su uso en el proyecto."
+          ],
+          "correctIndex": 2,
+          "explanation": "'Link' consiste en referenciar archivos existentes desde el proyecto sin copiarlos. La diferencia frente al distractor más cercano (opción 3) es que link no implica copia ni generación de checksums: esas acciones corresponden a procesos de ingest o importación verificada.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En edición lineal A/B‑Roll, indique la función operativa de las fuentes A y B, la prelectura y el mezclador:",
+          "options": [
+            "Las fuentes A y B contienen audio exclusivamente; la prelectura controla niveles y el mezclador gestiona efectos de sonido.",
+            "Fuentes A y B alternan la imagen en programa; la prelectura permite preparar la siguiente fuente en previo; el mezclador ejecuta el cambio o fundido entre A y B.",
+            "Fuentes A y B se usan para insertar gráficos; la prelectura actúa sobre el keyer y el mezclador solo controla audio.",
+            "Las fuentes A y B son redundantes entre sí; la prelectura sincroniza timecode y el mezclador reescribe metadatos."
+          ],
+          "correctIndex": 1,
+          "explanation": "En A/B‑Roll las dos fuentes de vídeo se alternan en programa, la prelectura prepara la fuente en previo y el mezclador realiza la transición entre A y B. Los distractores confunden funciones de audio, keying o metadatos que no son la función esencial en edición lineal.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: un técnico debe realizar una grabación en local alquilado fuera del centro habitual. ¿Qué medida preventiva tiene mayor prioridad para reducir riesgos durante la misión?",
+          "options": [
+            "Limitar la jornada a la mitad respecto al horario habitual sin realizar valoración previa del lugar.",
+            "Realizar una valoración de riesgos específica del lugar y documentar medidas de control (equipamiento, rutas de evacuación y responsabilidades).",
+            "Confiar en que el seguro de la productora cubre cualquier incidente y proceder sin medidas adicionales.",
+            "Permitir que cada trabajador elija libremente el equipo de protección personal según preferencia."
+          ],
+          "correctIndex": 1,
+          "explanation": "La acción prioritaria es realizar una evaluación de riesgos específica para la misión e implantar medidas concretas (equipamiento, rutas de evacuación, asignación de responsabilidades). Las otras opciones son insuficientes: reducir jornada sin evaluación no mitiga riesgos específicos; apoyarse solo en seguros o permitir elecciones individuales no constituye prevención adecuada.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: al incorporar HEVC/H.265 en un flujo profesional que hasta ahora usa AVC/H.264, la medida operativa necesaria es:",
+          "options": [
+            "Eliminar soporte para descodificación por software y confiar exclusivamente en GPU sin validar disponibilidad en destinos de entrega.",
+            "Sustituir inmediatamente todos los codificadores AVC por HEVC sin pruebas, para aprovechar la mayor eficiencia.",
+            "Evaluar compatibilidad end‑to‑end (decodificadores, hardware de reproducción y transcodificación), dimensionar recursos de cómputo y ejecutar pruebas de calidad y compatibilidad antes del despliegue.",
+            "Mantener los parámetros de AVC exactamente iguales al pasar a HEVC para garantizar equivalencia de calidad."
+          ],
+          "correctIndex": 2,
+          "explanation": "La adopción de HEVC exige evaluar la compatibilidad de decoders y dispositivos, dimensionar recursos y realizar pruebas end‑to‑end. Los distractores proponen acciones riesgosas: migración sin pruebas, confiar sin validar hardware o intentar equivalencias directas entre códecs.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la medida operativa que procede para aplicar el principio constitucional de igualdad y la prohibición de discriminación en la programación:",
+          "options": [
+            "Priorizar contenidos de un grupo demográfico en detrimento de otros para mejorar audiencias.",
+            "Aumentar la presencia de anuncios comerciales en franjas donde la audiencia sea menos diversa.",
+            "Establecer criterios editoriales que eviten estereotipos y trato diferencial por razón de género, origen, religión u otras circunstancias protegidas.",
+            "Eliminar toda referencia a diferencias culturales para evitar posibles conflictos."
+          ],
+          "correctIndex": 2,
+          "explanation": "Aplicar el principio de igualdad implica políticas editoriales que eviten trato discriminatorio y estereotipos. Los distractores son medidas incompatibles: priorizar un grupo demográfico, suprimir referencias culturales o incrementar publicidad no responden al mandato de igualdad; la diferencia clave es la adopción de criterios editoriales antidiscriminatorios.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál es la consecuencia operativa más típica de una adaptación incorrecta de impedancias en una cadena de vídeo con cable coaxial?",
+          "options": [
+            "Protección mejorada contra interferencias externas.",
+            "Incremento de la resolución vertical por mayor transferencia de señal.",
+            "Aumento del nivel de luminancia sin alterar la crominancia.",
+            "Reflexiones y desajuste de la señal que provocan pérdidas selectivas de frecuencia, imágenes con eco o atenuación, especialmente a altas frecuencias."
+          ],
+          "correctIndex": 3,
+          "explanation": "Una adaptación de impedancias incorrecta genera reflexiones (standing waves) y pérdidas de señal que afectan a la integridad y la respuesta en frecuencia, produciendo artefactos o atenuación. Los demás distractores son técnicamente implausibles o contrarios al efecto real.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_music_sync",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "En una escena con diálogo continuo y presencia de una frase musical con acentos marcados, indique la técnica de montaje más adecuada para lograr contrapunto entre imagen y música sin romper la continuidad sonora del diálogo:",
+          "options": [
+            "Realizar cortes de imagen coincidiendo con los acentos musicales usando J‑cuts o L‑cuts para mantener la pista de diálogo continua mientras la imagen se ajusta a la frase musical.",
+            "Silenciar la música en las pausas del diálogo para priorizar siempre la inteligibilidad del diálogo frente a la musicalidad.",
+            "Cortar el diálogo en cada acento musical para sincronizar ambos elementos estrictamente y evitar cualquier desajuste.",
+            "Eliminar la pista musical durante las secciones de diálogo para evitar competencia entre frase y voz."
+          ],
+          "correctIndex": 0,
+          "explanation": "La técnica adecuada es ajustar las entradas/salidas de imagen mediante J‑cuts/L‑cuts para que los cortes visuales coincidan con los acentos musicales, manteniendo la continuidad del diálogo en la pista sonora. Las otras opciones sacrifican contrapunto o la continuidad sonora: cortar el diálogo o suprimir la música rompe la intención narrativa.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que describe correctamente un límite operativo de un checksum en control de integridad antes y después de una transferencia:",
+          "options": [
+            "Un checksum sustituye a un control de calidad visual para comprobar integridad audiovisual.",
+            "Un checksum repara automáticamente los bits corruptos detectados durante la transferencia.",
+            "Un checksum identifica el tipo de corrupción física del soporte (p. ej. sectores defectuosos) sin necesidad de otras comprobaciones.",
+            "Un checksum verifica que los bits del fichero fuente y del destino coinciden exactamente, pero no garantiza por sí mismo la usabilidad del archivo ni protege contra colisiones deliberadas."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un checksum confirma la igualdad bit a bit entre origen y copia; no repara corrupción ni identifica la causa física ni reemplaza controles de calidad visual. La diferencia decisiva frente al distractor más cercano es que checksum es una verificación binaria, no una herramienta de diagnóstico o reparación.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_export_qc",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: antes de entregar un fichero para emisión, ¿qué comprobaciones técnicas deben incluirse en el control de calidad?",
+          "options": [
+            "Comprobar únicamente la resolución y que el nombre del fichero coincida con el pedido de emisión.",
+            "Verificación de formato/container y códec, comprobación de sincronía audio‑vídeo, niveles de luminancia y audio (picos/True Peak/LUFS), orden de campos si aplica y metadatos exigidos en la entrega.",
+            "Realizar sólo una inspección visual rápida en el NLE y entregar el proyecto fuente para que el receptor lo reconfirme.",
+            "Aplicar compresión adicional al fichero para reducir su tamaño y facilitar la entrega sin verificar niveles."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un QC completo incluye formato y codec, sincronía, niveles de vídeo y audio, orden de campos y metadatos requeridos. Los distractores omiten elementos críticos o proponen acciones inapropiadas (entregar proyecto fuente, sólo comprobar nombre o recomprimir sin QC).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_evs_loop",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico operativo: en un servidor EVS configurado en grabación en bucle (loop), ¿cómo se recupera y conserva operativamente una acción concreta registrada en un canal de loop?",
+          "options": [
+            "Marcando la acción durante la grabación y ejecutando la operación de 'save as clip' o 'create clip' que extrae el segmento del buffer circular y lo copia como clip persistente.",
+            "Deteniendo todo el servidor y copiando manualmente los ficheros de disco bruto al almacenamiento externo.",
+            "Reiniciando el canal de loop para forzar la escritura inmediata de todo el contenido a disco sin selección.",
+            "Esperando a que el sistema sobrescriba el buffer y luego capturando la acción desde la grabación en directo de otra cámara."
+          ],
+          "correctIndex": 0,
+          "explanation": "En EVS la operación estándar es marcar el evento en el buffer y convertirlo en clip persistente mediante 'save as clip' o funciones equivalentes; las otras opciones no permiten capturar de forma fiable la acción desde el buffer circular.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que refleja correctamente la relación entre frecuencia de muestreo, banda audible y aliasing según el teorema de Nyquist:",
+          "options": [
+            "La frecuencia de muestreo puede ser inferior a la máxima frecuencia audible siempre que se utilice un limitador de nivel.",
+            "La frecuencia de muestreo debe ser al menos el doble de la máxima frecuencia que se desea reproducir sin aliasing; por ejemplo, 44,1 kHz permite reconstruir hasta ~22,05 kHz.",
+            "La frecuencia de muestreo no influye en el aliasing si se emplean códecs con compresión perceptual.",
+            "Para evitar aliasing basta con aumentar la ganancia previa al muestreo."
+          ],
+          "correctIndex": 1,
+          "explanation": "El teorema de Nyquist exige una frecuencia de muestreo al menos doble de la máxima frecuencia de interés para evitar aliasing; 44,1 kHz cubre hasta ≈22,05 kHz. Las otras opciones son incorrectas: reducir muestreo o confiar en compresión o ganancia no evita aliasing.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a los principios generales y obligaciones preventivas recogidos en la Ley 31/1995:",
+          "options": [
+            "Exigir al trabajador la asunción total de responsabilidad por eliminar todos los riesgos inherentes a su puesto.",
+            "Adoptar medidas de protección colectiva preferentes frente a las individuales cuando resulten eficaces.",
+            "Realizar evaluación de riesgos y planificar medidas preventivas adaptadas al puesto.",
+            "Proporcionar formación e información adecuada a los trabajadores sobre los riesgos y medidas de protección."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley establece obligaciones como evaluación de riesgos, preferencia por medidas colectivas y formación; no impone al trabajador la responsabilidad total de eliminar todos los riesgos. La diferencia clave es que la opción correcta describe una exigencia indebida atribuida al trabajador.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación compatible con el uso y límites de la 'línea de tono de piel' en un vectorscopio:",
+          "options": [
+            "El vectorscopio con línea de piel sustituye la necesidad de corrección primaria de color en el flujo de trabajo.",
+            "La línea obliga a desplazar automáticamente los colores de todas las pieles hacia un único punto para normalizar tonos.",
+            "La línea de tono de piel sirve como referencia orientativa para ubicar clústeres cutáneos, pero no es una medida absoluta: varía con etnia, iluminación y balance de blancos, por lo que debe usarse junto a juicio visual.",
+            "La coincidencia exacta con la línea de tono de piel garantiza que no haya problemas de legalidad de gamut en el master final."
+          ],
+          "correctIndex": 2,
+          "explanation": "La línea de tono de piel es una referencia orientativa; su limitación es la variabilidad de tonos según etnia e iluminación, por lo que se usa con criterio visual. Los distractores proponen usos absolutos o sustitutorios incorrectos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_incendio",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que interpreta correctamente la relación entre clase de fuego, extintor apropiado y medida de seguridad aplicable:",
+          "options": [
+            "Un extintor de clase D (metales) es el idóneo para fuegos en instalaciones eléctricas comunes.",
+            "Un fuego de papel y madera se combate preferentemente con agentes halógenos sobre equipos energizados.",
+            "Para fuegos de líquidos inflamables (clase B) es preferible usar agua a presión para dispersar el combustible.",
+            "Un fuego originado por instalaciones eléctricas requiere corte de alimentación y extintor de CO2 o polvo; no usar agua hasta aislar la fuente eléctrica."
+          ],
+          "correctIndex": 3,
+          "explanation": "En incendios eléctricos es esencial aislar la alimentación y emplear CO2 o polvo; el uso de agua puede ser peligroso hasta cortar la corriente. Las otras opciones confunden agentes y clases: halógenos no son preferentes en sólidos combustibles, agua no es adecuada para líquidos inflamables y extintores de clase D son para metales reactivos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare estrategias: ante riesgo de obsolescencia de un formato y almacenamiento físico, ¿qué política es la más adecuada para preservación a largo plazo?",
+          "options": [
+            "Usar formatos propietarios en desuso por su supuesta mayor calidad, sin migración.",
+            "Conservar los soportes originales sin copiar ni verificar para mantener 'autenticidad' eterna.",
+            "Almacenar una única copia en un único LTO y confiar en su durabilidad sin comprobaciones.",
+            "Planificar migraciones periódicas a formatos y soportes actuales, con verificación de integridad y documentación de cambios."
+          ],
+          "correctIndex": 3,
+          "explanation": "La política correcta es migración periódica a formatos soportados con comprobaciones e inventario; conservar soportes sin verificar o confiar en una única copia son prácticas inseguras, y mantener formatos propietarios sin plan de migración incrementa obsolescencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Para mantener coherencia espacial en un raccord de mirada entre dos planos consecutivos, indique el elemento que debe conservarse:",
+          "options": [
+            "La combinación exacta de colorimetría entre ambos planos.",
+            "La dirección aparente de la mirada y la relación espacial entre actores y eje de acción.",
+            "El mismo punto de enfoque técnico en la cámara que grabó el primer plano.",
+            "La duración idéntica de cada uno de los planos en tiempo real."
+          ],
+          "correctIndex": 1,
+          "explanation": "El raccord de mirada exige conservar la dirección aparente de la mirada y coherencia espacial respecto al eje de acción; colorimetría, punto de enfoque técnico o duración no son los elementos decisivos para la continuidad espacial.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_project_media",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: al trasladar un proyecto NLE entre estaciones, ¿qué distingue operativamente los metadatos del proyecto de los archivos de esencia?",
+          "options": [
+            "Los metadatos del proyecto contienen estructura de bins, decisiones de montaje y referencias a rutas; la esencia son los ficheros multimedia reales alojados en almacenamiento separado.",
+            "Los metadatos del proyecto incluyen siempre una copia completa de cada fichero de esencia dentro del propio archivo de proyecto.",
+            "Los archivos de esencia incorporan las decisiones de montaje, transiciones y efectos usados en cada secuencia.",
+            "La exportación del proyecto siempre fusiona metadatos y esencia en un único archivo editable sin necesidad de relink."
+          ],
+          "correctIndex": 0,
+          "explanation": "El proyecto guarda la estructura, decisiones y referencias a rutas; la esencia son los archivos multimedia independientes. Las otras opciones confunden funciones: el proyecto no contiene copias íntegramente, ni la esencia almacena decisiones de montaje, ni existe una exportación que automáticamente fusione todo sin relink en todos los casos.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "044",
       "title": "Examen 044",
