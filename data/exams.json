@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-12",
+  "updatedAt": "2026-09-13",
   "exams": [
+    {
+      "id": "046",
+      "title": "Examen 046",
+      "date": "2026-09-13",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre la finalidad de la reforma introducida por la Ley 5/2017 y el mecanismo de elección parlamentaria de los órganos de RTVE:",
+          "options": [
+            "Restablecer la independencia de la Corporación mediante un sistema de nombramiento parlamentario con mayoría absoluta en una sola votación.",
+            "Buscar la independencia y pluralismo garantizando un procedimiento parlamentario que exige mayorías cualificadas y transparencia en la selección de los órganos de gobierno.",
+            "Someter la gestión editorial de RTVE al control directo del Gobierno mediante nombramientos ejecutivos propuestos por el poder ejecutivo.",
+            "Transformar RTVE en entidad completamente autogestionada sin intervención ni supervisión parlamentaria en la designación de sus órganos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta describe el objeto real de la reforma: reforzar independencia y pluralismo mediante un procedimiento parlamentario que busca mayorías cualificadas y criterios públicos en la designación. El distractor más próximo (primera opción) es incorrecto porque sugiere una designación por mayoría absoluta en una única votación, que no refleja el mecanismo que pretende pluralismo y garantías.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "En un almacenamiento compartido tipo SAN donde varios editores acceden simultáneamente a media, ¿qué medida técnica es la más eficaz para mantener rendimiento concurrente sin modificar la arquitectura física del sistema?:",
+          "options": [
+            "Aumentar el número de conexiones de red físicas por cliente sin limitar flujos lógicos.",
+            "Reducir el tamaño de los archivos de esencia mediante transcodificación a códecs más comprimidos en el servidor compartido.",
+            "Confiar en el locking de archivos a nivel de sistema operativo para serializar accesos y evitar conflictos de E/S.",
+            "Implementar reservas o cuotas de ancho de banda por workspace/sesión y priorización QoS sobre la red de almacenamiento."
+          ],
+          "correctIndex": 3,
+          "explanation": "La respuesta correcta es la reserva/priorización de ancho de banda por workspace: permite garantizar rendimiento concurrente sin cambiar hardware. El distractor más cercano (locking de archivos) evita sobrescrituras pero no garantiza ancho de banda ni rendimiento sostenido en lecturas/escrituras concurrentes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que interpreta correctamente la diferencia de principio entre PQ (ST2084) y HLG y su compatibilidad en distribución:",
+          "options": [
+            "HLG está pensado exclusivamente para emisiones en directo y no puede entregarse en archivos maestros ni en entregas on‑demand.",
+            "HLG exige metadata de masterización para su correcta visualización, mientras que PQ se adapta automáticamente a pantallas SDR sin metadatos.",
+            "PQ y HLG son intercambiables y pueden distribuirse sin transformación porque ambos usan el mismo mapeo de luminancia absoluta.",
+            "PQ es una función de transferencia electro‑óptica diseñada para masterización referenciada y utiliza metadata de display; HLG es una solución compatible hacia atrás con pantallas SDR y no requiere metadata de mastering."
+          ],
+          "correctIndex": 3,
+          "explanation": "PQ es una curva perceptual orientada a masters con metadatos de referencia del display; HLG es una solución híbrida que permite compatibilidad hacia pantallas SDR sin metadata. El distractor inmediato (segunda opción) invierte las exigencias de metadata y por tanto es incorrecto.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo adecuado para dimensionar un servidor de ingest/reproducción destinado a N canales concurrentes:",
+          "options": [
+            "Asegurar que cada canal disponga de un volumen RAID separado sin considerar el throughput agregado de la infraestructura compartida.",
+            "Dimensionar únicamente la capacidad de almacenamiento total (TB) suficiente para la duración prevista y confiar en el disco para gestionar picos momentáneos.",
+            "Dimensionar la memoria RAM del servidor al máximo y asumir que esto compensa limitaciones de red y disco en accesos concurrentes.",
+            "Calcular el bitrate agregado (r por canal × N), dimensionar red y disco para throughput superior a esa suma con un margen operativo y verificar IOPS/latencia para los accesos simultáneos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La secuencia correcta es calcular bitrate agregado y dimensionar red/disco con margen y comprobar IOPS/latencia para concurrencia. El distractor más cercano (usar solo capacidad en TB) es insuficiente porque no considera throughput ni concurrencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_target",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para un magazine audiovisual dirigido a público juvenil, ¿qué adaptación del estilo de edición responde mejor a ritmo, densidad y recursos del target?:",
+          "options": [
+            "Edición basada en planos estáticos, ausencia de música y transiciones suaves para no distraer al espectador.",
+            "Ajuste a planos largos, ritmo lento y explicaciones extensas para favorecer profundidad informativa, con mínimo uso de grafismos.",
+            "Planos más cortos y mayor variedad de encuadres, ritmo rápido, grafismo dinámico y música contemporánea; información concisa y visualmente jerarquizada.",
+            "Priorizar entrevistas largas sin cortes y menor uso de recursos gráficos para enfatizar contenido en detrimento del ritmo visual."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta combina ritmo acelerado, alta densidad visual y recursos gráficos, adaptados al target juvenil. El distractor más cercano propone planos largos y menor dinamismo, que no adaptan ritmo ni densidad al público indicado.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_postura",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Configuración postural que minimiza tensión lumbar, apoyo de antebrazos y posición de pies en un puesto de edición:",
+          "options": [
+            "Asiento a altura que permite pies apoyados en el suelo, apoyo lumbar ajustado, antebrazos paralelos al plano de trabajo y ángulo de rodilla cercano a 90°–100°.",
+            "Silla baja con piernas cruzadas para reducir tensión lumbar, antebrazos colgando y pantalla centrada al nivel del pecho.",
+            "Asiento alto sin apoyo lumbar para favorecer libertad de movimiento, antebrazos elevados y reposapiés opcional.",
+            "Mesa de trabajo elevada para que los antebrazos queden por encima del hombro y pantalla a la altura de la barbilla."
+          ],
+          "correctIndex": 0,
+          "explanation": "La configuración adecuada es pies apoyados, apoyo lumbar ajustado y antebrazos paralelos al plano de trabajo con ángulo de rodilla adecuado. Los distractores proponen posturas que aumentan estrés lumbar o de extremidades y son incorrectas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_color_order",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En un etalonaje multicámara con material en distintos gammas y exposiciones, ¿qué secuencia operativa garantiza una base técnica coherente antes de aplicar el look creativo (considerando normalización de espacio/gamma/rango, balance de blancos, ajuste de contraste/exposición y matching entre cámaras)?",
+          "options": [
+            "Balance de blancos → Normalización de espacio/gamma/rango → Ajuste de contraste/exposición → Matching entre cámaras → Aplicación del look",
+            "Ajuste de contraste/exposición → Normalización de espacio/gamma/rango → Balance de blancos → Matching entre cámaras → Aplicación del look",
+            "Normalización de espacio/gamma/rango → Balance de blancos → Ajuste de contraste/exposición → Matching entre cámaras → Aplicación del look",
+            "Normalización de espacio/gamma/rango → Ajuste de contraste/exposición → Aplicación del look → Matching entre cámaras"
+          ],
+          "correctIndex": 2,
+          "explanation": "La secuencia correcta es normalizar primero (convertir log/RAW al espacio de trabajo y garantizar rango legal), luego establecer el balance de blancos sobre esa base linealizada, después ajustar exposición y contraste para restaurar rango tonal, y una vez homogéneos los parámetros técnicos efectuar el matching entre cámaras y, finalmente, aplicar el look creativo. El distractor más próximo (A) invierte balance y normalización; realizar el balance antes de llevar el material al espacio de trabajo puede producir correcciones imprecisas porque las transformaciones de gamma y conversión de color afectan a la percepción y a los cálculos de balance. C y D son incorrectas porque adelantan ajustes de contraste o el look antes de tener una base técnica normalizada y coincidente entre cámaras, lo que dificulta un matching fiable.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para asignar una 'ocupación tipo' y clasificar profesionalmente un puesto según el III Convenio Colectivo de RTVE, ¿qué criterio debe prevalecer?:",
+          "options": [
+            "La antigüedad en el puesto como único criterio determinante.",
+            "El título académico del trabajador sin considerar funciones efectivas.",
+            "Las funciones reales y responsabilidades del puesto, incluyendo tareas y grado de autonomía.",
+            "El horario concreto de trabajo sin consideración de contenido funcional."
+          ],
+          "correctIndex": 2,
+          "explanation": "La clasificación profesional debe guiarse por las funciones y responsabilidades efectivas del puesto. Los distractores priorizan criterios administrativos (título, antigüedad, horario) que no prevalecen frente a la descripción funcional.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En un flujo de ingesta donde coexisten source, record y auxiliary timecode, ¿qué describe mejor la función práctica del auxiliary timecode?:",
+          "options": [
+            "Un checksum de verificación de integridad que sustituye al record timecode.",
+            "Campo adicional que puede registrar otra referencia temporal (por ejemplo, timecode de cámara) para facilitar relink y referencias sin reemplazar el record o el source timecode.",
+            "El timecode que obliga a todos los dispositivos a sincronizar su reloj interno de sistema.",
+            "Un campo redundante que siempre refleja idénticamente el record timecode."
+          ],
+          "correctIndex": 1,
+          "explanation": "El auxiliary timecode sirve como campo adicional para conservar otra referencia temporal (ej. cámara) útil en relink y reconformado. No es checksum ni forzosamente idéntico al record TC; esos distractores son incorrectos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Para indicar que ha transcurrido un lapso de tiempo indefinido pero manteniendo continuidad causal entre acciones, ¿qué transición es la más adecuada?:",
+          "options": [
+            "Corte seco entre planos contiguos.",
+            "Fundido encadenado (dissolve).",
+            "Cortinilla lateral rápida (wipe).",
+            "Fundido a negro seguido de corte abrupto."
+          ],
+          "correctIndex": 1,
+          "explanation": "El fundido encadenado sugiere continuidad causal con paso temporal atenuado; los otros recursos rompen continuidad temporal o introducen ruptura más clara.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_umid",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que describe correctamente la función operativa de un UMID embebido en la esencia de un clip:",
+          "options": [
+            "Campo editable por el usuario para registrar notas de edición durante el trabajo offline.",
+            "Checksum criptográfico que garantiza la integridad del contenido y reemplaza verificaciones externas.",
+            "Indicador de bitrate destinado a orientar la reproducción en streaming adaptativo.",
+            "Identificador único persistente destinado a asegurar trazabilidad y distinguir versiones entre sistemas, independiente del nombre de fichero."
+          ],
+          "correctIndex": 3,
+          "explanation": "El UMID es un identificador único persistente para trazabilidad y gestión de activos; no es un checksum ni un campo de nota editable por el usuario, que son funciones distintas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Procedimiento directo para verificar que el crosspoint entre la fuente A y el destino B en una matriz de vídeo es el correcto:",
+          "options": [
+            "Conmutar la matriz para conectar A a B, enviar una señal de prueba reconocible por la fuente y comprobar en B con monitor/analizador la presencia y calidad de esa señal.",
+            "Comprobar únicamente los indicadores del panel de control de la matriz sin observar la señal en destino.",
+            "Reiniciar la matriz y suponer que las rutas se restablecen correctamente según la configuración almacenada.",
+            "Comprobar las etiquetas físicas de entrada y salida sin realizar medición de señal."
+          ],
+          "correctIndex": 0,
+          "explanation": "La verificación debe incluir conectar la fuente al destino y comprobar la señal real en el receptor con monitor/analizador. Los distractores confían solo en indicadores, etiquetas o reinicios sin validar la ruta en el plano de señal.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a límites y compatibilidades de sistemas de archivos comunes en soportes audiovisuales:",
+          "options": [
+            "FAT32 impone un límite práctico de 4 GiB por fichero.",
+            "exFAT permite ficheros de tamaño mayor a 4 GiB y es adecuado para tarjetas y unidades que deben intercambiarse entre sistemas.",
+            "EXT2/EXT3/EXT4 prohíben el almacenamiento de ficheros mayores de 2 MiB por diseño.",
+            "NTFS soporta ficheros extremadamente grandes y ofrece características avanzadas de seguridad y journaling."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación incorrecta (excepción) es la que afirma un límite de 2 MiB en ext, que no existe. FAT32 sí tiene límite ~4 GiB; exFAT y NTFS permiten ficheros grandes; por tanto la cuarta opción es la excepción.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Tras descargar y verificar íntegramente el contenido de un soporte de estado sólido (SSD/CFast/SD), ¿qué práctica es la recomendada antes de volver a usarlo en rodaje?:",
+          "options": [
+            "Confirmar checksums, registrar metadatos de ingest y, si se reutiliza, realizar un formateo completo o el procedimiento recomendado por el fabricante tras la verificación.",
+            "Formatear inmediatamente en la cámara sin verificaciones adicionales.",
+            "Sobrescribir archivos con zeros en el servidor antes de reinsertar la tarjeta en cámara sin conservar registros.",
+            "Desechar el soporte tras cada uso para evitar riesgos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica correcta es verificar integridad (checksums), registrar y, si se reutiliza, formatear según fabricante tras la verificación. Formatear sin verificar o desechar sistemáticamente son prácticas inadecuadas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones y elija la que describe mejor las fuentes y principios del modelo de financiación según la Ley 8/2009:",
+          "options": [
+            "Financiación basada exclusivamente en ingresos publicitarios sin limitaciones, para asegurar autosuficiencia financiera.",
+            "Sistema mixto que combina aportaciones públicas y recursos propios, con restricciones y principios destinados a preservar independencia editorial.",
+            "Financiación por suscripción obligatoria de los usuarios similar a una tasa o canon universal.",
+            "Financiación mediante endeudamiento privado autorizado sin control presupuestario."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 8/2009 contempla un modelo mixto con aportaciones públicas y recursos propios y establece restricciones para proteger independencia. Las otras opciones presentan modelos exclusivos o sin las restricciones previstas y son incorrectas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a configuraciones RAID y tolerancia a fallo:",
+          "options": [
+            "RAID 5 tolera la pérdida simultánea de dos discos sin pérdida de datos.",
+            "RAID 10 puede tolerar la falla de dos discos si no pertenecen al mismo espejo.",
+            "RAID 6 permite tolerancia a la falla simultánea de dos discos.",
+            "RAID 1 tolera la falla de un disco manteniendo la disponibilidad del conjunto."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación incorrecta es que RAID 5 tolera dos fallos simultáneos: RAID 5 solo tolera un fallo de disco. RAID 6 y RAID 10 (en ciertas distribuciones) sí pueden tolerar dos fallos en condiciones específicas; RAID 1 tolera un fallo.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para verificar operativamente que audio embebido y datos auxiliares (ANC) viajan correctamente en una señal SDI, ¿qué comprobación directa realiza un técnico?:",
+          "options": [
+            "Usar un medidor de loudness en la salida analógica sin inspeccionar los paquetes SDI.",
+            "Comprobar únicamente la calidad de imagen en el monitor y asumir que el audio embebido está presente si la imagen es correcta.",
+            "Revisar el contrato de transporte para confirmar que la señal incluye audio embebido sin medirla.",
+            "Utilizar un monitor/analizador SDI que de‑embeddee la señal y muestre los canales de audio y los paquetes ANC para confirmar presencia, mapeo de canales y formato."
+          ],
+          "correctIndex": 3,
+          "explanation": "La comprobación correcta consiste en usar un analizador SDI que permita de‑embed y visualizar audio y paquetes ANC para confirmar mapeo y formato. Los otros métodos no verifican directamente los datos dentro de la señal SDI.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que distingue correctamente efectos temporales y artefactos entre entrelazado y progresivo:",
+          "options": [
+            "El progresivo divide el fotograma en dos campos temporales causando combing; el entrelazado siempre evita artefactos de movimiento en pantallas modernas.",
+            "El entrelazado captura dos campos en instantes distintos y suele producir combing o tearing en movimiento al mostrarse en pantallas progresivas; el progresivo captura todo el fotograma a un instante y puede presentar judder a bajas velocidades de cuadro.",
+            "Ambos formatos son idénticos en efecto temporal y solo difieren en resolución espacial.",
+            "El entrelazado elimina totalmente el fenómeno de judder en material de cámara lenta."
+          ],
+          "correctIndex": 1,
+          "explanation": "El entrelazado consta de dos campos capturados en instantes distintos y provoca combing en displays progresivos; el progresivo captura el fotograma completo, pudiendo mostrar judder si la frecuencia de muestreo temporal es baja. Las demás afirmaciones son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Recomendación operativa para la colocación de una pantalla de visualización para minimizar reflejos y tensión visual:",
+          "options": [
+            "Colocar la pantalla a una distancia de brazo extendido (aprox. 50–70 cm), con la parte superior del monitor ligeramente por debajo del nivel de los ojos y orientación perpendicular a fuentes luminosas; controlar iluminación y evitar reflejos directos.",
+            "Situar la pantalla lo más cerca posible del usuario para aumentar detalle y orientarla hacia ventanas para mayor luz natural.",
+            "Colocar la pantalla muy alta respecto a la línea de visión para forzar la mirada hacia arriba y equilibrar postura.",
+            "Apoyar la pantalla sobre superficies brillantes para mejorar contraste y visibilidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La recomendación correcta fija distancia de visión adecuada, altura ligeramente por debajo de la línea de ojos, y orientación que minimice reflejos. Las otras opciones favorecen reflejos o posturas perjudiciales.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a consideraciones operativas en el cálculo del ancho de banda necesario para atender flujos audiovisuales concurrentes:",
+          "options": [
+            "Para garantizar que un enlace no se sature debe dimensionarse la capacidad neta al menos igual a la suma de los bitrates efectivos de todos los flujos concurrentes multiplicada por (1 + margen_red), donde el margen_red incorpora cabeza de paquetes y contingencias.",
+            "Planificar usando únicamente el bitrate medio de flujos VBR sin considerar su variabilidad y picos de corto plazo suele subestimar la ocupación máxima y, por tanto, es una práctica de cálculo insegura.",
+            "Si todos los flujos son CBR y perfectamente sincronizados, no es necesario prever margen por overhead ni variaciones; la capacidad calculada sin margen garantiza ausencia de saturación.",
+            "Es imprescindible incluir en el cálculo los overheads de encapsulado y de capa enlace (cabeceras IP/UDP/RTP, CRC, preámbulos, etc.), porque incrementan el bitrate efectivo por flujo respecto al payload nominal."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 4 es la excepción: aunque los flujos sean CBR y sincronizados, existen cargas adicionales (overhead de protocolos, framing físico, posibilidades de retransmisión o jitter que exijan buffers) que hacen necesario prever margen. Las opciones 1 y 3 recogen prácticas correctas (incorporar margen y overhead) y la 2 es verdadera al advertir el riesgo de usar solo bitrates medios en VBR; la 4 falla al afirmar que el margen puede omitirse.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "045",
       "title": "Examen 045",
