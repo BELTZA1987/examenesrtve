@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-13",
+  "updatedAt": "2026-09-14",
   "exams": [
+    {
+      "id": "047",
+      "title": "Examen 047",
+      "date": "2026-09-14",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Según la Ley 13/2022, señale la obligación concreta que deben cumplir los prestadores de servicios audiovisuales en materia de accesibilidad:",
+          "options": [
+            "Identificar en la plataforma los contenidos dirigidos a menores con una etiqueta de advertencia genérica sobre accesibilidad.",
+            "Garantizar medios de accesibilidad como subtitulado, audiodescripción y señas cuando el contenido y el servicio lo requieran, y facilitar opciones de acceso desde la propia interfaz.",
+            "Ofrecer formación en accesibilidad únicamente al personal técnico de realización, sin obligación de adaptar la interfaz de usuario.",
+            "Publicar trimestralmente un informe público sobre inversión en accesibilidad sin obligación de aplicar medidas concretas en los contenidos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley obliga a que los prestadores faciliten medios concretos de accesibilidad (subtítulos, audiodescripción, lengua de signos) y opciones desde la interfaz; las otras opciones son meras obligaciones informativas o parciales y no cubren la exigencia de facilitar los modos de acceso.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Al componer un gráfico con canal alpha sobre un fondo oscuro aparecen halos claros en los bordes del gráfico. ¿Cuál es la causa técnica más probable?",
+          "options": [
+            "El espacio de color del gráfico está en gama log y el monitor en Rec.709, produciendo halos por diferencia de gamma.",
+            "Se empleó un gráfico con alpha premultiplicado cuyos canales RGB ya incluían color de fondo claro; al sobrecomponer sobre oscuro quedan residuos claros en los bordes.",
+            "El keyer aplica un filtro de suavizado (feather) excesivo que introduce luminancia no deseada en los bordes.",
+            "Se usó un archivo con alpha straight pero se interpretó como premultiplicado, generándose halos oscuros por inversión de la máscara."
+          ],
+          "correctIndex": 1,
+          "explanation": "El síntoma de halos claros en bordes suele deberse a que los RGB ya están premultiplicados con un fondo claro; al componer sobre oscuro el color de fondo preexistente aparece como fringing. El distractor más próximo (interpretación como straight/premultiplied inversa) describe un efecto distinto (halos oscuros) y no explica un halo claro.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Seleccione el conjunto de elementos que caracteriza un accidente 'in itinere':",
+          "options": [
+            "Se produce durante un desplazamiento habitual entre domicilio y centro de trabajo en el itinerario razonable y en horario normal, sin pausas no justificadas fuera del trayecto.",
+            "Ocurre fuera del horario laboral, en desplazamiento no habitual y sin relación con el trayecto entre domicilio y lugar de trabajo.",
+            "Tiene lugar exclusivamente dentro de las instalaciones de la empresa y durante la jornada de trabajo.",
+            "Se refiere a lesiones aparecidas tras una misión profesional en el extranjero y está siempre cubierto por la cobertura de accidente de trabajo."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un accidente in itinere se define por producirse en el desplazamiento habitual entre domicilio y lugar de trabajo en un itinerario razonable y en horario normal; las otras opciones describen supuestos que no encajan con esa definición.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Para sincronizar varias cámaras mediante código de tiempo común, es imprescindible que:",
+          "options": [
+            "Todas las cámaras registren el mismo formato de codec aunque no compartan código de tiempo.",
+            "Las cámaras estén físicamente conectadas entre sí por SDI para que el NLE pueda leer su TC.",
+            "Se utilicen ondas de audio idénticas en todas las pistas para alinear por forma de onda exclusivamente.",
+            "Las cámaras compartan el mismo código de tiempo continuo y la misma velocidad de cuadro durante la grabación, permitiendo al NLE agrupar clips por TC."
+          ],
+          "correctIndex": 3,
+          "explanation": "La condición esencial para sincronizar por timecode es que las cámaras registren el mismo código de tiempo continuo y el mismo framerate; los demás puntos son irrelevantes o insuficientes para sincronización por TC.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Relaciona correctamente las ventanas de medición LUFS con su definición operativa: integrated, short‑term y momentary.",
+          "options": [
+            "Integrated = ventana de 400 ms; Short‑term = ventana de 3 s; Momentary = promedio sobre toda la pieza.",
+            "Integrated = ventana de 3 s; Short‑term = promedio de toda la pieza; Momentary = ventana de 1 s.",
+            "Integrated = promedio sobre toda la pieza; Short‑term = ventana de 3 s; Momentary = ventana de 400 ms.",
+            "Integrated = promedio ponderado por escenas; Short‑term = 1 s; Momentary = 10 ms."
+          ],
+          "correctIndex": 2,
+          "explanation": "La definición técnica estándar es: integrated = promedio durante toda la pieza; short‑term ≈ 3 s; momentary ≈ 400 ms. Los distractores alteran las ventanas y por tanto son incorrectos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Seleccione la afirmación que diagnostica correctamente la diferencia técnica entre MOV/MP4 y MXF:",
+          "options": [
+            "MOV y MP4 son códecs orientados a emisión; MXF es un contenedor de consumo doméstico.",
+            "MOV/MP4 son contenedores ampliamente usados en entornos de consumo y edición para encapsular tracks y diversos códecs; MXF es un estándar profesional (SMPTE) diseñado para encapsulado de esencia y metadatos en flujos de emisión y archivo.",
+            "MXF sólo acepta codecs intraframe y no puede encapsular H.264 ni HEVC.",
+            "MOV/MP4 incluyen siempre metadatos de emisión compatibles con automatismos de playlist, mientras que MXF carece de metadatos."
+          ],
+          "correctIndex": 1,
+          "explanation": "MOV/MP4 son contenedores de propósito general que pueden llevar diversos códecs; MXF es un formato profesional estandarizado para encapsular esencia y metadatos en entornos de emisión/archivo. Los otros enunciados son técnicamente erróneos o excesivamente absolutos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Respecto al intercambio operativo entre EVS y un sistema NLE durante retransmisión, cuál de las siguientes afirmaciones es la más adecuada:",
+          "options": [
+            "No es necesario conservar handles al exportar desde EVS porque la retransmisión siempre requiere el clip exacto sin edición.",
+            "Durante retransmisión los clips exportados quedan inhabilitados en EVS hasta que el NLE confirme la edición.",
+            "Los clips exportados desde EVS siempre son intraframe y requieren reconversión para cualquier NLE.",
+            "Al exportar para edición se debe proporcionar handles adecuados, elegir un códec compatible con el NLE y mantener el clip accesible en el EVS o en copia accesible hasta confirmar la publicación, ya que durante retransmisión el mismo material puede requerirse en origen."
+          ],
+          "correctIndex": 3,
+          "explanation": "El flujo correcto implica proporcionar handles, usar un códec que el NLE acepte o transcodificar, y mantener disponibilidad del clip en EVS o en copia hasta confirmación; las otras afirmaciones generalizan incorrectamente o son falsas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor recoge la función de servicio público atribuida a la Corporación RTVE según la Ley 17/2006:",
+          "options": [
+            "RTVE actúa exclusivamente como operador comercial sin obligaciones de pluralismo o de acceso universal.",
+            "RTVE está obligada por la ley a priorizar intereses comerciales por encima del principio de servicio público.",
+            "La ley limita a RTVE a ofrecer contenidos únicamente de entretenimiento y no impone criterios de calidad informativa.",
+            "La Corporación tiene la misión de prestar un servicio público audiovisual que privilegia el pluralismo, la veracidad y el acceso universal a la información, con obligaciones de imparcialidad y respeto a derechos fundamentales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley define a RTVE como entidad de servicio público con obligaciones de pluralismo, veracidad y acceso universal; las demás opciones contradicen ese marco.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Entre las siguientes causas de zumbido o 'hum' por bucle de masa, ¿cuál es la más compatible con el origen clásico de un bucle de masa en un sistema audiovisual?",
+          "options": [
+            "Mal ajuste de gain staging en la mesa sin conexión a tierra implicada.",
+            "Uso de cables balanceados con impedancia correctamente coincidente.",
+            "Interferencia RFI puntual debida a un transmisor cercano que afecta solo a un canal.",
+            "Diferencia de potencial entre tierras conectadas en extremos distintos de la cadena de audio (equipos alimentados en tomas distintas)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El bucle de masa clásico se debe a diferencias de potencial entre tierras en equipos conectados a distintas tomas; los otros enunciados no describen el origen típico de un bucle de masa.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que distingue correctamente montaje paralelo y montaje alterno:",
+          "options": [
+            "Montaje paralelo presenta acciones simultáneas en espacios diferentes que convergen o contrastan, mientras que el montaje alterno intercala escenas separadas en el tiempo que se asocian por tema o contraste sin necesidad de simultaneidad.",
+            "Montaje paralelo intercala acciones no relacionadas temáticamente; montaje alterno muestra siempre simultaneidad temporal estricta.",
+            "Ambos términos son sinónimos y se usan indistintamente.",
+            "Montaje alterno exige convergencia narrativa obligatoria al final, y el paralelo nunca establece relación temática."
+          ],
+          "correctIndex": 0,
+          "explanation": "El montaje paralelo pone en relación acciones simultáneas para comparar o converger; el montaje alterno intercala acciones temporalmente separadas asociadas por tema o contraste. Las otras opciones son incorrectas o absolutas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Sobre la familia XAVC, identifique la afirmación correcta que diferencia Intra y Long‑GOP y su aplicación habitual:",
+          "options": [
+            "XAVC Intra utiliza compresión inter‑frame y está pensado sólo para distribución; Long‑GOP usa intraframe y es preferido para edición.",
+            "XAVC Intra emplea compresión intraframe (cada frame codificado independientemente) y se usa en producción y etalonaje por su calidad; XAVC Long‑GOP usa compresión inter‑frame para mayor eficiencia en almacenamiento y difusión.",
+            "No existen variantes Intra y Long‑GOP en la familia XAVC; todas son idénticas en compresión.",
+            "XAVC Long‑GOP no admite perfiles de alta calidad y sólo se usa en baja resolución."
+          ],
+          "correctIndex": 1,
+          "explanation": "XAVC ofrece variantes intraframe (Intra) para calidad y edición y Long‑GOP inter‑frame para eficiencia; las otras afirmaciones niegan la existencia de las variantes o contienen errores sobre su uso.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un flujo de ingesta verificada, ¿qué secuencia de acciones es la compatible y correcta para garantizar integridad y registro?",
+          "options": [
+            "Copiar bit‑a‑bit desde el soporte, calcular y verificar checksum, validar estructura y códec, y registrar metadatos y resultado del control en el sistema de gestión.",
+            "Transcodificar directamente en origen, eliminar la tarjeta, y registrar el clip en la base de datos.",
+            "Editar el clip inmediatamente en la estación sin validación y dejar verificación para posterior archivado.",
+            "Copiar sólo los proxies al servidor, trabajar sobre ellos y no registrar nada sobre la esencia original."
+          ],
+          "correctIndex": 0,
+          "explanation": "La secuencia correcta es copia bit‑a‑bit, checksum y verificación estructural, control de calidad y registro de metadatos; las otras opciones omiten verificaciones o confunden proxies con la esencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Señale la afirmación que constituye una excepción respecto a los derechos y obligaciones en materia de prevención de riesgos laborales:",
+          "options": [
+            "El empresario debe proporcionar información y formación en PRL adecuada al puesto.",
+            "El trabajador está obligado a colaborar con las medidas preventivas y a utilizar correctamente los medios de protección facilitados.",
+            "La ley exige que la formación en PRL se renueve automáticamente cada año para todos los puestos, independientemente del riesgo.",
+            "El trabajador tiene derecho a ser consultado y a participar en materias de prevención."
+          ],
+          "correctIndex": 2,
+          "explanation": "La obligación de renovar automáticamente la formación cada año para todos los puestos no es un requisito genérico; la legislación exige formación adecuada y periódica según riesgo, pero no impone una renovación anual indiscriminada. Las demás afirmaciones reflejan derechos u obligaciones reales.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "¿Qué comportamiento de la señal indica con mayor probabilidad inversión de polaridad en uno de los canales frente a un desfase temporal entre canales?",
+          "options": [
+            "Inversión de polaridad se identifica porque la forma de onda del canal invertido aparece como espejo (fase de 180°) y en mono produce atenuación uniforme; un desfase temporal introduce comb‑filtering dependiente de la frecuencia.",
+            "Cancelación total en mono que varía con la frecuencia de forma compleja (peines) y desplazamiento de fase dependiente de la frecuencia indica inversión de polaridad.",
+            "Si al invertir uno de los canales la correlación mejora, entonces hay un problema de pérdida de bits en la señal.",
+            "Un desfase temporal siempre se detecta por inversión completa de la forma de onda del canal afectado."
+          ],
+          "correctIndex": 0,
+          "explanation": "La inversión de polaridad produce inversión de la forma de onda (180°) con atenuación en mono; el desfase temporal genera comb‑filtering y efectos dependientes de la frecuencia. Los otros enunciados confunden síntomas o son falsos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión el tratamiento constitucional de la libertad de expresión, el derecho a la información veraz y sus límites y garantías.",
+          "options": [
+            "La Constitución reconoce la libertad de expresión y el derecho a informar como derechos fundamentales, establece la prohibición de la censura previa y garantiza tutela posterior; el principio de veracidad permite limitar la difusión de informaciones manifiestamente falsas cuando causen daño a otros derechos o al orden público, sin erigir una obligación constitucional general de verificación previa para los comunicadores.",
+            "La libertad de expresión es un derecho que admite controles previos por parte de la Administración siempre que el objetivo sea evitar noticias falsas; la veracidad se garantiza mediante autorizaciones y censura previa cuando resulte necesaria para proteger el orden público.",
+            "El derecho a la información veraz prevalece automáticamente sobre la libertad de expresión: ante conflicto entre ambas, la Constitución otorga prioridad a la veracidad, autorizando sanciones administrativas sin necesidad de valorar daño concreto.",
+            "La regulación constitucional sitúa la responsabilidad principal de la veracidad en los propios medios y profesionales, de modo que las limitaciones se orientan esencialmente a imponer obligaciones deontológicas y procedimientos internos previos a la difusión, más que a garantías procesales públicas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 recoge los principios constitucionales: protección de la libertad de expresión e información como derechos fundamentales, la prohibición de censura previa y la existencia de tutela posterior; además reconoce que la veracidad justifica restricciones frente a informaciones claramente falsas que lesionen derechos o el orden público, pero sin convertir en norma constitucional una obligación general de verificación previa. El distractor más próximo (opción 4) parece razonable al asignar responsabilidad a los medios, pero confunde el plano constitucional con normas deontológicas o administrativas: la Constitución define garantías y límites generales (prohibición de censura previa, protección de otros derechos, tutela judicial), no impone exclusivamente a los medios obligaciones internas previas como sustituto de esas garantías.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Para diseñar proxies adecuados a un flujo de edición, indique el conjunto de criterios operativos correcto:",
+          "options": [
+            "Máxima compresión con resolución mínima (p.ej. 240p) y eliminación de metadatos para ahorrar espacio.",
+            "Proxies en formatos propietarias no reproducibles fuera de un NLE concreto para garantizar control de acceso.",
+            "Resolución suficiente para identificación visual (por ejemplo 720p o equivalente), bitrate reducido, códec ampliamente compatible, conservación de timecode y metadatos relevantes.",
+            "Usar siempre proxies intraframe de muy alto bitrate para evitar cualquier pérdida de calidad, aunque aumente notablemente el almacenamiento."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un buen diseño de proxies busca equilibrio: resolución que permita identificación (ej. 720p), bitrate reducido y preservación de timecode/metadatos; las otras opciones son o excesivas en compresión o imprácticas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En una política de archivo con LTO/LTFS, ¿qué limitación operativa debe diagnosticarse con prioridad al diseñar acceso y verificación?",
+          "options": [
+            "Que LTFS impide montar la cinta como sistema de ficheros y no permite acceso a nivel fichero.",
+            "Que LTO almacena únicamente proxies y no es apto para masters de alta resolución.",
+            "La latencia de acceso y la dependencia de compatibilidad entre generaciones de LTO que afectan tiempo de búsqueda y posibilidad de leer cartuchos en hardware futuro.",
+            "Que las cintas LTO no admiten checksums ni verificación de integridad."
+          ],
+          "correctIndex": 2,
+          "explanation": "LTFS ofrece acceso a nivel fichero, pero su limitación operativa clave es la latencia de cinta y la dependencia de generaciones y drives; las otras opciones son falsas o equivocadas sobre capacidades reales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_waveform_luma",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En el monitor de forma de onda la luminancia de una señal sobrepasa los límites legales en varias escenas. La medida operativa más adecuada es:",
+          "options": [
+            "Ignorar el waveform y confiar en el visor creativo para mantener el look deseado.",
+            "Aplicar ajustes de ganancia/offset o usar un legalizador para reducir los picos y asegurar que la señal entregue dentro de los niveles permitidos antes de emisión.",
+            "Incrementar el contraste general para compensar los picos de luminancia.",
+            "Recodificar el fichero en un contenedor diferente sin modificar niveles."
+          ],
+          "correctIndex": 1,
+          "explanation": "La acción correcta es ajustar niveles (ganancia/offset) o usar un legalizador para cumplir límites legales; los otros pasos no corrigen los picos de luminancia antes de emisión.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Respecto al uso de la elipsis para comprimir tiempo narrativo, cuál de las siguientes afirmaciones es la correcta:",
+          "options": [
+            "La elipsis elimina sucesos sin riesgo de pérdida de comprensión siempre que el espectador conozca el guion completo.",
+            "La elipsis debe evitarse en todos los géneros para no confundir al público.",
+            "La elipsis consiste en suprimir tiempo narrativo preservando la continuidad causal y la comprensión si se conservan elementos de enlace visual o sonoro que orienten al espectador.",
+            "La elipsis equivale siempre a un fundido encadenado entre dos planos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La elipsis suprime segmentos temporales pero mantiene comprensión si se brindan pistas que conecten causa y efecto; las demás opciones son absolutas o equivocadas sobre su naturaleza.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Tras copiar la estructura de carpetas XDCAM al servidor conservando nombres e índices, algunos clips se interrumpen a mitad de reproducción. Señale la afirmación que constituye una excepción (no explica la causa probable relacionada con la estructura XDCAM):",
+          "options": [
+            "Que ciertos clips están 'spanned' y se dividen en varios archivos que requieren lectura coordinada por el reproductor compatible con spanning.",
+            "Falta de metadatos o parámetros dentro de los MXF que impidan la reconformación correcta, independientemente de las carpetas visibles.",
+            "La presencia de segmentos de esencia fragmentada o headers incompletos que exigen herramienta compatible para reconstruir el clip completo.",
+            "Que los archivos XDCAM son equivalentes a MP4 planos y pueden reproducirse íntegramente con cualquier reproductor MP4 estándar sin depender de la estructura o índices."
+          ],
+          "correctIndex": 3,
+          "explanation": "La excepción (falsa) es afirmar que los archivos XDCAM son simples MP4 reproducibles por cualquier reproductor; en realidad XDCAM puede emplear spanning, fragmentación y metadatos que requieren herramientas compatibles. Las otras opciones describen causas válidas.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "046",
       "title": "Examen 046",
