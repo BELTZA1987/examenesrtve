@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-14",
+  "updatedAt": "2026-09-15",
   "exams": [
+    {
+      "id": "048",
+      "title": "Examen 048",
+      "date": "2026-09-15",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Al planificar turnos rotativos en un equipo de edición, ¿qué obligación organizativa impone el III Convenio de RTVE respecto a la programación y comunicación de los turnos al personal?",
+          "options": [
+            "Limitarse a acordar turnos verbalmente con el responsable de equipo; el registro escrito no es obligatorio.",
+            "Aplicar automáticamente, sin comunicación previa, los cambios de turno discrecionales del responsable para mantener la producción.",
+            "Notificar con antelación razonable el calendario de turnos y registrar las variaciones de forma trazable.",
+            "Programar turnos únicamente en función de la disponibilidad del responsable técnico, sin derecho a reclamación administrativa."
+          ],
+          "correctIndex": 2,
+          "explanation": "El III Convenio obliga a planificar y comunicar los turnos con antelación y a dejar constancia de las variaciones para control y derechos laborales; los distractores describen prácticas unilaterales o informales que no satisfacen esa obligación (el más cercano erróneo es imponer cambios sin comunicación).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto al intercambio de proyectos entre estaciones, indique la afirmación que mejor distingue el alcance transferible de un EDL frente a un AAF en relación con pistas, efectos y metadatos:",
+          "options": [
+            "Un AAF transporta múltiples pistas, efectos, transiciones y metadatos de pista, mientras que un EDL sólo recoge decisiones de corte y referencias temporales básicas.",
+            "Un EDL incluye información completa de efectos por pista y todos los metadatos, mientras que el AAF sólo contiene cortes y nombres de archivos.",
+            "Ambos formatos son equivalentes en capacidad de transferir efectos y metadatos entre NLEs modernos.",
+            "El EDL permite transportar clips multicámara y data bin completa; el AAF sólo es útil para audio."
+          ],
+          "correctIndex": 0,
+          "explanation": "El AAF está diseñado para intercambiar proyecto con múltiples pistas, efectos y metadatos; el EDL es un listado de decisiones de edición con referencias temporales básicas. El distractor más próximo (que afirma equivalencia) falla por ignorar las limitaciones estructurales del EDL.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Un canal de audio en un rack presenta sobretemperatura en la etapa de salida y caída de nivel en la carga. Según ley de Ohm y potencia, ¿cuál diagnóstico es el más coherente?",
+          "options": [
+            "Una resistencia de carga demasiado baja provoca aumento de corriente I = V/R y mayor disipación P = V·I, originando sobrecalentamiento en la etapa de salida.",
+            "Una resistencia de carga elevada provoca mayor corriente y por tanto exceso de potencia disipable en la etapa, causando sobretemperatura.",
+            "Una caída de tensión en la salida siempre indica una impedancia de entrada demasiado baja en el amplificador de salida, sin relación con la potencia.",
+            "Un incremento de impedancia de carga reduce la corriente pero aumenta la potencia entregada por el dispositivo, explicando el calentamiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "Si la carga tiene resistencia baja la corriente aumenta según I=V/R y la potencia P=V·I crece, causando sobrecalentamiento; los distractores confunden la relación V‑I‑R o invierten la dependencia correcta entre resistencia y corriente/potencia.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia operativa para ajustar ritmo interno y externo al reducir la duración de una escena sin perder coherencia narrativa:",
+          "options": [
+            "Reducir uniformemente la duración de todos los planos y después cambiar la banda sonora para sincronizar ritmo externo, sin revisar planos individuales.",
+            "Revisar y acortar planos que aportan ritmo interno (movimiento, microacciones), luego ajustar la colocación de cortes para mantener ritmo externo (duración total) y comprobar continuidad de acción.",
+            "Primero modificar la música para imponer nuevo tempo (ritmo externo) y, si es necesario, recortar algunos planos secundarios aleatoriamente.",
+            "Eliminar planos de diálogo prioritariamente para ahorrar tiempo, y después reequilibrar insertando fundidos para mantener fluidez."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica correcta es ajustar primero el ritmo interno actuando sobre los planos y acciones que marcan micro‑ritmo; después se regula el ritmo externo de la escena en su conjunto. Los distractores proponen alterar la música o recortes aleatorios sin preservar ritmo interno ni continuidad de acción.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_backup_321",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Indique la estrategia que cumple la política 3‑2‑1 de copias de seguridad (copias independientes, soportes y ubicación):",
+          "options": [
+            "Original en servidor local y dos discos espejo en la misma cabina eléctrica (RAID) sin copia fuera de sitio.",
+            "Un original en servidor local, una copia en disco RAID en la misma sala y otra copia idéntica en nube georredundante.",
+            "Original en tarjeta de rodaje, copia única en portátil del técnico y otra copia en mismo portátil replicada.",
+            "Tres copias idénticas en un único servidor dividido en particiones lógicas, sin copia física externa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta crea tres copias, en al menos dos tipos de soporte (servidor y nube) y guarda una copia fuera de la ubicación primaria, cumpliendo 3‑2‑1. Los otros distractores confunden RAID o copias en mismo soporte con copias independientes y ubicación externa requerida.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En un mezclador de vídeo hardware: función operativa del bus 'previo' frente al 'programa' y del 'key' en una transición:",
+          "options": [
+            "El 'previo' aplica la incrustación por defecto; el 'programa' mezcla buses auxiliares; la 'key' intercambia señales de audio.",
+            "El bus 'previo' es la salida en emisión; 'programa' es sólo para previsualizar; la 'key' controla únicamente la ganancia de luminancia.",
+            "El bus 'previo' y 'programa' son equivalentes y duplican la misma salida; la 'key' sólo habilita crossfade automático.",
+            "El bus 'previo' permite previsualizar una fuente sin sacarla al aire; 'programa' es la salida en emisión; la 'key' aporta la máscara para incrustación o para modular la transición entre fuentes."
+          ],
+          "correctIndex": 3,
+          "explanation": "Operativamente, 'previo' sirve para ver una fuente antes de pasarla a aire ('programa'); la 'key' genera la máscara de incrustación o permite modular/transicionar (chroma, luma, grafismo). Los distractores invierten funciones o asignan a la 'key' funciones ajenas como control de audio.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes organizaciones de pausas y alternancia de tareas para reducir fatiga visual y postural en trabajo ante pantallas:",
+          "options": [
+            "Micro‑pausas frecuentes (5–10 min cada hora), alternancia de tareas sentado/levantado y variación de tareas que requieran distinta atención visual.",
+            "Una sola pausa larga al mediodía de 45–60 min, sin pausas cortas durante la jornada.",
+            "Realizar la jornada completa sentado con soporte lumbar reforzado y una pausa breve al final del turno.",
+            "Alternar tareas sólo entre aplicaciones de pantalla manteniendo postura fija sin pausas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La organización más eficaz combina micro‑pausas frecuentes y alternancia de postura/tarea para reducir fatiga visual y musculo‑esquelética. Los distractores proponen pausas insuficientes o sólo medidas aisladas que no afrontan alternancia ni descanso visual.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Según el II Plan de Igualdad y la Guía de Igualdad de RTVE, señale la medida dirigida específicamente a prevenir el acoso y asegurar representación no sexista:",
+          "options": [
+            "Exigir únicamente formación opcional en igualdad sin procedimientos de denuncia formal.",
+            "Limitar la presencia de mujeres en pantalla a cuotas fijas por programa sin medidas de empleo.",
+            "Eliminar toda referencia a género en la selección de contenidos sin medidas de revisión editorial.",
+            "Implantar un protocolo de prevención y actuación frente al acoso, con canales de denuncia confidenciales y medidas de protección para las víctimas."
+          ],
+          "correctIndex": 3,
+          "explanation": "El Plan de Igualdad establece protocolos, canales confidenciales y medidas concretas de prevención/actuación; los distractores son medidas insuficientes, contraproducentes o meramente simbólicas sin procedimiento efectivo (el más cercano erróneo es la formación opcional sin protocolo).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que mejor diferencia la operación de un legalizador de señal respecto al simple recorte de niveles o gamut:",
+          "options": [
+            "Un limitador reescala la señal para ajustarla a gamut y el legalizador únicamente inserta metadata de conformidad.",
+            "Un limitador y un legalizador realizan exactamente la misma operación; sólo difieren en interfaz de usuario.",
+            "El legalizador elimina ruido en la señal de vídeo y no afecta al gamut ni a la luminancia.",
+            "Un legalizador reescala y corrige componentes de color y luminancia para mantener la fidelidad cromática dentro de límites legales, mientras que un limitador sólo recorta valores que exceden sin preservar conservación de crominancia."
+          ],
+          "correctIndex": 3,
+          "explanation": "El legalizador actúa reescalando y corrigiendo para mantener colores y niveles dentro de legalidad conservando la integridad cromática; un simple limitador recorta los valores extremos, con mayor probabilidad de alterar tintes. Los distractores confunden funciones o invierten roles.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Elija la afirmación que describe mejor la diferencia operativa entre un master HDR y uno SDR respecto a luminancia y compatibilidad de visualización:",
+          "options": [
+            "Un master HDR y SDR son intercambiables sin conversión; la pantalla ajusta automáticamente sin pérdida.",
+            "Un master HDR preserva un rango de luminancia más amplio y requiere tone‑mapping para mostrarse correctamente en pantallas SDR; un master SDR tiene rango limitado y no contiene la información de alto rango.",
+            "Un master SDR contiene metadatos PQ que permiten su reproducción en HDR sin adaptación.",
+            "Un master HDR reduce el contraste para compatibilidad y no requiere ningún proceso adicional para emisión en SDR."
+          ],
+          "correctIndex": 1,
+          "explanation": "HDR contiene mayor rango dinámico y habitualmente precisa tone‑mapping o conversión para mostrarse en SDR; los distractores afirman compatibilidad directa o confunden metadatos que no sustituyen la transformación de rango dinámico.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_relink",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Al relinkar medios en un proyecto NLE, ¿qué criterio operativo es más fiable para resolver enlaces incorrectos entre ficheros con nombres idénticos?",
+          "options": [
+            "Basarse solo en el códec y la resolución para distinguir versiones con el mismo nombre.",
+            "Confiar únicamente en el nombre de fichero, ya que es la referencia más práctica.",
+            "Utilizar checksum (hash) y coincidencia de timecode/duración y tamaño de fichero como criterio primario de identificación.",
+            "Usar exclusivamente la fecha de modificación del archivo como criterio decisivo."
+          ],
+          "correctIndex": 2,
+          "explanation": "El criterio más robusto combina hash/checksum con timecode, duración y tamaño para identificar inequívocamente una esencia; confiar solo en nombres, códec o fecha de modificación resulta frágil y puede provocar enlaces incorrectos (el distractor más cercano es el uso exclusivo del nombre de fichero).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En reproducción, el medidor de correlación marca valores alrededor de −0,8 en secciones con elementos panoramizados a extremos. ¿Cuál es la interpretación respecto a compatibilidad al sumar a mono?",
+          "options": [
+            "Valor −0,8 es una lectura normal y garantiza compatibilidad mono segura.",
+            "Valores negativos indican simplemente una imagen estéreo amplia sin riesgo de cancelación en mono.",
+            "Valores negativos cercanos a −1 indican señal en oposición de fase entre canales y alto riesgo de cancelación al mezclar a mono.",
+            "La correlación negativa significa que uno de los canales está invertido de forma permanente y debe recalibrarse el fader."
+          ],
+          "correctIndex": 2,
+          "explanation": "Valores negativos (próximos a −1) señalan contenidos con alta oposición fase entre canales, con riesgo de cancelación al convertir a mono; los distractores minimizan ese riesgo o confunden correlación negativa con una inversión permanente que no puede asumirse sin pruebas adicionales.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Al cortar y preparar para conformado material codificado en Long‑GOP, ¿qué procedimiento operativo minimiza problemas derivados de dependencias de predicción en la reconstrucción del clip editado?",
+          "options": [
+            "Eliminar todos los B‑frames del GOP para simplificar la estructura sin recodificar a I‑frames.",
+            "Realizar cortes arbitrarios dejando GOP originales intactos; el NLE resolverá siempre automáticamente las dependencias sin recodificación.",
+            "Duplicar P‑frames para rellenar huecos sin recodificar a intra‑frame.",
+            "Transcodificar el segmento afectado a un formato intra‑frame o forzar un GOP‑refresh (I‑frame) en los puntos de corte para eliminar dependencias anteriores."
+          ],
+          "correctIndex": 3,
+          "explanation": "Para evitar que dependencias Long‑GOP provoquen errores o artefactos en cortes, la práctica es transcodificar a intra‑frame o forzar I‑frames en los límites de edición; los distractores proponen soluciones que no resuelven las dependencias de predicción o que degradan la integridad del GOP sin procesado correcto.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Durante selección y visionado con material XDCAM que genera proxies y esencia de alta resolución, cuál es la relación operativa que permite reconformar las decisiones tomadas sobre proxies sobre la esencia en la ingesta/online:",
+          "options": [
+            "Los proxies deben conservar timecode, un identificador persistente y metadatos de clip que permitan mapear cada decisión al archivo de esencia original.",
+            "Los proxies son solo referencias visuales sin timecode ni metadatos; la recreación sobre esencia se hace manualmente.",
+            "Los proxies deben cambiar nombre en función del editor para facilitar búsqueda, sin mantener relación automática con la esencia.",
+            "Basta con que el proxy tenga aproximación visual al frame; la coincidencia exacta con la esencia no es necesaria para reconformar."
+          ],
+          "correctIndex": 0,
+          "explanation": "Para reconformar, proxies deben compartir timecode y metadatos que permitan identificación y enlace automático con la esencia; los distractores proponen proxies sin metadatos o renombrados manualmente, lo que impide una reconformación fiable.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Indique cuál de las siguientes opciones corresponde a un principio de la acción preventiva según la Ley 31/1995 aplicable al puesto de edición:",
+          "options": [
+            "Aplicar medidas de protección personal como primera y única opción.",
+            "Dejar la evaluación de riesgos únicamente a iniciativa del trabajador.",
+            "Sustituir la prevención por formación exclusiva sin medidas técnicas.",
+            "Priorizar medidas de protección colectivas frente a las individuales cuando ambas sean aplicables."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 31/1995 establece, entre sus principios, la prioridad de medidas colectivas sobre las individuales; los distractores describen prácticas que contravienen ese principio o lo invierten.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para respetar la regla de los 180° en un diálogo de dos personajes y mantener continuidad espacial, la nueva cámara debe situarse:",
+          "options": [
+            "Directamente sobre el eje imaginario para enfatizar la simetría.",
+            "Al otro lado del eje imaginario entre personajes, cruzando la línea para variar la perspectiva.",
+            "Dentro del semicírculo de 180° definido por el eje que une a ambos personajes, manteniendo el mismo lado del eje.",
+            "Detrás de uno de los personajes apuntando en dirección contraria para cambiar eje."
+          ],
+          "correctIndex": 2,
+          "explanation": "Mantener la cámara dentro del semicírculo de 180° preserva la lateralidad y coherencia de miradas; cruzar el eje rompe continuidad espacial. Los distractores proponen ubicaciones que rompen la regla o generan confusión del eje.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "basic_bit_depth",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor describe el efecto de aumentar la profundidad de bits de 8 a 10 bits en imágenes para posproducción:",
+          "options": [
+            "No modifica perceptiblemente la gradación tonal y solo incrementa el ruido acústico.",
+            "Aumenta el número de niveles por canal, reduce el banding y ofrece mayor margen en corrección de color a costa de mayor tamaño de fichero.",
+            "Reduce el rango dinámico y empeora la compatibilidad con monitores Rec.709.",
+            "Permite eliminar artefactos de compresión sin necesidad de cambiar códec."
+          ],
+          "correctIndex": 1,
+          "explanation": "Pasar de 8 a 10 bits incrementa niveles por canal y reduce banding, proporcionando más margen para grading; los distractores confunden efectos (ruido acústico), disminuciones de rango o promesas no relacionadas con profundidad de bits.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "En EVS/IPDirector, ¿cuál de las siguientes afirmaciones constituye una excepción respecto a la edición, orden, transiciones o publicación de una playlist?",
+          "options": [
+            "Una playlist puede mezclarse en emisión elementos con formatos y codecs distintos y garantizar transiciones preservadas sin conversión previa.",
+            "Al insertar un clip nuevo entre dos existentes la transición por defecto se aplica automáticamente sin necesidad de ajuste adicional.",
+            "Es posible reordenar elementos en caliente y actualizar la playlist en emisión sin recrear los clips.",
+            "Se pueden marcar y publicar playlists para emisión inmediata o programada desde IPDirector."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación excepcional (incorrecta) es que se pueden garantizar transiciones preservadas entre formatos distintos sin conversión: en la práctica, mezclar formatos/codecs requiere transcoding o conversión previa. Los demás enunciados describen funciones reales del sistema (reordenado en caliente, marcación/publicación); la opción más cercana errónea es asumir transiciones automáticas entre formatos incompatibles.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Al mezclar material 25p y 29,97p en una misma secuencia sin conversión previa, cuál es el efecto perceptible y el método operativo más adecuado para resolver la incompatibilidad:",
+          "options": [
+            "La única consecuencia es diferencia de resolución; basta reasignar pixel aspect ratio para corregirla.",
+            "No hay efecto perceptible; ambos cadencias son compatibles nativamente en todos los NLE.",
+            "Se genera judder y desincronización temporal perceptible; la solución habitual es convertir mediante interpolación por movimiento (motion‑compensated frame rate conversion) o conformar a un framerate común.",
+            "Eliminar frames del material 29,97p en puntos regulares es la mejor práctica para homogeneizar cadencias sin artefactos."
+          ],
+          "correctIndex": 2,
+          "explanation": "Mezclar 25p y 29,97p sin conversión produce judder y artefactos temporales; la práctica adecuada es convertir una de las cadencias al framerate de proyecto mediante métodos como interpolación por movimiento o reconversión con compensación temporal. Los distractores niegan el problema o proponen métodos que generan más artefactos (eliminar frames).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a medidas preventivas contra trastornos musculoesqueléticos en tareas con teclado, ratón y tableta, indique la afirmación que constituye una excepción (NO es una medida recomendada):",
+          "options": [
+            "Rotación de tareas y pausas micro‑programadas para alternar esfuerzos.",
+            "Uso permanente y obligatorio de férulas o muñequeras durante toda la jornada como primera medida preventiva.",
+            "Ajuste ergonómico del puesto (altura de mesa/silla y reposamuñecas adecuados).",
+            "Formación específica y adaptación de herramientas y sensibilidad del ratón/tableta."
+          ],
+          "correctIndex": 1,
+          "explanation": "El uso permanente y obligatorio de férulas no es una medida preventiva general recomendable; deben emplearse en casos concretos bajo criterio médico. Las demás opciones (rotación, ajuste ergonómico y formación/adaptación de herramientas) son medidas preventivas adecuadas; la diferencia decisiva es que la férula es una medida correctiva/terapéutica, no preventiva universal.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "047",
       "title": "Examen 047",
