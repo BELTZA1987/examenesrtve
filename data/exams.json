@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-15",
+  "updatedAt": "2026-09-16",
   "exams": [
+    {
+      "id": "049",
+      "title": "Examen 049",
+      "date": "2026-09-16",
+      "level": "Alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor refleja la estructura orgánica básica prevista por la Ley 17/2006 para la Corporación RTVE:",
+          "options": [
+            "La dirección general única designa y destituye a todo el consejo de administración de forma directa.",
+            "RTVE queda integrada únicamente por sociedades mercantiles privadas sin órganos explícitos de representación institucional.",
+            "La Corporación se organiza con órganos de control y gestión independientes entre sí, incluyendo un consejo de administración responsable de la gestión y un consejo de supervisión con funciones fiscalizadoras.",
+            "La Ley establece que la estructura operativa se delega completamente a la Presidencia ejecutiva sin previsión de órganos colegiados."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley 17/2006 configura órganos diferenciados: órganos de gestión (con responsabilidades ejecutivas) y órganos de control/fiscalización; la opción correcta distingue gestión y funciones fiscalizadoras. Los distractores más próximos confunden atribuciones (presidencia única o privatización) que no reflejan la separación orgánica prevista.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un servidor compartido donde varios editores trabajan sobre los mismos bins, ¿qué medida técnica opera directamente para evitar sobrescrituras accidentales de entradas de bins por concurrencia?",
+          "options": [
+            "Configurar permisos de archivo en modo lectura para todos excepto el propietario del bin.",
+            "Forzar sincronización periódica de caché local cada 5 minutos en cada estación de edición.",
+            "Habilitar bloqueo a nivel de proyecto/bins que reserve el bin a un editor mientras edita metadatos y entradas.",
+            "Desactivar versiones y mantener un único fichero de bin actualizado en tiempo real."
+          ],
+          "correctIndex": 2,
+          "explanation": "El bloqueo a nivel de bins reserva la edición de metadatos y entradas, evitando sobrescrituras por concurrencia; el distractor más cercano (permisos de lectura) impediría colaboración útil porque bloquearía cambios para quienes deben editar.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación que mejor relaciona clase de fuego, extintor apropiado y una medida preventiva aplicable en un plató con equipos eléctricos:",
+          "options": [
+            "Fuego clase D — extintor de espuma — conectar múltiples regletas sobrecargadas para dispersar carga.",
+            "Fuego clase B — extintor de agua a presión — mantener disyuntores activos para evitar cortes de señal.",
+            "Fuego clase C — extintor CO2 — usar agua para enfriar equipos energizados.",
+            "Fuego clase A — extintor de polvo ABC — cortar la alimentación eléctrica como primera medida preventiva."
+          ],
+          "correctIndex": 3,
+          "explanation": "En instalaciones audiovisuales los fuegos más habituales son clase A (sólidos) y B/C por líquidos y eléctricos; el uso de polvo ABC y cortar la alimentación es la medida coherente. Los distractores contienen combinaciones incorrectas (agua en B/eléctricos, prácticas inseguras con conexiones).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Ante un servidor de reproducción diseñado para N canales concurrentes, ¿cuál de las siguientes afirmaciones interpreta mejor la relación entre capacidad de disco, ancho de banda agregado y concurrencia de canales al planificar su dimensionamiento?",
+          "options": [
+            "Si el ancho de banda agregado soporta la suma de bitrates de N canales, la capacidad de disco puede ser independiente de la concurrencia.",
+            "La concurrencia máxima útil viene limitada por el menor entre throughput del almacenamiento y el ancho de red; la capacidad total determina el tiempo de retención pero no la concurrencia.",
+            "Aumentar únicamente IOPS del sistema siempre resuelve problemas de concurrencia aunque el ancho de red sea limitado.",
+            "La concurrencia se calcula multiplicando el número de canales por la latencia de acceso al disco; el ancho de banda no es relevante."
+          ],
+          "correctIndex": 1,
+          "explanation": "La concurrencia queda limitada por el mínimo entre rendimiento de almacenamiento (throughput/IOPS) y capacidad de red (ancho de banda); la capacidad de disco impacta retención, no concurrencia directa. Los distractores confunden independencia de factores o dan soluciones parciales no siempre válidas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare riesgos y prevención: frente a una grabación en misión fuera del centro habitual, ¿qué medida preventiva es más específica respecto a la realizada en el puesto habitual?",
+          "options": [
+            "Garantizar la formación general en PRL del trabajador como única medida necesaria para misiones.",
+            "Realizar evaluación de riesgos previa del lugar de trabajo en misión y adecuar equipo de protección y logística de transporte.",
+            "Mantener idénticos horarios y descansos planificados en todas las misiones sin considerar factores locales.",
+            "Depender exclusivamente del seguro del productor para cubrir riesgos físicos durante la misión."
+          ],
+          "correctIndex": 1,
+          "explanation": "La evaluación de riesgos específica del lugar y la adaptación de medidas y logística son esenciales en misiones; la formación general y seguros son importantes pero no sustituyen la evaluación local. Los distractores proponen acciones insuficientes o inadecuadas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "En un vectorscopio, ¿qué procedimiento aplica para corregir un desplazamiento angular del clúster de piel hacia el azul sin alterar saturación general?",
+          "options": [
+            "Reducir globalmente la saturación hasta que el clúster alcance la línea de piel, sin tocar balance de canales.",
+            "Ajustar el balance de color (ganancias RGB) para mover el clúster en ángulo hacia la línea de tono de piel manteniendo la magnitud del vector.",
+            "Aplicar una curva de luminancia para modificar la posición angular del clúster en el vectorscopio.",
+            "Incrementar el contraste para empujar el clúster hacia la referencia de piel."
+          ],
+          "correctIndex": 1,
+          "explanation": "Corregir un desplazamiento angular requiere ajuste de balance (ganancias/offsets de canales) que desplaza el ángulo del vector sin cambiar necesariamente la magnitud; reducir saturación o alterar luminancia/contraste no corrige el ángulo de tono de piel específicamente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_checksum",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "En un proceso de transferencia de ficheros, ¿qué afirmación describe correctamente el uso y límite práctico de un checksum antes y después de la transferencia?",
+          "options": [
+            "El checksum permite detectar cambios inadvertidos en los datos entre origen y destino, pero no indica causas ni recupera datos dañados.",
+            "El checksum repara automáticamente bloques corruptos al detectarlos durante la verificación.",
+            "Un checksum proporciona información sobre la estructura lógica del fichero y su formato interno.",
+            "Si dos ficheros tienen el mismo tamaño y fecha, el checksum es redundante y siempre puede omitirse."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un checksum detecta discrepancias entre origen y destino pero no repara ni explica la causa; los distractores confunden con funciones de reparación, análisis de formato o justifican su omisión por metadatos que no garantizan integridad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Según la Ley 13/2022, señale la afirmación que constituye una excepción respecto a las obligaciones de protección de menores y acceso a contenidos por parte de prestadores audiovisuales:",
+          "options": [
+            "Implantar medidas de clasificación por edades y sistemas de bloqueo técnico para contenidos inadecuados.",
+            "Facilitar información clara sobre clasificación y horarios de emisión destinados a menores.",
+            "Adoptar medidas técnicas razonables para evitar el acceso no supervisado de menores a contenidos restrictivos.",
+            "Exigir que todos los contenidos dirigidos a adultos se emitan exclusivamente en canales de pago de forma que queden fuera del ámbito de la Ley."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 2 (índice 2) es la excepción: la Ley no condiciona la protección de menores a que los contenidos queden en canales de pago; exige clasificación, información y medidas técnicas independientemente del modelo de acceso. Los otros enunciados son obligaciones previstas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Ante fuentes de vídeo no sincronizadas que provocan saltos y tearing en conmutaciones multicámara, ¿qué afirmación describe mejor la función y compatibilidad de un frame‑sync para corregir el problema?",
+          "options": [
+            "El frame‑sync re‑alinea temporalmente la fuente ajustando retardo de cuadro y salida sincronizada, siendo compatible siempre si la latencia añadida es aceptable para el flujo.",
+            "El frame‑sync elimina diferencias de resolución entre fuentes sin añadir latencia alguna.",
+            "Sustituir todas las fuentes por cámaras con código de tiempo idéntico anula la necesidad de cualquier frame‑sync o retardo.",
+            "El frame‑sync reemplaza la señal original por una copia en disco para corregir color y sincronía permanentemente."
+          ],
+          "correctIndex": 0,
+          "explanation": "El frame‑sync corrige desfases temporales añadiendo retardo para alinear cuadros; su compatibilidad depende de la latencia admitida. Los distractores atribuyen funciones incorrectas (resolución, sustitución por copias) o plantean soluciones incompletas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que mejor diferencia funciones y cuellos de botella de CPU, GPU y RAM en una estación de edición con efectos en tiempo real:",
+          "options": [
+            "CPU: gestión general del sistema y cómputo serial; GPU: aceleración de efectos paralelos; RAM: buffer y espacio de trabajo; un cuello de botella habitual es GPU limitada en efectos intensivos mientras CPU y RAM sobran.",
+            "CPU: solo gestiona E/S de disco; GPU: gestiona audio; RAM: no influye en previews; los cuellos de botella siempre son de disco.",
+            "La RAM puede convertirse en cuello de botella si es insuficiente para almacenar buffers y frames, aun cuando CPU y GPU sean potentes; cada componente tiene roles distintos.",
+            "GPU sustituye completamente a la CPU en todas las tareas de edición; aumentar RAM nunca mejora rendimiento de trazado de efectos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La correcta distingue funciones y señala que RAM puede limitar rendimiento aunque CPU/GPU sean potentes; el distractor 0 es parcialmente correcto pero excesivamente absolutista sobre GPU siempre limitante; otros distractores son incorrectos sobre funciones básicas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En términos de entrada o permanencia del audio respecto a los cortes de imagen, ¿qué afirmación diferencia mejor un J‑cut de un L‑cut?",
+          "options": [
+            "Ninguno de los cortes afecta a la continuidad sonora; solo se aplican en montaje de música.",
+            "Un J‑cut mantiene el audio anterior tras el corte; un L‑cut introduce audio nuevo antes del corte.",
+            "Ambos cortes exclusivamente describen ajustes de duración visual sin relación con audio.",
+            "Un J‑cut introduce audio de la siguiente toma antes del corte de imagen; un L‑cut mantiene el audio de la toma anterior después del corte de imagen."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un J‑cut adelanta el audio de la siguiente toma antes del corte (entrada anticipada); un L‑cut deja continuar el audio de la toma anterior tras el corte. Los distractores invierten o niegan la relación audio/imagen.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_metadatos",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Al migrar un catálogo de medios entre dos MAM distintos, ¿qué problema relacionado con metadatos técnicos y descriptivos dificulta más la búsqueda e ingest automático en el receptor?",
+          "options": [
+            "Ausencia de un identificador único invariable (UMID o equivalente) que permita distinguir versiones y mapear ingest automáticamente.",
+            "Tener campos de metadatos enriquecidos con descripciones largas que facilitan la búsqueda semántica.",
+            "Contar con timestamps de creación en formato ISO que permiten orden cronológico correcto.",
+            "Usar esquemas estandarizados (XMP/ADM) para campos técnicos y descriptivos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La falta de un identificador único persistente impide identificar inequívocamente versiones y automatizar ingest; los otros enunciados son condiciones favorables o neutras para la interoperabilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que mejor diferencia una corrección primaria de color frente a una corrección secundaria en un flujo de posproducción:",
+          "options": [
+            "Corrección primaria: solo incluye máscaras complejas; corrección secundaria: aplica LUTs globales.",
+            "Corrección primaria: ajustes globales de exposición, contraste y balance de blancos; corrección secundaria: selección y ajuste de zonas o rangos de color específicos.",
+            "Corrección primaria: remuestreo de crominancia por canales; corrección secundaria: conversión de contenedor de fichero.",
+            "Corrección primaria: siempre requiere tracking; corrección secundaria: nunca usa tracking."
+          ],
+          "correctIndex": 1,
+          "explanation": "La primaria aborda ajustes globales (exposición, gamma, balance), la secundaria actúa sobre selecciones/mascaras o rangos concretos. Los distractores mezclan conceptos técnicos ajenos o falsos (LUTs exclusivos, remuestreo, tracking obligatorio).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_red_ip",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Una estación 10.0.0.5/24 con puerta 10.0.0.1 no alcanza el recurso 10.0.1.20/24. ¿Cuál es la intervención más directa sin cambiar la IP del recurso?",
+          "options": [
+            "Configurar en la estación una ruta estática hacia 10.0.1.0/24 usando la puerta 10.0.0.1 como gateway.",
+            "Cambiar la máscara de la estación a /16 sin modificar la puerta de enlace.",
+            "Desactivar el firewall de la estación y reintentar la conexión.",
+            "Renombrar la interfaz de red local para forzar reconexión."
+          ],
+          "correctIndex": 0,
+          "explanation": "Agregar una ruta estática que direccione la red 10.0.1.0/24 vía la puerta 10.0.0.1 permite alcanzar el recurso sin alterar direcciones. Cambiar máscara a /16 modifica el ámbito pero es más intrusivo; los otros distractores no resuelven la ruta.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al principio constitucional de igualdad y la prohibición de discriminación:",
+          "options": [
+            "La Constitución autoriza normas que establezcan discriminación permanente para un grupo concreto sin justificación objetiva.",
+            "La igualdad permite medidas específicas temporales orientadas a corregir desigualdades efectivas (acciones positivas).",
+            "El principio garantiza trato igual ante la ley y prohíbe discriminación por sexo, raza o religión.",
+            "El principio incluye garantía de acceso a derechos y la prohibición de trato desigual injustificado."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Constitución no autoriza discriminaciones permanentes sin justificación; la opción 2 es la excepción. Las otras afirmaciones recogen elementos del principio de igualdad y sus matices (acciones positivas permitidas, prohibición de trato desigual injustificado).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un plan de preservación, ¿qué indicador operativo revela con mayor prioridad riesgo de obsolescencia de un formato y exige migración preventiva?",
+          "options": [
+            "Que el formato sea ampliamente usado y soportado por múltiples proveedores.",
+            "El hecho de que el tamaño de los ficheros sea elevado y ocupe mucho espacio de archivo.",
+            "La imposibilidad de encontrar reproductores o software actualizado que soporte el formato dentro del mercado profesional.",
+            "Que los metadatos estén plenamente normalizados según estándares actuales."
+          ],
+          "correctIndex": 2,
+          "explanation": "La ausencia de reproductores/soporte técnico es señal prioritaria de obsolescencia que obliga a planificar migración; los otros enunciados no indican obsolescencia inmediata o son incluso favorables a preservación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la afirmación que describe correctamente el efecto del trim 'roll' sobre duración y sincronía:",
+          "options": [
+            "El roll intercambia contenidos entre pistas sin modificar puntos de corte.",
+            "El roll extiende la duración total de la secuencia desplazando sólo el punto de corte posterior del clip activo.",
+            "El roll recorta únicamente audio sin afectar a vídeo ni sincronía.",
+            "El roll ajusta simultáneamente el punto de salida del clip A y el punto de entrada del clip B manteniendo la duración total de la secuencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "El roll mueve los bordes adyacentes de dos clips (salida de A y entrada de B) compensando de modo que la duración total no cambia; los distractores describen efectos incorrectos sobre duración o sobre qué elementos afectan.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto al uso de ProRes y DNxHR como códecs intermedios en postproducción, seleccione la afirmación que constituye una excepción (no corresponde):",
+          "options": [
+            "Ambos están diseñados para facilitar edición y etalonaje mediante alta calidad y entornos profesionales.",
+            "Estos códecs eliminan por completo la necesidad de mantener masters en formatos originales de cámara para preservación a largo plazo.",
+            "ProRes y DNxHR ofrecen perfiles que equilibran calidad y tamaño según necesidades de postproducción.",
+            "Su compatibilidad depende de perfiles y soporte del NLE, por lo que elección debe considerar flujo y destino."
+          ],
+          "correctIndex": 1,
+          "explanation": "ProRes/DNxHR no sustituyen la necesidad de conservar masters de cámara para preservación; es la excepción. Las otras afirmaciones son características reales sobre perfiles, compatibilidad y propósito como códecs intermedios.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Tras descargar y verificar íntegramente el contenido de un soporte de estado sólido (SSD/CFast/SD), ¿cuál es el riesgo operativo más relevante si se reutiliza el soporte sin realizar el formateo recomendado por la cámara/recorder antes de volver a grabar?",
+          "options": [
+            "Aumento significativo del desgaste de la memoria NAND por no ejecutar un borrado seguro previo.",
+            "Pérdida irreversible de las copias ya verificadas en el destino de almacenamiento.",
+            "Reducción inmediata de la vida útil del soporte por sobrecalentamiento durante la nueva sesión de grabación.",
+            "Grabaciones incompletas o clips corruptos debido a inconsistencias en la estructura de archivos o metadatos que el equipo espera."
+          ],
+          "correctIndex": 3,
+          "explanation": "La amenaza operativa principal es la posible corrupción o fallos de grabación: muchas cámaras/recorders requieren una estructura de carpetas y metadatos concreta; reutilizar el soporte sin formatearlo puede dejar índices, entradas o fragmentación que provoquen clips incompletos o errores de escritura. El distractor más próximo (aumento de desgaste por borrado seguro) confunde causa y efecto: las operaciones de borrado/formatado consumen ciclos de escritura, mientras que no formatear no aumenta de forma inmediata el desgaste físico; además, un formateo realizado por el equipo suele ser el procedimiento recomendado para garantizar compatibilidad y rendimiento, mientras que un borrado seguro es innecesario y desgastante en la operativa de rodaje. Los otros distractores (pérdida de copias verificadas, sobrecalentamiento inmediato) no se corresponden con el efecto directo de evitar el formateo en la práctica habitual.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_fiction",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En edición de ficción para mantener continuidad dramática y cobertura, ¿cuál de las siguientes afirmaciones representa mejor una prioridad de coordinación con realización?",
+          "options": [
+            "Sustituir planos de cobertura por insertos sin consultar realización, reduciendo la continuidad espacial.",
+            "Ignorar cobertura si la toma principal tiene interpretación destacada; la continuidad se corrige siempre en montaje.",
+            "Priorizar cobertura suficiente para permitir cortes que mantengan la continuidad de interpretación y ritmo, respetando posiciones y eyelines.",
+            "Eliminar planos medios para favorecer exclusivamente planos detalle sin asegurar raccord."
+          ],
+          "correctIndex": 2,
+          "explanation": "La coordinación debe asegurar cobertura que permita conservar continuidad interpretativa y de eyelines; los distractores proponen acciones que comprometen raccord y continuidad.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "048",
       "title": "Examen 048",
