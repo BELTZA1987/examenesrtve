@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16",
+  "updatedAt": "2026-09-17",
   "exams": [
+    {
+      "id": "050",
+      "title": "Examen 050",
+      "date": "2026-09-17",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la afirmación que mejor recoge la finalidad de la reforma de 2017 y el mecanismo de elección parlamentaria de los órganos de RTVE:",
+          "options": [
+            "La reforma externaliza la elección de los órganos de RTVE a un comité técnico independiente ajeno a las Cortes y al Gobierno.",
+            "La reforma persigue reforzar la independencia y pluralismo de la Corporación, estableciendo la designación de sus órganos mediante elección por las Cortes Generales según procedimientos y mayorías fijadas en la ley.",
+            "La reforma elimina la intervención parlamentaria y transfiere la elección de los órganos al Consejo de Ministros para agilizar nombramientos.",
+            "La reforma transforma RTVE en una empresa mixta financiada por suscripción y dota al accionariado privado de la facultad de nombrar a los órganos de gestión."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta resume el objetivo principal: restablecer independencia y pluralismo mediante un procedimiento de elección parlamentaria regulado. Los distractores introducen mecanismos inexistentes (comité externo, transferencia al Ejecutivo o privatización) que no forman parte de la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Compare CBR y VBR: ¿Cuál afirmación describe mejor su ventaja y limitación respecto a transmisión en tiempo real y eficiencia de almacenamiento?",
+          "options": [
+            "CBR garantiza un uso de ancho de banda constante y predecible, adecuado para transmisión en tiempo real con enlaces limitados, pero puede desperdiciar bits en escenas simples; VBR optimiza calidad por tamaño al variar la tasa según complejidad, pero puede generar picos instantáneos de bitrate que perjudican transmisiones en tiempo real con capacidad fija.",
+            "VBR mantiene el bitrate constante durante la transmisión, evitando picos, mientras que CBR adapta la tasa a la complejidad del contenido para ahorrar espacio.",
+            "CBR siempre produce mejor calidad que VBR a igual tasa media porque elimina variaciones temporales; VBR solo interesa para archivos de audio estático.",
+            "VBR es obligatorio para emisiones lineales porque reduce la latencia; CBR sólo se usa en archivos destinados a archivo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta contrasta la predictibilidad de CBR (ventaja en tiempo real) con la eficiencia de VBR (ventaja en almacenamiento/calidad) y la limitación de picos de VBR en enlaces con capacidad fija. Los distractores invierten las propiedades o afirman generalizaciones incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que reúne correctamente derechos y obligaciones del trabajador en prevención:",
+          "options": [
+            "Obligación única de notificar riesgos al superior; derecho a exigir la paralización indefinida de la actividad sin evaluación técnica previa.",
+            "Derecho a negarse a realizar cualquier tarea sin formación; obligación de aportar equipos propios para mejorar seguridad.",
+            "Derecho a la información y formación en riesgos; obligación de cooperar en las medidas preventivas y de utilizar correctamente los equipos y medios facilitados por la empresa.",
+            "Derecho a ser despedido si no cumple instrucciones recibidas en materia de prevención; obligación de delegar su uso de EPI a compañeros cuando falte stock."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta recoge los derechos a información y formación y las obligaciones de cooperación y uso correcto de medios. Los distractores contienen afirmaciones extremas o erróneas que no corresponden a los deberes y derechos establecidos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para indicar que ha transcurrido un lapso de tiempo indefinido manteniendo continuidad causal entre dos acciones, la transición más apropiada es:",
+          "options": [
+            "Fundido a negro prolongado, que suele indicar final o salto temporal contundente y clausura narrativa.",
+            "Corte seco directo, que mantiene continuidad temporal inmediata sin sugerir elipsis.",
+            "Encadenado (dissolve) entre los dos planos, para sugerir paso de tiempo sin ruptura abrupta.",
+            "Wipe geométrico lateral, que establece una relación espacial estilizada más que temporal."
+          ],
+          "correctIndex": 2,
+          "explanation": "El encadenado sugiere una elipsis temporal suave manteniendo la conexión causal; el corte seco conserva continuidad inmediata (no elipsis), el fundido a negro implica cierre más rotundo y el wipe aporta relación espacial o estilística, no la elipsis indicada.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_true_peak",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En control de entrega de audio, ¿qué medida es la más adecuada para detectar picos entre muestras (inter‑sample peaks) y garantizar conformidad?",
+          "options": [
+            "Medición True Peak con sobremuestreo y detector intersample para prever picos tras DAC; el sample‑peak por sí solo puede omitir esos picos.",
+            "Medición únicamente de sample peak en cada muestra, que refleja fielmente todos los picos reales tras conversión.",
+            "Medición exclusiva de LUFS integrado, que reemplaza la necesidad de control de picos puntuales.",
+            "Usar sólo medidor analógico de VU para asegurar que no hay picos digitales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La medición True Peak (con sobremuestreo) detecta picos entre muestras que el sample‑peak puede no mostrar, por lo que es la herramienta adecuada para control de entrega. Los distractores omiten inter‑sample peaks o proponen medidas no específicas para picos digitales.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_chromakey",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Ordene correctamente las operaciones principales para lograr una incrustación por chroma sin artefactos:",
+          "options": [
+            "Integrar y ajustar color del fondo → extraer matte → suprimir spill → acondicionar iluminación.",
+            "Extraer matte → integrar y ajustar color del fondo → suprimir spill → acondicionar iluminación.",
+            "Acondicionar iluminación y fondo → extraer matte (key) → suprimir spill y limpiar bordes → integrar y ajustar color del fondo.",
+            "Suprimir spill → acondicionar iluminación → extraer matte → integrar y ajustar color del fondo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La secuencia correcta comienza por medidas ópticas (iluminación/fondo), sigue con extracción del matte, luego limpieza de spill y bordes, y finalmente la integración y ajuste de color. Los distractores alteran el orden práctico, perjudicando la calidad del key.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "basic_dbfs",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a 0 dBFS y el techo digital, indique la afirmación correcta sobre sus consecuencias operativas:",
+          "options": [
+            "0 dBFS representa el máximo nivel digital representable; sobrepasarlo provoca recorte/clipping en la codificación y pérdida de información que no se recupera.",
+            "0 dBFS es un valor arbitrario sin efecto sobre la integridad de la señal; los convertidores siempre recuperan muestras superiores.",
+            "Alcanzar 0 dBFS mejora la relación señal/ruido sin riesgo de distorsión en ninguna cadena digital.",
+            "0 dBFS indica nivel de referencia analógico y no guarda relación con saturación en sistemas digitales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta señala que 0 dBFS es el límite digital: superarlo provoca clipping irreversible. Los distractores minimizan o confunden la naturaleza del techo digital o lo relacionan incorrectamente con referencias analógicas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que mejor sintetiza fuentes, restricciones y principios generales del modelo de financiación previsto por la Ley 8/2009:",
+          "options": [
+            "Financiación basada únicamente en cuotas individuales de los usuarios (licencia por receptor) sin ingresos públicos.",
+            "Financiación exclusivamente por venta de activos y donaciones privadas sin aportación pública ni restricciones.",
+            "Financiación basada en aportaciones públicas y otras fuentes compatibles con límites y controles, organizada con principios de suficiencia, transparencia y control presupuestario.",
+            "Financiación mediante publicidad ilimitada como única fuente, sin principios de control presupuestario."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta menciona financiación mediante fuentes públicas y otras compatibilidades sujetas a principios y restricciones. Los distractores proponen esquemas exclusivos o sin controles que no reflejan el modelo regulado.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la opción que distingue correctamente capture, import, link e ingest en flujo de postproducción:",
+          "options": [
+            "Capture: referencia a la grabación en campos SDI; Import: sin copia, sólo referencia; Link: copia física al servidor; Ingest: captura de audio únicamente.",
+            "Capture: volcado directo desde un recorder o cámara a archivo; Import: copiar y registrar fichero en el proyecto/NLE; Link: crear referencia al archivo sin copiarlo; Ingest: proceso de entrada en servidor que incluye registro, catalogación y posibles transcodificaciones.",
+            "Capture: proceso de online para finalización de un master; Import: realizado por cámaras exclusivamente; Link: renombrado de clips; Ingest: exclusivo de archivo LTO.",
+            "Capture: sin relación con metadatos; Import: siempre elimina los originales; Link: convierte formatos; Ingest: sólo verifica checksums sin registrar metadatos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta asigna las operaciones con precisión: capture (volcado directo), import (copia al proyecto), link (referencia) e ingest (entrada/registro en servidor con opcional transcode). Los distractores mezclan o falsean funciones y alcances.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_postura",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para optimizar la ergonomía del puesto de edición, ¿qué combinación de ajustes es la más adecuada?",
+          "options": [
+            "Asiento fijo sin regulación; reposapiés obligatorio aunque la persona ya apoye los pies; antebrazos elevados por encima de la mesa.",
+            "Asiento muy bajo sin apoyo lumbar; antebrazos colgando; pies sobre puntas; monitor por encima de la cabeza para mayor énfasis visual.",
+            "Silla reclinada al máximo sin apoyo de brazos; postura con torsión para uso del teclado; monitor muy cercano (20 cm).",
+            "Altura de asiento que permita apoyar los pies planos; respaldo con apoyo lumbar ajustado; antebrazos apoyados y paralelos al plano de trabajo; monitor a la altura de la mirada o ligeramente por debajo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta describe los ajustes recomendados: pies apoyados, soporte lumbar, antebrazos apoyados y monitor a altura adecuada. Los distractores proponen posturas que aumentan tensión lumbar, de antebrazos o visual.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación que explica mejor el principio que permite el rechazo de interferencias en una conexión de audio balanceada:",
+          "options": [
+            "El balanceado usa sólo un conductor y tierra para referencia, eliminando interferencias por conexión a masa.",
+            "La señal transmite dos conductores con igual contenido en amplitud pero polaridad invertida; el receptor diferencia ambos, cancelando el ruido común (rechazo de modo común).",
+            "El balanceado reduce ruido almacenando la señal en transformadores digitales en el extremo receptor únicamente.",
+            "La conexión balanceada basa su rechazo en un tercer conductor activo que genera una señal opuesta en tiempo real."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta describe el principio diferencial (señales en fase invertida y cancelación de ruido común). Los distractores introducen conceptos erróneos sobre conductores únicos, transformadores digitales o un 'tercer conductor' activo.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: al visionar material entrelazado en un monitor progresivo sin desentrelazado, aparece 'combing' en objetos en movimiento. ¿Cuál es la causa y la diferencia respecto al progresivo?",
+          "options": [
+            "El progresivo genera combing porque sólo captura la mitad de la información temporal por fotograma.",
+            "El entrelazado produce más profundidad de color intrínseca que el progresivo, por lo que el combing es un efecto de color.",
+            "El entrelazado muestra campos temporales alternos que combinados en progresivo provocan peine en movimiento; el progresivo registra todos los fotogramas completos evitando ese artefacto.",
+            "El entrelazado y progresivo son equivalentes temporalmente; el combing se debe siempre a codec y no al modo de rastreo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La explicación correcta es que el entrelazado alterna campos que representan instantes distintos; mostrado sin un tratamiento adecuado en progresivo produce 'combing' en movimiento. Los distractores confunden causas o afirman equivalencias falsas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a ficheros en crecimiento ('growing files') generados durante un directo, señale la afirmación más compatible con su uso en un flujo de edición:",
+          "options": [
+            "Son idénticos a ficheros ya cerrados en todos los NLEs y no presentan limitaciones operativas.",
+            "Permiten acceso y reproducción parcial antes del cierre del archivo, pero ciertas operaciones que requieren metadatos finales o índices completos (por ejemplo algunos reconforms o checksums finales) pueden necesitar la finalización del fichero.",
+            "Imposibilitan cualquier acceso hasta que el fichero esté completamente finalizado en el recorder; por tanto no son útiles en directos.",
+            "Siempre se convierten automáticamente en proxies estables en el servidor sin intervención del operador."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta reconoce que growing files permiten trabajo temprano pero que tareas que dependen de índices/footers completos requieren el cierre final. Los distractores afirman imposibilidades totales, identidades completas o automatismos inexistentes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "¿Qué nivel RAID combina striping con paridad distribuida permitiendo la reconstrucción tras la pérdida de un disco?",
+          "options": [
+            "RAID 0: espejo (mirroring) con paridad distribuida que soporta fallo de un disco.",
+            "RAID 5: striping con paridad distribuida que tolera la pérdida de un disco y permite reconstrucción mediante información de paridad.",
+            "RAID 1: striping con paridad, diseñado para alta velocidad y tolerancia a múltiples fallos sin reconstrucción.",
+            "RAID JBOD: implementa paridad distribuida y reconstrucción en caliente comparable a RAID 6."
+          ],
+          "correctIndex": 1,
+          "explanation": "RAID 5 combina striping y paridad distribuida permitiendo tolerancia a un fallo de disco y reconstrucción desde la paridad. Los distractores describen erróneamente otros niveles (RAID0 no tiene paridad, RAID1 es mirroring, JBOD no ofrece paridad distribuida).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Para asignar una 'ocupación tipo' y clasificar profesionalmente un puesto según el III Convenio, ¿qué criterio debe prevalecer?",
+          "options": [
+            "Las funciones y responsabilidades reales del puesto (tareas y competencias), por encima del título formal o la ubicación física.",
+            "El título nominal del puesto proporcionado en el organigrama aunque no coincida con las funciones reales.",
+            "La antigüedad del trabajador en la empresa como criterio único para determinar la ocupación tipo.",
+            "La preferencia del jefe inmediato sin análisis de contenido funcional del puesto."
+          ],
+          "correctIndex": 0,
+          "explanation": "El criterio correcto es el análisis funcional: tareas y responsabilidades determinan la clasificación. Los distractores priorizan criterios formales, de antigüedad o discrecionales que no son el fundamento del convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_intelectual",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Elija el ejemplo que constituye montaje intelectual por yuxtaposición de ideas:",
+          "options": [
+            "Usar un corte técnico para ocultar un error de raccord entre dos planos.",
+            "Cortar dos planos del mismo sujeto en acción para mantener continuidad espacial sin nuevo significado.",
+            "Alternar planos de dos personajes conversando para representar tiempo simultáneo sin añadir noción nueva por yuxtaposición.",
+            "Mostrar una imagen de un rostro sonriente seguida inmediatamente de una señal de rescate en ruinas, generando asociación crítica entre ambos."
+          ],
+          "correctIndex": 3,
+          "explanation": "El montaje intelectual crea nuevo significado mediante la yuxtaposición de imágenes dispares; el ejemplo elegido genera esa asociación crítica. Los distractores describen montaje de continuidad o técnico sin creación de significado adicional.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_lut_log",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la distinción entre LUT de visualización (log→display) y LUT creativa:",
+          "options": [
+            "Una LUT de monitorización aplicada para visualización no debe alterar la esencia original del archivo; actúa sólo en la cadena de visualización.",
+            "Las LUT técnicas transforman gamma y espacio de color para llevar señales log a un espacio de trabajo estándar.",
+            "Las LUT creativas se emplean como herramienta de corrección creativa y pueden componer un look irreversible si se aplican y bakean sobre la esencia.",
+            "Una LUT de visualización incrustada en el archivo siempre modifica irreversiblemente la esencia original del fichero."
+          ],
+          "correctIndex": 3,
+          "explanation": "La excepción es la falsa afirmación de que una LUT de visualización incrustada modifica irreversiblemente la esencia: las LUT de visualización se usan para monitorizar sin alterar el original. Las otras opciones describen usos y efectos reales de LUT técnicas y creativas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las funciones diagnósticas del RGB Parade:",
+          "options": [
+            "Permite identificar dominantes por canal y diferencias de nivel entre rojo, verde y azul en sombras, medios y altas luces.",
+            "Es útil para balancear canales y detectar desplazamientos cromáticos sistemáticos.",
+            "Permite comparar niveles relativos por canal para localizar dominantes y decidir correcciones específicas.",
+            "Ofrece información directa sobre la fase relativa entre canales de color."
+          ],
+          "correctIndex": 3,
+          "explanation": "La excepción es que el RGB Parade ofrezca información de fase entre canales: no mide fase, sino niveles por canal. Las demás opciones describen funciones operativas válidas del parade.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: ¿qué realiza operativamente el timecode drop‑frame frente al non‑drop‑frame en 29,97 fps?",
+          "options": [
+            "Ajusta la numeración del código de tiempo (omite números de fotogramas según regla periódica) para que el TC refleje la hora real sin eliminar fotogramas del contenido.",
+            "Elimina físicamente fotogramas del archivo para compensar la diferencia entre 30 y 29,97 fps.",
+            "Reinicia el timecode cada minuto para sincronizar con la frecuencia real de imagen.",
+            "Convierte la señal 29,97 fps a 30 fps interpolando fotogramas."
+          ],
+          "correctIndex": 0,
+          "explanation": "El drop‑frame corrige la numeración del timecode (omitiendo ciertos números de fotogramas) para alinear el TC con el tiempo real, sin suprimir fotogramas de la esencia. Los distractores describen manipulaciones de contenido o conversiones erróneas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En un servidor EVS configurado en grabación en bucle (loop), ¿qué describe mejor el principio operativo y la recuperación de una acción concreta?",
+          "options": [
+            "El loop sólo registra metadatos y no guarda la esencia; la recuperación requiere recaptura externa.",
+            "El loop sobrescribe permanentemente todo sin posibilidad de extraer fragmentos parciales; sólo se extrae al finalizar la sesión global.",
+            "Las acciones en loop se conservan automáticamente como clips independientes sin intervención del operador al alcanzar un tamaño prefijado.",
+            "Cada canal graba en buffer circular continuo; para conservar una acción se marca o 'saves' la porción deseada y se convierte en clip permanente disponible en el almacenamiento del servidor."
+          ],
+          "correctIndex": 3,
+          "explanation": "La operación típica es buffer circular por canal y la conservación de una acción se realiza marcando y salvando el fragmento como clip permanente. Los distractores niegan la posibilidad de salvado, describen automatismos inexistentes o afirman que no se graba esencia.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "049",
       "title": "Examen 049",
