@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17",
+  "updatedAt": "2026-09-18",
   "exams": [
+    {
+      "id": "051",
+      "title": "Examen 051",
+      "date": "2026-09-18",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 13/2022, señale la obligación concreta que deben cumplir los prestadores de servicios audiovisuales respecto a la accesibilidad:",
+          "options": [
+            "Adoptar medidas para que los contenidos audiovisuales incluyan, cuando proceda, subtitulado, audiodescripción y lengua de signos, garantizando su disponibilidad técnica y su identificación en la entrega.",
+            "Limitar la accesibilidad sólo a los contenidos bajo demanda y sin obligación sobre emisiones lineales en directo.",
+            "Dejar a criterio del usuario la generación de subtítulos automáticos sin obligación del prestador de ofrecer servicios profesionales.",
+            "Eximir de accesibilidad a material de archivo producido antes de la fecha de entrada en vigor de la ley."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta identifica las obligaciones activas del prestador: proveer subtitulado, audiodescripción y lengua de signos cuando proceda y asegurar su disponibilidad e identificación. Los distractores excluyen ámbitos o trasfieren la obligación al usuario, que no coinciden con las exigencias normativas sobre accesibilidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Para mantener coherencia espacial en un raccord de mirada entre dos planos consecutivos conviene conservar:",
+          "options": [
+            "La iluminación exactamente igual en ambos planos para que la mirada parezca coherente.",
+            "La misma distancia focal y el mismo tamaño aparente de los rostros entre ambos planos.",
+            "La dirección relativa de la mirada respecto a la línea de acción (axis) y la posición relativa de los personajes en el espacio de la escena.",
+            "El ángulo de cámara idéntico respecto al plano horizontal aunque cambie la posición de los personajes."
+          ],
+          "correctIndex": 2,
+          "explanation": "La clave del raccord de mirada es mantener la dirección de la mirada en relación con la línea de acción y la posición espacial de los personajes. Los otros distractores confunden factores secundarios (focal, iluminación, ángulo) que no garantizan coherencia espacial por sí solos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En una matriz de vídeo SDI debe verificarse que el crosspoint asignado conecta la cámara C (entrada 12) con el canal de plató D (salida 3). ¿Qué comprobación permite verificar de forma directa e inequívoca que la señal física en la salida 3 procede efectivamente de la entrada 12?",
+          "options": [
+            "Revisar en la interfaz de control de la matriz que la tabla de crosspoints muestra entrada 12→salida 3 y confirmar en el log del sistema que la conmutación fue registrada como exitosa.",
+            "Conectar un monitor o instrumento a la salida 3, comprobar la imagen de la cámara C y verificar simultáneamente los identificadores embebidos en la señal (p. ej. timecode o ID en los datos auxiliares SDI) que correspondan a la entrada 12.",
+            "Pedir al realizador o al operador de cámara que active el tally de la cámara C y comprobar que el indicador de tally en el puesto de plató D se ilumina; su coincidencia confirma el enrutamiento.",
+            "Inyectar temporalmente un patrón de prueba distintivo en la entrada 12 y observar en un monitor en la salida 3 la aparición del mismo patrón en el waveform/vectorscopio para confirmar la conmutación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La comprobación física de la salida complementada con la verificación de identificadores embebidos (timecode/ID en los datos auxiliares SDI) ofrece una garantía inequívoca de que la señal en la salida 3 procede de la entrada 12, porque asocia contenido visual y metadatos propios de la fuente. El distractor más próximo (inyección de patrón de prueba) valida la presencia del contenido pero puede ser ambiguo si existen otras fuentes con el mismo patrón, si hay procesado intermedio o si el patrón no se propaga idénticamente; comprobar sólo la tabla de crosspoints (interfaz/log) refleja el estado lógico de la matriz pero no garantiza la continuidad física de la señal, y el tally puede ser gestionado por control lógico independiente y no confirmar por sí mismo que la ruta física está correcta.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare dos configuraciones de pantalla para un puesto de edición: A) pantalla a 60 cm de los ojos, borde superior ligeramente por debajo del nivel ocular, perpendicular a la fuente de luz; B) pantalla a 40 cm, borde superior por encima del nivel ocular y paralela a una ventana sin control de luz. Señale la conclusión correcta:",
+          "options": [
+            "Ambas configuraciones son equivalentes si se ajusta el brillo del monitor; la distancia y la altura no influyen de forma significativa.",
+            "La configuración B reduce la fatiga visual por estar más cerca, aunque aumenta reflejos; por tanto B es preferible si se aumentan fuentes de luz ambiental.",
+            "La configuración A minimiza reflejos y tensión cervical; la B incrementa probabilidades de deslumbramiento y carga postural por flexión de cuello.",
+            "La configuración A favorece la ergonomía lumínica pero obliga a elevar la altura de la silla, lo que siempre aumenta la tensión lumbar respecto a B."
+          ],
+          "correctIndex": 2,
+          "explanation": "A es la disposición recomendada: distancia adecuada, borde superior por debajo del nivel ocular y orientación que reduce reflejos. B concentra riesgos de glare y mayor flexión cervical. Los otros enunciados son inexactos o introducen consecuencias no inherentes a las configuraciones descritas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia operativa correcta en una ingesta verificada para garantizar integridad y registro:",
+          "options": [
+            "Transcodificar todo el material a códec de trabajo → generar metadatos → realizar copia y comprobar checksums posteriores.",
+            "Montar proxies inmediatamente → entregar proxies al editor → verificar contenidos en el servidor de emisión.",
+            "Copiar la esencia original al almacenamiento destino → calcular y comparar checksums origen/destino → validar estructura y contenedor del fichero → registrar la operación en logs y catálogo.",
+            "Renombrar ficheros con un identificador único → borrar el material fuente tras la copia visualmente comprobada por el técnico."
+          ],
+          "correctIndex": 2,
+          "explanation": "La secuencia correcta es copia de origen a destino, verificación mediante checksum, validación de la estructura y registro. Transcodificar antes de verificar o borrar sin verificación son procedimientos inseguros.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a diferencias entre MOV, MP4 y MXF:",
+          "options": [
+            "MOV y MP4 son contenedores capaces de encapsular códecs como H.264 o HEVC; la elección afecta interoperabilidad con determinados reproductores.",
+            "MP4 preserva de forma equivalente a MXF todos los metadatos profesionales de cámara (UMID, timecode y estructura de clip) en todos los equipos de producción.",
+            "MXF está orientado a flujos profesionales y soporta metadatos estructurados y wrapping pensado para compatibilidad en entornos broadcast.",
+            "La distinción entre contenedor y códec permite cambiar el algoritmo de compresión sin necesariamente cambiar el contenedor."
+          ],
+          "correctIndex": 1,
+          "explanation": "La tercera afirmación es la excepción: MP4 no garantiza conservación y exposición de metadatos profesionales (UMID/timecode/estructura) con la misma fiabilidad y soporte que MXF en entornos broadcast. Las otras tres describen diferencias válidas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un puesto de conmutación lineal A/B‑Roll para emisión, ¿cuál de las siguientes afirmaciones describe con mayor exactitud la interacción operativa entre las fuentes A y B, la prelectura (preview) y el mezclador al preparar y ejecutar un cambio hacia el aire?",
+          "options": [
+            "El mezclador envía simultáneamente ambas fuentes A y B al bus program y la prelectura se usa para controlar la relación de mezcla entre ellas; el cambio en emisión se realiza modulando la proporción de mezcla en el bus program.",
+            "La prelectura actúa como sustitución automática del programa: al cargar una fuente en preview el mezclador la dirige inmediatamente a emisión y reemplaza lo que había en program sin necesidad de ejecutar manualmente una transición.",
+            "La fuente A presta siempre el \"fill\" principal (imagen completa) y la fuente B se emplea exclusivamente como \"key\" para incrustaciones o efectos; la prelectura solo sirve para ajustar los parámetros de la incrustación antes de aplicarla.",
+            "En un flujo A/B‑Roll las fuentes A y B son dos reproductores/canales completos que el mezclador selecciona para la salida \"program\"; la prelectura (preview) permite cuear y sincronizar la fuente que no está en program, visualizándola en el monitor de preview sin alterar la emisión; el operador utiliza el mezclador para ejecutar el corte o fundido que transfiere la fuente preparada del preview al bus program en el momento deseado."
+          ],
+          "correctIndex": 3,
+          "explanation": "Respuesta correcta: la primera opción. En A/B‑Roll las fuentes A y B son entradas completas entre las que se selecciona la que irá al bus program; la prelectura (preview) permite preparar y comprobar la fuente que está fuera de aire sin afectar la emisión, y el paso al aire se realiza mediante la acción del mezclador (corte/fundido) por parte del operador. La opción más próxima pero errónea es la segunda, que atribuye a la prelectura un comportamiento automático de sustitución del programa; en la práctica la preview solo muestra y cuea, no conmuta la salida program hasta que el mezclador/operador ejecuta la transición. Las otras opciones confunden roles (A/B no son fill/key exclusivos ni se envían normalmente ambas simultáneamente al program en un A/B‑Roll estándar).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Según el II Plan de Igualdad (2022‑2026) y la Guía de Igualdad de RTVE, ¿qué medida organizativa debe incorporarse de forma específica en los procesos de producción para prevenir representaciones sexistas y garantizar el uso de un lenguaje no discriminatorio en los contenidos audiovisuales?",
+          "options": [
+            "Implantar formación obligatoria en igualdad y prevención del acoso para todo el personal de producción.",
+            "Establecer cuotas numéricas obligatorias de presencia por sexo en cargos de dirección y presentación en todos los programas.",
+            "Incluir en el flujo de producción una revisión previa a emisión/entrega mediante un checklist de igualdad que evalúe lenguaje, roles y estereotipos en el contenido.",
+            "Habilitar un canal de denuncia confidencial y protocolos de actuación para la prevención y atención del acoso sexual y por razón de sexo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la inclusión de una revisión previa con un checklist de igualdad (B), porque el II Plan y la Guía articulan medidas concretas de incorporación de la perspectiva de género en el ciclo productivo mediante instrumentos editoriales que evalúan lenguaje, representación y estereotipos antes de la emisión. La formación obligatoria (A) es una medida complementaria necesaria para sensibilizar y prevenir el acoso, pero no sustituye el control editorial operativo sobre el contenido; el canal de denuncias (D) corresponde específicamente a prevención y atención del acoso, no al control del lenguaje o la representación en los contenidos; la opción de cuotas numéricas (C) plantea medidas de acción positiva sobre composición de plantillas o presencia, pero no es el instrumento operativo descrito para revisar y corregir lenguaje y estereotipos en materiales concretos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a los elementos que caracterizan un accidente 'in itinere':",
+          "options": [
+            "Ocurre durante el desplazamiento habitual entre el domicilio y el lugar de trabajo por el trayecto normal utilizado.",
+            "Sucede durante un desplazamiento con desviaciones razonables por causas de transporte público o trayecto alternativo justificado.",
+            "Requiere que el trayecto sea directo o con las desviaciones admitidas por la jurisprudencia para considerarlo laboral.",
+            "Incluye desplazamientos iniciados y finalizados fuera del horario laboral sin relación con el puesto o motivados por actividades personales no autorizadas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La excepción es la opción 3: los desplazamientos motivados por actividades personales no relacionadas con el trabajo no caracterizan un accidente in itinere. Las otras opciones describen elementos que sí definen o matizan este tipo de accidente.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En una política de archivo con LTO/LTFS, indique la afirmación operativa correcta:",
+          "options": [
+            "LTFS permite acceso por nombre de fichero similar a un sistema de ficheros, pero el acceso aleatorio y a muchos ficheros pequeños es lento; por ello se debe disponer de catálogo y verificación periódica.",
+            "LTO con LTFS es equivalente en rendimiento a un disco duro en operaciones de acceso aleatorio y ficheros pequeños.",
+            "Las cintas LTO requieren formateo completo antes de cada uso y no admiten verificación mediante checksum.",
+            "LTFS elimina la necesidad de mantener registros externos o catálogo porque siempre reconstituye automáticamente la base de datos del archivo."
+          ],
+          "correctIndex": 0,
+          "explanation": "LTFS expone ficheros por nombre pero mantiene las limitaciones físicas de la cinta (latencia en acceso aleatorio, bajo rendimiento con muchos ficheros pequeños), por lo que es preciso catálogo y verificación. Las otras afirmaciones exageran o son incorrectas sobre rendimiento y verificación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En la sincronización multicámara basada en comparación de formas de onda de audio, ¿cuál de las siguientes condiciones limita con mayor gravedad la fiabilidad del emparejamiento automático de pistas?",
+          "options": [
+            "Uso de códecs con pérdidas o baja resolución de la pista embebida que suavizan picos y transitorios, reduciendo la precisión del emparejamiento automático.",
+            "Diferencias en la velocidad de muestreo o en el reloj de los grabadores que producen un drift temporal persistente que impide cualquier alineado por forma de onda.",
+            "Presencia de ruido ambiente dominante o reverberación pronunciada que enmascara transitorios y reduce la correlación entre formas de onda.",
+            "Inversión de polaridad en uno de los canales frente a los demás, que provoca inversión de la forma de onda y hace imposible la correlación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La presencia de elevado ruido ambiente o reverberación altera y enmascara los transitorios y los picos que sirven de anclas para la correlación entre pistas, por lo que la comparación de formas de onda pierde fiabilidad. Las diferencias de muestreo/clock (opción 2) generan drift acumulativo que complica la sincronización a largo plazo pero no impiden encontrar un anclaje inicial y corregir el desplazamiento; el uso de códecs con pérdidas (opción 3) puede degradar detalles, pero muchos transitorios permanecen detectables y la sincronización sigue siendo viable en muchos casos; la inversión de polaridad (opción 4) reduce la correlación pero suele detectarse y corregirse automáticamente, por lo que no constituye la limitación más grave frente al ruido/reverberación.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Elija el conjunto de parámetros de proxy más compatible con un flujo de edición que busca equilibrio entre identificación visual y ahorro de espacio:",
+          "options": [
+            "720p, códec H.264 de baja complejidad, bitrate 6–12 Mbps, GOP moderado y audio AAC 128 kbps.",
+            "4K, ProRes 422 HQ, bitrate muy alto y audio WAV multicanal; orientado exclusivamente a conformado final.",
+            "480p, códec HEVC con máximo GOP y bitrate 1 Mbps; destinado a revisión remota de baja calidad.",
+            "1188p, códec RAW sin compresión y audio PCM, manteniendo todos los metadatos de cámara."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 ofrece un equilibrio adecuado: resolución suficiente para identificar planos y ahorrar espacio con un códec de baja complejidad. Las otras opciones son o bien demasiado pesadas (2,4) o de calidad demasiado baja para edición práctica (3).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Respecto a consecuencias visuales y operativas del submuestreo de crominancia, indique la afirmación correcta:",
+          "options": [
+            "4:2:0 reduce resolución de crominancia en horizontal y vertical respecto a 4:4:4, lo que perjudica keying y trabajos intensivos de etalonaje; 4:2:2 conserva resolución vertical y es preferible en emisión y postproducción moderada.",
+            "4:2:2 y 4:4:4 son equivalentes en todos los flujos profesionales; la numeración solo afecta a la profundidad de bits.",
+            "4:2:0 sólo reduce crominancia en el eje horizontal, por lo que no tiene impacto en chroma key respecto a 4:2:2.",
+            "4:4:4 reduce el riesgo de aliasing en luminancia frente a 4:2:2 y 4:2:0, por eso siempre se emplea para emisión en directo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación 1 expone correctamente que 4:2:0 reduce crominancia horizontal y vertical respecto a 4:4:4, afectando keying y etalonaje; 4:2:2 mantiene la resolución vertical y es un compromiso habitual en emisión. Las otras opciones son técnicamente incorrectas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_export_qc",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare dos exportaciones para entrega: A) MP4 H.264 progresivo sin campos, AAC; metadatos mínimos; B) MXF OP1a intercalado con audio embebido, timecode y metadatos de programa. ¿Cuál afirmación describe mejor sus diferencias operativas?",
+          "options": [
+            "A es preferible para conservar metadatos técnicos de cámara (UMID, índices de clip) frente a B.",
+            "A es superior para emisión en cadena porque MP4 es el estándar broadcast y MXF no acepta audio embebido.",
+            "Ambas son equivalentes en todos los flujos profesionales si se añaden subtítulos externamente.",
+            "B preserva fields/interlace y metadatos necesarios para emisión broadcast y conformado; A es más adecuado para entrega online pero puede perder información de timecode y campos si la fuente era entrelazada."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 identifica que MXF OP1a preserva interleaving/fields y metadatos útiles para emisión y conformado; MP4 suele ser apropiado para distribución online pero puede no conservar timecode y metadatos broadcast. Las demás afirmaciones son incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo que mejor garantiza respeto a la libertad de información y a la garantía de veracidad según principios constitucionales:",
+          "options": [
+            "Priorizar velocidad informativa sobre verificación completa si la noticia tiene impacto social relevante.",
+            "Comprobar fuentes y hechos antes de difusión, aplicar proporcionalidad en límites (protección de derechos ajenos) y facilitar rectificación cuando proceda.",
+            "Restringir información siempre que pueda generar controversia y delegar la decisión al departamento legal sin contrastar fuentes.",
+            "Difundir la información y corregir errores posteriormente sin registro ni medidas preventivas."
+          ],
+          "correctIndex": 1,
+          "explanation": "El enfoque correcto es verificación previa, proporcionalidad ante límites (privacidad, honor) y mecanismos de rectificación. Las otras opciones priorizan la inmediatez o la restricción indiscriminada, contrarias a las garantías constitucionales de información veraz.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "¿En qué situación es más apropiado incorporar HEVC/H.265 frente a AVC/H.264 en un flujo de producción/distribución?",
+          "options": [
+            "Sustituir AVC por HEVC no requiere pruebas de compatibilidad ni ajustes en infraestructura de entrega.",
+            "Siempre es preferible HEVC porque todos los dispositivos y plataformas lo soportan sin limitaciones de compatibilidad.",
+            "HEVC debe usarse sólo en material SD para ahorrar espacio, ya que no aporta ventajas en UHD.",
+            "Cuando se necesita reducir ancho de banda para distribución 4K manteniendo calidad y el entorno receptor dispone de decodificadores compatibles, aceptando mayor complejidad de codificación."
+          ],
+          "correctIndex": 3,
+          "explanation": "HEVC ofrece mejor eficiencia para alta resolución y ahorro de ancho de banda, pero su adopción exige compatibilidad en decodificación y mayor complejidad de codificación. Las otras opciones niegan limitaciones prácticas o aplican HEVC en contextos no apropiados.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál de las siguientes afirmaciones describe con mayor exactitud el uso operativo y las limitaciones de la llamada 'línea de tono de piel' en un vectorscopio para evaluar tonos de piel durante etalonaje y comprobación entre cámaras?",
+          "options": [
+            "Marca el nivel de saturación objetivo al que deben ajustarse todos los tonos de piel en emisión; alineando la crominancia con la línea se garantiza la corrección completa del color de la piel.",
+            "Es una referencia de matiz que indica el ángulo cromático aproximado asociado a tonos cutáneos en espacios de color de emisión; resulta útil para detectar desplazamientos de matiz entre cámaras o tras correcciones, pero no informa sobre luminancia ni sustituye mediciones colorimétricas ni tiene carácter absoluto para todas las variantes étnicas o condiciones de captura.",
+            "Proporciona simultáneamente información fiable de tono (matiz) y brillo (luminancia) de la piel en un único gráfico, por lo que basta observar el clúster sobre la línea para conocer ambos parámetros.",
+            "Solo es fiable cuando el rostro ocupa una porción muy amplia del encuadre (por ejemplo superior al 50%); en planos con sujetos pequeños la referencia deja de ser válida y no debe utilizarse."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 (índice 0) es correcta: la 'línea de tono de piel' es una guía de matiz en el plano de crominancia del vectorscopio útil para detectar desplazamientos angulares de hue entre cámaras y durante etalonaje, pero no muestra luminancia ni garantiza exactitud colorimétrica absoluta frente a variaciones de balance de blancos, espacio de color, procesamiento de cámara o diversidad étnica. Se diferencia del distractor más próximo (opción 4) porque no existe un umbral rígido del tamaño del rostro (p. ej. >50%) que haga la referencia válida o inválida; en planos con sujetos pequeños puede no formarse un clúster claro en el vectorscopio, pero la referencia sigue siendo aplicable si se seleccionan y muestrean regiones representativas o se emplean herramientas de extracción de muestras. Asimismo, las opciones 2 y 3 confunden conceptos: la línea no especifica saturación objetivo universal ni proporciona información de luminancia, funciones que corresponden a otros instrumentos (waveform, histograma) o a mediciones instrumentales colorimétricas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en una secuencia se eliminan planos interiores de espera entre el inicio y la conclusión de una acción, manteniendo comprensión. ¿Cuál indicio confirma que se ha aplicado correctamente la elipsis?",
+          "options": [
+            "Se insertan cortes abruptos sin elemento de transición y el espectador debe inferir totalmente el motivo de la acción.",
+            "Se conserva la continuidad causal (motivo‑consecuencia) mediante un elemento puente (objeto, reacción o diálogo) y no se rompe la lógica temporal esencial de la acción.",
+            "Se sustituye la narración por subtítulos explicativos para salvar la eliminación de sucesos intermedios.",
+            "Se ralentiza el ritmo global de la escena para dar sensación de continuidad temporal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Una elipsis correcta elimina tiempo narrativo pero mantiene la comprensión mediante indicios que conservan la relación causa‑efecto; los distractores describen recursos que rompen la intención narrativa o son improcedentes.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare consecuencias operativas de una adaptación incorrecta de impedancias en una cadena audiovisual:",
+          "options": [
+            "Provoca reflexiones en la línea que pueden generar pérdidas de nivel en ciertas bandas, distorsión y degradación de la respuesta en frecuencia; a largo plazo puede aumentar ruido y afectar sincronía entre equipos.",
+            "Solo afecta a la alimentación eléctrica y no tiene efecto apreciable en la calidad de la señal de audio o vídeo.",
+            "Reduce necesariamente la latencia del sistema, mejorando la sincronización entre dispositivos.",
+            "La adaptación incorrecta únicamente produce un leve calentamiento en los conectores sin repercusiones en la señal."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 describe las consecuencias reales: reflexiones (pérdidas y peines de respuesta), distorsión y ruido. Las otras opciones minimizan o confunden efectos eléctricos con fenómenos no relacionados.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo correcto cuando una grabación XDCAM abarca varios soportes (spanning) y se necesita acceso fiable a los clips:",
+          "options": [
+            "Copiar solo las carpetas visibles al servidor y confiar en la reproducción; si faltan partes, reconstruir manualmente los archivos sin herramientas específicas.",
+            "Consolidar clips fusionando físicamente bytes de cada soporte en un único fichero sin conservar registros de origen ni metadatos.",
+            "Renombrar los ficheros para evitar duplicidades y abrirlos directamente en el NLE sin comprobar índices ni metadatos.",
+            "Utilizar la herramienta compatible del fabricante o un software que reconozca la estructura XDCAM y los índices de spanning, conservar metadatos y UMID, y verificar reproducción antes del conformado."
+          ],
+          "correctIndex": 3,
+          "explanation": "La acción correcta es usar herramientas compatibles que respeten la estructura XDCAM y los índices de spanning, conservando metadatos. Copiar solo carpetas, renombrar o fusionar sin conservar índices puede romper el acceso y la integridad.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "050",
       "title": "Examen 050",
