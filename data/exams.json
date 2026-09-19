@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18",
+  "updatedAt": "2026-09-19",
   "exams": [
+    {
+      "id": "052",
+      "title": "Examen 052",
+      "date": "2026-09-19",
+      "level": "Muy alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique cuál de las siguientes afirmaciones refleja con mayor corrección un aspecto regulado por el III Convenio Colectivo respecto a la jornada y los descansos del personal con turnos rotativos:",
+          "options": [
+            "Las horas de presencia en turno de noche se compensan exclusivamente con aumento salarial y no con descansos adicionales.",
+            "El convenio contempla regulación específica sobre la organización de la turnicidad, con criterios para la programación de turnos y compensaciones por trabajo en horario nocturno o festivo.",
+            "El convenio suprime la obligación de registrar la jornada diaria cuando el personal trabaja en turnos rotativos.",
+            "La programación de turnos puede modificarse unilateralmente por la empresa sin preaviso cuando lo exija la producción."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta señala que el convenio contiene regulación específica sobre turnicidad y criterios de programación y compensación. Los distractores son incorrectos: la A es parcial (la compensación puede incluir descansos además de retribución), la C contradice la obligación general de registro de jornada y la D vulnera el régimen de negociación y preaviso previsto en convenios laborales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_backup_321",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Según la política 3‑2‑1 de copias de seguridad, ¿qué estrategia cumple correctamente la regla?",
+          "options": [
+            "Tener al menos tres copias independientes, almacenadas en al menos dos tipos de soporte diferentes y una copia ubicada físicamente fuera del emplazamiento principal.",
+            "Tres copias en total: original en disco, copia en RAID del mismo disco y otra copia en la misma sala en cinta.",
+            "Tres copias: original en servidor, copia en RAID del mismo servidor, copia fuera de la instalación en un sistema redundante.",
+            "Guardar dos copias locales y una copia adicional en un disco duro externo idéntico al RAID del servidor."
+          ],
+          "correctIndex": 0,
+          "explanation": "La política 3‑2‑1 exige tres copias mínimas, en al menos dos soportes distintos y una copia offsite. Los distractores fallan al proponer RAID como sustituto de copia independiente (A,B,D) o mantener todas las copias en la misma ubicación (B,D).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_news",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En el montaje de una noticia con límite estricto de duración, ¿qué criterio operativo debe primar para conservar la prioridad informativa?",
+          "options": [
+            "Priorizar planos de recursos vistosos aunque se sacrifiquen datos clave del texto para mantener impacto visual.",
+            "Mantener la duración de las declaraciones completas y eliminar piezas de apoyo si es necesario para no modificar el texto de redacción.",
+            "Preservar orden y exactitud de los hechos: titular, lead y datos esenciales; ajustar locución y totales para ajustar el tiempo sin eliminar información clave.",
+            "Sustituir partes de la locución por subtítulos si no hay tiempo para mantener la duración original de la pieza."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta subraya priorizar los hechos esenciales (titular, lead, datos) y adaptar recursos y locución para respetar tiempo sin perder información clave. Los distractores optan por sacrificar información esencial (A), priorizar integridad de declaraciones por encima de la prioridad informativa (C) o soluciones inadecuadas para noticias breves (D).",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_project_media",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que diferencia con precisión los metadatos de proyecto (bins, timelines) de los metadatos embebidos en los archivos de esencia:",
+          "options": [
+            "Los metadatos de proyecto incluyen información técnica embebida en la esencia del fichero, mientras que los metadatos de esencia son exclusivos del NLE.",
+            "Los metadatos de esencia son meramente descriptivos y no contienen información técnica como timecode, codec o UMID.",
+            "Los metadatos de proyecto viajan automáticamente con los archivos de esencia al copiar la carpeta de media entre estaciones sin riesgo de pérdida.",
+            "Los metadatos de proyecto son configuraciones internas del NLE (estructura de bins, decisiones de montaje, etiquetas) y no contienen la información técnica de captura embebida en los ficheros de esencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta distingue que los metadatos de proyecto están en el NLE (bins, timeline, decisiones) y son distintos de los metadatos embebidos en la esencia (timecode, codec, UMID). Los distractores son falsos: A invierte la relación, C es incorrecta (los metadatos de proyecto no siempre viajan con la media), D minimiza la naturaleza técnica de los metadatos de esencia.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes interpretaciones de lecturas de un medidor de correlación de fase y elija la más precisa sobre compatibilidad mono/estéreo:",
+          "options": [
+            "Valores cercanos a +1 indican señal en antífase y riesgo de cancelación al sumar a mono.",
+            "Valores cercanos a 0 indican alta correlación y perfecta compatibilidad mono.",
+            "Valores cercanos a +1 indican alta correlación en fase y compatibilidad segura al mezclar a mono; valores cercanos a −1 indican riesgo de cancelación por componentes en contrafase.",
+            "Valores negativas moderadas (por ejemplo −0,3) son indicativo de inversión de polaridad segura y sin efectos perceptibles al pasar a mono."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta explica que +1 es alta correlación en fase (buena compatibilidad mono) y −1 indica contrafase con riesgo de cancelación al sumar a mono. Los distractores invierten conceptos (A,B) o minimizan el efecto de valores negativos (D), que sí pueden afectar la suma a mono según su magnitud y contenido.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para almacenar un fichero único que supera los 4 GB en un soporte de uso habitual en producción, ¿qué sistema de archivos debe seleccionarse para evitar la limitación de tamaño de fichero?",
+          "options": [
+            "FAT32",
+            "exFAT",
+            "ISO‑9660 básico",
+            "FAT12"
+          ],
+          "correctIndex": 1,
+          "explanation": "FAT32 tiene límite de 4 GB‑1 por fichero, mientras que exFAT soporta ficheros de mayor tamaño y es apropiado en entornos de producción para tarjetas y unidades modernas. ISO‑9660 básico y FAT12 no son adecuados por limitaciones de tamaño o por no ser sistemas de archivo de uso práctico para estos fines.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un almacenamiento compartido donde varios editores acceden a media simultáneamente, ¿qué diagnóstico operativo explica mejor una degradación de rendimiento intermitente sin fallo de discos?",
+          "options": [
+            "La degradación se debe exclusivamente a fallos físicos en discos; reemplazando discos se recuperará el rendimiento.",
+            "Aumentar el número de conexiones a la base de datos de metadatos siempre mejora el rendimiento de lectura de media.",
+            "El rendimiento solo depende de la latencia de los clientes y no guarda relación con el número de streams concurrentes.",
+            "Es probable que el ancho de banda agregado solicitado por los editores supere la capacidad de la controladora o del enlace de red; la contención de I/O y la falta de reservas/Quality‑of‑Service provocan latencias intermitentes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta identifica la contención por ancho de banda agregado y I/O como causa habitual de degradación concurrente; la solución pasa por dimensionado, reservas y QoS. Los distractores son incorrectos: A atribuye solo a fallos físicos, C niega la relación con concurrencia y D propone una medida que no mejora el throughput de datos de media.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 31/1995, señale cuál de las siguientes expresiones corresponde a un principio de la acción preventiva:",
+          "options": [
+            "Reparación posterior del daño como principio prioritario.",
+            "Eliminación total de cualquier riesgo mediante la paralización permanente de la actividad.",
+            "Asignación de responsabilidad exclusiva al trabajador para su propia protección sin intervención del empresario.",
+            "Evaluación de riesgos y planificación de la actividad preventiva."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 31/1995 establece la evaluación de riesgos y la planificación de medidas preventivas como principio. Los distractores son incorrectos: A prioriza reparación en lugar de prevención, C pretende la responsabilidad exclusiva del trabajador y D es impracticable y no figura como principio normativo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al cortar y preparar un fragmento procedente de un códec Long‑GOP (I,P,B) para conformado, ¿qué operación debe realizarse para evitar artefactos o errores de decodificación en los puntos de acceso?",
+          "options": [
+            "Realizar el corte directamente en cualquier frame del GOP y confiar en el reproductor para reconstruir dependencias.",
+            "Re‑codificar o re‑renderizar el segmento recortado de forma que se cree un I‑frame en el borde de edición (generar nuevos puntos de acceso intra).",
+            "Reencapsular sin tocar las imágenes para crear puntos de acceso accesibles.",
+            "Eliminar todos los frames B para convertir el GOP en una secuencia de solo I y P sin codificación adicional."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica correcta es re‑codificar/transcodificar para crear I‑frames en los límites de edición, garantizando decodificación independiente. Los distractores son riesgosos: A y B no resuelven dependencias de predicción; D es técnicamente incorrecto y no viable sin codificación adicional.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_incendio",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a medidas correctas de prevención y actuación ante incendios en un centro de trabajo (clases de fuego, evacuación, extintores y seguridad eléctrica):",
+          "options": [
+            "En una evacuación debe abandonarse el edificio por las vías más próximas y seguras, sin utilizar ascensores, y desplazarse al punto de encuentro establecido para realizar recuento del personal.",
+            "El uso de extintores de agua pulverizada es adecuado para fuegos de materiales sólidos (clase A) y puede emplearse cuando el origen es exclusivamente eléctrico sin desconectar la alimentación.",
+            "Los extintores de CO₂ son apropiados para fuegos originados en equipos eléctricos bajo tensión porque no dejan residuos conductores y minimizan el daño a equipos electrónicos.",
+            "Ante un incendio originado en una instalación eléctrica, la medida prioritaria es cortar la alimentación desde el cuadro general cuando sea seguro hacerlo, antes de intentar la extinción con agentes conductores."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción A es la excepción. Aunque los extintores de agua son adecuados para fuegos de clase A, el uso de agua sobre fuegos con origen eléctrico o en instalaciones bajo tensión comporta riesgo de conducción eléctrica y de electrocución; por tanto no debe aplicarse mientras exista alimentación eléctrica. Las otras opciones son correctas: B describe el procedimiento estándar de evacuación (vías seguras, sin ascensor y punto de encuentro); C es técnicamente correcto respecto a la idoneidad del CO₂ para fuegos en equipos eléctricos por no dejar residuos conductores; D indica la prioridad de desconectar la alimentación eléctrica cuando sea posible y seguro, medida coherente con la prevención de riesgos antes de emplear agentes conductores como el agua.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a factores que gobiernan la capacidad de un servidor de vídeo para atender canales concurrentes:",
+          "options": [
+            "La concurrencia está limitada por el ancho de banda agregado que el subsistema de disco y la red pueden entregar sostenidamente.",
+            "Las operaciones de acceso a muchos clips pequeños incrementan la carga de I/O y pueden reducir la concurrencia útil del servidor.",
+            "El dimensionado solo por capacidad de disco (TB) garantiza automáticamente el rendimiento necesario para N canales concurrentes, sin considerar controladoras, cachés ni red.",
+            "La utilización de caché y discos SSD para metadatos y reads aleatorios suele mejorar la concurrencia efectiva en entornos multiusuario."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación 3 es la excepción: la capacidad en TB no garantiza rendimiento; también son esenciales controladoras, caché y ancho de red. Las otras afirmaciones describen factores reales que afectan concurrencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la medida que es compatible y congruente con la prevención de trastornos musculoesqueléticos en tareas continuadas con teclado, ratón y tableta gráfica:",
+          "options": [
+            "Configurar teclado y ratón a la altura de los codos, apoyar antebrazos y alternar tareas con pausas cortas frecuentes.",
+            "Mantener sesiones de trabajo continuadas de al menos 3 horas para favorecer productividad y luego un descanso largo.",
+            "Adoptar una postura con muñecas fuertemente dorsiflexionadas para mejorar precisión al trazar en tableta.",
+            "Colocar la tableta plana sobre la mesa sin ajuste de ángulo para evitar movimientos de hombro."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta recoge medidas ergonómicas compatibles: altura de teclado a nivel de codo, apoyo de antebrazos y pausas frecuentes. Los distractores incluyen prácticas no recomendadas: largas sesiones sin pausas (A), posturas con muñecas dobladas (C) o tableta plana sin ergonomía (D).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a diferencias y usos de black burst y tri‑level sync:",
+          "options": [
+            "Black burst es una referencia común en entornos SD mientras que tri‑level es la referencia habitual en HD/HD‑SDI para sincronismo de cuadro.",
+            "Tri‑level sync proporciona transiciones más rápidas y menor jitter que black burst, por eso se emplea en altas definiciones.",
+            "Ambas señales son intercambiables sin adaptadores en todas las instalaciones modernas, ya que los equipos SD/HD las aceptan indistintamente.",
+            "Tri‑level no tiene el pulso vertical de sincronismo característico del black burst y ofrece compatibilidad temporal superior para señales progresivas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 3 es la excepción: black burst y tri‑level no son intercambiables sin adaptación; requieren equipos o conversores adecuados. Las otras afirmaciones describen diferencias reales: black burst para SD, tri‑level para HD, y tri‑level proporciona transiciones temporales mejores para progresivo.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Tras descargar y verificar íntegramente el contenido de un soporte de estado sólido procedente de cámara, ¿cuál es la práctica operativa recomendada antes de volver a usar el soporte en rodaje?",
+          "options": [
+            "Formatear el soporte con la opción recomendada por la cámara/recorder antes del nuevo uso y mantener un porcentaje de espacio libre para optimizar wear‑leveling.",
+            "No realizar ninguna acción: al comprobarse la integridad, el soporte está listo.",
+            "Ejecutar un formateo de bajo nivel con utilidades de terceros que sobrescriban todo el contenido con ceros.",
+            "Usar el soporte tal cual y conservar siempre una copia adicional en la misma tarjeta durante la siguiente grabación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica correcta es formatear según la cámara/recorder y mantener espacio libre para wear‑leveling; esto optimiza rendimiento y compatibilidad. El formateo de bajo nivel (C) no es necesario ni recomendado rutinariamente, A y D son prácticas inseguras o inapropiadas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según la Ley 17/2006, señale la afirmación que mejor expresa la misión de la Corporación RTVE como servicio público:",
+          "options": [
+            "Producir exclusivamente entretenimiento comercial sin obligaciones de pluralismo o servicio informativo.",
+            "Actuar únicamente como operador privado sujeto a las reglas del mercado sin funciones propias de servicio público.",
+            "Prestar un servicio público que contribuya al derecho a la información, la educación y la cultura, atendiendo a principios de pluralismo, veracidad y accesibilidad.",
+            "Sustituir a otros medios locales en la producción de contenidos culturales regionales."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley 17/2006 define la función de servicio público de RTVE orientada a información, cultura y educación, con principios como pluralismo y veracidad. Las otras opciones son incompatibles o exageran funciones en contradicción con la Ley.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para mezclar material 25p con 29,97p en un mismo flujo destinado a emisión en 29,97, ¿qué método es operativamente el más apropiado para mantener naturalidad de movimiento y sincronía de audio?",
+          "options": [
+            "Aplicar un cambio de velocidad simple del 25p hasta 29,97p sin ajuste de audio.",
+            "Insertar 3:2 pulldown sobre 25p para obtener 29,97 sin corrección de movimiento.",
+            "Duplicar frames periódicamente en 25p hasta aproximar 29,97 y mantener audio original.",
+            "Usar conversión de cadencia por interpolación de movimiento (motion‑compensated frame rate conversion) y ajustar audio para preservar pitch y sincronía."
+          ],
+          "correctIndex": 3,
+          "explanation": "La conversión con interpolación de movimiento conserva la naturalidad del movimiento y permite ajustar audio correctamente; los otros métodos producen artefactos de movimiento o alteran audio (A y D) o están diseñados para 24→60, no 25→29,97 (B).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_color_order",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione el orden de operaciones en etalonaje que resulta más compatible para lograr una corrección primaria sólida y luego aplicar el look creativo:",
+          "options": [
+            "Aplicar el look creativo (LUT/grade) primero, luego normalizar y realizar balance de blancos.",
+            "Exportar primero una LUT creativa y aplicarla en todas las cámaras sin realizar matching ni normalización previa.",
+            "Realizar correcciones secundarias primero (selectivas) y después ajustar balance y exposición globalmente.",
+            "Normalización de espacio/gamma → balance de blancos → ajuste de exposición/contraste → matching entre cámaras → correcciones secundarias → aplicación del look final."
+          ],
+          "correctIndex": 3,
+          "explanation": "La secuencia indicada es la adecuada: normalizar espacio/gamma, balance de blancos, exposición/contraste, matching entre cámaras, correcciones secundarias y look final. Los distractores invierten pasos o omiten el matching previo, lo que dificulta consistencia y compatibilidad entre cámaras.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Respecto a la distribución de material HDR, ¿qué afirmación resume mejor la diferencia práctica entre PQ (ST2084) y HLG en términos de compatibilidad de visualización?",
+          "options": [
+            "HLG está diseñado para ofrecer compatibilidad de visualización directa en algunas pantallas SDR sin metadatos, mientras que PQ necesita metadatos y una cadena de reproducción que respete ST2084.",
+            "PQ permite cierta compatibilidad inversa con pantallas SDR sin metadatos, mientras que HLG requiere metadatos de transferencia para visualizarse en SDR.",
+            "Ambas curvas son idénticas en requisitos de metadatos y no presentan diferencias prácticas en distribución.",
+            "PQ no necesita gestión de metadatos y es preferible para emisiones en directo por su retrocompatibilidad SDR."
+          ],
+          "correctIndex": 0,
+          "explanation": "HLG está pensado para cierta retrocompatibilidad con pantallas SDR sin metadatos; PQ (ST2084) requiere manejo de metadatos y tone mapping en la cadena de reproducción. Las otras opciones confunden o invierten estos principios.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Si cada flujo audiovisual tiene un bitrate sostenido de 20 Mbps y se esperan 30 flujos concurrentes, ¿cuál es la capacidad de red mínima recomendada aplicando un margen operativo del 20%?",
+          "options": [
+            "600 Mbps",
+            "720 Mbps",
+            "500 Mbps",
+            "900 Mbps"
+          ],
+          "correctIndex": 1,
+          "explanation": "El bitrate agregado es 20×30 = 600 Mbps. Aplicando un margen del 20%: 600×1,20 = 720 Mbps. Las otras opciones no aplican correctamente el margen o multiplicación.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_music_sync",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "En una escena con diálogo y frase musical con acentos marcados, ¿cuál de las siguientes estrategias de montaje permite mantener contrapunto entre imagen y música sin romper la continuidad sonora del diálogo?",
+          "options": [
+            "Sincronizar cortes con los acentos musicales relevantes (beats o cambios de frase), empleando J‑cuts y L‑cuts para preservar la continuidad del diálogo y mantener el contrapunto.",
+            "Cortar estrictamente en el inicio de cada compás musical, incluso si interrumpe la frase hablada, para respetar acentos.",
+            "Sustituir la banda sonora por silencio durante el diálogo para evitar interferencias con los acentos musicales.",
+            "Mantener la música a volumen completo sin ajustar cortes, confiando en que la mezcla resolverá cualquier conflicto de acentos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta indica sincronizar cortes con acentos musicales y usar J‑cuts/L‑cuts para preservar la continuidad del diálogo mientras se mantiene el contrapunto. Los distractores interrumpen diálogo (A), proponen soluciones inapropiadas (C) o asumen que la mezcla sola resolverá conflictos sin montaje (D).",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "051",
       "title": "Examen 051",
