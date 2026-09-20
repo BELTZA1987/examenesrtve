@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-19",
+  "updatedAt": "2026-09-20",
   "exams": [
+    {
+      "id": "053",
+      "title": "Examen 053",
+      "date": "2026-09-20",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al contenido sustantivo del principio constitucional de igualdad y la prohibición de discriminación:",
+          "options": [
+            "El principio de igualdad impide cualquier diferencia de trato, incluso cuando exista una causa objetiva y proporcionada que la justifique.",
+            "La igualdad exige que las administraciones públicas adopten medidas positivas temporales para corregir desigualdades reales entre grupos sociales.",
+            "La prohibición de discriminación comprende tanto la discriminación directa como la indirecta por motivos personales o sociales.",
+            "La Constitución reconoce la obligación del sector público de promover la igualdad efectiva y eliminar obstáculos que impidan su ejercicio."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción: el principio de igualdad no prohíbe toda diferencia de trato sin matices; admite diferencias justificadas por motivos objetivos, proporcionados y razonables. Las otras opciones describen elementos compatibles con el principio (medidas positivas, alcance de la prohibición y la obligación de promover igualdad).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para reducir fatiga visual y postural en una jornada continuada frente a pantallas de visualización, ¿qué organización de tareas es la más adecuada?",
+          "options": [
+            "Alternar tareas de visualización intensa con tareas no visuales cada 45–60 minutos, e incluir micro‑pausas de 1–2 minutos cada 20–30 minutos.",
+            "Realizar bloques de trabajo ininterrumpido de 120 minutos con una pausa única de 30 minutos al mediodía.",
+            "Distribuir pausas aleatorias según disponibilidad del equipo, priorizando la finalización de tareas largas.",
+            "Concentrar la interacción con pantalla en la mañana y realizar solo tareas administrativas sin pantalla por la tarde, sin pausas cortas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 aplica la alternancia y micro‑pausas recomendadas para reducir fatiga visual y postural; las otras opciones concentran esfuerzos largos sin alternancia efectiva o dependen de criterios operativos no preventivos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre transporte en una interfaz SDI:",
+          "options": [
+            "Los datos auxiliares (ANC) se deben insertar exclusivamente en el espacio VANC; el audio embebido solo puede ir en HANC.",
+            "SDI solo transporta vídeo; el audio embebido y los datos auxiliares requieren canales físicos separados o enlaces IP dedicados.",
+            "El audio embebido en SDI siempre se inserta en el mismo lugar que los datos ANC, por lo que no es posible distinguir ambas señales.",
+            "Una señal SDI puede transportar vídeo, audio embebido y datos auxiliares (ANC) simultáneamente dentro del mismo flujo, respetando los espacios de paquete definidos en las normas SMPTE."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 es correcta: SDI admite vídeo, audio embebido y datos ANC en espacios definidos por los estándares SMPTE; las demás opciones confunden limitaciones inexistentes o atribuyen inserción exclusiva incorrecta (ANC puede ir en VANC o HANC según tipo de datos).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a causas y diagnósticos típicos de un bucle de masa en una instalación audiovisual:",
+          "options": [
+            "Conexiones a diferentes tomas de tierra entre dispositivos con cables de señal y de alimentación que crean diferencias de potencial.",
+            "Uso de adaptadores o cables con pantallas mal conectadas que establecen retornos de señal no deseados.",
+            "Presencia de un desfase de muestra entre señales digitales que produce inversión de polaridad en una pista de audio.",
+            "Hum perceptible que varía al desconectar fuentes de alimentación o cablear diferencialmente."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es la excepción: un desfase de muestra entre señales digitales no es una causa típica de bucle de masa; los bucles de masa se originan por diferencias de potencial y conexiones de masa, descritas en las otras opciones.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_checksum",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión los límites prácticos de un checksum en el control de integridad antes y después de una transferencia:",
+          "options": [
+            "Un checksum coincidente entre origen y destino garantiza la identidad bit a bit del fichero y, por tanto, autentica su autoría y origen.",
+            "Un checksum que coincide confirma que los datos no se han alterado en la transferencia; sin embargo, algoritmos débiles (p. ej. CRC32) presentan mayor probabilidad de colisiones que hashes criptográficos.",
+            "Los checksums detectan cambios en metadatos externos o en la ubicación del archivo aunque el contenido binario permanezca igual.",
+            "Si el checksum de origen difiere del de destino, pero la reproducción parece correcta, el checksum puede descartarse porque solo verifica campos administrativos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es correcta: un checksum coincide indica integridad durante la copia; su solidez depende del algoritmo — CRCs son menos resistentes a colisiones que hashes criptográficos. La opción 0 confunde integridad bit a bit con autenticidad; 2 y 3 son incorrectas respecto a qué verifica un checksum.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_en_mision",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Ante un desplazamiento profesional (misión) fuera del centro habitual, ¿qué interpretación describe mejor la responsabilidad preventiva del empleador y la medida prioritaria de mitigación de riesgos?",
+          "options": [
+            "La empresa solo debe facilitar medios de transporte y delega en el trabajador la evaluación del riesgo del lugar de destino.",
+            "El empleador debe realizar una evaluación de riesgos específica para la misión, informar al trabajador de los riesgos locales y proporcionar medidas preventivas adaptadas (equipamiento, información y medios de comunicación).",
+            "Es suficiente la formación general en PRL impartida en el centro; no se requieren evaluaciones específicas para misiones puntuales.",
+            "Si la misión es inferior a 8 horas, no procede aplicar medidas preventivas adicionales ni seguimiento médico."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 2 interpreta correctamente la obligación preventiva: evaluar riesgos específicos de la misión y proporcionar medidas adaptadas. Las otras opciones minimizan o excluyen obligaciones del empleador que la normativa preventiva no permite.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Al componer un gráfico que presenta halos claros en los bordes porque fue rendereado con alpha premultiplicado y el sistema de composición interpreta la capa como straight alpha, la operación correcta es:",
+          "options": [
+            "Incrementar el contraste del gráfico RGB para ocultar el halo en composición.",
+            "Aplicar un filtro de reducción de ruido sobre el canal alfa para suavizar los bordes.",
+            "Marcar/interpretar la fuente como premultiplicada o convertir la capa a straight alpha antes de componer.",
+            "Invertir el canal alfa y volver a componer con el modo de fusión habitual."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 es el procedimiento correcto: el halo aparece por discrepancia entre premultiplied y straight; hay que interpretar la asset como premultiplied o convertir a straight. Las otras opciones no corrigen la desalineación entre canales RGB y alfa.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál de las siguientes afirmaciones refleja con mayor precisión la finalidad de la reforma de la Ley 5/2017 y el mecanismo de elección parlamentaria de los órganos de RTVE?",
+          "options": [
+            "La reforma sustituye la elección parlamentaria por designación directa del Gobierno para agilizar nombramientos ejecutivos.",
+            "La reforma privatiza la gestión de RTVE y elimina cualquier participación parlamentaria en la designación de sus órganos.",
+            "La reforma persigue reforzar la independencia institucional y establece que los órganos de gobierno de RTVE sean designados por el Parlamento mediante un procedimiento que busca garantizar pluralismo y acuerdo parlamentario.",
+            "La reforma restringe la capacidad de los partidos políticos para presentar candidatos a los órganos de RTVE dejando la elección solo a la sociedad civil."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 resume la finalidad conocida de la reforma: recuperar independencia y pluralismo con un mecanismo parlamentario de elección; las demás opciones contradicen ese objetivo o introducen cambios no acordes con la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_offline_online",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En un flujo offline/online, ¿qué elemento es imprescindible para reconformar el montaje proxy a los originales en el online?",
+          "options": [
+            "Los proxies de baja resolución sin referencias de timecode ni mapeo de nombres.",
+            "La lista de decisiones (EDL/AAF/XML) que contiene las referencias de timecode y/o identificadores de origen necesarios para localizar los originales.",
+            "Los renderizados intermedios exportados desde el offline, sin acceso a los originales.",
+            "Una copia de los originales renombrada para coincidir con los proxies, sin registrar sus timecodes."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es correcta: la reconformación requiere la lista de decisiones con referencias a timecode/identificadores de origen. Los proxies por sí solos o renders intermedios no contienen la información necesaria para un reconformado exacto.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_metadatos",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para que los metadatos cumplan su función en catalogación, búsqueda e intercambio, ¿qué conjunto de campos es el más apropiado para incluir de forma normalizada?",
+          "options": [
+            "Un conjunto normalizado que combine identificadores técnicos (formato, timecode, UMID), descriptivos (título, descriptores, autor) y administrativos (fecha, derechos), con esquemas estandarizados.",
+            "Únicamente campos descriptivos: título y palabras clave, dejando la identificación técnica al nombre de fichero.",
+            "Solo campos técnicos: códec, resolución y bitrate; sin campos descriptivos ni administrativos.",
+            "Solo datos administrativos y de derechos, porque la búsqueda se realiza por sistema de gestión externo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es correcta: la catalogación y el intercambio requieren metadatos técnicos, descriptivos y administrativos normalizados; las otras opciones son parciales y limitan la interoperabilidad y búsqueda.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un flujo donde el dispositivo de grabación sobrescribe el timecode de cámara, ¿para qué se utiliza habitualmente el auxiliary timecode (aux TC)?",
+          "options": [
+            "Como referencia para almacenar únicamente la hora de ingestión en el servidor, sin relación con la cámara original.",
+            "Para codificar metadatos de color y gamma en la pista de timecode.",
+            "Para sustituir por completo el record TC en la edición, eliminando la necesidad de timecode sincronizado.",
+            "Para conservar el timecode original de la cámara o fuente (source TC) cuando el record TC se modifica, facilitando relink y reconformado a la referencia de origen."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: el auxiliary TC se usa para preservar la referencia de timecode de origen cuando el record TC cambia, permitiendo relink y reconformado. Las otras opciones no describen el uso práctico del aux TC.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Respecto a legalización de señal y control de gamut, señale la interpretación más precisa:",
+          "options": [
+            "Un legalizador simplemente recorta (clipping) valores que exceden los límites legales de luminancia y croma, sin alterar tonalidad ni preservar continuidad cromática.",
+            "Un legalizador aplica operaciones que limitan o comprimen tonos fuera de gamut manteniendo la relación perceptiva de color, a diferencia del recorte simple que puede producir cambios de matiz y artefactos.",
+            "La legalización solo afecta a la luminancia; la corrección de gamut debe hacerse manualmente cámara por cámara.",
+            "El limitador automático de gamut sustituye siempre al etalonaje profesional para entregar señal legalizada sin pérdida de calidad."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 distingue correctamente la función de un buen legalizador (compresión/ajuste preservando relación perceptiva) frente al recorte simple que altera matiz. Las otras opciones son incorrectas o excesivas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la familia XAVC y la distinción entre Intra y Long‑GOP:",
+          "options": [
+            "XAVC es un contenedor exclusivo sin variantes de perfil ni consideración sobre bitrate o resolución.",
+            "XAVC Long‑GOP utiliza compresión interframe (I, P, B) para mejorar eficiencia de almacenamiento en grabaciones de mayor duración.",
+            "XAVC‑Intra utiliza compresión intraframe (cada cuadro codificado de forma independiente), siendo idóneo para edición y alta calidad por cuadro.",
+            "Las variantes XAVC (Intra y Long‑GOP) se aplican según necesidades: Intra para flujo de trabajo que requiere edición frame‑accurate; Long‑GOP para ahorro de espacio en larga grabación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción: XAVC no es un 'contenedor exclusivo' sin perfiles; tiene variantes y perfiles con diferentes bitrates y aplicaciones. Las otras afirmaciones describen correctamente Intra vs Long‑GOP y sus usos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre la edición y publicación de una playlist en EVS/IPDirector:",
+          "options": [
+            "Los cambios en una playlist no pueden aplicarse durante una retransmisión en vivo; requieren detener la ingest para evitar inconsistencias.",
+            "Modificar una playlist automáticamente reencodea la esencia de los clips para adaptarlos al nuevo orden antes de publicar.",
+            "Para publicar una playlist es obligatorio duplicar los clips en un nuevo banco físico de almacenamiento.",
+            "Editar el orden y los marcadores de una playlist modifica únicamente la metadata de la lista de reproducción; no altera la esencia de los clips originales almacenados en el servidor."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 compara correctamente: las playlists gestionan metadata (orden, transiciones) sin alterar la esencia original. Las otras opciones describen procesos incorrectos o innecesarios respecto al comportamiento habitual de EVS/IPDirector.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 13/2022 sobre protección de menores, señale la afirmación que interpreta con mayor precisión una obligación de los prestadores de servicios audiovisuales:",
+          "options": [
+            "La ley obliga a eliminar cualquier contenido con presencia de menores que pueda resultar conflictivo, sin posibilidad de contextualización ni excepción.",
+            "Los prestadores deben implantar medidas de clasificación por edades, controles de acceso y advertencias para evitar exposición indebida de menores a contenidos no adecuados.",
+            "La única obligación es incluir un descriptor genérico en la web del proveedor; no se exige control de acceso.",
+            "Los prestadores quedan exentos de medidas si el contenido se publica en plataformas internacionales fuera del territorio del Estado."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 refleja las obligaciones: clasificación por edades, controles de acceso y advertencias. Las demás opciones son incorrectas o suponen exenciones/medidas extremas no recogidas en el enfoque normativo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_match_action",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un raccord de movimiento (match on action), ¿qué elemento técnico resulta clave para preservar la continuidad perceptiva del movimiento entre dos planos?",
+          "options": [
+            "Evitar cualquier variación en la iluminación incluso si altera la exposición del actor.",
+            "Mantener exactamente la misma focal y profundidad de campo en ambos planos.",
+            "Asegurar que ambos planos tengan idéntico color y balance de blancos antes de cortar.",
+            "La correspondencia en el vector y la sincronía temporal del movimiento principal entre los dos planos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 es la clave: continuidad del vector y la sincronía del movimiento mantienen la percepción de acción continua. Las otras opciones pueden ser deseables para consistencia visual, pero no son el elemento esencial del raccord de movimiento.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Durante monitorización, al sumar a mono una mezcla estéreo aparecen pérdidas y sensación de hueco en el centro. ¿Qué diagnóstico explica mejor ese problema?",
+          "options": [
+            "Inversión de polaridad (fase) en uno de los canales, produciendo cancelación de componentes centrados.",
+            "Compresión excesiva en ambos canales que reduce la energía del centro.",
+            "Desajuste de sample rate entre los dos canales que provoca desalineación completa.",
+            "Saturación en uno de los canales provocando clipping centrado."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 diagnostica correctamente la inversión de polaridad en un canal, que causa cancelación de señales comunes al sumarlas a mono. Los otros problemas no producen la cancelación central característica.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Durante las verificaciones periódicas de un archivo almacenado en soportes físicos y copias en disco se detecta un incremento persistente de errores de lectura corregidos y, además, el proveedor del formato ha dejado de distribuir herramientas de lectura y actualizaciones. Según buenas prácticas de preservación y mitigación de obsolescencia, ¿qué medida debe activarse con prioridad?",
+          "options": [
+            "Aumentar la frecuencia de las verificaciones y controles de checksum sin modificar el soporte ni el formato.",
+            "Generar copias adicionales del contenido en el mismo formato y distribuirlas a ubicaciones distintas siguiendo la política de copias 3‑2‑1.",
+            "Iniciar una migración preventiva de la esencia y metadatos a soportes y/o formatos actualmente soportados, registrando integridad y trazabilidad de la operación.",
+            "Conservar las copias existentes y posponer acciones hasta que se produzcan fallos irreversibles para optimizar costes operativos."
+          ],
+          "correctIndex": 2,
+          "explanation": "El aumento sostenido de errores de lectura junto con la pérdida de soporte del proveedor indica riesgo combinado de degradación física y obsolescencia tecnológica. La acción prioritaria es la migración preventiva a soportes o formatos con soporte operativo actual, realizando además registro de checksums y metadatos para garantizar integridad y trazabilidad. Aumentar verificaciones (A) mejora el monitoreo pero no soluciona la falta de lectura o la obsolescencia; generar más copias en el mismo formato (C) reduce riesgo de pérdida física pero no garantiza accesibilidad si el formato deja de ser legible; esperar a fallos (D) expone a pérdida de datos y no sigue prácticas de preservación preventiva.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones para distinguir montaje paralelo y montaje alterno:",
+          "options": [
+            "El montaje alterno implica siempre la presencia de la misma acción vista desde diferentes cámaras; el paralelo solo reúne imágenes sin relación temática.",
+            "Montaje paralelo es sinónimo de montaje alterno; ambos son términos intercambiables que indican cortes rápidos entre escenas.",
+            "El montaje paralelo presenta acciones que ocurren simultáneamente en espacios distintos y su relación suele converger temáticamente; el montaje alterno intercala acciones que no necesariamente son simultáneas para establecer contraste o ritmo.",
+            "El montaje paralelo sólo se usa en documentales; el alterno solo en ficción."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 diferencia correctamente: paralelo sugiere simultaneidad y eventual convergencia temática; alterno intercala acciones que pueden no ser simultáneas para contraste o ritmo. Las otras opciones son incorrectas o excesivamente restrictivas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Respecto a proxies y esencia de alta resolución en un flujo XDCAM, indique la afirmación que describe con precisión su relación y uso durante visionado, selección e ingesta:",
+          "options": [
+            "Los proxies son versiones de baja resolución independientes que no mantienen referencias temporales ni identificadores necesarios para reconformar sobre la esencia.",
+            "Los proxies se usan solo para diagnóstico de errores y no participan en la selección editorial.",
+            "Durante ingesta, los proxies se incorporan como sustitutos definitivos de la esencia y deben conservarse en lugar de transferir la alta resolución.",
+            "Los proxies son réplicas en baja resolución vinculadas a la esencia mediante metadatos (timecode, UMID/nombre de clip), permitiendo selección y reconformado fiable durante la ingesta/online."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 2 es correcta: los proxies ofrecen visualización/selección y deben incluir metadatos de enlace (timecode/identificadores) para reconformar las decisiones sobre la esencia de alta resolución. Las otras opciones niegan la función de referencia o proponen usos incorrectos.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "052",
       "title": "Examen 052",
