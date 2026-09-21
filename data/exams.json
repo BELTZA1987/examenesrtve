@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-20",
+  "updatedAt": "2026-09-21",
   "exams": [
+    {
+      "id": "054",
+      "title": "Examen 054",
+      "date": "2026-09-21",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Elija la afirmación que mejor refleja, desde el punto de vista operativo, las fuentes, restricciones y principios generales del modelo de financiación aplicable a RTVE según la Ley 8/2009.",
+          "options": [
+            "Financiación basada en cuotas directas de los usuarios abonados a los servicios de RTVE, con posibilidad de fijar libremente tarifas y publicidad adicional.",
+            "Financiación exclusivamente por ingresos comerciales derivados de publicidad y patrocinios, sin asignación presupuestaria periódica del Estado.",
+            "Financiación obtenida principalmente mediante venta directa de contenidos al extranjero y explotación sin restricciones de publicidad en el mercado doméstico.",
+            "Financiación basada mayoritariamente en asignación presupuestaria pública y otras aportaciones reguladas; existen límites al uso de la publicidad comercial y requisitos que preservan independencia y transparencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta sintetiza el principio de financiación pública estable con fuentes reguladas y restricciones orientadas a la independencia y transparencia. El distractor más cercano (opción 1 vs opción 2) falla al presentar la publicidad como fuente exclusiva; la diferencia decisiva es la presencia de una asignación pública y restricciones regulatorias sobre ingresos comerciales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe con precisión la diferencia estructural clave entre MXF OP1a y OP‑Atom y su idoneidad para entrega o edición.",
+          "options": [
+            "OP1a almacena la esencia intercalada en un único fichero por conjunto de pistas, lo que facilita la entrega de un paquete único; OP‑Atom segmenta la esencia en ficheros por clip y por pista, facilitando acceso y manipulación en edición y servidores.",
+            "OP1a guarda un fichero por cada pista de audio o vídeo y está optimizado para edición no lineal; OP‑Atom crea un solo fichero final por programa para entrega.",
+            "OP1a y OP‑Atom son equivalentes en estructura; la diferencia principal es el códec por defecto recomendado para cada uno.",
+            "OP1a fragmenta cada frame en ficheros separados para optimizar streaming; OP‑Atom consolida todos los frames en un único contenedor por proyecto."
+          ],
+          "correctIndex": 0,
+          "explanation": "OP1a agrupa las pistas en un único fichero intercalado útil para entrega como paquete; OP‑Atom mantiene ficheros por clip/pista, lo que facilita edición, acceso por frame y gestión en servidores. El distractor más próximo (opción 1 vs opción 2) invierte las características fundamentales de cada perfil.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la afirmación que describe con mayor precisión el intercambio operativo entre un servidor EVS y un sistema de edición durante una retransmisión en curso.",
+          "options": [
+            "La única forma de trabajar en edición durante retransmisión es copiar físicamente los discos del EVS al almacenamiento del NLE; no existen opciones de proxy ni de acceso directo.",
+            "El intercambio exige siempre transcodificación previa en el servidor EVS y los clips no están disponibles para reproducción hasta completar la transferencia al sistema de edición.",
+            "El intercambio puede realizarse mediante exportación de clips (con handles cuando se precisa margen), o mediante envío de proxies; es necesario garantizar compatibilidad de códec y durante la retransmisión los clips suelen permanecer accesibles en el servidor EVS sin necesidad de duplicado inmediato.",
+            "Los clips transferidos desde EVS pierden timecode y metadatos de inmediato, por lo que debe rehacerse la sincronización en el NLE tras cada transferencia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta recoge prácticas habituales: exportación con handles o uso de proxies, necesidad de compatibilidad de códec y disponibilidad del material en EVS durante emisión. El distractor más cercano (opción 1 vs opción 2) es incorrecto al afirmar que siempre se requiere transcode y bloqueo de disponibilidad.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que describe con precisión la diferencia práctica entre HDR y SDR en términos de rango dinámico, luminancia y compatibilidad de visualización.",
+          "options": [
+            "HDR reduce la luminancia máxima para preservar detalle en sombras; SDR mantiene mayor contraste dinámico en escenas brillantes.",
+            "SDR y HDR comparten el mismo espacio de luminancia; la única diferencia es en la curva de gamma aplicable en el monitor.",
+            "HDR admite un rango de luminancias mucho más amplio y picos de brillo superiores; su reproducción en pantallas SDR requiere tone‑mapping o conversión para evitar recortes y pérdida de detalle.",
+            "SDR es compatible de forma nativa con todas las pantallas HDR sin necesidad de conversión, ya que HDR sólo añade metadata descriptiva sin cambiar la esencia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La respuesta correcta señala que HDR maneja mayor rango y picos de luminancia y que su visualización en SDR precisa tone‑mapping o conversión para preservar detalle. El distractor más próximo (opción 1 vs opción 4) falla al afirmar compatibilidad nativa sin conversión.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_target",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para un magazine audiovisual dirigido a público juvenil, indique la secuencia de ajustes editoriales más adecuada para adaptar ritmo, densidad y recursos al target:",
+          "options": [
+            "Reducir la longitud media de plano, aumentar el ritmo de montaje y la densidad informativa por minuto; utilizar gráficos rápidos y lenguaje directo orientado al grupo de edad objetivo.",
+            "Aumentar largos planos secuencia y disminuir cortes para favorecer reflexión; reducir uso de elementos gráficos y mantener tono formal del presentador.",
+            "Mantener ritmo estándar y priorizar explicación detallada de contenido técnico, evitando música y grafismos para no distraer al espectador joven.",
+            "Extender los bloques informativos con más pausas y textos largos en pantalla para facilitar lectura y comprensión pasiva."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta especifica ajustes típicos para target juvenil: planos más cortos, montaje más rápido, mayor densidad de estímulos gráficos y lenguaje directo. El distractor más próximo (opción 1 vs opción 2) propone ritmo y recursos contrarios al perfil del público juvenil.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Señale la afirmación que mejor interpreta, desde la práctica diaria en un puesto de edición, los derechos y obligaciones en materia de prevención de riesgos laborales.",
+          "options": [
+            "El trabajador no está obligado a utilizar los medios de protección si considera que dificultan la productividad; la formación es opcional y depende del turno.",
+            "El trabajador tiene derecho a recibir información y formación específica sobre riesgos del puesto, debe cooperar con las medidas preventivas y utilizar correctamente los medios de protección facilitados por la empresa.",
+            "La empresa tiene la obligación exclusiva de informar; corresponde al trabajador identificar y diseñar sus propias medidas preventivas sin intervención de recursos humanos.",
+            "La prevención compete sólo a técnicos especializados externos; el personal de edición no tiene obligaciones de cooperación ni de uso de medios proporcionados."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta integra derecho a información y formación, obligación de cooperación y de uso correcto de los medios proporcionados. El distractor más cercano (opción 1 vs opción 2) equivoca al convertir obligaciones en opcionales o subordinadas a productividad.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En un RGB Parade, ¿qué diagnóstico es el más correcto cuando el canal rojo muestra sistemáticamente niveles 3–5 dB superiores en medias y altas, mientras que sombras están alineadas entre canales?",
+          "options": [
+            "Existe una dominante roja en las altas luces que provocará tonos cálidos en las zonas iluminadas; es necesario corregir ganancia en altas para neutralizar la dominante.",
+            "Es un comportamiento normal que no requiere corrección: las altas luces deben tener siempre más rojo que verde y azul.",
+            "Indica un problema de alineación temporal entre campos que se resuelve ajustando el timecode del clip.",
+            "Significa que el perfil de color del monitor es incorrecto en todas las zonas; hay que cambiar el espacio de color del proyecto inmediatamente."
+          ],
+          "correctIndex": 0,
+          "explanation": "La correcta identifica una dominante de color localizada en medias/altas luces y propone ajuste de ganancia en altas para neutralizarla. El distractor más próximo (opción 1 vs opción 4) erra al atribuirlo directamente a espacio de color del monitor sin evaluar el canal específico en altas luces.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Al asignar una 'ocupación tipo' y clasificar profesionalmente un puesto en el III Convenio Colectivo, ¿qué criterio debe compararse como prioritario frente a los demás?",
+          "options": [
+            "La antigüedad en la empresa, que prevalece sobre las funciones actuales a la hora de asignar la ocupación tipo.",
+            "Únicamente el título académico o la titulación declarada por el trabajador, independientemente de las tareas efectivamente realizadas.",
+            "El horario o turno asignado al trabajador, que es el único determinante de la clasificación profesional.",
+            "Las funciones y responsabilidades reales desempeñadas en el puesto, porque determinan la categoría y la organización del trabajo."
+          ],
+          "correctIndex": 3,
+          "explanation": "El criterio prioritario es el contenido real del puesto: funciones y responsabilidades. Los distractores fallan al priorizar título, horario o antigüedad por encima de las tareas efectivamente realizadas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "En un flujo de postproducción, identifique la operación que corresponde a 'link' (enlace) en un NLE:",
+          "options": [
+            "Crear una referencia en el proyecto que apunta al fichero de origen sin copiar su esencia al almacenamiento del proyecto.",
+            "Transferir y copiar físicamente el contenido del soporte de cámara al sistema de edición consolidando los archivos.",
+            "Grabar la señal procedente de cámara en un dispositivo de almacenamiento en tiempo real (captura directa).",
+            "Importar y convertir el archivo al códec recomendado por el proyecto realizando transcodificación inmediata."
+          ],
+          "correctIndex": 0,
+          "explanation": "Link crea punteros a la esencia original sin duplicarla al proyecto. Los distractores describen ingest/capture o import con transcode; la diferencia decisiva es que link no copia la esencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Relaciona cada ventana de loudness con su uso operativo: integrated, short‑term y momentary.",
+          "options": [
+            "Integrated: medida puntual de 400 ms para detectar picos; Short‑term: promedio del programa; Momentary: medida normativa para emisión.",
+            "Integrated: medición global del programa para comprobación de cumplimiento; Short‑term (3 s): detección de variaciones de nivel en pasajes cortos; Momentary (400 ms): monitorización de picos y transitorios inmediatos.",
+            "Integrated: útil sólo para premezclas de banda sonora; Short‑term: utilizada para medir loudness de publicidad; Momentary: no tiene aplicación práctica.",
+            "Integrated: sustituye al true peak en control de entregas; Short‑term: mide la dinámica en 60 s; Momentary: mide el nivel medio del programa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta asigna usos operativos habituales y ventanas temporales: integrated para cumplimiento global, short‑term para pasajes de segundos y momentary para transitorios. Los distractores confunden ventanas y usos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Un monitor de referencia presenta una entrada con 12 V RMS sobre una carga de 8 Ω. Calcule corriente y potencia disipada en la carga.",
+          "options": [
+            "Corriente 0,67 A; Potencia 5 W.",
+            "Corriente 1,5 A; Potencia 18 W.",
+            "Corriente 12 A; Potencia 96 W.",
+            "Corriente 1 A; Potencia 12 W."
+          ],
+          "correctIndex": 1,
+          "explanation": "Aplicando Ohm (I=V/R) I=12/8=1,5 A. Potencia P=V·I=12·1,5=18 W. El distractor más cercano propone valores incorrectos por cálculo erróneo de I o P.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que diferencia correctamente entre entrelazado y progresivo respecto a tiempo y artefactos de movimiento.",
+          "options": [
+            "Entrelazado y progresivo son equivalentes en cuanto a artefactos de movimiento si se emplea el mismo códec.",
+            "El entrelazado produce imágenes más nítidas en movimiento sin necesidad de desentrelazado, mientras que el progresivo siempre genera combing.",
+            "El progresivo guarda la imagen en dos campos temporales separados y por eso crea artefactos similares al entrelazado.",
+            "El entrelazado divide la imagen en campos temporales alternos provocando 'combing' en objetos en movimiento si no se desentrelaza; el progresivo presenta la imagen completa por frame y evita ese tipo de combing."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta identifica la división en campos del entrelazado y el 'combing' resultante en displays progresivos sin desentrelazado; el progresivo refleja la imagen completa por frame y evita ese artefacto. Los distractores confunden los principios temporales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_evs_loop",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre la grabación en bucle (loop) en un servidor EVS y su recuperación operativa:",
+          "options": [
+            "En loop, los clips se guardan automáticamente en un archivo maestro en paralelo sin sobrescritura; la recuperación es inmediata aunque no se hayan marcado.",
+            "El modo loop impide la reproducción simultánea de canales y borra clips sólo cuando se reinicia el servidor; no admite acciones de preservación durante la grabación.",
+            "El servidor graba continuamente sobrescribiendo el material más antiguo; para conservar una acción concreta hay que marcarla/extraerla (save) en el canal antes de que sea reciclada; los canales operan como buffers independientes.",
+            "La grabación en bucle copia cada frame en el almacenamiento externo en tiempo real, por lo que no existe límite ni necesidad de gestionar canales o acciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La correcta describe el principio operativo: overwrite cíclico, necesidad de marcar/guardar para preservar una acción y canales independientes. Los distractores contradicen el comportamiento real del loop o asumen copias automáticas inexistentes.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que describe con precisión la diferencia de concepto y uso entre RGB y YCbCr.",
+          "options": [
+            "YCbCr tiene mayor fidelidad de color que RGB en edición de imagen porque reduce el ruido cromático automáticamente.",
+            "YCbCr representa los primarios de color y se utiliza en pantallas; RGB es una codificación de transporte para transmisión con submuestreo.",
+            "RGB es solo útil en cámaras y YCbCr solo en monitores; no hay solapamiento de uso.",
+            "RGB representa directamente primarios de color en tres canales y es habitual en edición y procesamiento de imagen; YCbCr separa luminancia (Y) de crominancia (Cb/Cr) y se usa para compresión y transmisión con submuestreo de crominancia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta señala que RGB codifica primarios y es de uso en edición; YCbCr separa luminancia de crominancia y facilita submuestreo para compresión/transmisión. Los distractores presentan afirmaciones incorrectas sobre usos y fidelidad.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la naturaleza y estructura básica prevista por la Ley 17/2006 para la Corporación RTVE.",
+          "options": [
+            "La Ley define órganos de gobierno y una estructura organizativa básica para la Corporación.",
+            "La Ley atribuye a la Corporación RTVE la responsabilidad de gestionar servicios públicos de comunicación audiovisual.",
+            "La Ley establece que la programación diaria y la gestión editorial quedan enteramente bajo control directo del Gobierno sin órganos propios de dirección.",
+            "La Ley regula la naturaleza jurídica y la dependencia institucional de RTVE en el marco de servicio público."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 3 es la excepción: la Ley no asigna control directo del Gobierno sobre programación; por el contrario crea órganos y estructura independientes. Las otras opciones describen aspectos compatibles con la naturaleza y organización reguladas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Elija la afirmación que mejor interpreta la diferencia operacional entre un EDL y un AAF en el intercambio de proyectos entre estaciones.",
+          "options": [
+            "Un EDL transporta automáticamente todas las LUT y los proyectos de color; un AAF solo transporta notas de texto.",
+            "Un EDL y un AAF tienen exactamente el mismo alcance: ambos transfieren pistas, efectos y metadatos sin limitación.",
+            "El AAF contiene solo una lista de clips sin información de pistas ni efectos; el EDL es el que transporta efectos y metadatos.",
+            "Un EDL contiene esencialmente puntos de entrada/salida y referencias de timecode (alcance limitado, pocas pistas y casi sin efectos ni metadatos); un AAF transmite múltiples pistas, efectos, transiciones y metadatos adicionales compatibles con reconformado más completo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta distingue alcance y transferencia: EDL limitado a cortes y timecode; AAF permite múltiples pistas y transferencia de efectos/metadatos. Los distractores intercambian o exageran capacidades.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_postura",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En un puesto de edición, ¿qué configuración postural es la más adecuada para minimizar riesgo musculoesquelético?",
+          "options": [
+            "Silla baja sin apoyo lumbar, antebrazos en el aire, pies cruzados y pantalla muy elevada para obligar a mirar hacia arriba.",
+            "Silla con apoyo lumbar ajustado, antebrazos apoyados a 90° respecto al torso, pies apoyados en superficie estable y pantalla a altura que permita visión con cuello neutro.",
+            "Silla rígida sin ajuste lumbar, antebrazos apoyados en reposabrazos elevados por encima de los hombros y pies sin apoyo.",
+            "Silla con respaldo reclinado al máximo para descansar, antebrazos apoyados en la mesa sin almohadillas y pantalla colocada en ángulo pronunciado respecto al eje de visión."
+          ],
+          "correctIndex": 1,
+          "explanation": "La respuesta correcta describe la configuración ergonómica recomendada: apoyo lumbar, antebrazos apoyados en ángulo cómodo, pies apoyados y cuello neutro. Los distractores proponen posturas que aumentan tensión lumbar, de hombros o cuello.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Qué nivel RAID combina striping con paridad distribuida permitiendo reconstrucción tras la pérdida de un disco (tolerancia a fallo de un disco) en arreglos comunes?",
+          "options": [
+            "RAID 0.",
+            "RAID 5.",
+            "RAID 1.",
+            "JBOD."
+          ],
+          "correctIndex": 1,
+          "explanation": "RAID 5 utiliza striping con paridad distribuida y permite reconstruir datos tras la pérdida de un disco (tolerancia a fallo de uno). RAID 0 no tiene paridad; RAID 1 es espejo; JBOD no ofrece redundancia distribuida.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En un mezclador de vídeo hardware, indique la función operativa del bus 'previo' frente al 'programa' y la del 'key' durante una transición.",
+          "options": [
+            "El bus 'previo' duplica el programa en una segunda salida; 'programa' sirve para previsualizar. El 'key' mezcla dos señales de vídeo por opacidad sin máscara.",
+            "El bus 'previo' es la salida al aire; 'programa' es solo de monitorización. El 'key' solo controla volumen de audio durante la transición.",
+            "El bus 'previo' se usa para preparar la fuente que entrará al aire y verificarla; 'programa' es la salida al aire. El 'key' define la señal que se usa para incrustar (por ejemplo chroma o grafismo) y se aplica como máscara en la transición.",
+            "El bus 'previo' y 'programa' son intercambiables sin efecto operativo; el 'key' es un simple fader de brillo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta describe funciones estándar: previo para preparar/preview, programa al aire, y key como la señal que gobierna la incrustación. Los distractores confunden salidas y funciones del key.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Entre corte, fundido y encadenado, ¿qué transición es la más adecuada para indicar un lapso de tiempo indefinido manteniendo continuidad causal entre dos acciones?",
+          "options": [
+            "Un fundido encadenado (disolución) que suaviza el paso temporal sin romper la relación causal entre las acciones.",
+            "Un corte seco, que sugiere simultaneidad estricta y continuidad temporal inmediata.",
+            "Un encadenado rápido que siempre indica simultaneidad temporal y no elipsis.",
+            "Un fundido a negro prolongado que transmite continuidad inmediata entre acciones sin implicar salto temporal."
+          ],
+          "correctIndex": 0,
+          "explanation": "La disolución/fundido es la transición habitual para sugerir el paso de tiempo manteniendo la continuidad causal; el corte introduce continuidad inmediata y simultaneidad, y el fundido a negro suele indicar conclusiones o pausa más que continuidad temporal indefinida.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "053",
       "title": "Examen 053",
