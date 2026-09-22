@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "exams": [
+    {
+      "id": "055",
+      "title": "Examen 055",
+      "date": "2026-09-22",
+      "level": "Alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según la Ley 13/2022, ¿qué obligación concreta deben cumplir los prestadores de servicios audiovisuales en emisiones lineales para garantizar accesibilidad a personas con discapacidad auditiva?",
+          "options": [
+            "Incluir subtitulación y/o intérprete de lengua de signos en tiempo real para contenidos en directo.",
+            "Ofrecer siempre audiodescripción simultánea.",
+            "Poner a disposición un servicio bajo demanda de aumento de contraste y tamaño de letra.",
+            "Emitir versiones separadas con audio simplificado bajo solicitud."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley 13/2022 exige medidas de accesibilidad como subtitulado y/o interpretación en lengua de signos en tiempo real para emisiones lineales en directo; la audiodescripción es para discapacidad visual y las otras opciones no cumplen la obligación señalada.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: varios editores informan que entradas de un bin compartido se sobrescriben cuando trabajan simultáneamente. ¿Cuál es la causa operativa más probable y la medida técnica que lo previene?",
+          "options": [
+            "Ancho de banda insuficiente en la red; aumentar el ancho de enlace del NAS.",
+            "Incompatibilidad de codecs entre estaciones; transcodificar todo a un mismo códec proxy.",
+            "Ausencia de bloqueo de bins a nivel del sistema de gestión; habilitar bloqueo por sesión/usuario en el servidor de proyectos.",
+            "Timecode desincronizado entre clips; forzar reconformado por timecode."
+          ],
+          "correctIndex": 2,
+          "explanation": "La causa habitual es la falta de mecanismo de bloqueo/concurrencia en el gestor de proyectos; habilitar bloqueo por usuario/session evita sobrescrituras. Las otras opciones son problemas distintos y no evitan la concurrencia en bins.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Ante fuentes de vídeo no sincronizadas que provocan saltos y tearing al conmutar, proceda:",
+          "options": [
+            "Convertir todas las fuentes a progresivo y eliminar referencia de genlock.",
+            "Reconvertir todas las fuentes a un códec intra‑frame para eliminar tearing.",
+            "Distribuir una referencia de genlock como señal maestra y colocar frame‑synchronizers en las fuentes asíncronas para alinear timing y eliminar saltos.",
+            "Reducir la resolución de las cámaras para disminuir la latencia de conmutación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La corrección operativa es disponer de una referencia de genlock y usar frame‑sync en fuentes no sincronizadas; las otras opciones no resuelven la falta de sincronismo temporal entre señales.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Comparación LTO vs LTFS: ¿qué aspecto limita el acceso inmediato y exige catálogo o indexación externa para localizar contenidos en cinta?",
+          "options": [
+            "La limitación de tamaño de fichero a 4 GB en formatos de cinta.",
+            "La naturaleza de acceso secuencial de la cinta y la necesidad de un índice o catálogo para localizar archivos rápidamente.",
+            "La imposibilidad de almacenar metadatos embebidos en cintas LTO/LTFS.",
+            "La incompatibilidad de LTO con encapsulados MXF."
+          ],
+          "correctIndex": 1,
+          "explanation": "El acceso secuencial de la cinta impone latencia para localizar ficheros y práctica de catálogo/indexación; las otras afirmaciones son incorrectas o no determinantes para acceso inmediato.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: ¿qué efecto tiene el trim 'roll' sobre la duración total de la secuencia y la sincronía entre pistas?",
+          "options": [
+            "Modifica el punto de corte entre dos clips sin alterar la duración total de la secuencia ni desplazar clips posteriores.",
+            "Aumenta o reduce la duración total de la secuencia desplazando todos los clips posteriores.",
+            "Cambia únicamente contenido interno de un clip sin afectar puntos de corte adyacentes.",
+            "Elimina la necesidad de revisar tracks de audio tras el corte."
+          ],
+          "correctIndex": 0,
+          "explanation": "El trim 'roll' ajusta el punto de unión entre dos clips manteniendo la duración total; a diferencia del 'ripple', no desplaza clips posteriores ni cambia la duración global.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Para diseñar proxies destinados a edición offline, ¿qué conjunto de criterios operativos es el más adecuado?",
+          "options": [
+            "1280×720, H.264 progresivo, bitrate aproximado 3–5 Mbps, conservar proporción y timecode.",
+            "3840×2160, HEVC 1 Mbps long‑GOP para máxima compresión.",
+            "640×360, MPEG‑2 8 Mbps entrelazado para compatibilidad.",
+            "3840×2160, ProRes 422 HQ 200 Mbps para ahorrar espacio."
+          ],
+          "correctIndex": 0,
+          "explanation": "Una resolución 720p con H.264 y bitrate moderado ofrece identificación visual y ahorro de espacio; las otras opciones sacrifican compatibilidad, eficiencia o son excesivas para proxy.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la excepción respecto a factores que afectan al ritmo interno de un plano:",
+          "options": [
+            "Movimiento interno del personaje dentro del encuadre.",
+            "Duración del plano.",
+            "Variaciones de cámara o ritmo de cámara dentro del plano.",
+            "Organización narrativa de varias escenas (estructura global)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El ritmo interno se refiere a elementos dentro del plano (duración, movimiento, cámara); la organización narrativa entre escenas corresponde al ritmo externo o estructural, por tanto es la excepción.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Desde la interpretación constitucional, ¿qué límites son legítimos para restringir la libertad de expresión en materia informativa?",
+          "options": [
+            "La eficacia administrativa sin garantía judicial.",
+            "La mera conveniencia comercial de la empresa.",
+            "La protección del derecho al honor, la intimidad y la seguridad pública.",
+            "Preferencia ideológica del poder ejecutivo."
+          ],
+          "correctIndex": 2,
+          "explanation": "Los límites constitucionales admitidos incluyen protección del honor, intimidad y orden público; las otras opciones no constituyen límites legítimos reconocidos por la Constitución.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Para sincronizar múltiples cámaras mediante código de tiempo común, ¿qué condición mínima es imprescindible y cómo tratar segmentos donde una cámara pierde ese TC?",
+          "options": [
+            "Disponer de un código de tiempo común estable durante la toma; para segmentos sin TC, recurrir a sincronización por forma de onda de audio o alineado manual.",
+            "Basta con que una cámara tenga TC al inicio; el resto se sincroniza por nombre de archivo.",
+            "Usar codecs idénticos en todas las cámaras para que el NLE reconozca automáticamente la sincronización.",
+            "Eliminar clips sin TC, solo usar cámaras con TC continuo."
+          ],
+          "correctIndex": 0,
+          "explanation": "El requisito es un TC común estable para facilitar sincronización; cuando falta TC en tramos, la práctica es alinear por audio o manualmente. Las otras opciones son inapropiadas o imprácticas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en vectorscopio el clúster de tonos de piel aparece desplazado 15° hacia el eje azul y más próximo al centro que la línea de referencia. ¿Qué indica esto operativamente?",
+          "options": [
+            "Desajuste de sample rate en audio que afecta al vídeo.",
+            "Hay un exceso de rojo y saturación en pieles.",
+            "Fallo de luminancia general en la señal que aumenta contraste.",
+            "Los tonos de piel están ligeramente desplazados hacia azul (hue shift) y presentan menor saturación que la referencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "El ángulo indica desplazamiento de matiz hacia azul; la distancia al centro muestra menor saturación. Las otras opciones son incorrectas o irrelevantes (audio).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la opción que constituye una excepción respecto a cómo influyen J‑cut y L‑cut en la continuidad sonora:",
+          "options": [
+            "Ambos pueden emplearse para suavizar transiciones entre planos.",
+            "Afectan exclusivamente a la pista musical y nunca al diálogo.",
+            "Sirven para modular la percepción temporal en un corte.",
+            "Son herramientas para dirigir la atención sonora sin alterar necesariamente la imagen."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación es falsa: J‑cut y L‑cut no afectan exclusivamente a la música, también se aplican al diálogo y otros elementos sonoros; las demás describen usos correctos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la opción que, en términos generales, excluye la consideración de un siniestro como accidente 'in itinere':",
+          "options": [
+            "Se produce en el trayecto habitual y directo entre domicilio y centro de trabajo, sin desviaciones.",
+            "Ocurre tras una desviación voluntaria para realizar gestiones o asuntos personales que prolongan o alteran el trayecto.",
+            "Tiene lugar durante una parada breve e inevitable (por ejemplo, cambio de medio de transporte o necesidad fisiológica) que no altera el itinerario habitual.",
+            "Se produce mientras el trabajador viaja en vehículo facilitado por la empresa dentro del recorrido habitual."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 3 (desviación voluntaria por asuntos personales) es la que excluye la consideración de accidente 'in itinere', porque rompe la continuidad y la relación directa entre domicilio y puesto de trabajo al introducir una actuación ajena al desplazamiento laboral. Las otras opciones no excluyen la consideración: una parada breve y necesaria que no altera el itinerario mantiene el nexo causal con el desplazamiento; el accidente en trayecto habitual y directo lo caracteriza; y el uso de vehículo facilitado por la empresa en el recorrido habitual igualmente se integra en el desplazamiento laboral.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_red_ip",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Estación 10.0.0.5/24 con puerta 10.0.0.1 no alcanza recurso 10.0.1.20/24. Intervención más directa sin cambiar la IP del recurso:",
+          "options": [
+            "Cambiar la máscara de la estación a /16 para alcanzar la subred remota.",
+            "Añadir una ruta estática hacia 10.0.1.0/24 vía la puerta 10.0.0.1 o configurar el router para enrutar esa subred.",
+            "Reasignar la IP del recurso a la misma subred que la estación.",
+            "Desactivar el firewall de la estación para permitir el acceso."
+          ],
+          "correctIndex": 1,
+          "explanation": "La intervención directa es añadir la ruta estática o ajustar el enrutamiento en la puerta; cambiar máscara o IP son intrusivos y desactivar el firewall no aborda enrutamiento entre subredes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Tras descargar y verificar íntegramente un soporte SSD/CFast/SD procedente de cámara, ¿qué práctica operativa se recomienda antes de volver a usarlo en rodaje?",
+          "options": [
+            "Reescribir todo el soporte con ceros desde el host para mayor velocidad.",
+            "Realizar un borrado rápido desde el sistema operativo del ordenador de sobremesa.",
+            "Reutilizar inmediatamente sin formatear para ahorrar tiempo.",
+            "Formatear el soporte con la cámara que lo va a usar y comprobar el sistema de archivos y slots."
+          ],
+          "correctIndex": 3,
+          "explanation": "Formatear con la cámara garantiza el sistema de archivos y las estructuras requeridas por el recorder; las otras opciones no aseguran compatibilidad ni estado óptimo para grabación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: ¿qué medida del II Plan de Igualdad de RTVE contribuye directamente a prevenir representaciones sexistas en los contenidos?",
+          "options": [
+            "Aumentar el número de programas deportivos emitidos.",
+            "Incrementar la jornada laboral de profesionales de minorías.",
+            "Modificar el formato técnico de emisión.",
+            "Revisión y supervisión de guiones y roles para lenguaje y representación no sexista."
+          ],
+          "correctIndex": 3,
+          "explanation": "La revisión editorial de guiones y personajes para evitar lenguaje y estereotipos sexistas es una medida prevista; las otras opciones no son medidas de igualdad aplicables al contenido.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "prl_incendio",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación en plató con equipos eléctricos: ante un fuego originado en equipamiento eléctrico, la actuación prioritaria es:",
+          "options": [
+            "Usar un extintor halón manual sin considerar alternativas.",
+            "Aplicar agua a presión para enfriar los equipos.",
+            "Intentar extinguir con espuma sin desconectar la alimentación.",
+            "Cortar alimentación eléctrica si es seguro y extinguir con CO2 o polvo ABC específico para fuegos eléctricos."
+          ],
+          "correctIndex": 3,
+          "explanation": "En incendios eléctricos la actuación es, si es seguro, cortar la alimentación y usar extintores adecuados (CO2 o polvo); agua o espuma sin cortar corriente es peligroso y el halón ya no es alternativa operativa habitual.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: para transmisión en tiempo real con ancho de banda limitado y necesidad de estabilidad, ¿qué estrategia de bitrate es más adecuada?",
+          "options": [
+            "VBR para maximizar eficiencia de almacenamiento en directo.",
+            "CBR para mantener tasa constante y predecible evitando fluctuaciones en la transmisión en tiempo real.",
+            "CBR porque siempre garantiza mayor calidad por segundo que VBR.",
+            "VBR para evitar cualquier necesidad de buffering en el receptor."
+          ],
+          "correctIndex": 1,
+          "explanation": "CBR mantiene un flujo constante, adecuado para transmisión en tiempo real con ancho de banda controlado; VBR mejora eficiencia en almacenamiento pero introduce variabilidad que puede afectar transmisión estable.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Comparación: al dimensionar un servidor para atender N canales concurrentes de 20 Mbps cada uno y 30 canales esperados con un margen operativo del 20%, ¿qué elemento limita más y cuál es el cálculo mínimo de ancho de red?",
+          "options": [
+            "El ancho de banda agregado es el factor crítico: 30×20 Mbps ×1.20 = 720 Mbps; también hay que garantizar throughput de disco e IOPS.",
+            "Solo la capacidad total de disco limita, el ancho de banda es irrelevante.",
+            "El principal límite es la latencia de CPU; con CPUs modernas el cálculo de red no se aplica.",
+            "La RAM del servidor determina exclusivamente la concurrencia, no el disco ni la red."
+          ],
+          "correctIndex": 0,
+          "explanation": "El dimensionamiento mínimo de red es el cálculo indicado; además del ancho agregado, discos y IOPS deben soportar el throughput. Las otras afirmaciones obvian elementos esenciales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En una estación de edición con efectos GPU‑accelerated y reproducción entrecortada ('stuttering'), ¿qué cuello de botella es el más probable si la GPU y CPU muestran baja utilización?",
+          "options": [
+            "CPU con exceso de hilos ociosos causando desincronización.",
+            "GPU demasiado potente que sobrecarga el bus PCIe.",
+            "Insuficiente RAM provocando swapping en disco y latencia en lectura de frames.",
+            "Monitor con tasa de refresco inadecuada que obliga al NLE a reconstruir frames."
+          ],
+          "correctIndex": 2,
+          "explanation": "La falta de RAM provoca swapping y accesos a disco que generan stuttering; baja utilización de GPU/CPU con swapping es indicativo de memoria insuficiente; las otras causas son menos coherentes con el síntoma descrito.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Ventaja operativa principal de usar ProRes o DNxHR como códecs intermedios en postproducción:",
+          "options": [
+            "Son necesariamente formatos abiertos y sin restricciones de licencias.",
+            "Siempre proporcionan menores tamaños de archivo que H.264 para cualquier escena.",
+            "Compresión intraframe que mantiene calidad y facilita edición, conformado y reconformado sin dependencias GOP problemáticas.",
+            "Su uso elimina la necesidad de realizar color grading."
+          ],
+          "correctIndex": 2,
+          "explanation": "ProRes y DNxHR son códecs intermedios intraframe que facilitan la edición y reconformado por no depender de cadenas de predicción GOP; las otras afirmaciones son incorrectas o irrelevantes.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "054",
       "title": "Examen 054",
