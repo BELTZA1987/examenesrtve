@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-23",
   "exams": [
+    {
+      "id": "056",
+      "title": "Examen 056",
+      "date": "2026-09-23",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Indique cuál de las siguientes formulaciones corresponde a un principio de la acción preventiva según la Ley 31/1995:",
+          "options": [
+            "Delegar la totalidad de la responsabilidad preventiva en los servicios externos de prevención.",
+            "Garantizar en todo momento la seguridad y salud de la plantilla mediante medidas generales.",
+            "Integrar la prevención en la actividad laboral y en la propia organización de la empresa.",
+            "Priorizar la productividad frente a las medidas preventivas cuando exista presión de plazos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley 31/1995 establece como principio la integración de la prevención en la actividad empresarial y en la gestión; las otras opciones son imprecisas o contrarias: no se delega totalmente la responsabilidad ni se prioriza productividad sobre prevención, y evitar la fórmula genérica de “garantizar siempre” es necesario porque la ley obliga a adoptar medidas concretas y proporcionales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Qué estrategia cumple correctamente la política 3‑2‑1 de copias de seguridad:",
+          "options": [
+            "Tres copias totales, en dos soportes diferentes (disco y cinta) y al menos una copia almacenada fuera del sitio primario.",
+            "Tres discos en RAID 5 en la misma ubicación para tolerancia a fallo y acceso rápido.",
+            "Copia principal en servidor y dos réplicas en la misma cabina SAN en diferentes carpetas.",
+            "Tres instantáneas en la misma unidad, con snapshots horarios y backups incrementales locales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La regla 3‑2‑1 exige 3 copias independientes, en 2 tipos de soporte y 1 copia offsite; RAID 5 no sustituye copias independientes ni ubicación externa, por eso las otras opciones no cumplen la política.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la opción que constituye una excepción respecto a los efectos y métodos de mezclar cadencias y conversión de frame rate:",
+          "options": [
+            "La conversión por pulldown (3:2) introduce irregularidades de movimiento al convertir 24→29,97 y puede crear judder si se retimerea.",
+            "La conversión por interpolación de cuadros (frame interpolation) reduce judder pero puede generar artefactos de 'halo' o 'fantasma' en movimientos complejos.",
+            "Mezclar 25p y 29,97p en la misma timeline sin conversión previa no introduce ningún problema de sincronía de audio ni de percepción del movimiento.",
+            "El conversor de cadencia que realiza reamplificación temporal con motion vectors mantiene continuidad temporal mejor que repetición simple de cuadros."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación que dice que mezclar 25p y 29,97p sin conversión no causa problemas es la excepción (falsa). Diferencias de cadencia afectan al movimiento y a la sincronía de audio; las demás opciones describen efectos y métodos reales: pulldown introduce judder, la interpolación puede crear artefactos y el uso de motion vectors suele ser superior a repetir cuadros.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Para respetar la regla de los 180° en un diálogo entre dos personajes, ¿dónde debe situarse la nueva cámara respecto al eje de acción?",
+          "options": [
+            "Directamente sobre el eje de acción para aumentar la sensación de proximidad.",
+            "En cualquier punto alrededor de los personajes, siempre que mantenga el mismo ángulo de plano que la cámara previa.",
+            "Al otro lado del eje imaginario para equilibrar simétricamente la composición.",
+            "Dentro de la semicircunferencia de 180° definida por la línea imaginaria que une a los personajes, en el mismo lado que las cámaras anteriores."
+          ],
+          "correctIndex": 3,
+          "explanation": "La regla exige que la cámara permanezca en el mismo lado del eje (semicircunferencia de 180°) para mantener continuidad espacial; cruzar el eje invierte las posiciones izquierda/derecha y rompe la continuidad. Las otras opciones proponen cruzar el eje o colocarse sobre el propio eje, lo que suele provocar confusión espacial.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Interpretación operativa del medidor de correlación de fase: ¿qué indica un valor cercano a −1 en secciones con amplitud vocal central?",
+          "options": [
+            "Buena coherencia estéreo y compatibilidad al sumar a mono.",
+            "Baja correlación pero sin efectos perceptibles al mezclar a mono.",
+            "Fuerte desfase entre canales con riesgo de cancelación al sumar a mono.",
+            "Indicación de que la señal es mono y no presenta componentes en estéreo."
+          ],
+          "correctIndex": 2,
+          "explanation": "Valores cerca de −1 indican componentes en antífasis entre canales que pueden cancelarse al mezclar a mono; no es señal de buena coherencia (que sería +1) ni de mono (0 o +1), por eso los distractores son incorrectos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_umid",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En un flujo de posproducción se genera un nuevo archivo master mediante recorte o concatenación de material cuya esencia conserva el UMID original. ¿Cuál es la consecuencia operativa más probable y la práctica correcta para mantener identificadores únicos sin perder trazabilidad del origen?",
+          "options": [
+            "Conservar el UMID original en el master derivado es la práctica correcta, porque mantiene la trazabilidad y evita duplicados en el catálogo.",
+            "Si el master derivado mantiene el mismo UMID, diferentes objetos quedan identificados idénticamente; la práctica correcta es asignar un nuevo UMID al objeto derivado y registrar el UMID origen como metadato de procedencia.",
+            "El UMID original es inmutable y debe conservarse siempre; para distinguir versiones se deben usar únicamente identificadores del MAM o nombres de fichero, sin modificar el UMID embebido.",
+            "La presencia de UMID duplicados obliga a eliminar el UMID de la esencia en los derivados y mantener solo un identificador externo en el contenedor para evitar conflictos en ingestas."
+          ],
+          "correctIndex": 1,
+          "explanation": "El UMID tiene la función de identificar de forma persistente una entidad de esencia concreta. Cuando se crea un nuevo objeto (recorte, concatenación o master derivado) ese resultado constituye una entidad distinta y, para mantener unicidad, debe recibir su propio UMID; a la vez se registra el UMID de origen en metadatos de procedencia para preservar trazabilidad. El distractor A confunde trazabilidad con unicidad: conservar el mismo UMID evita perder el origen, pero provoca ambigüedad al no distinguir el nuevo objeto del original. El distractor D propone eliminar el UMID de la esencia, lo que degrada la identificación persistente y complica interoperabilidad con sistemas que esperan el UMID embebido; por ello es preferible emitir un nuevo UMID e incluir el origen como metadato.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_intelectual",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Indique la práctica de montaje que constituye un ejemplo de montaje intelectual por yuxtaposición de ideas:",
+          "options": [
+            "Usar cortes de ritmo rápido entre planos de acción para aumentar tensión en una escena de persecución.",
+            "Eliminar planos triviales dentro de una misma acción para acortar su duración manteniendo continuidad.",
+            "Insertar dos planos sucesivos sin relación directa: una fábrica en funcionamiento seguido de un aula vacía para sugerir crítica social.",
+            "Aplicar un fundido encadenado para marcar el paso del tiempo entre dos situaciones consecutivas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La yuxtaposición de una fábrica en funcionamiento y un aula vacía crea un nuevo significado por asociación (montaje intelectual). Las otras opciones son técnicas de continuidad, ritmo o transición, no creación de significado por contraste intelectual.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Comparación: ¿qué afirmación describe mejor la finalidad de la reforma de la Ley 5/2017 y su mecanismo de elección de los órganos de RTVE?",
+          "options": [
+            "Concentrar la designación de cargos ejecutivos en el máximo responsable político del Ejecutivo para agilizar nombramientos.",
+            "Eliminar por completo cualquier control parlamentario sobre RTVE y trasladar la elección a la administración interna de la Corporación.",
+            "Transferir la elección de los órganos de RTVE a organismos europeas para garantizar pluralismo internacional.",
+            "Restablecer la independencia institucional reduciendo la influencia del Gobierno mediante elección parlamentaria del Consejo de Administración y del presidente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La reforma persigue recuperar independencia y pluralismo mediante un procedimiento de elección parlamentaria de los órganos; las demás opciones contradicen el objetivo o introducen mecanismos no previstos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre frecuencia de muestreo y Nyquist:",
+          "options": [
+            "Una frecuencia de muestreo mayor no tiene efecto sobre aliasing si no se usan filtros antialiasing adecuados.",
+            "Para evitar aliasing la frecuencia de muestreo debe ser al menos el doble de la máxima frecuencia presente; si la banda audible llega a 20 kHz, 44,1 kHz es marginalmente suficiente por filtrado previo.",
+            "La reducción de la frecuencia de muestreo siempre mejora la representación de señales de alta frecuencia.",
+            "El uso de 48 kHz frente a 44,1 kHz elimina por completo la necesidad de filtrado antialiasing."
+          ],
+          "correctIndex": 1,
+          "explanation": "El teorema de Nyquist exige muestrear al menos al doble de la máxima frecuencia para evitar aliasing; 44,1 kHz cubre teóricamente 20 kHz con margen reducido y requiere filtrado. Las otras afirmaciones son incorrectas: el filtrado es necesario, reducir fs empeora representación, y 48 kHz no elimina la necesidad de antialiasing.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Recomendación operativa para la colocación de una pantalla de visualización:",
+          "options": [
+            "Pantalla lo más cercana posible (30–40 cm) para aprovechar resolución, con borde superior por encima del nivel ocular para mayor verticalidad.",
+            "Pantalla a una distancia de 50–70 cm, borde superior ligeramente por debajo del nivel de los ojos, y orientación que minimice reflejos con control de iluminación.",
+            "Colocar la pantalla perpendicular a ventanas sin control de luz para favorecer iluminación natural y reducir contraste.",
+            "Mantener la pantalla a nivel ocular exacto y utilizar sólo iluminación cenital intensa para eliminar reflejos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica recomendada es 50–70 cm, borde superior ligeramente por debajo del nivel ocular y controlar la orientación/iluminación para evitar reflejos. Las otras opciones proponen distancias o colocaciones que aumentan fatiga o reflejos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_relink",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "¿Qué criterio operativo es más fiable para relinkear archivos desvinculados en un proyecto NLE cuando existen múltiples versiones con nombres similares?",
+          "options": [
+            "Fecha de creación del archivo en el sistema de ficheros.",
+            "Coincidencia exclusiva del nombre de archivo independientemente del timecode.",
+            "Tamaño del archivo en bytes como criterio principal de coincidencia.",
+            "Coincidencia de timecode de inicio y duración del clip junto con el nombre del archivo o reel."
+          ],
+          "correctIndex": 3,
+          "explanation": "La combinación de timecode de inicio y duración junto con nombre/reel es el criterio más fiable para relink; depender sólo del nombre, tamaño o fecha resulta poco fiable y puede provocar enlaces incorrectos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Principio operativo de una conexión de audio balanceada y rechazo de modo común:",
+          "options": [
+            "El ruido se elimina cuantizando más bits en la conversión analógica‑digital.",
+            "La conexión balanceada utiliza un único conductor y una malla para reducir ruido de manera activa.",
+            "El balanceado solo depende del uso de un transformador pasivo en el extremo emisor.",
+            "La señal se transmite por dos conductores con polaridad invertida y el receptor resta las dos, cancelando ruidos comunes."
+          ],
+          "correctIndex": 3,
+          "explanation": "En audio balanceado la señal viaja en dos conductores con polaridad invertida; el receptor diferencia ambas señales, rechazando ruidos comunes. Las otras opciones son incorrectas o describen métodos distintos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En una ingesta verificada destinada a archivo y posterior reconformado, ¿cuál es el conjunto mínimo de verificaciones y registros que debe consignarse en el informe de ingesta para garantizar integridad de la esencia, validación de la estructura del contenedor y trazabilidad operativa?",
+          "options": [
+            "Registro de copia, generación de proxy y verificación visual completa de reproducción de todo el material sin cálculo de checksum, registrando incidencias encontradas durante la reproducción.",
+            "Registro de copia con rutas y tamaños, checksum calculado solo en destino y comprobación de reproducción parcial del fichero (primeros y últimos fotogramas) junto con el nombre del operador.",
+            "Registro de copia (ruta origen/destino y tamaños), checksum especificado y calculado en origen y verificado en destino (algoritmo y valores), validación de la estructura del contenedor (índices/tabla de paquetes, UMID/timecode y datos auxiliares) y entrada de auditoría con operador, sello temporal y versión de la herramienta utilizada.",
+            "Copia con verificación por coincidencia de tamaño de fichero y CRC rápido en destino, comprobación de metadatos básicos embebidos y registro automático de la transferencia sin identificación del operador ni versión de la herramienta. "
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta exige: 1) registro de la copia con rutas y tamaños para identificar origen y destino; 2) checksum documentado (preferiblemente algoritmo y valores) calculado en el origen y cotejado en el destino para probar integridad binaria tras la transferencia; 3) validación explícita de la estructura del contenedor (índices, tabla de paquetes o encabezados que permitan acceder a frames, UMID/timecode y datos auxiliares) porque la reproducción aparente no detecta siempre corrupción de índices; y 4) entrada de auditoría con operador, sello temporal y versión de herramienta para garantizar trazabilidad. El distractor más próximo (opción D) sólo comprueba tamaño/CRC en destino y omite la verificación en origen y la identificación del operador/herramienta: el tamaño y un CRC rápido pueden pasar por alto corrupciones o manipulaciones sutiles y no ofrecen la misma prueba de integridad y trazabilidad que un checksum documentado pre/post y un registro de auditoría.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_chromakey",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la excepción respecto al orden y diagnóstico correcto en un proceso de chromakey:",
+          "options": [
+            "Usar spill suppression antes de extraer el matte y luego refinar la máscara con key‑cleanup.",
+            "Aplicar reducción de ruido y limpieza de señal antes de generar el matte para mejorar precisión.",
+            "Extraer el matte antes de aplicar spill suppression y corrección de bordes.",
+            "Diagnosticar bordes 'recortados' revisando iluminación y la uniformidad del fondo antes de ajustar parámetros del keyer."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es aplicar spill suppression antes de extraer el matte: el flujo correcto es preparar la señal (ruido/iluminación), generar y refinar el matte y luego aplicar spill suppression para tratar contaminaciones. Las otras opciones describen pasos y diagnósticos adecuados.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación sobre jornada y turnos según el III Convenio Colectivo:",
+          "options": [
+            "El Convenio regula la duración de la jornada ordinaria, descansos mínimos entre jornadas y la obligatoria programación previa de los turnos al trabajador.",
+            "El Convenio permite imponer turnos sin previo aviso y sin respetar descansos mínimos para cubrir necesidades puntuales.",
+            "El Convenio elimina el derecho a descansos diarios cuando el trabajo se organiza en régimen de turnos rotativos.",
+            "El Convenio delega completamente la regulación de descansos en acuerdos verbales entre trabajador y responsable."
+          ],
+          "correctIndex": 0,
+          "explanation": "El III Convenio establece regulación sobre jornada, descansos mínimos y exige previsión y comunicación de turnos; las otras opciones contradicen derechos básicos recogidos en el Convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Diferencia operativa entre corrección primaria y secundaria de color:",
+          "options": [
+            "Primaria: aplicación de LUT creativa; secundaria: conversión de espacio de color.",
+            "Primaria: ajustes globales de exposición y balance; secundaria: ajustes selectivos por rango de color o zonas.",
+            "Primaria: retoque puntual de arrugas y defectos; secundaria: cambio de formato de entrega.",
+            "Primaria: sólo afecta al canal alfa; secundaria: sólo afecta al canal de luminancia."
+          ],
+          "correctIndex": 1,
+          "explanation": "La corrección primaria actúa sobre parámetros globales (exposición, contraste, balance), la secundaria actúa selectivamente sobre gamas de color, mascaras o zonas; las otras opciones confunden funciones o son incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_lut_log",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Distinción entre una LUT de visualización (log→display) y una LUT creativa:",
+          "options": [
+            "La LUT de visualización transforma una señal log para mostrarla correctamente en monitor (propósito de visualización); la LUT creativa altera color y contraste para un look deseado.",
+            "Ambas LUT son intercambiables: una LUT creativa siempre debe usarse como LUT de visualización.",
+            "La LUT de visualización elimina la necesidad de corrección primaria; la creativa actúa sobre metadatos técnicos.",
+            "La LUT creativa sólo corrige problemas de exposición mientras que la de visualización cambia espacio de color."
+          ],
+          "correctIndex": 0,
+          "explanation": "La LUT de visualización realiza una transformación técnica para visualizar log en un espacio display‑referred; la LUT creativa modifica la imagen para un estilo. No son intercambiables sin consecuencias y no sustituyen corrección primaria.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Medida preventiva compatible con la reducción de trastornos musculoesqueléticos en tareas continuadas con teclado, ratón y tableta gráfica:",
+          "options": [
+            "Evitar pausas para mantener concentración; realizar estiramientos solo al finalizar la jornada.",
+            "Aumentar la velocidad de trabajo para reducir el tiempo de exposición continuada sin cambiar la ergonomía.",
+            "Colocar teclado elevado y ratón en plano superior para mejorar visibilidad aunque aumente tensión en hombro.",
+            "Uso de silla ajustable con apoyo lumbar, reposamuñecas neutrales, ajuste de altura de mesa y pausas micro‑ergonómicas programadas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La medida correcta combina mobiliario ajustable, postura neutra, apoyo de antebrazos y pausas regulares; las otras opciones proponen prácticas contraproducentes que aumentan riesgo musculoesquelético.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En el acceso fiable a clips grabados en XDCAM spanning, ¿qué aspecto es imprescindible verificar además de conservar carpetas e índices?",
+          "options": [
+            "Integridad y presencia de los metadatos XML/IDX que describen el spanning y el orden de segmentos, y usar una herramienta compatible que reconstruya el clip.",
+            "Que los archivos MXF se renombren con timestamps para forzar orden correcto.",
+            "Reemplazar los archivos spread en varios soportes por una sola copia concatenada manualmente en el servidor sin comprobar metadatos.",
+            "Eliminar los ficheros .cpr asociados al proyecto para evitar conflictos de lectura."
+          ],
+          "correctIndex": 0,
+          "explanation": "Para acceder a clips spanning es esencial conservar y verificar los metadatos (XML/IDX) que indican cómo se segmentó el clip y usar herramientas compatibles que los interpreten; renombrar o concatenar manualmente sin metadatos puede corromper el acceso.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento directo para verificar que en una matriz de vídeo el crosspoint conecta la entrada 12 con la salida 3:",
+          "options": [
+            "Confiar únicamente en la tabla de ruteo mostrada en la interfaz de control sin comprobación de señal física.",
+            "Inyectar una señal de prueba o patrón en la entrada 12 y comprobar de forma física en la salida 3 con monitor/osciloscopio que aparece dicha señal, y verificar el estado en la consola de enrutamiento.",
+            "Revisar únicamente las etiquetas físicas de cables en el patchbay sin comprobar la señal en la salida.",
+            "Reiniciar la matriz y asumir que tras el reinicio los crosspoints se restauran correctamente."
+          ],
+          "correctIndex": 1,
+          "explanation": "La verificación inequívoca requiere inyectar señal de prueba en la entrada y comprobarla físicamente en la salida junto a la comprobación en la consola; confiar solo en la interfaz, etiquetas o reinicios no garantiza que la señal efectiva llegue al destino.",
+          "category": "Equipos de medida y control"
+        }
+      ]
+    },
     {
       "id": "055",
       "title": "Examen 055",
