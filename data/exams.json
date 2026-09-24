@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23",
+  "updatedAt": "2026-09-24",
   "exams": [
+    {
+      "id": "057",
+      "title": "Examen 057",
+      "date": "2026-09-24",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Indique la medida operativa que la Corporación RTVE debe implantar prioritariamente para garantizar la función de servicio público en materia informativa durante la elaboración de una programación cotidiana:",
+          "options": [
+            "Limitar la emisión de contenidos controversiales en horario diurno para evitar litigios y sanciones administrativas.",
+            "Adoptar protocolos editoriales transparentes de verificación de fuentes y criterios de pluralidad aplicables a editores y redacciones.",
+            "Reservar porcentajes de tiempo de emisión para determinados grupos políticos mediante acuerdos previos con partidos representados.",
+            "Centralizar todas las decisiones informativas en una unidad única sin participación de delegaciones territoriales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 es correcta porque la misión de servicio público exige mecanismos editoriales que garanticen pluralidad y veracidad; es una medida práctica y prioritaria. Los distractores proponen restricciones o centralizaciones que vulnerarían independencia, pluralismo o eficacia informativa; el distractor más próximo (1) habla de limitar contenidos, que no garantiza pluralidad ni veracidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_elipsis",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Se ha eliminado un tramo cronológico de una escena manteniendo la comprensión de la acción. Indique el indicio operativo que confirma la aplicación correcta de una elipsis:",
+          "options": [
+            "Se mantiene idéntico el ritmo original porque no se han recortado duraciones internas de los planos.",
+            "Se han suprimido planos sin modificar planos de cobertura y aparecen discontinuidades de interpretación en los actores.",
+            "Se han añadido transiciones que introducen nueva información contradictoria respecto al comienzo de la acción.",
+            "El espectador percibe que ha pasado tiempo pero se conserva la continuidad causal entre inicio y conclusión de la acción."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 es la marca operativa de una elipsis bien aplicada: compresión temporal con conservación de la comprensión y continuidad causal. Los distractores describen efectos negativos (discontinuidad, contradicción o ausencia de compresión) que no caracterizan una elipsis correcta.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Elija la afirmación que describe con mayor precisión la diferencia operativa entre MOV, MP4 y MXF en flujos profesionales:",
+          "options": [
+            "MXF está diseñado para intercambio profesional con soporte robusto de timecode y metadatos de emisión; MOV/MP4 son contenedores de uso general orientados a reproducción y distribución con amplia compatibilidad de códecs.",
+            "MP4 es el único contenedor capaz de llevar pistas intercaladas y metadatos de programa adecuados para retransmisión en emisión master.",
+            "MOV impone un único códec obligatorio para garantizar interoperabilidad entre plataformas profesionales.",
+            "MXF no permite insertar pistas de audio multicanal ni metadatos técnicos, por lo que no se usa en flujos broadcast."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 acierta: MXF es el contenedor profesional preparado para timecode y metadatos; MOV/MP4 son contenedores más orientados a distribución/reproducción con amplia compatibilidad de códecs. Los distractores contienen afirmaciones incorrectas: MP4 no es el único con pistas intercaladas; MOV no impone un códec; MXF sí admite audio multicanal y metadatos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un puesto de conmutación lineal A/B‑Roll, ¿cuál es la función operativa de la prelectura (preview) respecto al mezclador y las fuentes A y B?",
+          "options": [
+            "Activa automáticamente la salida al aire de la fuente A sin intervención del operador del mezclador.",
+            "Almacena permanentemente el duplicado del material en el servidor para su posterior conformado offline.",
+            "Permite preparar y comprobar la fuente candidata (A o B) y sus puntos de entrada/salida en el bus de previsualización antes de llevarla al programa mediante el mezclador.",
+            "Sustituye la función del generador de caracteres durante transiciones en directo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 define correctamente la prelectura: prepara la fuente en el bus preview y el operador usa el mezclador para pasarla a programa. Los distractores confunden funciones (almacenamiento, emisión automática o generación de caracteres) que no corresponden a preview en A/B‑Roll.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Ante una actividad fuera del centro habitual (misión), ¿qué medida preventiva es responsabilidad prioritaria del empleador?",
+          "options": [
+            "Exigir al trabajador que evalúe y asuma por sí mismo todos los riesgos personales sin documentación previa.",
+            "Realizar una evaluación de riesgos específica del desplazamiento y proporcionar información y medios de protección adecuados al trabajador.",
+            "Limitarse a contratar un seguro de viaje sin facilitar instrucciones operativas o equipos de protección.",
+            "Permitir que el trabajador decida sobre horarios y rutas sin coordinación ni comunicación con el centro."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 es correcta: el empleador debe evaluar riesgos de la misión y proporcionar información y medios preventivos. Los distractores trasladan la responsabilidad al trabajador, se limitan solo al seguro o omiten coordinación, lo cual incumple obligaciones preventivas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_checksum",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación más correcta sobre los límites prácticos de un checksum en la verificación antes y después de una transferencia:",
+          "options": [
+            "La presencia de un checksum evita cualquier posibilidad de corrupción producida por errores de software o del contenedor.",
+            "Un checksum sustituye por completo las pruebas de reproducción y control visual porque garantiza que el archivo funciona en cualquier reproductor.",
+            "Un checksum idéntico confirma identidad bit a bit entre origen y destino, pero no garantiza que el archivo sea interpretable o que su contenido semántico sea correcto.",
+            "Un checksum puede detectar diferencias en metadatos embebidos aunque los bits de la esencia multimedia sean idénticos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 explica el alcance y el límite: checksum verifica igualdad bit a bit pero no asegura interoperabilidad o integridad lógica. Los distractores exageran su alcance (sustituir QC, eliminar toda posibilidad de corrupción) o equivocan su capacidad (detecta cambios aunque esencia idéntica), y por tanto son incorrectos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_true_peak",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que diferencia correctamente true peak y sample peak en medición de audio:",
+          "options": [
+            "Sample peak es imprescindible para medir inter‑sample peaks; true peak es irrelevante en control de entrega.",
+            "Sample peak detecta picos entre muestras mediante interpolación, mientras que true peak mide únicamente muestras discretas.",
+            "True peak y sample peak son equivalentes para asegurar cumplimiento de entrega a emisoras sin más procesamiento.",
+            "True peak estima picos interpolados entre muestras y detecta sobreniveles que pueden ocurrir en la reproducción DAC; sample peak solo mide los valores discretos muestreados."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 es correcta: true peak incluye interpolación para detectar picos que suceden entre muestras; sample peak mide solo muestras discretas. Los distractores invierten los conceptos o minimizan la importancia de true peak, lo que es incorrecto.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Respecto a las obligaciones de protección de menores según la Ley 13/2022, indique la afirmación que responde con mayor precisión:",
+          "options": [
+            "La ley solo exige advertencias textuales en la guía de programación; no exige medidas técnicas de bloqueo ni clasificación por edades.",
+            "Los prestadores deben clasificar contenidos por franjas de edad y adoptar medidas técnicas y organizativas efectivas que impidan o limiten el acceso de menores a contenidos perjudiciales.",
+            "Los prestadores están obligados a eliminar automáticamente cualquier contenido potencialmente nocivo de todos sus catálogos sin evaluación previa.",
+            "Las obligaciones de protección de menores se aplican únicamente a emisoras lineales, y no a servicios a la carta ni plataformas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 refleja la exigencia real: clasificación y medidas técnicas/organizativas para impedir o limitar acceso de menores. Los distractores son incorrectos: reducen la obligación a advertencias, exigen eliminación indiscriminada o excluyen servicios VOD, lo cual no concuerda con el alcance de la norma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en una cadena de audio la adaptación de impedancias entre etapas es incorrecta. ¿Cuál es la consecuencia operativa más probable?",
+          "options": [
+            "Aparición de artefactos de compresión visual en el vídeo sincronizado.",
+            "Cambio del bit‑depth de la conversión A/D que provoca truncado digital de la señal.",
+            "Reflexiones y desadaptación que provocan pérdida de nivel, respuesta en frecuencia alterada y aumento de ruido o distorsión en determinados rangos.",
+            "Duplicación automática de canales en la consola sin intervención del operador."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 describe las consecuencias típicas de una mala adaptación de impedancias: reflexiones, pérdidas de nivel y alteraciones de respuesta y ruido. Los otros distractores mezclan ámbitos distintos (bit‑depth, artefactos de vídeo, duplicación de canales) y no son consecuencias directas de la adaptación de impedancia.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Indique el procedimiento que resume correctamente los derechos y obligaciones del trabajador en materia de prevención:",
+          "options": [
+            "Rechazar toda formación obligatoria y delegar su cumplimiento exclusivamente en el servicio de prevención.",
+            "Recibir información y formación sobre riesgos específicos, utilizar correctamente los medios de protección facilitados y colaborar en las medidas preventivas comunicando riesgos detectados.",
+            "Modificar instalaciones y procedimientos sin comunicar al responsable de prevención cuando crea que son inadecuados.",
+            "Negarse a utilizar equipos de protección individual aunque hayan sido proporcionados por la empresa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 sintetiza derechos (información y formación) y obligaciones (uso correcto de medios y colaboración). Los demás distractores proponen conductas contrarias a la normativa: rechazo de formación, intervenciones no comunicadas o negación del uso de EPI.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la comparación habitual entre AVC (H.264) y HEVC (H.265):",
+          "options": [
+            "HEVC es compatible sin restricciones con todos los decodificadores y navegadores en dispositivos antiguos.",
+            "HEVC exige mayor carga de cómputo para codificar y decodificar que AVC.",
+            "AVC tiene mayor compatibilidad en dispositivos legacy que HEVC.",
+            "HEVC ofrece mejor eficiencia de compresión que AVC manteniendo calidad similar."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 3 es la excepción falsa: HEVC no es compatible sin restricciones en dispositivos antiguos. Las otras afirmaciones son correctas: HEVC mejora eficiencia, y requiere más recursos; AVC es más compatible en dispositivos legacy.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Durante selección y visionado, cuál es la relación operativa correcta entre proxies y la esencia de alta resolución en XDCAM para garantizar reconformado fiable en ingesta/online:",
+          "options": [
+            "Los proxies llevan un UMID distinto y no comparten referencias temporales con la esencia; la reconformación exige una nueva sincronización manual de clips.",
+            "Los proxies sustituyen la esencia y una vez editado el proxy no es posible reconstruir decisiones sobre la alta resolución.",
+            "La esencia de alta resolución debe borrarse tras generar proxies para ahorrar espacio y evitar confusión durante la ingesta.",
+            "Los proxies son versiones de baja resolución vinculadas mediante metadatos (timecode/identificadores) a la esencia; las decisiones sobre proxies se reconforman luego usando esa información para localizar y substituir por la esencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 es correcta: proxies vinculados con metadata/timecode permiten reconformar decisiones sobre la esencia. Los distractores niegan la reconformabilidad, proponen borrar esencia o afirman que no comparten referencias, lo cual impediría reconformado fiable.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "language_fiction",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En edición de ficción, ¿qué prioridad operativa debe coordinar el montador con realización para preservar la continuidad dramática?",
+          "options": [
+            "Modificar libremente la performance de actores en montaje sin consenso con realización ni dirección de actores.",
+            "Priorizar exclusivamente los planos cortos de acción a costa de perder cobertura para ahorrar tiempo en el rodaje.",
+            "Garantizar la continuidad de la motivación escénica y ofrecer cobertura suficiente para respetar ritmo e interpretación al montar.",
+            "Sustituir la banda sonora de los diálogos por música para mejorar ritmo, independientemente de la intención dramática."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 es la prioridad: preservar motivación e interpretación y asegurar cobertura para montaje. Los distractores proponen prácticas que perjudican la continuidad dramática o interfieren con la intención de realización.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Para mitigar obsolescencia y asegurar preservación de archivos audiovisuales, cuál es la estrategia operativa más adecuada:",
+          "options": [
+            "Planificar migraciones periódicas a formatos y soportes actuales, mantener verificaciones mediante checksums y conservar documentación de herramientas y software necesarias para lectura.",
+            "Conservar los soportes originales indefinidamente sin migración, confiando en que las herramientas estarán disponibles en el futuro.",
+            "Realizar una única copia en un servidor y considerarla archivo definitivo sin verificaciones posteriores.",
+            "Exportar todo a formatos propietarios sin documentar codecs ni metadatos para simplificar el catálogo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 recoge las prácticas correctas: migración programada, verificación y documentación. Los distractores proponen conservar solo originales sin plan, confiar en una única copia o usar formatos propietarios sin documentación, lo que aumenta riesgo de obsolescencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión el principio constitucional de igualdad y la prohibición de discriminación:",
+          "options": [
+            "Todas las personas son iguales ante la ley y se prohíbe cualquier discriminación por razón de nacimiento, raza, sexo, religión, opinión o cualquier otra condición o circunstancia personal o social.",
+            "La igualdad constitucional solo se aplica en el ámbito laboral y no en el acceso a servicios públicos.",
+            "La Constitución obliga a tratar idénticamente a todos los ciudadanos en todas las políticas sin posibilidad de medidas compensatorias.",
+            "La prohibición de discriminación permite excepciones generales para empresas privadas cuando lo consideren necesario."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 0 refleja el principio: igualdad ante la ley y prohibición de discriminación por múltiples causas. Los demás distractores limitan o interpretan erróneamente el alcance, o permiten excepciones no contempladas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico operativo: una playlist en EVS publicará clips con transiciones de fundido pero en reproducción aparecen cortes secos. ¿Cuál es la causa operativa más probable?",
+          "options": [
+            "El mezclador de vídeo externo rechaza la playlist por falta de licencia y fuerza cortes secos por seguridad.",
+            "Los clips están corruptos físicamente en el disco y por ello no se aplican transiciones.",
+            "La playlist tiene configurado el modo de reproducción en 'cut' o las duraciones de transición no están activadas en los parámetros de publicación.",
+            "La consola del operador está en modo silencioso y por ello elimina transiciones audiovisuales."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 es la causa operativa habitual: modo de reproducción o parámetros de transición mal configurados en EVS/IPDirector. Los otros distractores implican corrupción física, licencias externas o estados irrelevantes que no son la causa más probable.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_export_qc",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las comprobaciones técnicas habituales en una exportación QC:",
+          "options": [
+            "Verificar formato de contenedor y códec, niveles de luminancia y crominancia, sincronía A/V, fields y metadatos de entrega.",
+            "Comprobar que el timecode embebido y los metadatos exigidos por la entrega están presentes y correctos.",
+            "Realizar reproducción visual completa para detectar errores de codificación y artefactos visibles.",
+            "Evaluar y certificar la idoneidad estética del tratamiento de color frente a la intención creativa del director."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 3 es la excepción: la QC técnica verifica integridad y conformidad técnica, no evalúa la idoneidad estética frente a la intención creativa (eso corresponde a aprobación artística). Las otras opciones son comprobaciones técnicas habituales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a la legalización de señal y limitación de gamut, señale la afirmación que constituye una excepción:",
+          "options": [
+            "Las violaciones de gamut solo afectan a la luminancia y nunca modifican la crominancia de la imagen.",
+            "La limitación automática puede alterar la saturación y provocar desplazamientos de tonalidad si se hace por canales sin corrección vectorial.",
+            "Un legalizador puede reducir crominancia y pico de luminancia manteniendo la coherencia tonal para cumplir límites legales.",
+            "Los algoritmos de legalización pueden operar sobre espacio RGB o YCbCr y sobre parámetros vectoriales para preservar hue."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción falsa: las violaciones de gamut afectan a crominancia y luminancia; decir que solo afectan a luminancia es incorrecto. Las otras opciones describen funciones y riesgos reales de legalizadores y limitadores.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: en un proyecto a 29,97 fps debe ajustarse el código de tiempo para que el contador refleje tiempo real. ¿Qué hace el timecode drop‑frame frente al non‑drop‑frame?",
+          "options": [
+            "Convierte la media hora de material en 29,97 a un conteo de 30 fps sin ajuste numérico.",
+            "Elimina físicamente fotogramas cada minuto para ajustar la duración real al contador de timecode.",
+            "Acelera la reproducción 0,1% para sincronizar el contador con el tiempo real.",
+            "Omite ciertos números de timecode en momentos predefinidos para corregir la desviación numérica con respecto al tiempo real sin eliminar fotogramas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 0 es correcta: drop‑frame corrige la numeración del timecode saltando etiquetas en puntos concretos para alinear conteo y tiempo real sin eliminar fotogramas. Los distractores describen supresiones de fotogramas, cambios de velocidad o conversiones incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: tras convertir material 4:4:4 a 4:2:0 para proxies, ¿qué consecuencia visual u operativa es la más esperable en el proceso de edición y etalonaje?",
+          "options": [
+            "Cambio del frame rate que provoca uneven motion y salto de fotogramas.",
+            "Pérdida de resolución de crominancia que puede producir bordes menos definidos en detalles de color y limitar el margen para correcciones cromáticas y chroma‑key.",
+            "Aumento del ruido luminancia en sombras por reducción de muestreo de luminancia.",
+            "Pérdida irreversible del timecode embebido en la esencia cromática."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 0 describe la consecuencia operativa típica: con 4:2:0 la crominancia tiene menor resolución, afectando bordes y capacidad de corrección/clave. Los otros distractores indican efectos no relacionados (frame rate, ruido de luminancia o pérdida de timecode) que no son consecuencia del submuestreo cromático.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "056",
       "title": "Examen 056",
