@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24",
+  "updatedAt": "2026-09-25",
   "exams": [
+    {
+      "id": "058",
+      "title": "Examen 058",
+      "date": "2026-09-25",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor sintetiza las fuentes, restricciones y principios generales del modelo de financiación de RTVE.",
+          "options": [
+            "Financiación basada en asignaciones presupuestarias del Estado complementadas por ingresos propios (prestación de servicios, explotación de activos), con límites que buscan garantizar la independencia, la función de servicio público y reducir la dependencia de la publicidad.",
+            "Financiación íntegramente derivada de la explotación comercial y la publicidad, sin asignaciones del presupuesto general del Estado, para asegurar autonomía editorial por contabilidad propia.",
+            "Modelo basado en una tasa o canon obligatorio repercutido directamente a los usuarios finales, que sustituye a las asignaciones presupuestarias y a los ingresos comerciales.",
+            "Financiación exclusiva mediante concesiones y patrocinios comerciales, sin restricciones sobre su utilización para programación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley establece un modelo mixto donde las asignaciones públicas se complementan con ingresos propios. El aspecto decisivo es la combinación con restricciones destinadas a preservar la función de servicio público y limitar la dependencia de la publicidad; las otras opciones describen modelos exclusivos que no reflejan el principio mixto y las restricciones previstas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al uso y límites de la línea de tono de piel en vectorscopio:",
+          "options": [
+            "La línea sirve como referencia de matiz para alinear tonos de piel entre cámaras, pero no define niveles absolutos de luminancia ni saturación.",
+            "La posición de la línea puede admitir variaciones por diferencias de fototipo étnico y por correcciones de cámara; pequeñas desviaciones son tolerables si se mantiene coherencia entre cámaras.",
+            "Debe emplearse como única referencia de ajuste de color en escenas con iluminación mixta: si la piel cae fuera de la línea, se debe corregir sin considerar contexto lumínico.",
+            "En flujos HDR la interpretación exige considerar la curva tonal y el mapeo, ya que la relación cromática de la piel puede mantenerse aunque cambie la luminancia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La excepción es tratar la línea como única referencia en iluminación mixta: la línea de tonos de piel indica matiz habitual pero no sustituye la evaluación del contexto lumínico y de exposición; las otras afirmaciones describen usos y límites correctos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que describe correctamente el flujo operativo de 'growing files' durante un directo y la disponibilidad de la esencia:",
+          "options": [
+            "La única opción segura es esperar a que el soporte físico se extraiga de la cámara para acceder a la esencia; no hay mecanismos de acceso fiable durante la grabación.",
+            "Mientras el fichero esté en crecimiento, puede moverse o renombrarse libremente entre servidores sin riesgo de corrupción; la finalización no es necesaria.",
+            "Los growing files siempre se consideran master válidos para archivo inmediato sin verificación adicional, ya que el formato garantiza consistencia transitoria.",
+            "Un fichero en crecimiento puede ser accedido y reproducido parcialmente por sistemas de ingesta compatibles, pero la integridad completa de la esencia solo queda garantizada cuando el recorder cierra/finaliza el fichero o el sistema de ingest realiza un cierre consistente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La operación correcta es que los archivos en crecimiento pueden ser consumidos por ingest en vivo, pero su integridad queda asegurada al cerrar o mediante mecanismos de cierre deterministas; mover o archivar antes del cierre sin soporte del recorder conlleva riesgo de corrupción, a diferencia de las otras afirmaciones erróneas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "De las siguientes afirmaciones relativas a la ergonomía postural en un puesto de edición (ajuste de silla, apoyo lumbar, antebrazos y pies), señale la que constituye una excepción (es incorrecta):",
+          "options": [
+            "La silla debe ajustarse en altura y profundidad para que los antebrazos queden apoyados y aproximadamente paralelos al plano de trabajo, evitando extensión o flexión excesiva de las muñecas.",
+            "El respaldo debe disponer de un apoyo lumbar ajustable que mantenga la curvatura fisiológica de la zona lumbar y permita apoyo estable del tronco durante la tarea.",
+            "Los pies deben apoyarse en el suelo o en un reposapiés para distribuir la carga sobre muslos y zona lumbar y evitar tensión y mala circulación en las piernas.",
+            "Es aceptable trabajar con los pies colgando si la altura de la silla facilita el acceso al teclado y los antebrazos están correctamente apoyados."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta (excepción) es la 3: trabajar con los pies colgando no es una práctica ergonómica aceptable. Aunque el apoyo de antebrazos y un correcto acceso al teclado son importantes, la falta de apoyo plantar incrementa la carga sobre la región lumbar y los muslos y puede causar incomodidad y problemas circulatorios. Las otras afirmaciones reflejan recomendaciones estándar: ajuste de silla para apoyar antebrazos y mantener muñecas neutras (1), apoyo lumbar ajustable para conservar la curvatura fisiológica (2) y la necesidad de apoyo de los pies o reposapiés para distribuir la carga (4). La opción 1 puede parecer próxima, pero no contradice la recomendación sobre apoyo plantar; por ello la 3 es la única incorrecta.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_music_sync",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes estrategias de montaje con música y elija la más coherente con frase musical, acentos, contrapunto y continuidad sonora:",
+          "options": [
+            "Priorizar cortes en límites de frase musical para las unidades mayores, usar acentos musicales como puntos de corte para micro‑edits y emplear contrapunto sólo cuando no interfiera con la continuidad diegética del diálogo.",
+            "Cortar sistemáticamente en cada pulso musical para maximizar ritmo, aunque interfiera con la entonación del diálogo o la continuidad sonora interna.",
+            "Evitar toda coincidencia entre plano y acento musical para crear un efecto de contrapunto permanente, incluso si rompe la continuidad de la fuente sonora diegética.",
+            "Priorizar la continuidad dialogada por encima de la música, nunca aprovechando acentos musicales para cortes."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta distingue niveles: cortes mayores en frases, micro‑edits en acentos y uso mesurado del contrapunto sin quebrar continuidad diegética. Las otras opciones son extremos que o bien sacrifican consistencia sonora o descartan recursos musicales útiles.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en una instalación que mezcla señales SD y HD aparece jitter al conmutar fuentes HD; ¿qué afirmación explica mejor la elección entre black burst y tri‑level sync?",
+          "options": [
+            "Black burst es siempre preferible incluso en HD porque su señal es más estable y compatible con SDI‑HD sin necesidad de conversión.",
+            "Tri‑level sync es la referencia adecuada para señales HD/HD‑SDI por su borde más rápido y menor componente DC; black burst es la referencia tradicional para SD; mezclar sin conversores de sincronismo causa jitter.",
+            "Tri‑level sync sólo es necesario en sistemas UHD; para HD y SD el black burst ofrece idéntica precisión y compatibilidad.",
+            "El uso de black burst en sistemas HD corrige automáticamente diferencias de clock entre equipos sin necesidad de frame‑sync."
+          ],
+          "correctIndex": 1,
+          "explanation": "Tri‑level es la referencia específica para HD por su forma y menor componente DC; usar black burst en HD sin conversión puede producir jitter. Las demás afirmaciones sobre equivalencia o corrección automática son incorrectas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: al sincronizar múltiples cámaras por forma de onda de audio, ¿cuál es la condición que más limita la fiabilidad del emparejamiento automático?",
+          "options": [
+            "Que las pistas se graben a distinto sample rate: la diferencia de sample rate no afecta al emparejamiento por forma de onda.",
+            "Que las cámaras compartan el mismo nombre de archivo y timecode; si coinciden los nombres, el emparejamiento por forma de onda es siempre fiable.",
+            "Que todas las pistas contengan señales con buena relación señal/ruido y eventos transitorios coincidentes (diálogo o claps); en presencia de ruido ambiente o reverberación intensa el emparejamiento automático falla con frecuencia.",
+            "Que las cámaras usen micrófonos distintos: siempre impide la sincronización por forma de onda aunque el contenido sea el mismo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La limitación principal es la calidad y la presencia de transitorios coincidentes; ruido fuerte o reverberación impiden emparejamiento fiable. Los otros enunciados son falsos: nombres o timecode no garantizan sincronía por forma de onda, diferencias de sample rate sí afectan y micrófonos distintos no impiden la sincronización si la señal coincidente es clara.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Qué criterio debe primar al asignar una 'ocupación tipo' según el III Convenio Colectivo de RTVE?",
+          "options": [
+            "La descripción de funciones y responsabilidades reales del puesto, vinculándolas a la clasificación profesional y a la organización del trabajo.",
+            "La preferencia por una denominación comercial atractiva para el puesto, independientemente de las tareas efectivas.",
+            "La antigüedad del trabajador en la Corporación como único criterio para clasificar la ocupación.",
+            "El horario del puesto (diurno o nocturno) como factor determinante de la ocupación tipo."
+          ],
+          "correctIndex": 0,
+          "explanation": "El criterio prioritario es la realidad funcional: las funciones y responsabilidades determinan la clasificación y la ocupación tipo; las otras opciones citan criterios secundarios o irrelevantes.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la compatibilidad entre reservas de ancho de banda en un almacenamiento compartido y el rendimiento concurrente en entornos NEXIS/SAN:",
+          "options": [
+            "Las reservas de ancho de banda en el sistema garantizan rendimiento ilimitado para cada cliente independientemente del número de usuarios simultáneos.",
+            "El rendimiento concurrente depende de la suma de los bitrates activos y de las reservas; si las reservas se asignan sin considerar picos y número de clientes simultáneos, el sistema puede saturarse aunque la capacidad teórica parezca suficiente.",
+            "En NEXIS/SAN la gestión de reservas es irrelevante porque el almacenamiento ofrece I/O infinitos mediante caché, por lo que basta con dimensionar disco bruto.",
+            "La única variable que afecta al rendimiento concurrente es la capacidad de CPU de los clientes; el ancho de red y la configuración del almacenamiento no influyen."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación correcta reconoce que las reservas deben contemplar picos y concurrencia; asignaciones inadecuadas provocan saturación. Las demás opciones sobre garantía ilimitada, irrelevancia de reservas o exclusividad de CPU son incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: para reducir fatiga visual y postural en pantallas de visualización, indique la organización de tareas más adecuada:",
+          "options": [
+            "Evitar cualquier alternancia de tareas para mantener concentración y realizar pausas sólo cuando aparezcan molestias.",
+            "Concentrar todo el trabajo de pantalla en bloques largos y realizar una única pausa prolongada al finalizar la jornada.",
+            "Alternar tareas que cambien exigencia visual y postura (visión cercana/lectura, clasificación física, pausas activas) e introducir micro‑pausas breves frecuentes (p. ej. 5–10 min cada hora) y descansos mayores periódicos.",
+            "Sustituir pausas por la disminución temporal del brillo de pantalla durante periodos prolongados sin cambiar postura."
+          ],
+          "correctIndex": 2,
+          "explanation": "La estrategia preventiva eficaz combina alternancia de tareas y pausas regulares y breves; las otras opciones son insuficientes o contrarias a las recomendaciones ergonómicas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la elección motivada de corte, fundido y encadenado según su función narrativa:",
+          "options": [
+            "El encadenado (dissolve) siempre indica un flashback y no puede utilizarse para marcar solo una elipsis temporal leve.",
+            "El fundido a negro se utiliza frecuentemente para indicar cierre o paso de tiempo significativo manteniendo discontinuidad temporal.",
+            "El corte es la transición más neutra y se usa para continuidad espacial inmediata entre planos relacionados.",
+            "La elección de transición debe responder al significado temporal y al ritmo narrativo, no a la simple preferencia técnica."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es afirmar que el encadenado siempre indica un flashback: no es correcto; el dissolve puede indicar paso de tiempo, conexión temática o simplemente suavizar el paso entre planos. Las demás opciones describen usos correctos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Para almacenar un fichero único que supera los 4 GB en un soporte habitual de producción, ¿qué sistema de archivos es el más apropiado para evitar la limitación de tamaño de fichero?",
+          "options": [
+            "FAT32",
+            "exFAT",
+            "DOS FAT16",
+            "FAT12"
+          ],
+          "correctIndex": 1,
+          "explanation": "FAT32 y variantes antiguas limitan el tamaño máximo de fichero a 4 GB. exFAT soporta ficheros mayores y es común en flujos de producción por su compatibilidad entre plataformas; las demás opciones son sistemas FAT con límites mucho menores.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_metadatos",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En la transferencia o migración de activos entre sistemas (MAM, NLE y archivo), para mantener trazabilidad, permitir relink/reconformado fiable y minimizar la dependencia de metadatos exclusivos de la base de datos de origen, ¿qué metadato debe incorporarse necesariamente embebido en el contenedor de la esencia?",
+          "options": [
+            "Un identificador único embebido en la esencia (por ejemplo, UMID)",
+            "Ruta y nombre de fichero originales del sistema de origen",
+            "Identificador de la sesión de ingestión almacenado en la base de datos del MAM",
+            "Marca temporal de creación del fichero (timestamp del sistema de ficheros)"
+          ],
+          "correctIndex": 0,
+          "explanation": "Un identificador único embebido en la propia esencia (por ejemplo, UMID) garantiza identificación persistente y desvinculada del sistema: sigue al fichero si se renombra, mueve o se copia entre repositorios y facilita reconformado y auditoría. La ruta/nombre de fichero es frágil (se modifica al renombrar/mover). El identificador de sesión de ingestión suele residir en la base de datos del MAM y puede perderse al exportar sin migrar la base de datos. El timestamp aporta información útil pero no es único ni suficiente para garantizar trazabilidad o evitar colisiones.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: si el bitrate agregado de los flujos se aproxima a la capacidad de enlace físico, ¿qué medida operativa es la más adecuada?",
+          "options": [
+            "Reducir la calidad de todos los flujos simultáneamente en vez de provisionar margen o gestionar prioridad.",
+            "Ajustar el enlace al valor exacto del bitrate agregado sin margen, para optimizar uso de infraestructura.",
+            "Confiar en la compresión variable (VBR) sin dimensionar margen, ya que la media reducirá la necesidad de capacidad adicional.",
+            "Provisionar margen adicional (p. ej. 15–25 %) sobre el agregado estimado para absorber picos, overhead y retransmisiones; monitorizar latencia y colas para evitar pérdida de paquetes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La interpretación correcta es garantizar margen operativo para picos y overhead; dimensionar al valor exacto sin margen o confiar solo en VBR puede provocar congestión y pérdida de servicio; degradar calidad es una medida paliativa no preferente.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes medidas y señale la que mejor corresponde a lo previsto en el II Plan de Igualdad y la Guía de Igualdad de RTVE:",
+          "options": [
+            "Sustituir formación y protocolos por un comité consultivo que no intervenga en producciones ni en revisiones de guion.",
+            "Imponer cuotas fijas de presencia femenina en pantalla sin medidas adicionales de formación o protocolos de actuación.",
+            "Permitir que cada departamento gestione la igualdad de forma voluntaria sin directrices corporativas ni formación obligatoria.",
+            "Implementar protocolos de prevención del acoso, formación obligatoria en lenguaje no sexista y medidas para evitar representaciones estereotipadas en contenidos."
+          ],
+          "correctIndex": 3,
+          "explanation": "El Plan y la Guía establecen medidas concretas: protocolos contra el acoso, formación y acciones para prevenir representaciones sexistas; las otras opciones son insuficientes o inconsistentes con la política corporativa.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que describe mejor los factores que determinan la capacidad de un servidor de vídeo para atender accesos concurrentes:",
+          "options": [
+            "Solo el número de discos determina la concurrencia; el ancho de red y el bitrate por canal son irrelevantes.",
+            "La concurrencia depende de la capacidad de disco y su throughput agregado, del ancho de red, del bitrate por canal y de la eficiencia IOPS; dimensionar solo capacidad de almacenamiento sin considerar throughput y red conduce a cuellos de botella.",
+            "La concurrencia depende exclusivamente del software del servidor; el hardware de red y disco no afecta si el software está optimizado.",
+            "La capacidad de atender canales concurrentes se gestiona únicamente con caches en los clientes, por lo que el servidor puede ser mínimo."
+          ],
+          "correctIndex": 1,
+          "explanation": "El rendimiento concurrente resulta de la combinación de throughput de disco, capacidades de red, bitrates de los canales y IOPS; ignorar cualquiera de estos factores provoca degradación. Las otras afirmaciones sobregeneralizan o son incorrectas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: ¿qué consecuencia operativa tiene un error en un fotograma I dentro de una GOP con I, P y B?",
+          "options": [
+            "Un error en un I afecta únicamente a ese fotograma y no influye en fotogramas P o B posteriores.",
+            "El error en un I provoca que los fotogramas P y B dependientes no puedan decodificarse correctamente hasta que aparece el siguiente I de referencia, extendiendo el efecto del fallo.",
+            "Los fotogramas P y B son independientes de los I y se decodifican sin referencia alguna.",
+            "Un fallo en I se corrige automáticamente por interpolación en el contenedor sin afectar a la decodificación."
+          ],
+          "correctIndex": 1,
+          "explanation": "En estructuras GOP con predicción, P y B dependen de referencias I/P; un error en I se propaga a dependientes hasta la próxima referencia válida. Las otras opciones niegan la dependencia predictiva o proponen corrección automática inexistente.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Tras descargar y verificar íntegramente un soporte de estado sólido procedente de cámara, ¿qué práctica operativa se recomienda antes de volver a usar el soporte en rodaje?",
+          "options": [
+            "No volver a usar el soporte: reutilizarlo sin formatear es siempre la práctica recomendada.",
+            "Copiar nuevos archivos directamente sin formatear para ahorrar tiempo, ya que la verificación previa garantiza integridad.",
+            "Realizar un borrado rápido a bajo nivel desde un ordenador con cualquier herramienta genérica sin usar la función de formateo de la cámara.",
+            "Formatear el soporte en la cámara/recorder según las instrucciones del fabricante para restablecer estructuras y tablas de asignación antes de nuevas grabaciones."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica recomendada es formatear en la cámara/recorder según fabricante para asegurar estructuras y gestión interna; las demás opciones arriesgan inconsistencias o son excesivas/incorrectas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para distribuir contenido HDR con máxima compatibilidad de recepción por los distintos displays, ¿qué estrategia es la más adecuada entre PQ y HLG?",
+          "options": [
+            "Emitir siempre en HLG porque PQ solo funciona en entornos de cine y no admite distribución televisiva.",
+            "Usar siempre PQ porque HLG carece de cualquier compatibilidad con SDR y no debe emplearse en emisiones.",
+            "Utilizar HLG cuando se busca compatibilidad directa con receptores SDR sin metadatos y en emisiones en directo; preferir PQ (ST2084) para masters controlados con metadata y reproducción en pantallas que soporten mapeo de tonos más preciso.",
+            "Ambas curvas son intercambiables sin impacto práctico sobre compatibilidad o necesidad de metadatos."
+          ],
+          "correctIndex": 2,
+          "explanation": "HLG ofrece compatibilidad práctica con SDR en broadcast y no requiere metadata, siendo útil en directo; PQ es una curva de mastering con metadata y mejor control en displays HDR. Las otras opciones simplifican o falsean la diferencia.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare los siguientes niveles RAID y elija la afirmación que describe correctamente tolerancia a fallos y procedimiento de reconstrucción:",
+          "options": [
+            "RAID 10 es equivalente a RAID 5 en tolerancia y reconstrucción porque ambos usan paridad distribuida idéntica.",
+            "RAID 0 combina striping con paridad y permite reconstrucción tras un fallo; RAID 1 usa striping sin tolerancia; RAID 5 no usa paridad.",
+            "RAID 5 combina striping con paridad distribuida y permite reconstrucción tras la pérdida de un disco (tolerancia a fallo de un disco); RAID 6 añade paridad extra tolerando dos fallos; RAID 1 es espejo y reconstruye copiando el disco superviviente.",
+            "RAID 6 tiene menos tolerancia a fallos que RAID 5 y no permite reconstrucción en caliente."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta compara con precisión: RAID5 = striping + paridad distribuida (tolerancia a un disco), RAID6 = paridad doble (tolerancia a dos discos), RAID1 = espejo; las otras opciones contienen afirmaciones técnicas erróneas sobre paridad y tolerancia.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "057",
       "title": "Examen 057",
