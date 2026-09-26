@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25",
+  "updatedAt": "2026-09-26",
   "exams": [
+    {
+      "id": "059",
+      "title": "Examen 059",
+      "date": "2026-09-26",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la opción que constituye una excepción respecto a obligaciones concretas de accesibilidad impuestas por la Ley 13/2022 en emisiones lineales:",
+          "options": [
+            "Proveer subtitulado para personas con discapacidad auditiva en emisiones en directo y diferido según los plazos de implantación legal.",
+            "Exigir que todo material publicitario se transmita exclusivamente con subtitulado permanente sin posibilidad de desactivación.",
+            "Incluir interpretación en lengua de signos en los servicios informativos principales cuando la normativa de desarrollo lo determine.",
+            "Facilitar pistas de audiodescripción para contenidos de interés general según niveles y calendarios establecidos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta (4) es la excepción: la Ley 13/2022 establece obligaciones de accesibilidad progresivas y diferenciadas por tipo de contenido, pero no impone de forma general e inmediata la obligación de subtitulado permanente e inmutable para toda la publicidad; las otras tres son obligaciones concretas o previsibles en su implantación (subtitulado, audiodescripción, lengua de signos) según naturaleza del servicio y plazos normativos. La diferencia decisiva es que la opción 4 plantea una obligación absoluta y sin plazo sobre todo el material publicitario, que no corresponde con el régimen de implantación progresiva previsto en la Ley.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Cuál de las siguientes circunstancias caracteriza un accidente in itinere:",
+          "options": [
+            "Se produce durante una actividad profesional fuera del centro habitual (misión) bajo supervisión del empleador.",
+            "Ocurre durante el desplazamiento habitual entre domicilio y centro de trabajo por la ruta normal y en horario razonable.",
+            "Sucede en el puesto de trabajo durante la jornada ordinaria realizando tareas encomendadas.",
+            "Se refiere exclusivamente a accidentes que ocurren dentro de las instalaciones de la empresa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 define el accidente in itinere: ocurre en el desplazamiento habitual entre domicilio y centro de trabajo por la ruta normal y en tiempo razonable. Las otras opciones describen distinto supuesto: misión (2), accidente en puesto de trabajo (3) o una restricción errónea (4). La diferencia clave es el elemento del desplazamiento habitual entre domicilio y centro.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las distinciones entre montaje paralelo y montaje alterno:",
+          "options": [
+            "En el montaje paralelo las acciones siempre convergen necesariamente en un mismo espacio físico al final de la secuencia.",
+            "El montaje alterno presenta alternancia temporal y se utiliza para establecer contraste o relación por oposición entre dos acciones.",
+            "El montaje paralelo suele mostrar simultaneidad temporal y apunta a una convergencia temática o narrativa entre líneas independientes.",
+            "El montaje alterno puede establecer asociación temática por réplica o contraste sin que las acciones sean simultáneas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 3 es la excepción: no es obligatorio que las acciones del montaje paralelo converjan físicamente en el mismo espacio; su rasgo distintivo es la simultaneidad y la relación temática o dramática, no la convergencia espacial necesaria. Las otras opciones describen correctamente diferencias entre paralelo (simultaneidad y convergencia temática) y alterno (alternancia temporal y asociación por contraste). La diferencia decisiva es confundir convergencia temática con convergencia espacial obligatoria.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_color_order",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la secuencia de operaciones en colorización que respeta el orden operativo correcto:",
+          "options": [
+            "Aplicar LUT creativa → balance de blancos → matching entre planos → normalización/legalización de niveles → ajuste de contraste/look final.",
+            "Balance de blancos/exposición → aplicación del look creativo → normalización/legalización → matching entre planos → ajuste de contraste.",
+            "Normalización/legalización de niveles → balance de blancos/exposición → ajuste de contraste y gama → matching entre planos → aplicación del look creativo.",
+            "Matching entre planos → aplicación del look → normalización/legalización → balance de blancos → ajuste de contraste."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 presenta el orden operativo correcto: primero normalizar/legalizar niveles básicos, luego ajustar balance de blancos y exposición, después trabajar contraste/gama y realizar matching entre planos para coherencia, y al final aplicar el look creativo. Los distractores invierten etapas clave (p. ej. aplicar look antes del matching o normalización), lo que impediría una corrección primaria sólida; la diferencia decisiva es aplicar la normalización y corrección primaria antes del look y del matching final.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Para mantener coherencia espacial en un raccord de mirada entre dos planos conviene conservar:",
+          "options": [
+            "La continuidad exacta del ángulo focal de la óptica usada en ambos planos.",
+            "La dirección de la mirada relativa al eje de acción y la posición aparente del objeto observado en el encuadre siguiente.",
+            "El mismo punto de enfoque de cámara y la igualdad de exposición entre planos.",
+            "Que los dos planos estén rodados con la misma distancia focal y diafragma."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es correcta: el raccord de mirada exige conservar la dirección de la mirada respecto al eje de la acción y la posición aparente del objeto fuera de cuadro para garantizar coherencia espacial. Las otras opciones confunden aspectos técnicos no esenciales para este raccord (distancia focal, exposición); la diferencia decisiva es que el raccord de mirada depende de la relación espacial y de la dirección de la mirada, no de coincidencia de ópticas o exposiciones.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_offline_online",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un flujo offline/online, ¿qué elemento es imprescindible para reconformar un montaje realizado sobre proxies a los originales?:",
+          "options": [
+            "Que todos los efectos y transiciones se hayan renderizado en el proxy en alta resolución antes del online.",
+            "Que los proxies y los originales compartan el mismo códec y parámetros de compresión.",
+            "Un listado de decisiones (EDL/AAF/AAF equivalente) con referencias temporales y metadatos de origen que permitan relink a los originales.",
+            "Que el montaje offline haya sido exportado únicamente en un formato de entrega final."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es imprescindible: el reconformado requiere una lista de decisiones con referencias temporales y metadatos que permitan relinkear las ediciones hechas sobre proxies a los ficheros originales. Las otras opciones son irrelevantes o impracticables: compartir códec no es necesario (2), renderizar efectos en proxy impide el reconformado fiel (3), y exportar en entrega final elimina la trazabilidad (4). La diferencia decisiva es la existencia de metadatos/timecode para relink.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_incendio",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación compatible con medidas correctas de prevención y actuación ante incendios en un plató con equipos eléctricos:",
+          "options": [
+            "Es indiferente desconectar la alimentación si el fuego está contenido; lo prioritario es ventilar la sala antes de evacuar.",
+            "Usar siempre extintores de agua pulverizada en fuegos eléctricos porque enfrían los componentes y permiten un control rápido.",
+            "La evacuación puede retrasarse hasta apagar con manguera el foco principal si el personal está entrenado en su uso.",
+            "En un incendio originado en equipos eléctricos la primera acción es cortar la alimentación eléctrica y, si procede, utilizar un extintor de CO2 o de polvo químico apropiado; nunca aplicar agua sobre equipos energizados."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es compatible y correcta: ante un fuego en equipos eléctricos se debe cortar la alimentación y usar extintores adecuados (CO2, polvo) evitando agua sobre equipos energizados. Las otras opciones son incorrectas o peligrosas: agua en fuegos eléctricos (2) es inapropiada, retrasar evacuación para intentar apagar con manguera (3) contraviene prioridades de seguridad, y no desconectar la alimentación (4) es inseguro. La diferencia decisiva es la incompatibilidad del agua con fuegos eléctricos y la prioridad de cortar alimentación y evacuar.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor refleja la naturaleza y estructura básica prevista por la Ley 17/2006 para la Corporación RTVE:",
+          "options": [
+            "La Corporación carece de órganos de gobierno y su gestión queda plenamente externalizada al operador contratado por el estado.",
+            "RTVE es una sociedad mercantil privada sometida al derecho privado y gestionada como empresa independiente del sector público.",
+            "La Ley 17/2006 convierte a RTVE en una cooperativa de producción audiovisual dependiente de sus empleados.",
+            "La Corporación RTVE es una entidad de titularidad estatal con personalidad jurídica pública y una estructura orgánica formada por órganos directivos y consejos reguladores con funciones propias de servicio público."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: la Ley 17/2006 define RTVE como corporación de titularidad estatal con personalidad jurídica pública y una estructura orgánica con órganos específicos para la gestión del servicio público. Las otras opciones son incompatibles con la naturaleza pública y la regulación orgánica prevista por la Ley. La diferencia decisiva es la condición pública y la existencia de órganos normativos y de gestión propios.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Elija la afirmación que mejor distingue 'capture', 'import', 'link' e 'ingesta' en un flujo de postproducción:",
+          "options": [
+            "'Capture' es la adquisición en vivo desde dispositivo; 'import' copia ficheros al proyecto; 'link' crea referencia sin duplicar; 'ingesta' es la transferencia verificada al servidor/MAM con registro y metadatos.",
+            "'Capture' y 'ingesta' son sinónimos; 'import' siempre genera checksum; 'link' convierte el archivo a otro códec.",
+            "'Import' implica captura en tiempo real desde cámara; 'link' crea copia física; 'ingesta' solo aplica a cintas analógicas.",
+            "'Ingesta' es simplemente abrir un archivo en el NLE; 'capture' solo se usa para audio; 'link' y 'import' son idénticos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 diferencia correctamente las operaciones: capture = adquisición en tiempo real desde fuente; import = copiar ficheros al proyecto; link = referenciar sin duplicar; ingest = transferencia verificada al servidor/MAM con registro de metadatos. Los distractores contienen errores conceptuales (sinonimia incorrecta, definiciones invertidas). La diferencia decisiva es que 'ingesta' incluye verificación y registro en infraestructura centralizada.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre la interfaz SDI y el transporte de audio y datos auxiliares:",
+          "options": [
+            "SDI solo transporta vídeo; el audio siempre se transporta por cables XLR separados y no existe audio embebido.",
+            "SDI transporta señal de vídeo junto con audio embebido (múltiples canales) y datos auxiliares (ANC) como timecode y subtítulos en líneas ANC.",
+            "El audio embebido en SDI limita la resolución de vídeo y por ello rara vez se utiliza en entornos profesionales.",
+            "Los datos auxiliares (ANC) en SDI están reservados únicamente para señales de control de matrices y no pueden contener metadatos de usuario."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es correcta: SDI puede transportar vídeo, audio embebido en múltiples canales y datos auxiliares ANC (timecode, captions, etc.). Las otras afirmaciones son incorrectas: SDI sí incluye audio embebido (2), no limita resolución por audio (3), y ANC puede transportar diversos metadatos de usuario, no solo control de matrices (4). La diferencia decisiva es la capacidad integrada de transporte de vídeo, audio y ANC en SDI.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Cuál de las siguientes descripciones identifica con mayor precisión la causa y diagnóstico de un bucle de masa en una instalación audiovisual:",
+          "options": [
+            "Un fallo de códec en la compresión que genera artefactos en la imagen y no afecta al audio.",
+            "Un conector HDMI mal calibrado que provoca pérdida de sincronismo entre fuentes y aparece como pixelación.",
+            "Dos equipos conectados a distintas tomas de tierra con potenciales diferentes y unidos por la malla de un cable de señal, produciendo zumbido audible y mediciones de tensión entre carcasa.",
+            "La presencia de impedancia de entrada demasiado alta en un previos que reduce la ganancia y aumenta el ruido térmico."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 describe correctamente un bucle de masa: diferencia de potencial entre tierras y conexión a través de la malla del cable produce zumbido y tensión medida entre carcasas. Las otras opciones describen fallos no relacionados con bucles de masa (HDMI/desincronización, artefactos de códec, ruido por impedancias). La diferencia decisiva es la existencia de dos puntos de tierra con potencial distinto conectados por la malla conductor del cable.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a criterios habituales de diseño de proxies (resolución, bitrate y códec):",
+          "options": [
+            "Diseñar proxies con long‑GOP de alta compresión para maximizar ahorro de espacio aunque compliquen el reconformado.",
+            "Elegir un códec intraframe ligero que facilite scrubbing y edición frame‑accurate en estaciones con CPU limitada.",
+            "Seleccionar resolución y bitrate suficientes para identificar plano y rostro durante selección y rough, manteniendo fichero pequeño para ahorro de espacio.",
+            "Crear proxies que conserven metadata de timecode y origen para garantizar relink fiable en online."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 3 es la excepción: usar proxies con Long‑GOP de alta compresión puede ahorrar espacio pero complica la edición frame‑accurate y el reconformado; por tanto no es un criterio habitual si se busca equilibrio entre identificación y reconformado. Las otras opciones son criterios válidos: resolución/bitrate adecuados (1), códec intraframe que facilite scrubbing (2) y mantener timecode/metadata para relink (4). La diferencia decisiva es que Long‑GOP complica la fiabilidad operativa frente a objetivos de edición.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento correcto para integrar una capa con alpha premultiplicado cuando aparecen halos claros en los bordes:",
+          "options": [
+            "Ignorar la interpretación y compensar subiendo el contraste de la capa compuesta hasta que el halo desaparezca.",
+            "Aplicar una máscara de desenfoque al canal alfa para suavizar los bordes y mantener la interpretación 'straight' sin más cambios.",
+            "Multiplicar manualmente el RGB por el alfa en la composición e interpretar la capa como 'straight' para eliminar halos.",
+            "Configurar en la aplicación la interpretación de la capa como 'premultiplied' o convertirla a 'straight' (unpremultiply) antes de la composición."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es el procedimiento correcto: si el gráfico fue renderizado como premultiplied y el sistema lo interpreta como straight, hay que ajustar la interpretación a 'premultiplied' o convertir (unpremultiply) para que la composición use la relación RGB/alpha correcta. Las otras opciones son inadecuadas: desenfoque del alfa (2) no corrige el cálculo RGB/alpha; multiplicar RGB por alfa interpretando como straight (3) confunde operaciones; subir contraste (4) es un parche visual inválido. La diferencia decisiva es corregir la interpretación matemática entre RGB y alfa.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un servidor EVS configurado en grabación en bucle (loop), la recuperación fiable de una acción concreta depende principalmente de:",
+          "options": [
+            "El sistema de control de red que asigna direcciones IP dinámicas a las estaciones de edición.",
+            "El códec utilizado para la grabación, que impide recuperar clips si es intraframe.",
+            "La cantidad de clientes conectados al servidor en el momento de la reproducción.",
+            "La longitud del buffer de bucle y la política de sobrescritura que determinan si la acción todavía reside en el área de grabación del loop."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: en grabación en bucle la posibilidad de recuperar una acción concreta depende del tamaño temporal del loop (buffer) y de cuándo se sobrescriben los segmentos. Los otros factores son secundarios o irrelevantes para la recuperación puntual (códec no impide recuperación per se, clientes conectados o IPs no determinan disponibilidad del contenido grabado). La diferencia decisiva es la relación entre longitud del loop y política de sobrescritura.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la afirmación que mejor refleja un límite constitucional legítimo a la libertad de información en España:",
+          "options": [
+            "La libertad de información es absoluta y prevalece sobre cualquier derecho individual que se alegue en conflicto.",
+            "La libertad de información puede limitarse para proteger el derecho al honor, a la intimidad y a la propia imagen de las personas, conforme a garantías procesales.",
+            "La Constitución no admite límites a la libertad de información en materia de veracidad informativa; corresponde exclusivamente al editor decidir.",
+            "Los tribunales no pueden modular la libertad de información en casos de conflicto con otros derechos fundamentales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es la correcta: la Constitución reconoce la libertad de información pero autoriza límites legítimos para proteger el honor, intimidad y propia imagen, sujetos a garantías y control jurisdiccional. Las otras opciones contradicen el principio de límites razonables y control judicial. La diferencia decisiva es reconocer que la libertad de información no es absoluta y debe compatibilizarse con otros derechos fundamentales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Al visionar material entrelazado en un monitor progresivo sin desentrelazado aparece 'combing' en objetos en movimiento. ¿Cuál es la causa y en qué difiere respecto al material progresivo?:",
+          "options": [
+            "Causa: los campos contienen información de tiempos distintos y se muestran juntos; en progresivo cada cuadro contiene la información completa tomada en un instante único.",
+            "Causa: la compresión Long‑GOP produce artefactos; en progresivo los artefactos se corrigen automáticamente.",
+            "Causa: la señal tuvo pérdida de líneas; en progresivo las líneas se reconstituyen por interpolación.",
+            "Causa: el códec intraframe genera bordes; en progresivo la cámara extrae campos alternos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 es correcta: el 'combing' se debe a que los dos campos de un frame entrelazado provienen de instantes diferentes; al mostrarse como cuadro completo en progresivo sin desentrelazado se aprecian líneas en objetos en movimiento. En progresivo, cada cuadro recoge la escena en un solo instante, por eso no produce ese artefacto. Los otros distractores atribuyen la causa a compresión, pérdida de líneas o códec, que no explican el fenómeno de combing entrelazado/progresivo. La diferencia decisiva es la naturaleza temporal de campos frente a cuadros completos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo correcto al incorporar cintas LTO con LTFS a un archivo a largo plazo:",
+          "options": [
+            "Ingestar la cinta verificando sumas (checksum) de los ficheros, registrar el catálogo LTFS en la base de datos de archivo y verificar legibilidad antes de retirar la cinta a almacenamiento frío.",
+            "Grabar la cinta sin verificar ficheros, etiquetarla y moverla directamente a almacenamiento sin registro de catálogo para ahorrar tiempo.",
+            "Copiar los datos a disco y luego borrar la cinta sin conservar registro; las cintas LTFS no requieren verificación.",
+            "Usar solo el índice de la biblioteca robótica como catálogo, sin verificar cheksums ni realizar comprobación manual."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 es el procedimiento correcto: en ingesta de LTO/LTFS hay que verificar integridad (checksum), registrar el catálogo/index en la base de datos y comprobar legibilidad antes de almacenar la cinta. Las otras opciones omiten verificaciones o registros esenciales que comprometen la trazabilidad y la integridad. La diferencia decisiva es la verificación y registro del catálogo antes del almacenamiento a largo plazo.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_waveform_luma",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Si el monitor de forma de onda muestra picos que superan los límites legales de luminancia en varias tomas, la medida operativa más adecuada es:",
+          "options": [
+            "Ajustar únicamente la saturación de color porque afecta también a la luminancia máxima.",
+            "Ignorar los picos y confiar en que el display receptor ajustará automáticamente los niveles.",
+            "Aplicar corrección en la ganancia/exposición o usar un proceso de legalización antes de emisión para reducir los picos fuera de norma.",
+            "Aumentar el contraste para distribuir la energía lumínica y así mantener la apariencia brillante."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es la medida adecuada: si el waveform indica niveles de luminancia fuera de los límites legales, hay que corregir ganancia/exposición o aplicar un legalizador antes de emisión. Ignorar picos (2) no es aceptable; saturación (3) y contraste (4) no son medidas correctas para resolver picos de luminancia legales. La diferencia decisiva es actuar sobre niveles lumínicos mediante corrección/normalización.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Al sumar a mono dos señales captadas por dos micrófonos colocados frente a la misma fuente pero con inversión de fase en una de ellas, se espera:",
+          "options": [
+            "Un cambio solo de timbre sin pérdida de energía en el centro.",
+            "Un aumento de nivel y mayor sensación de presencia en el centro de la mezcla.",
+            "Cancelación parcial o total del contenido en la zona central (pérdida de presencia) por interferencia destructiva.",
+            "Que no se produzca ninguna diferencia al sumar a mono si ambos micrófonos tienen el mismo nivel."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es correcta: señales en fase inversa se cancelan parcialmente o totalmente al sumarse a mono, provocando pérdida de presencia en el centro. Las otras opciones son incorrectas: inversión de fase no aumenta nivel (2), ni sólo cambia timbre sin pérdida central (3), y claramente sí provoca diferencias aunque niveles sean iguales (4). La diferencia decisiva es la interferencia destructiva por inversión de fase.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la diferencia operativa entre XAVC Intra y XAVC Long‑GOP:",
+          "options": [
+            "XAVC Long‑GOP siempre ofrece mejor calidad visual que Intra a igual bitrate porque optimiza la predicción temporal.",
+            "XAVC Intra usa compresión interframe y requiere menos espacio que Long‑GOP; Long‑GOP codifica cada frame por separado.",
+            "No existe diferencia operativa entre Intra y Long‑GOP en términos de edición o almacenamiento; solo cambia el nombre comercial.",
+            "XAVC Intra codifica cada frame independientemente (I‑frames), facilitando edición frame‑accurate con mayor bitrate; Long‑GOP usa predicción entre frames (I/P/B) para reducir bitrate a costa de dependencia del GOP."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: XAVC Intra codifica frames independientemente (más bitrate, mejor para edición frame‑accurate), mientras que Long‑GOP usa codificación interframe (I/P/B) para mayor compresión pero con dependencia de GOP que complica cortes y reconformado. Las otras afirmaciones son incorrectas: Intra no usa interframe (2), sí existen diferencias operativas reales (3), y Long‑GOP no garantiza mejor calidad a igual bitrate por su dependencia temporal (4). La diferencia decisiva es la dependencia de predicción entre frames en Long‑GOP frente a independencia en Intra.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "058",
       "title": "Examen 058",
