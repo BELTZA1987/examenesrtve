@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26",
+  "updatedAt": "2026-09-27",
   "exams": [
+    {
+      "id": "060",
+      "title": "Examen 060",
+      "date": "2026-09-27",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Indique cuál de las siguientes formulaciones corresponde con un principio operativo de la Ley 31/1995 en materia de prevención aplicable a una actividad productiva audiovisual:",
+          "options": [
+            "Delegar totalmente la prevención en los representantes sindicales sin participación de la dirección técnica.",
+            "Limitarse a eliminar riesgos cuando exista un accidente y, a partir de entonces, documentar medidas correctoras.",
+            "Priorizar medidas colectivas de protección y planificar la prevención integrándola en la organización del trabajo.",
+            "Garantizar la seguridad y la salud por todos los medios disponibles sin necesidad de evaluar riesgos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta expone la planificación e integración de la prevención y la prioridad de medidas colectivas, principios recogidos en la Ley 31/1995. El distractor más próximo (4) usa una fórmula genérica e irreflexiva; la ley exige evaluación y medidas proporcionales, no una obligación absoluta sin análisis; las otras opciones son claramente incorrectas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Según la política 3‑2‑1, ¿qué estrategia de copias cumple correctamente la regla?:",
+          "options": [
+            "Tres copias en disco en la misma ubicación física, una con RAID para redundancia y otra con snapshot.",
+            "Tres discos en un mismo servidor RAID para tolerancia a fallos y una copia local adicional en la misma sala.",
+            "Tres copias en total; al menos dos tipos de soporte distintos; una copia almacenada en ubicación distinta (off‑site).",
+            "Una copia maestra on‑site y dos réplicas incrementales en la misma red local."
+          ],
+          "correctIndex": 2,
+          "explanation": "La 3‑2‑1 exige 3 copias, en 2 tipos de soporte distintos y 1 copia fuera de la ubicación principal. El distractor más próximo (2) confunde tolerancia RAID con copia independiente; RAID no sustituye a una copia independiente off‑site.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Señale la afirmación que mejor sintetiza derechos y obligaciones del trabajador en materia de prevención:",
+          "options": [
+            "Derecho a delegar sus tareas preventivas en un compañero y obligación del trabajador de asumir las sanciones en caso de accidente independientemente de la formación recibida.",
+            "Derecho a recibir información y formación en riesgos y obligación de utilizar correctamente los medios de protección y cooperar en su aplicación.",
+            "Obligación del trabajador de diseñar el plan preventivo y derecho del empresario a decidir la formación si lo considera necesario.",
+            "Derecho del trabajador a la exención total de actividades de riesgo y obligación del empleador de sustituirlo permanentemente."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta incluye información/formación, cooperación y uso adecuado de medios, que son derechos y obligaciones del trabajador. Los distractores confunden responsabilidades o atribuyen funciones que corresponden al empleador.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al tratar un proyecto con material XDCAM grabado en spanning, ¿qué aspecto es imprescindible verificar además de conservar carpetas e índices para asegurar acceso fiable?:",
+          "options": [
+            "Que los clips hayan sido renombrados manualmente para homogeneizar nomenclatura.",
+            "Que todos los archivos tengan nombres idénticos independientemente de su orden físico en los soportes.",
+            "La presencia exclusiva de archivos essence, pues el NLE reconstruirá el spanning sin metadatos adicionales.",
+            "La existencia de metadatos de spanning que vinculan los segmentos del clip entre distintos soportes y un descriptor legible por herramientas compatibles."
+          ],
+          "correctIndex": 3,
+          "explanation": "En XDCAM spanning es imprescindible verificar metadatos que enlacen segmentos en distintos soportes y que sean legibles por la herramienta; confiar solo en nombres o en la reconstrucción automática es inseguro, y renombrar manualmente puede romper referencias.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_project_media",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En un NLE, identifique cuál de los siguientes elementos corresponde a metadatos de proyecto y no al archivo de esencia:",
+          "options": [
+            "Canales de audio embebidos en el contenedor de la esencia.",
+            "Archivo de video .MOV que contiene la imagen y el audio.",
+            "Estructura de bins y la secuencia de edición (timeline).",
+            "Checksum embebido en el contenedor del fichero de media."
+          ],
+          "correctIndex": 2,
+          "explanation": "La estructura de bins y la secuencia son metadatos del proyecto (no forman parte de la esencia). Los otros elementos se refieren a la propia esencia o a metadatos embebidos en el contenedor.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la opción que constituye una excepción entre métodos válidos para verificar un crosspoint en una matriz de vídeo:",
+          "options": [
+            "Generar un patrón de barras en la entrada y comprobar su presencia en la salida asignada.",
+            "Consultar el estado del crosspoint en la interfaz de control de la matriz y confirmar visualmente la señal en monitor de salida.",
+            "Comprobar continuidad eléctrica con un polímetro midiendo resistencia entre el conector de entrada y el de salida.",
+            "Reasignar temporalmente la entrada a otra salida conocida y observar la respuesta en ambos canales antes de restaurar el mapeo."
+          ],
+          "correctIndex": 2,
+          "explanation": "Medir continuidad eléctrica con polímetro no verifica un crosspoint digital activo; las matrices conmutan electrónicamente y la resistencia no confirma la ruta de señal. Las otras técnicas generan o observan la señal y/o consultan el control de la matriz, que sí son válidas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare CBR y VBR: ¿cuál afirmación describe mejor su ventaja y su limitación para emisión en tiempo real y para almacenamiento?",
+          "options": [
+            "CBR y VBR son equivalentes en todos los escenarios cuando se ajusta el mismo bitrate medio.",
+            "CBR comprime más eficientemente que VBR en escena compleja; VBR siempre garantiza menor variabilidad instantánea de bitrate.",
+            "VBR es preferible en streaming en directo por su constancia; CBR permite máxima eficiencia en almacenamiento.",
+            "CBR ofrece flujo constante y predictible para transmisión en tiempo real pero es menos eficiente en uso de datos; VBR mejora eficiencia de almacenamiento pero puede generar picos impredecibles de bitrate."
+          ],
+          "correctIndex": 3,
+          "explanation": "CBR mantiene bitrate constante, útil para enlaces con ancho fijado pero menos eficiente en espacio; VBR optimiza almacenamiento al asignar más bits a escenas complejas, pero su variabilidad puede provocar picos problemáticos en transmisión en tiempo real. Los distractores contienen inversiones o generalizaciones incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según el III Convenio Colectivo, ¿qué aspecto corresponde regular en relación con la jornada y los turnos?:",
+          "options": [
+            "Criterios para la distribución de la jornada, establecimiento de turnos rotativos y reconocimiento de descansos compensatorios.",
+            "La responsabilidad penal de la empresa por accidentes mortales.",
+            "La nómina salarial de cada trabajador por adelantado sin negociación colectiva.",
+            "La creación de un sindicato exclusivo para el personal técnico."
+          ],
+          "correctIndex": 0,
+          "explanation": "El convenio regula la distribución de la jornada, la organización de turnos y descansos compensatorios. Las otras opciones no se ajustan al ámbito de regulación del convenio colectivo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En el intercambio de proyectos entre estaciones, ¿qué diferencia operativa clave distingue un AAF de un EDL?:",
+          "options": [
+            "EDL soporta transferencia de efectos complejos y parámetros de mezcla; AAF solo transfiere timecode.",
+            "EDL incorpora la esencia de media completa; AAF solo incluye una lista de cortes sin referencias de media.",
+            "AAF puede transferir múltiples pistas, efectos y metadatos; EDL se limita habitualmente a cortes y referencias básicas de pista.",
+            "AAF es un formato propietario de un solo fabricante; EDL es estándar universal para todo tipo de efectos."
+          ],
+          "correctIndex": 2,
+          "explanation": "AAF transporta referencias a múltiples pistas, efectos y metadatos, ampliando su alcance respecto al EDL, que habitualmente describe sólo cortes y puntos de entrada/salida. Los distractores invierten o exageran capacidades.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación que mejor refleja la diferencia estructural entre MXF OP1a y OP‑Atom y su idoneidad para entrega o edición:",
+          "options": [
+            "OP1a divide la esencia en múltiples archivos por pista lo que simplifica entrega; OP‑Atom empaqueta todo en un solo archivo para archivo a largo plazo.",
+            "OP1a encapsula múltiples pistas en un único archivo por clip, facilitando entregas empaquetadas; OP‑Atom atomiza la esencia en archivos por pista/clip, favoreciendo edición y manipulación por pista.",
+            "OP1a y OP‑Atom son idénticos estructuralmente; solo difieren en la extensión de archivo.",
+            "OP‑Atom está diseñado exclusivamente para streaming y no es utilizable en procesos de edición profesional."
+          ],
+          "correctIndex": 1,
+          "explanation": "OP1a suele agrupar todas las pistas en un solo archivo por paquete, adecuado para entrega final; OP‑Atom crea archivos atomizados por pista/clip, lo que facilita acceso y edición por pista. Los distractores son incorrectos o exageran restricciones.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "En términos operativos, ¿qué diferencia esencial explica por qué se usa RGB en corrección creativa y YCbCr en cadenas de compresión/transmisión?:",
+          "options": [
+            "RGB almacena componentes de color directos por píxel (R,G,B) preservando fidelidad cromática completa; YCbCr separa luminancia de crominancia permitiendo submuestreo de color para reducir datos en transmisión.",
+            "YCbCr ofrece mayor resolución espacial que RGB y por eso se usa en etalonaje; RGB es exclusivo de vídeo entrelazado.",
+            "RGB y YCbCr son equivalentes: la elección es histórica y no tiene impacto en compresión ni en flujo.",
+            "YCbCr describe colores mediante tres primarias aditivas distintas de R, G y B y no contiene componente de luminancia."
+          ],
+          "correctIndex": 0,
+          "explanation": "RGB representa color por sus tres canales primarios por píxel; YCbCr separa luminancia y crominancia permitiendo submuestreo para compresión y transmisión eficiente. Los distractores contienen afirmaciones falsas sobre resolución o equivalencia.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "En relación con la entrada o permanencia del audio entre dos planos, señale la afirmación más precisa:",
+          "options": [
+            "Un J‑cut implica que el audio del plano saliente continúa tras el salto de imagen de forma simultánea a la entrada del nuevo audio.",
+            "Un J‑cut se caracteriza por la entrada anticipada del audio del plano entrante respecto al corte de imagen.",
+            "Tanto J‑cut como L‑cut son términos que describen efectos visuales aplicados al fundido de imagen.",
+            "Ambos cortes obligan a que la banda sonora esté siempre alineada exactamente con el punto de corte de imagen."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación correcta describe el J‑cut (audio del siguiente plano comienza antes del cambio de imagen). El distractor más cercano confunde elementos propios del L‑cut; las otras opciones son incorrectas conceptualmente.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Interpretación operativa: ¿qué indica un valor de correlación de fase cercano a −1 en secciones con amplitud vocal central?",
+          "options": [
+            "Buena coherencia estéreo y compatibilidad perfecta con mezcla a mono.",
+            "Presencia de inversión de fase entre canales con riesgo elevado de cancelación al convertir a mono.",
+            "Señal limpia sin riesgo de cancelación y con mayor sensación de anchura estéreo.",
+            "Indica simplemente que el balance de loudness entre canales es desigual, sin relación con fase."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un valor cercano a −1 indica señales en anti‑fase; en secciones vocales esto conlleva riesgo de cancelación al sumar a mono. Los otros distractores interpretan erróneamente correlación o la reducen a loudness.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Indique la medida preventiva más completa frente a trastornos musculoesqueléticos en tareas continuadas con teclado, ratón y tableta gráfica:",
+          "options": [
+            "Sustituir teclado y ratón por atajos de teclado sin cambios en ritmo de trabajo ni pausas.",
+            "Mantener la espalda rígida y los antebrazos apoyados sin pausas para evitar movimientos bruscos.",
+            "Uso exclusivo de reposamuñecas acolchado durante toda la jornada y evitar pausas prolongadas.",
+            "Ajuste ergonómico del puesto (altura, apoyo lumbar, posición de brazos), alternancia de tareas y pausas microprogramadas, uso de dispositivos adaptados y formación ergonómica."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta combina ajuste ergonómico, pausas y alternancia de tareas, elección de dispositivos adecuados y formación; las otras opciones omiten elementos esenciales o promueven prácticas inadecuadas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las afirmaciones y seleccione la que mejor describe la finalidad de la Ley 5/2017 y su mecanismo de elección de los órganos de RTVE:",
+          "options": [
+            "Busca reforzar la independencia institucional de RTVE introduciendo un procedimiento de elección parlamentaria para sus órganos de dirección.",
+            "Tiene por objetivo central privatizar las funciones de RTVE y transferir la gestión a entidades privadas.",
+            "Elimina cualquier control parlamentario sobre RTVE y delega la elección de sus órganos exclusivamente al Gobierno.",
+            "Limita la función informativa de RTVE estableciendo censura previa por motivos de seguridad nacional."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley 5/2017 persigue recuperar la independencia y pluralismo mediante un mecanismo de nombramiento parlamentario de órganos. Los distractores contradicen o exageran objetivos y mecanismos reales de la norma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción (incorrecta) respecto a la relación operativa entre tensión, corriente, resistencia y potencia en equipos audiovisuales:",
+          "options": [
+            "En corriente continua, la potencia disipada en una carga se calcula como P = V × I.",
+            "A mayor resistencia en un circuito alimentado a tensión constante, menor será la corriente circular.",
+            "Si se duplican todos los valores de resistencia en un circuito simple manteniendo la misma tensión, la corriente total se reduce a la mitad.",
+            "Duplicar la impedancia de salida de una etapa al mismo tiempo que se mantiene la tensión de salida constante duplica necesariamente la potencia entregada a la carga."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 4 es incorrecta: duplicar la impedancia de salida con la misma tensión no duplica la potencia entregada; normalmente reduce la corriente y la potencia. Las otras afirmaciones son aplicaciones correctas de la Ley de Ohm y de la relación potencia = V×I.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_target",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Para adaptar el estilo de edición de un magazine audiovisual al público juvenil, seleccione la opción que combina correctamente ajustes de ritmo, densidad visual/informativa y uso de recursos sonoros y gráficos.",
+          "options": [
+            "Aumentar el ritmo con planos más cortos y cortes más frecuentes; incrementar la densidad visual mediante gráficos dinámicos y textos breves y legibles; emplear música rítmica y efectos sonoros marcados sin sacrificar claridad informativa.",
+            "Aumentar el ritmo hasta cortes muy rápidos y superponer gran cantidad de elementos visuales y textuales; priorizar música intensa y efectos frecuentes para maximizar impacto inmediato.",
+            "Reducir el ritmo con planos más largos y cortes espaciados; disminuir la densidad informativa y utilizar recursos sonoros y gráficos comedidos para favorecer reflexión y análisis.",
+            "Mantener un ritmo medio; aumentar la densidad de información con textos extensos y datos en pantalla; usar una ambientación sonora neutra para no distraer del contenido."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción A es la adecuada porque combina un tempo de montaje más ágil (planos más cortos, cortes más frecuentes) con una densidad visual aumentada pero controlada (gráficos dinámicos y textos breves y legibles) y un diseño sonoro enérgico que potencia la atención sin sobrecargar la comprensión. El distractor más próximo, B, falla al llevar esos ajustes al extremo: cortes excesivamente rápidos y superposición masiva de elementos elevan la carga cognitiva y reducen legibilidad y retención. C describe una estrategia válida para targets adultos interesados en reflexión; D incrementa información pero con texto extenso y sonido neutro, lo que no responde a las expectativas de dinamismo y reconocimiento rápido del público juvenil.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál es la función operativa más habitual del auxiliary timecode (aux TC) en flujos de sincronización y reconformado?:",
+          "options": [
+            "Transportar un timecode secundario o de reserva asociado a la cámara/dispositivo para conservar referencia cuando el timecode principal no es fiable o es sobrescrito.",
+            "Servir como única fuente de timecode cuando se trabaja exclusivamente en non‑drop frame en 29,97 fps.",
+            "Reemplazar permanentemente el record timecode en todos los contenedores para optimizar tamaño de fichero.",
+            "Garantizar que el timecode coincida con el número de toma y el nombre del clip sin necesidad de metadatos adicionales."
+          ],
+          "correctIndex": 0,
+          "explanation": "El aux TC suele usarse para llevar un timecode secundario o de reserva de la cámara/dispositivo útil cuando el TC principal no es fiable o se sobrescribe; las otras opciones exageran funciones o son incorrectas técnicamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Durante la ingesta verificada de material de cámara a servidor se realizan varias operaciones: copia de los ficheros, generación de checksums, validación de la estructura del contenedor (timecode, pistas de audio) e incorporación de metadatos en el informe de ingesta. ¿Cuál de las siguientes prácticas, si se ejecuta, compromete de forma más directa la detección de errores de transferencia y la trazabilidad para reconformado y archivo?",
+          "options": [
+            "Generar y registrar checksums tanto en el soporte origen como en el destino y comparar ambos tras la copia.",
+            "Modificar el timecode embebido en el contenedor para ajustarlo al estándar de proyecto durante la ingesta, sin conservar una copia del timecode original.",
+            "Renombrar los ficheros según la convención del proyecto tras la copia sin conservar el nombre original en metadatos ni en el informe de ingesta.",
+            "Generar un checksum únicamente en el destino después de completar la copia, sin registrar ni conservar el checksum calculado en el origen."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica correcta exige calcular y comparar checksums de origen y destino para detectar errores de copia; generar el checksum sólo en destino impide verificar si el contenido copiado coincide exactamente con el original, comprometiendo la integridad y la posibilidad de auditar la transferencia. Los otros distractores también tienen impacto en trazabilidad (renombrar sin conservar el nombre original dificulta relink/reconformado; sobrescribir o modificar timecode altera datos originales), pero son problemas distintos: la falta de checksum de origen impide detectar corrupciones o pérdidas de datos durante la transferencia, que es la falla más directa respecto a integridad de la esencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Dispone de un master HDR (rango de luminancia y contraste notablemente superiores al SDR) y debe generar una versión SDR destinada a televisores SDR convencionales. Desde el punto de vista operativo y para maximizar compatibilidad de visualización sin perder la intención creativa del autor, ¿qué procedimiento es el más adecuado?",
+          "options": [
+            "Mantener la EOTF y parámetros HDR del master y confiar en que los televisores SDR efectuarán internamente el tone‑mapping o clipping, preservando así metadatos y el máximo detalle de luminancia en el archivo entregado.",
+            "Realizar una conversión dirigida: aplicar tone‑mapping controlado y conversión de gamut hacia la referencia SDR (por ejemplo Rec.709), usando curvas con soft‑knee para redistribuir los highlights y verificando el resultado en monitores de referencia calibrados; ajustar legalización de niveles finales antes de entrega.",
+            "Aplicar una reducción global de ganancia/brillo (ajuste uniforme de luminancia o un cambio de gamma) sin convertir gamut ni usar tone‑mapping, considerándolo una solución rápida para situar los niveles dentro del rango SDR.",
+            "Reconstruir la versión en HLG y entregarla como señal para emisión SDR, bajo la premisa de que HLG garantiza compatibilidad descendente con displays SDR y por tanto evita procesos de re‑mapeado complejos. "
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta es la primera: generar una versión SDR mediante tone‑mapping y conversión de gamut dirigida a la referencia SDR y verificar en monitores calibrados. Ese procedimiento adapta de forma controlada el mayor rango dinámico y los highlights del master HDR al menor rango de luminancia y distinto transfer function de los displays SDR, preservando intención visual y evitando clipping brutal. El distractor más próximo es la opción 3 (reducción global de ganancia): esa técnica puede meter todos los niveles dentro del rango nominal pero altera relación de contraste y detalle en sombras/medios y tiende a perder o aplastar los highlights sin una redistribución tonal adecuada. Las opciones 2 y 4 fallan por motivos distintos: la 2 asume que displays SDR interpretan EOTF HDR, lo cual no es cierto en general (provocaría visualizaciones incorrectas o clipping); la 4 confunde compatibilidad práctica: HLG facilita cierta compatibilidad en displays HDR/SDR pero no sustituye a una conversión específica a SDR y no garantiza la misma reproducción en televisores SDR convencionales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "059",
       "title": "Examen 059",
