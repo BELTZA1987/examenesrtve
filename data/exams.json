@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-27",
+  "updatedAt": "2026-09-28",
   "exams": [
+    {
+      "id": "061",
+      "title": "Examen 061",
+      "date": "2026-09-28",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Un responsable de selección excluye a una candidata por estar embarazada. ¿Qué principio constitucional fundamenta la reacción jurídica y administrativa frente a esa exclusión?",
+          "options": [
+            "La libertad de empresa que permite a la organización establecer criterios de selección sin interferencias para optimizar su actividad.",
+            "El principio de neutralidad ideológica que limita la contratación por motivos de opinión personal del empleador.",
+            "El principio de igualdad material que prohíbe cualquier trato desfavorable por razón de sexo y exige medidas para garantizar igualdad de oportunidades.",
+            "El derecho a la protección de la intimidad que autoriza a excluir candidatos por circunstancias personales no divulgadas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta invoca el principio de igualdad y prohibición de discriminación por sexo, que proscribe el trato desfavorable por embarazo y obliga a garantizar igualdad de trato; las otras opciones no justifican la exclusión por embarazo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Ante cortes intermitentes al atender múltiples streaming simultáneos desde un servidor de vídeo, ¿qué magnitud es la causa operativa más probable?",
+          "options": [
+            "Capacidad de CPU insuficiente para decodificar múltiples flujos en tiempo real.",
+            "Ancho de banda de red insuficiente entre servidor y clientes.",
+            "Latencia de almacenamiento causada por IOPS bajos del arreglo de discos.",
+            "Memoria RAM insuficiente para mantener caché de frames."
+          ],
+          "correctIndex": 1,
+          "explanation": "Aunque CPU, IOPS y RAM influyen, el síntoma de cortes simultáneos en múltiples streams suele estar dominado por la capacidad de enlace de red; si el throughput agregado excede el ancho de banda disponible aparecen pérdidas/paquetes y cortes.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Relaciona cada ventana de loudness con su uso operativo.",
+          "options": [
+            "Integrated: medición acumulada de todo el programa; Short‑term: ventana de 3 s para evaluar secciones; Momentary: ventana de 400 ms para picos rápidos.",
+            "Integrated: ventana de 3 s; Short‑term: 400 ms; Momentary: medición de todo el programa.",
+            "Integrated: 400 ms; Short‑term: medición acumulada del programa; Momentary: ventana de 3 s.",
+            "Integrated: medición de los picos instantáneos; Short‑term: medición acumulada; Momentary: ventana de 10 s."
+          ],
+          "correctIndex": 0,
+          "explanation": "La definición normalizada asigna integrated a la medición de todo el programa, short‑term a 3 s y momentary a ~400 ms; las otras opciones invierten duraciones o usos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la pareja que describe correctamente función principal y síntoma típico de cuello de botella:",
+          "options": [
+            "RAM: ejecuta efectos GPU‑accelerated directamente; síntoma de cuello: sobrecarga de GPU con baja latencia.",
+            "GPU: almacena los activos del proyecto y provoca pérdida de metadatos si falla.",
+            "CPU: responsable de decodificación y lógica de la aplicación; síntoma de cuello: exportaciones lentas y congelaciones generales.",
+            "Red: acelera la rasterización de efectos y, si es deficiente, provoca artefactos de color."
+          ],
+          "correctIndex": 2,
+          "explanation": "La CPU maneja decodificación/gestión y su saturación provoca bloqueos y exportaciones lentas. Las otras opciones atribuyen funciones incorrectas a GPU, RAM o red.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Indique la afirmación que describe correctamente el efecto del trim 'ripple', 'roll' y 'slip/slide' sobre duración y sincronía:",
+          "options": [
+            "Ripple: ajusta solo los puntos internos del clip sin mover otros; Roll: desplaza todos los clips posteriores; Slip/Slide: eliminan gaps automáticamente y cambian duración del proyecto.",
+            "Ripple: modifica la duración de la secuencia desplazando clips posteriores; Roll: ajusta punto de corte entre dos clips sin alterar duración total; Slip/Slide: cambian el punto de entrada/salida dentro del clip sin mover su posición en la línea de tiempo (slip) o mueven el clip manteniendo sus puntos internos (slide).",
+            "Ripple: actúa únicamente en pistas de audio; Roll: actúa únicamente en vídeo; Slip/Slide: solo en clips con keyframes.",
+            "Ripple: mantiene duración total mediante compensación automática; Roll: altera la duración total; Slip/Slide: cambian puntos de corte de clips adyacentes."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta describe las definiciones operativas: ripple desplaza la secuencia, roll modifica el punto entre dos clips sin cambiar duración global, slip/slide afectan contenido interno vs posición externa.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_elipsis",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Para comprimir tiempo narrativo mediante una elipsis manteniendo comprensión, ¿qué recurso editorial es compatible con ese objetivo?",
+          "options": [
+            "Sustituir por una secuencia alternativa de duración equivalente que presente acciones no relacionadas.",
+            "Sustituir la secuencia por un montaje acelerado (time‑lapse) sin puente sonoro ni plano índice.",
+            "Insertar un corte seco abrupto sin información contextual para aumentar tensión narrativo.",
+            "Eliminar tramo temporal conservando hitos causales y añadir un indicio de continuidad (un elemento visual o sonoro que conecte antes y después)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La elipsis exige conservar los hitos que permiten inferir la acción y, si es necesario, añadir un índice (visual/sonoro) que guíe la comprensión; las otras opciones rompen la trazabilidad temporal o introducen información no vinculante.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "basic_red_ip",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Equipo 192.168.10.45/24 con puerta 192.168.10.1 no alcanza el servicio 192.168.11.12/24. Sin cambiar la IP del equipo, la comprobación más directa para diagnosticar conectividad entre subredes es:",
+          "options": [
+            "Desactivar temporalmente el firewall local del equipo y repetir la prueba de conexión.",
+            "Cambiar la máscara del equipo a /23 para permitir comunicación directa entre 192.168.10.x y 192.168.11.x.",
+            "Asignar al equipo una IP de la subred de destino para comprobar si responde el servicio.",
+            "Verificar en la puerta de enlace (192.168.10.1) la existencia de una ruta a 192.168.11.0/24 o el reenvío hacia el router correspondiente."
+          ],
+          "correctIndex": 3,
+          "explanation": "Sin modificar la IP del host, lo más directo es comprobar si la puerta de enlace conoce la ruta hacia la otra subred; cambiar máscara o IP altera configuración y desactivar firewall no diagnostica rutas internas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Un servicio audiovisual bajo demanda no clasifica contenidos por edad ni ofrece controles parentales. Según la Ley 13/2022, ¿qué obligación incumple principalmente?",
+          "options": [
+            "La obligación de aplicar sistemas de clasificación por edades y herramientas efectivas que limiten el acceso de menores a contenidos no aptos.",
+            "La prohibición absoluta de emitir cualquier contenido para adultos en plataformas online.",
+            "La obligación de eliminar contenidos anteriores con calificaciones erróneas en el plazo de 24 horas.",
+            "La obligación de implantar un sistema de verificación de identidad de todos los usuarios registrados."
+          ],
+          "correctIndex": 0,
+          "explanation": "La ley impone medidas de protección de menores como clasificación por edades y mecanismos de control de acceso; no exige prohibición absoluta ni verificación de identidad universal, ni una eliminación automática en 24 h.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al uso y características de ProRes y DNxHR como códecs intermedios:",
+          "options": [
+            "Ambos están diseñados para postproducción ofreciendo modos de mayor calidad y preservación de crominancia y profundidad por encima de los códecs de entrega.",
+            "Ambos son códecs sin pérdida absoluta por diseño y garantizan recuperabilidad bit a bit del material original sin compresión.",
+            "Pueden operar intraframes con perfiles de alta calidad que facilitan edición y relink sin requerir decodificación GOP compleja.",
+            "Están ampliamente soportados en flujos de trabajo profesionales y permiten exportaciones para color grading y masterización."
+          ],
+          "correctIndex": 1,
+          "explanation": "La excepción es afirmar que son códecs sin pérdida absoluta: ProRes y DNxHR son compresiones con pérdida visualmente controlada en algunos perfiles; las otras afirmaciones reflejan su uso como intermedios y compatibilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "En un entorno colaborativo con bins compartidos, ¿cuál de las siguientes afirmaciones constituye una excepción (incorrecta) respecto a prácticas para prevenir sobrescrituras y conflictos?",
+          "options": [
+            "Configurar bloqueo (check‑out) por elemento para que solo un usuario edite metadatos y entradas del bin a la vez.",
+            "Usar permisos de solo lectura para la mayoría del equipo y restringir la edición de bins a perfiles autorizados.",
+            "Mantener versiones y registros de actividad del bin para poder revertir cambios y resolver conflictos.",
+            "Confiar exclusivamente en copias locales no sincronizadas y permitir ediciones concurrentes sin mecanismo de fusión."
+          ],
+          "correctIndex": 3,
+          "explanation": "Confiar en copias locales sin sincronización y permitir ediciones concurrentes sin control causa sobrescrituras; las otras opciones son medidas válidas para prevenir conflictos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Distinga correctamente entre legalizador de señal y limitador/gamut en control de señal:",
+          "options": [
+            "Un legalizador garantiza que luminancias y amplitudes de componentes no excedan límites legales (p. ej. clip de luma/true‑peak) actuando sobre valores; el limitador/gamut ajusta las coordenadas cromáticas (saturación/hue) para encajar en el espacio objetivo, influyendo en la percepción del color.",
+            "El legalizador modifica exclusivamente el croma sin tocar luminancia; el limitador solo recorta picos de brillo preservando crominancia.",
+            "Ambos realizan exactamente la misma operación: recorte de señales por encima de umbrales legales sin distinción entre luminancia y crominancia.",
+            "Un limitador de gamut trabaja solo en espacio RGB mientras que el legalizador solo opera en YCbCr, por lo que son mutuamente excluyentes."
+          ],
+          "correctIndex": 0,
+          "explanation": "La diferencia decisiva es que el legalizador asegura cumplimiento de niveles legales (luma/peaks) y el limitador de gamut actúa en el espacio cromático ajustando saturación/hue; las otras opciones simplifican o confunden los dominios de actuación.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Al mezclar material 25p con 29,97p en un mismo flujo para emisión a 29,97, ¿qué método minimiza artefactos manteniendo naturalidad de movimiento?",
+          "options": [
+            "Convertir 25p a 23,976 y luego aplicar pulldown a 29,97.",
+            "Reproducir 25p a velocidad real sin conversión, aceptando salto de audio y pérdida de sincronía.",
+            "Usar simplemente frame‑blending entre material 25p y 29,97p para todos los clips sin ajuste adicional.",
+            "Aplicar conversión de cadencia con motion‑compensated frame rate conversion (MCFRC) para interpolar frames y evitar judder evidente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La conversión con compensación de movimiento reduce judder y mantiene naturalidad; frame‑blending y pulldown producen artefactos y cambios de sincronía si no se aplican adecuadamente.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Tras descargar y verificar íntegramente el contenido de un soporte SSD procedente de cámara, la práctica recomendada antes de volver a usarlo en rodaje es:",
+          "options": [
+            "Formatear el soporte en la cámara o en la herramienta nativa del fabricante únicamente después de verificar las copias y checksums.",
+            "Borrar manualmente los ficheros desde un explorador y volver a usar el soporte inmediatamente.",
+            "Reutilizar el soporte sin formatear para ahorrar tiempo si el espacio disponible es suficiente.",
+            "Aplicar un formateo de bajo nivel fuera de la cámara sin comprobar integridad de las copias hechas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica segura es formatear en la cámara o herramienta recomendada tras comprobar copias y checksums; borrar manualmente o reutilizar sin formateo puede ocasionar corrupción o metadatos residuales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Seleccione la configuración que cumple las recomendaciones operativas para una pantalla de visualización en un puesto de edición (distancia, altura, orientación, iluminación y reflejos):",
+          "options": [
+            "Pantalla a 120 cm; borde superior muy por debajo del nivel ocular; orientada hacia fuentes intensas de luz; sin control de reflejos.",
+            "Pantalla a 30 cm; borde superior por encima del nivel ocular; paralela a ventana sin cortinas; iluminación directa cenital intensa.",
+            "Pantalla a 50–70 cm de los ojos; borde superior ligeramente por debajo del nivel ocular; perpendicular a la luz de la ventana o con control de cortinas; inclinación leve para evitar reflejos; iluminación difusa ambiental baja.",
+            "Pantalla situada en ángulo de 45° respecto al eje visual para maximizar brillo y con iluminación puntual detrás del monitor."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 describe distancia y altura recomendadas, orientación que minimiza reflejos y control de iluminación; las otras opciones presentan configuraciones que favorecen fatiga visual o reflejos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto al modelo general de financiación de la corporación pública, indique la afirmación que refleja con mayor precisión sus fuentes y principios:",
+          "options": [
+            "Se basa en financiación pública complementada por ingresos derivados de la explotación de servicios y actividades comerciales, con límites y controles destinados a garantizar su función de servicio público.",
+            "Depende exclusivamente de la publicidad comercial sin ninguna aportación pública ni control sobre contenido.",
+            "Se financia únicamente mediante una tasa obligatoria aplicada directamente a la ciudadanía por uso de servicios audiovisuales.",
+            "El modelo obliga a transferir a terceros el control editorial a cambio de financiación privada."
+          ],
+          "correctIndex": 0,
+          "explanation": "La formulación correcta recoge la financiación pública complementada por actividades comerciales con controles; las demás opciones describen modelos exclusivos o contrarios al principio de servicio público.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un plan de preservación, ¿qué estrategia es compatible con prevenir obsolescencia y mantener accesibilidad a largo plazo?",
+          "options": [
+            "Depender únicamente del proveedor del formato para actualizaciones y no registrar metadatos sobre migraciones.",
+            "Conservar exclusivamente el soporte original sin verificar ni migrar para preservar autenticidad absoluta.",
+            "Verificaciones periódicas de integridad (checksums), mantener formatos estándar y programar migraciones proactivas antes de que el soporte o formato quede obsoleto.",
+            "Mantener una única copia en un único tipo de soporte para simplificar el inventario."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta combina verificaciones periódicas, metadatos y migraciones proactivas; las otras opciones ignoran la necesidad de verificación y redundancia frente a obsolescencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Si un archivo comprimido se descontinúa y se vuelve a empaquetar cambiando metadatos sin alterar la esencia audiovisual, ¿qué límite operativo tiene un checksum para validar que el contenido es 'equivalente' antes y después?",
+          "options": [
+            "Un checksum identifica la ubicación exacta del byte alterado dentro del flujo multimedia y lo corrige automáticamente.",
+            "Un checksum garantiza que dos archivos con distinta codificación perceptible son equivalentes si la duración es igual.",
+            "Un checksum detecta cualquier cambio bit a bit, por lo que indicará diferencia si cambia el contenedor o metadatos aunque la esencia perceptible sea la misma.",
+            "Un checksum valida la coherencia semántica del archivo y la compatibilidad de códec entre versiones."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un checksum comprueba igualdad bit a bit; detectará diferencias en contenedor o metadatos aunque la esencia audiovisual sea perceptiblemente idéntica. No determina semántica, ni corrige ni identifica compatibilidad de códecs.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un mezclador hardware, un grafismo con key está visible en la previsualización (previo) pero no alcanza el programa en emisión. Diagnóstico más probable:",
+          "options": [
+            "El generador de caracteres está defectuoso porque funciona en previo pero no en programa.",
+            "El key está asignado o enrutado al bus previo y no ha sido activado/ruteado al bus programa; la transición hacia programa no se ha ejecutado.",
+            "El señal source está enmuteada físicamente en la salida del mezclador, impidiendo el key en previo.",
+            "La tensión de alimentación del key es insuficiente y solo alimenta la previsualización."
+          ],
+          "correctIndex": 1,
+          "explanation": "Si el key aparece en preview pero no en programa suele ser por enrutamiento o asignación al bus previo sin llevarlo al programa; los demás motivos son improbables o técnicos inventados.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_en_mision",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Ante un desplazamiento profesional (misión) fuera del centro habitual, la medida preventiva prioritaria compatible con la responsabilidad del empleador es:",
+          "options": [
+            "Dejar en exclusiva responsabilidad del trabajador la organización de transporte y alojamiento sin información específica de riesgos.",
+            "Realizar evaluación de riesgos de la actividad y del entorno de trabajo en misión, informar y formar al trabajador y proporcionar medidas y recursos de protección específicos para el desplazamiento.",
+            "Limitar la prevención al suministro de un kit básico de primer auxilio sin realizar evaluación previa.",
+            "Eximir al empleador de cualquier obligación si la misión dura menos de 24 horas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La responsabilidad prioritaria del empleador incluye evaluar riesgos específicos de la misión, informar y dotar de medidas preventivas; las otras opciones delegan obligaciones o las minimizan indebidamente.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a factores que afectan al ritmo interno y externo del montaje:",
+          "options": [
+            "La duración de los planos, el movimiento interno en plano y la estructura dramática influyen en el ritmo interno y externo.",
+            "El uso de música y acentos sonoros puede modular la percepción del ritmo y favorecer continuidad o contraste.",
+            "El ritmo externo se relaciona con la organización de planos en la estructura narrativa y la cadencia general del montaje.",
+            "El ritmo interno de un plano depende exclusivamente de la duración del plano, sin que influya el movimiento interno ni la densidad de información."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 2 es la excepción: el ritmo interno no depende exclusivamente de la duración de plano; el movimiento interno y la información contenida también son determinantes. Las otras afirmaciones son correct.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "060",
       "title": "Examen 060",
