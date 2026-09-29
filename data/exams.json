@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28",
+  "updatedAt": "2026-09-29",
   "exams": [
+    {
+      "id": "062",
+      "title": "Examen 062",
+      "date": "2026-09-29",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la afirmación que mejor sintetiza la misión y obligaciones de servicio público de la Corporación RTVE:",
+          "options": [
+            "Actuar principalmente como canal de distribución de contenidos de terceros para cubrir la mayor cuota de mercado posible, delegando en productoras externas la responsabilidad editorial.",
+            "Priorizar la obtención de ingresos comerciales mediante publicidad y contenidos de audiencia, compatibilizando objetivos económicos con las obligaciones editoriales.",
+            "Garantizar la producción y difusión de contenidos plurales, veraces y accesibles que aseguren el derecho a la información y la diversidad cultural, actuando con independencia e imparcialidad.",
+            "Concentrar la programación en productos de entretenimiento con amplio alcance territorial, dejando la cobertura informativa a proveedores privados especializados."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación correcta resume la misión de servicio público: pluralismo, veracidad, accesibilidad, independencia e interés público. El distractor más próximo confunde servicio público con prioridad comercial, que no define la obligación constitucional y legal de RTVE.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_metadatos",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Para facilitar catalogación, búsqueda e intercambio, ¿qué conjunto de campos técnicos y descriptivos es el más apropiado a incluir en metadatos embebidos?:",
+          "options": [
+            "Únicamente los datos técnicos de captura (códec, frame rate, resolución) porque la información descriptiva puede añadirse manualmente en el MAM.",
+            "Sólo título, fecha y descripción, dejando campos técnicos en bases externas para reducir el tamaño del contenedor.",
+            "Lista completa de todas las versiones de software usadas para editar, estado del RAID y registro de usuarios que abrieron el archivo.",
+            "Identificador único (UMID/UUID), timecode inicial, códec y resolución, checksum, título/ descripción, fecha de creación y derechos de uso."
+          ],
+          "correctIndex": 3,
+          "explanation": "Incluir un identificador único, timecode, códec/resolución, checksum y campos descriptivos asegura catalogación, búsqueda e intercambio y permite reconformado. El distractor más cercano elimina checksum o UMID, comprometiendo trazabilidad y verificación.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Orden operativo correcto al realizar corrección primaria seguida de corrección secundaria:",
+          "options": [
+            "Realizar primero la corrección secundaria sobre sombras y luces y después ajustar el balance global para compensar los cambios locales.",
+            "Aplicar primero máscaras locales para definir el look y después equilibrar globalmente RGB para mantener coherencia general.",
+            "Exportar directamente una LUT creativa sobre el material log sin realizar corrección primaria previa.",
+            "Primero ajustar balance y rango tonal global (lift/gamma/gain, exposición y contraste), luego aplicar selecciones/localizaciones (power windows, qualifers) y correcciones de color específicas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica correcta es corregir globalmente primero (exposición, balance, gamma) y después intervenir selectivamente. El distractor más próximo invierte el orden, lo que complica mantener coherencia tonal.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que describe mejor una configuración postural correcta en un puesto de edición:",
+          "options": [
+            "Silla con apoyo lumbar ajustado, altura que permite pies planos en el suelo, antebrazos apoyados y paralelos al plano de trabajo, muñecas en posición neutra respecto al teclado.",
+            "Silla baja para mantener rodillas por encima de las caderas, antebrazos elevados para mejor visión del teclado y reposapiés innecesario si la silla es ergonómica.",
+            "Apoyar sólo la parte superior de la espalda en el respaldo, mantener los pies estirados bajo la mesa y apoyar completamente los antebrazos en ángulo mayor de 120° para evitar tensión.",
+            "Usar una banqueta sin respaldo para fortalecer la columna, colocar el monitor demasiado alto para forzar extensión de cuello y apoyar las muñecas sobre una almohadilla."
+          ],
+          "correctIndex": 0,
+          "explanation": "La configuración correcta incluye apoyo lumbar, pies planos, antebrazos paralelos y muñecas neutras. El distractor más próximo propone antebrazos elevados o posturas que aumentan tensión y son contrarias a la ergonomía descrita.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al principio de la conexión de audio balanceada y su rechazo de modo común:",
+          "options": [
+            "La conexión balanceada transmite la señal por dos conductores con polaridad invertida; en receptor la suma diferencial cancela interferencias comunes.",
+            "El uso de transformadores o circuitos balanceadores garantiza aislamiento galvánico y mejora siempre el rechazo a ruidos sometidos a altas tensiones.",
+            "La eficacia del rechazo de modo común depende de la simetría y la impedancia por conductor; cables largos o desajustes reducen la CMRR.",
+            "Un sistema balanceado no elimina ruidos introducidos diferencialmente entre los dos conductores (por ejemplo, cuando uno se rompe o presenta contacto defectuoso)."
+          ],
+          "correctIndex": 1,
+          "explanation": "La excepción es que los transformadores 'mejoran siempre' el rechazo: pueden ayudar pero no garantizan solución ante todas las condiciones (p. ej. desajustes de impedancia). Los otros enunciados describen principios correctos del balanceado y del rechazo de modo común.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_incendio",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Ante el inicio de un fuego en equipo eléctrico en un plató, señale la afirmación que mejor resume prevención y actuación correcta:",
+          "options": [
+            "Cortar la alimentación eléctrica si es seguro, usar extintor apropiado (CO2 o polvo para fuegos eléctricos), iniciar evacuación ordenada y activar protocolo de alarma; formación y señalización preventiva reducen riesgo.",
+            "Intentar apagar el equipo con agua para enfriarlo, mantener al personal en el área hasta asegurarse de la causa, y reanudar actividad tras inspección visual del técnico.",
+            "No cortar la alimentación para evitar pérdida de evidencia, intentar apagar con extintores de espuma y comunicar por email a seguridad al terminar la jornada.",
+            "Apagar sólo el equipo afectado desenchufándolo manualmente por cualquier miembro del equipo sin evaluar riesgo de electrocución y usar extintor de agua en todos los casos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La actuación correcta prioriza cortar la alimentación de forma segura, usar extintores adecuados para fuegos eléctricos (CO2 o polvo), evacuar y aplicar protocolos; los distractores proponen medidas inseguras (agua, permanencia, desenchufe manual sin evaluación).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a efectos de fuentes no sincronizadas y la corrección mediante frame‑sync:",
+          "options": [
+            "Fuentes no sincronizadas pueden causar saltos y tearing al conmutar entre cámaras; un frame‑sync re‑sincroniza la imagen para evitar cortes abruptos.",
+            "Si una fuente no está genlockeada, el frame‑sync elimina automáticamente todas las diferencias de color y nivel entre equipos sin necesidad de ajuste adicional.",
+            "Un frame‑sync puede insertar o repetir cuadros y ajustar fase para alineamiento temporal, pero no corrige discrepancias de audio entre fuentes sin otro ajuste.",
+            "La falta de genlock puede provocar desalineación de sub‑tramas y problemas de fase en señales vídeo multicámara; el frame‑sync corrige desfases temporales y re‑envoltura la señal."
+          ],
+          "correctIndex": 1,
+          "explanation": "La excepción es la afirmación 4: el frame‑sync no elimina automáticamente diferencias de color y nivel; su función es temporizar y re‑sincronizar; correcciones de color requieren pasos adicionales. Los otros enunciados describen efectos reales y capacidades del frame‑sync.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación práctica: según el III Convenio Colectivo, ¿qué criterio debe primar para asignar una 'ocupación tipo' a un puesto de trabajo?:",
+          "options": [
+            "Las funciones y responsabilidades reales y frecuentes del puesto, frente al título oficial o la unidad administrativa a la que pertenece.",
+            "El título literal del contrato o denominación comercial usada por la productora externa.",
+            "La preferencia del responsable directo basada en antigüedad, sin relación con las tareas efectivamente desarrolladas.",
+            "La jornada y el horario únicamente, dejando la descripción funcional en una categoría genérica."
+          ],
+          "correctIndex": 0,
+          "explanation": "El III Convenio clasifica ocupaciones por funciones y responsabilidades efectivas; el distractor más próximo confunde denominación formal o criterios temporales que no reflejan la actividad profesional real.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_intra_longgop",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la afirmación que diagnostica correctamente la diferencia operativa entre compresión intraframe e Long‑GOP:",
+          "options": [
+            "Long‑GOP facilita el acceso aleatorio y la edición frame‑a‑frame sin mayor carga de decodificación que intraframe.",
+            "Intraframe ofrece acceso aleatorio y robustez en la edición (cada frame independiente) pero genera mayores tasas de datos; Long‑GOP es más eficiente en bitrate pero reduce facilidad de corte y exige más decodificación para edición.",
+            "Intraframe requiere más decodificación que Long‑GOP para reproducir una secuencia porque cada frame contiene redundancia completa.",
+            "Long‑GOP es intrínsecamente más resistente a errores de transferencia y pérdida de paquetes que intraframe."
+          ],
+          "correctIndex": 1,
+          "explanation": "Intraframe guarda cada cuadro completo facilitando cortes y reconformado; Long‑GOP optimiza bitrate pero complica edición por dependencia entre frames e incrementa carga de decodificación. Distractores invierten o confunden resistencia a errores.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Durante visionado y selección en un flujo XDCAM, ¿cuál afirmación describe mejor la relación y usos entre proxies y la esencia de alta resolución?:",
+          "options": [
+            "Durante la selección, los proxies no deben conservar metadatos técnicos porque aumentan la complejidad del MAM.",
+            "Los proxies sustituyen definitivamente a la esencia de alta resolución en el archivo maestro y son la única fuente válida para conformar la versión final.",
+            "La esencia de alta resolución carece de timecode fiable en sistemas XDCAM y por ello las decisiones se basan exclusivamente en proxies.",
+            "Los proxies se usan para visionado y selección rápida y contienen referencias temporales (timecode/UMID) que permiten reconformar sobre la esencia de alta resolución durante la ingesta/online."
+          ],
+          "correctIndex": 3,
+          "explanation": "La relación correcta es que proxies facilitan selección y mantienen referencias (timecode/UMID) para reconformar sobre la esencia alta resolución. Los distractores proponen reemplazo definitivo, negar metadatos o afirmar falta de timecode, lo cual es incorrecto.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_lut_log",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que mejor diferencia una LUT de visualización (log→display) de una LUT creativa:",
+          "options": [
+            "Una LUT de visualización transforma señales logarítmicas para una vista correcta en monitor objetivo sin imponer un look creativamente; una LUT creativa altera crominancia y contraste para un aspecto estético.",
+            "Una LUT de visualización siempre aumenta la saturación para realzar color; una LUT creativa corrige solo la exposición.",
+            "Una LUT de visualización y una creativa son equivalentes y se aplican indistintamente en cualquier punto del flujo sin efectos distintos en la cadena.",
+            "Una LUT creativa está diseñada exclusivamente para convertir Rec.709 a Rec.2020 y no sirve para propósitos estéticos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La distinción esencial es que la LUT de visualización busca representar fielmente el material log en un display objetivo; la creativa introduce decisiones estéticas. Los distractores confunden funciones o afirman equivalencia incorrecta.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En un vectorscopio, ¿qué interpretan el ángulo (fase) y la distancia al centro (magnitud) de un clúster de color?:",
+          "options": [
+            "El ángulo indica el brillo relativo y la distancia al centro indica la frecuencia de muestreo.",
+            "El ángulo representa el matiz/hue del color y la distancia al centro la saturación; cuanto más alejado del centro, mayor saturación.",
+            "El ángulo determina la luminancia y la distancia al centro la profundidad de bits.",
+            "El ángulo y la distancia al centro representan ambos únicamente variaciones de ruido y no tienen relación con tono o saturación."
+          ],
+          "correctIndex": 1,
+          "explanation": "En vectorscopio el ángulo corresponde al tono (hue) y la distancia al centro a la saturación. Los distractores confunden con luminancia, frecuencia de muestreo o ruido.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor describe la compatibilidad operativa entre edición y publicación de una playlist en EVS/IPDirector:",
+          "options": [
+            "Una playlist no permite definir transiciones; éstas sólo se aplican en la estación de edición y se pierden al publicar en EVS.",
+            "Una playlist siempre re‑renderiza los clips al códec de emisión, independientemente del códec original, sin necesidad de comprobación previa.",
+            "Editar el orden de una playlist en EVS altera automáticamente los archivos originales en el sistema de edición local sin control ni handles.",
+            "Una playlist preserva orden y transiciones definidas en EVS; para publicación en emisión debe comprobarse códec/handles y que los clips estén disponibles en el servidor destino."
+          ],
+          "correctIndex": 3,
+          "explanation": "La compatibilidad correcta exige que la playlist mantenga orden y transiciones pero se verifique códec, handles y disponibilidad en el servidor de playout. Distractores afirman re‑renderización automática, alteración de archivos originales o ausencia de transiciones, lo cual es incorrecto.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la sincronización multicámara mediante código de tiempo común:",
+          "options": [
+            "Si todas las cámaras registran el mismo código de tiempo base, la sincronización en el NLE será directa y fiable para cortes multicámara.",
+            "Cuando una cámara pierde el código de tiempo en un tramo, es posible sincronizar ese segmento por audio u otros marcadores, por lo que la pérdida no imposibilita siempre el uso del material.",
+            "Si una cámara pierde el código de tiempo durante toda la grabación, sus clips nunca podrán integrarse en un multicámara bajo ningún criterio.",
+            "La condición mínima para sincronización automatizada es un referencia temporal común mantenida en la mayor parte del material."
+          ],
+          "correctIndex": 2,
+          "explanation": "La excepción (incorrecta) es afirmar que sin TC absoluto no se puede integrar nunca: aunque la pérdida total complica mucho, existen técnicas alternativas (sincronización por audio, timecode auxiliar o marcas) en muchos casos. Las otras afirmaciones describen condiciones y posibilidades reales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que mejor refleja una medida concreta del II Plan de Igualdad y la Guía de Igualdad de RTVE para prevenir acoso y lenguaje sexista:",
+          "options": [
+            "Incluir protocolos específicos de prevención y actuación ante el acoso sexual y por razón de sexo, y establecer revisión de contenidos para detectar lenguaje y representación no sexista.",
+            "Limitar la aplicación de lenguaje no sexista únicamente a comunicaciones internas sin modificar la programación audiovisual.",
+            "Apostar por la discriminación positiva exclusiva en contratación para equilibrar cuotas sin medidas formativas ni revisión de contenidos.",
+            "Eliminar cualquier referencia a género en los créditos y materiales para evitar conflictos legales."
+          ],
+          "correctIndex": 0,
+          "explanation": "El II Plan prevé protocolos de prevención de acoso y medidas para revisar el uso de lenguaje y representación en contenidos. Los distractores proponen medidas limitadas, extremas o contradictorias con el plan.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Compare niveles RAID y seleccione la afirmación correcta sobre tolerancia a fallos y reconstrucción:",
+          "options": [
+            "RAID 1 utiliza striping con paridad y tolera la pérdida de dos discos en arreglos comunes.",
+            "RAID 0 ofrece paridad distribuida y puede reconstruirse tras la pérdida de un disco sin pérdida de datos.",
+            "RAID 5 distribuye paridad entre discos, tolera la pérdida de un disco y permite reconstrucción usando los datos y la paridad restantes.",
+            "RAID 6 no añade tolerancia adicional respecto a RAID 5 y solo mejora el rendimiento de lectura."
+          ],
+          "correctIndex": 2,
+          "explanation": "RAID 5 usa paridad distribuida y tolera un fallo de disco; RAID 0 no tiene redundancia; RAID 1 es espejo y no usa striping/paridad; RAID 6 aporta tolerancia a fallos de dos discos, por lo que los distractores son incorrectos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento adecuado para transferir un clip en curso en EVS a una estación de edición para reconformado rápido durante retransmisión:",
+          "options": [
+            "Enviar una captura de pantalla del plano al editor para que realice el reconformado sin acceder a la esencia.",
+            "Detener la grabación en EVS, copiar sólo audio y recomponer imágenes manualmente en el NLE sin conservar timecode.",
+            "Transcodificar el clip a un códec menos preciso y eliminar los metadatos de timecode para acelerar la transferencia.",
+            "Exportar el clip con handles suficientes, conservar timecode/UMID, seleccionar códec compatible con el NLE y transferirlo como 'growing file' o con consolidación parcial para permitir edición mientras sigue grabando."
+          ],
+          "correctIndex": 3,
+          "explanation": "El procedimiento correcto conserva handles, timecode/UMID y usa un códec compatible; puede aprovechar 'growing files' para disponibilidad inmediata. Los distractores rompen trazabilidad, eliminan timecode o proponen soluciones inviables.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "language_intelectual",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la operación de montaje que mejor ejemplifica el montaje intelectual por yuxtaposición de ideas:",
+          "options": [
+            "Usar únicamente fundidos encadenados para marcar transiciones temporales sin intención de generar metáfora.",
+            "Aplicar cortes continuos entre dos acciones contiguas para mantener continuidad espacial clásica.",
+            "Colocar dos planos contrastados sin relación causal explícita para que la asociación genere un nuevo significado en el espectador.",
+            "Ajustar ritmo y cortes para ocultar falta de continuidad en la acción sin introducir nuevas asociaciones conceptuales."
+          ],
+          "correctIndex": 2,
+          "explanation": "El montaje intelectual consiste en yuxtaponer imágenes para crear un significado emergente; las otras opciones describen montaje de continuidad o transiciones sin intención crítica o asociativa.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_dbfs",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que describe correctamente la consecuencia operativa de alcanzar 0 dBFS en una señal digital:",
+          "options": [
+            "0 dBFS significa que la señal tiene 0 voltios y no hay riesgo de sobrecarga analógica al pasarse a conversión.",
+            "0 dBFS es el valor máximo de amplitud digital; superarlo produce clipping y distorsión si no se dispone de margen o true‑peak management.",
+            "Alcanzar 0 dBFS indica siempre que hay headroom analógico suficiente en la cadena de grabación.",
+            "0 dBFS es un valor arbitrario sin relación con la integridad del audio digital."
+          ],
+          "correctIndex": 1,
+          "explanation": "0 dBFS es el techo digital; excederlo genera clipping. Los distractores confunden con voltajes analógicos, asumen headroom analógico garantizado o niegan la relevancia del nivel digital.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Para respetar la regla de los 180° en un diálogo entre dos personajes, ¿dónde debe permanecer la cámara?:",
+          "options": [
+            "Justo en el eje imaginario entre los personajes para equilibrar la composición y evitar saltos de eje.",
+            "En cualquier punto alrededor de los personajes siempre que se mantenga la misma distancia focal.",
+            "En uno de los lados del eje imaginario que une a los dos personajes, manteniéndose siempre en la misma semicircunferencia para preservar continuidad espacial.",
+            "Moviéndose libremente cruzando el eje entre planos para potenciar dinamismo en el diálogo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La regla establece que la cámara debe permanecer en la misma lado del eje de acción (misma semicircunferencia) para conservar la orientación izquierda/derecha. Los distractores proponen cruzar el eje o situarse sobre él, lo que rompe la continuidad espacial.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "061",
       "title": "Examen 061",
