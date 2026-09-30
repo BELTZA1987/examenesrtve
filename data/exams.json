@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-09-30",
   "exams": [
+    {
+      "id": "063",
+      "title": "Examen 063",
+      "date": "2026-09-30",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique cuál de las siguientes obligaciones concretas relativas a accesibilidad contempla la Ley 13/2022 para los prestadores de servicios audiovisuales:",
+          "options": [
+            "Incluir obligatoriamente interpretación en lengua de signos en todas las emisiones deportivas en directo",
+            "Ofrecer servicios de subtitulado, audiodescripción o interpretación en lengua de signos en la medida prevista por la normativa de desarrollo y en los tipos de contenidos señalados",
+            "Exigir a los usuarios solicitar explícitamente subtitulado para que se active en la retransmisión",
+            "Limitar obligaciones de accesibilidad solo a plataformas bajo suscripción"
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 13/2022 impone medidas de accesibilidad como subtitulado, audiodescripción o lengua de signos según lo previsto por la normativa de desarrollo y aplicable por tipo de contenido; las otras opciones son excesivas, condicionadas al usuario o restrictivas y no reflejan la obligación normativa general.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "De corte, fundido encadenado y fundido a negro: ¿qué transición se emplea preferentemente para señalar un salto temporal prolongado entre dos escenas y por qué?",
+          "options": [
+            "Corte: mantiene continuidad temporal sin indicar pausa",
+            "Fundido encadenado: sugiere continuidad breve o superposición temporal",
+            "Encadenado rápido (flash cut): marca un salto temporal largo mediante ritmo acelerado",
+            "Fundido a negro: introduce una separación temporal prolongada o cierre temporal antes del siguiente segmento"
+          ],
+          "correctIndex": 3,
+          "explanation": "El fundido a negro es la transición habitual para marcar una discontinuidad temporal notable o el cierre de un fragmento temporal; el corte mantiene continuidad inmediata y el encadenado (cross‑dissolve) sugiere solapamiento o paso de tiempo corto, no una elipsis prolongada.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En un RGB Parade el canal rojo muestra sistemáticamente 6 dB más en altas que verde y azul mientras las sombras están alineadas. Diagnóstico más probable:",
+          "options": [
+            "Balance de blancos desplazado hacia tonos cálidos o ganancia excesiva en el canal rojo en la captura",
+            "Calibración incorrecta del monitor que hace aparecer más rojo en la visualización",
+            "Problema de sincronismo entre canales RGB en la tarjeta de captura",
+            "Compresión excesiva que afecta selectivamente al canal rojo"
+          ],
+          "correctIndex": 0,
+          "explanation": "Un exceso consistente en el canal rojo en altas indica un desplazamiento de balance de blancos o ganancia roja en la cadena de captación; la calibración del monitor cambiaría la visualización pero no la lectura del parade, y las otras opciones no explican un exceso por canal en altas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_bit_depth",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Respecto a profundidad de bits y banding, señale la afirmación correcta:",
+          "options": [
+            "8 bits por canal presenta mayor probabilidad de banding tras gradación; 10 bits reduce el banding y ofrece margen de procesamiento",
+            "12 bits no aporta ventajas prácticas frente a 8 bits en workflows de vídeo convencionales",
+            "La profundidad de bits no afecta al banding si se usa una LUT correcta",
+            "Mayor profundidad de bits siempre empeora el banding debido a cuantificación más fina"
+          ],
+          "correctIndex": 0,
+          "explanation": "A mayor profundidad (por ejemplo 10 bits frente a 8) se reduce la cuantificación visible y el banding, proporcionando margen para gradación; las demás opciones son incorrectas o contradictorias con la relación entre bit depth y banding.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_relink",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Ante archivos con nombres similares y varias versiones, ¿qué criterio operativo es el más fiable para relinkear correctamente en un proyecto NLE?",
+          "options": [
+            "Seleccionar el archivo con la mayor resolución suponiendo que es la versión maestra",
+            "Basarse exclusivamente en el nombre de archivo y la fecha de creación del fichero",
+            "Coincidencia exacta de timecode de inicio, duración y reel/ID de rodaje entre la referencia del proyecto y el archivo disponible",
+            "Relink por extensión de fichero y codec detectado por el NLE"
+          ],
+          "correctIndex": 2,
+          "explanation": "La coincidencia de timecode inicial, duración y reel/ID es la práctica más fiable para asegurar que el archivo corresponde al clip referenciado; nombres y fechas pueden repetirse o cambiar y la simple resolución o codec no garantizan correspondencia temporal.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_news",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En la edición de una noticia breve con tiempo limitado, ¿qué criterio debe primar al seleccionar locución, totales y recursos?",
+          "options": [
+            "Búsqueda prioritaria de planos estéticamente impactantes aunque resten información",
+            "Prioridad informativa y claridad del mensaje, ajustando totales y locución al tiempo asignado",
+            "Aumentar la densidad de recursos gráficos con independencia del ritmo narrativo",
+            "Emplear música continua para mejorar la percepción aunque oculte partes de la locución"
+          ],
+          "correctIndex": 1,
+          "explanation": "En noticias el criterio fundamental es la prioridad informativa y la claridad; los recursos visuales y sonoros deben servir ese objetivo, no anteponerse a él, que es la diferencia frente a los distractores.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Indique el elemento que caracteriza un accidente 'in itinere' según criterios habituales de prevención laboral:",
+          "options": [
+            "Desplazamiento habitual y necesario entre domicilio y centro de trabajo siguiendo ruta razonable sin interrupciones voluntarias significativas",
+            "Parada voluntaria prolongada en ruta para comprar bienes personales antes del accidente",
+            "Desvío considerable por motivos ajenos al trabajo antes del accidente",
+            "Accidente ocurrido fuera del trayecto y de horario laboral sin relación con el puesto"
+          ],
+          "correctIndex": 0,
+          "explanation": "El accidente in itinere se distingue por ocurrir en el desplazamiento habitual y necesario entre domicilio y lugar de trabajo sin desviaciones voluntarias; las paradas o desvíos voluntarios y accidentes fuera del trayecto excluyen este concepto.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál es la finalidad principal de la reforma introducida por la Ley 5/2017 respecto a RTVE y su mecanismo de elección de órganos?",
+          "options": [
+            "Recuperar la independencia y pluralismo del ente mediante elección parlamentaria de sus órganos de gobierno",
+            "Privatizar la gestión de la Corporación y reducir su responsabilidad pública",
+            "Centralizar la elección en el Gobierno para agilizar nombramientos ejecutivos",
+            "Limitar la participación parlamentaria a una función meramente consultiva en nombramientos"
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley 5/2017 persigue recuperar independencia y pluralismo mediante un procedimiento parlamentario para la elección de órganos; las otras opciones contradicen la finalidad de la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_chromakey",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Orden correcto de operaciones para una incrustación por chromakey que presenta halo de color y bordes duros:",
+          "options": [
+            "Generar matte → aplicar despill → eliminar bordes → bypass del matte",
+            "Despille → generar matte → aplicar corrección primaria → feather final",
+            "Aplicar corrección primaria → despill → generar matte → rotoscopia de bordes",
+            "Generar matte (key) → limpieza del matte (choke/feather) → despill (eliminar spill) → integración de color y retocado de bordes"
+          ],
+          "correctIndex": 3,
+          "explanation": "La secuencia adecuada es primero extraer la clave (matte), luego limpiar el matte (choke/feather) para corregir bordes, a continuación eliminar spill y finalmente ajustar color/integración; los distractores alteran el orden y dejan artefactos o saltan pasos esenciales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que describe correctamente las diferencias entre 'capture', 'import', 'link' e 'ingest' en un flujo de postproducción:",
+          "options": [
+            "Capture: equivalente a grabación en cámara; Import: solo para audio; Link: reencode en background; Ingest: eliminación de metadatos originales",
+            "Capture: sin checksum ni verificación; Import: comprobación exhaustiva y catalogación automática; Link: conversión de codecs; Ingest: uso exclusivo para proxies",
+            "Capture: transferencia directa desde dispositivo generando archivos completos; Import: copiar y normalizar ficheros al proyecto; Link: referenciar archivos en su localización sin copia; Ingest: transferencia verificada con checksum y metadatos a MAM/servidor",
+            "Capture: relectura de archivos ya en servidor; Import: generación de proxies; Link: duplicado físico de la esencia; Ingest: renombrado masivo de ficheros"
+          ],
+          "correctIndex": 2,
+          "explanation": "La definición correcta distingue capture (transferencia/recepción de archivos), import (copiar/normalizar al proyecto), link (referenciar sin copiar) e ingest (transferencia verificada con checksums y registro de metadatos); las demás opciones mezclan o falsean operaciones.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál de las siguientes afirmaciones representa mejor la diferencia práctica entre AVC (H.264) y HEVC (H.265) en flujos audiovisuales?",
+          "options": [
+            "HEVC es menos eficiente que AVC pero más compatible con dispositivos antiguos",
+            "HEVC ofrece mayor eficiencia de compresión para igual calidad pero exige mayor complejidad de codificación/decodificación y menor compatibilidad de hardware en receptores más antiguos",
+            "AVC permite compresión con la mitad del bitrate de HEVC manteniendo la misma calidad visual",
+            "HEVC elimina la necesidad de control de bitrate en transmisión en tiempo real"
+          ],
+          "correctIndex": 1,
+          "explanation": "HEVC aporta mejor eficiencia (menor bitrate para similar calidad) pero requiere mayor potencia de cómputo y tiene compatibilidad de hardware más limitada; las otras opciones contradicen la relación eficiencia‑complejidad‑compatibilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_export_qc",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes listas de verificación y seleccione la que corresponde a un control de calidad técnico de exportación completo:",
+          "options": [
+            "Solo verificar que el bitrate declarado coincide con el de origen",
+            "Comprobar solo la resolución, el nombre de archivo y la existencia del fichero en destino",
+            "Revisar únicamente la calidad estética de color y la continuidad narrativa",
+            "Verificar contenedor y codec, niveles legales de luminancia y crominancia, sincronía audio‑vídeo, orden de campos, timecode, subtítulos y metadatos de entrega"
+          ],
+          "correctIndex": 3,
+          "explanation": "Un QC técnico completo incluye verificación de contenedor/codec, niveles legales, sincronía, orden de campos, timecode, subtítulos y metadatos; las demás opciones son parciales y omitEN verificaciones esenciales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las diferencias temporales y artefactos entre entrelazado y progresivo:",
+          "options": [
+            "El entrelazado presenta 'combing' cuando se muestra progresivamente sin desentrelazado en objetos en movimiento",
+            "El progresivo no muestra 'combing' y reproduce el movimiento tal como registró cada cuadro completo",
+            "El entrelazado siempre reduce el motion blur respecto al progresivo por su naturaleza temporal",
+            "La conversión inapropiada de entrelazado a progresivo puede generar dobles o saltos en movimiento"
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación que dice que el entrelazado 'siempre reduce el motion blur' es incorrecta (excepción); el entrelazado distribuye información temporal entre campos y puede mostrar artefactos pero no garantiza menor motion blur; las demás describen diferencias reales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_true_peak",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para controlar picos entre muestras y garantizar que el 'True Peak' no supere el límite de entrega, la operación técnica más adecuada es:",
+          "options": [
+            "Comprobar únicamente el sample peak tras la mezcla y ajustar ganancia",
+            "Aplicar un limitador con detección True Peak (oversampling) antes del proceso de codificación y entrega",
+            "Normalizar por RMS sin uso de limitador específico",
+            "Reducir el bitrate del códec para minimizar picos inter‑muestra"
+          ],
+          "correctIndex": 1,
+          "explanation": "El control de true peak exige un limitador con detección entre‑muestras (oversampling) antes de codificación; sample peak o RMS no capturan picos entre muestras y la reducción de bitrate no corrige picos de señal.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Respecto a libertad de expresión y libertad de información, ¿cuál afirmación distingue correctamente su alcance y límites constitucionales?",
+          "options": [
+            "La libertad de expresión y la libertad de información son exactamente lo mismo en su alcance legal",
+            "La libertad de información autoriza difundir cualquier contenido sin límites",
+            "La libertad de expresión protege la manifestación de ideas; la libertad de información garantiza el derecho público a recibir y difundir información veraz y ambas se limitan por la protección del honor, la intimidad y la protección de menores",
+            "Los límites a la libertad de información solo pueden imponerse por autocensura de los medios"
+          ],
+          "correctIndex": 2,
+          "explanation": "Constitucionalmente la libertad de expresión y la de información tienen ámbitos distintos y comparten límites legítimos (honor, intimidad, protección de menores); las demás opciones son falsas o imprecisas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_evs_loop",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un servidor EVS configurado en grabación en bucle (loop) durante una retransmisión, ¿qué medida operativa es la más determinante para aislar y recuperar posteriormente la ejecución de una cámara o feed concreto evitando que quede sobrescrita por el propio bucle?",
+          "options": [
+            "Aumentar el bitrate/calidad de grabación del feed para conservar más detalle en cada clip.",
+            "Incrementar la longitud del bucle / capacidad de retención en disco para mantener más histórico.",
+            "Colocar marcadores (bookmarks) en el momento de la acción para identificarla en el historial.",
+            "Asignar ese feed a un canal de grabación dedicado del servidor (canal exclusivo por fuente)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La recuperación fiable frente a sobrescrituras en modo loop depende principalmente de que la fuente se grabe en un canal dedicado: un canal exclusivo mantiene su propio buffer/historial y evita que el contenido de otras fuentes lo sobrescriban. Aumentar la longitud del bucle ayuda a retener más histórico pero no garantiza aislamiento entre fuentes; los marcadores facilitan localizar una acción dentro del historial, pero si el contenido ya ha sido sobrescrito por el loop no permiten recuperarlo; aumentar el bitrate mejora calidad pero no afecta a la persistencia ni al aislamiento frente a sobrescrituras.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la organización de tareas más compatible con la reducción de fatiga visual y postural en trabajos continuados frente a pantallas:",
+          "options": [
+            "Alternancia de tareas con distinto nivel visual cada 45–60 min, pausas cortas frecuentes (micro‑pausas) y ejercicios de descanso visual",
+            "Concentrar toda la carga visual en bloques de 4 horas con una única pausa larga",
+            "Eliminar pausas para mantener ritmo y productividad y compensar con iluminación más intensa",
+            "Mantener el mismo tipo de tarea visual durante toda la jornada cambiando solo la altura de la pantalla"
+          ],
+          "correctIndex": 0,
+          "explanation": "La organización que alterna tareas, introduce micro‑pausas frecuentes y ejercicios visuales y posturales reduce fatiga; las otras opciones aumentan riesgo por continuidad, ausencia de descansos o medidas insuficientes.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "En relación contenedor vs códec, ¿qué afirmación distingue con mayor precisión MOV/MP4 frente a MXF?",
+          "options": [
+            "MP4 y MOV son equivalentes a MXF en cuanto a metadata y estandarización para entregas broadcast",
+            "MOV y MP4 son contenedores de uso general soportando múltiples códecs; MXF es un contenedor profesional estandarizado para flujos broadcast con estructura y metadata específicas (OP‑Atom/OP‑1a)",
+            "MXF no admite timecode ni metadatos embebidos",
+            "MOV/MP4 se usan exclusivamente para audio y no para vídeo profesional"
+          ],
+          "correctIndex": 1,
+          "explanation": "MOV/MP4 son contenedores de propósito general; MXF está diseñado para entornos broadcast con formatos OP‑Atom/OP‑1a y metadatos estructurados; las otras afirmaciones son incorrectas o exageradas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "¿Cuál de las siguientes afirmaciones constituye una excepción respecto a limitaciones y características de LTO/LTFS en archivo a largo plazo?",
+          "options": [
+            "La verificación mediante checksum y la catalogación son prácticas recomendadas al archivar en LTO",
+            "LTFS permite exponer la cinta como sistema de archivos para facilitar gestión de ficheros",
+            "La localización de contenido en cinta suele requerir catálogo o índice externo para acceso rápido",
+            "La cinta LTO ofrece acceso aleatorio instantáneo similar al disco duro"
+          ],
+          "correctIndex": 3,
+          "explanation": "Decir que LTO ofrece acceso aleatorio instantáneo similar al disco es incorrecto (excepción); las cintas tienen tiempos de búsqueda y requieren catálogo/indexación, mientras que LTFS y checksums son prácticas válidas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las consecuencias de una adaptación de impedancias incorrecta en una cadena audiovisual:",
+          "options": [
+            "Provoca reflexiones y pérdidas de nivel en señales de alta frecuencia (vídeo), empeorando la integridad de la imagen",
+            "Genera cambios de respuesta en frecuencia y aumento de ruido o ronroneo en audio",
+            "No tiene efecto alguno sobre transmisión de señales analógicas y digitales, por lo que puede despreciarse en instalaciones profesionales",
+            "Puede producir calentamiento anómalo en etapas finales y errores en la transferencia digital por reflexiones"
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción que afirma 'no tiene efecto' es la excepción (falsa): una mala adaptación de impedancias sí causa reflexiones, degradación de señal, cambios en respuesta y puede afectar tanto analógico como digital; las demás describen consecuencias reales.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "062",
       "title": "Examen 062",
