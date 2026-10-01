@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30",
+  "updatedAt": "2026-10-01",
   "exams": [
+    {
+      "id": "064",
+      "title": "Examen 064",
+      "date": "2026-10-01",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Indique la obligación concreta del empresario prevista en la Ley 31/1995 relacionada con la planificación de la actividad preventiva:",
+          "options": [
+            "Reducir sistemáticamente la jornada laboral para todos los puestos sin realizar evaluación previa.",
+            "Realizar una evaluación de riesgos y planificar la actividad preventiva integrándola en la organización del trabajo.",
+            "Depositar en un tercero toda la responsabilidad sobre la prevención eliminando la coordinación interna.",
+            "Adoptar medidas de vigilancia médica individualizadas sin informar a representantes de los trabajadores."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 31/1995 impone al empresario la evaluación de riesgos y la planificación e integración de la actividad preventiva en la organización del trabajo; las otras opciones describen actuaciones insuficientes o incompatibles con las obligaciones legales (limitar jornada sin evaluación, transferir sin coordinar responsabilidades o medidas médicas aisladas no sustituyen la evaluación y planificación).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_match_action",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Al montar dos planos para efectuar un raccord de movimiento, ¿qué requisito técnico relacionado con la trayectoria y la dinámica del elemento en movimiento es el más determinante para preservar la continuidad perceptiva entre ambos planos?",
+          "options": [
+            "Que el corte coincida con el mismo fotograma del movimiento en ambas tomas.",
+            "Garantizar coincidencia de colorimetría y exposición para evitar saltos visuales que distraigan la percepción del movimiento.",
+            "Igualar distancia focal y ángulo de cámara para mantener la perspectiva espacial entre ambos planos.",
+            "Conservar la misma dirección y sentido del vector de movimiento y mantener el ritmo/velocidad aparente del desplazamiento entre planos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La conservación del vector de movimiento (dirección y sentido) y del ritmo/velocidad aparente es la variable decisiva para que el ojo siga la acción como un continuo; si la dirección o el tempo del movimiento cambian, se percibe un salto aunque coincidan otros parámetros. La igualdad de distancia focal/ángulo (opción 3) ayuda a la coherencia espacial pero no es tan determinante para la continuidad del movimiento como el vector y la velocidad. Cortar en el mismo fotograma (opción 1) es impracticable y no garantiza percepción continuada si la dirección/velocidad difieren. La coincidencia de color/exposición (opción 4) evita distracciones visuales, pero afecta a la coherencia cromática, no directamente a la continuidad perceptiva del movimiento.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Si se esperan 50 usuarios concurrentes consumiendo flujos de 4 Mbps cada uno y se exige un margen operativo de red del 15 %, ¿qué capacidad mínima de enlace de salida se debe prever?",
+          "options": [
+            "200 Mbps",
+            "230 Mbps",
+            "220 Mbps",
+            "250 Mbps"
+          ],
+          "correctIndex": 1,
+          "explanation": "El bitrate agregado es 50 × 4 Mbps = 200 Mbps; aplicando un margen del 15 %: 200 × 1,15 = 230 Mbps. 200 Mbps omite el margen; 220 Mbps correspondería a un 10 % y 250 Mbps a un 25 %.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un puesto de conmutación lineal A/B‑Roll, función de la prelectura (preview):",
+          "options": [
+            "Sustituir al monitor de programa mostrando siempre la previsualización del siguiente corte.",
+            "Sincronizar automáticamente el punto de entrada de las fuentes A y B para ejecutar un crossfade perfecto.",
+            "Permitir preparar y verificar la fuente que se enviará al mezclador sin afectar al programa en emisión.",
+            "Gestionar la mezcla de audio entre las fuentes A y B durante la transición."
+          ],
+          "correctIndex": 2,
+          "explanation": "La prelectura permite comprobar y preparar la fuente que irá al mezclador sin alterar el programa; la sincronización automática y la mezcla de audio pueden ser funciones adicionales del sistema pero no definen la función operativa esencial de la preview; sustituir al monitor de programa no es su propósito.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Procedimiento correcto para identificar y verificar un punto de cruce (crosspoint) entre entrada X y salida Y en una matriz de vídeo:",
+          "options": [
+            "Inyectar una señal de prueba identificable en la entrada X, asignar la matriz para enrutarla a la salida Y y comprobar en el monitor de salida Y la presencia del patrón y el identificador de origen.",
+            "Comprobar únicamente en la interfaz de control que el indicador LED del crosspoint está activo; si está activo, se da por verificado.",
+            "Verificar el crosspoint escuchando el audio en la salida Y sin comprobar la señal de vídeo.",
+            "Reiniciar la matriz para forzar la reconfiguración y asumir que los crosspoints quedan correctamente reasignados."
+          ],
+          "correctIndex": 0,
+          "explanation": "La verificación fiable exige introducir una señal de prueba en la entrada y comprobar físicamente su aparición en la salida objetivo; confiar solo en indicadores de control, en audio sin vídeo o en reinicios no garantiza que el punto de cruce funcione correctamente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: ¿qué conjunto de medidas preventivas es el más completo para reducir trastornos musculoesqueléticos en tareas continuadas con teclado, ratón y tableta gráfica?",
+          "options": [
+            "Ajuste ergonómico del puesto (altura de mesa y silla), colocación neutra de muñecas, uso de ratón ergonómico y pausas programadas con ejercicios de estiramiento.",
+            "Aumentar la velocidad de trabajo para terminar antes las tareas y evitar periodos largos sentados.",
+            "Prohibir el uso de tabletas gráficas y obligar al uso exclusivo de ratón para homogeneizar movimientos.",
+            "Reducir la iluminación para disminuir la tensión ocular y compensar la fatiga postural."
+          ],
+          "correctIndex": 0,
+          "explanation": "La prevención integral combina ajuste ergonómico, dispositivos adecuados y pausas con ejercicios; las otras opciones no abordan los factores de riesgo o son contraproducentes.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Aplicación del timecode drop‑frame frente al non‑drop‑frame en 29,97 fps:",
+          "options": [
+            "Elimina físicamente fotogramas del flujo para corregir la diferencia entre 29,97 y 30 fps.",
+            "Ajusta la numeración del contador omitiendo determinados números en el timecode para que el contador refleje tiempo real sin eliminar fotogramas.",
+            "Reescribe los códigos de tiempo de los archivos para convertirlos a 30,00 fps manteniendo la misma duración audiovisual.",
+            "Inserta frames duplicados cada minuto para compensar la diferencia de velocidad."
+          ],
+          "correctIndex": 1,
+          "explanation": "El drop‑frame corrige la discrepancia entre numeración y tiempo real omitiendo ciertos números del contador (no quitando fotogramas); las otras opciones confunden numeración con manipulación de la esencia.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre la regulación de jornada, descansos y turnicidad en el III Convenio Colectivo. Indique la afirmación más ajustada al Convenio:",
+          "options": [
+            "Fija una jornada diaria única e invariable para todos los puestos de RTVE sin posibilidad de acuerdos locales.",
+            "Solo establece principios salariales y no aborda horarios ni descansos, que quedan reservados a la normativa estatal.",
+            "Prohíbe expresamente la organización por turnos en centros con actividad informativa.",
+            "Regula la ordenación de la jornada (distribución y cómputo), los descansos obligatorios y criterios objetivos para organizar turnos y compensaciones por work shift."
+          ],
+          "correctIndex": 3,
+          "explanation": "El III Convenio regula aspectos sustantivos de jornada, descansos y turnicidad (distribución, descansos y criterios para turnos); las demás opciones son inexactas o incompatibles con el objeto de un convenio colectivo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Interpretación: un medidor de correlación indica valores consistentes alrededor de −0,9 en pasajes con la voz centrada. ¿Qué indica esto operativamente?",
+          "options": [
+            "Excelente compatibilidad mono y buena coherencia estéreo sin riesgo de cancelación.",
+            "Existencia de inversión de fase o fuerte diferencia entre canales que provocará cancelación parcial o total al sumar a mono.",
+            "Simple ampliación estéreo controlada que aporta sensación de anchura sin impacto en mono.",
+            "Indicación de clipping en la pista estéreo por niveles demasiado altos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Valores cercanos a −1 señalan inversión de fase o diferencias sustanciales entre canales que generan cancelaciones al sumar a mono; no indican compatibilidad ni clipping.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Tras descargar contenido de una tarjeta SSD de cámara, la práctica operativa más segura antes de volver a usarla en rodaje es:",
+          "options": [
+            "Reusar la tarjeta sin verificación si el visor de la cámara indica espacio disponible.",
+            "Formatear inmediatamente la tarjeta en el ordenador para acelerar el siguiente rodaje.",
+            "Verificar la integridad mediante checksums y copias de seguridad independientes y, solo después de comprobarlas, formatear la tarjeta según las recomendaciones del fabricante.",
+            "Eliminar manualmente los ficheros que no se necesitan y dejar el resto sin más comprobaciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta es verificar integridad y copias antes de formatear; formatear o reusar sin verificar puede provocar pérdida de material; eliminar manualmente sin checksums no garantiza trazabilidad ni seguridad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para diseñar proxies destinados a edición offline en estaciones con CPU limitada, ¿qué combinación de criterios es la más adecuada?",
+          "options": [
+            "Usar resolución muy baja y bitrate mínimo para ahorrar espacio, dejando la compresión a la exportación final.",
+            "Mantener resolución original y usar códec altamente comprimido Long‑GOP para minimizar tamaño del archivo.",
+            "Resolución reducida (por ejemplo 1/4 del original), códec intra‑frame ligero (ProRes Proxy o DNxHR LB) y bitrate moderado (suficiente para evitar blocking, p. ej. 4–8 Mbps).",
+            "Generar proxies en H.265 a baja tasa y resolución completa para maximizar compatibilidad con CPU limitada."
+          ],
+          "correctIndex": 2,
+          "explanation": "El equilibrio operativo para CPU limitada es bajar resolución, usar un códec ligero intra‑frame de baja complejidad de decodificación y un bitrate que evite artefactos; Long‑GOP o H.265 a baja tasa aumentan la latencia de scrubbing y complican reconformado.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_backup_321",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Seleccione la estrategia que cumple correctamente la política 3‑2‑1 de copias de seguridad:",
+          "options": [
+            "Dos copias locales idénticas y una copia en el mismo servidor principal.",
+            "Tres discos en el mismo armario RAID para redundancia instantánea.",
+            "Tres copias totales, almacenadas en al menos dos tipos de medio distintos (por ejemplo disco y cinta) y con al menos una copia fuera de la ubicación principal.",
+            "Tres copias en la misma nube para simplificar la gestión."
+          ],
+          "correctIndex": 2,
+          "explanation": "La política 3‑2‑1 exige 3 copias, 2 tipos de medio diferentes y 1 copia externa; las demás opciones no cumplen el requisito de diversificación de soporte ni ubicación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "language_music_sync",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Para cortar alineando el montaje con una frase musical de 8 compases cuyos acentos fuertes están en compases 1 y 5, la opción de corte más coherente es:",
+          "options": [
+            "Cortar en el primer tiempo débil tras el acento para crear contraste rítmico aunque rompa la frase.",
+            "Realizar el corte en el inicio de un compás fuerte (por ejemplo compás 1 o 5) para respetar frase y acentos musicales.",
+            "Ignorar la estructura de compases y cortar cada 3 compases para dinamizar el ritmo.",
+            "Alinear cortes solo con silencios, evitando cualquier relación con los acentos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respetar el inicio de compás y acentos mantiene la frase musical y la continuidad sonora; cortar en tiempos débiles o en estructuras no coincidentes rompe la coherencia y el contrapunto.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Respecto a reservas de ancho de banda en almacenamiento compartido tipo NEXIS/SAN, ¿qué factor es determinante para mantener rendimiento con múltiples usuarios concurrentes?",
+          "options": [
+            "Exclusivamente la latencia del almacenamiento de disco, sin que la red tenga impacto.",
+            "Solo la capacidad de almacenamiento total en TB del sistema, independientemente del tráfico concurrente.",
+            "La versión del sistema operativo de los clientes sin relación con la infraestructura de red.",
+            "La capacidad de enlace y las reservas de ancho en los switches/links troncales conjuntamente con el número de flujos concurrentes y el bitrate por flujo."
+          ],
+          "correctIndex": 3,
+          "explanation": "El rendimiento concurrente depende de la suma de bitrate de los flujos y de las reservas en enlaces y switches; la capacidad en TB, versiones de OS o solo latencia de disco no describen por sí mismos el factor determinante.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la organización y órganos básicos de la Corporación RTVE conforme al régimen establecido en la Ley 17/2006:",
+          "options": [
+            "La Asamblea General de Accionistas es el órgano previsto para aprobar cuentas, nombramientos y la política general de la Corporación RTVE.",
+            "El Presidente de la Corporación tiene la representación legal y la dirección de la gestión, pudiendo estructurar la dirección ejecutiva y delegar funciones propias en órganos directivos.",
+            "El Consejo de Administración actúa como órgano colegiado de gobierno encargado de la planificación estratégica y del control de la gestión de la Corporación.",
+            "La Corporación debe disponer de mecanismos de control económico y auditoría interna que contribuyan a la transparencia y supervisión de la gestión de recursos públicos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la C. La Ley 17/2006 organiza RTVE mediante órganos públicos de gobierno y control (por ejemplo, Consejo de Administración y Presidencia) y establece controles y auditorías; no configura la Corporación como una sociedad con una «Asamblea General de Accionistas» que apruebe cuentas y nombramientos. Las opciones A y D describen funciones compatibles con el régimen legal de órganos colegiados y mecanismos de control, y la B refleja la representación y funciones ejecutivas del Presidente tal como se prevén en el régimen organizativo (siendo admisible la delegación de funciones en la estructura de dirección), por lo que son afirmaciones correctas y no constituyen excepción.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál es la consecuencia operativa más inmediata de un error en un fotograma P dentro de una GOP IPB?",
+          "options": [
+            "Forza la regeneración automática de un fotograma I en la GOP afectada sin pérdida de datos.",
+            "Afecta únicamente al fotograma P erróneo sin repercutir en otros fotogramas.",
+            "Provoca decodificación incorrecta de los fotogramas B y P posteriores que dependan de ese P hasta el siguiente fotograma I.",
+            "Se corrige al vuelo por el decodificador sin impacto en la reproducción de P y B posteriores."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un fotograma P sirve de referencia a fotogramas B y P posteriores; un error en él provoca propagación de errores en los dependientes hasta el siguiente I; no se limita sólo al P ni se regenera automáticamente sin efectos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre derechos y obligaciones del trabajador en prevención de riesgos; indique la más ajustada:",
+          "options": [
+            "El trabajador tiene derecho a recibir información y formación adecuadas, a participar y a negarse a realizar tareas peligrosas; debe colaborar, utilizar correctamente los medios proporcionados y comunicar riesgos.",
+            "El trabajador solo tiene la obligación de firmar documentos de formación sin derecho efectivo a la información previa.",
+            "Los trabajadores no están obligados a usar equipos de protección si consideran que entorpecen su trabajo.",
+            "El trabajador es responsable exclusivo de la prevención en su puesto sin intervención del empresario."
+          ],
+          "correctIndex": 0,
+          "explanation": "La relación correcta incluye derechos de información, formación y participación y obligaciones de colaboración y uso correcto de medios; las otras opciones falsean derechos u obligaciones reales.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a PQ (ST‑2084) y HLG, señale la afirmación que describe mejor sus diferencias de principio y compatibilidad en distribución:",
+          "options": [
+            "PQ es una curva de transferencia perceptual diseñada para masters con metadata y mapeo absoluto de luminancia; HLG es una curva híbrida orientada a emisión que proporciona mejor compatibilidad hacia displays SDR sin metadatos.",
+            "PQ y HLG son equivalentes en comportamiento y siempre intercambiables sin transformación ni metadatos.",
+            "HLG requiere metadata de mastering obligatoria para su reproducción correcta mientras PQ no la necesita.",
+            "PQ es específicamente para emisión en directo y HLG solo para material pregrabado en estudio."
+          ],
+          "correctIndex": 0,
+          "explanation": "PQ define un mapeo absoluto de luminancia con metadata para mastering; HLG es una solución híbrida para emisión que facilita compatibilidad con displays SDR sin metadata. Las demás opciones son incorrectas o invertidas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para almacenar un único fichero que supera los 4 GB en un soporte habitual de producción y mantener compatibilidad multiplataforma, ¿qué sistema de archivos es el más apropiado?",
+          "options": [
+            "CDFS (sistema de archivos de CD-ROM)",
+            "FAT32",
+            "Ext3",
+            "exFAT"
+          ],
+          "correctIndex": 3,
+          "explanation": "exFAT soporta ficheros mayores de 4 GB y ofrece amplia compatibilidad entre Windows y macOS; FAT32 tiene límite de 4 GB, Ext3 no es ampliamente nativo en sistemas Windows sin utilidades y CDFS no es adecuado para ficheros de gran tamaño ni uso de producción.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique el conjunto de magnitudes que determina con mayor precisión la capacidad de un servidor de vídeo para atender accesos concurrentes:",
+          "options": [
+            "La resolución de los archivos y el tipo de códec sin considerar red ni E/S.",
+            "Número de usuarios registrados en la base de datos, versión del sistema operativo y nombre del host.",
+            "Tamaño total del disco en TB y el formato del sistema de archivos únicamente.",
+            "Bitrate agregado de los flujos concurrentes, capacidad de red (ancho de enlace) y rendimiento de E/S del almacenamiento (throughput/IOPS)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La capacidad práctica viene determinada por el bitrate total demandado, el ancho de enlace disponible en la red y la capacidad de lectura/escritura del almacenamiento; los otros conjuntos omiten factores clave o incluyen elementos irrelevantes.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "063",
       "title": "Examen 063",
