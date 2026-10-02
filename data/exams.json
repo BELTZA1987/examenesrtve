@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-01",
+  "updatedAt": "2026-10-02",
   "exams": [
+    {
+      "id": "065",
+      "title": "Examen 065",
+      "date": "2026-10-02",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la obligación concreta impuesta por la Ley 13/2022 a los prestadores de servicios audiovisuales respecto a la protección de menores y la gestión de accesos:",
+          "options": [
+            "Eliminar cualquier contenido señalado como inapropiado en un plazo máximo de 24 horas tras la primera queja de un padre o representante legal.",
+            "Clasificar contenidos por edad e implantar medidas técnicas y organizativas efectivas (p. ej. controles parentales o geofencing) que limiten el acceso de menores a contenidos no aptos.",
+            "Limitar la publicidad dirigida a audiencias infantiles solo mediante autorregulación de los propios prestadores, sin obligación de controles específicos.",
+            "Sustituir automáticamente escenas con contenidos sensibles para menores por versiones editadas en la emisión sin necesidad de consentimiento del autor."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley obliga a clasificar por edades y a establecer medidas técnicas/organizativas para impedir el acceso de menores a contenidos no aptos; las otras opciones describen plazos de eliminación, autorregulación publicitaria o ediciones automáticas que no sintetizan la obligación principal de clasificación y controles efectivos. La diferencia decisiva es la exigencia de medidas concretas de control de acceso, no meras acciones reactivas o autorregulación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Al montar dos líneas de acción que se intercalan, ¿qué criterio operacional distingue el montaje paralelo del montaje alterno respecto a simultaneidad, convergencia y asociación temática?",
+          "options": [
+            "El montaje alterno exige siempre simultaneidad temporal y busca convergencia causal; el paralelo es meramente temático y no sugiere simultaneidad.",
+            "El montaje paralelo sugiere simultaneidad temporal entre acciones y suele orientarse hacia una convergencia causal; el alterno prioriza la asociación temática o el contraste sin exigir simultaneidad estricta.",
+            "Ambos montajes requieren simultaneidad temporal para ser efectivos; la distinción es solo académica y no afecta decisiones operativas de raccord.",
+            "El montaje paralelo siempre utiliza elipsis temporales mientras que el alterno utiliza cortes directos sin asociación temática."
+          ],
+          "correctIndex": 1,
+          "explanation": "La distinción operativa es que el montaje paralelo suele comunicar acciones que ocurren al mismo tiempo y conducir a una convergencia, mientras que el alterno yuxtapone acciones por asociación temática o contraste sin garantizar simultaneidad. El distractor más cercano invierte esa relación, errando sobre la exigencia de simultaneidad.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Ante un incendio iniciado en un equipo eléctrico en un plató, ¿cuál es la actuación prioritaria compatible con clases de fuego y seguridad eléctrica?",
+          "options": [
+            "Intentar retirar el equipo energizado con las manos para alejar el foco del resto del material.",
+            "Aplicar agua con extintores a presión para enfriar inmediatamente el equipo y minimizar propagación.",
+            "Cortar la alimentación eléctrica del equipo si es seguro hacerlo y extinguir con extintor de CO2 o polvo adecuado; evacuar zonas si procede.",
+            "Apagar el incendio únicamente con mantas húmedas sin cortar la alimentación, para evitar chispas al desconectar."
+          ],
+          "correctIndex": 2,
+          "explanation": "En incendios eléctricos la prioridad es aislar la fuente (cortar alimentación) y emplear agentes no conductores (CO2 o polvo). Usar agua o manipular equipos energizados resulta peligroso; la diferencia clave es la necesidad de aislar la alimentación y usar extintores adecuados.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: un micrófono reproduce un zumbido de 50 Hz que aumenta al tocar carcasas metálicas. ¿Cuál es la causa más probable y cómo diagnosticarla operativamente?",
+          "options": [
+            "Interferencia RF procedente de un transmisor cercano; diagnosticar alejando equipos inalámbricos y comprobando antenas.",
+            "Error de conversor A/D en la mesa que introduce 50 Hz; diagnosticar cambiando la fuente de audio por otra sin pasar por la mesa.",
+            "Bucle de masa entre equipos con diferentes referencias a tierra; diagnosticar desconectando/comprobando conexiones de masa y eligiendo una conexión balanceada o un aislamiento galvanico.",
+            "Saturación por sobrenivel digital en la cadena de grabación; diagnosticar reduciendo ganancia de entrada."
+          ],
+          "correctIndex": 2,
+          "explanation": "El zumbido a 50/60 Hz que varía al tocar carcasas es característico de un bucle de masa; el diagnóstico operativo pasa por comprobar puestas a tierra, usar conexiones balanceadas o aislamiento galvánico. Los otros distractores describen causas distintas (fallo A/D, RF, saturación) que no encajan con el síntoma táctil y de frecuencia.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe mejor la adecuación de black burst y tri‑level sync según resolución y sincronización de la cadena:",
+          "options": [
+            "Black burst tiene mejor precisión temporal que tri‑level en cadenas HD debido a su componente DC estable.",
+            "Tri‑level es preferible en SD por su simplicidad eléctrica, mientras que black burst es obligatorio en HD por compatibilidad con SDI.",
+            "Ambos son intercambiables en cualquier cadena sin impacto en sincronización ni jitter, bastando un conversor simple.",
+            "Black burst es apropiado para señales SD y ofrece sincronismo basado en pulso de referencia con componente de vuelta a cero; tri‑level es adecuado para HD/HD‑SDI por su menor componente DC y mayor precisión temporal."
+          ],
+          "correctIndex": 3,
+          "explanation": "Black burst se usa históricamente en SD; tri‑level aporta mayor precisión temporal y menor componente DC, por eso se emplea en HD/HD‑SDI. Los distractores equivocan compatibilidad o afirman intercambiabilidad sin considerar requisitos de jitter y timing.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: al sincronizar múltiples cámaras por forma de onda de audio, ¿qué condición limita más la fiabilidad del emparejamiento automático?",
+          "options": [
+            "Baja relación señal/ruido o reverberación que impide obtener un patrón de onda correlacionable entre fuentes.",
+            "Diferencias de códec entre cámaras (Intra vs Long‑GOP), que siempre impiden cualquier algoritmo de sincronización por audio.",
+            "Ausencia de timecode en las cámaras, que por sí sola hace imposible la sincronización por audio.",
+            "Uso de micrófonos distintos en cada cámara, que garantiza la imposibilidad de correlación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La limitación principal del emparejamiento automático por forma de onda es una señal de audio con bajo S/N o ecos que impiden la correlación; las diferencias de códec o ausencia de TC no anulan la posibilidad de sincronizar por audio si la onda es clara, y usar micrófonos distintos no excluye correlación si capturan la misma fuente con suficiente relación señal/ruido.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Indique qué aspecto estructural del formato XDCAM puede afectar al acceso fiable en sistemas de archivo más allá de conservar carpetas e índices:",
+          "options": [
+            "La posibilidad de spanning: un clip puede fragmentarse en varios archivos consecutivos y requiere interpretar metadatos embebidos para reconstruir la esencia completa.",
+            "Que XDCAM solo almacena metadatos en un servidor central y no en el propio medio, por lo que el soporte es autocontenido.",
+            "Que XDCAM emplea un contenedor propietario que impide cualquier lectura por herramientas compatibles con MXF.",
+            "Que XDCAM obliga a transcodificar todos los clips a codecs intraframe para su reproducción en estaciones de edición."
+          ],
+          "correctIndex": 0,
+          "explanation": "XDCAM puede fragmentar clips (spanning) requiriendo reconstrucción mediante metadatos; las otras afirmaciones son incorrectas: XDCAM almacena metadatos en el medio (no solo en servidor), utiliza MXF u otros wrappers compatibles y no obliga a transcodificar por norma.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: ¿qué afirmación resume con mayor precisión las fuentes y principios del modelo de financiación de RTVE según la Ley 8/2009?",
+          "options": [
+            "Autofinanciación mediante venta de activos y cesión de derechos, sin normas que aseguren continuidad presupuestaria.",
+            "Financiación exclusiva por publicidad sin participación presupuestaria del Estado y sin límite en la comercialización de espacios.",
+            "Modelo de financiación basado únicamente en suscripciones individuales de espectadores y sin recursos públicos.",
+            "Financiación basada principalmente en aportaciones públicas estables complementadas por recursos propios, con principios de suficiencia, transparencia y restricciones legales sobre fórmulas comerciales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley configura un modelo con aportaciones públicas estables más ingresos propios bajo principios de suficiencia y restricciones comerciales; las otras opciones describen modelos exclusivos (publicidad, suscripción o venta de activos) que no reflejan el carácter mixto y regulado del modelo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_color_order",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes secuencias y señale el orden operativo correcto en una sesión de colorización:",
+          "options": [
+            "Matching entre planos → aplicación de LUT creativa → normalización → corrección primaria.",
+            "Aplicación del look creativo → matching entre planos → corrección primaria → balance → normalización.",
+            "Normalización/legalización → balance de blancos/neutralización → corrección primaria (contraste/gamma) → matching entre planos (skin tone) → aplicación del look creativo.",
+            "Corrección primaria → normalización → balance de blancos → aplicación del look creativo → matching."
+          ],
+          "correctIndex": 2,
+          "explanation": "El orden correcto arranca por normalizar/legalizar y neutralizar, luego realizar corrección primaria (niveles/contraste), después matching (tonos de piel) y finalmente aplicar el look creativo. Las otras opciones alteran ese flujo operativo esencial.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: un archivo grabado a 22,05 kHz presenta ausencia de agudos y posible ruido si no se aplicó filtro antialias. ¿Cuál es la explicación técnica correcta?",
+          "options": [
+            "La grabación a 22,05 kHz captura todo el espectro audible sin necesidad de filtros, por lo que la pérdida de agudos es consecuencia de la compresión únicamente.",
+            "La frecuencia de Nyquist es 11,025 kHz, por lo que el muestreo captura hasta esa frecuencia; resultará pérdida de frecuencias por encima y riesgo de aliasing si no se aplicó filtrado anti‑alias.",
+            "Muestrear a 22,05 kHz duplica la banda audible y elimina cualquier posibilidad de aliasing sin filtros.",
+            "La frecuencia de Nyquist es igual a la frecuencia de muestreo, por tanto no hay pérdida de agudos al registrar a 22,05 kHz."
+          ],
+          "correctIndex": 1,
+          "explanation": "Nyquist establece que la banda máxima reproducible es la mitad de la frecuencia de muestreo (11,025 kHz), por eso hay pérdida de agudos y riesgo de aliasing sin filtro anti‑alias. Los distractores confunden Nyquist o niegan la necesidad de filtrado.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_umid",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes funciones y señale la que corresponde operativamente a un UMID embebido:",
+          "options": [
+            "Identificar de manera persistente y única un elemento de esencia audiovisual a lo largo de sistemas y procesos para facilitar trazabilidad y referenciación.",
+            "Proporcionar un algoritmo de checksum para verificar bit a bit la integridad del fichero durante transferencias.",
+            "Almacenar la LUT de visualización y parámetros de etalonaje aplicados al clip.",
+            "Garantizar la compatibilidad de códec entre estaciones de edición mediante un identificador de formato."
+          ],
+          "correctIndex": 0,
+          "explanation": "El UMID es un identificador único persistente para trazar y referenciar un elemento audiovisual; no es un checksum ni contiene LUTs ni garantiza compatibilidad de códec. La diferencia decisiva es su función de identificación, no de verificación o de contener parámetros creativos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_en_mision",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En un desplazamiento profesional (misión), ¿qué medida constituye una obligación prioritaria del empleador compatible con la prevención de riesgos?",
+          "options": [
+            "Exigir al trabajador que asuma la responsabilidad de la seguridad del equipo técnico sin intervención de la empresa.",
+            "Permitir al trabajador decidir libremente si aplica medidas preventivas sin comunicación previa por parte de la empresa.",
+            "Limitarse a cubrir económicamente el desplazamiento sin realizar evaluación de riesgos ni información específica.",
+            "Evaluar riesgos del lugar, informar y formar al trabajador sobre condiciones y proporcionar medios de protección y coordinación antes del desplazamiento."
+          ],
+          "correctIndex": 3,
+          "explanation": "La responsabilidad del empleador en misión incluye evaluar riesgos, informar y proporcionar medidas de protección; las otras opciones delegan responsabilidad en el trabajador o omiten la evaluación, lo que no es compatible con la prevención.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_xavc",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a diferencias entre XAVC Intra y Long‑GOP, sus perfiles y aplicaciones:",
+          "options": [
+            "XAVC Long‑GOP garantiza siempre edición cuadro‑a‑cuadro sin necesidad de reconformado ni impacto al cortar P/B frames.",
+            "XAVC Long‑GOP usa predicción entre fotogramas (interframe) para reducir bitrate, siendo adecuado para grabación prolongada con menor tasa de datos.",
+            "Los perfiles profesionales XAVC incluyen variantes de alto perfil y distintos niveles de resolución y crominancia adaptadas a producción y emisión.",
+            "XAVC Intra codifica cada fotograma de forma independiente (intraframe) y resulta preferible en gradación y edición intensiva por su mayor bitrate por frame."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción (afirmación incorrecta) es que Long‑GOP garantiza edición cuadro‑a‑cuadro sin impacto; en realidad Long‑GOP complica la edición cuadro‑a‑cuadro por la dependencia entre frames, lo que puede exigir reconformado o proxies. Las otras opciones describen características reales de Intra, Long‑GOP y perfiles.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al flujo de 'growing files' en directos, su disponibilidad y cierre de esencia:",
+          "options": [
+            "Durante la grabación en crecimiento, parte de la esencia puede estar disponible para lectura, pero ciertos contenedores no finalizan metadatos hasta el cierre del fichero.",
+            "Los sistemas pueden permitir reproducción parcial del fichero mientras sigue creciendo, con limitaciones en la consistencia de índices hasta el cierre definitivo.",
+            "Los ficheros en crecimiento siempre garantizan timecode y estructura final válidos para reconformado antes de su cierre definitivo.",
+            "El proceso de cierre/finalización del fichero es determinante para disponer de índices completos y metadatos fiables para archivado."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación excepcional y falsa es que los growing files siempre garantizan timecode y estructura finales antes del cierre; en muchos contenedores esos elementos no están completos hasta finalizar el fichero. Las demás opciones describen límites y la importancia de la finalización.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Indique la formulación que sintetiza con mayor precisión el principio constitucional de igualdad y la prohibición de discriminación:",
+          "options": [
+            "Limitación de las libertades individuales para garantizar uniformidad de resultados entre ciudadanos.",
+            "Igualdad formal absoluta que prohíbe cualquier diferencia de trato entre individuos en cualquier circunstancia, sin admitir medidas correctoras.",
+            "Preferencia de trato por criterios económicos y de productividad frente a consideraciones de igualdad, en aras del interés general.",
+            "Igualdad de trato y prohibición de discriminación por razón de nacimiento, raza, sexo, religión, opinión o cualquier otra condición o circunstancia personal o social, permitiendo medidas de acción positiva para corregir desigualdades."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Constitución proclama igualdad y prohibición de discriminación por las causas citadas, y admite medidas positivas para corregir desigualdades; las otras opciones o eliminan acciones positivas o tergiversan el principio constitucional.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: en un plan de preservación para evitar obsolescencia, ¿cuál es la medida operativa prioritaria?",
+          "options": [
+            "Comprimir los masters al máximo para ahorrar espacio y evitar migraciones futuras.",
+            "Conservar indefinidamente los soportes originales sin copia ni verificación y confiar en su durabilidad física.",
+            "Depender exclusivamente de emulación de software antiguo sin migrar formatos ni verificar integridad.",
+            "Programar migraciones periódicas a soportes o formatos actuales acompañadas de verificación (checksums) y registros de integridad tras cada operación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La medida prioritaria es la migración periódica a soportes/formats actuales con verificación y registros; conservar originales sin verificar o depender solo de emulación o compresión extrema no mitiga la obsolescencia ni garantiza integridad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Durante una sesión de etalonaje se emplea el vectorscopio para evaluar tonos de piel en la cadena de producción. Señale la afirmación que constituye una excepción respecto a las prestaciones y límites operativos de la línea de tono de piel en el vectorscopio:",
+          "options": [
+            "Si el clúster de piel queda alineado con la línea de tonos de piel en el vectorscopio, eso garantiza que los tonos serán colorimétricamente correctos y reproducidos idénticamente en todos los displays de destino.",
+            "La línea de tono de piel indica el ángulo (hue) típico donde suelen agruparse las muestras de piel; la distancia al centro refleja la saturación, por lo que sirve para comprobar consistencia cromática entre planos.",
+            "La posición de la muestra de piel en el vectorscopio depende de la matriz de color, el balance de blancos y la iluminación; por ello la línea es una referencia relativa dentro de una misma cadena de captura/etalonaje, no un estándar absoluto.",
+            "Desplazamientos hacia el centro a lo largo de la línea implican reducción de croma (desaturación); desplazamientos perpendiculares a la línea indican un cambio de matiz (hue) que normalmente requiere corrección de balance de blancos o ajuste de matiz."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta (índice 1) es la excepción porque la alineación con la línea de tonos de piel en un vectorscopio no garantiza por sí sola precisión colorimétrica ni reproducción idéntica en todos los displays: la apariencia final depende además de luminancia, gama, calibración del monitor, el espacio de color, la matriz de la cámara y la iluminación/maquillaje. Las otras opciones describen límites y usos reales: la A explica ángulo y saturación; la C recuerda que es una referencia relativa afectada por balance y matriz; la D distingue correctamente entre variaciones de croma (radiales) y de matiz (perpendiculares). La diferencia más próxima es D, que es verdadera y trata la interpretación geométrica en el vectorscopio, mientras que la afirmación marcada como excepción atribuye una garantía que el instrumento no puede ofrecer.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: tras reempaquetar un master sin alterar la esencia audiovisual pero cambiando metadatos, ¿qué límite operativo tiene un checksum para validar que el contenido es 'equivalente' antes y después?",
+          "options": [
+            "Un checksum es capaz de reconstruir metadatos perdidos y por tanto validar trazabilidad completa tras reempaquetado.",
+            "Un checksum puede certificar equivalencia funcional entre dos archivos aunque difieran metadatos, siempre que la esencia sea perceptualmente igual.",
+            "Un checksum valida identidad a nivel bit a bit; detectará cualquier cambio en contenedor o metadatos y no prueba equivalencia semántica si solo cambian metadatos.",
+            "Un checksum ignora los cambios en estructura del contenedor y solo compara pistas de audio/vídeo."
+          ],
+          "correctIndex": 2,
+          "explanation": "El checksum comprueba identidad bit a bit; si cambian contenedor o metadatos el checksum cambia, por lo que no puede por sí solo probar equivalencia semántica. Los distractores atribuyen propiedades que no tiene un checksum (equivalencia funcional, reconstrucción de metadatos o ignorar contenedor).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: para comprimir una secuencia rutinaria manteniendo comprensión mediante una elipsis, ¿qué recurso editorial es compatible con ese objetivo?",
+          "options": [
+            "Eliminar arbitrariamente planos sin ninguna pista sonora o visual que indique salto temporal para acelerar la secuencia.",
+            "Seleccionar momentos representativos y enlazarlos con cortes apoyados en continuidad sonora (J‑cut/L‑cut), planos de establishing o recursos gráficos que señalen el paso del tiempo.",
+            "Sustituir la escena por un único plano estático sin información adicional ni soporte sonoro.",
+            "Aplicar siempre aceleración (time‑lapse) del plano original sin cortes ni indicadores de continuidad."
+          ],
+          "correctIndex": 1,
+          "explanation": "Una elipsis eficaz conserva comprensión seleccionando momentos clave y conectándolos con continuidad sonora, establishing shots o gráficos que indiquen tiempo; cortar sin pistas o usar un plano estático sin soporte informativo rompe la comprensión. El time‑lapse puede usarse, pero no siempre mantiene la continuidad narrativa sin recursos de soporte.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare y señale la secuencia correcta de operaciones en una ingesta verificada para garantizar integridad de la esencia y trazabilidad:",
+          "options": [
+            "Generar checksums en origen → borrar originales → copiar a destino sin validar estructura → añadir metadatos.",
+            "Copiar ficheros al destino → generar checksums → validar la estructura del contenedor (timecode y pistas) → registrar metadatos e informe de ingesta.",
+            "Validar estructura del contenedor en origen → copiar sin checksums → generar informe al final del día.",
+            "Copiar ficheros al destino → exportar directamente a archivo sin comprobaciones → generar checksums solo si hay incidencias."
+          ],
+          "correctIndex": 1,
+          "explanation": "La secuencia correcta es copia → generación de checksums → validación de contenedor → registro en informe. Las otras opciones omiten pasos críticos o los ordenan mal, comprometiendo la detección de errores y la trazabilidad.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "064",
       "title": "Examen 064",
