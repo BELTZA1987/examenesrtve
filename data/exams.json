@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-02",
+  "updatedAt": "2026-10-03",
   "exams": [
+    {
+      "id": "066",
+      "title": "Examen 066",
+      "date": "2026-10-03",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la finalidad esencial de la reforma introducida por la Ley 5/2017 y cuál fue la consecuencia principal en el procedimiento de designación de los órganos de dirección de RTVE.",
+          "options": [
+            "Trasladar la gestión operativa a la Administración general del Estado para centralizar decisiones informativas en el Gobierno.",
+            "Restituir la independencia y pluralismo de la Corporación y establecer la elección de sus órganos por las Cortes Generales con quórums reforzados para reducir la designación partidista.",
+            "Privatizar parcialmente servicios y permitir que el Ejecutivo nombrara libremente a la mayor parte de los consejeros.",
+            "Mantener la estructura previa sin cambios en el procedimiento de nombramiento, limitando la reforma a aspectos organizativos internos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 5/2017 buscó reforzar la independencia y el pluralismo institucional de RTVE; para ello recuperó la elección parlamentaria de sus órganos implicando que las Cortes Generales intervienen en el nombramiento con mayorías cualificadas. Los distractores confunden con centralización gubernamental, privatización o ausencia de cambio, que no reflejan la finalidad ni el mecanismo real.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_offline_online",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En un flujo offline/online, ¿qué elemento contiene las decisiones cronológicas y referencias necesarias para reconformar un montaje realizado sobre proxies a los originales?",
+          "options": [
+            "Sólo una copia local de los archivos originales en la estación de edición offline.",
+            "Los propios ficheros proxy renombrados con el mismo nombre exacto que los originales.",
+            "Una lista de decisiones (EDL/AAF) que incluya timecodes o identificadores de origen y handles.",
+            "Un checksum de cada proxy sin referencias temporales al material original."
+          ],
+          "correctIndex": 2,
+          "explanation": "La reconformación exige una lista de decisiones (EDL/AAF/XML) con timecodes o identificadores de origen para localizar los planos en la esencia original. Renombrar proxies, copias locales o checksums sin referencias temporales no permiten localizar ni sincronizar fotogramas para reconformado; el distractor más próximo es el renombrado, que no garantiza coincidencia de timecode/UMID.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a efectos de mezclar cadencias y métodos habituales de conversión entre frame rates.",
+          "options": [
+            "Mezclar 25p y 29,97p sin conversión provoca artifacts de movimiento (judder) y saltos temporales perceptibles.",
+            "La conversión mediante frame‑blending puede suavizar movimiento pero introduce ghosting en objetos en desplazamiento.",
+            "La conversión 24→25 mediante aceleración (speed‑up) altera la duración y afecta al tono de audio si no se corrige.",
+            "Aplicar un simple re‑sampleo uniforme de frames garantiza siempre conservar la percepción original de movimiento sin artefactos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La última afirmación es la excepción: un re‑sampleo uniforme no garantiza evitar artefactos; en muchos casos produce judder, duplicados u omisiones. Las otras describen efectos reales: judder entre cadencias, ghosting por frame‑blend y alteración de duración/tono en speed‑up.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En la interfaz SDI, ¿cómo se integran técnicamente la señal de vídeo, el audio embebido y los datos auxiliares (ANC)?",
+          "options": [
+            "SDI sólo transporta vídeo; audio y ANC deben multiplexarse en un transporte TS sobre SDI para coexistir.",
+            "Vídeo y audio se transmiten por separado en dos pares diferentes y los datos auxiliares se insertan fuera de la interfaz SDI.",
+            "El audio siempre se transmite por AES/EBU paralelo al SDI y los datos auxiliares requieren un canal IP adicional.",
+            "La imagen viaja como líneas de la trama en el flujo serial; el audio se embebe en paquetes definidos dentro del espacio ANC y los datos auxiliares (VANC/HANC) transportan metadatos y subtítulos."
+          ],
+          "correctIndex": 3,
+          "explanation": "SDI transporta vídeo en el flujo serial, el audio puede ir embebido en sub‑paquetes definidos dentro del espacio ANC y los datos auxiliares se colocan en VANC/HANC. Las opciones que separan audio por AES o requieren TS son incorrectas para la especificación SDI estándar.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En términos operativos, ¿qué interpretación describe mejor la ventaja y la limitación de CBR frente a VBR para emisión en tiempo real y para almacenamiento?",
+          "options": [
+            "CBR garantiza uso constante de ancho de banda, adecuado para emisión en tiempo real con requisitos de entrega estables; VBR optimiza calidad y espacio para archivo pero introduce variaciones de bitrate que complican la transmisión en tiempo real.",
+            "VBR es siempre preferible en emisión en directo porque adapta el bitrate a la complejidad de la escena y evita pérdidas.",
+            "CBR ofrece siempre mayor calidad que VBR al mantener el mismo promedio de bitrate.",
+            "VBR reduce la necesidad de buffers en la red y por tanto disminuye la latencia en streaming en todos los casos."
+          ],
+          "correctIndex": 0,
+          "explanation": "CBR mantiene un flujo constante de datos, lo que facilita dimensionar enlaces para emisión en tiempo real; VBR mejora la eficiencia calidad/espacio en almacenamiento pero su variabilidad puede causar picos que afectan la transmisión. Los distractores atribuyen ventajas universales a VBR o CBR que no se sostienen operativamente.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Respecto al intercambio de proyectos entre estaciones, señale la diferencia operativa más precisa entre un EDL y un AAF.",
+          "options": [
+            "Un AAF es un formato más primitivo que sólo exporta nombres de clips sin timecodes, mientras que el EDL incluye metadatos extensos.",
+            "Un EDL transporta automatizaciones de plugins y parámetros de efectos con plena fidelidad y un AAF sólo indica cortes simples.",
+            "Un EDL contiene una lista básica de cortes y timecodes con limitaciones en pistas, transiciones y efectos; un AAF puede transportar múltiples pistas, referencias a los archivos de origen, efectos, handles y metadatos más detallados.",
+            "EDL y AAF son funcionalmente equivalentes en cuanto a transferencia de efectos, pistas y metadatos entre cualquier NLE."
+          ],
+          "correctIndex": 2,
+          "explanation": "El EDL ofrece una lista básica de decisiones con limitaciones (pocas pistas, transiciones simples); AAF está diseñado para transferir referencias a archivos, múltiples pistas, handles y metadatos y puede incluir efectos/parametrizaciones. Los distractores exageran capacidades del EDL o equiparan ambos formatos incorrectamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En EVS/IPDirector, respecto a la edición y publicación de una playlist, cuál de las siguientes afirmaciones describe mejor su compatibilidad operativa con la emisión y la edición posterior:",
+          "options": [
+            "Una playlist sólo almacena marcadores temporales sin definir transiciones; todas las transiciones se aplican en otro equipo.",
+            "Una playlist puede contener el orden de reproducción y tipos de transición (cut/fade) y puede editarse y republicarse sin re‑codificar la esencia de los clips.",
+            "Editar una playlist obliga siempre a regrabar los clips en el servidor antes de su publicación.",
+            "Una playlist define únicamente parámetros de ingest y no influencia el orden o las transiciones en reproducción."
+          ],
+          "correctIndex": 1,
+          "explanation": "En EVS/IPDirector una playlist define orden y transiciones y puede modificarse sin re‑codificar la esencia; las otras opciones niegan capacidades reales de playlist o confunden ingest y reproducción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Según el II Plan de Igualdad y la Guía de Igualdad de RTVE, ¿cuál de estas medidas es la más adecuada y coherente para prevenir representaciones sexistas y el uso de un lenguaje no inclusivo en los contenidos?",
+          "options": [
+            "Limitar la intervención a acciones formativas para recursos humanos sin incorporar controles editoriales específicos en programación.",
+            "Prohibir cualquier contenido que incluya personajes con roles estereotipados sin posibilidad de evaluación editorial.",
+            "Implementar revisión editorial previa a emisión con criterios y listas de control de lenguaje y representación no sexista y formación para guionistas y equipos de producción.",
+            "Aplicar cuotas rígidas de presencia femenina en pantalla independientemente del contenido o contexto editorial."
+          ],
+          "correctIndex": 2,
+          "explanation": "El Plan y la Guía promueven medidas activas combinando formación y control editorial para prevenir representaciones sexistas; las alternativas proponen medidas extremas, insuficientes o poco acordes con el enfoque de prevención y corrección editorial.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Un monitor indica consumo de 0,5 A a 12 V y está conectado a una regleta con fusible. Calcule la potencia consumida y la resistencia equivalente del aparato. Señale la pareja correcta.",
+          "options": [
+            "P=120 W; R=24 Ω.",
+            "P=0,06 W; R=6 Ω.",
+            "P=6,0 W; R=60 Ω.",
+            "P=6,0 W; R=24 Ω."
+          ],
+          "correctIndex": 3,
+          "explanation": "P=V·I=12·0,5=6 W. R=V/I=12/0,5=24 Ω. Los otros valores son operaciones incorrectas o unidades mal aplicadas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las características y tolerancia a fallos de niveles RAID comunes y su reconstrucción.",
+          "options": [
+            "RAID0 reconstruye los datos automáticamente tras sustituir un disco defectuoso manteniendo la integridad del conjunto.",
+            "RAID1 proporciona espejo y permite funcionamiento con un disco averiado, reconstruyendo desde la copia espejo.",
+            "RAID5 tolera la falla de un disco y reconstruye datos mediante paridad distribuida.",
+            "RAID0 ofrece rendimiento pero no tolerancia a fallos; la pérdida de un disco provoca pérdida irrecuperable de datos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación sobre RAID0 reconstruyendo datos es falsa: RAID0 no ofrece redundancia y no permite reconstrucción tras pérdida de un disco. Las demás describen correctamente RAID1 y RAID5.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_matchframe",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto al comando Match Frame en un NLE, indique la afirmación que describe con mayor precisión sus límites operativos y variantes de aplicación.",
+          "options": [
+            "Match Frame siempre localiza el archivo por nombre de fichero independientemente de la metadata de timecode.",
+            "Match Frame localiza el fotograma origen cuando el proyecto conserva referencias de source timecode o identificadores (UMID); falla si esos metadatos se han perdido o al consolidar/clipear sin conservar el timecode original.",
+            "Match Frame reconstruye automáticamente efectos aplicados en el timeline y los reexpone en el clip fuente fuera del proyecto.",
+            "Match Frame funciona entre proyectos distintos y NLEs distintos sin ninguna condición adicional."
+          ],
+          "correctIndex": 1,
+          "explanation": "Match Frame depende de referencias al source timecode/UMID presentes en el proyecto; si esas referencias se pierden (consolidación que altera timecode, renombre sin metadatos) no podrá localizar el fotograma. Los distractores elevan capacidades inexistentes: localización por nombre, reconstrucción de efectos o interoperabilidad universal.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare HDR y SDR: ¿qué afirmación presenta con mayor precisión sus diferencias en rango dinámico, luminancia y compatibilidad de visualización?",
+          "options": [
+            "HDR admite un rango dinámico y picos de luminancia superiores y suele requerir mapeo o metadata para conservar intención en displays SDR; SDR tiene rango y luminancia más limitados y es más homogéneo en displays convencionales.",
+            "SDR soporta mayor luminancia pico que HDR por definición.",
+            "HDR es siempre compatible con cualquier televisor SDR sin necesidad de conversión.",
+            "SDR puede representar colores fuera de gamut Rec.709 cuando se reproduce en pantallas HDR sin transformación."
+          ],
+          "correctIndex": 0,
+          "explanation": "HDR ofrece mayor rango dinámico y picos de luminancia; para emitir o mostrar en SDR es necesario aplicar mapeo/gamut mapping para preservar la intención creativa. Las demás afirmaciones contradicen las propiedades técnicas conocidas de HDR/SDR.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: durante selección en un flujo XDCAM, los proxies muestran cortes correctos pero el reconformado a la esencia de alta resolución omite algunos fotogramas. ¿Cuál es la causa operativa más probable?",
+          "options": [
+            "Los proxies fueron generados sin preservar el timecode o los identificadores de origen (UMID) —p. ej. tras operaciones de spanning o reenvoltura— impidiendo la localización exacta en la esencia.",
+            "La esencia de alta resolución tiene distinta profundidad de color y eso elimina fotogramas al reconformar.",
+            "Los proxies, por ser de menor resolución, se reproducen a distinta velocidad y provocan omisión de fotogramas en reconformado.",
+            "La causa más probable es corrupción del códec del proxy que cambia el GOP y elimina frames."
+          ],
+          "correctIndex": 0,
+          "explanation": "La causa más habitual cuando proxies y esencia no casan es que los proxies no conserven timecode/UMID o índices originales (por spanning, rewraps o generación incorrecta), impidiendo localizar fotogramas exactos. Las otras opciones atribuyen el problema a diferencias de color, velocidad o corrupción de códec, que son menos coherentes con omisión selectiva de fotogramas en reconformado.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Respecto a la continuidad sonora en montaje, ¿qué comportamiento caracteriza operativamente a un J‑cut frente al otro tipo de corte complementario?",
+          "options": [
+            "El J‑cut modifica exclusivamente la imagen sin afectar al tratamiento del audio.",
+            "El audio del plano saliente se mantiene después del corte para prolongar la atmósfera del plano anterior.",
+            "Ambos cortes implican siempre silencio entre planos para mejorar contraste dramático.",
+            "El audio del plano entrante comienza antes del corte de imagen, anticipando la siguiente toma y sirviendo de gancho auditivo."
+          ],
+          "correctIndex": 3,
+          "explanation": "El J‑cut se caracteriza porque el audio del plano siguiente entra antes del cambio de imagen (gancho auditivo). La segunda opción describe el comportamiento opuesto; las últimas son incorrectas porque niegan la función sonora del J‑cut o confunden práctica editorial.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En relación con el III Convenio Colectivo, ¿qué afirmación describe con mayor precisión la función de la clasificación profesional y la 'ocupación tipo'?",
+          "options": [
+            "La clasificación organiza al personal en grupos profesionales y las 'ocupaciones tipo' definen funciones, responsabilidades y niveles salariales referenciales para asignación y organización del trabajo.",
+            "La clasificación sólo regula horarios y descansos sin relación con funciones ni niveles salariales.",
+            "Las 'ocupaciones tipo' son meras sugerencias sin efectos en la organización del trabajo ni retribución.",
+            "El Convenio delega la clasificación profesional exclusivamente en los comités de empresa sin criterios técnicos."
+          ],
+          "correctIndex": 0,
+          "explanation": "El Convenio clasifica al personal por grupos profesionales y las ocupaciones tipo describen funciones y niveles que sirven para asignar tareas y retribución. Las otras opciones niegan o deforman su función real.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En términos de componentes y sus consecuencias prácticas para tratamiento y compresión de imagen, ¿qué afirmación describe con mayor precisión la diferencia entre RGB y YCbCr?",
+          "options": [
+            "YCbCr es simplemente una reordenación matemática de RGB sin ventajas intrínsecas para compresión; su uso en transmisión es fruto de conveniencia histórica.",
+            "RGB incorpora una componente de luminancia interna que los compresores usan para reducir la resolución de color sin pérdida de detalle; YCbCr expresa intensidad y saturación en canales separados, por eso se utiliza en etalonaje.",
+            "RGB codifica directamente las tres primarias (R, G, B) manteniendo resolución y relación de color canal a canal, lo que facilita la corrección creativa; YCbCr separa una componente de luminancia (Y) y dos diferencias de color (Cb, Cr), permitiendo chroma‑subsampling y una cuantización más agresiva de la crominancia en compresión.",
+            "RGB distribuye la información de luminancia entre los tres canales por lo que es más tolerante a pérdidas; YCbCr concentra la luminancia en Y y por tanto es más sensible a errores en ese canal durante etalonaje."
+          ],
+          "correctIndex": 2,
+          "explanation": "Respuesta correcta: opción A. RGB representa las tres componentes primarias por separado y se emplea en etalonaje porque conserva la resolución de cada canal y el control directo sobre las aportaciones de R, G y B; YCbCr separa luminancia (Y) de diferencias de crominancia (Cb, Cr), lo que permite aplicar chroma‑subsampling (por ejemplo 4:2:2 o 4:2:0) y asignar mayor tasa o menor cuantización a Y que a Cb/Cr durante la compresión, aprovechando la menor sensibilidad humana a detalle cromático. Por qué las otras son incorrectas: B confunde los roles: RGB no “incorpora” una componente de luminancia usada por compresores ni hace de YCbCr la opción natural para etalonaje; C es falso porque la conversión a YCbCr sí aporta ventajas prácticas para compresión (separación luminancia/crominancia); D mezcla hechos parciales (es cierto que Y concentra la luminancia) pero la conclusión es errónea: RGB no resulta necesariamente «más tolerante» a pérdidas en el contexto de compresión/etalonaje —de hecho, la estructura YCbCr permite controlar mejor la fidelidad de luminancia frente a crominancia— y los flujos profesionales usan RGB en corrección precisamente por preservar información por canal, no por una supuesta tolerancia a errores.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_target",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para adaptar el estilo de edición de un magazine al público juvenil, indique la combinación de ajustes operativos más adecuada.",
+          "options": [
+            "Usar transiciones lentas y abundante voz en off para compensar menor experiencia visual del target.",
+            "Reducir ritmo y mantener planos largos con escasos recursos gráficos para priorizar profundidad analítica.",
+            "Eliminar cualquier recurso sonoro que distraiga y preferir textos largos en pantalla para explicar contenido.",
+            "Aumentar ritmo (cortes cortos), densidad visual con grafismos dinámicos y capas sonoras activas que refuercen la atención sin saturar el contenido."
+          ],
+          "correctIndex": 3,
+          "explanation": "Para público juvenil es habitual aumentar ritmo, densidad visual y recursos sonoros/graphics con cortes más frecuentes; las otras opciones reducen dinamismo u ofrecen recursos poco adecuados al target.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Un editor se queja de deslumbramiento en la pantalla y tensión cervical tras jornadas prolongadas. Indique la modificación de colocación y control de iluminación que mejor responde a las recomendaciones operativas para pantallas de visualización de datos en cuanto a distancia, altura e inclinación, orientación e iluminación/reflejos.",
+          "options": [
+            "Colocar el borde superior de la pantalla unos 20 cm por encima de la línea de visión, situarla a 40 cm del usuario, orientar la pantalla perpendicular a la ventana y aumentar la iluminación general para mejorar visibilidad.",
+            "Situar la pantalla a 50–70 cm de los ojos; colocar el borde superior ligeramente por debajo del nivel de los ojos (ligera inclinación de la pantalla para que la mirada descienda unos 10–20°); orientar la pantalla evitando que reciba luz directa de ventanas o luminarias; usar iluminación difusa y medidas antirreflejo (cortinas, difusores, control de luminarias).",
+            "Acercar la pantalla a 30–40 cm para ver más detalle; elevarla hasta que el centro de la pantalla quede a nivel de los ojos; orientar la pantalla hacia atrás respecto a la mesa y añadir iluminación puntual directa sobre la superficie de trabajo.",
+            "Mantener la pantalla a 80–100 cm para reducir parpadeos visuales; girarla 45° respecto al eje de visión para evitar ventanas; emplear iluminación puntual intensa detrás del monitor para crear contraste y minimizar reflejos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 2 es correcta porque cumple las recomendaciones operativas: distancia visual cómoda de 50–70 cm, borde superior de la pantalla ligeramente por debajo del nivel de los ojos para una ligera mirada descendente (≈10–20°) que reduce tensión cervical y ocular, orientación que evita recibir luz directa sobre la superficie de la pantalla y uso de iluminación difusa y control de fuentes (cortinas, difusores, regulación de luminarias) para minimizar reflejos. El distractor más próximo (opción 1) falla porque colocar el borde superior por encima del nivel de los ojos obliga a elevar la cabeza y aumentar la apertura palpebral (mayor sequedad y fatiga), situar la pantalla a 40 cm es excesivamente próxima para tareas de edición detallada, y orientar la pantalla perpendicular a una ventana provoca reflexión directa de la luz; además, incrementar la iluminación general sin controlar la dirección empeora el deslumbramiento.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: durante legalización automática de señal en salida de cadena se observan desplazamientos de tonos saturados y pérdida de viveza en planos extremos. ¿Cuál es la explicación operativa más precisa sobre la diferencia entre límites legales y la actuación del legalizer/limitador de gamut?",
+          "options": [
+            "El legalizer únicamente recorta luminancia sin afectar a la crominancia, por lo que no puede causar desplazamientos de tono.",
+            "Un legalizer limita valores fuera de gamut y puede comprimir o desplazar la saturación para cumplir límites legales; ese proceso puede alterar la percepción de color en tonos saturados si la limitación prioriza la estabilidad sobre la preservación de matiz.",
+            "El limitador de gamut siempre preserva tono y saturación original mediante clipping suave sin efectos perceptibles.",
+            "La solución es aumentar el gain de salida para compensar la pérdida de saturación que produce cualquier limitador."
+          ],
+          "correctIndex": 1,
+          "explanation": "El legalizer/limitador actúa sobre crominancia y luminancia para forzar valores legales; suele comprimir o desplazar saturación provocando pérdida de viveza o cambios de matiz en colores extremos. Las otras opciones niegan la acción sobre crominancia, aseguran preservación absoluta o proponen un remedio incorrecto.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "prl_postura",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe correctamente una configuración postural adecuada en un puesto de edición respecto a silla, apoyo lumbar, antebrazos y pies.",
+          "options": [
+            "Pies apoyados sólo en puntas para mejorar circulación, antebrazos elevados y muñecas en extensión sobre el teclado.",
+            "Silla en la máxima altura para favorecer postura erguida, sin apoyo lumbar para incentivar movimiento, antebrazos colgando para mayor libertad.",
+            "Silla ajustada en altura para que los pies estén apoyados en el suelo, soporte lumbar activo, antebrazos apoyados y paralelos al plano de trabajo, muñecas neutras.",
+            "Silla baja y reclinada al máximo para reducir presión lumbar y antebrazos sin apoyo para favorecer rapidez de escritura."
+          ],
+          "correctIndex": 2,
+          "explanation": "La configuración correcta incluye ajuste de altura con pies apoyados, apoyo lumbar, antebrazos apoyados y alineados al plano de trabajo y muñecas neutras. Las demás opciones describen posturas que aumentan riesgo musculoesquelético.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "065",
       "title": "Examen 065",
