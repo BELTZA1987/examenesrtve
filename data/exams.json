@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-03",
+  "updatedAt": "2026-10-04",
   "exams": [
+    {
+      "id": "067",
+      "title": "Examen 067",
+      "date": "2026-10-04",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Respecto a la función de servicio público atribuida a la Corporación RTVE por la Ley 17/2006, ¿cuál de las siguientes obligaciones debe regir prioritariamente la actividad informativa de la Corporación?",
+          "options": [
+            "Priorizar de forma exclusiva la promoción de la cultura e identidad nacionales frente a la pluralidad regional.",
+            "Maximizar la audiencia y los ingresos mediante una programación orientada a contenidos de alta audiencia y publicidad.",
+            "Garantizar la objetividad, la imparcialidad y el pluralismo en la información que emite.",
+            "Someter la línea informativa a directrices de las administraciones públicas para asegurar coherencia institucional."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley 17/2006 atribuye a RTVE, en su función de servicio público, obligaciones relativas a la calidad informativa: objetividad, imparcialidad y pluralismo. Estas garantías informativas son criterios prioritarios frente a objetivos comerciales (opción B), no implican una exclusión de la pluralidad regional ni una prioridad exclusiva de la promoción nacional (opción C), y contrario a la opción D, la norma establece la independencia editorial frente a la tutela directa de las administraciones públicas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Respecto a la integración de cintas LTO con LTFS en un archivo a largo plazo:",
+          "options": [
+            "El acceso aleatorio es lento y depende de índice y catalogación externa, por lo que el catálogo y la verificación (checksums) son imprescindibles.",
+            "LTFS proporciona acceso inmediato equivalente a disco, por lo que no es necesario un índice externo ni verificación adicional.",
+            "La estructura LTFS impide la verificación de integridad mediante checksums; la verificación se realiza por copia visual de archivos.",
+            "Las cintas LTO no tienen limitación de ciclos de reescritura y pueden usarse indefinidamente sin políticas de migración."
+          ],
+          "correctIndex": 0,
+          "explanation": "La respuesta correcta señala la limitación operativa clave: acceso aleatorio lento y necesidad de catálogo y verificación. Los distractores afirman prestaciones incorrectas (acceso inmediato, imposibilidad de checksums, ausencia de límites de reescritura).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_waveform_luma",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál de las siguientes acciones es compatible con el uso del monitor de forma de onda para garantizar niveles legales de luminancia?",
+          "options": [
+            "Ajustar exposición o ganancia en origen para que los picos de luminancia no superen los límites y validar la salida con el monitor antes de emisión.",
+            "Aplicar únicamente una LUT de visualización sin modificar niveles, asumiendo que la LUT corregirá cualquier exceso de luminancia.",
+            "Realizar correcciones creativas de color sin consultar el monitor de forma de onda y confiar en la visualización del display.",
+            "Ignorar la forma de onda y utilizar solo el vectorscopio para controlar luminancia."
+          ],
+          "correctIndex": 0,
+          "explanation": "El waveform se usa para detectar picos de luminancia y obligar a corregir en origen o en la cadena; la opción correcta indica ajustar niveles y validar. Los distractores confunden visualización con legalización o utilizan instrumentos inapropiados para la tarea indicada.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al componer un gráfico con alpha premultiplicado que muestra halos claros en los bordes, la corrección operativa más adecuada es:",
+          "options": [
+            "Cambiar el modo de fusión de la capa a 'screen' para suavizar los bordes.",
+            "Aplicar un matte choke para expandir el borde del gráfico hasta eliminar el halo.",
+            "Incrementar la luminosidad de la capa de fondo para ocultar el halo.",
+            "Convertir el canal alpha a straight (no premultiplicado) o indicar al motor de composición que trate la imagen como premultiplicada antes de mezclar."
+          ],
+          "correctIndex": 3,
+          "explanation": "El halo suele deberse a color premultiplicado con fondo distinto; convertir a straight o marcar correctamente el tipo de alpha corrige el problema. Los distractores son medidas paliativas o inadecuadas que no solucionan la raíz (premultiplicado vs straight).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_metadatos",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia mínima para garantizar que los metadatos técnicos y descriptivos cumplen su función en catalogación, búsqueda e intercambio:",
+          "options": [
+            "Limitar metadatos a título y fecha para reducir complejidad, dejando descripción amplia para la gestión humana.",
+            "Guardar metadatos solo en una base de datos externa sin incluirlos en el contenedor; el MAM se encargará del resto.",
+            "Anotar metadatos en un documento aparte sin asociarlos al fichero; depender de búsqueda manual en el MAM.",
+            "Embebido en el contenedor con campos normalizados, indexado en el MAM, y exportado en formatos interoperables al transferir activos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La correcta incluye embebido normalizado, indexación y exportación interoperable, que permiten búsqueda y intercambio. Los distractores delegan o reducen metadatos comprometiendo trazabilidad e interoperabilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_red_ip",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estas acciones para diagnosticar falta de conectividad entre subredes sin cambiar la IP local. ¿Cuál describe mejor el diagnóstico inicial operativo?",
+          "options": [
+            "Deshabilitar la máscara y asignar una IP de otra subred para comprobar la conectividad directa.",
+            "Hacer ping a la puerta de enlace local y, si responde, lanzar traceroute al host remoto para localizar el salto que falla.",
+            "Ejecutar inmediatamente un formateo del adaptador de red para restablecer configuración y así resolver el problema.",
+            "Comprobar únicamente la dirección MAC del equipo remoto sin probar la puerta de enlace o rutas."
+          ],
+          "correctIndex": 1,
+          "explanation": "El diagnóstico inicial correcto es comprobar la puerta de enlace y, si existe respuesta, usar traceroute para localizar el salto con fallo. Los distractores proponen acciones erróneas, innecesarias o irrelevantes para el diagnóstico básico.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para aumentar el dinamismo percibido sin alterar la duración total de la pieza, la estrategia editorial más coherente es:",
+          "options": [
+            "Reducir uniformemente todos los planos a la mitad de su duración sin considerar continuidad ni movimiento interno.",
+            "Variar la duración de planos respetando los acentos de la acción y explotar movimiento interno para marcar puntos de corte.",
+            "Sustituir planos largos por planos fijos sin movimiento para dar sensación de rapidez.",
+            "Aumentar efectos de transición visuales entre planos en lugar de modificar duración."
+          ],
+          "correctIndex": 1,
+          "explanation": "Variar duración y alinear cortes con movimiento interno y acentos preserva comprensión y aumenta dinamismo. Los distractores rompen continuidad o aplican soluciones superficiales que no responden al ritmo interno/externo.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la obligación concreta impuesta por la Ley 13/2022 a los prestadores de servicios audiovisuales:",
+          "options": [
+            "Ofrecer medidas de accesibilidad como subtitulado, audiodescripción y lengua de signos en los contenidos señalados por la norma y facilitar controles parentales y clasificación por edades.",
+            "Eliminar cualquier restricción de acceso geográfico para maximizar audiencia internacional.",
+            "Sustituir la versión original por una traducción automática sin conservar la pista original.",
+            "Ofrecer exclusivamente subtítulos automáticos sin obligación de control de calidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley impone obligaciones concretas de accesibilidad (subtítulos, audiodescripción, LSE) y medidas de protección de menores; los distractores plantean acciones incompatibles o deficientes respecto a los requisitos legales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a funciones y cuellos de botella de CPU, GPU y RAM en postproducción:",
+          "options": [
+            "La CPU gestiona tareas secuenciales y coordinación de procesos, siendo cuellos de botella en operaciones de export y gestión de I/O.",
+            "La GPU acelera operaciones paralelas como efectos de pixel shading y rendering de frames, siendo crucial en etalonaje y efectos en tiempo real.",
+            "Incrementar la GPU siempre eliminará cuellos de botella relacionados con disco y red, mejorando por sí sola el rendimiento de almacenamiento compartido.",
+            "La RAM determina la capacidad de mantener múltiples capas, cachés y longitudes de timeline sin paginación al disco."
+          ],
+          "correctIndex": 2,
+          "explanation": "La excepción es la opción 3: la GPU no resuelve cuellos de botella de disco o red; esos dependen de I/O, red y subsistema de almacenamiento. Las otras opciones describen funciones y limitaciones correctas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Para dimensionar un servidor de vídeo destinado a servir múltiples usuarios simultáneos, la magnitud operativa que mejor determina el número máximo de accesos concurrentes es:",
+          "options": [
+            "El ancho de banda de salida agregado del servidor respecto al bitrate de los flujos atendidos.",
+            "La frecuencia de la CPU del servidor, independientemente del perfil de los códecs.",
+            "La cantidad de memoria RAM disponible exclusivamente para el sistema operativo.",
+            "La resolución del monitor conectado al servidor de ingest."
+          ],
+          "correctIndex": 0,
+          "explanation": "La capacidad de atender accesos concurrentes depende principalmente del ancho de banda agregado frente al bitrate por flujo. CPU y RAM influyen pero no son la magnitud determinante frente al cuello de red; el monitor es irrelevante.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_project_media",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a metadatos de proyecto frente a metadatos embebidos en los archivos de esencia:",
+          "options": [
+            "El nombre de una secuencia (sequence) dentro del proyecto es metadato de proyecto, no del archivo de esencia.",
+            "La organización en bins o carpetas es información perteneciente al proyecto y no al archivo de esencia.",
+            "La ruta del archivo proxy registrada en el proyecto es metadato del proyecto y puede diferir del contenedor original.",
+            "La marca de tiempo de creación interna del fichero embebido en el contenedor es un metadato del proyecto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 3 es la excepción: la marca de tiempo interna del fichero es metadato del archivo de esencia, no del proyecto. Las otras afirmaciones corresponden correctamente a metadatos de proyecto.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al uso y límites de ProRes y DNxHR como códecs intermedios:",
+          "options": [
+            "Ambos están pensados para postproducción ofreciendo perfiles con distinto rendimiento y calidad para edición y etalonaje.",
+            "Permiten conservar alta fidelidad de imagen y son ampliamente compatibles con suites de edición profesionales.",
+            "Se emplean para minimizar la degradación por recompressión durante múltiples pases de edición.",
+            "Siempre preservan metadatos broadcast y estructura de contenedor profesional sin variaciones entre implementaciones."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 2 (índice 2) es incorrecta: ProRes/DNxHR no garantizan idéntica preservación de metadatos broadcast ni estructura uniforme entre todas implementaciones; su soporte varía. Las demás afirmaciones describen usos reales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento mínimo que debe aplicar la empresa para cumplir obligaciones de información y formación en prevención:",
+          "options": [
+            "Delegar la formación a cada trabajador para que se forme de forma autodidacta y no llevar registros.",
+            "Informar verbalmente al personal en el primer día sin registro ni evaluación posterior.",
+            "Elaborar un plan de formación, impartir la formación documentada, evaluar la comprensión y dejar registro de las acciones realizadas.",
+            "Realizar formación solo cuando ocurra un accidente y archivar los documentos solo entonces."
+          ],
+          "correctIndex": 2,
+          "explanation": "La empresa debe planificar, impartir, evaluar y registrar la formación en PRL. Los distractores proponen prácticas insuficientes o reactivas que incumplen obligaciones legales.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Respecto al raccord de mirada y coherencia espacial entre planos, señale la afirmación más precisa:",
+          "options": [
+            "Basta que las cabezas miren en direcciones opuestas; la coherencia espacial no depende del eje de acción.",
+            "La continuidad exige mantener el eje de mirada y la dirección aproximada para que la posición relativa entre sujetos se perciba coherente.",
+            "Es irrelevante conservar la línea del horizonte al realizar raccords de mirada.",
+            "El raccord de mirada solo exige que la iluminación sea idéntica entre planos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La continuidad espacial se mantiene respetando el eje de acción y la dirección de la mirada; los otros distractores describen criterios irrelevantes o insuficientes.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál de las siguientes afirmaciones distingue con mayor precisión la relación entre libertad de expresión e información veraz y sus límites constitucionales?",
+          "options": [
+            "La Constitución protege la libertad de expresión e información pero admite límites para garantizar derechos como honor, intimidad, y el interés público; la veracidad informativa forma parte del deber responsable.",
+            "La Constitución concede libertad absoluta de información sin posibilidad de límites legales.",
+            "La veracidad informativa es una obligación solo para medios privados, no para entidades públicas.",
+            "La libertad de expresión excluye cualquier regulación sobre contenidos en el ámbito audiovisual."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta reconoce la protección constitucional de la libertad con límites para otros derechos y la responsabilidad sobre veracidad. Las demás opciones niegan límites o aplican criterios incorrectos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo recomendado tras completar la descarga y verificación íntegra de un soporte SSD procedente de cámara:",
+          "options": [
+            "Reutilizar la tarjeta sin formatear para mantener estructura de carpetas y acelerar la siguiente grabación.",
+            "Ejecutar un formateo rápido o el método de borrado aconsejado por el fabricante, verificar estado SMART y etiquetar/registrar antes de volver a usar en rodaje.",
+            "Sobrescribir con ceros el soporte inmediatamente en el rodaje para optimizar rendimiento en caliente.",
+            "Destruir físicamente el soporte para evitar reutilización."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica segura es formatear según el fabricante, comprobar salud (SMART), y registrar antes de reutilizar. Los distractores son inseguras, innecesarias o extremas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: un NLE profesional rechaza la pista de timecode al importar ficheros entregados en MP4. ¿Qué afirmación relacionada con contenedores explica mejor la incompatibilidad?",
+          "options": [
+            "MOV, MP4 y MXF son equivalentes respecto a timecode y la causa debe ser el códec de vídeo exclusivamente.",
+            "MP4 es siempre superior a MXF para interchange profesional y nunca causa pérdida de timecode.",
+            "MP4 no garantiza un estándar broadcast de timecode embebido; MXF sí mantiene timecode profesional interoperable, por eso el NLE puede rechazar timecode en MP4.",
+            "La incompatibilidad solo depende del bitrate del fichero; el contenedor no influye en el timecode."
+          ],
+          "correctIndex": 2,
+          "explanation": "La causa operativa frecuente es que MP4/MOV no garantizan timecode broadcast estandarizado como MXF, por lo que sistemas profesionales pueden rechazar o ignorar ese metadato; los distractores minimizan el papel del contenedor o son incorrectos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "¿Qué ventana de loudness se utiliza para medir el nivel medio de una pieza completa?",
+          "options": [
+            "Short-term (corto, 3 s)",
+            "Integrated (integrado)",
+            "Momentary (momento, 400 ms)",
+            "Peak (pico instantáneo)"
+          ],
+          "correctIndex": 1,
+          "explanation": "La medida 'Integrated' corresponde al loudness promedio de toda la pieza; short-term y momentary miden ventanas breves y peak no es una ventana de loudness sino de pico instantáneo.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Indique el elemento que caracteriza operativamente un accidente 'in itinere':",
+          "options": [
+            "Es un accidente que solo tiene lugar en desplazamientos internacionales.",
+            "Ocurre exclusivamente dentro del centro de trabajo durante jornada laboral.",
+            "Se refiere a cualquier accidente ocurrido en viaje de ocio personal fuera del horario laboral.",
+            "Ocurre en el desplazamiento habitual y directo entre el domicilio y el lugar de trabajo usando medios habituales, sin desviaciones significativas."
+          ],
+          "correctIndex": 3,
+          "explanation": "El accidente in itinere se caracteriza por producirse en el trayecto habitual y directo entre casa y trabajo usando medios habituales; los demás supuestos definen otros tipos de accidentes o son incorrectos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Cuando varias cámaras registran un auxiliary timecode continuo que resulta más estable que su source timecode, ¿cuál es el uso operativo habitual del aux TC en reconformado?",
+          "options": [
+            "Eliminar todas las pistas de timecode y usar solo audio para sincronizar.",
+            "Sustituir permanentemente el timecode del master sin conservar el identificador original del clip.",
+            "Servir como referencia alternativa para alinear y reconformar tomas cuando el timecode principal es errático, preservando la correlación temporal entre cámaras.",
+            "Ignorar el aux TC porque solo el source timecode tiene validez legal."
+          ],
+          "correctIndex": 2,
+          "explanation": "El aux TC se utiliza como referencia alternativa estable para sincronizar y reconformar cuando el source TC es inestable; los distractores proponen acciones que pierden trazabilidad, son impropias o incorrectas.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "066",
       "title": "Examen 066",
