@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-04",
+  "updatedAt": "2026-10-05",
   "exams": [
+    {
+      "id": "068",
+      "title": "Examen 068",
+      "date": "2026-10-05",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Según los principios establecidos por la Ley 8/2009, cuál de las siguientes formulaciones resume con mayor precisión el modelo de financiación de RTVE:",
+          "options": [
+            "Financiación mayoritariamente privada mediante venta de espacios publicitarios y patrocinios, con respaldo presupuestario estatal residual.",
+            "Financiación mixta basada en dotación presupuestaria del Estado, recursos propios por explotación y otras fuentes legalmente previstas, con control público sobre su aplicación.",
+            "Financiación exclusivamente mediante una tasa directa a los usuarios (canon), sin aportaciones del presupuesto general del Estado.",
+            "Financiación basada en la venta total de activos y derechos audiovisuales como única fuente estable de ingresos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 8/2009 establece un modelo mixto centrado en asignación presupuestaria y recursos propios regulados; las otras opciones atribuyen una dependencia exclusiva a publicidad, canon o venta de activos, lo que contradice el carácter plural y regulado del modelo. La diferencia clave es la coexistencia de dotación pública y recursos propios bajo control legal.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Cuál de estas estrategias cumple correctamente la política 3‑2‑1 de copias de seguridad:",
+          "options": [
+            "Tener dos copias locales en disco y una tercer copia en la misma sala en un almacenamiento distinto, sin copias fuera de sede.",
+            "Usar RAID de alta redundancia en el servidor de producción como única medida y conservar una copia adicional en la misma ubicación física.",
+            "Mantener tres copias de los datos, en al menos dos tipos distintos de soporte (por ejemplo disco y cinta) y con al menos una copia almacenada fuera del sitio principal.",
+            "Realizar tres copias idénticas en discos externos idénticos almacenados en la misma estantería para disponibilidad rápida."
+          ],
+          "correctIndex": 2,
+          "explanation": "La política 3‑2‑1 exige tres copias, dos tipos de soporte y una copia fuera de sitio; las otras propuestas fallan por depender solo de RAID o por mantener todas las copias en la misma ubicación o mismo tipo de soporte. La diferencia decisiva es la exigencia de diversidad de soporte y ubicación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_fiction",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Señale la afirmación que constituye una excepción respecto a prioridades que el montador debe coordinar con realización en una producción de ficción:",
+          "options": [
+            "Preservar la continuidad dramática y la intención interpretativa de las tomas seleccionadas.",
+            "Asegurar que la cobertura (ángulos y planos) permita reconstruir la escena respetando el tempo dramático.",
+            "Priorizar siempre la elección de planos más dinámicos aunque alteren la actuación original del intérprete.",
+            "Coordinar con realización los raccords de mirada y espacio para mantener coherencia entre planos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La excepción es priorizar planos dinámicos aun alterando la actuación: en ficción la coordinación debe preservar interpretación y continuidad; las otras opciones son prioridades legítimas (continuidad, cobertura y raccord). La diferencia clave es que no se debe sacrificar la intención interpretativa por dinamismo visual.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un servidor EVS configurado en grabación en bucle, ¿qué medida operativa es la más determinante para aislar y recuperar posteriormente la ejecución de una cámara concreta evitando que quede sobrescrita por el propio bucle?",
+          "options": [
+            "Aumentar la longitud del buffer del bucle para que almacene más minutos antes de sobrescribir.",
+            "Proteger (pin/lock) el clip o la toma en el catálogo del servidor para impedir su sobrescritura por el loop.",
+            "Confiar en la reconstrucción automática mediante metadata de timecode sin tomar acciones sobre el clip.",
+            "Usar RAID en el almacenamiento del EVS para garantizar que las tomas no se pierdan por sobrescritura."
+          ],
+          "correctIndex": 1,
+          "explanation": "La acción determinante es proteger/pinear el clip en el servidor, que impide su sobrescritura; aumentar la longitud del loop solo retrasa la sobrescritura, confiar sólo en timecode no evita la pérdida, y RAID protege de fallo de disco pero no impide la sobrescritura por el propio loop. La diferencia decisiva es la acción directa sobre el estado administrativo del clip.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "En una GOP IPB, cuál de las siguientes afirmaciones describe mejor la consecuencia operativa de un error de decodificación en un fotograma P:",
+          "options": [
+            "El error afecta al propio fotograma P y se propaga a los fotogramas P y B que dependan de él hasta el siguiente fotograma I.",
+            "El error se limita únicamente al fotograma P y no afecta a ningún fotograma posterior dentro del GOP.",
+            "El error afecta solo a los fotogramas B anteriores al P pero no a los posteriores.",
+            "Un error en un P provoca la corrupción de todo el GOP incluyendo el siguiente fotograma I."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un P contiene datos predictivos usados por P y B posteriores; un fallo en su decodificación se propaga a los cuadros dependientes hasta el siguiente I. No se limita sólo al P ni afecta al siguiente I (salvo condiciones extremas). La diferencia clave es la dirección y alcance de la cadena de dependencia predictiva.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Qué principio técnico es responsable del rechazo de interferencias en una conexión de audio balanceada:",
+          "options": [
+            "Aumento de la ganancia en el extremo receptor para elevar la relación señal/ruido y así enmascarar las interferencias.",
+            "Conexión de masa separada en cada extremo para eliminar bucles de tierra y así cancelar interferencias.",
+            "Uso de transformadores en todos los puntos de la cadena que suprimen cualquier ruido por inducción electromagnética.",
+            "Transmisión diferencial con dos señales iguales en amplitud y opuestas en fase y emparejamiento de impedancias, de modo que el interferente es común y se cancela en la entrada diferencial."
+          ],
+          "correctIndex": 3,
+          "explanation": "El rechazo de modo común se consigue mediante transmisión diferencial (dos conductores con la misma señal en polaridad opuesta) y emparejamiento de impedancias; las otras opciones tratan mitigaciones distintas o incorrectas: masa separada o transformadores ayudan pero no son la explicación primaria; subir ganancia no elimina la interferencia. La diferencia decisiva es el principio diferencial y el rechazo de modo común.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo más adecuado para organizar una jornada de trabajo frente a pantallas con el fin de reducir fatiga visual y postural:",
+          "options": [
+            "Permitir jornadas continuas sin interrupciones y concentrar un único descanso largo al final de la sesión.",
+            "Alternar tareas frente a pantalla con tareas que impliquen distinta demanda visual y postural, e incluir pausas breves y activas programadas durante la jornada.",
+            "Limitar únicamente la iluminación del habitáculo y dejar la organización de pausas a criterio del trabajador sin rotación de tareas.",
+            "Rotación de puesto cada hora sin cruce de tareas ni pausas intermedias."
+          ],
+          "correctIndex": 1,
+          "explanation": "La medida adecuada combina alternancia de tareas (distinta demanda visual/postural) con pausas breves activas; las otras opciones fallan por eliminar pausas, delegarlas sin estructura o rotar sin pausas útiles. La diferencia clave es la combinación de alternancia de tarea y pausas activas programadas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a obligaciones básicas establecidas por la Ley 31/1995 en materia de prevención:",
+          "options": [
+            "El empresario está obligado a garantizar la ausencia total de riesgo en el lugar de trabajo.",
+            "Se exige la eliminación de riesgos en la medida de lo posible y la priorización de medidas colectivas sobre individuales.",
+            "El empresario debe evaluar riesgos, planificar la actividad preventiva y organizar la protección colectiva y formación.",
+            "Los trabajadores deben recibir información y formación adecuadas y colaborar en las medidas preventivas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley 31/1995 no exige garantizar la ausencia total de riesgo (imposible); sí requiere evaluación, planificación, medidas colectivas prioritarias y formación. La diferencia clave es que la norma obliga a prevenir y reducir riesgos, no a su eliminación absoluta.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_lut_log",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico ante este hecho: un colorista aplica una LUT de visualización (log→display) para corregir exposición y obtiene tonos cutos y pérdida de rango dinámico. ¿Cuál es la causa más probable?",
+          "options": [
+            "Se ha usado una LUT de visualización como herramienta de corrección primaria en lugar de aplicar ajustes de exposición y balance en el espacio logarítmico.",
+            "La estación de trabajo interpreta mal el espacio de color y convierte incorrectamente entre Rec.2020 y Rec.709.",
+            "El monitor está configurado con una curva de gamma errónea que provoca contraste excesivo.",
+            "Se ha olvidado aplicar una LUT creativa después de la corrección primaria y por eso la imagen está plana."
+          ],
+          "correctIndex": 0,
+          "explanation": "La causa es usar una LUT de visualización (destinada a mapear log→display) como si fuera una corrección primaria; esa LUT transforma la apariencia para visualización pero no corrige exposición ni recuperación de rango, produciendo tonos empastados. La diferencia frente al distractor más próximo (monitor mal calibrado) es que aquí la acción errónea es la utilización incorrecta de la LUT como corrección.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Un editor que usa teclado y ratón sufre molestias en la muñeca tras jornadas largas. Diagnóstico y medida preventiva más ajustada al riesgo identificado:",
+          "options": [
+            "Causa: falta de formación; Medida: impartir un curso teórico sobre ergonomía sin modificar puesto.",
+            "Causa: volumen de trabajo excesivo; Medida: reducir bitrate de los ficheros para acelerar la edición.",
+            "Causa: mala iluminación; Medida: aumentar brillo de pantalla para reducir esfuerzo visual.",
+            "Causa: postura estática y desviación de muñeca; Medida: reposicionar teclado a altura que permita muñeca neutra, usar descansos activos y alternar con tableta o atajos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La causa más coherente es postura estática y desviación de la muñeca; la medida preventiva adecuada es ajustar altura/posición para muñeca neutra, pausas activas y alternancia de dispositivos. Los otros distractores no abordan directamente el factor ergonométrico principal. La diferencia decisiva es la corrección postural y alternancia de tarea.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Relacione correctamente las operaciones habituales: capture, import, link e ingest. Seleccione la opción con la correspondencia más precisa:",
+          "options": [
+            "Capture: edición offline sobre proxies; Import: grabación en cámara; Link: consolidación de media; Ingest: exportación final para emisión.",
+            "Capture: transferencia desde cámara con posible encapsulado original; Import: copiar y convertir media al proyecto; Link: referenciar externamente sin copiar; Ingest: copia verificada con checksums y metadatos a sistema de archivo/servidor.",
+            "Capture: enmascarado de audio en cámara; Import: incrustación de subtítulos; Link: conversión de codecs; Ingest: borrado de tarjetas.",
+            "Capture: creación de proxies; Import: subida a nube; Link: inserción de marcadores; Ingest: codificación a entrega."
+          ],
+          "correctIndex": 1,
+          "explanation": "La correspondencia correcta es la primera: capture es la transferencia desde cámara; import implica copiar/converter al proyecto; link es referencia sin copia; ingest es ingesta verificada con checksums y metadatos. Los demás conjuntos mezclan operaciones no coincidentes. La diferencia clave es el carácter verificable y administrado de la ingesta frente al simple import/link.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estas afirmaciones y señale la que describe con mayor precisión la función del bus 'previo' frente al 'programa' en un mezclador y su relación con la salida de una key:",
+          "options": [
+            "El bus previo es una copia redundante del bus de programa y su única función es almacenar ajustes de key para recuperación tras fallo.",
+            "El bus previo dirige automáticamente cualquier key configurada hacia el programa y la previsualización no puede excluir la clave del aire.",
+            "El bus previo permite componer y visualizar una clave (key) y una transición sin que esa clave llegue al programa hasta que la transición se activa hacia el bus de programa.",
+            "El bus previo procesa únicamente audio; la previsualización de key se realiza siempre en el bus de programa."
+          ],
+          "correctIndex": 2,
+          "explanation": "El bus previo (preview) permite ver y preparar una composición con key sin que se emita hasta que se haga el paso al programa; los otros enunciados son incorrectos: el previo no dirige automáticamente al programa, no es simple copia redundante ni procesador solo de audio. La diferencia esencial es preparación previa sin afectar la salida en aire.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a la correlación de fase en un medidor, cuál de estas afirmaciones indica mejor compatibilidad mono de una mezcla estéreo:",
+          "options": [
+            "Valores fluctuantes entre +1 y −1 durante pasajes tranquilos son el criterio óptimo de compatibilidad mono.",
+            "Valores de correlación próximos a 0 señalan compatibilidad mono total y ausencia de problemas.",
+            "Valores de correlación negativos (por ejemplo −0,8) son indicativos de excelente compatibilidad mono para voces centradas.",
+            "Valores de correlación próximos a +1 indican buena compatibilidad mono y mínima cancelación al sumar a mono."
+          ],
+          "correctIndex": 3,
+          "explanation": "Valores cercanos a +1 indican señales altamente correladas y compatibles en mono; valores negativos indican inversión/posible cancelación. Los otros distractores confunden: 0 no garantiza compatibilidad, valores negativos señalan riesgo y fluctuaciones extremas indican problemas. Diferencia decisiva: signo y magnitud de la correlación determinan riesgo de cancelación.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En una sesión de corrección de color, cuál de las siguientes acciones corresponde a una corrección primaria frente a una corrección secundaria:",
+          "options": [
+            "Ajustar exposición global y balance de blancos en el master — primaria; aislar el rango de piel y ajustar tono/saturación — secundaria.",
+            "Crear una máscara para oscurecer un objeto específico — primaria; cambiar la curva de contraste de todo el plano — secundaria.",
+            "Aplicar una LUT creativa sobre una selección de color — primaria; modificar el balance global RGB — secundaria.",
+            "Retocar detalles de un plano en una ventana gráfica — primaria; exportar el clip final — secundaria."
+          ],
+          "correctIndex": 0,
+          "explanation": "La corrección primaria aborda ajustes globales como exposición y balance; la secundaria trabaja de forma selectiva (rango de piel, máscaras). Los otros pares invierten funciones o mezclan operaciones de nivel distinto. La diferencia clave es global versus selectivo.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Según el III Convenio Colectivo, cuál de estas medidas debe aplicarse como procedimiento operativo respecto a la jornada y los turnos:",
+          "options": [
+            "Fijar jornadas extraordinarias frecuentes sin compensación si el responsable lo solicita por necesidades puntuales.",
+            "Asignar turnos sin documentación previa y dejar al trabajador la responsabilidad de ajustar descansos según carga diaria.",
+            "Planificar la distribución de la jornada respetando los límites y períodos mínimos de descanso establecidos por el Convenio y documentar los turnos con antelación razonable.",
+            "Eliminar descansos intermedios para aumentar la productividad siempre que la jornada total no exceda un umbral general."
+          ],
+          "correctIndex": 2,
+          "explanation": "El Convenio exige respetar límites de jornada y descansos y prever turnicidad con previsibilidad; las otras opciones vulneran obligaciones: ausencia de documentación, abuso de horas extras sin compensación o eliminación de descansos. La diferencia decisiva es el respeto y documentación de derechos laborales del convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a diferencias operativas entre entrelazado y progresivo:",
+          "options": [
+            "El material entrelazado presenta artefactos de 'combing' en movimiento si se reproduce sin desentrelazado en un display progresivo.",
+            "El entrelazado siempre mejora la definición de movimiento respecto al progresivo, sin introducir artefactos perceptibles.",
+            "El progresivo ofrece un punto de muestreo por línea por cuadro, evitando los desfases temporales entre campos que caracterizan al entrelazado.",
+            "La conversión entre entrelazado y progresivo puede requerir técnicas de detección de movimiento para evitar judder o pérdida de resolución."
+          ],
+          "correctIndex": 1,
+          "explanation": "La frase que afirma que el entrelazado siempre mejora la definición de movimiento sin artefactos es falsa; entrelazado introduce desfases temporales entre campos que pueden producir artefactos. Las otras frases describen diferencias reales: combing, muestreo por cuadro y necesidad de detección de movimiento en conversión. La diferencia clave es la presencia de artefactos temporales en entrelazado.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En un entorno con bins compartidos, cuál de las siguientes prácticas interpreta mejor la prevención de sobrescrituras y conflictos:",
+          "options": [
+            "Usar únicamente backups locales frecuentes sin cambiar permisos de acceso en los bins compartidos.",
+            "Confiar en nombres de archivo distintos para evitar conflictos y permitir edición simultánea sin bloqueos.",
+            "Permitir edición simultánea y resolver sobrescrituras manualmente al final del día.",
+            "Implementar bloqueo por usuario (check‑out/check‑in) y control de versiones para que solo un editor edite un bin a la vez."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica adecuada es uso de bloqueo (check‑out/check‑in) y control de versiones para evitar sobrescrituras; confiar en nombres, permitir edición simultánea sin coordinación o solo backups no previenen conflictos inmediatos. La diferencia decisiva es el control de concurrencia y versión en tiempo real.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Entre fase y polaridad, cuál de estas afirmaciones describe mejor la diferencia operativa y la consecuencia al sumar a mono:",
+          "options": [
+            "La corrección de polaridad y fase se realiza únicamente mediante EQ; no influyen en la suma mono.",
+            "Un desfase temporal de cualquier magnitud siempre produce cancelación total al sumar a mono, mientras que la inversión de polaridad no afecta.",
+            "La polaridad afecta solo al balance de graves y agudos, sin incidencia en la suma mono; la fase determina la inteligibilidad.",
+            "La inversión de polaridad (flip) de una señal idéntica respecto a otra produce cancelación total al sumarlas a mono; un desfase temporal genera comb filtering y atenuación selectiva."
+          ],
+          "correctIndex": 3,
+          "explanation": "Invertir la polaridad entre dos señales idénticas causa cancelación (se anulan); un desfase temporal produce comb filtering y atenuaciones parciales. Los distractores contienen afirmaciones incorrectas sobre efectos totales o tratamientos. La diferencia decisiva es cancelación por inversión de polaridad frente a patrón de filtrado por desfase.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_intelectual",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Cuál de estos ejemplos ilustra con mayor precisión el montaje intelectual por yuxtaposición de ideas:",
+          "options": [
+            "Intercalar un primer plano de un gobernante con escenas de riqueza ostentosa para sugerir crítica social.",
+            "Alternar planos de dos acciones simultáneas para mostrar paralelismo temporal entre personajes.",
+            "Cortar dentro de una conversación respetando continuidad de mirada y eje para mantener la acción verosímil.",
+            "Sincronizar cortes con acentos musicales para reforzar el ritmo narrativo."
+          ],
+          "correctIndex": 0,
+          "explanation": "El montaje intelectual crea significado por yuxtaposición de imágenes no relacionadas directamente; intercalar la imagen del gobernante con escenas de riqueza genera una asociación conceptual. Los otros ejemplos son montaje paralelo, raccord y montaje rítmico, no específicamente intelectual. La diferencia clave es la creación de sentido por asociación de ideas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "En un vectorscopio, qué interpretan el ángulo y la distancia al centro de un clúster de color:",
+          "options": [
+            "Ángulo → profundidad de bits; Distancia al centro → relación señal/ruido.",
+            "Ángulo → luminancia; Distancia al centro → temperatura de color.",
+            "Ángulo → tono (hue); Distancia al centro → saturación (magnitude).",
+            "Ángulo → índice de compresión; Distancia al centro → clipping de canales."
+          ],
+          "correctIndex": 2,
+          "explanation": "En el vectorscopio el ángulo representa el tono (hue) y la distancia al centro la saturación; las otras proposiciones asocian magnitudes no relacionadas con el vectorscopio. La diferencia decisiva es la correspondencia directa ángulo=hue y radio=saturación.",
+          "category": "Equipos de medida y control"
+        }
+      ]
+    },
     {
       "id": "067",
       "title": "Examen 067",
