@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-06",
   "exams": [
+    {
+      "id": "069",
+      "title": "Examen 069",
+      "date": "2026-10-06",
+      "level": "Muy alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor interpreta el principio constitucional de igualdad y la prohibición de discriminación.",
+          "options": [
+            "Consagra la igualdad formal ante la ley y prohíbe cualquier trato distinto bajo cualquier circunstancia, sin admitir medidas compensatorias.",
+            "Establece sólo la igualdad de oportunidades en el acceso a empleos públicos, sin afectar al sector privado.",
+            "Reconoce igual dignidad y prohíbe discriminaciones por nacimiento, raza, sexo, religión, opinión o cualquier otra condición, admitiendo que normas posteriores puedan prever medidas para corregir desigualdades objetivas.",
+            "Limita la protección contra la discriminación a los ámbitos expresamente regulados por ley, sin carácter general."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Constitución garantiza la igualdad y prohíbe la discriminación por las causas citadas; además permite que la norma adopte medidas dirigidas a corregir desigualdades reales. La opción 0 confunde igualdad formal con exclusión de medidas compensatorias, que sí están admitidas; las otras son imputaciones limitadoras incorrectas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un incendio iniciado en una regleta eléctrica en plató, ¿cuál de las siguientes actuaciones es compatible con buena práctica de prevención y actuación frente a incendios eléctricos?",
+          "options": [
+            "Aplicar agua con extintor de agua a presión y mantener la alimentación conectada mientras se evacua.",
+            "Usar espuma sobre la regleta y seguir alimentando otros equipos cercanos hasta confirmar extinción.",
+            "Intentar mover el equipo electrificado fuera del recinto si no se dispone de formación en manejo de cargas.",
+            "Cortar la alimentación eléctrica del equipo si es posible y emplear un extintor de CO2 o polvo específico para fuegos en equipos eléctricos."
+          ],
+          "correctIndex": 3,
+          "explanation": "Ante fuego en equipo eléctrico la prioridad es aislar la alimentación y usar agentes no conductores (CO2 o polvo). El agua o la espuma pueden conducir electricidad y agravar el riesgo; mover equipos en tensión es peligroso.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_elipsis",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Para comprimir tiempo narrativo mediante una elipsis manteniendo comprensión, cuál de estas operaciones es compatible con ese objetivo:",
+          "options": [
+            "Suprimir intervalos intermedios pero conservar indicadores de vínculo temporal o causal (acción residual, diálogo, sonido puente).",
+            "Cortar sin puente ni indicio alguno entre dos momentos distintos, confiando en la deducción del espectador.",
+            "Sustituir la secuencia por una sola imagen fija sin información contextual.",
+            "Eliminar cualquier sonido que pueda insinuar continuidad temporal."
+          ],
+          "correctIndex": 0,
+          "explanation": "La elipsis elimina tiempo pero debe mantener elementos de enlace que permitan la inferencia (acción, diálogo, sonido). Cortes sin pistas ni contexto rompen la comprensión; la imagen fija o la supresión total de pistas son menos compatibles.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_en_mision",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Comparación de medidas ante desplazamientos profesionales: ¿cuál corresponde con una obligación preventiva clara del empleador para reducir riesgos durante una misión?",
+          "options": [
+            "Liberar al trabajador de toda responsabilidad, quedando la prevención solo a cargo de los alojamientos y proveedores locales.",
+            "Exigir que el trabajador contrate por su cuenta un seguro privado que cubra cualquier accidente durante la misión.",
+            "Realizar evaluación específica de riesgos del desplazamiento, informar y formar al trabajador y facilitar medios de comunicación y equipos adecuados.",
+            "Limitar las medidas a la entrega de equipo sin realizar ninguna evaluación previa del itinerario o actividades."
+          ],
+          "correctIndex": 2,
+          "explanation": "La obligación empresaria incluye evaluar riesgos de la misión, informar/formar y proporcionar medios adecuados. Exigir seguros privados o omitir evaluación no se corresponde con la obligación preventiva del empleador.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las consecuencias de fuentes no sincronizadas y su corrección mediante frame‑sync:",
+          "options": [
+            "Fuentes no sincronizadas incrementan necesariamente el ruido cromático de la señal, algo que el frame‑sync no puede corregir.",
+            "La falta de sincronismo puede provocar tearing y pérdida temporal de referencia de sincronismo que se atenúa con frame‑sync siempre que haya margen de retardo disponible.",
+            "Con fuentes sin genlock, el conmutado entre cámaras puede mostrar saltos o frames incompletos que el frame‑sync corrige alineando horizontales y timing.",
+            "Un frame‑sync puede introducir retardo en la cadena para re‑temporalizar la señal y así permitir switches limpios entre fuentes."
+          ],
+          "correctIndex": 0,
+          "explanation": "El incremento de ruido cromático no es una consecuencia directa de falta de genlock; los efectos típicos son tearing, saltos y pérdida de sincronía que el frame‑sync puede mitigar añadiendo retardo. La opción 2 confunde artefactos de sincronía con ruido cromático.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento para diseñar proxies destinados a edición offline en estaciones con CPU limitada:",
+          "options": [
+            "Priorizar reducción de resolución y de bitrate, elegir un códec ligero y optimizado para reproducción (intra‑frame si la CPU lo permite) y asegurar que conservan timecode y metadatos para relink.",
+            "Mantener resolución nativa, usar códec maestro sin compresión y depender de la GPU para resolver el scrubbing.",
+            "Trabajar con proxies en alta resolución pero eliminar pistas de audio para ahorrar recursos.",
+            "Crear proxies con GOP largo (alta compresión) y sin incorporar timecode para reducir espacio."
+          ],
+          "correctIndex": 0,
+          "explanation": "El procedimiento correcto reduce resolución/bitrate y usa un códec que facilite reproducción manteniendo timecode/metadatos. Mantener nativa o eliminar timecode impide relink/reconformado; GOP muy largo puede perjudicar la reproducción interactiva.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_export_qc",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación de un control de calidad técnico de exportación: ¿qué lista refleja mejor las comprobaciones imprescindibles?",
+          "options": [
+            "Comprobar la estética del color frente a la intención creativa sin verificar metadatos ni sincronía.",
+            "Comprobar únicamente la resolución y el nombre del archivo; asumir que los demás parámetros son correctos.",
+            "Solo verificar audios y dejar la comprobación de video para etapas posteriores.",
+            "Verificar formato/contenedor, niveles de luminancia/color y audio, sincronía entre pistas, campos/entrelaçado y metadatos básicos (timecode, codec, etiquetas)."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un QC técnico completo incluye formato, niveles de luminancia y audio, sincronía, campos y metadatos. Las otras opciones omiten elementos esenciales para entrega técnica y reconformado.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: ¿cuál de las siguientes afirmaciones describe con mayor precisión la naturaleza y estructura básica de la Corporación prevista por la Ley 17/2006?",
+          "options": [
+            "Órgano administrativo dependiente directamente de un ministerio, sin autonomía de gestión.",
+            "Corporación de titularidad estatal con personalidad jurídica propia y patrimonio público, organizada con órganos de gobierno y un equipo directivo regulados por la ley.",
+            "Entidad privada contratada por el Estado para prestar servicios audiovisuales.",
+            "Fundación pública sin estructura colegiada de gobierno."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley define una corporación estatal con personalidad y patrimonio públicos y órganos de gobierno regulados. No es una dependencia ministerial directa ni una fundación privada; la opción 0 recoge la naturaleza y estructura básica.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estas secuencias operativas en una ingesta verificada y señale la correctA:",
+          "options": [
+            "Copiar ficheros → incorporar metadatos en catálogo → validar checksums al cabo de un mes → registrar informe.",
+            "Generar checksums → copiar ficheros → validar estructura → eliminar originales.",
+            "Copiar ficheros → generar checksums → validar estructura del contenedor (timecode, pistas) → registrar informe de ingesta.",
+            "Copiar ficheros → validar visualmente toda la duración → generar checksums → no es necesario registrar."
+          ],
+          "correctIndex": 2,
+          "explanation": "El orden correcto es copiar, generar checksums, validar la estructura y registrar la ingesta. Generar checksums antes de copiar o retrasarlos compromete la trazabilidad; omitir el registro impide control documental.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que mejor describe la consecuencia operativa de una adaptación de impedancias incorrecta en una cadena audiovisual.",
+          "options": [
+            "Protección automática del equipo por exceso de corriente sin efectos de imagen o audio.",
+            "Un cambio inmediato en el códec empleado que requiera transcodificación.",
+            "Generación de interferencias electromagnéticas hacia otras redes Wi‑Fi próximas.",
+            "Pérdida de nivel, reflexiones o desajuste de banda que degradan relación señal‑ruido y pueden provocar artefactos o pérdida de sincronía en señales digitales."
+          ],
+          "correctIndex": 3,
+          "explanation": "Una adaptación incorrecta provoca pérdidas, reflexiones y alteración de la respuesta en frecuencia que afectan calidad y sincronía; las otras opciones atribuyen efectos indirectos o inexistentes como consecuencia inmediata.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a buenas prácticas de preservación y migración de archivos:",
+          "options": [
+            "Mantener registros de versiones y cambios de formato, junto con verificaciones checksum periódicas.",
+            "Planificar migraciones periódicas a soportes y formatos actuales y verificar integridad tras cada migración.",
+            "Conservar soportes en su formato original indefinidamente sin establecer calendario de migración o verificación periódica.",
+            "Monitorizar riesgo de obsolescencia y asegurar herramientas para acceder a formatos heredados antes de cualquier retiro del medio."
+          ],
+          "correctIndex": 2,
+          "explanation": "Conservar soportes originales sin migración ni verificaciones es una práctica contraria a preservación. Las demás opciones describen medidas adecuadas: migración periódica, trazabilidad y gestión de obsolescencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: varias cámaras grabaron con código de tiempo común pero al sincronizar en el NLE aparecen offsets entre algunas pistas. ¿Cuál es la causa operativa más probable?",
+          "options": [
+            "Uso mixto de cámaras en 'free‑run' y otras en 'rec‑run' o diferencias de frame rate/frame‑rate flags que generan desalineamientos temporales.",
+            "El NLE no soporta multicámara y rechaza cualquier código de tiempo.",
+            "Fallo irrevocable de todos los relojes internos de las cámaras obligando a reemplazar hardware.",
+            "Que el TC común no contenga suficiente metadato para identificar la cámara."
+          ],
+          "correctIndex": 0,
+          "explanation": "Offsets cuando existe TC común suelen deberse a free‑run vs rec‑run, drop/non‑drop flags o discrepancias de frame rate. El resto son causas improbables o no relacionadas con el síntoma descrito.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que mejor resume la diferencia operativa entre AVC (H.264) y HEVC (H.265):",
+          "options": [
+            "HEVC ofrece mayor eficiencia de compresión a igual calidad y mayor complejidad de codificación/decodificación, con compatibilidad de hardware más limitada respecto a AVC.",
+            "HEVC es menos eficiente y se usa exclusivamente para bitrates bajos en streaming.",
+            "AVC y HEVC son equivalentes en compresión y complejidad, solo cambian las extensiones de archivo.",
+            "AVC permite reducir a la mitad la tasa de bits respecto a HEVC manteniendo la misma calidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "HEVC mejora la eficiencia frente a AVC a costa de mayor complejidad y menor compatibilidad en dispositivos más antiguos. Las otras opciones distorsionan la relación de eficiencia y compatibilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Para señalar un salto temporal prolongado entre dos escenas, ¿qué transición resulta más apropiada y por qué?",
+          "options": [
+            "Corte seco, porque enfatiza continuidad temporal y evita ambigüedad.",
+            "Fundido a negro, porque conviene marcar una ruptura temporal amplia y ofrecer una pausa interpretativa.",
+            "Encadenado corto (match dissolve rápido), porque impide cualquier sensación de salto temporal.",
+            "Wipe lateral, porque es la convención para indicar el paso del tiempo largo."
+          ],
+          "correctIndex": 1,
+          "explanation": "El fundido a negro es el recurso convencional para señalar una elipsis o salto temporal prolongado; el corte mantiene sensación de inmediatez, el wipe no es habitual para tiempo prolongado y el encadenado corto puede sugerir continuidad cercana.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según la Ley 13/2022, ¿qué obligación concreta debe garantizar un prestador de servicios audiovisuales respecto a menores?",
+          "options": [
+            "Permitir acceso libre a todo el catálogo sin mecanismos de control para favorecer la accesibilidad.",
+            "Clasificar contenidos por edades, facilitar herramientas de control parental y establecer sistemas de acceso que impidan la exposición inadecuada.",
+            "Reservar contenidos para mayores de 18 años sin necesidad de clasificación ni etiquetado.",
+            "Eliminar cualquier restricción de horario en emisiones lineales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La ley exige clasificación por edad, herramientas de control parental y medidas de gestión de accesos; las demás opciones contradicen tales obligaciones.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación práctica: al gestionar material XDCAM grabado en spanning, además de conservar carpetas e índices, ¿qué aspecto es imprescindible verificar para asegurar acceso fiable?",
+          "options": [
+            "Que el contenedor sea MP4 en lugar de MXF.",
+            "Que los nombres de fichero sean idénticos aunque falten índices.",
+            "Que el material solo se abra en Windows y no en macOS.",
+            "La presencia y coherencia de la información de spanning y el metadato de continuidad (clip continuity/span flags) y usar una herramienta que soporte reconstrucción de spanning."
+          ],
+          "correctIndex": 3,
+          "explanation": "En XDCAM con spanning es clave verificar flags/metadatos de spanning para reconstruir clips y usar software compatible. Los otros criterios no garantizan acceso fiable o son irrelevantes/inventados.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Ante la sospecha de que el crosspoint entre la entrada X y la salida Y de una matriz de vídeo no corresponde con la señal esperada, ¿qué procedimiento operativo y trazable es el más adecuado para localizar y verificar ese crosspoint?",
+          "options": [
+            "Desactivar el crosspoint sospechoso, retirar y medir eléctricamente los conectores y el cableado de la entrada X y la salida Y; sustituir cualquier cableado que muestre anomalía y volver a activar el crosspoint.",
+            "Verificar el mapa y los LEDs del router; si la salida Y muestra señal distinta a la esperada, reasignar Y a otra entrada conocida para comprobar el monitor y, si la señal sigue sin aparecer, reportar fallo de la entrada X para intervención física.",
+            "Comprobar el mapa/estado del router; forzar temporalmente la asignación X→Y desde la consola (o usar la función de prueba del router); inyectar en X un patrón de prueba (barras/patch test o genlock conocido) y verificar en el monitor conectado a Y; corroborar LEDs/front‑panel y registrar hora, operador y resultado en el log de control.",
+            "Solicitar al operador de realización/producción que confirme la identidad de la fuente X en su mesa y, si procede, renombrar la entrada en el sistema de control del router; documentar el cambio y asumir la corrección."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es la correcta porque combina comprobación lógica (mapa/estado), una acción controlada de conmutación desde la consola, verificación objetiva con un patrón de prueba en la esencia y documentación de la operación, evitando intervenciones físicas innecesarias. El distractor más próximo (opción 2) revisa mapa y LEDs y sugiere reasignar Y a otra entrada sin inyectar un patrón de prueba en X; eso puede llevar a diagnósticos erróneos (confundir fallo de ruteo con ausencia de señal en la fuente) y no deja la misma trazabilidad de comprobación. La opción 3 adelanta medidas físicas sin haber verificado la configuración y la presencia de la señal mediante pruebas controladas; la opción 4 delega la verificación a realización/producción y actúa sobre metadatos sin comprobar la señal en la ruta, por lo que no garantiza identificar ni verificar el crosspoint.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación práctica: en retransmisión, para transferir un clip desde EVS al editor garantizando handles y disponibilidad inmediata, cuál es el flujo operativo más adecuado:",
+          "options": [
+            "Copiar el archivo en bruto por FTP sin transcodificar ni especificar handles.",
+            "Exportar desde EVS usando la función de transferencia (XFER) configurada para incluir handles y transcodificar al códec de edición; marcar/lock del clip en EVS hasta completar copia.",
+            "Reproducir el clip en EVS y capturarlo en el NLE mediante tarjeta de captura en tiempo real.",
+            "Eliminar el clip original en EVS y reconvertir desde una copia comprimida tras la retransmisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "El procedimiento habitual es usar la exportación/transfer configurada para handles y códec de edición y bloquear el clip en EVS hasta concluir la transferencia. Copias manuales o capturas en tiempo real no garantizan handles ni velocidad ni trazabilidad.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo: para una producción que incluye chroma key intensivo, emisión broadcast y entrega a plataformas de consumo, asigne el submuestreo más adecuado a cada caso:",
+          "options": [
+            "Usar siempre 4:2:0 para todos los procesos sin afectar a la calidad del keying.",
+            "Chroma key intensivo → 4:2:0; emisión broadcast profesional → 4:4:4; entrega a plataformas → 4:2:2.",
+            "Chroma key intensivo → 4:2:2; emisión broadcast profesionales → 4:2:0; entrega a plataformas → 4:4:4.",
+            "Chroma key intensivo → 4:4:4; emisión broadcast profesional → 4:2:2; entrega a plataformas de consumo → 4:2:0."
+          ],
+          "correctIndex": 3,
+          "explanation": "Para keying y corrección color es preferible 4:4:4; en producción/emitido profesional 4:2:2 ofrece equilibrio; 4:2:0 es habitual para entrega de consumo. Las otras asignaciones no respetan esas consecuencias operativas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_checksum",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las capacidades y límites de un checksum al comparar ficheros antes y después de una operación:",
+          "options": [
+            "Un checksum detecta cualquier cambio bit a bit entre dos ficheros y por tanto no puede garantizar equivalencia perceptual tras reempaquetado o transcodificación.",
+            "Un checksum válido tras reempaquetado sin alterar la esencia audiovisual confirma que el contenido perceptual es idéntico en todos los casos.",
+            "El checksum es insuficiente para validar equivalencia cuando se han modificado metadatos no esenciales o se ha reempaquetado el contenedor.",
+            "Los checksums deben compararse con el mismo algoritmo y sobre las mismas representaciones binarias para ser útiles."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación 1 es falsa: un checksum sólo confirma identidad bit a bit; no puede garantizar equivalencia perceptual tras reempaquetados o transcodificación. Esa incapacidad es la diferencia decisiva frente a la opción más cercana.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "068",
       "title": "Examen 068",
