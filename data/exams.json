@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06",
+  "updatedAt": "2026-10-07",
   "exams": [
+    {
+      "id": "070",
+      "title": "Examen 070",
+      "date": "2026-10-07",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la función operativa de la clasificación profesional y la 'ocupación tipo' en el Convenio:",
+          "options": [
+            "Organiza a la plantilla en niveles y categorías vinculados a funciones, responsabilidades y competencias representativas.",
+            "Define las 'ocupaciones tipo' como descriptores de tareas y criterios objetivos para la asignación de personal y la promoción interna.",
+            "Sirve de referencia para planificar formación, movilidad funcional y criterios de evaluación profesional.",
+            "Regula de forma exclusiva y detallada la determinación diaria de la jornada concreta y los turnos de trabajo de cada trabajador."
+          ],
+          "correctIndex": 3,
+          "explanation": "La excepción es la opción 3: la clasificación profesional define perfiles y criterios funcionales, pero no tiene como función exclusiva determinar de forma pormenorizada la jornada y los turnos diarios; esos aspectos son regulados por títulos o cláusulas concretas del convenio y por la negociación de organización del trabajo. Los distractores más próximos (1 y 4) describen funciones reales de la clasificación; la 3 atribuye a la clasificación una regulación exclusiva que no le corresponde.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que interpreta mejor la limitación de compatibilidad de un sistema FAT32 en soportes de trabajo audiovisual:",
+          "options": [
+            "FAT32 limita el tamaño máximo de fichero a 4 GiB menos 1 byte, lo que impide su uso fiable para clips largos grabados en alta resolución.",
+            "FAT32 permite archivos de cualquier tamaño y es la opción más adecuada para ficheros de cámara superiores a 4 GB en entornos mixtos.",
+            "FAT32 añade journaling y permisos avanzados que mejoran la integridad frente a exFAT en flujos de ingesta masiva.",
+            "FAT32 es nativo y plenamente compatible con todos los sistemas modernos sin necesidad de controladores adicionales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta (2) interpreta la limitación clave de FAT32: su tamaño máximo de fichero (~4 GiB) lo hace inadecuado para muchos clips modernos. Los distractores erran técnicamente: 1 es falso sobre tamaño permitido; 3 inventa características (journaling) que FAT32 no tiene; 4 es inexacto frente a sistemas actuales que manejan mejor exFAT/NTFS.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_postura",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la configuración postural más compatible con las recomendaciones ergonómicas para un puesto de edición respecto a silla, apoyo lumbar, antebrazos y pies:",
+          "options": [
+            "Silla con respaldo ajustado a la curvatura lumbar, asiento que permita apoyo total de los muslos; antebrazos apoyados y paralelos al plano de trabajo; pies apoyados en superficie plana.",
+            "Silla baja para acercar la pantalla; respaldo rígido; antebrazos elevados sin apoyo; pies descalzos para mayor movilidad.",
+            "Silla con respaldo fijo y sin ajuste lumbar; uso de cojín improvisado; antebrazos apoyados sólo al final de la jornada; pies sobre elevación inestable.",
+            "Silla reclinada permanentemente para reducir presión, sin apoyo lumbar específico; antebrazos separados del escritorio para libertad de movimiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 recoge las recomendaciones básicas: ajuste lumbar que sostenga la curva lumbar, asiento que distribuya presión, antebrazos apoyados y paralelos para reducir tensión y pies planos para estabilidad. Los distractores presentan posturas incompatibles o inseguras (falta de apoyo lumbar, antebrazos sin apoyo o pies inestables).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Un diálogo entre dos personajes se monta con planos donde la cámara pasa de situarse al lado derecho de la línea de acción a planos situados al lado izquierdo sin respetar continuidad de miradas: ¿cuál es el diagnóstico espacial más preciso?",
+          "options": [
+            "Se ha producido una inversión de eje (ruptura de la regla de 180°), lo que puede confundir la orientación espacial del espectador.",
+            "Se ha respetado la regla de 180° y la continuidad espacial se mantiene.",
+            "Es montaje paralelo correcto; la variación de eje transmite simultaneidad natural.",
+            "La solución es introducir un fundido a negro para restaurar la coherencia espacial."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la correcta: cruzar la línea de acción sin signo editorial rompe la regla de 180°, invierte la percepción de los lados y puede desorientar. El distractor más próximo (1) es incorrecto porque describe lo contrario; 3 confunde montaje paralelo con eje espacial; 4 propone una medida no específica para corregir inversión de eje.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la tolerancia a fallos y la reconstrucción asociada a RAID 6:",
+          "options": [
+            "RAID 0 (striping) no ofrece tolerancia a fallos y no permite reconstrucción tras pérdida de un disco.",
+            "RAID 6 tolera la pérdida simultánea de dos discos y reconstruye usando paridad dual, con mayor sobrecarga que RAID 5.",
+            "RAID 5 tolera la pérdida de dos discos gracias a paridad distribuida.",
+            "RAID 1 (mirror) tolera la pérdida simultánea de dos discos sin pérdida de datos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 4 describe RAID 6 correctamente: admite hasta dos fallos de disco y reconstruye mediante paridad doble, a costa de mayor espacio de paridad. Las otras opciones confunden niveles: RAID 0 no tolera fallos (cierto), RAID 1 tolera un fallo por espejo (no dos), RAID 5 tolera solo un fallo.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_true_peak",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál de las siguientes afirmaciones interpreta mejor la diferencia entre 'True Peak' y 'Sample Peak' en metrología de audio digital?",
+          "options": [
+            "True Peak estima picos inter‑muestra que pueden producirse tras un filtro de reconstrucción (D/A) y por tanto puede exceder el sample peak medido en muestras discretas.",
+            "Sample Peak estima picos reales entre muestras tras la reconstrucción analógica; True Peak sólo mide muestras discretas.",
+            "True Peak y Sample Peak son idénticos en todo sistema digital correctamente calibrado.",
+            "Sample Peak mide niveles integrados en LUFS; True Peak mide la media a largo plazo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es correcta: True Peak estima picos entre muestras tras la reconstrucción D/A y puede exceder el valor de los picos de muestra discreta (sample peak). El distractor más cercano (1) invierte los conceptos; 3 y 4 son incorrectos respecto a las definiciones.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones y elija la que mejor diferencia derechos y obligaciones en prevención de riesgos laborales:",
+          "options": [
+            "La empresa tiene obligación de formar sólo al personal directivo; el resto recibe información genérica bajo demanda.",
+            "El trabajador no tiene obligación de utilizar medios de protección si considera que limitan su productividad; la empresa solo debe informar sin formar.",
+            "Las obligaciones en PRL recaen exclusivamente en los representantes sindicales; los trabajadores no participan en la prevención.",
+            "El trabajador tiene derecho a recibir información y formación en PRL; su obligación principal es cooperar y utilizar correctamente los medios de protección facilitados por la empresa."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 expresa la relación correcta: derecho del trabajador a información y formación y obligación de cooperar y usar correctamente los EPIs y procedimientos. Los demás distractores minimizan o distorsionan responsabilidades legalmente establecidas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación compatible con la finalidad de la reforma introducida por la Ley 5/2017 y la consecuencia operativa en el procedimiento de designación de los órganos de RTVE:",
+          "options": [
+            "La reforma tuvo por objeto privatizar parte de RTVE y permitió la designación administrativa directa por el gobierno.",
+            "La Ley 5/2017 suprimió por completo cualquier control parlamentario sobre la Corporación.",
+            "La reforma buscó recuperar la independencia y pluralismo, y trasladó la elección de los órganos de dirección a un procedimiento parlamentario con mayor participación de los grupos.",
+            "La reforma eliminó la necesidad de nombramientos y dejó la dirección de RTVE en manos de comités técnicos no electos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 sintetiza la finalidad: recuperar independencia y pluralismo, con la consecuencia de un procedimiento de designación parlamentario más participativo. Los demás distractores describen efectos incompatibles con el propósito de la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_chromakey",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Ordene la secuencia de operaciones adecuada para corregir un halo de color y bordes duros en una incrustación por chromakey:",
+          "options": [
+            "Extraer alfa con choke/feather → aplicar keying → exportar directamente sin despill.",
+            "Aplicar despill antes del keying → exportar sin matte → retocar bordes en el compizador final.",
+            "Primero igualar color de fondo con el primer plano → aplicar color grading → luego realizar el keying.",
+            "Aplicar keying para generar matte → despill para eliminar dominantes → ajustar choke/feather de bordes → color match entre primer plano y fondo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es el procedimiento correcto: generar el matte (key), eliminar spill de color, refinar los bordes (choke/feather) y finalmente emparejar color entre capas. Los distractores alteran el orden lógico (despill antes del keying, o prescinden del despill) produciendo fallos de bordes y dominantes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Se estima una base de 1 000 usuarios con una concurrencia prevista del 6 %; cada usuario consume un flujo de 3,5 Mbps. Si se exige un margen operativo de red del 15 % (es decir, la utilización máxima admitida es el 85 % de la capacidad), ¿qué capacidad mínima de enlace de salida debe preverse?",
+          "options": [
+            "210 Mbps",
+            "242 Mbps",
+            "247 Mbps",
+            "256 Mbps"
+          ],
+          "correctIndex": 2,
+          "explanation": "Cálculo: usuarios concurrentes = 1 000 × 0,06 = 60. Bitrate agregado = 60 × 3,5 Mbps = 210 Mbps. Si la utilización máxima admitida es el 85 % (margen operativo 15 %), la capacidad mínima C debe cumplir 210 = 0,85 · C, por tanto C = 210 / 0,85 ≈ 247,06 Mbps (≈ 247 Mbps). La opción de 242 Mbps corresponde a aplicar erróneamente el margen como un incremento directo (210 × 1,15 = 241,5), y 210 Mbps no considera margen. 256 Mbps es un redondeo superior plausible comercialmente pero no la solución aritmética mínima solicitada.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_music_sync",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Para alinear un montaje con una frase musical de 8 compases cuyos acentos fuertes están en los compases 1 y 5, la decisión editorial más coherente es:",
+          "options": [
+            "Dividir la frase en cortes de un compás independientemente de los acentos.",
+            "Evitar cortes en los acentos y situarlos siempre en compases débiles para crear tensión rítmica.",
+            "Cortar aleatoriamente para mantener un ritmo visual impredecible, sin relación con los acentos musicales.",
+            "Realizar cortes principales en los compases 1 y 5 para respetar los acentos y la estructura de frase."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es la coherente: alinear cortes con los acentos y con la estructura de frase ayuda a mantener sincronía perceptiva y fluidez. Las otras opciones ignoran la frase musical o la fragmentan de forma que suelen producir pérdida de coherencia rítmica.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En una secuencia, tras ajustar un borde en el punto de corte entre dos clips se observa: el contenido del clip izquierdo queda más corto en su extremo, todos los clips posteriores en la pista se desplazan en el tiempo y la duración total de la secuencia cambia. ¿Qué tipo de trim se ha aplicado?",
+          "options": [
+            "Slip: modifica los puntos de entrada/salida internos de un clip sin cambiar su posición en la línea de tiempo, por lo que ni la duración del clip en la secuencia ni la duración total cambian.",
+            "Roll: mueve el punto de corte entre dos clips ajustando simultáneamente el final de uno y el inicio del otro sin desplazar otros clips ni alterar la duración total de la secuencia.",
+            "Ripple: desplaza el borde de un clip y, al cerrar o abrir el hueco, mueve automáticamente los clips posteriores en la pista, modificando la duración total de la secuencia.",
+            "Slide: traslada un clip a lo largo de la pista manteniendo sus puntos internos; los cortes en los clips adyacentes se ajustan, pero la duración total de la secuencia permanece igual."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 (Ripple) es correcta: un trim 'ripple' mueve el borde de un clip y desplaza los clips posteriores para cerrar/abrir el hueco, lo que altera la duración total de la secuencia. El distractor más próximo es la opción 2 (Roll): aunque un 'roll' también cambia el punto de corte entre dos clips, lo hace compensando entrada y salida entre esos dos elementos y por tanto no modifica la posición de los clips siguientes ni la duración global. Las opciones 3 (Slip) y 4 (Slide) difieren porque 'slip' cambia solo los puntos internos del clip sin moverlo en la línea de tiempo, y 'slide' mueve el clip manteniendo su duración interna y ajustando solo los vecinos, sin variar la duración total.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Tras descargar y verificar íntegramente el contenido de un soporte SSD procedente de cámara, ¿cuál de las siguientes acciones se desaconseja porque incrementa innecesariamente el desgaste de las celdas NAND sin aportar beneficio operativo?",
+          "options": [
+            "Ejecutar la orden ATA Secure Erase o una utilidad oficial del fabricante destinada a restablecer el SSD.",
+            "Formatear la tarjeta desde la propia cámara usando la opción de formato del fabricante.",
+            "Realizar un borrado por sobreescritura completo (p. ej. write‑zeros) del dispositivo desde un ordenador.",
+            "Comprobar los checksums y registrar el informe de ingesta antes de volver a usar el soporte."
+          ],
+          "correctIndex": 2,
+          "explanation": "La sobreescritura completa desde un PC escribe físicamente todas las celdas del SSD y aumenta el desgaste sin mejorar la integridad operativa tras una ingesta verificada; no aporta ventaja práctica frente a un formateo en cámara. Formatear en la cámara reconstruye la estructura de archivos y metadatos que la cámara espera y es la práctica recomendada para reutilizar el soporte. La orden ATA Secure Erase o las utilidades del fabricante pueden usarse puntualmente para restablecer comportamiento o eliminar datos de forma segura, y lo hacen a nivel del controlador (sin necesariamente provocar tantas escrituras host), por lo que no es equivalente al write‑zero. Comprobar checksums e incorporar el informe de ingesta es obligatorio y correcto antes de reutilizar el soporte.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un RGB Parade (señal Rec.709) se observa que en las zonas de sombra el canal verde queda aproximadamente 4 dB por encima de los canales rojo y azul; en medios y altas los tres canales coinciden. ¿Cuál es el diagnóstico más probable?",
+          "options": [
+            "Balance de blancos desplazado hacia verde (error de temperatura/tint)",
+            "Offset/pedestal incorrecto en el canal verde (desplazamiento del nivel de negro)",
+            "Ganancia (gain) del canal verde excesiva durante captura o corrección",
+            "Curva de gamma diferente en el canal verde (incoherencia de transferencia)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Un desplazamiento del offset o pedestal en el canal verde eleva el nivel de negro de ese canal y se aprecia principalmente en las zonas de sombra mientras las zonas de mayor luminancia (medios y altas) quedan alineadas tras superar el rango afectado por el pedestal. Una ganancia elevada produciría una diferencia que crece con la luminancia (no limitada a sombras). Un balance de blancos incorrecto desplaza la relación entre canales a todo el rango tonal, afectando especialmente altas y medios; y una gamma distinta modifica la forma de la curva (desviaciones en medios y altas), por lo que no explican una desviación confinada a sombras.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Según el II Plan de Igualdad y la Guía de Igualdad de RTVE, cuál de estas medidas es la más adecuada para prevenir representaciones sexistas y uso de lenguaje no inclusivo en los contenidos:",
+          "options": [
+            "Establecer sanciones automáticas para cualquier profesional que utilice lenguaje tradicional en una emisión.",
+            "Incluir criterios y checklists editoriales obligatorios para la revisión y aprobación de guiones y piezas que detecten lenguaje y representaciones sexistas.",
+            "Eliminar de forma preventiva todo personaje con estereotipos independientemente del contexto dramático.",
+            "Delegar la revisión únicamente a un comité externo sin integrar la prevención en los procesos editoriales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es coherente con las medidas del Plan: incorporar criterios y listas de verificación editoriales para identificar y corregir representaciones y lenguaje sexista. Las otras opciones son desproporcionadas, operativamente ineficaces o externalizan la responsabilidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al dimensionar un servidor de vídeo para atender accesos concurrentes, ¿qué magnitud determina con mayor precisión el número máximo de canales simultáneos servidos sin degradación?",
+          "options": [
+            "El ancho de banda agregado de salida de red disponible (throughput).",
+            "La capacidad bruta de almacenamiento (TB) disponible en el servidor.",
+            "La marca del fabricante del servidor.",
+            "La frecuencia de la CPU en GHz sin considerar E/S."
+          ],
+          "correctIndex": 0,
+          "explanation": "El factor determinante es el ancho de banda de salida (opción 2), porque el número de flujos concurrentes está limitado por el throughput agregado. El almacenamiento en TB determina capacidad total, no concurrencia; la marca o la frecuencia de CPU sin I/O no son medidas directas del límite de conexiones simultáneas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación que mejor caracteriza la diferencia y la compatibilidad entre PQ (ST‑2084) y HLG en distribución:",
+          "options": [
+            "PQ y HLG son equivalentes en su compatibilidad hacia televisores SDR sin pasos adicionales.",
+            "PQ es una curva de transferencia absoluta pensada para masters HDR con referencia a niveles de luminancia; HLG pretende compatibilidad hacia equipos SDR y es más adecuada para emisión en directo.",
+            "HLG requiere metadatos de mastering obligatorios como ST‑2086 para su correcta reproducción; PQ no necesita metadatos.",
+            "Ambas curvas son idénticas y sólo difieren en nombre."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 describe correctamente: PQ (ST‑2084) define una EOTF absoluta usada en mastering HDR y a menudo requiere metadatos para gestión; HLG está diseñado para ser más compatible con displays SDR y apto para transmisión en directo. Las otras opciones confunden características o son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_relink",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "En un relink por coincidencia tras mover ficheros, ¿qué criterio operativo es el más fiable para resolver enlaces incorrectos entre proxies y material de alta resolución?",
+          "options": [
+            "Confiar únicamente en el nombre de fichero, ya que suele ser suficiente.",
+            "Basarse sólo en la fecha de creación del fichero y su ruta original.",
+            "Priorizar la coincidencia de timecode de inicio y duración y confirmar con tamaño o checksum del fichero.",
+            "Usar únicamente la extensión y el códec para identificar el archivo correcto."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es la práctica más fiable: timecode de inicio + duración son criterios robustos, y confirmarlos con tamaño o checksum evita relinks erróneos. Los otros criterios (nombre, fecha, extensión) son frágiles y pueden provocar enlaces equivocados.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al mezclar material 25p con 29,97p para emitir a 29,97 fps, ¿qué método minimiza artefactos y preserva la naturalidad de movimiento?",
+          "options": [
+            "Aplicar drop/duplicate frames simple para ajustar cadencia sin interpolación.",
+            "Usar conversión por interpolación con motion‑compensation (frame‑rate conversion) para generar fotogramas intermedios coherentes con movimiento.",
+            "Convertir todo a imágenes clave (I‑frames) y re‑muxear sin cambio de cadencia.",
+            "Acelerar o ralentizar todo el material a 29,97 por cambio de velocidad sin corrección de audio."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 2 minimiza artefactos al generar fotogramas intermedios basados en movimiento real entre frames; los métodos simples de duplicado/omisión causan saltos o judder, y cambiar la velocidad sin gestionar audio altera tono y sincronía.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Para dos necesidades habituales de flujo de trabajo: (1) generar un master final destinado a emisión y distribución como un único activo reproducible; (2) preparar material para edición colaborativa, reconformado y relink frecuente de clips, ¿qué elección de formato MXF es la más adecuada para cada caso y por qué, desde el punto de vista estructural?",
+          "options": [
+            "MXF OP1a se emplea preferentemente para archivado a largo plazo por evitar múltiples ficheros y OP‑Atom solo se justifica en casos muy concretos de audio multicanal donde interesa separar pistas físicamente.",
+            "MXF OP‑Atom para el master de entrega, porque su granularidad evita dependencias internas, y MXF OP1a para edición, porque un único fichero por clip simplifica la gestión en NLE.",
+            "No hay diferencia práctica relevante: ambos formatos pueden usarse indistintamente para entrega o edición; la elección depende solo del soporte o la herramienta concreta.",
+            "MXF OP1a para el master de entrega (un único fichero intercalado por programa facilita reproducción y distribución) y MXF OP‑Atom para edición y reconformado (ficheros atomizados por esencia/clip permiten relink, copia parcial y acceso paralelo)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: OP1a agrupa las esencias intercaladas en un único fichero por programa/clip, lo que facilita la reproducción continua y la entrega a playout/archivo como un activo autocontenido. OP‑Atom crea ficheros atomizados (cada esencia o clip en archivos separados), lo que facilita operaciones de edición, relink y reconformado parciales y el acceso paralelo a pistas. El distractor más próximo (opción 2) invierte las funciones: aunque un fichero único puede parecer más manejable, dificulta operaciones a nivel de clip/pista (copias parciales, relink y distribución simultánea de recursos), por eso OP1a no es la opción preferente para workflows de edición colaborativa.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "069",
       "title": "Examen 069",
