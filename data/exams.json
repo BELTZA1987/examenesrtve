@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07",
+  "updatedAt": "2026-10-08",
   "exams": [
+    {
+      "id": "071",
+      "title": "Examen 071",
+      "date": "2026-10-08",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según la Constitución española y la delimitación jurisprudencial de las libertades, ¿cuál de las siguientes afirmaciones describe con mayor precisión la relación entre la libertad de información, la exigencia de veracidad y sus límites constitucionales?",
+          "options": [
+            "La Constitución impone a los medios un deber preventivo de verificar absoluta veracidad antes de toda difusión y autoriza controles administrativos previos para impedir la circulación de informaciones falsas.",
+            "La Constitución reconoce el derecho a comunicar y recibir información veraz (art. 20), prohíbe la censura previa y garantiza la libertad de información mediante remedios y responsabilidades posteriores cuando la difusión vulnera otros derechos (honor, intimidad, imagen) o el orden público, dentro de los límites que establezca la ley.",
+            "La libertad de expresión y de información está subordinada al deber de veracidad de modo que el Estado puede restringir o prohibir previamente la difusión de informaciones consideradas inveraces sin necesidad de procedimientos posteriores.",
+            "La Constitución protege la libertad de expresión y opinión pero no contiene ninguna referencia a la veracidad de la información ni permite imponer responsabilidades por la difusión de noticias falsas."
+          ],
+          "correctIndex": 1,
+          "explanation": "Respuesta correcta: opción 1. El artículo 20 reconoce la libertad de informar y expresamente alude a la información veraz y la jurisprudencia subraya la prohibición de censura previa; la tutela de la veracidad se articula mediante responsabilidades y remedios posteriores cuando concurre lesión de otros derechos o del orden público, conforme a la ley. El distractor más próximo (opción 2) es incorrecto porque atribuye a la Constitución un deber de control administrativo previo y una verificación absoluta antes de difundir, lo que contradice la prohibición constitucional de censura previa y la práctica de sanciones o reparaciones posteriores. Las opciones 3 y 4 omiten la referencia constitucional a la veracidad y/o justifican restricciones previas que no se ajustan al marco constitucional.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Durante visionado y selección en un flujo XDCAM, ¿cómo se emplea operativamente el proxy respecto a la esencia de alta resolución?",
+          "options": [
+            "El proxy sustituye a la esencia de alta resolución en todos los procesos posteriores, incluido el master final, para ahorrar espacio y tiempo de procesamiento.",
+            "El proxy se utiliza para visionado rápido y toma de decisiones (selección, marcas de in/out) manteniendo timecode y metadatos que permiten reconformar las decisiones sobre la esencia de alta resolución en la ingesta.",
+            "El proxy solo contiene imágenes a baja resolución sin metadatos de timecode; por tanto, no es fiable para reconformado y se usa únicamente para visualización preliminar.",
+            "El proxy se genera después del reconformado y se emplea fundamentalmente para entregar versiones a clientes externos, no para la selección interna."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta describe el uso típico: proxies para visionado y selección que conservan referencias temporales y metadatos para reconformar sobre la esencia. El distractor más cercano (3) es incorrecto porque los proxies operativos en XDCAM suelen mantener timecode y metadatos necesarios para reconformado.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Seleccione la afirmación que, de forma más operativa, constituye un requisito necesario para que un accidente se considere 'in itinere'.",
+          "options": [
+            "Que el accidente ocurra mientras el trabajador utiliza un transporte proporcionado por la empresa, aunque incluya paradas breves por motivos personales.",
+            "Que el accidente tenga lugar en cualquier desplazamiento realizado dentro del horario laboral, incluidas misiones o desplazamientos puntuales ordenados por la empresa.",
+            "Que el accidente ocurra durante el desplazamiento habitual entre el domicilio del trabajador y el lugar de trabajo, siguiendo el recorrido normal y sin desviaciones personales significativas.",
+            "Que el inicio o la finalización del desplazamiento coincida exactamente con el registro horario de entrada o salida en la jornada laboral del trabajador."
+          ],
+          "correctIndex": 2,
+          "explanation": "La condición operativa central del accidente in itinere es que el siniestro se produzca en el trayecto habitual domicilio‑trabajo siguiendo el recorrido normal y sin interrupciones o desviaciones de carácter personal que rompan la continuidad del desplazamiento. El distractor más próximo (opción 3) invoca el uso de transporte empresarial, que puede facilitar la consideración, pero las paradas personales suelen excluir la condición de in itinere; la opción 2 describe desplazamientos laborales en general (misiones), que se clasifican de forma distinta; la opción 4 se limita al cruce con el registro horario, que no es en sí determinante si el trayecto no cumple la habitualidad y ausencia de desviaciones.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento para publicar en EVS/IPDirector una playlist destinada a emisión que preserve orden y transiciones:",
+          "options": [
+            "Enviar una copia de la playlist al archivo en bruto y permitir que el operador de continuidad realice los ajustes de orden y transiciones en el momento de emisión.",
+            "Exportar los clips seleccionados como ficheros independientes y reconstruir la playlist manualmente en el servidor de emisión sin ajustar transiciones en la estación de edición.",
+            "Marcar clips en el servidor sin ordenar; la lista se ordena dinámicamente en emisión, por lo que no es necesario fijar transiciones ni handles antes de publicar.",
+            "Crear playlist con clips en orden, ajustar transiciones y handles en el editor, bloquear la playlist para emisión y publicar mediante el mecanismo de ingest/dispatch del servidor asegurando disponibilidad inmediata."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta describe el flujo operativo: crear y ordenar la playlist, ajustar transiciones/handles en edición, bloquear y publicar para emisión garantizando disponibilidad. El distractor más próximo (2) omite la preparación de transiciones y handles en el editor, lo que impide reconformado y continuidad en emisión.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_news",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare criterios al editar una noticia breve: ¿qué prioridad debe primar en la selección de locución, totales y recursos cuando el tiempo es limitado?",
+          "options": [
+            "Distribuir por igual locución y totales independientemente de la importancia de la información para mantener equilibrio estético.",
+            "Priorizar recursos visuales llamativos y largos totales; la locución puede retrasarse y ampliar el desarrollo si el tiempo lo permite.",
+            "Priorizar la jerarquía informativa (dato esencial primero), una locución concisa que explique el núcleo informativo y totales que aporten contexto visual, sacrificando recursos secundarios si es necesario.",
+            "Priorizar la cantidad de recursos gráficos y entrevistas cortas; la locución se utiliza solo para enlaces entre recursos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta prioriza la jerarquía informativa, una locución concisa y totales que contextualicen, criterios propios de edición de noticias con tiempo limitado. El distractor más cercano (2) sobrevalora recursos visuales frente a la prioridad informativa exigida en noticias breves.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a causas operativas de un bucle de masa:",
+          "options": [
+            "Diferencia de potencial entre tomas de tierra de equipos conectados en la misma cadena puede generar bucle de masa.",
+            "Conexiones no balanceadas o adaptaciones incorrectas entre fuentes y etapas de entrada pueden inducir bucles de masa.",
+            "Interferencia inducida por cables próximos a líneas de alimentación (ac mains) o carcasas metálicas conectadas a distinto potencial puede provocar zumbidos.",
+            "Un bucle de masa es siempre causado exclusivamente por un cable XLR defectuoso; reemplazar el cable lo elimina necesariamente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 3 es la excepción: un cable XLR defectuoso puede causar problemas, pero no es la causa exclusiva de un bucle de masa; los bucles suelen originarse por diferencias de potencial y conexiones incorrectas. El distractor más próximo (1) es una causa real y frecuente.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "En un vectorscopio, señale la afirmación más compatible con el uso operativo y los límites de la línea de tono de piel para evaluar tonos cutáneos:",
+          "options": [
+            "La línea de tono de piel solo es aplicable en espacios de color Rec.2020; en Rec.709 no debe utilizarse por producir lecturas erráticas.",
+            "La línea de tono de piel marca un valor de saturación y luminancia legal que no puede superarse; cualquier desviación la invalida y obliga a recortar saturación.",
+            "El vectorscopio ofrece una medida absoluta de color de piel que reemplaza la corrección visual; si el clúster no cae en la línea, el plano es inválido para emisión.",
+            "La línea de tono de piel es una guía de dirección cromática útil para matching entre planos; debe usarse junto a juicio sobre luminancia y fototipo, pues tolerancias de saturación e inclinación varían por iluminación y tipo de piel."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta indica que la línea de piel es una guía para matching y que debe interpretarse en contexto (luminancia, fototipo e iluminación). El distractor más cercano (2) es incorrecto porque la línea no define un límite legal estricto y no sustituye la evaluación visual y contextual.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que mejor diferencia los principios generales y las obligaciones preventivas según la Ley 31/1995:",
+          "options": [
+            "Los principios generales y las obligaciones preventivas son términos sin diferencia práctica; ambos exigen únicamente información verbal al trabajador.",
+            "Los principios generales establecen criterios de actuación (anticipación, evaluación, eliminación del riesgo), mientras que las obligaciones preventivas concretan deberes de la empresa: evaluar riesgos, planificar medidas, formar y organizar recursos.",
+            "Los principios generales se aplican solo a riesgos físicos; las obligaciones preventivas cubren riesgos organizativos y psicosociales por separado.",
+            "Las obligaciones preventivas son recomendaciones no vinculantes derivadas de los principios generales y sin exigencia normativa de planificación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta distingue que los principios fijan criterios y las obligaciones constituyen deberes concretos (evaluación, planificación, formación). Los distractores erran al minimizar la obligatoriedad o restringir el ámbito de los principios.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: pantalla colocada demasiado baja y sin control de reflejos laterales. ¿Qué problemas operativos presenta respecto a distancia, altura, orientación e iluminación?",
+          "options": [
+            "Solo se produce un ligero beneficio ergonómico al reducir la distancia, sin impacto en reflejos o en carga postural.",
+            "Mejora del rendimiento visual por ángulo de visión más amplio y reducción de fatiga ocular al estar la pantalla más cerca de los ojos.",
+            "Producción de fatiga visual y tensión cervical por flexión de cuello, aumento de deslumbramientos y pérdida de contraste por reflejos, y postura forzada que incrementa riesgo musculo‑esquelético.",
+            "Reducción de consumo energético del monitor y por tanto menor vibración y ruido; no presenta implicaciones ergonómicas relevantes."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta identifica fatiga visual, tensión cervical por posición baja y problemas por reflejos y pérdida de contraste; son consecuencias operativas conocidas. Los distractores subestiman o confunden efectos ergonómicos con aspectos no relacionados.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Al diseñar un archivo en LTO con LTFS, ¿qué limitación operativa es más relevante respecto al acceso y verificación de la información?",
+          "options": [
+            "Las cintas LTO son inmunes a degradación física; una vez escritas no requieren comprobación ni migración.",
+            "LTFS permite acceso aleatorio tan rápido como disco SSD, por lo que no se necesitan catálogos ni verificaciones periódicas.",
+            "El acceso a datos es esencialmente secuencial y más lento que en disco; es imprescindible mantener catálogos actualizados y ejecutar verificaciones periódicas de integridad y migración planificada.",
+            "LTFS obliga a empaquetar múltiples masters en un único contenedor con imposibilidad de lectura parcial del contenido."
+          ],
+          "correctIndex": 2,
+          "explanation": "La respuesta correcta señala la naturaleza secuencial y la necesidad de catálogo y verificaciones periódicas. Los distractores exageran capacidades (2), desconocen la necesidad de migración (3) o inventan limitaciones operativas incorrectas (4).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: ¿en qué se diferencian operativamente los niveles legales, el gamut y la limitación automática (legalizer/limitador)?",
+          "options": [
+            "El gamut es una regla legal vinculante; los niveles legales son meras recomendaciones; el legalizer solo actúa sobre el audio, no sobre color.",
+            "Los niveles legales son restricciones numéricas sobre luminancia y crominancia; el gamut define el área cromática reproducible; el legalizer/limitador actúa automáticamente recortando o desplazando componentes para cumplir límites, pudiendo alterar saturación o matiz.",
+            "Los niveles legales y el gamut son equivalentes; el legalizer simplemente aumenta la saturación para compensar pérdidas en la cadena.",
+            "El legalizer corrige únicamente la luminancia; la crominancia queda siempre fuera de su ámbito de intervención."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta distingue niveles numéricos (luminancia/crominancia), el concepto de gamut y la función del legalizer que ajusta señales para cumplir límites, con posible impacto en saturación/matiz. Los distractores confunden términos o atribuyen funciones incorrectas al legalizer.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Diferencie XAVC Intra y Long‑GOP en perfiles y aplicaciones habituales:",
+          "options": [
+            "Long‑GOP es intraframe y se usa para gráficos y VFX; Intra es interframe y se usa para streaming en directo.",
+            "XAVC Intra siempre ofrece menor calidad que Long‑GOP; Long‑GOP es preferible para etalonaje profesional por su estructura predictiva.",
+            "Intra y Long‑GOP son equivalentes en estructura; la diferencia es solo de contenedor.",
+            "XAVC Intra emplea compresión intraframe con mayor bitrate y facilita edición y corrección (uso en postproducción y chroma key); Long‑GOP usa compresión interframe más eficiente para grabaciones largas y reducido almacenamiento, pero complica seek y edición frame‑precisa."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta resume que Intra es intraframe y más adecuado para edición y efectos, y Long‑GOP es más eficiente para grabación larga pero menos ágil en edición. Los distractores invierten o niegan las diferencias esenciales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_color_order",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la secuencia de operaciones en corrección de color que refleja mejor la práctica compatible: normalización, balance, contraste, matching y aplicación de look.",
+          "options": [
+            "Balance de blancos → Aplicación del look → Normalización → Matching → Ajustes de contraste.",
+            "Aplicación del look creativo → Matching entre planos → Normalización → Balance de blancos → Ajustes de contraste.",
+            "Matching entre planos → Ajustes de contraste → Aplicación del look → Normalización → Balance de blancos.",
+            "Normalización (niveles legales) → Balance de blancos/exposición → Ajustes de contraste/gamma → Matching entre planos → Aplicación del look creativo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 refleja el orden operativo: primero normalizar límites, luego balance/exposición, contrastes, luego matching entre planos y finalmente el look. Los distractores alteran el orden y mezclarían operaciones que dificultan el matching y preservación de límites.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al intercalar dos líneas de acción, ¿qué criterio operativo distingue el montaje paralelo del montaje alterno?",
+          "options": [
+            "Montaje paralelo muestra acciones simultáneas que se perciben como coetáneas y tienden a converger temáticamente; montaje alterno intercala acciones que no necesariamente son simultáneas y puede retrasar la convergencia temporal.",
+            "Montaje paralelo siempre utiliza el mismo ritmo para ambas líneas; montaje alterno exige cortes rápidos y sin posibilidad de raccord musical.",
+            "Montaje alterno implica montaje intelectual por yuxtaposición; montaje paralelo solo combina planos del mismo personaje.",
+            "Montaje paralelo y alterno son términos sin diferencia operativa: ambos significan cortar entre dos líneas de acción indistintamente."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta distingue simultaneidad y tendencia a convergencia en el montaje paralelo frente a alternancia temporal y posible no‑simultaneidad en el montaje alterno. Los distractores confunden o trivializan las diferencias.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor expresa una obligación concreta impuesta por la Ley 13/2022 en materia de accesibilidad audiovisual:",
+          "options": [
+            "La Ley 13/2022 solo recomienda medidas de accesibilidad sin imponer obligaciones concretas a prestadores audiovisuales.",
+            "Los prestadores deben garantizar recursos de accesibilidad (subtítulos, audiodescripción y lengua de signos) en función del servicio (lineal y bajo demanda) y del perfil de la audiencia, incorporando controles para su activación.",
+            "Las obligaciones de accesibilidad se limitan a la producción original; los contenidos adquiridos están exentos de subtitulado o audiodescripción.",
+            "La Ley exige que todos los contenidos se retransmitan simultáneamente en lengua de signos visible permanentemente en pantalla."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta identifica las obligaciones de accesibilidad (subtítulos, audiodescripción, LSE) según servicio y con controles de activación. Los distractores minimizan la obligatoriedad, restringen indebidamente el ámbito o proponen medidas irreales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare la frecuencia de muestreo y el teorema de Nyquist respecto a banda audible y aliasing:",
+          "options": [
+            "Para evitar aliasing la frecuencia de muestreo debe ser al menos el doble de la frecuencia máxima de la señal analógica; además se requiere un filtro antialias para atenuar frecuencias por encima de la banda útil.",
+            "La frecuencia de muestreo puede ser arbitraria si se aplica compresión; el teorema de Nyquist no condiciona la presencia de aliasing.",
+            "Muestreo más bajo siempre mejora la percepción de agudos; aliasing aparece únicamente por defectos en convertidores A/D, no por muestreo insuficiente.",
+            "El teorema de Nyquist establece que la frecuencia de muestreo debe ser igual a la frecuencia máxima audible para evitar aliasing."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta resume Nyquist (fs ≥ 2·fmax) y la necesidad de filtro antialias. Los distractores contienen afirmaciones técnicas incorrectas sobre la arbitrariedad del muestreo o confunden iguales condiciones con recomendaciones insuficientes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: al usar drop‑frame en 29,97 fps se observa desfase entre timecode y reloj real. ¿Cuál es la corrección adecuada respecto a la numeración frente al tiempo real?",
+          "options": [
+            "Drop‑frame ajusta la numeración del timecode saltando determinados números de frame según una regla periódica para alinear el timecode con el tiempo real sin eliminar fotogramas reales.",
+            "Drop‑frame elimina físicamente fotogramas del material para compensar la diferencia entre 29,97 y 30 fps, reduciendo la duración real del clip.",
+            "Non‑drop renumera frames para coincidir exactamente con el tiempo real, mientras que drop‑frame mantiene un contador continuo que deriva con el reloj.",
+            "Drop‑frame solo afecta a la columna de minutos y no modifica la cuenta de segundos ni frames."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta explica que drop‑frame corrige la numeración saltando números (no eliminando fotogramas) para mantener la concordancia con el tiempo real. El distractor más cercano (2) confunde la técnica con la eliminación real de fotogramas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_metadatos",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la función de metadatos técnicos y descriptivos en catalogación, búsqueda e intercambio:",
+          "options": [
+            "Los metadatos permiten por sí mismos validar bit‑exactitud entre dos ficheros; por tanto, si coinciden, no se requiere checksum.",
+            "Los metadatos facilitan la búsqueda, filtrado y reconformado porque describen timecode, pistas y contexto del contenido.",
+            "Los metadatos favorecen la interoperabilidad entre sistemas al formalizar campos técnicos y descriptivos para intercambio.",
+            "Los metadatos aportan contexto para preservación y gestión de derechos, siendo esenciales para catalogación a largo plazo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción: los metadatos facilitan muchas funciones, pero no validan bit‑exactitud; esa tarea corresponde a checksums. Los otros enunciados reflejan funciones reales de los metadatos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En edición lineal A/B‑Roll, indique la función operativa de las fuentes A/B y de la prelectura en el mezclador:",
+          "options": [
+            "Las fuentes A y B permiten preparar dos pistas para realizar transiciones y cortes sin alterar el programa; la prelectura (preview) permite comprobar y ajustar la conmutación o fundido en el mezclador antes de pasar al programa en directo.",
+            "Las fuentes A y B se usan exclusivamente para redundancia; la prelectura copia automáticamente el programa al archivo sin intervención del mezclador.",
+            "A/B‑Roll elimina la necesidad de sincronizar timecode entre fuentes; la prelectura sirve para monitorizar audio únicamente.",
+            "Las fuentes A y B solo se emplean para gráficos; la prelectura sustituye al visor de programa cuando se emite."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta describe que A/B permiten preparar y ejecutar transiciones y que la prelectura permite verificar y ajustar antes del pase a programa. Los distractores atribuyen funciones incorrectas o irreales a A/B y a la prelectura.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "¿Cuál de las siguientes afirmaciones resume mejor ventajas y limitaciones de CBR frente a VBR?",
+          "options": [
+            "VBR es preferible en emisiones en directo porque garantiza un ancho de banda fijo; CBR solo se usa para archivos locales.",
+            "CBR siempre proporciona mejor calidad que VBR al usar la misma media aritmética de bits; VBR solo reduce calidad por picos.",
+            "CBR ofrece tasa constante y previsibilidad de ancho de banda, adecuada para emisión en tiempo real; VBR optimiza calidad por tasa y es eficiente para almacenamiento pero requiere variable ancho de banda y es menos predecible en streaming en directo.",
+            "CBR y VBR son equivalentes en todas las aplicaciones; la elección es meramente nominal."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta explica que CBR mantiene ancho de banda predecible (ventajoso en tiempo real) y que VBR optimiza calidad/uso de bits para almacenamiento, siendo menos predecible en streaming. Los distractores invierten o falsean las propiedades técnicas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "070",
       "title": "Examen 070",
