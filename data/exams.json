@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-09",
   "exams": [
+    {
+      "id": "072",
+      "title": "Examen 072",
+      "date": "2026-10-09",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Respecto a la función de servicio público de la Corporación, indique la afirmación que constituye una excepción (NO debe regir prioritariamente la actividad informativa):",
+          "options": [
+            "Subordinar la línea informativa a directrices políticas del Gobierno cuando lo exija la institución.",
+            "Promover el pluralismo y la diversidad de opiniones en los servicios informativos.",
+            "Garantizar la veracidad y el rigor en la información difundida por la Corporación.",
+            "Velar por la accesibilidad y la protección de públicos vulnerables, incluidos menores."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la que no corresponde a una obligación de servicio público: la subordinación a directrices políticas contradice los principios de independencia e imparcialidad. Los otros enunciados (veracidad, pluralismo y protección de públicos) son obligaciones compatibles con la misión de servicio público.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al comparar ficheros antes y después de una operación que modifica el encapsulado pero preserva la esencia audiovisual, señale la afirmación que describe mejor el procedimiento y el límite de un checksum:",
+          "options": [
+            "Para operaciones que alteran metadatos o contenedor, conviene verificar la integridad calculando checksum sobre la esencia (payload) o usar identificadores de esencia además del checksum de archivo.",
+            "Si el checksum difiere, la esencia está necesariamente corrupta y debe descartarse el fichero resultante.",
+            "Un checksum de archivo idéntico confirma siempre que la esencia audiovisual es equivalente tras la operación.",
+            "Bastar con comparar nombres de fichero y tamaños es equivalente a una verificación mediante checksum en operaciones de repackaging."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación correcta explica el límite del checksum de archivo: éste compara bytes totales, por lo que cambios en contenedor o metadatos alteran el checksum aunque la esencia se conserve. Por ello es necesario checksum/identificador aplicado a la esencia o extraer el payload para su verificación; los otros distractores confunden causa y efecto o son insuficientes.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Un medidor de correlación indica valores cerca de +0,9 en pasajes con voz centrada y valores próximos a −0,8 en pasajes con ambientes estéreo muy abiertos. Diagnóstico operativo más preciso:",
+          "options": [
+            "Los pasajes con ≈+0,9 indican alta compatibilidad para suma a mono; los pasajes con ≈−0,8 presentan riesgo elevado de cancelación al sumar a mono.",
+            "Valores negativos próximos a −0,8 indican inversión absoluta de fase en un canal que siempre requiere invertir polaridad para corregir.",
+            "Una lectura de −0,8 en secciones estéreo es normal y no implica riesgo en la emisión en canal mono.",
+            "El medidor de correlación no aporta información sobre compatibilidad mono; sólo sirve para balance de imagen estéreo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta interpreta correctamente la correlación: valores cercanos a +1 muestran alta correlación y compatibilidad al sumar a mono; valores próximos a −1 indican riesgo de cancelación (suma destructiva). No todas las lecturas negativas implican inversión absoluta de fase (segundo distractor) y el medidor sí aporta información sobre compatibilidad mono (cuarto distractor).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En plató se realiza: copia automática de archivos de cámara al servidor de producción, generación de metadatos técnicos y descriptivos, cálculo de checksums y registro en catálogo. ¿Qué término describe con mayor precisión esa operación?",
+          "options": [
+            "Capture",
+            "Import",
+            "Link",
+            "Ingest"
+          ],
+          "correctIndex": 3,
+          "explanation": "La descripción corresponde a una ingesta: proceso integral que copia contenido, genera metadatos y calcula checksums con registro en sistemas de gestión. 'Capture' suele referirse a transferencia directa desde equipos de reproducción; 'Import' a añadir archivos al proyecto sin necesariamente registrar o calcular checksums; 'Link' crea referencias sin copiar ni registrar plenamente.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "En un NEXIS con usuarios simultáneos editando, ¿qué factor influye de forma más directa en mantener el rendimiento concurrente sin degradación de reproducción?",
+          "options": [
+            "Configuración de reservas/garantías de ancho de streaming y pools de rendimiento en el NEXIS.",
+            "Cantidad de metadatos almacenados en los bins compartidos.",
+            "Potencia de CPU de cada estación cliente.",
+            "Tamaño individual de los ficheros de medios (MB por archivo)."
+          ],
+          "correctIndex": 0,
+          "explanation": "El factor decisivo es la gestión de reservas/garantías de ancho de streaming y la asignación por pools en el almacenamiento compartido: permiten limitar y garantizar throughput para usuarios concurrentes. La CPU cliente y el tamaño de fichero influyen, pero no son el control primario para evitar colisiones de I/O en un SAN/NEXIS; los metadatos afectan menos al throughput.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor describe la adecuación de black burst y tri‑level sync según resolución y formatos de la cadena:",
+          "options": [
+            "Tri‑level sync sólo es válido para señales entrelazadas y no debe usarse en progresivo.",
+            "Black burst es adecuado para señales SD basadas en campos; tri‑level sync es la referencia habitual para HD/progresivo por su menor jitter y compatibilidad con cadencias de cuadro completas.",
+            "Black burst proporciona sincronismo de sub‑cuadro requerido en 1080p y 50/60 Hz; tri‑level sólo en 720p.",
+            "Ambas referencias son equivalentes en prestaciones y se pueden intercambiar sin ajuste en cadenas HD y SD."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación correcta señala la práctica: black burst se emplea históricamente en SD (basado en línea/campo), mientras que tri‑level ofrece mejor precisión y menor jitter, siendo la elección para HD y formatos progresivos; los otros enunciados son incorrectos sobre compatibilidad y prestaciones.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Si la tensión aplicada a un equipo resistente constante se incrementa un 10% y la resistencia no cambia, ordene el efecto sobre corriente y potencia:",
+          "options": [
+            "La corriente aumenta ~10% y la potencia aumenta ~10%.",
+            "La corriente aumenta ~10% y la potencia aumenta ~21% (V^2/R).",
+            "La corriente aumenta ~21% y la potencia aumenta ~10%.",
+            "La corriente y la potencia aumentan ambas ~10%."
+          ],
+          "correctIndex": 1,
+          "explanation": "Con R constante, I=V/R por lo que I crece un 10%. La potencia P=V^2/R crece según el cuadrado de la tensión: 1,1^2≈1,21 → incremento ≈21%. Los distractores confunden las dependencias lineales y cuadráticas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Según el III Convenio Colectivo de la Corporación, señale la afirmación más compatible con la regulación sobre jornada, descansos y turnicidad:",
+          "options": [
+            "El Convenio impone una jornada idéntica y fija para todo el personal sin posibilidad de turnos.",
+            "El Convenio prohíbe cualquier trabajo en turnos nocturnos bajo cualquier circunstancia.",
+            "El Convenio permite la organización por turnos, incluyendo rotativos, con previsión de calendarios, compensaciones específicas y descanso mínimo entre jornadas.",
+            "El Convenio autoriza suprimir descansos semanales cuando exista acumulación de trabajo."
+          ],
+          "correctIndex": 2,
+          "explanation": "El Convenio regula la posibilidad de organizar turnos, con calendarios y medidas compensatorias y garantiza descansos mínimos entre jornadas. Las otras opciones son incompatibles con la regulación colectiva que contempla flexibilidad, pero también protección de descansos y límites legales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la medida que constituye una excepción respecto a las recomendaciones preventivas frente a trastornos musculoesqueléticos en tareas continuadas con teclado, ratón o tableta:",
+          "options": [
+            "Alternar pausas activas y ejercicios de movilidad durante la jornada.",
+            "Ajustar la altura de silla y apoyar antebrazos para mantener postura neutra.",
+            "Utilizar dispositivos de entrada que permitan variación postural y reducido esfuerzo de presión.",
+            "Mantener la muñeca en extensión pronunciada y fija para mayor productividad."
+          ],
+          "correctIndex": 3,
+          "explanation": "Mantener la muñeca en extensión pronunciada es contraproducente y por tanto la excepción. Las demás medidas (pausas, ajuste ergonómico y elección de dispositivos) son recomendaciones preventivas habituales.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto al intercambio de proyectos entre estaciones mediante EDL y AAF, cuál afirmación refleja mejor la diferencia operativa sobre alcance transferible:",
+          "options": [
+            "Un AAF solo transporta imágenes y no puede incluir información de audio ni efectos.",
+            "Un EDL contiene exactamente la misma información que un AAF pero en formato más compacto.",
+            "Un EDL exporta decisiones temporales básicas (timecode in/out, orden, pistas) y generalmente no incluye efectos complejos ni metadatos extendidos; un AAF puede transferir varias pistas, referencias a media, transiciones, efectos y metadatos adicionales.",
+            "Un EDL transfiere metadatos completos y efectos nativos de cualquier NLE sin pérdidas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación correcta resume la diferencia operativa: el EDL es limitado a decisiones de corte y referencias simples; el AAF permite transporte de pistas múltiples, algunos efectos y metadatos. Los otros enunciados exageran o falsean capacidades de uno u otro formato.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Ante un incendio iniciado en una regleta eléctrica en plató, señale la actuación prioritaria compatible con clases de fuego y seguridad eléctrica:",
+          "options": [
+            "Mover el equipo encendido a un área ventilada para continuar la grabación.",
+            "Intentar apagar con agua para enfriar la regleta y evitar propagación.",
+            "Desconectar manualmente tirando de cables con las manos mientras el equipo sigue energizado.",
+            "Cortar la alimentación eléctrica si es seguro hacerlo y utilizar un extintor adecuado (CO2 o polvo) manteniendo la distancia; evacuar si procede."
+          ],
+          "correctIndex": 3,
+          "explanation": "La actuación correcta prioriza seguridad eléctrica: cortar alimentación si es seguro y emplear extintores adecuados para fuegos eléctricos (CO2/polvo), además de evacuar. Agua es inapropiada en fuegos eléctricos; manipular cables energizados o mover equipos encendidos aumenta el riesgo.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare entrelazado y progresivo: seleccione la afirmación técnica más ajustada sobre diferencias temporales y artefactos de movimiento.",
+          "options": [
+            "No existen diferencias observables en movimiento entre entrelazado y progresivo al mismo framerate.",
+            "El progresivo genera necesariamente más judder que el entrelazado para contenidos con movimiento rápido.",
+            "El entrelazado es siempre superior para grabación de movimiento rápido en cámaras digitales modernas.",
+            "El entrelazado divide el cuadro en campos temporales alternos, lo que puede producir artefactos tipo 'combing' en objetos en movimiento y exige desentrelazado para procesado progresivo; el progresivo trata el cuadro completo por muestreo temporal y reduce esos artefactos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta explica la diferencia: entrelazado interpone campos con desfase temporal que originan combing y requieren desentrelazado; progresivo captura todo el cuadro y maneja movimiento sin esos artefactos. Los otros enunciados son inexactos o absolutos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para cumplir la política 3‑2‑1 de copias de seguridad en una producción audiovisual, cuál de estas estrategias es correcta:",
+          "options": [
+            "Almacenar tres copias en la misma NAS pero en carpetas diferentes para simplificar acceso.",
+            "Confiar en RAID en el mismo servidor como sustituto de las tres copias requeridas por la política 3‑2‑1.",
+            "Mantener tres copias de los datos, almacenadas en al menos dos tipos de soportes distintos y con al menos una copia fuera de la ubicación principal (offsite).",
+            "Realizar una sola copia en LTO y confiar en que el hardware de cinta evita la necesidad de copias adicionales."
+          ],
+          "correctIndex": 2,
+          "explanation": "La política 3‑2‑1 exige tres copias, en al menos dos soportes distintos y una copia fuera de la ubicación principal. RAID no sustituye copias independientes; almacenar todas las copias en el mismo dispositivo o depender de una única copia en cinta incumple la regla.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_offline_online",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En reconformado desde edición proxy a originales, ¿qué requisito concreto debe contener la lista de decisiones para que el proceso automático relinkee correctamente?",
+          "options": [
+            "Únicamente la duración total del montaje, sin referencias temporales.",
+            "Sólo la referencia al nombre del fichero proxy sin timecode ni IDs.",
+            "Timecode de entrada/salida y identificador único de origen (reel/clip ID) en cada decisión.",
+            "Solo marcadores visuales colocados por el operador, sin metadatos técnicos."
+          ],
+          "correctIndex": 2,
+          "explanation": "Para reconformar de proxies a originales es imprescindible que la lista de decisiones incluya timecode in/out y un identificador único del origen (reel/clip) para localizar y relinkear los originales; los otros elementos son insuficientes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que resume con mayor precisión un principio general del sistema de financiación previsto para la Corporación:",
+          "options": [
+            "Garantizar estabilidad financiera y condiciones que preserven la independencia y la continuidad del servicio público mediante fuentes diversificadas.",
+            "Financiar la Corporación exclusivamente mediante ingresos publicitarios sin aportación presupuestaria pública.",
+            "Permitir que la financiación dependa exclusivamente de donaciones privadas sin control público.",
+            "Asignar la financiación únicamente en función de audiencias diarias medidas por paneles comerciales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación correcta refleja principios generales aceptados: estabilidad y preservación de independencia mediante fuentes diversificadas y control. Las otras opciones describen modelos que comprometerían independencia o no garantizan continuidad del servicio público.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare HDR y SDR: señale la afirmación que mejor describe diferencias en rango dinámico, luminancia y compatibilidad de visualización:",
+          "options": [
+            "HDR y SDR son equivalentes en rango dinámico y no requieren ajustes para visualizarse en distinta tecnología.",
+            "HDR ofrece mayor rango dinámico y picos de luminancia superiores (gestionados por métricas y transferencias como PQ/HLG) y requiere adaptación o tone mapping para visualización en pantallas SDR.",
+            "SDR maneja mayor luminancia máxima que HDR y por tanto ofrece mejor detalle en altas luces.",
+            "HDR solo afecta a la resolución espacial y no a luminancia ni a compatibilidad de entrega."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta señala que HDR amplía rango dinámico y picos de luminancia y que la compatibilidad con SDR necesita tone mapping o conversiones; los otros enunciados niegan diferencias técnicas claras entre ambos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_match_action",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al realizar un raccord de movimiento (match on action) entre dos planos, ¿qué criterio técnico es el más determinante para preservar la continuidad perceptiva del movimiento?",
+          "options": [
+            "Que ambos planos tengan la misma distancia focal sin considerar la dirección del movimiento.",
+            "Coincidencia de la trayectoria y ritmo del elemento en movimiento entre corte y corte.",
+            "Asegurar que el color y la iluminación coincidan exactamente aunque la dirección del movimiento cambie.",
+            "Colocar siempre el punto de corte en un fotograma donde el sujeto esté completamente inmóvil."
+          ],
+          "correctIndex": 1,
+          "explanation": "La continuidad perceptiva en un match on action depende esencialmente de igualar la trayectoria y la dinámica/velocidad del movimiento entre planos; los aspectos de focal o color ayudan pero no sustituyen la coincidencia de trayectoria y tempo.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a componentes y uso práctico, señale la afirmación más precisa sobre RGB frente a YCbCr:",
+          "options": [
+            "RGB reduce redundancia de señal y es más eficiente para compresión que YCbCr.",
+            "YCbCr usa primarios rojo/verde/azul, y RGB separa luminancia y crominancia.",
+            "YCbCr no puede representar luminancia y por ello no es válido para broadcast.",
+            "RGB contiene canales de componentes primarios (R,G,B) y se usa habitualmente en adquisición y composición; YCbCr separa luminancia (Y) y crominancia (Cb/Cr) optimizando compresión y transmisión."
+          ],
+          "correctIndex": 3,
+          "explanation": "La afirmación correcta describe la diferencia estructural y de uso: RGB representa primarios y es común en creación/composición; YCbCr separa luminancia y crominancia, favoreciendo compresión y transmisión. Los otros distractores contienen errores conceptuales.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_evs_loop",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "En un servidor EVS configurado en grabación en bucle (loop), indique la afirmación que constituye una excepción respecto al principio operativo y recuperación de ejecuciones:",
+          "options": [
+            "El sistema sobrescribe el material más antiguo cuando se alcanza la capacidad asignada al bucle.",
+            "Los clips en bucle no pueden marcarse para preservarse y, por tanto, siempre se pierden cuando llega la sobreescritura.",
+            "Se pueden asignar canales y colocar marcadores que permitan aislar y preservar una ejecución concreta dentro del bucle.",
+            "Es posible extraer y consolidar un segmento en curso como clip independiente sin detener la grabación en bucle."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 3 es la excepción: en práctica sí es posible marcar y preservar segmentos dentro de un bucle para evitar su sobrescritura. Las otras afirmaciones describen comportamientos reales y característicos del modo loop.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Respecto al comportamiento operativo del audio en un J‑cut frente a otros cortes, ¿cuál afirmación define con precisión un J‑cut?",
+          "options": [
+            "Un J‑cut exige siempre un fundido cruzado de audio de al menos medio segundo.",
+            "En un J‑cut, el audio del plano previo se mantiene tras el corte visual al siguiente plano.",
+            "En un J‑cut, el audio del siguiente plano comienza antes de que aparezca su imagen correspondiente en pantalla.",
+            "Un J‑cut solo se emplea en montajes musicales y no en diálogo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La definición operativa de J‑cut es que el audio correspondiente al plano siguiente entra antes de su imagen; la segunda opción describe un L‑cut (no debe repetirse como definición principal aquí), y las otras son afirmaciones incorrectas o demasiado restrictivas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "071",
       "title": "Examen 071",
