@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "exams": [
+    {
+      "id": "073",
+      "title": "Examen 073",
+      "date": "2026-10-10",
+      "level": "Alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al principio constitucional de igualdad y la prohibición de discriminación:",
+          "options": [
+            "La igualdad exige trato idéntico en todas las situaciones, sin posibilidad de establecer acciones compensatorias específicas.",
+            "El principio de igualdad permite medidas temporales de acción positiva para corregir desigualdades estructurales.",
+            "La prohibición de discriminación impide que la Administración favorezca a grupos tradicionalmente desfavorecidos mediante políticas públicas.",
+            "La igualdad constitucional prohíbe toda distinción discriminatoria basada en sexo, raza, religión, opinión o circunstancias personales o sociales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación correcta como excepción es la que sostiene que la igualdad obliga a trato idéntico sin acciones compensatorias. Esa formulación es incompatible con la doctrina constitucional que admite medidas de acción positiva para corregir desigualdades; las otras opciones describen principios y excepciones aceptadas (prohibición de discriminación y posibilidad de acción positiva). La diferencia decisiva es la negación de las medidas compensatorias en la opción señalada.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Señale la afirmación que constituye una excepción respecto a la noción de ritmo interno y externo del montaje:",
+          "options": [
+            "El ritmo interno de un plano se determina por la duración, el movimiento dentro del encuadre y la densidad informativa.",
+            "La duración de los planos es el único factor que determina el ritmo percibido de una escena.",
+            "El ritmo externo de una secuencia resulta de la relación temporal entre planos y la estructura global del montaje.",
+            "El movimiento interno (acción, desplazamiento de cámara) puede acelerar la percepción de ritmo aunque la duración de planos sea constante."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción que constituye la excepción es la que afirma que la duración de los planos es el único factor determinante. En realidad, el ritmo depende también del movimiento interno, la intensidad narrativa y la estructura; las demás opciones describen correctas relaciones entre duración, movimiento y ritmo. La diferencia decisiva es la exclusividad que plantea la opción señalada.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál es la condición que limita con mayor frecuencia la fiabilidad del emparejamiento automático de cámaras por forma de onda de audio?",
+          "options": [
+            "Diferentes sample rates entre cámaras sin conversión previa.",
+            "Compresión de audio con pérdidas aplicadas de forma distinta en cada cámara.",
+            "Desajuste del código de tiempo de las cámaras por drift progresivo.",
+            "Ausencia de contenido de audio común entre las pistas que se intentan sincronizar."
+          ],
+          "correctIndex": 3,
+          "explanation": "La limitación más frecuente es la ausencia de señal de audio compartida: sin material común (p. ej. clap, ambiente coincidente), las formas de onda no correlacionan y la sincronización automática falla. Los otros factores pueden dificultar el proceso, pero si no existe contenido común la correlación por forma de onda es inviable; esa es la diferencia decisiva.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare ventajas, riesgos y prácticas de gestión de soportes de estado sólido tras la ingesta:",
+          "options": [
+            "Ventaja: idéntica gestión que un disco magnético. Riesgo: pérdida de datos por golpes. Práctica: reemplazar SSD por HDD para archivo a largo plazo siempre.",
+            "Ventaja: tolerancia ilimitada a escrituras. Riesgo: no existe desgaste por ciclos. Práctica: formateo a bajo nivel tras cada descarga para garantizar integridad.",
+            "Ventaja: mayor velocidad y resistencia a golpes. Riesgo: ciclos limitados de escritura. Práctica: evitar formateos completos innecesarios tras verificación y mantener copias verificadas antes de borrar.",
+            "Ventaja: menor coste por GB que HDD. Riesgo: fragilidad mecánica. Práctica: borrar por sobrescritura para limpieza segura tras ingesta."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta identifica ventajas reales (velocidad y resistencia física relativa), riesgo veraz (ciclos de escritura limitados en NAND) y la práctica recomendada (evitar formateos completos que aumentan desgaste; verificar checksums y conservar copias antes de borrar). Los distractores atribuyen propiedades falsas a SSD (ciclos ilimitados, mismo comportamiento que HDD) o prácticas inapropiadas (sobrescritura innecesaria que aumenta desgaste). La diferencia decisiva es el reconocimiento del desgaste por ciclos y la práctica de verificación previa al formateo.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Qué ventana de loudness corresponde a la medida diseñada para valorar picos de nivel percibido en intervalos muy breves (aprox. 400 ms):",
+          "options": [
+            "Integrated (medida de una pieza completa).",
+            "Momentary (ventana aproximada de 400 ms).",
+            "Short‑term (ventana aproximada de 3 segundos).",
+            "Sample peak (medida de pico de muestra, no de loudness)."
+          ],
+          "correctIndex": 1,
+          "explanation": "La ventana momentary está definida para evaluar la percepción de nivel en intervalos muy breves (aprox. 400 ms). Short‑term usa ~3 s para pasajes cortos más largos; integrated resume toda la pieza; sample peak no es una ventana de loudness sino un pico de muestra. La diferencia decisiva es la duración de la ventana de medición.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para expresar continuidad temporal inmediata entre dos acciones sucesivas sin diluir la percepción de simultaneidad, qué transición y motivo elegir:",
+          "options": [
+            "Corte: preserva inmediatez y continuidad narrativa sin sugerir salto temporal.",
+            "Fundido encadenado (crossfade): indica con frecuencia una superposición temporal o transición subjetiva.",
+            "Fundido a negro: señala salto temporal prolongado o cierre de secuencia.",
+            "Wipe estilizado: sugiere relación temática o estilización externa a la continuidad temporal."
+          ],
+          "correctIndex": 0,
+          "explanation": "El corte es la transición que preserva la inmediatez y continuidad temporal entre acciones sucesivas. Las otras transiciones comunican efectos temporales o estilísticos distintos (crossfade sugiere solapamiento o subjetividad; fundido a negro marca salto temporal prolongado; wipe es recurso estético). La elección se justifica por la función narrativa buscada: mantener percepción de continuidad.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento más adecuado para crear un códec intermedio destinado a edición colaborativa y etalonaje manteniendo 10‑12 bits y máxima compatibilidad con estaciones Avid y DaVinci:",
+          "options": [
+            "Usar ProRes Proxy para todas las operaciones de etalonaje final.",
+            "Transcodificar a H.264 de alta calidad para reducir tamaño y facilitar intercambio.",
+            "Generar archivos DNxHR (perfil HQX o HQ) como mezzanine, preservando 10/12 bits y metadatos de color.",
+            "Encapsular en MP4 con códec de entrega para edición colaborativa."
+          ],
+          "correctIndex": 2,
+          "explanation": "DNxHR en perfiles altos (HQ/HQX) es el procedimiento adecuado para mezzanine que preserve profundidad de bits y compatibilidad con Avid y DaVinci. H.264 y MP4 son códecs/contenedores de entrega con compresión con pérdida y limitaciones para etalonaje; ProRes Proxy no ofrece la calidad necesaria para etalonaje final. La diferencia decisiva es preservar profundidad de bits y compatibilidad de postproducción.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Según el II Plan de Igualdad y la Guía de Igualdad de RTVE, ¿qué medida resulta más adecuada para prevenir representaciones sexistas y lenguaje no inclusivo en los contenidos?:",
+          "options": [
+            "Suspender emisiones con quejas de audiencia sin revisión previa del contenido.",
+            "Limitar la contratación de personal creativo según criterios de cuota por programa.",
+            "Implantar listas de verificación editoriales obligatorias que revisen lenguaje, roles y representación antes de emisión.",
+            "Delegar la corrección del lenguaje exclusivo a los responsables de redes sociales."
+          ],
+          "correctIndex": 2,
+          "explanation": "La medida coherente con el Plan y la Guía es la implantación de checklists editoriales que controlen lenguaje y representación antes de la emisión. Las demás opciones son medidas inadecuadas o procedimentales que no garantizan prevención estructural. La diferencia decisiva es que el Plan promueve medidas integradas de revisión y formación, no acciones reactivas o meramente punitivas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Qué organización de tareas es compatible con la reducción de fatiga visual y postural en trabajos prolongados frente a pantallas:",
+          "options": [
+            "Obligar a realizar todas las tareas de edición intensiva en una sola sesión para evitar desplazamientos.",
+            "Mantener jornadas largas sin pausas para concentrar el esfuerzo y reducir tiempo total expuesto.",
+            "Sustituir pausas por aumento de brillo de pantalla para mejorar legibilidad.",
+            "Alternar periodos de trabajo en pantalla con tareas no visuales y breves pausas frecuentes, además de cambios posturales programados."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta propone alternancia de tareas y pausas breves (micro‑pausas) y cambios posturales, medida compatible con la prevención de fatiga visual y musculo‑esquelética. Las otras opciones son incompatibles: evitan pausas o aplican soluciones que no reducen la carga visual. La diferencia decisiva es la recomendación de pausas y alternancia de actividad.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_intra_longgop",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que mejor describe la diferencia operativa entre compresión intraframe e Long‑GOP:",
+          "options": [
+            "Long‑GOP no necesita decodificar frames previos para reproducir un fotograma P o B.",
+            "Intraframe siempre ofrece mejor compresión por secuencia que Long‑GOP.",
+            "Intraframe codifica cada cuadro de forma independiente, facilita acceso aleatorio y edición, pero genera mayor tamaño; Long‑GOP es más eficiente en bitrate pero requiere contexto GOP para decodificar y complica el acceso aleatorio.",
+            "Intraframe es inadecuado para edición porque impide cualquier corte frame‑accurate."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta señala que intraframe codifica cuadros de forma independiente (mejor para acceso aleatorio y edición) a costa de mayor tamaño; Long‑GOP es más eficiente pero exige decodificar GOP completo para acceder a frames intermedios. Las demás son incorrectas: intraframe no ofrece siempre mejor compresión; Long‑GOP sí requiere contexto; intraframe es adecuado para edición frame‑accurate. La diferencia decisiva es el requisito de contexto de Long‑GOP.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Un proyecto en el NLE reproduce timeline con cortes simples sin problemas, pero al aplicar efectos GPU‑acelerados aparecen tartamudeos aunque la CPU se mantiene baja. ¿Cuál es el cuello de botella más probable y la intervención prioritaria?:",
+          "options": [
+            "RAM del sistema: duplicar módulos para mejorar el rendimiento general.",
+            "CPU: añadir núcleos para mejorar la decodificación de efectos.",
+            "GPU: aumentar VRAM o reducir resolución de reproducción para evitar swapping de texturas en la tarjeta gráfica.",
+            "Disco: incrementar IOPS porque el problema es siempre del almacenamiento."
+          ],
+          "correctIndex": 2,
+          "explanation": "El escenario indica que los efectos son GPU‑acelerados y la CPU no está saturada; por tanto el cuello de botella más probable es la GPU (procesamiento o VRAM insuficiente). La intervención prioritaria es optimizar carga GPU (bajar resolución de reproducción) o mejorar GPU/VRAM. Las otras opciones no atacan la causa indicada: la CPU no está limitada, la RAM o disco pueden influir pero no son la primera causa dada la descripción. La diferencia decisiva es la relación entre tipo de efecto (GPU) y recurso observado (CPU baja).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare canal alpha premultiplicado (premult) y straight:",
+          "options": [
+            "Premultiplied: evita siempre halos al superponer imágenes. Straight: produce siempre halos en bordes.",
+            "Premultiplied: RGB ya multiplicado por alpha; requiere interpretación premult al componer para evitar halos. Straight: RGB sin multiplicar; requiere premultiplicación matemática al componer.",
+            "Premultiplied: está diseñado solo para video SD. Straight: solo para gráficos vectoriales.",
+            "Premultiplied y straight son intercambiables sin necesidad de ajustar la interpretación al componer."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta explica la diferencia técnica: en premultiplied los canales RGB están multiplicados por alpha y necesitan un tratamiento específico al componer, de lo contrario aparecen halos; straight almacena RGB sin multiplicar y se compone de forma distinta. Las otras opciones contienen afirmaciones falsas (no evitan siempre halos; no están limitados a SD; no son intercambiables sin conversión). La diferencia decisiva es el modo de almacenamiento de RGB respecto al alpha y la necesidad de la interpretación correcta al componer.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para mantener reproducción simultánea fluida de múltiples canales desde un servidor de vídeo compartido, ¿qué magnitud debe dimensionarse con mayor prioridad?:",
+          "options": [
+            "Número de CPU del servidor sin relación con I/O.",
+            "Ancho de banda de almacenamiento (throughput secuencial) agregado disponible para streams.",
+            "Capacidad de GPU del servidor para decodificación de streams.",
+            "Tamaño del catálogo de metadatos en la base de datos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La magnitud que determina con mayor precisión el número máximo de canales simultáneos servidos es el throughput secuencial agregado del sistema de almacenamiento y la red (ancho de banda). CPU, GPU o tamaño del catálogo influyen en aspectos concretos, pero la reproducción concurrente de video es principalmente limitada por la capacidad de throughput. La diferencia decisiva es que cada stream consume ancho de banda sostenido.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento que debe aplicar el empleador antes de enviar a un trabajador a una misión fuera del centro habitual:",
+          "options": [
+            "Evaluación de riesgos específica del desplazamiento, información y formación sobre riesgos y medios de contacto/emergencia.",
+            "Ninguna actuación preventiva es necesaria si el trabajador tiene contrato indefinido.",
+            "Limitar la información al trabajador a la fecha y hora del desplazamiento únicamente.",
+            "Exigir que el trabajador contrate seguro privado sin aportar medidas preventivas."
+          ],
+          "correctIndex": 0,
+          "explanation": "El empleador debe realizar una evaluación específica de riesgos de la misión, proporcionar información y formación sobre riesgos y facilitar medios de contacto y procedimientos de emergencia. Las otras opciones son insuficientes o improcedentes legalmente. La diferencia decisiva es la obligación preventiva de evaluación e información antes de la misión.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 13/2022, ¿qué obligación concreta debe garantizar un prestador audiovisual respecto a menores y acceso a contenidos?:",
+          "options": [
+            "Sustituir clasificación por avisos genéricos en la web sin control de acceso.",
+            "Eliminar todo contenido que pueda resultar inadecuado para cualquier menor de edad.",
+            "Permitir acceso libre y sin restricciones a todos los contenidos informativos.",
+            "Implementar sistemas de clasificación de edad y medidas efectivas de control de acceso para contenidos potencialmente perjudiciales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley exige que los prestadores adopten sistemas de clasificación por edades y medidas efectivas de control de acceso (p. ej. filtros, controles parentales) para proteger a menores. Las otras opciones son exageradas, inadecuadas o insuficientes. La diferencia decisiva es la obligación de implementar controles efectivos, no sólo avisos o la eliminación total de contenidos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En la interfaz SDI, cómo se transportan operativamente la señal de vídeo, el audio embebido y los datos auxiliares (ANC):",
+          "options": [
+            "Vídeo y audio siempre en streams separados físicamente; ANC nunca viaja por SDI.",
+            "Vídeo como flujo de muestras de luminancia y crominancia; audio embebido como bloques de muestras multimedia en líneas de audio asignadas; datos auxiliares en paquetes VANC/HANC fuera del área activa de la imagen.",
+            "Audio embebido dentro de píxeles de la imagen activa; ANC en la misma zona que audio embebido.",
+            "SDI sólo transporta vídeo; audio y ANC requieren cables adicionales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La descripción correcta es que SDI transporta vídeo (muestras de Y/C), el audio embebido se inserta como bloques de muestras en líneas y posiciones específicas y los datos auxiliares se envían en paquetes VANC/HANC fuera del área activa. Las demás opciones son técnicamente incorrectas: SDI sí puede contener audio y ANC y no coloca audio dentro de píxeles activos. La diferencia decisiva es la existencia de espacios dedicados para ANC y la inserción de audio embebido.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación operativa del flujo de 'growing files' durante un directo:",
+          "options": [
+            "La única forma de editar growing files es esperar a la finalización completa del evento.",
+            "Un growing file es idéntico a un archivo final y no impone limitaciones de búsqueda ni de tasa de transferencia.",
+            "Los ficheros en crecimiento siempre bloquean el acceso de lectura hasta que el operador los marca como disponibles.",
+            "El archivo puede crecer mientras se graba y carece de índice o duración definitiva hasta su cierre; la edición en directo requiere soportar esencia no cerrada y reconformar o finalizar al cierre."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta explica que los growing files se siguen escribiendo y pueden carecer de índice final o duración definida hasta su cierre; por tanto la edición en directo debe manejar esencia no cerrada (lecturas incrementales, proxies o reconformado al cierre). Las otras opciones son falsas: no son idénticos a archivos finalizados; no siempre bloquean lectura; tampoco es obligatorio esperar la finalización total. La diferencia decisiva es la ausencia de cierre e índice definitivo durante la grabación.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_red_ip",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Diagnóstico básico: equipo con IP 192.168.1.10 máscara 255.255.255.0 y puerta de enlace configurada como 192.168.2.1. ¿Cuál es el problema de conectividad más inmediato?",
+          "options": [
+            "La puerta de enlace está en una subred distinta y por tanto no es alcanzable directamente desde la IP del equipo.",
+            "La máscara de subred permite comunicación directa con la puerta de enlace indicada.",
+            "El equipo tiene un conflicto de direcciones IP duplicadas en la red.",
+            "La puerta de enlace configurada está fuera del rango IPv4 y es inválida."
+          ],
+          "correctIndex": 0,
+          "explanation": "Con máscara 255.255.255.0 la IP 192.168.1.10 pertenece a la subred 192.168.1.0/24; la puerta de enlace 192.168.2.1 está en la subred 192.168.2.0/24 y por tanto no es alcanzable directamente. Las otras opciones son incorrectas: la máscara no permite comunicación directa con la gateway indicada; no se ha indicado duplicidad de IP; la puerta de enlace está en rango válido pero en otra subred. La diferencia decisiva es la discrepancia de subred entre host y gateway.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En un plan de preservación para evitar obsolescencia de activos audiovisuales, ¿qué práctica constituye el diagnóstico operativo más priorizado?:",
+          "options": [
+            "Ignorar la documentación del formato y confiar en software propietario sin estrategia de migración.",
+            "Confiar en que los soportes originales se mantendrán legibles indefinidamente sin operaciones adicionales.",
+            "Almacenar una única copia en un sistema RAID y considerarla suficiente para preservación a largo plazo.",
+            "Implementar verificaciones periódicas de integridad (checksums), mantener múltiples copias en distintos soportes y programar migraciones a formatos y soportes actuales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica prioritaria es realizar verificaciones periódicas de integridad, conservar múltiples copias en distintos soportes y planificar migraciones programadas a formatos/sistemas actuales. Las otras opciones suponen riesgo de pérdida por obsolescencia o fragilidad (una sola copia, confiar en soportes sin verificación, ausencia de migración). La diferencia decisiva es que la preservación requiere redundancia, verificación y migración activa.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a contenedor frente a códec: qué afirmación distingue con precisión MOV/MP4 frente a MXF en compatibilidad y uso profesional:",
+          "options": [
+            "MOV/MP4 son contenedores de uso general para entrega y consumo con amplio soporte multimedia; MXF es un contenedor profesional diseñado para broadcast con estructura y metadatos más rigurosos (OP‑Atom/OP1a).",
+            "MOV/MP4 son códecs que definen cómo se comprime la imagen; MXF es un códec alternativo.",
+            "MXF es exclusivamente para audio y no soporta vídeo ni metadatos técnicos.",
+            "MOV, MP4 y MXF son intercambiables sin implicaciones sobre metadatos y compatibilidad de sistemas de emisión."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación correcta distingue contenedor y uso: MOV/MP4 son contenedores generales con amplio soporte para entrega/consumo; MXF es un contenedor profesional con especificaciones para broadcast y metadatos (OP‑Atom/OP1a). Las demás opciones fallan al confundir contenedor con códec, negar capacidades de MXF o afirmar intercambiabilidad sin impacto en metadatos. La diferencia decisiva es la orientación profesional y estructural de MXF frente a contenedores de consumo.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "072",
       "title": "Examen 072",
