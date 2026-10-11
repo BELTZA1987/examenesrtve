@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-10-11",
   "exams": [
+    {
+      "id": "074",
+      "title": "Examen 074",
+      "date": "2026-10-11",
+      "level": "Muy alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la finalidad de la reforma de 2017 y su consecuencia operativa en el procedimiento de designación de los órganos de RTVE:",
+          "options": [
+            "Introdujo la designación directa por parte del Gobierno para concentrar el control ejecutivo sobre los órganos de la Corporación.",
+            "La reforma restauró la elección parlamentaria para aumentar el pluralismo y la independencia en la designación de los órganos.",
+            "Se pretendió reducir la influencia partidista mediante procedimientos parlamentarios que requirieron mayorías cualificadas.",
+            "La modificación buscó reforzar mecanismos formales de control y transparencia en la designación de los cargos dirigentes."
+          ],
+          "correctIndex": 0,
+          "explanation": "La segunda opción es la excepción: la Ley 5/2017 perseguía precisamente reducir la designación directa por el Ejecutivo y reforzar la elección parlamentaria para aumentar independencia y pluralismo; las otras opciones describen efectos coherentes con la finalidad de la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "measure_waveform_luma",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Cuál de las siguientes acciones con un monitor de forma de onda es adecuada para comprobar niveles legales de luminancia?",
+          "options": [
+            "Medir la relación señal/ruido del canal de audio con la traza de luminancia.",
+            "Usarlo para evaluar la saturación cromática de tonos de piel comparando la distancia al centro del vectorscopio.",
+            "Verificar que los picos de luminancia no superan el valor máximo legal y ajustar ganancia o pedestal en consecuencia.",
+            "Calibrar el foco óptico de la cámara mediante la forma de onda."
+          ],
+          "correctIndex": 2,
+          "explanation": "La forma de onda permite medir y controlar los niveles de luminancia y por tanto comprobar y ajustar para cumplir límites legales; las otras opciones no son funciones operativas del monitor de forma de onda (saturación y vectorscopio es otro instrumento; audio y foco no se diagnostican con este monitor).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_target",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Para adaptar el estilo de edición de un magazine al público juvenil, ¿qué combinación de ritmo, densidad de planos y recursos gráficos es la más adecuada?",
+          "options": [
+            "Ritmo variable con predominio de planos largos y recursos tipográficos clásicos.",
+            "Ritmo pausado, baja densidad de planos y escasos recursos gráficos formales.",
+            "Ritmo ágil, alta densidad de planos y recursos gráficos dinámicos y llamativos.",
+            "Ritmo constante y lento con ausencia de elementos gráficos para priorizar la lectura."
+          ],
+          "correctIndex": 2,
+          "explanation": "Para un target juvenil se busca dinamismo: cortes rápidos, mayor densidad visual y elementos gráficos activos; las otras opciones describen estilos más adecuados para públicos informativos, formales o de perfil adulto que requieren menor estímulo visual.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Compare estas secuencias y señale la correcta para una ingesta verificada destinada a asegurar integridad y trazabilidad:",
+          "options": [
+            "Registrar en catálogo → calcular checksum → copiar ficheros al servidor → validar estructura.",
+            "Copiar ficheros al servidor → calcular checksum de cada archivo → validar estructura (carpetas/índices) → registrar en catálogo con metadatos.",
+            "Calcular checksum en la cámara → borrar originales → copiar ficheros al servidor → registrar en catálogo.",
+            "Copiar ficheros al servidor → editar inmediatamente → calcular checksum al final del proyecto → registrar."
+          ],
+          "correctIndex": 1,
+          "explanation": "La secuencia correcta es copia → checksum → validación estructural → registro en catálogo para garantizar integridad y trazabilidad; las alternativas cambian el orden o omiten pasos esenciales (registro previo, borrado prematuro o checksum tardío).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Imagen con exposición general correcta pero el sujeto aparece con dominante verde: ¿qué combinación de correcciones primarias y secundarias es la más adecuada?",
+          "options": [
+            "Primarias: convertir a log para preservar datos; Secundarias: aplicar curva global para contraste.",
+            "Primarias: corregir sólo la piel del sujeto; Secundarias: aumentar el contraste global de la imagen.",
+            "Primarias: aplicar una LUT creativa para neutralizar color; Secundarias: recortar el encuadre.",
+            "Primarias: ajustar balance global de blancos y exposición; Secundarias: aislar el sujeto y corregir la dominante de color en su máscara."
+          ],
+          "correctIndex": 3,
+          "explanation": "La corrección primaria aborda ajustes globales (balance y exposición); la secundaria permite tratamientos selectivos (máscara sobre sujeto para neutralizar dominante). Las otras opciones confunden alcance (corregir sólo la piel como primaria) o proponen operaciones inapropiadas para el efecto descrito.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_lut_log",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Cuál de estas afirmaciones distingue correctamente una LUT de visualización (log→display) de una LUT creativa aplicada durante etalonaje:",
+          "options": [
+            "Una LUT de visualización sustituye el códec original por otro más compatible; una LUT creativa inserta metadatos de color.",
+            "Una LUT de visualización comprime los datos para reducir tamaño de archivo; una LUT creativa aumenta la resolución de la imagen.",
+            "Una LUT de visualización transforma perfiles logarítmicos a espacio de visualización sin pretender alterar la corrección final; una LUT creativa modifica intención tonal y contraste para un look.",
+            "Una LUT de visualización siempre se aplica de forma irreversible al master; una LUT creativa sólo se usa en monitor."
+          ],
+          "correctIndex": 2,
+          "explanation": "La diferencia decisiva es funcional: la LUT de visualización convierte log a display para ver la imagen sin alterar la esencia; la LUT creativa introduce transformaciones estéticas. Las otras opciones atribuyen efectos técnicos incorrectos (compresión, cambio de códec o aplicabilidad irreversible).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_intelectual",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo para construir un montaje intelectual que sugiera una idea por yuxtaposición:",
+          "options": [
+            "Unir clips con transiciones suaves y mantener consistencia tonal para evitar interpretaciones divergentes.",
+            "Seleccionar imágenes con contraste semántico, ordenarlas de forma que la sucesión genera una inferencia y controlar ritmo para enfatizar la asociación.",
+            "Aplicar correcciones de color homogéneas y subtítulos explicativos para que el público entienda la relación explícita entre planos.",
+            "Usar exclusivamente recursos gráficos para explicar la relación entre dos conceptos visuales sin depender de la imagen."
+          ],
+          "correctIndex": 1,
+          "explanation": "El montaje intelectual se basa en la yuxtaposición deliberada de imágenes que, por contraste y orden, crean significados implícitos; el control del ritmo refuerza la inferencia. Las demás opciones evitan la provocación interpretativa o sustituyen la asociación visual por explicación literal.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Señale la afirmación que mejor refleja la naturaleza y estructura básica de la Corporación según la normativa sobre radio y televisión estatal:",
+          "options": [
+            "La Corporación integra servicios audiovisuales bajo una estructura pública con órganos de gobierno y mecanismos de control y supervisión acordes con su titularidad estatal.",
+            "La Corporación funciona como empresa privada sin obligación de someter sus órganos a control parlamentario.",
+            "Su organización se reduce a una única dirección general nombrada por la administración local.",
+            "Se configura exclusivamente como una asociación de empresas privadas con autonomía total de regulación interna."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley describe a la Corporación como entidad pública con órganos y controles propios en concordancia con su titularidad estatal; las otras opciones contradicen esa naturaleza o inventan formas de organización impropias.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Cuál de las siguientes afirmaciones resume mejor derechos y obligaciones del trabajador en prevención de riesgos laborales:",
+          "options": [
+            "Derecho a elegir sus métodos de trabajo; obligación limitada a cumplir horario.",
+            "Derecho a delegar la formación en un compañero; obligación de seguir instrucciones sólo si son por escrito.",
+            "Derecho a no ser informado de los riesgos para evitar alarma; obligación de reportar sólo accidentes graves.",
+            "Derecho a recibir información y formación; obligación de cooperar y utilizar correctamente los medios de protección proporcionados."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta recoge los deberes de información/formación y la obligación activa de cooperar y emplear los equipos de protección; las demás minimizan o tergiversan obligaciones y derechos establecidos por la normativa.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_umid",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación operativa de un UMID embebido en un archivo audiovisual:",
+          "options": [
+            "Almacenar la ubicación del proxy para relink automático a alta resolución.",
+            "Proporcionar un identificador único persistente que permite la trazabilidad del material a lo largo de la cadena de producción y archivo.",
+            "Sustituir la necesidad de checksums para verificar integridad de bits.",
+            "Contener información de códec y parámetros de reproducción que obligan al reproductor a transcodificar."
+          ],
+          "correctIndex": 1,
+          "explanation": "El UMID sirve como identificador único persistente para rastrear el material; no contiene ubicación de proxies, no reemplaza checksums ni obliga a transcodificar, que son funciones distintas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Señale la afirmación que constituye una excepción respecto a la interpretación del ángulo y la distancia al centro en un vectorscopio:",
+          "options": [
+            "El ángulo de un clúster indica el matiz o tono cromático predominante.",
+            "La distancia al centro mide directamente la luminancia de la señal.",
+            "La distancia al centro del vectorscopio informa sobre la saturación del color.",
+            "Un clúster próximo a la línea de tonos de piel indica una coloración cutánea típica."
+          ],
+          "correctIndex": 1,
+          "explanation": "La distancia al centro refleja saturación, no luminancia; por tanto la tercera afirmación es la excepción. Las otras describen interpretaciones operativas válidas del vectorscopio.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a efectos y consecuencias habituales al mezclar cadencias y aplicar métodos comunes de conversión entre tasas de imagen:",
+          "options": [
+            "Al transformar 25p a 29,97p mediante duplicado/omisión sistemática de fotogramas se producen saltos rítmicos y es posible que aparezcan desfases audibles en la sincronía labial si no se ajustan timecodes o la duración temporal.",
+            "El uso de conversiones con compensación de movimiento (motion‑compensated frame‑rate conversion) reduce ghosting y judder respecto a técnicas simples de interpolación o mezcla de fotogramas, manteniendo la duración original del contenido.",
+            "La interpolación mediante mezcla de fotogramas (frame‑blending) suele producir efectos de 'ghosting' en zonas de movimiento rápido y una sensación de suavizado temporal que puede degradar la nitidez del movimiento.",
+            "La aplicación de telecine 3:2 pulldown para llevar 24p a 29,97p genera una cadencia completamente imperceptible en cualquier tipo de movimiento y no complica la trazabilidad exacta del timecode entre material original y resultado."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 3 es la excepción porque afirma que el pulldown 3:2 es siempre imperceptible y no afecta la trazabilidad del timecode; en la práctica el 3:2 telecine introduce una cadencia periódica que puede hacerse visible como judder en determinados movimientos y complica el mapeo fotograma→timecode (requiriendo procesos de inverse‑telecine o marcas de flag para recuperar la cadencia original). Las otras afirmaciones son correctas: duplicar/omitir fotogramas altera el ritmo y puede originar desajustes si no se mantienen o corrigen timecodes (opción 1); las técnicas motion‑compensated efectivamente reducen artefactos comparadas con métodos simples y preservan la duración temporal (opción 2); y el frame‑blending produce ghosting y suavizado en movimiento rápido (opción 4).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Además de conservar carpetas e índices, qué aspecto estructural del XDCAM es imprescindible verificar para asegurar acceso fiable en archivo:",
+          "options": [
+            "Que los archivos hayan sido transcodificados previamente a ProRes para compatibilidad.",
+            "Que todas las carpetas estén renombradas al formato del sistema operativo del archivador.",
+            "La coherencia y existencia de los ficheros XML de metadatos y su correspondencia con las entradas de media.",
+            "Que el soporte esté cifrado con la clave de la producción."
+          ],
+          "correctIndex": 2,
+          "explanation": "En XDCAM la metadata (archivos XML) es clave para localizar y acceder a los activos; renombrar carpetas, transcodificar o cifrar no son requisitos estructurales inherentes al formato para acceso fiable.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Cuál de las siguientes afirmaciones describe mejor el principio y ventaja de una conexión de audio balanceada:",
+          "options": [
+            "Dos conductores de señal con impedancias iguales respecto a tierra y una entrada diferencial que resta señales comunes, logrando rechazo de interferencias.",
+            "Requiere una tercera señal de tierra separada que amplifica la señal útil para reducir ruido.",
+            "Duplicar conductores en paralelo para aumentar el nivel de señal y mejorar relación S/N.",
+            "Es un sistema exclusivo de micrófono que no se emplea en líneas de nivel de estudio."
+          ],
+          "correctIndex": 0,
+          "explanation": "La definición correcta es la de una conexión diferencial que cancela ruido común por igual impedancia en los conductores; las demás opciones describen prácticas incorrectas o limitaciones inexactas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Según el III Convenio, la clasificación profesional y la 'ocupación tipo' sirven principalmente para:",
+          "options": [
+            "Determinar funciones, niveles retributivos y ordenación profesional dentro de la plantilla.",
+            "Establecer de forma exclusiva la jornada laboral anual sin relación con funciones.",
+            "Sustituir la evaluación de riesgos laborales por una descripción de puesto.",
+            "Regular únicamente la contratación externa de servicios."
+          ],
+          "correctIndex": 0,
+          "explanation": "La clasificación profesional define funciones y niveles retributivos y organiza el trabajo; las otras opciones exageran o contradicen el alcance real del instrumento del convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al reconformar material multicámara, ¿en qué caso es preferible utilizar el record timecode como referencia de sincronización?",
+          "options": [
+            "Siempre que exista auxiliary timecode continuo, independientemente de su alineación con el registro principal.",
+            "Cuando el record timecode procede del generador maestro que marca las grabaciones y coincide con la estructura del máster de edición.",
+            "Cuando no hay ningún timecode embebido en los archivos y sólo hay marcas visuales.",
+            "Cuando los clips están en formatos Long‑GOP y no admiten timecode embebido."
+          ],
+          "correctIndex": 1,
+          "explanation": "El record TC es la referencia preferida si proviene del generador maestro y coincide con la estructura de grabación/edición; usar aux TC u otras señales depende de su estabilidad y correspondencia, no es una regla universal.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En un puesto de edición con jornada prolongada, señale la configuración postural que mejor responde a las recomendaciones ergonómicas respecto al ajuste de la silla (altura y respaldo), soporte lumbar, posición de los antebrazos y apoyo de los pies.",
+          "options": [
+            "Silla baja que obliga a flexionar las rodillas >100° con pies adelantados bajo la mesa; respaldo reclinado en ≈120° sin soporte lumbar efectivo; antebrazos sin apoyo permanente, apoyados sobre la mesa con muñecas en extensión.",
+            "Silla elevada para acercar la vista al monitor, con rodillas por debajo de la cadera y sólo la punta de los pies tocando el suelo; respaldo vertical sin ajuste lumbar; antebrazos apoyados en reposabrazos rígidos y altos que provocan elevación de hombros.",
+            "Altura de silla que deja los muslos prácticamente horizontales y las rodillas en ≈90° con los pies apoyados en el suelo (o en reposapiés si es necesario); respaldo con apoyo lumbar ajustado que mantenga la lordosis; antebrazos apoyados de modo que queden paralelos al plano de trabajo y los codos en ≈90°; reposabrazos regulados para sostener antebrazos sin elevar los hombros.",
+            "Altura de asiento que mantiene rodillas en ≈90°; respaldo con apoyo lumbar fijo (no regulable); antebrazos apoyados directamente en la mesa con hombros aparentemente relajados; pies sobre un pequeño reposapiés que eleva ligeramente los talones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es la correcta porque reúne los principios ergonómicos: asiento a altura que sitúa rodillas en torno a 90° y permite apoyo plantar total (o uso de reposapiés), soporte lumbar regulable que preserva la curvatura lumbar y evita flexión forzada, y apoyo de antebrazos que mantiene codos ≈90° y antebrazos paralelos al plano de trabajo evitando extensión/pronación forzada de la muñeca y la elevación de hombros. El distractor más próximo (opción 4) aparenta correcta la altura y el apoyo de antebrazos, pero falla porque el soporte lumbar no es regulable (posible desajuste según morfología) y el reposapiés que eleva los talones altera la presión plantar y la alineación de la columna; por ello es menos adecuado que la opción 1.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_consolidate_transcode",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación que describe correctamente la diferencia operativa entre 'Consolidate' y 'Transcode' en un NLE:",
+          "options": [
+            "Consolidate y Transcode son sinónimos y realizan la misma operación.",
+            "Consolidate siempre cambia códec para optimizar rendimiento; Transcode sólo copia ficheros sin modificar códec.",
+            "Consolidate elimina frames fuera de los handles; Transcode añade metadatos de proyecto.",
+            "Consolidate copia clips seleccionados manteniendo códec y handles; Transcode crea nuevos ficheros en un códec distinto, re‑codificando la esencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "Consolidate agrupa y copia material tal cual (preservando codec y handles), mientras que Transcode genera nueva esencia en otro códec; las otras opciones confunden o son incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Cuál de las siguientes afirmaciones interpreta mejor la tolerancia a fallos y la reconstrucción en RAID 5 frente a RAID 6:",
+          "options": [
+            "RAID 5 tolera la pérdida de un disco y reconstruye usando paridad distribuida; RAID 6 añade doble paridad y tolera la pérdida simultánea de dos discos.",
+            "RAID 5 permite la pérdida de dos discos sin impacto; RAID 6 sólo tolera un disco.",
+            "RAID 6 siempre reconstruye más rápido que RAID 5 por su doble paridad.",
+            "RAID 5 emplea espejo completo (mirroring) mientras que RAID 6 usa striping simple."
+          ],
+          "correctIndex": 0,
+          "explanation": "La diferencia decisiva es la tolerancia: RAID5 tolera una falla; RAID6 tolera dos gracias a doble paridad. Las otras opciones describen comportamientos incorrectos sobre tolerancia o modos de operación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_dbfs",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Cuál es la consecuencia operativa de alcanzar 0 dBFS en una señal digital:",
+          "options": [
+            "Indica el valor RMS medio de la señal independientemente de picos.",
+            "Nivel medio óptimo y sin riesgo de distorsión, apropiado para todas las entregas.",
+            "Equivalencia directa con +4 dBu en analógico sin considerar conversión.",
+            "Posible recorte (clipping) y distorsión en la señal porque no hay margen por encima de 0 dBFS."
+          ],
+          "correctIndex": 3,
+          "explanation": "0 dBFS representa el techo digital; superarlo provoca clipping. No es garantía de nivel medio seguro ni equivalencia analógica directa; RMS y picos son magnitudes distintas.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "073",
       "title": "Examen 073",
