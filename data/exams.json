@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-12",
   "exams": [
+    {
+      "id": "075",
+      "title": "Examen 075",
+      "date": "2026-10-12",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las obligaciones establecidas por la Ley 31/1995 en materia de prevención de riesgos laborales:",
+          "options": [
+            "Permitir que cada trabajador decida libremente no aplicar las medidas preventivas cuando entienda que no son necesarias.",
+            "Planificar y adoptar medidas preventivas integradas en la organización del trabajo.",
+            "Realizar una evaluación de riesgos específica y documentada antes del inicio de la actividad.",
+            "Organizar información y formación adecuadas para los trabajadores sobre los riesgos y las medidas de protección."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la tercera: la Ley 31/1995 impone obligaciones al empleador y no admite que la aplicación de las medidas preventivas quede a la libre decisión del trabajador. Las otras tres son obligaciones expresas del empresario (evaluación, planificación preventiva e información/ formación). La diferencia decisiva es que las primeras son deberes de la organización, no derechos del trabajador para omitirlos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para diseñar proxies compatibles con estaciones limitadas en CPU y con relink fiable a originales, ¿qué combinación de resolución, códec y bitrate es la más adecuada?",
+          "options": [
+            "H.264 en MP4, 960×540, VBR ~4 Mbps.",
+            "Apple ProRes Proxy, 960×540, ~25 Mbps (intraframe).",
+            "MXF XDCAM Long‑GOP, 1280×720, ~12 Mbps.",
+            "DNxHR LB, 1280×720, intra, ~30 Mbps."
+          ],
+          "correctIndex": 3,
+          "explanation": "DNxHR LB 720p (opción D) ofrece un compromiso de compatibilidad y calidad: códec intra‑frame y perfil reconocido por estaciones Avid/DAW/NLE, resolución moderada y bitrate optimizado para relink fiable. La opción B (ProRes Proxy) también es intraframe pero presenta menor compatibilidad en entornos Windows/servidores; la A (H.264 VBR) reduce carga de almacenamiento pero el Long‑GOP complica relink y la búsqueda por frame; la C (Long‑GOP) aumenta la dependencia de decodificación predictiva, dificultando operaciones de conformado.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En un archivo basado en LTO con LTFS, ¿cuál es la limitación operativa más relevante a la hora de acceder y verificar ficheros?",
+          "options": [
+            "Acceso aleatorio inmediato equivalente a disco; verificación por sistema de archivos es inmediata.",
+            "Acceso aleatorio es físicamente lento y depende del posicionamiento de la cinta; la verificación fiable requiere checksums y catálogo externo.",
+            "LTFS permite modificar ficheros en la cinta con la misma latencia que en disco; no hace falta catálogo.",
+            "Las cintas LTO pueden servirse directamente por red como un NAS convencional sin pasos de ingestación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta es la segunda: LTO/LTFS ofrecen vista de fichero pero el acceso aleatorio es lento por movimiento mecánico de la cinta; por tanto la verificación operativa debe apoyarse en checksums y catálogos que documenten ubicación y estado. Las otras opciones son incorrectas porque sobreestiman la latencia de acceso o la funcionalidad de servicio en red directo.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_elipsis",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Para comprimir tiempo narrativo mediante una elipsis sin comprometer la comprensión, cuál de las siguientes estrategias es la más adecuada:",
+          "options": [
+            "Eliminar secuencias intermedias manteniendo únicamente cortes abruptos sin indicadores temporales.",
+            "Sustituir la acción por un rótulo textual que explique el salto temporal.",
+            "Eliminar acciones irrelevantes y conservar señales narrativas (causa/efecto, objetos, planos de reacción) y puentes sonoros.",
+            "Acelerar reproducción de la toma original hasta que encaje en la nueva duración."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la segunda: una elipsis eficaz suprime lo no esencial pero mantiene indicios causales y signos temporales (planos de reacción, objetos, continuidad de vestuario/ubicación) y puede apoyarse en puentes sonoros para conservar la comprensión. Las demás opciones destruyen continuidad narrativa o recurren a soluciones que reducen coherencia visual o calidad narrativa.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_bit_depth",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que describe con precisión la consecuencia de aumentar la profundidad de bits de 8 a 10 bits en procesamiento de color:",
+          "options": [
+            "Cuadruplica los niveles disponibles, disminuye la probabilidad de banding y aumenta margen para correcciones posteriores.",
+            "Duplica los niveles disponibles reduciendo a la mitad el banding.",
+            "Reduce el tamaño del archivo en un 25% por una cuantificación más eficiente.",
+            "Hace innecesario el uso de LUTs y correcciones secundarias."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la segunda: pasar de 8 a 10 bits multiplica por cuatro los niveles por canal (2^10/2^8 = 4), lo que reduce discretización y la aparición de banding y proporciona más margen para correcciones en postproducción. No duplica niveles (opción A), no reduce tamaño (opción C) y no elimina la necesidad de LUTs o correcciones (opción D). La diferencia decisiva es el factor 4 en cuantización y su efecto sobre banding y margen de procesado.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Ante la sospecha de que el crosspoint entre entrada X y salida Y de una matriz no corresponde, ¿qué procedimiento operativo y trazable es el más adecuado para localizar y verificar el punto de cruce?",
+          "options": [
+            "Confiar únicamente en la interfaz de control de la matriz y corregir el cruce desde allí.",
+            "Desconectar y reconectar físicamente cables hasta que la señal aparezca en destino.",
+            "Enviar una señal de prueba identificable por marca (barras o patrón con un ticker de identificación), conmutar la entrada X a la salida Y y verificar en monitor de destino la presencia de la señal y metadatos SDI.",
+            "Reiniciar la matriz; si persiste el fallo, reemplazar la tarjeta de cruce sin más comprobaciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la segunda: el método trazable y fiable consiste en inyectar una señal de prueba identificable por medio de barras/pattern y un identificador, conmutar la ruta desde la interfaz y comprobar en el monitor de destino (forma de onda/vídeo y datos SDI) que la señal y metadatos coinciden con la entrada. Las otras opciones son poco trazables o arriesgadas y no permiten verificar la correspondencia física y lógica.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Durante visionado y selección en un flujo XDCAM, ¿qué relación y usos describe mejor el proxy respecto a la esencia de alta resolución?",
+          "options": [
+            "El proxy es una representación de baja resolución sin timecode fiable y no sirve para reconformado.",
+            "El proxy es una copia referencial que mantiene timecode/UMID y permite visionado y selección rápidas; la esencia alta permanece como master para conformado y entrega.",
+            "Los proxies sustituyen a la esencia en archivo final y pueden usarse como master definitivo sin relink.",
+            "El proxy altera el código de tiempo de la esencia para optimizar almacenamiento y por tanto impide cualquier correlación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta es la segunda: en XDCAM los proxies son representaciones de baja resolución que conservan referencias temporales (timecode/UMID) para visionado y preselección; la esencia de alta resolución se usa como master para la conformación final. Las otras opciones indican pérdida de referencias o sustitución del master, lo cual no es correcto operativamente.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las obligaciones impuestas por la Ley 13/2022 sobre accesibilidad audiovisual:",
+          "options": [
+            "Los prestadores deben garantizar subtitulado para contenidos pregrabados dentro de los plazos legales establecidos.",
+            "Se exige audio descripción para determinados contenidos destinados a difusión lineal y bajo criterios de cobertura establecidos por la ley.",
+            "Los prestadores deben incluir metadatos que indiquen la accesibilidad del contenido.",
+            "Se obliga a ofrecer interpretación en lengua de signos para todos los contenidos pregrabados de ficción sin excepción temporal ni umbral de audiencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la tercera: la Ley 13/2022 impone obligaciones de accesibilidad con criterios y umbrales temporales o por tipo de servicio; no exige de forma inmediata e incondicional interpretación en lengua de signos para todos los contenidos pregrabados de ficción sin umbrales. Las demás opciones describen obligaciones concretas previstas por la ley (subtitulado, audio descripción en casos específicos y metadatos de accesibilidad). La diferencia clave es la ausencia de una obligación universal e inmediata en el caso señalado.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_export_qc",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la lista de comprobaciones que refleja mejor el control de calidad técnico imprescindible en la exportación de un master:",
+          "options": [
+            "Comprobar únicamente la duración y el nombre del fichero; los metadatos se generan en origen.",
+            "Verificar contenedor y códec, confirmar sincronía audio‑vídeo, comprobar niveles de luminancia y chroma legales, incluir metadatos y señalización de campos si procede.",
+            "Verificar niveles de audio pero omitir comprobaciones de campos o de sincronía si el visual parece correcto.",
+            "Exportar en el formato de mayor compresión posible para reducir tamaño sin revisar metadatos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta es la primera: un QC técnico completo incluye verificación de contenedor/códec, sincronía A/V, niveles de luminancia y croma dentro de los límites legales (y comprobación de fields/interlace si aplica) y los metadatos requeridos. Las otras opciones omiten pasos esenciales (metadatos, sincronía, campos) o proponen prácticas inadecuadas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Señale la afirmación que constituye una excepción respecto a los criterios de raccord de mirada y coherencia espacial entre planos:",
+          "options": [
+            "La línea de acción y la eyeline deben respetarse para que el espectador perciba correctamente la dirección de la mirada.",
+            "El raccord de mirada exige mantener la posición relativa de sujeto y objeto en el encuadre para conservar coherencia espacial.",
+            "El uso de planos de recurso (establishing shots) puede ayudar a restablecer la referencia espacial cuando la continuidad se pierde.",
+            "El raccord de mirada obliga a utilizar la misma distancia focal entre dos planos sucesivos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la tercera: el raccord de mirada no exige usar la misma distancia focal entre planos; lo esencial es mantener coherencia espacial de ejes y eyelines. Las demás enuncian criterios válidos (respeto de línea de acción, posición relativa y uso de planos de referencia). La diferencia decisiva es que la focal es una decisión estética, no un requisito de raccord de mirada.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Cuál es la consecuencia operativa más precisa de un error de decodificación en un fotograma P dentro de una GOP IPB:",
+          "options": [
+            "El error puede propagarse a fotogramas posteriores que dependan predicativamente del P hasta el siguiente I.",
+            "El error queda confinado únicamente al fotograma P y no afecta a otros frames.",
+            "Un error en P afecta retroactivamente a fotogramas I anteriores.",
+            "Los fotogramas B referenciados por el P son inmunes a errores del P."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la segunda: un fotograma P contiene información predicitiva usada por P y B posteriores; un error en P suele propagarse a los frames que dependen de él hasta el siguiente I que restablece referencia completa. No afecta a I anteriores (opción C) y los B referenciados por el P (opción D) sí pueden verse afectados. La diferencia clave es la dependencia temporal hacia adelante en GOPs con predicción.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Al entregar para emisión desde EVS/IPDirector una playlist que contiene cortes y transiciones (por ejemplo disolves con duración precisa), ¿qué procedimiento operativo garantiza con mayor seguridad que la reproducción en el servidor de playout respetará exactamente el orden y las transiciones definidas en la playlist?",
+          "options": [
+            "Transferir únicamente los clips fuente al servidor de playout (sin renderizar) y que el operador configure y ejecute las transiciones manualmente en el mezclador durante la emisión.",
+            "Publicar la playlist directamente como rundown en el sistema de playout sin renderizar, confiando en que el motor de playout aplicará las transiciones tal como están definidas en IPDirector.",
+            "Renderizar (flatten) la playlist a un único archivo maestro que incorpore todas las transiciones y transferir ese master al servidor de playout; verificar integridad y timecode antes de programar emisión.",
+            "Exportar una EDL/AAF de la playlist e importar ese listado en el sistema de playout para que reconstruya el orden y las transiciones en origen."
+          ],
+          "correctIndex": 2,
+          "explanation": "Renderizar la playlist a un único archivo maestro preserva de forma determinista el orden y la aparición exacta de las transiciones porque las mismas quedan integradas en la esencia entregada al playout. Las alternativas son menos fiables: la publicación directa como rundown depende de que el playout soporte exactamente el formato y metadatos de transiciones de IPDirector; transferir solo clips obliga a rehacer transiciones manualmente en emisión; y la exportación vía EDL/AAF (distractor más próximo) puede funcionar en algunos flujos, pero su capacidad para representar con precisión todos los tipos y duraciones de transiciones depende de compatibilidades entre sistemas y del soporte de handles, por lo que no garantiza la reproducción idéntica sin procesos de comprobación y reconformado adicionales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En una cadena audiovisual, ¿qué síntoma operativo identifica con mayor precisión una adaptación de impedancias incorrecta entre etapas (analógicas o por transporte coaxial)?",
+          "options": [
+            "Pérdida de nivel y alteración de la respuesta en frecuencia en señales analógicas; y, en líneas coaxiales de vídeo/datos, reflexiones (ringing) que causan errores de decodificación y artefactos de imagen/sonido.",
+            "Aumento sostenido del ruido de fondo y aparición de zumbidos a 50/60 Hz en toda la cadena.",
+            "Incremento apreciable de la latencia entre etapas que provoca desfases de timecode y desincronización de pistas.",
+            "Pérdida irreversible de resolución por reducción de profundidad de bits durante la conversión A/D en equipos intermedios."
+          ],
+          "correctIndex": 0,
+          "explanation": "Una mala adaptación de impedancias produce, en señales analógicas, variaciones de ganancia y de la respuesta en frecuencia (pérdidas de agudos o caída de nivel) cuando la carga no corresponde al origen. En transmisiones por cable coaxial (por ejemplo vídeo SDI o baseband), la desadaptación genera reflexiones y ringing en la forma de onda que se traducen en errores de decodificación y artefactos visibles/sonoros. El distractor más cercano (ruido y zumbidos) se debe normalmente a bucles de masa o problemas de puesta a tierra, no a desajuste de impedancias; la latencia, el timecode y la pérdida de profundidad de bits no son efectos directos de una adaptación de impedancias.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Compare AVC/H.264 frente a HEVC/H.265: cuál de las siguientes afirmaciones resume mejor sus diferencias operativas en flujo audiovisual?",
+          "options": [
+            "HEVC ofrece ~50% de ahorro de bitrate a igual calidad, exige mayor complejidad de codificación/decodificación y menor compatibilidad en equipos antiguos.",
+            "AVC ofrece mejor compresión que HEVC pero requiere más CPU.",
+            "HEVC es totalmente retrocompatible y se decodifica en cualquier dispositivo capaz de AVC.",
+            "AVC y HEVC tienen idéntica eficiencia y complejidad; sólo difieren en nombre."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la primera: HEVC suele ofrecer ahorro significativo de bitrate frente a AVC a igual percepción de calidad, pero implica mayor complejidad de cómputo y problemas de compatibilidad en dispositivos y flujos existentes. Las otras opciones son incorrectas: AVC no supera en compresión a HEVC, HEVC no es retrocompatible con AVC, y no son idénticos en eficiencia ni complejidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Respecto a la libertad de expresión e información recogida en la Constitución, cuál de las siguientes afirmaciones describe con mayor precisión límites y garantías constitucionales:",
+          "options": [
+            "La libertad de información permite publicar cualquier contenido sin límites en nombre del derecho a informar.",
+            "La Constitución no reconoce la existencia de límites a la libertad de información.",
+            "El Estado puede prohibir por Decreto cualquier información que considere molesta para el Gobierno.",
+            "La libertad de información está protegida pero su ejercicio puede ser limitado por derechos al honor, a la intimidad y por la exigencia de veracidad; cabe responsabilidad y controles judiciales proporcionados."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la segunda: la Constitución protege la libertad de información pero reconoce límites (derecho al honor/intimidad, veracidad) y mecanismos de tutela; no es un derecho absoluto. Las demás opciones son incompatibles con la jurisprudencia constitucional que admite límites y responsabilidades.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un plató se detecta fuego en una regleta de alimentación con varios adaptadores. Señale la actuación prioritaria que el responsable presente debe ejecutar, teniendo en cuenta la seguridad eléctrica, la evacuación y la idoneidad del extintor.",
+          "options": [
+            "Desconectar manualmente los enchufes de la regleta, rociar agua a presión para enfriar y retirar la regleta del área para continuar la grabación.",
+            "Evacuar personal y activar la alarma, cortar la alimentación desde el cuadro o dispositivo de corte seguro, y si el fuego es pequeño y es seguro hacerlo, atacar con extintor no conductor (CO2 o polvo ABC) por personal formado.",
+            "Intentar retirar la regleta desconectando enchufes a mano mientras se usa un extintor de CO2 sobre el punto caliente para extinguirlo rápidamente.",
+            "Tirar del cable principal para separar la regleta y aplicar un extintor de espuma sobre el fuego antes de permitir el acceso del personal de mantenimiento."
+          ],
+          "correctIndex": 1,
+          "explanation": "La prioridad es la seguridad de las personas y la eliminación del riesgo eléctrico. Debe procederse a la evacuación y alarma, y cortar la alimentación desde el cuadro o un dispositivo de corte seguro —no manipulando componentes energizados—; solo entonces, y si el fuego es pequeño y el personal está formado, puede intentarse la extinción con agentes no conductores adecuados para fuegos de origen eléctrico (CO2 o polvo ABC). La opción C es el distractor más próximo porque indica el uso correcto de CO2 pero propone desconectar enchufes a mano con el circuito aún potencialmente energizado, lo que es peligroso. Las opciones A y D son inadecuadas: el agua o la espuma pueden ser conductoras o propiciar expansión del daño en fuegos eléctricos, y arrancar cables o retirar la regleta manualmente puede provocar arcos, electrocución o propagación del fuego.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un mezclador de vídeo, indique la afirmación que describe con mayor precisión la función del bus 'previo' frente al 'programa' y su relación con una key:",
+          "options": [
+            "El bus 'programa' permite previsualizar mientras el 'previo' es la salida al aire.",
+            "El bus 'previo' es redundante y no se emplea en flujos profesionales.",
+            "Las keys sólo afectan al bus previo y nunca al programa.",
+            "El bus 'previo' se utiliza para preparar y ajustar una composición o key; el 'programa' es la salida en directo donde se aplican las transiciones desde el previo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la segunda: el bus previo sirve para preparar y ajustar composición, key y transiciones sin impactar la salida en programa; una vez lista, se realiza la transición que lleva el contenido al programa. Las otras afirmaciones son incorrectas o reductoras.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la afirmación que describe mejor el elemento necesario para que un accidente sea calificado 'in itinere':",
+          "options": [
+            "Que ocurra durante cualquier desplazamiento aunque sea por un desvío personal significativo y prolongado.",
+            "Que ocurra en el trayecto habitual y razonable entre domicilio y lugar de trabajo sin desviaciones apreciables y dentro de tiempo compatible con el desplazamiento.",
+            "Que ocurra en cualquier lugar distinto del centro de trabajo aunque fuera de ruta y horas laborales.",
+            "Que ocurra cuando el trabajador realiza una compra personal en horario de trabajo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta es la segunda: un accidente 'in itinere' requiere que el desplazamiento sea el habitual entre domicilio y trabajo, sin desviaciones significativas y en marco temporal razonable. Las otras opciones introducen desviaciones personales o situaciones no compatibles con la definición operativa.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento para configurar un legalizer/gamut en la salida de cadena de forma que se respeten niveles legales y se minimicen alteraciones de color:",
+          "options": [
+            "Aplicar clipping duro en RGB para forzar todos los valores al rango legal sin más verificación.",
+            "Desactivar cualquier limitación y confiar en la compensación del monitor de visualización.",
+            "Ajustar la limitación luma a los umbrales legales, usar mapeo de gamut para comprimir croma preservando matiz y verificar en vectorscopio y forma de onda.",
+            "Aplicar un filtro de saturación global que reduzca todos los colores en la salida sin control de hue."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la segunda: la configuración operativa adecuada combina limitación de luma a umbrales legales y un mapeo de gamut que comprima croma preservando el matiz, verificando los resultados en vectorscopio y waveform. El clipping duro (A) o la desactivación (C) crean artefactos o incumplimientos; la reducción global de saturación (D) es imprecisa y afecta la intención cromática.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "En entornos con bins compartidos, ¿qué práctica compara mejor la prevención de sobrescrituras y conflictos entre usuarios?",
+          "options": [
+            "Permitir edición simultánea en el mismo bin sin control; confiar en backups periódicos.",
+            "Exigir que todos los usuarios trabajen en la misma cuenta de sistema para simplificar accesos.",
+            "Implementar un sistema de bloqueo (check‑out) de bins con permisos de usuario y control de versiones para evitar sobrescrituras.",
+            "Usar carpetas locales y sobrescribir el bin compartido al final del día sin registros de cambios."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la segunda: el uso de un mecanismo de check‑out/lock, permisos por usuario y control de versiones evita conflictos y sobrescrituras en bins compartidos. Las demás opciones propician pérdida de trabajo o prácticas no trazables.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "074",
       "title": "Examen 074",
