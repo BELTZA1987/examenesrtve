@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-13",
   "exams": [
+    {
+      "id": "076",
+      "title": "Examen 076",
+      "date": "2026-10-13",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que resume con mayor precisión el principio del modelo de financiación previsto por la Ley 8/2009 para RTVE:",
+          "options": [
+            "Financiación basada principalmente en ingresos comerciales derivados de publicidad, sin aportación directa del Estado.",
+            "Financiación exclusivamente por tasas y cánones audiovisuales cobrados a usuarios finales, sin participación del presupuesto del Estado.",
+            "Modelo sustentado por una aportación estable y periódica del Estado combinada con otras fuentes de ingresos, con límites a la explotación publicitaria.",
+            "Sistema de financiación mediante contratos puntuales con operadores privados para cada producción, sin regulación sobre publicidad."
+          ],
+          "correctIndex": 2,
+          "explanation": "La redacción que describe una aportación estatal estable combinada con otras fuentes y limitaciones a la explotación publicitaria recoge el principio central de la Ley 8/2009. Las otras opciones atribuyen a la Ley exclusividades (solo publicidad, solo cánones o contratos privados) que no reflejan el modelo mixto y regulado previsto; la diferencia decisiva es la existencia de aportación pública y restricciones sobre la explotación publicitaria.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En un directo con necesidad de edición inmediata y preservando handles y disponibilidad en retransmisión, cuál de estos flujos operativos es el más adecuado:",
+          "options": [
+            "Transferir directamente un proxy comprimido al editor sin metadatos; reemplazar por originales más tarde cuando el directo termine.",
+            "Exportar desde EVS en OP‑Atom con metadatos y handles, publicar la copia en el sistema de edición y mantener el clip activo en EVS para retransmisión.",
+            "Descargar el archivo desde la cámara al disco local del editor y borrar inmediatamente el original en EVS para liberar espacio.",
+            "Realizar un transcode en el puesto del editor a un códec distinto y eliminar handles para reducir tamaño durante la retransmisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta combina OP‑Atom (ficheros por esencia) y publicación con metadatos y handles, permitiendo edición inmediata mientras EVS mantiene el original para playout. Los distractores ponen en riesgo metadatos/handles (proxy sin metadatos), eliminan originales en pleno directo, o descuidan handles, por lo que no garantizan disponibilidad y trazabilidad durante la retransmisión.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Un servidor de vídeo ofrece rendimiento sostenido de lectura del almacenamiento de 6,0 Gbit/s y la red de salida es 10 Gbit/s. Cada canal de reproducción consume 35 Mbit/s y se exige un margen operativo del 15% (utilización máxima admisible 85%). ¿Cuál es la estimación más correcta del número máximo de canales concurrentes sin degradación?",
+          "options": [
+            "≈145 canales (disponible efectivo ~5,1 Gbit/s dividido por 35 Mbit/s).",
+            "≈171 canales (6,0 Gbit/s dividido por 35 Mbit/s).",
+            "≈242 canales (10 Gbit/s dividido por 35 Mbit/s).",
+            "≈120 canales (6,0 Gbit/s dividido entre 50 Mbit/s, considerando picos)."
+          ],
+          "correctIndex": 0,
+          "explanation": "El cuello de botella es el almacenamiento: con margen operativo del 15% la capacidad efectiva es 6,0·0,85=5,1 Gbit/s; 5,1 Gbit/s ÷ 35 Mbit/s ≈145. La segunda opción ignora el margen; la tercera usa la interfaz de red en lugar del almacenamiento; la cuarta aplica un bitrate distinto no definido en el enunciado.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_fiction",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En la edición de ficción, ¿qué prioridad editorial debe preservarse para garantizar continuidad dramática y respeto a la interpretación durante el proceso de montaje?",
+          "options": [
+            "Priorizar exclusivamente la continuidad técnica de los ejes y ángulos por encima de la interpretación del actor.",
+            "Mantener la continuidad interpretativa y la cobertura de plano del actor, incluso si obliga a recortar tomas alternativas.",
+            "Eliminar material por motivos rítmicos aun cuando suponga romper la intención actoral en el plano.",
+            "Sustituir tomas por otras mejores técnicamente aunque cambien la dirección de la interpretación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La prioridad en ficción es preservar la continuidad dramática y la interpretación del actor respetando la cobertura disponible. Los distractores anteponen criterios técnicos o rítmicos que pueden romper la intención actoral; la diferencia decisiva es la prioridad de la coherencia interpretativa frente a ajustes puramente formales.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la medida preventiva más adecuada para reducir el riesgo de trastornos musculoesqueléticos en un operario que trabaja largas jornadas con teclado, ratón y tableta gráfica:",
+          "options": [
+            "Usar exclusivamente reposamuñecas elevadas para eliminar cualquier tensión en la muñeca.",
+            "Alternar tareas con pausas activas y ajustar silla, altura del teclado y apoyo del antebrazo para mantener muñeca neutra.",
+            "Aumentar la velocidad de trabajo para reducir tiempo de exposición a la postura.",
+            "Colocar el monitor lo más alto posible para forzar extensión del cuello y así relajar la muñeca."
+          ],
+          "correctIndex": 1,
+          "explanation": "La prevención eficaz combina pausas activas y ajustes ergonómicos (silla, altura del teclado, apoyo de antebrazos) que mantienen la muñeca en posición neutra. Los distractores proponen medidas ineficaces o contraproducentes (reposamuñecas único, acelerar trabajo, elevar pantalla excesivamente) que no abordan los factores de riesgo clave.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_chromakey",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al orden y diagnóstico correcto del proceso de incrustación por chromakey:",
+          "options": [
+            "Comprobar iluminación y uniformidad del fondo antes de generar el matte.",
+            "Generar y evaluar el matte (clip en negro/blanco) para detectar fugas y bordes antes de refinar spill.",
+            "Ajustar primero la suppressión de spill antes de evaluar la forma del matte.",
+            "Comprobar balance y contraste del primer plano si el matte presenta bordes duros."
+          ],
+          "correctIndex": 2,
+          "explanation": "La excepción es ajustar la suppressión de spill antes de evaluar la forma del matte: el diagnóstico correcto comienza verificando iluminación y obteniendo un matte limpio; solo después se trabaja la supresión de spill. Los otros enunciados describen pasos diagnósticos y operaciones en el orden adecuado.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_music_sync",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Durante el montaje, se percibe que cortes colocados entre frases musicales hacen que los acentos fuertes queden desalineados respecto a la imagen y la sensación rítmica resulte forzada. ¿Cuál es el diagnóstico y la intervención editorial más apropiada?:",
+          "options": [
+            "Eliminar la música de la pista de montaje y añadir otra pieza con acentos coincidentes.",
+            "Ajustar el pitch de la música para desplazar los acentos sin tocar los cortes.",
+            "Los puntos de corte deben mover‑se para alinearse con los acentos musicales fuertes; si no es posible, aplicar fundidos cortos para amortiguar el choque.",
+            "Ignorar la desalineación; el espectador no percibe pequeños desfases entre música y montaje."
+          ],
+          "correctIndex": 2,
+          "explanation": "La corrección adecuada es alinear los puntos de corte con los acentos musicales o suavizar la transición con recursos temporales; mover cortes para coincidir con acentos preserva frase musical y continuidad sonora. Las otras opciones son ineficaces o incorrectas: cambiar pitch altera la música, sustituir la música no es solución inmediata y afirmar que no se percibe es erróneo en casos de acentos marcados.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Según el II Plan de Igualdad y la Guía de Igualdad de RTVE, ¿cuál de estas medidas es una acción específica destinada a prevenir representaciones sexistas en los contenidos?",
+          "options": [
+            "Limitar la contratación de profesionales por género en función de cuotas fijas para equipos creativos.",
+            "Incorporar guías de lenguaje inclusivo y criterios de representación equilibrada de género en los procedimientos editoriales.",
+            "Permitir libertad total de expresión sin revisión de lenguaje si lo solicita la dirección artística.",
+            "Prohibir la emisión de cualquier contenido que no haya pasado por un comité de igualdad externo."
+          ],
+          "correctIndex": 1,
+          "explanation": "El Plan promueve guías internas sobre lenguaje inclusivo y criterios de representación equilibrada. Las restantes son medidas extremas, no prácticas o contrarias a las directrices del Plan: cuotas rígidas por género o prohibiciones totales no son las medidas preventivas descritas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "¿Cuál de las siguientes limitaciones del sistema de archivos FAT32 afecta directamente al uso en soportes audiovisuales de gran tamaño?",
+          "options": [
+            "FAT32 realiza compresión automática de ficheros multimedia, limitando calidad.",
+            "FAT32 no admite nombres de fichero de más de 8 caracteres.",
+            "FAT32 obliga a cluster mínimo de 1 TB en discos superiores a 2 TB.",
+            "Tamaño máximo de fichero aproximado de 4 GB menos 1 byte."
+          ],
+          "correctIndex": 3,
+          "explanation": "La limitación operativa relevante de FAT32 es el tamaño máximo de fichero ~4 GB−1, lo que impide almacenar masters grandes en un solo fichero. Las otras opciones son falsas: FAT32 sí admite nombres largos via VFAT, no obliga clusters de 1 TB y no realiza compresión automática.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que mejor compara ventajas, riesgos y prácticas recomendadas tras la ingesta de soportes de estado sólido (SSD):",
+          "options": [
+            "Los SSD deben descartarse después de una ingesta única porque su tasa de fallo es siempre superior a la de HDD.",
+            "Los SSD no requieren copias adicionales porque son inmortales; es seguro usar siempre el mismo dispositivo sin copias.",
+            "Después de la ingesta, la práctica recomendada es realizar borrado seguro inmediato en la cámara para limpiar bloques y mejorar rendimiento.",
+            "Los SSD ofrecen menor latencia y resistencia mecánica; tras ingesta verificada es adecuado mantener una copia original y formatear en cámara para reutilizar, evitando borrados seguros que aumentan desgaste."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta reconoce ventajas de los SSD y la práctica de mantener la copia original tras verificación; formatear en cámara para reutilizar es habitual, mientras que borrados seguros aumentan el desgaste. Los distractores sobre inmortalidad, borrado seguro obligatorio o descartarlos son incorrectos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto al uso de checksums en comparaciones antes/después de operaciones sobre ficheros, ¿cuál de las siguientes afirmaciones describe con mayor precisión su límite operativo?",
+          "options": [
+            "Un checksum es capaz de detectar diferencias en niveles de ruido de fondo perceptible aunque el encapsulado sea idéntico.",
+            "Un checksum idéntico garantiza que dos ficheros serán reproducidos con exactamente la misma calidad perceptual en todos los sistemas.",
+            "Un checksum distinto siempre indica que la esencia audiovisual ha cambiado perceptualmente.",
+            "Un checksum idéntico garantiza igualdad bit a bit entre dos ficheros, pero no implica equivalencia perceptual si el contenido ha sido re‑codificado conservando similar apariencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un checksum igual comprueba identidad bit a bit; sin embargo, dos ficheros perceptualmente equivalentes (por ejemplo recodificados) tendrán checksums distintos. Por ello la diferencia decisiva es que checksum verifica igualdad binaria, no equivalencia perceptual. Las otras afirmaciones sobre calidad perceptual o detección de ruido son incorrectas o absolutas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Si una fuente de cámara no está genlockeada y se realiza un cambio de plano en un mezclador multicámara, ¿cuál es la consecuencia operativa más inmediata y cómo lo corrige un frame‑sync?",
+          "options": [
+            "Puede aparecer salto o tearing en el conmutado por diferencia de fase; el frame‑sync realinea el tiempo de salida introduciendo latencia para estabilizar la conmutación.",
+            "Provoca compresión del audio en la señal; el frame‑sync corrige ganancia de audio.",
+            "Inhibe por completo el retorno de tally; el frame‑sync reactiva tally sin alterar la imagen.",
+            "Causa pérdida de color permanente; el frame‑sync restaura gamut original."
+          ],
+          "correctIndex": 0,
+          "explanation": "La ausencia de genlock produce desalineamiento temporal entre fuentes que se manifiesta como saltos o tearing al conmutar; un frame‑sync resíncroniza la fuente aplicando latencia para alinear los fotogramas. Los otros efectos mencionados son irrelevantes o erróneos respecto al genlock.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Desde el punto de vista estructural y de uso, ¿qué elección de MXF es la más adecuada para: (a) un master único listo para playout; (b) material destinado a edición y reconformado frecuente?",
+          "options": [
+            "(a) OP1a solo si contiene audio mono; (b) OP‑Atom solo para cámaras analógicas.",
+            "(a) OP‑Atom para master único; (b) OP1a para edición colaborativa.",
+            "(a) Cualquiera de los dos indistintamente sin impacto operativo; (b) igualmente irrelevante.",
+            "(a) OP1a para master único; (b) OP‑Atom para edición y relink granular."
+          ],
+          "correctIndex": 3,
+          "explanation": "OP1a agrupa las esencias en un único fichero, adecuado para entrega/master único; OP‑Atom separa esencias por fichero facilitando edición, reconformado y relink. Las otras opciones confunden roles o ofrecen afirmaciones incorrectas sobre compatibilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Observe estas descripciones de efecto sobre una timeline. ¿Cuál corresponde exactamente a un 'roll trim'?:",
+          "options": [
+            "Se modifican simultáneamente el punto de salida del clip izquierdo y el punto de entrada del clip derecho manteniendo la duración total de la secuencia.",
+            "Se acorta el clip izquierdo y todos los clips posteriores de la pista se desplazan en el tiempo (la duración de la secuencia cambia).",
+            "Se desplaza el contenido dentro de un clip sin alterar puntos de entrada o salida ni la duración de la secuencia.",
+            "Se modifica únicamente el punto de entrada de un clip sin afectar al clip adyacente."
+          ],
+          "correctIndex": 0,
+          "explanation": "El roll trim altera el out de un clip y el in del siguiente a la vez, manteniendo inalterada la duración total de la secuencia. Los otros modos describen ripple (segunda opción), slip/slide (tercera) y simple trim de entrada (cuarta).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Respecto a la regulación contenida en el III Convenio Colectivo de RTVE, señale la afirmación que refleja con mayor precisión su ámbito sobre jornada, descansos y turnicidad:",
+          "options": [
+            "Establece criterios y procedimientos para organizar jornadas, periodos de descanso y composición de turnos adaptados a la actividad y la prevención de riesgos.",
+            "Regula exclusivamente los conceptos salariales sin referencia a horarios o descansos.",
+            "Impone una jornada fija idéntica para todos los trabajadores sin posibilidad de turnos.",
+            "Deroga la normativa laboral general sobre descansos y la sustituye por reglas internas discrecionales."
+          ],
+          "correctIndex": 0,
+          "explanation": "El Convenio regula la organización de la jornada, descansos y turnicidad estableciendo procedimientos adaptados a la actividad. Las otras opciones contradicen su naturaleza o exageran efectos no contenidos en la norma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Se prevén 500 usuarios, concurrencia estimada 10% y consumo por usuario 4,0 Mbps. Si la utilización máxima admisible es el 80% (margen operativo 20%), ¿qué capacidad mínima de enlace debe preverse?",
+          "options": [
+            "200 Mbps",
+            "250 Mbps",
+            "300 Mbps",
+            "225 Mbps"
+          ],
+          "correctIndex": 1,
+          "explanation": "Usuarios concurrentes: 500·0,10=50; bitrate agregado=50·4,0=200 Mbps. Con utilización máxima 80%, enlace = 200 / 0,80 = 250 Mbps. Las otras respuestas omiten el margen o usan cálculos distintos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_true_peak",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor diferencia 'True Peak' frente a 'Sample Peak' en metrología de audio digital:",
+          "options": [
+            "Sample Peak considera inter‑muestras; True Peak solo el valor del muestreo más alto.",
+            "True Peak solo mide picos en audio analógico; Sample Peak mide picos digitales y siempre es mayor.",
+            "Sample Peak mide muestras discretas; True Peak estima picos entre muestras tras reconstrucción y suele ser superior, por lo que es el parámetro relevante en control de entrega.",
+            "Ambos términos son equivalentes y pueden usarse indistintamente en especificaciones de entrega."
+          ],
+          "correctIndex": 2,
+          "explanation": "Sample Peak refleja el valor de las muestras discretas; True Peak estima picos inter‑muestras tras reconstrucción (habitualmente mayores) y es el control pertinente en entregas. Las demás opciones son incorrectas o confunden los conceptos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que mejor resume recomendaciones operativas sobre distancia, altura, orientación e iluminación para pantallas de visualización:",
+          "options": [
+            "Colocar la pantalla a 50–70 cm del operador, con el borde superior a la altura de los ojos o ligeramente por debajo, orientación perpendicular a fuentes de luz y controlar reflejos con iluminación difusa.",
+            "Fijar la pantalla a menos de 30 cm para mayor detalle, elevarla por encima de la línea de visión y orientar hacia ventanas para aprovechar luz natural directa.",
+            "Colocar la pantalla arbitrariamente si se usan gafas; orientar la pantalla hacia lámparas puntuales para mejorar contraste.",
+            "Instalar la pantalla verticalmente alta y forzar iluminación intensa desde atrás para reducir reflejos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica recomendada sitúa la pantalla a 50–70 cm, con borde superior al nivel de los ojos o ligeramente por debajo (ligera mirada descendente), evitando orientación que produzca reflejos directos y empleando iluminación difusa. Las otras opciones proponen distancias, orientaciones o iluminación inapropiadas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Para una producción que debe entregar material HDR destinado a emisión en directo y a plataformas de distribución, qué asignación es la más operativa y compatible:",
+          "options": [
+            "Usar HLG únicamente para masters de cine; PQ para streaming en directo.",
+            "Usar exclusivamente PQ en directo porque requiere menos metadata y es más compatible con televisores antiguos.",
+            "Usar HLG para señales en directo (por su compatibilidad con visualización SDR directa) y PQ para masters de postproducción y entrega definitiva con metadata de transferencia.",
+            "Entregar todo en SDR y confiar en cada plataforma para convertir a HDR."
+          ],
+          "correctIndex": 2,
+          "explanation": "HLG es adecuado en directo por su compatibilidad degradada con SDR sin metadata; PQ (ST‑2084) es la elección para masters de postproducción con metadata de transferencia y mapas de tonos. Las otras opciones ignoran compatibilidades prácticas y requisitos de metadata.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según la política 3‑2‑1 de copias de seguridad, ¿qué estrategia cumple correctamente la regla?",
+          "options": [
+            "Usar RAID 5 como sustituto de la tercera copia y almacenar todas las copias en el mismo centro de datos.",
+            "Hacer tres copias en la misma unidad RAID para mayor velocidad y una copia extra en la misma sala.",
+            "Conservar sólo dos copias online y una lista de archivos para regenerar la tercera copia si es necesario.",
+            "Mantener tres copias de los datos, almacenadas en al menos dos tipos de soporte distintos, con al menos una copia fuera del sitio (offsite)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La política 3‑2‑1 exige 3 copias, 2 medios distintos y 1 offsite. Las alternativas proponen prácticas que no cumplen independencia de soportes ni ubicación física (copias en mismo sitio o sustituir backup por RAID), por lo que son incorrectas.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "075",
       "title": "Examen 075",
