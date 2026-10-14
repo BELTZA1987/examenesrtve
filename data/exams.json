@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-14",
   "exams": [
+    {
+      "id": "077",
+      "title": "Examen 077",
+      "date": "2026-10-14",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a obligaciones de protección de menores y clasificación o acceso a contenidos impuestas por la Ley 13/2022:",
+          "options": [
+            "Garantizar sistemas que permitan bloquear o filtrar el acceso de menores a contenidos no aptos, incluyendo controles parentales y verificación de edad razonable.",
+            "Asignar y mostrar de forma clara una clasificación por edades y advertencias junto al contenido difundido cuando proceda.",
+            "Facilitar información accesible sobre la naturaleza del contenido (temas sensibles, lenguaje, violencia, sexualidad) para que los usuarios puedan valorar su idoneidad.",
+            "Imponer al prestador la obligación de emitir todo contenido no apto para menores exclusivamente fuera del horario de protección del menor sin excepciones."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley exige medidas de protección (controles parentales, clasificación y etiquetado informativo) pero no impone una obligación absoluta de emitir «exclusivamente fuera del horario de protección» para todo contenido no apto; esa formulación es excesiva y constituye la excepción. La diferencia decisiva es que la norma obliga a medidas proporcionadas y de gestión del acceso, no a una regla única y absoluta de horario.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_project_media",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: tras mover a otra unidad el contenedor de proyecto (archivo del NLE) los clips en la timeline están offline aunque los ficheros de esencia siguen en la misma ruta relativa. ¿Cuál es la causa más probable?",
+          "options": [
+            "El motor de códecs del sistema ha caducado; el proyecto reconoce los ficheros pero no puede decodificarlos.",
+            "Los metadatos embebidos en los archivos de esencia han sido modificados y el NLE ha invalidado las referencias del proyecto.",
+            "Los metadatos de proyecto que referencian las rutas absolutas del sistema no se han actualizado, provocando pérdida de enlace con las entradas del bin.",
+            "El sistema de almacenamiento ha reescrito los índices del contenedor de vídeo y ha cambiado los UMID de las pistas."
+          ],
+          "correctIndex": 2,
+          "explanation": "Es diagnóstico típico: el proyecto almacena rutas y referencias de proyecto (metadatos del NLE) que apuntan a ubicaciones absolutas; al mover el contenedor no se actualizan esas referencias. La diferencia decisiva frente al distractor más próximo (metadatos embebidos) es que los metadatos embebidos permanecen en los ficheros de esencia; el fallo se debe a la referencia externa del proyecto.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: durante una misión fuera del centro habitual un trabajador debe manipular equipos pesados en un local ajeno. ¿Cuál de las siguientes obligaciones del empleador es la más relevante para prevenir riesgos en esa tarea?",
+          "options": [
+            "Delegar toda responsabilidad preventiva al responsable del local receptor donde se realiza la tarea.",
+            "Limitar la misión únicamente a personal con más de cinco años de antigüedad en la empresa.",
+            "Informar y formar específicamente sobre los riesgos del trabajo a realizar y las medidas preventivas, incluyendo evaluación previa del lugar y medios de emergencia.",
+            "Exigir al trabajador que firme un documento aceptando asumir los riesgos propios de la misión."
+          ],
+          "correctIndex": 2,
+          "explanation": "El empleador debe evaluar riesgos y proporcionar información y formación específicas para la tarea y el lugar, así como coordinar medidas preventivas. Los otros enunciados vulneran obligaciones (no se puede delegar ni exigir asunción unilateral de riesgos). La diferencia decisiva es la obligación preventiva activa del empleador.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a causas y diagnóstico de un bucle de masa en sistemas de audio y vídeo:",
+          "options": [
+            "Un nivel elevado de ganancia por mala ecualización o saturación del preamplificador es la causa habitual de un zumbido de bucle de masa.",
+            "Conexión simultánea de la misma señal a través de dos rutas físicas (por ejemplo, XLR balanceado y entrada RCA no balanceada) puede generar bucle de masa.",
+            "Un cableado con pantalla desconectada en uno de sus extremos es una causa frecuente de bucle de masa entre equipos.",
+            "Diferentes potenciales de tierra entre equipos conectados en serie pueden inducir un zumbido o ruido continuo: causa típica de bucle de masa."
+          ],
+          "correctIndex": 0,
+          "explanation": "El zumbido por bucle de masa se debe a diferencias de potencial y rutas de tierra o pantallas conectadas en paralelo; la ganancia o ecualización alta puede aumentar ruido pero no produce un bucle de masa en sí. La diferencia decisiva es que el bucle implica rutas de tierra/masa múltiples, no la simple ganancia del preamplificador.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare 'capture' y 'import' y seleccione la afirmación que define con mayor precisión su diferencia operativa:",
+          "options": [
+            "'Capture' es una operación de edición que reencoda la timeline; 'import' es exclusivo para audio y metadatos.",
+            "'Capture' siempre crea proxies y elimina los originales; 'import' solo crea enlaces simbólicos a los originales.",
+            "'Capture' equivale a 'ingest' y siempre incluye verificación con checksum; 'import' es una lectura directa de la tarjeta sin copia.",
+            "'Capture' implica control y grabación directa desde un dispositivo fuente (por ejemplo cinta o cámara conectada) generando nueva esencia en el sistema; 'import' copia ficheros existentes al proyecto sin control del dispositivo."
+          ],
+          "correctIndex": 3,
+          "explanation": "Correcto: 'capture' es la grabación controlada desde la fuente creando nueva esencia en el sistema; 'import' copia ficheros ya existentes al proyecto. Las otras opciones confunden conceptos (ingest incluye pasos adicionales, no todo capture crea proxies). La diferencia decisiva es el control sobre la fuente y la generación de nueva esencia en capture.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto al uso de la línea de tono de piel en un vectorscopio: ¿qué afirmación describe mejor su uso y límite para evaluar tonos de piel?",
+          "options": [
+            "Es una referencia absoluta: cualquier piel debe alinearse exactamente con la línea de tono de piel independientemente de cámara, espacio de color o balance de blancos.",
+            "Es una guía aproximada que indica la posición de matiz esperada en un espacio dado; su uso fiable exige calibración consistente de cámara, perfil de color y consideración del gamut y luminancia.",
+            "Sirve exclusivamente para juzgar exposición de la piel; si el clúster coincide con la línea, la exposición es correcta.",
+            "Es válida solo en logarítmicos (log) y no se aplica en espacios Rec.709."
+          ],
+          "correctIndex": 1,
+          "explanation": "La línea de tono de piel es una referencia de matiz aproximada que depende del espacio de color, la configuración de cámara y la cadena de procesado; no es absoluta. La diferencia decisiva frente al distractor más cercano (absoluta) es que sin calibración y consideración de gamut y luminancia la línea puede inducir errores.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Compare entrelazado y progresivo: ¿cuál es la diferencia temporal y el artefacto típico asociado al entrelazado?",
+          "options": [
+            "El entrelazado captura campos tomados en instantes diferentes y puede producir 'combing' en objetos en movimiento; el progresivo captura el cuadro completo en un instante único.",
+            "El entrelazado captura el doble de información temporal que el progresivo y por ello no produce artefactos en movimiento.",
+            "El progresivo divide cada cuadro en dos campos para mejorar detalle vertical, lo que genera líneas de exploración visibles.",
+            "El entrelazado sólo afecta al muestreo de color y no tiene impacto temporal sobre el movimiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "Correcto: el entrelazado separa cuadro en dos campos adquiridos en tiempos distintos y puede producir 'combing' o artefactos en movimientos rápidos; el progresivo captura el cuadro completo en un único instante. La diferencia decisiva es la adquisición temporal por campos en el entrelazado.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre la función de servicio público de RTVE según la Ley 17/2006 y señale la más ajustada:",
+          "options": [
+            "La función de servicio público prioriza la obtención de beneficios comerciales para sostener la actividad de la Corporación.",
+            "Su misión principal es la promoción exclusiva de la cultura del Gobierno de turno y la coordinación de la política comunicativa estatal.",
+            "Debe garantizar pluralismo, objetividad en la información, acceso universal y protección de derechos fundamentales, como elementos prioritarios de su misión.",
+            "La Ley delega en RTVE la regulación de la competencia entre operadores privados para equilibrar el mercado."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley atribuye a RTVE misiones de servicio público como pluralismo, información veraz e imparcial, acceso universal y protección de derechos; no prioriza beneficios comerciales ni funciones de regulación del mercado. La diferencia decisiva es el carácter público y de interés general frente a objetivos comerciales o de regulación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según el teorema de Nyquist, ¿qué relación mínima entre frecuencia de muestreo y banda audible evita aliasing en audio?",
+          "options": [
+            "El aliasing sólo se produce en convertidores de 8 bits; aumentando la profundidad se elimina el aliasing.",
+            "La frecuencia de muestreo debe ser igual a la máxima frecuencia audible para evitar aliasing.",
+            "Una frecuencia de muestreo menor que el doble de la banda audible evita aliasing si se usa un compresor dinámico.",
+            "La frecuencia de muestreo debe ser al menos el doble de la máxima frecuencia contenida en la señal; por ejemplo, para 20 kHz se requiere al menos 40 kHz."
+          ],
+          "correctIndex": 3,
+          "explanation": "Nyquist establece que la frecuencia de muestreo debe ser al menos el doble de la máxima frecuencia de la señal para evitar aliasing (p. ej. ≥40 kHz para 20 kHz); esto requiere además un filtro anti‑alias. La diferencia decisiva es la relación 2×, no la profundidad de bits ni compresión.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: dispone de un archivo con formatos y soportes que empiezan a ser obsoletos. ¿Qué plan operativo priorizaría para garantizar preservación y mitigar obsolescencia?",
+          "options": [
+            "Esperar hasta que falle el lector del formato original y entonces extraer lo que sea posible usando herramientas forenses.",
+            "Crear un calendario de verificación periódica y migrar los activos a formatos y soportes actuales con comprobación de integridad (checksums) y documentación de la migración.",
+            "Confiar únicamente en la preservación de la copia en el mismo soporte y aumentar el número de copias sin verificar su integridad.",
+            "Mantener los activos en el formato original sin migrar, informando a los usuarios de la posible inaccesibilidad futura."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica correcta es verificar periódicamente integridad y migrar a formatos/soportes actuales documentando el proceso y usando checksums. Las otras opciones postergan la migración o omiten verificación, por tanto no mitigan la obsolescencia. La diferencia decisiva es la combinación de verificación periódica y migración documentada.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_color_order",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: indique la secuencia de operaciones en corrección de color que refleja la práctica correcta: normalización, balance, contraste, matching y look. Seleccione la opción que ordena esas operaciones adecuadamente.",
+          "options": [
+            "1) Balance → 2) Look → 3) Normalización → 4) Matching → 5) Contraste.",
+            "1) Aplicación de look → 2) Matching → 3) Balance → 4) Normalización → 5) Contraste.",
+            "1) Matching → 2) Normalización → 3) Look → 4) Balance → 5) Contraste.",
+            "1) Normalización → 2) Balance de blancos → 3) Ajuste de contraste/gamma → 4) Matching entre planos → 5) Aplicación de look creativo."
+          ],
+          "correctIndex": 3,
+          "explanation": "El flujo estándar comienza por normalizar señales (niveles/legalidad), luego ajustar balance/temperatura, después contraste/curvas, igualar entre planos (matching) y finalmente aplicar un look creativo. La diferencia decisiva frente al distractor más cercano es respetar la jerarquía técnica antes de la intervención estética.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: ¿qué diferencia operativa distingue con mayor precisión el montaje paralelo del montaje alterno?",
+          "options": [
+            "El montaje paralelo presenta acciones que se desarrollan simultáneamente y suelen converger temáticamente; el montaje alterno alterna líneas de acción que no necesariamente son simultáneas y se usan para contraste o comparación.",
+            "El montaje paralelo siempre implica continuidad temporal exacta entre planos; el alterno es exclusivo de escenas humorísticas.",
+            "El montaje alterno exige que las dos líneas narrativas se crucen en pantalla simultáneamente; el paralelo solo emplea recursos gráficos.",
+            "No existe diferencia operativa: ambos términos se refieren al mismo procedimiento de intercalar dos acciones."
+          ],
+          "correctIndex": 0,
+          "explanation": "Correcto: el montaje paralelo tiende a mostrar acciones simultáneas o temáticamente relacionadas que pueden converger; el alterno intercala líneas distintas para contraste o avanzar tramas distintas sin exigir simultaneidad exacta. La diferencia decisiva es la relación de simultaneidad y finalidad narrativa.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_xavc",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor diferencia XAVC Intra y Long‑GOP en perfiles y aplicaciones habituales:",
+          "options": [
+            "XAVC Intra aplica compresión intraframe (cada cuadro comprimido independientemente), por ello se emplea para masters y edición intensiva; Long‑GOP usa compresión temporal interframe para grabación eficiente en bitrate más bajo.",
+            "XAVC Intra siempre usa menos bitrate que Long‑GOP y es preferible para streaming de baja latencia.",
+            "Long‑GOP almacena cada fotograma por separado sin dependencias; Intra requiere reconstrucción de GOP para reproducir.",
+            "Ambos son identicos en estructura; la diferencia es solo de marca comercial sin impacto en edición."
+          ],
+          "correctIndex": 0,
+          "explanation": "XAVC Intra es intraframe, adecuado para edición y masters por su independencia de fotogramas; Long‑GOP reduce bitrate mediante dependencias temporales, siendo más eficiente para grabación prolongada. La diferencia decisiva es intraframe vs interframe y sus implicaciones en edición y bitrate.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en un RGB Parade (Rec.709) se observa que en las sombras el canal verde está ≈4 dB por encima de rojo y azul, mientras que en medios y altas coinciden. ¿Cuál es el diagnóstico operativo más probable?",
+          "options": [
+            "Saturación global aplicada por legalizer que solo afecta a las sombras del canal verde.",
+            "Desajuste de balance de blancos o de la matriz de conversión en la cámara que provoca dominante verdosa en sombras.",
+            "Pérdida de sincronismo entre campos que altera selectivamente el canal verde.",
+            "Fallo del conector BNC del canal rojo que atenúa únicamente las altas frecuencias."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un exceso del canal verde en sombras suele deberse a un desajuste de balance o a la matriz de color (sensor/camera LUT), afectando más a bajas luminancias; no es típico de legalizer, sincronismo de campos o conector que afecte solo a altas frecuencias. La diferencia decisiva es la correspondencia espectral del sensor/matriz.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: para asegurar cumplimiento del principio constitucional de igualdad y prohibición de discriminación en la selección de contenidos, ¿qué medida procedimental es la más adecuada?",
+          "options": [
+            "Limitar la contratación de personal a perfiles que compartan una misma visión ideológica para garantizar coherencia.",
+            "Incorporar un protocolo de revisión editorial que incluya criterios objetivos de no discriminación y una evaluación de impacto antes de la emisión.",
+            "Eliminar cualquier contenido que pueda generar debate público, para evitar riesgos legales.",
+            "Delegar la verificación de igualdad a terceros sin integrar procedimientos internos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La medida procedimental adecuada es establecer protocolos editoriales con criterios objetivos y evaluación de impacto para prevenir discriminación. Las otras opciones son inadecuadas o contrarias al principio. La diferencia decisiva es que se requiere un procedimiento interno y documentado, no exclusión o delegación ineficaz.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: respecto a derechos y obligaciones en prevención, cuál de las siguientes afirmaciones describe con mayor precisión la relación entre empleador y trabajador?",
+          "options": [
+            "El trabajador asume en todo momento la responsabilidad final de su seguridad, eximiendo al empleador de obligaciones de formación.",
+            "El empleador está obligado a proporcionar información, formación y medios adecuados; el trabajador debe utilizar correctamente los medios facilitados y colaborar en las medidas preventivas.",
+            "La obligación de formación es facultativa y depende exclusivamente de la duración de la jornada del trabajador.",
+            "El empleador solo debe informar por escrito; no es necesaria la comprobación de comprensión ni la formación práctica."
+          ],
+          "correctIndex": 1,
+          "explanation": "La normativa impone al empleador obligaciones de información, formación y provisión de medios; el trabajador debe colaborar y usar los medios correctamente. Las demás afirmaciones minimizan obligaciones del empleador o niegan la necesidad de formación efectiva. La diferencia decisiva es la corresponsabilidad con obligaciones activas del empleador.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un servidor EVS configurado en grabación en bucle (loop), indique la afirmación que mejor describe el principio operativo y la medida para recuperar una ejecución concreta sin que sea sobrescrita:",
+          "options": [
+            "La única forma de recuperar una ejecución es detener el loop y reiniciar la grabación en otro dispositivo.",
+            "El loop graba siempre en un único fichero por todas las cámaras y no admite aislar ejecuciones por canal.",
+            "Las grabaciones en loop no permiten accesos simultáneos para edición: cualquier extracción interrumpe la grabación.",
+            "El servidor mantiene una memoria circular por canal con duración limitada; para preservar una ejecución es necesario marcarla (protect/lock) o extraerla a un clip con handles para evitar sobrescritura por el propio loop."
+          ],
+          "correctIndex": 3,
+          "explanation": "EVS loop usa buffers circulares por canal; para evitar sobrescritura se marca/protege o se crea un clip con handles y se archive. Las otras afirmaciones son incorrectas respecto a aislamiento y acceso concurrente. La diferencia decisiva es la función de marcar/proteger para impedir sobrescritura.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: varias cámaras comparten un código de tiempo común. Indique la secuencia de comprobaciones y acciones para sincronización multicámara fiable en el NLE.",
+          "options": [
+            "Ignorar el timecode y sincronizar manualmente clip por clip en la timeline, evitando cualquier comprobación previa.",
+            "Aplicar un align automático por forma de onda de audio sin comprobar el timecode, ya que el audio siempre es más fiable.",
+            "Verificar continuidad y formato del timecode en cada archivo, confirmar misma framerate y drop/non‑drop, utilizar el timecode como referencia primaria para agrupar clips y comprobar desvíos con el audio de referencia; corregir offsets puntuales antes de crear multicam sequence.",
+            "Convertir todos los TC a formato UTC y usar ese valor como única referencia sin revisar framerates."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta es verificar continuidad del TC, framerate y drop/non‑drop, usar el TC como referencia para agrupar y comprobar con audio de referencia, corrigiendo offsets antes de crear la secuencia multicámara. Las otras opciones omiten comprobaciones esenciales o son inapropiadas. La diferencia decisiva es el control y verificación del TC antes de la sincronización.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_metadatos",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: cuál es la función esencial de los metadatos técnicos y descriptivos en catalogación, búsqueda e intercambio:",
+          "options": [
+            "Sustituir la necesidad de conservar la estructura de carpetas e índices en soportes como XDCAM.",
+            "Incrementar el tamaño de los ficheros para proteger el contenido audiovisual de accesos no autorizados.",
+            "Permitir la identificación, recuperación y relink de activos, automatizar flujos y facilitar interoperabilidad entre sistemas de gestión y edición.",
+            "Eliminar la necesidad de verificaciones de integridad (checksums) en transferencias."
+          ],
+          "correctIndex": 2,
+          "explanation": "Los metadatos sirven para identificar, buscar, relinkear y automatizar flujos y facilitar intercambio entre sistemas. No sustituyen comprobaciones de integridad ni estructuras físicas, ni tienen efecto protector sobre accesos. La diferencia decisiva es su función de descriptivo y técnico para gestión e interoperabilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la elección motivada de transición (corte, fundido, encadenado) y su significado temporal o narrativo:",
+          "options": [
+            "El disolve (encadenado) siempre indica simultaneidad absoluta entre las dos escenas enlazadas.",
+            "El fundido a negro sugiere generalmente conclusión o paso de tiempo prolongado entre escenas.",
+            "El corte suele indicar continuidad temporal o espacial inmediata y mantiene ritmo e inmediatez.",
+            "El uso de una transición debe responder a una motivación narrativa o temporal clara, no a un capricho estético."
+          ],
+          "correctIndex": 0,
+          "explanation": "Decir que un disolve 'siempre' indica simultaneidad absoluta es una excepción falsa: el disolve suele sugerir paso de tiempo o una relación temático‑emocional, no simultaneidad absoluta. La diferencia decisiva es que las transiciones tienen usos motivados y no reglas absolutas; la opción 3 es la única incorrecta.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "076",
       "title": "Examen 076",
