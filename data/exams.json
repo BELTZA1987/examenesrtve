@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-15",
   "exams": [
+    {
+      "id": "078",
+      "title": "Examen 078",
+      "date": "2026-10-15",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la afirmación que mejor refleja la finalidad operativa de la reforma de 2017 sobre RTVE y su efecto en la designación de sus órganos de gobierno:",
+          "options": [
+            "Permitir al Gobierno nombrar directamente al presidente y consejeros de RTVE para agilizar la toma de decisiones ejecutivas.",
+            "Reforzar la independencia y el pluralismo estableciendo la elección de los miembros de los órganos por las Cortes Generales mediante un procedimiento parlamentario que reduce la discrecionalidad del Ejecutivo.",
+            "Sustituir el procedimiento parlamentario por un concurso público técnico basado exclusivamente en méritos profesionales para designar a los órganos de RTVE.",
+            "Transferir la competencia de designación a las comunidades autónomas para aumentar la representatividad territorial."
+          ],
+          "correctIndex": 1,
+          "explanation": "La reforma restituyó la elección parlamentaria de los órganos para reforzar independencia y pluralismo frente al nombramiento directo por el Ejecutivo; las otras opciones plantean mecanismos contrarios (nombramiento ejecutivo, concurso técnico exclusivo o descentralización autonómica) que no corresponden a la finalidad y al procedimiento introducidos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Ordene la secuencia operativa correcta durante una ingesta verificada destinada a asegurar integridad y trazabilidad:",
+          "options": [
+            "Copia de ficheros → validación de estructura y reproducción → cálculo de checksum → registro en catálogo.",
+            "Copia de los ficheros desde el soporte origen → cálculo y registro de checksum → validación de estructura y reproducción → registro en catálogo.",
+            "Copia de ficheros → registro en catálogo → cálculo de checksum → validación de reproducción.",
+            "Copia de ficheros → cálculo de checksum → registro en catálogo → validación de estructura y reproducción."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica correcta es primero copiar, luego calcular y registrar checksums para verificar integridad, a continuación validar estructura y reproducción y finalmente registrar en el catálogo; el orden decisivo es checksum antes de la validación de contenido para detectar corrupciones previas al ingreso en catálogo.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que mejor describe la adecuación de black burst y tri‑level sync según SD y HD:",
+          "options": [
+            "Black burst se utiliza sólo para audio y tri‑level sólo para vídeo; no hay superposición funcional.",
+            "Tri‑level es exclusivo de SD y no se debe usar en HD; black burst ofrece la referencia más precisa para todas las resoluciones.",
+            "Black burst y tri‑level son intercambiables sin impacto en cadenas SD/HD modernas; el equipo compensa automáticamente las diferencias.",
+            "Black burst es adecuado para sistemas SD entrelazados; tri‑level se emplea en HD progresivo por su mayor ancho de banda y cruce por cero que mejora la sincronización."
+          ],
+          "correctIndex": 3,
+          "explanation": "Black burst es la referencia histórica para SD entrelazado; tri‑level, con cruce por cero y mayor tasa de transición, es la referencia habitual para señales HD progresivas. Las otras afirmaciones falsean la especificidad técnica y funcional de ambas señales.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Qué organización de tareas reduce de forma más eficaz la fatiga visual y postural ante pantallas:",
+          "options": [
+            "Concentrar todas las tareas de pantalla en bloques largos para mantener la concentración y realizar una única pausa larga al mediodía.",
+            "Alternar tareas de trabajo frente a pantalla con tareas no visuales y programar pausas cortas frecuentes (micro‑pausas) durante la jornada.",
+            "Eliminar pausas intermedias y sustituirlas por ejercicio al final de la jornada laboral.",
+            "Permitir que el trabajador decida sin pauta las pausas; no fijar alternancias ni micro‑pausas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La evidencia práctica recomienda alternancia de tareas y pausas cortas frecuentes para reducir fatiga ocular y postural; las otras opciones concentran esfuerzo, retrasan la recuperación o carecen de pautas preventivas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que distingue correctamente el código de tiempo drop‑frame de non‑drop‑frame en 29,97 fps:",
+          "options": [
+            "El drop‑frame sólo se aplica en formatos progresivos superiores a 50 fps.",
+            "El drop‑frame elimina físicamente fotogramas para corregir la duración real del material en 29,97 fps.",
+            "El non‑drop‑frame ajusta la numeración para igualar el reloj real mientras que drop‑frame deja la numeración continua.",
+            "El drop‑frame altera la numeración de ciertos fotogramas para que el timecode avance en sintonía con el tiempo real sin eliminar fotogramas del vídeo."
+          ],
+          "correctIndex": 3,
+          "explanation": "Drop‑frame ajusta la numeración saltando determinados números de frame para que el timecode refleje el tiempo real a 29,97 fps; no borra fotogramas. Las opciones que afirman eliminación física o asignaciones inversas son incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Un medidor de correlación muestra valores sostenidos próximos a −0,85 durante pasajes con amplios ambientes estéreo. ¿Cuál es la conclusión operativa y la medida prioritaria?:",
+          "options": [
+            "Existe alto riesgo de cancelación al sumar a mono; reducir información opuesta de fase o aplicar procesamiento para recuperar coherencia antes de la emisión.",
+            "La mezcla es óptima para mono y no requiere acción; valores negativos indican buena separación estéreo.",
+            "Se trata de un fallo del medidor; proceder a recalibrar el instrumento antes de modificar la mezcla.",
+            "Valores negativos indican exceso de graves; aplicar un filtro de paso alto para corregir la correlación."
+          ],
+          "correctIndex": 0,
+          "explanation": "Valores cercanos a −1 indican señales en oposición de fase que pueden cancelarse al sumar a mono; la intervención es reducir componentes fuera de fase o corregir la panoramización. Las alternativas confunden interpretación del medidor con falla o efectos de frecuencia.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare HDR y SDR en términos de rango dinámico y compatibilidad de visualización:",
+          "options": [
+            "HDR ofrece mayor rango dinámico y picos de luminancia superiores; para visualizar en pantallas SDR es necesario tone‑mapping o conversión para evitar pérdida o recorte de información.",
+            "SDR tiene mayor rango dinámico que HDR y es compatible con todas las pantallas sin conversión.",
+            "HDR y SDR son idénticos en rango dinámico; la diferencia es solo de nombre.",
+            "HDR exige siempre códecs distintos que hacen incompatibles los ficheros con flujo SDR sin recodificación completa."
+          ],
+          "correctIndex": 0,
+          "explanation": "HDR amplía rango dinámico y picos de luminancia, por lo que requiere tone‑mapping para mostrarse en SDR; las otras opciones falsean la relación de rango o la naturaleza de la conversión.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a los principios y obligaciones preventivas establecidos en la Ley 31/1995:",
+          "options": [
+            "Integrar la prevención en la gestión de la empresa y planificar la acción preventiva de forma continua.",
+            "Organizar la actividad de trabajo para eliminar o minimizar riesgos mediante evaluación y medidas técnicas, organizativas y formativas.",
+            "Fomentar la consulta y participación de los representantes de los trabajadores en materia preventiva.",
+            "Trasladar íntegramente la responsabilidad de la prevención al trabajador, eximiendo al empleador de obligaciones."
+          ],
+          "correctIndex": 3,
+          "explanation": "La excepción es la atribución total de responsabilidad al trabajador; la ley obliga al empleador a integrar y planificar prevención y a promover la participación de representantes; por tanto la opción que traslada la obligación íntegra al trabajador es incorrecta.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación que describe mejor ventajas y limitaciones de CBR frente a VBR:",
+          "options": [
+            "CBR y VBR son equivalentes en todas las aplicaciones; la elección es puramente de preferencia editorial.",
+            "VBR mantiene un flujo constante de bits ideal para streaming en redes con ancho de banda limitado; CBR ofrece mayor eficiencia en calidad por tamaño.",
+            "CBR garantiza un flujo de datos constante útil para transmisión en tiempo real; VBR optimiza calidad y tamaño para archivo o descarga, pero produce variaciones de ancho de banda.",
+            "CBR siempre produce mejores calidad visual que VBR a igual bitrate medio."
+          ],
+          "correctIndex": 2,
+          "explanation": "CBR mantiene bitrate constante y es adecuado para canales con ancho de banda fijo (streaming); VBR ajusta bitrate para optimizar calidad/archivo pero puede generar picos. Las demás opciones confunden propiedades o hacen afirmaciones incorrectas sobre rendimiento.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para cambiar el eje de acción respetando continuidad espacial, cuál es el procedimiento operativo más adecuado:",
+          "options": [
+            "Cambiar el eje entre planos consecutivos siempre que haya movimiento rápido para distraer al espectador.",
+            "Ignorar la línea de acción y alternar libremente posiciones de cámara; el montaje corregirá la confusión en la sala de montaje.",
+            "Cruzar la línea con el operador de cámara en plano‑secuencia para restablecer automáticamente la continuidad sin corte puente.",
+            "Definir la línea de acción, situar cámaras en un mismo lado de esa línea y, si se altera el eje, introducir un plano neutro o plano‑puente que permita invertir el eje de manera explícita."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica correcta es mantener la línea de acción o usar un plano neutro/puente para justificar un cambio de eje; las otras opciones inducen a ruptura de continuidad o asumen soluciones no fiables en montaje.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la configuración postural más compatible con las recomendaciones ergonómicas para un puesto de edición:",
+          "options": [
+            "Silla ajustada en altura para que los pies apoyen en el suelo, respaldo con soporte lumbar activo, antebrazos apoyados y paralelos al plano de trabajo.",
+            "Silla baja que obliga a subir los hombros, respaldo rígido, antebrazos elevados sobre la mesa y pies colgando.",
+            "Silla elevada sin soporte lumbar, pantalla muy baja para reducir la pérdida de visión y antebrazos sin apoyo.",
+            "Trabajo de pie continuo sin reposapiés ni ajuste de altura del puesto."
+          ],
+          "correctIndex": 0,
+          "explanation": "La configuración correcta exige ajuste de altura para pies apoyados, soporte lumbar y apoyo de antebrazos paralelos; las alternativas describen posturas que incrementan tensión y riesgo musculosquelético.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un mezclador diseñado para edición lineal A/B‑Roll, ¿qué descripción corresponde con precisión a la función operativa de los buses A y B y de la prelectura (preview) durante la preparación y ejecución de una transición?",
+          "options": [
+            "Una de las fuentes (A) actúa siempre como señal principal de vídeo y la otra (B) como señal de key o reserva; la prelectura sólo sirve para comprobar la key y no puede prepararse una fuente independiente para la transición.",
+            "La prelectura combina simultáneamente las señales de A y B en una mezcla de prueba en el monitor previo para evaluar el efecto de transición; al ejecutar el corte, esa mezcla ya combinada se aplica directamente al programa.",
+            "Los buses A y B son rutas de entrada independientes que el operador puede asignar al monitor previo o al programa; la prelectura recibe la fuente seleccionada para salida próxima, permitiendo verificar y ajustar imagen, clave o niveles sin alterar el programa en emisión; al ejecutar la transición el mezclador cambia el crosspoint/fader y pasa la señal del previo al programa.",
+            "La prelectura duplica exactamente lo que está en programa para permitir verificación sin posibilidad de seleccionar otra fuente; los buses A y B sólo definen ganancia y no influyen en la selección previa a la transición."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 0 es correcta: en A/B‑Roll los buses A y B son rutas de entrada separadas que pueden asignarse al preview o al programa; la prelectura permite preparar y verificar una fuente que no está en programa y, al ejecutar la transición, el mezclador conmuta el crosspoint o sube el fader para llevar la señal del preview al programa. El distractor más próximo (opción 1) es erróneo porque la prelectura no suele mezclar A y B como una única mezcla aplicada luego al programa; su función es mostrar y preparar una fuente concreta sin afectar la emisión. Las opciones 2 y 3 atribuyen roles incorrectos a A/B y limitan indebidamente la capacidad de selección y preparación en el preview.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Además de conservar carpetas e índices, indique la afirmación que constituye una excepción respecto a los aspectos estructurales imprescindibles a verificar en material XDCAM para asegurar acceso fiable en archivo:",
+          "options": [
+            "Comprobar información de spanning y continuidad de clips multi‑archivo entre carpetas.",
+            "Verificar la presencia y coherencia de metadatos embebidos (timecode, UMID y descriptors) asociados a los clips.",
+            "Confiar en cualquier reproductor genérico para acceder a la esencia XDCAM sin herramientas compatibles específicas.",
+            "Comprobar que se dispone de una herramienta compatible capaz de reconstruir clips que ocupan múltiples ficheros."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción que afirma confiar en reproductores genéricos es la excepción: XDCAM requiere verificar spanning y metadatos y usar herramientas compatibles para reconstruir clips; confiar en reproductores genéricos puede impedir acceso fiable.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Respecto al intercambio de proyectos mediante EDL y AAF, señale la afirmación que constituye una excepción sobre alcance transferible:",
+          "options": [
+            "Un EDL estándar encapsula y transfiere de forma completa todos los efectos, parámetros y metadatos avanzados del proyecto como lo hace AAF.",
+            "AAF permite transferir referentes de pistas múltiples, efectos y parte de los metadatos del proyecto entre estaciones compatibles.",
+            "Un EDL clásico transfiere esencialmente cortes y timecode en pistas simples y no preserva efectos complejos ni múltiples pistas de audio.",
+            "AAF puede incluir referencias a medios y algunos metadatos que facilitan relink y reconformado en la estación receptora."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es afirmar que EDL transfiere efectos y metadatos avanzados como AAF; EDL es limitado a cortes y referencias simples, mientras AAF soporta mayor alcance y metadatos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las funciones de la clasificación profesional, la 'ocupación tipo' y la organización del trabajo según el III Convenio Colectivo:",
+          "options": [
+            "La ocupación tipo fija el salario exacto de cada trabajador independientemente de la clasificación; la organización del trabajo impone obligaciones personales más allá de la jornada.",
+            "La clasificación profesional sólo define salarios sin relación a competencias; la ocupación tipo es un documento contractual individual; la organización del trabajo queda fuera del convenio.",
+            "La clasificación profesional relaciona puestos con niveles y requisitos; la ocupación tipo describe tareas y competencias características; la organización del trabajo regula distribución de tareas, jornada y turnicidad.",
+            "La organización del trabajo sustituye a la clasificación profesional como criterio para ascensos y retribuciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La respuesta correcta distingue funciones: clasificación vincula puestos, niveles y requisitos; ocupación tipo describe tareas representativas; la organización del trabajo regula jornada y turnicidad. Las demás mezclan conceptos o asignan competencias incorrectas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En cuál de los siguientes casos se aplica correctamente un J‑cut:",
+          "options": [
+            "El audio del plano anterior continúa sonando sobre la imagen del siguiente plano (persistencia del audio del plano anterior).",
+            "El audio del siguiente plano comienza antes de que aparezca su imagen, anticipando la entrada visual del nuevo plano.",
+            "Ambos planos mantienen audio y vídeo exactamente sincronizados sin solapamiento.",
+            "Se corta el audio y el vídeo del siguiente plano simultáneamente para crear un salto abrupto."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un J‑cut introduce el audio del plano entrante antes de su imagen; la opción más próxima (L‑cut) sería la que mantiene el audio del plano anterior sobre la nueva imagen; las otras opciones no describen un J‑cut.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la tolerancia a fallos y la reconstrucción en RAID 5 frente a RAID 6:",
+          "options": [
+            "RAID 5 tolera la falla de un disco y reconstruye leyendo datos y paridad; RAID 6 tolera la falla de hasta dos discos a costa de mayor overhead y reconstrucción más lenta.",
+            "RAID 5 tolera dos discos fallados sin pérdida; RAID 6 sólo tolera un disco.",
+            "RAID 5 no ofrece tolerancia a fallos; RAID 6 funciona como RAID 0.",
+            "RAID 5 y RAID 6 ofrecen la misma tolerancia y velocidad de reconstrucción."
+          ],
+          "correctIndex": 0,
+          "explanation": "RAID 5 soporta una única falla y reconstruye usando paridad; RAID 6 añade una capa adicional de paridad tolerando dos fallas pero con mayor coste de almacenamiento y reconstrucción más lenta. Las otras opciones son incorrectas sobre tolerancia y funcionamiento.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a componentes y uso práctico, cuál afirmación describe con mayor precisión la diferencia entre RGB y YCbCr:",
+          "options": [
+            "YCbCr contiene canales rojo, verde y azul como variantes, y es preferible para corrección primaria en color grading profesional.",
+            "RGB codifica directamente canales rojo, verde y azul para procesamiento y gráficos; YCbCr separa luminancia (Y) de crominancias (Cb, Cr) para eficiencia en compresión y transmisión.",
+            "RGB comprime mejor el vídeo en distribución de difusión que YCbCr porque reduce la información de luminancia.",
+            "YCbCr no permite representar luminancia y solo se usa para metadatos."
+          ],
+          "correctIndex": 1,
+          "explanation": "RGB representa valores de color primarios; YCbCr separa luminancia y crominancia, lo que facilita submuestreo y compresión en transmisión. Las demás opciones confunden componentes o atribuyen propiedades falsas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: un NLE presenta incompatibilidades al importar ficheros de distintos orígenes. Señale la afirmación que mejor distingue el papel de MOV/MP4 frente a MXF en compatibilidad profesional:",
+          "options": [
+            "MOV/MP4 y MXF son intercambiables sin impacto en flujos profesionales porque todos los NLE gestionan cualquier encapsulado de forma idéntica.",
+            "MOV, MP4 y MXF son códecs que definen cómo se comprime la imagen y el audio; la elección del contenedor no influye en compatibilidad.",
+            "MXF es sólo un códec propietario y no incorpora metadatos profesionales; MOV/MP4 contienen siempre más metadatos que MXF.",
+            "MOV/MP4 son contenedores de propósito general frecuentemente usados en entornos de consumo y postproducción; MXF es un contenedor profesional con patrones operativos y metadatos estandarizados que facilita flujos broadcast y reconformado."
+          ],
+          "correctIndex": 3,
+          "explanation": "La distinción clave es contenedor vs códec: MOV/MP4 son contenedores de uso general; MXF está diseñado para entornos profesionales con operational patterns y metadatos estandarizados. Las otras opciones confunden contenedor con códec o exageran compatibilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Ante la necesidad de estimar potencia disipada en un equipo, indique la relación operativa correcta entre tensión (V), corriente (I), resistencia (R) y potencia (P):",
+          "options": [
+            "La corriente se calcula como I = P × R / V.",
+            "La potencia se calcula como P = V / R.",
+            "La potencia se puede calcular como P = V² / R (si se conoce tensión y resistencia).",
+            "La potencia en un circuito no guarda relación con la tensión y la corriente."
+          ],
+          "correctIndex": 2,
+          "explanation": "La relación operativa correcta derivada de P = V·I y I = V/R conduce a P = V² / R; las otras fórmulas son incorrectas o contradictorias con la ley de Ohm.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "077",
       "title": "Examen 077",
