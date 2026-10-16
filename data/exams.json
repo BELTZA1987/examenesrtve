@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-16",
   "exams": [
+    {
+      "id": "079",
+      "title": "Examen 079",
+      "date": "2026-10-16",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Según la Constitución y la delimitación jurisprudencial de libertades, ¿cuál de estas afirmaciones refleja con mayor precisión la relación entre la libertad de información y sus límites?",
+          "options": [
+            "La libertad de información es absoluta para los medios y solo está limitada por la existencia de una ley previa que prohíba la publicación de determinados hechos.",
+            "La libertad de información se aplica exclusivamente a informaciones de interés político; el resto de contenidos están regidos por normas administrativas que autorizan censura previa en caso de duda.",
+            "La libertad de información prevalece frente a cualquier derecho individual cuando la información se obtiene de forma legal por un periodista, sin posibilidad de indemnización posterior.",
+            "La libertad de información permite publicar hechos de interés público, pero está sujeta a límites constitucionales como la protección del honor, la intimidad y el derecho a la veracidad; las restricciones deben ser proporcionales y supervisadas judicialmente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta reconoce que la libertad de información tiene rango constitucional pero convive con otros derechos (honor, intimidad, veracidad); las limitaciones han de ser proporcionales y sujetas a control judicial. El distractor más cercano (opción 0) es incorrecto porque no existe libertad absoluta ni exige una ley previa para cualquier limitación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en un archivo con copias en LTO bajo LTFS, al intentar verificar un lote aparece fallos de lectura esporádicos y varios ficheros sin entradas en el catálogo. ¿Cuál es la causa operativa más probable?",
+          "options": [
+            "Incompatibilidad entre códecs de vídeo utilizados y el software de reproducción, que provoca que el catálogo muestre entradas vacías.",
+            "Fallo del checksum aplicado durante ingesta que indica que la copia a disco fue defectuosa y no guarda relación con la cinta LTO.",
+            "Corrupción de sistema de archivos LTFS por un cierre incorrecto de la cinta, que impide la lectura directa hasta realizar una verificación y remapeo en librería.",
+            "Exceso de fragmentación dentro del LTO que impide la recuperación de archivos individuales sin reescribir la cinta completa."
+          ],
+          "correctIndex": 2,
+          "explanation": "La situación apunta a un cierre incorrecto o a metadatos de LTFS dañados: LTFS expone ficheros pero requiere índice consistente y cierre correcto; la verificación y remape en librería suele resolverlo. El distractor más próximo (opción 1) confunde fallo de checksum en ingesta con corrupción del índice en cinta.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_ritmo",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que mejor distingue la compatibilidad entre ritmo interno y ritmo externo del montaje:",
+          "options": [
+            "Ritmo interno se refiere a la energía y movimientos internos del plano (gestos, acción) y condiciona la duración del plano; ritmo externo es la cadencia resultante del conjunto de planos y su relación estructural en la escena.",
+            "Ritmo interno depende de la duración del plano y del movimiento dentro de él; ritmo externo se determina exclusivamente por la duración absoluta de los planos en la secuencia y no considera el movimiento interno.",
+            "Ritmo externo solo aplica en montaje musical; en montaje narrativo solo existe ritmo interno que dicta todos los cortes.",
+            "Ritmo interno y externo son intercambiables: ambos se miden únicamente por la misma métrica de duración en segundos por plano."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta diferencia correctamente ritmo interno (dinámica dentro del plano que condiciona su duración) y ritmo externo (la cadencia global entre planos y la estructura narrativa). El distractor más cercano (opción 0) falla al negar la influencia del movimiento interno sobre el ritmo.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En una interfaz SDI, ¿qué afirmación describe con mayor precisión la ubicación y el método de transporte del vídeo, del audio embebido y de los datos auxiliares (ANC) dentro del flujo serial digital?",
+          "options": [
+            "El vídeo se envía en la banda base del flujo SDI, mientras que el audio embebido se transporta intercalando subtramas de audio dentro de líneas de la parte activa; los paquetes ANC sólo llevan timecode y subtítulos.",
+            "Vídeo, audio embebido y datos auxiliares se multiplexan dentro de las mismas muestras de píxel durante el área activa de cada línea; los metadatos se diferencian por bits de usuario insertados entre muestras de luminancia y crominancia.",
+            "La señal de imagen se transmite como las muestras de vídeo durante el área de imagen activa; el audio embebido y el resto de información auxiliar se encapsulan en paquetes ANC (con identificadores DID/SID y CRC) colocados en los intervalos de blanking (espacio ANC), fuera de las muestras activas.",
+            "El SDI transmite vídeo en su flujo principal; el audio embebido circula por canales AES/EBU independientes fuera del mismo cable SDI y los datos ANC requieren un segundo enlace SDI dedicado."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta explica que la imagen se transporta como muestras durante el área de vídeo activo y que el audio embebido y otros datos se llevan como paquetes ANC ubicados en los intervalos de blanking, identificados por DID/SID y protegidos por CRC. Es la descripción operativa estándar del transporte ANC en SDI. El distractor más próximo (opción 2) sugiere que el audio se intercalaría en la parte activa de la línea; esa afirmación es incorrecta porque el audio embebido se sitúa en el espacio de blanking (ANC), no dentro de las muestras activas de píxel. Las otras opciones mezclan conceptos erróneos sobre multiplexación en muestras activas o la necesidad de enlaces separados para audio/ANC.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al dimensionar un servidor de vídeo para reproducción concurrente, ¿qué magnitud determina con mayor precisión el número máximo de canales simultáneos sostenibles?",
+          "options": [
+            "El número total de discos físicos instalados, independientemente de su configuración RAID o del ancho de banda individual de cada disco.",
+            "La cantidad de memoria RAM del servidor, porque la RAM es el factor que limita directamente el número de streams simultáneos.",
+            "El caudal sostenido agregado de lectura del subsistema de almacenamiento y de la red de salida, comparado con el bitrate por canal y el margen operativo requerido.",
+            "La resolución de los archivos (p.ej. 4K vs HD) solamente; un sistema bien configurado siempre soporta el mismo número de canales por disco."
+          ],
+          "correctIndex": 2,
+          "explanation": "El factor decisivo es el throughput sostenido del almacenamiento y la red frente al bitrate por canal y el margen operativo; los discos y RAID interfieren, pero solos no determinan el máximo. El distractor más cercano (opción 0) omite el papel clave del ancho de banda agregado y la red.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_news",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a prioridades y prácticas habituales en la edición de noticias y su coordinación con redacción:",
+          "options": [
+            "Cuando el tiempo es muy limitado, sacrificar precisión por ritmo visual para ajustar la pieza al bloque de emisión es admisible si la redacción no dispone de más recursos.",
+            "Prioridad informativa y claridad en la exposición deben orientar la selección de locuciones y totales, preservando la veracidad de los hechos.",
+            "La coordinación con redacción exige confirmar datos esenciales antes de emisión y priorizar recursos que respalden la credibilidad (croquis, totales, fuentes).",
+            "Mantener un orden lógico y temporal en los recursos visuales facilita la comprensión y respeta la veracidad informativa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción marcada es la excepción porque la precisión informativa no puede sacrificarse por ritmo; la edición de noticias debe preservar veracidad incluso con limitaciones de tiempo. Los otros enunciados describen prácticas acordes con prioridades informativas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare y señale la afirmación que mejor expresa el elemento diferencial que convierte un accidente en 'in itinere':",
+          "options": [
+            "Que el accidente ocurra en cualquier desplazamiento que realice el trabajador dentro de la jornada laboral, aunque incluya desvíos personales no justificados.",
+            "Que el accidente suceda en el tránsito habitual y directo entre el domicilio y el centro de trabajo o entre el centro y el lugar de comida, sin desviaciones significativas por motivos personales.",
+            "Que cualquier accidente sufrido en transporte público, incluso en rutas distintas de la habitual por elección del trabajador, se califique automáticamente como in itinere.",
+            "Que la calificación in itinere depende únicamente de que el trabajador esté dentro del horario laboral, aunque el recorrido sea opuesto al habitual."
+          ],
+          "correctIndex": 1,
+          "explanation": "La respuesta correcta identifica el elemento clave: el desplazamiento habitual y directo entre domicilio y trabajo sin desviaciones significativas. Los distractores confunden con desviaciones personales o con horario sin relación al recorrido.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: respecto a la organización prevista por la Ley 17/2006, señale la afirmación que mejor describe la estructura básica y la asignación de funciones en RTVE:",
+          "options": [
+            "La Corporación se organiza con órganos de gobierno colegiado que definen políticas generales, y dispone de una dirección ejecutiva responsable de la gestión operativa y ejecución de las decisiones del órgano de gobierno.",
+            "La Ley impone que la figura del director general asuma simultáneamente funciones de creación de contenidos y control parlamentario directo sin separación de poderes internos.",
+            "La estructura normativa obliga a externalizar por completo la función ejecutiva a una empresa privada contratada por concurso público.",
+            "La Ley 17/2006 suprime cualquier órgano colegiado y concentra todas las decisiones en un único gerente elegido por la plantilla."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta describe la organización típica prevista: órganos de gobierno colegiado que marcan políticas y una dirección ejecutiva que gestiona la operativa. Los distractores proponen soluciones que no se ajustan a la previsión legal ni a la separación de funciones.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Para un flujo de posproducción que exige edición y etalonaje con 10‑bit y alta compatibilidad con estaciones Avid y DaVinci, cuál de estos códecs intermedios es la opción más adecuada:",
+          "options": [
+            "ProRes 422 HQ o DNxHR (perfil de 10‑bit) como codecs intraframe intermediarios; en entornos Avid se prefiere DNxHR, en plataformas Apple ProRes.",
+            "H.264/AVC a alta tasa de bits.",
+            "MP3 con encapsulado WAV para audio y MP4 para vídeo.",
+            "HEVC/H.265 en modo de larga GOP."
+          ],
+          "correctIndex": 0,
+          "explanation": "La respuesta correcta indica que ProRes 422 HQ o DNxHR (perfiles de 10 bits) son códecs intermedios adecuados; DNxHR es la opción habitual en Avid y ProRes en entornos Apple/DaVinci. Los distractores (H.264, HEVC, MP4/MP3) son formatos con compresión interdependiente inadecuada para edición/etalonaje profesional.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto al flujo de 'growing files' durante un directo:",
+          "options": [
+            "Mientras el fichero sigue creciendo, su checksum final es válido y no cambia, por lo que las copias pueden verificarse sin esperar al cierre del archivo.",
+            "Los ficheros en crecimiento pueden ser leídos de inmediato por algunos procesos, pero hasta su cierre pueden carecer de metadatos finales y no deben considerarse totalmente verificables ni definitivos.",
+            "Un growing file impide cualquier lectura hasta que el sistema cierre el descriptor; no es posible acceder a fotogramas parciales.",
+            "Los sistemas de edición tratan un growing file exactamente igual que un fichero finalizado, sin limitaciones operativas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta explica que los ficheros en crecimiento pueden estar disponibles para lectura parcial pero carecen de metadatos y checksum final hasta su cierre; por tanto no se consideran definitivos. Los distractores niegan las limitaciones operativas reales de los growing files.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Al adaptar material progresivo 25p para integrarlo en una secuencia a 29,97 fps, ¿qué diferencia perceptual principal distingue el uso de pulldown/duplicación de fotogramas frente a una conversión por interpolación temporal (motion‑compensated)?",
+          "options": [
+            "Cambiar la velocidad del material 25p hasta 29,97 fps (time‑stretch) es perceptualmente equivalente a cualquiera de las otras técnicas si se aplica corrección de pitch al audio; no provoca judder ni artefactos de interpolación.",
+            "La interpolación temporal siempre produce menos artefactos visibles que la duplicación, ya que recrea exactamente la información faltante sin introducir errores de movimiento o desdoblamientos cromáticos.",
+            "La técnica de pulldown/duplicación no genera fotogramas nuevos y produce una cadencia desigual en la reproducción que suele manifestarse como judder rítmico en movimientos suaves; la interpolación temporal genera fotogramas intermedios y ofrece movimiento más continuo a costa de posibles artefactos de interpolación (ghosting/warping) en movimientos complejos.",
+            "La duplicación de fotogramas reduce exclusivamente la resolución espacial original y no afecta a la percepción del movimiento; la interpolación preserva tanto la resolución como la temporalidad original sin introducir artefactos. "
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es correcta: el pulldown o la simple duplicación/repetición de fotogramas no crea nuevos instantes temporales, provoca una cadencia de presentación irregular que se percibe como judder en movimientos continuos. La interpolación temporal (motion‑compensated) sintetiza fotogramas intermedios para suavizar el movimiento, pero puede generar artefactos de interpolación (ghosting, deformaciones en oclusiones) en escenas con movimiento complejo. Las otras opciones son incorrectas: la 2 sobrevalora la interpolación y omite sus artefactos; la 3 confunde cambio de velocidad (que altera duración y exige tratamiento de audio) con conversión de cadencia; la 4 es falsa porque la duplicación afecta a la fluidez temporal (no sólo a la resolución) y la interpolación no garantiza ausencia de artefactos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un entorno Avid NEXIS con múltiples editores, ¿qué práctica operativa mantiene el rendimiento concurrente sin degradación?",
+          "options": [
+            "Limitar el número de bins por usuario, ya que el número de bins es el factor que más afecta al rendimiento del NEXIS.",
+            "Incrementar únicamente la RAM de los clientes, ya que la memoria local evita cualquier limitación de red o almacenamiento.",
+            "Configurar cada estación para que realice transcodificación en el servidor en lugar de en local, lo que reduce la carga de red al mínimo.",
+            "Garantizar reservas de ancho de banda por cliente y dimensionar el throughput sostenido del arreglo de almacenamiento y la red; evitar que muchos usuarios accedan a datos no cacheables simultáneamente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La medida operativa correcta es dimensionar throughput del storage y la red y usar reservas por cliente; la RAM ayuda localmente pero no sustituye al ancho de banda global. Los distractores culpan a RAM, bins o transcodificación sin atacar la causa principal.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_incendio",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En un incendio originado en un equipo eléctrico, ¿qué tipo de extintor es el más idóneo como primera opción para intervenir con seguridad eléctrica?",
+          "options": [
+            "Extintor de agua a presión.",
+            "Extintor de dióxido de carbono (CO2).",
+            "Extintor de espuma concentrada para fuegos A.",
+            "Extintor de agua nebulizada mezclada con sal."
+          ],
+          "correctIndex": 1,
+          "explanation": "El CO2 es adecuado para fuegos en equipos eléctricos porque no es conductor y deja escasos residuos; los extintores con agua o espuma pueden ser conductores o perjudiciales para equipos eléctricos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico técnico: al activar un legalizer/gamut en la salida, se observan desaturaciones y ligeros desplazamientos de matiz en colores saturados. ¿Cuál es la explicación operativa más precisa?",
+          "options": [
+            "El legalizer aumenta artificialmente la saturación para compensar niveles legales bajos, por lo que los colores aparecen más vivos y con shifts de matiz.",
+            "El limitador reduce la amplitud del vector cromático (saturación) para situarlo dentro del gamut legal; esto puede provocar pérdida de saturación o cambio de matiz en tonos limítrofes, siendo necesario corregir color antes del limitador.",
+            "El dispositivo convierte la señal a espacio de color distinto y por ello crea desplazamientos de matiz irreversibles en todas las gamas tonales.",
+            "El limitador actúa únicamente sobre luminancia y no modifica la crominancia; las variaciones observadas proceden de un fallo de calibración del monitor."
+          ],
+          "correctIndex": 1,
+          "explanation": "El legalizer limita vectores de crominancia para cumplir gamut legal; en colores muy saturados puede reducir saturación o desplazar matiz. La corrección previa al legalizer es la medida adecuada. Los distractores atribuyen efectos inversos o niegan la acción sobre crominancia.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: al entregar un paquete de distribución audiovisual para cumplir la Ley 13/2022, ¿qué elemento concreto debe incluirse para facilitar la accesibilidad?",
+          "options": [
+            "Una cláusula contractual que transfiera la obligación de accesibilidad al receptor sin incluir pistas accesibles en el paquete de entrega.",
+            "Solo un documento PDF que describa de forma verbal las medidas de accesibilidad implementadas, sin archivos asociados.",
+            "Un archivo de vídeo sin pistas adicionales porque la plataforma receptora generará automáticamente subtítulos y audiodescripción.",
+            "Ficheros separados o pistas accesibles con subtítulos y audiodescripción y metadatos que indiquen la presencia y formatos de dichas pistas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley exige entregables accesibles; por tanto hay que incluir pistas o ficheros de subtítulos y audiodescripción y metadatos que identifiquen esos recursos. Las otras opciones delegan o omiten la entrega de elementos accesibles.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_red_ip",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare: cuál de estas afirmaciones describe mejor la consecuencia de configurar una puerta de enlace fuera de la subred local?",
+          "options": [
+            "El host continuará accediendo a redes remotas pero no podrá comunicarse con hosts en la misma subred.",
+            "La máscara de subred se ajustará automáticamente para incluir la puerta de enlace aunque esté en distinta subred, solucionando el problema sin intervención.",
+            "La puerta de enlace en otra subred actúa como un proxy y redirige automáticamente el tráfico local hacia la red correcta.",
+            "El host podrá comunicarse sin problema con hosts locales, pero no podrá alcanzar redes externas porque la puerta de enlace está en otra subred sin ruta definida."
+          ],
+          "correctIndex": 3,
+          "explanation": "Si la gateway está en otra subred, el host podrá comunicarse con hosts locales pero no enviará tráfico a redes externas porque no puede alcanzar la gateway sin ruta; las otras opciones describen comportamientos incorrectos o automáticos inexistentes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_offline_online",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Al reconformar desde montaje proxy a originales, ¿qué información en la lista de decisiones (EDL/OC/AAF) es imprescindible para que el relink automático funcione correctamente?",
+          "options": [
+            "Solo los nombres de las pistas del NLE y la duración total del proyecto; los timecodes se recalculan automáticamente.",
+            "Referencias temporales (timecode in/out) sobre los originales y un identificador persistente de archivo o UMID que permita localizar la esencia en almacenamiento.",
+            "Únicamente los marcadores de bins y la estructura de carpetas del editor; el relink se basa en rutas relativas sin timecode.",
+            "La lista debe contener las miniaturas de vídeo para que el sistema compare visualmente y seleccione los originales correctos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Para reconformado automático se requieren timecodes precisos y un identificador persistente (filename, UMID u otro) que permita localizar y emparejar los originales. Los distractores proponen información insuficiente o procedimientos no operativos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a buenas prácticas en la gestión de soportes de estado sólido después de la ingesta:",
+          "options": [
+            "Realizar copia completa y verificación checksum antes de borrar el soporte de cámara.",
+            "Etiquetar y catalogar metadatos técnicos y descriptivos antes de reutilizar el medio.",
+            "Mantener un registro de ciclos de escritura y evitar operaciones innecesarias que incrementen el desgaste de las celdas.",
+            "Formatear completamente el SSD inmediatamente y con frecuencia para optimizar su rendimiento a largo plazo tras cada ingesta."
+          ],
+          "correctIndex": 3,
+          "explanation": "Formatear frecuentemente un SSD tras la ingesta incrementa el desgaste y no aporta beneficio operativo; es la excepción. Las otras opciones son prácticas recomendadas: copia y verificación, catalogación y control de ciclos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para diseñar proxies que faciliten edición en estaciones con CPU limitada y relink fiable, ¿qué combinación resulta más adecuada?",
+          "options": [
+            "H.264 540p a bajo bitrate (CBR), porque minimiza tamaño aunque sea Long‑GOP.",
+            "Resolución original con HEVC para máxima compresión y mejor scrubbing en CPU limitada.",
+            "Códec intraframe (p.ej. ProRes Proxy o DNxHR LB) a resolución reducida (p.ej. 1024×576) y bitrate moderado, preservando frames completos y facilidades de relink.",
+            "GIF animado de baja resolución para visualizar rápidamente el contenido y luego relinkear manualmente."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un códec intraframe de menor resolución preserva acceso a frames completos (mejor scrubbing y ediciones) y facilita relink automático; H.264/HEVC Long‑GOP suelen penalizar scrubbing en CPU limitadas. Los distractores propuestas son inadecuadas o poco prácticas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: ante una estación donde la reproducción en timeline es fluida pero los efectos GPU‑acelerados tardan en renderizarse y el export de master es muy lento, ¿qué intervención prioritaria corresponde a cada componente?",
+          "options": [
+            "Priorizar GPU para acelerar efectos en tiempo real y renders GPU‑accelerated; aumentar CPU cuando la exportación utiliza múltiples hilos de procesado para encode y aumentar RAM si faltan recursos de cache y manejo de frames grandes.",
+            "Aumentar CPU para mejorar reproducción; GPU para codificación; más RAM no influye en efectos ni en export.",
+            "Sustituir el disco por uno más pequeño y rápido; esto resolverá tanto efectos como export porque el I/O es el único cuello de botella.",
+            "Reducir la resolución del proyecto para que ni CPU ni GPU ni RAM sean relevantes; así se evita cualquier mejora de hardware."
+          ],
+          "correctIndex": 0,
+          "explanation": "La respuesta correcta asigna roles: GPU mejora efectos y renders GPU‑accelerated; CPU acelera procesos multihilo como codificación y export; RAM ayuda a cache y manejo de frames grandes. Los distractores ignoran la correspondencia real entre componente y función.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "078",
       "title": "Examen 078",
