@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-17",
   "exams": [
+    {
+      "id": "080",
+      "title": "Examen 080",
+      "date": "2026-10-17",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a los principios generales del modelo de financiación previsto por la Ley 8/2009:",
+          "options": [
+            "Se prioriza una financiación estable procedente de asignación presupuestaria pública que garantice continuidad de servicio.",
+            "Se basa fundamentalmente en la libre generación de ingresos por publicidad sin limitación, para asegurar independencia presupuestaria.",
+            "El modelo incorpora mecanismos de transparencia y rendición de cuentas sobre la gestión económica de la Corporación.",
+            "Se busca reducir la dependencia de ingresos comerciales para proteger la independencia editorial."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 3 es la excepción: el modelo no se basa en una dependencia irrestricta de la publicidad. Las demás opciones describen principios compatibles (financiación pública estable y transparencia, y la intención de limitar la dependencia comercial para preservar independencia). La diferencia decisiva es que la 3 propone la ausencia de límites a la publicidad, lo que contradice el principio de reducir dependencia comercial.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe correctamente los requisitos mínimos verificables de la política 3‑2‑1 de copias de seguridad aplicable a material audiovisual.",
+          "options": [
+            "Tener tres copias en discos locales redundantes (por ejemplo, un servidor RAID 6 y dos discos externos clonados) con comprobación por snapshots diarios; la redundancia local y las copias clonadas cumplen 3‑2‑1.",
+            "Usar replicación en tiempo real entre dos servidores del mismo centro de datos y almacenar una única cinta de backup en la misma sala; la replicación remota entre servidores dentro del mismo CPD y la cinta local proporcionan las tres copias necesarias.",
+            "Conservar como mínimo tres copias independientes de los datos; al menos dos copias en soportes o tecnologías diferentes (por ejemplo, disco y cinta) y al menos una copia almacenada fuera del emplazamiento primario (depósito externo o servicio cloud).",
+            "Mantener el original en producción, un snapshot diario en el mismo almacenamiento y una réplica asincrónica dentro de la misma infraestructura física; los snapshots y réplicas dentro del mismo dominio físico son suficientes si se mantienen por 90 días."
+          ],
+          "correctIndex": 2,
+          "explanation": "La política 3‑2‑1 exige: (1) tres copias del dato; (2) dos copias en soportes o tecnologías distintas; y (3) al menos una copia fuera del emplazamiento primario. La opción correcta especifica las tres condiciones y permite verificación (copias independientes en distintos medios y ubicación offsite). El distractor más próximo (opción 0) ofrece tres copias pero todas locales y dentro del mismo dominio de fallo —carece de copia fuera de sede y puede compartir vulnerabilidades físicas—; la opción 2 falla por no disponer de copia fuera del emplazamiento primario; la opción 3 es incorrecta porque snapshots y réplicas dentro del mismo dominio físico no garantizan independencia de soporte ni protección frente a desastres en el emplazamiento.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estos enunciados y señale el que mejor distingue inversión de polaridad frente a desfase temporal en señales de audio:",
+          "options": [
+            "El desfase temporal invierte la polaridad de la señal a 180° de forma global, mientras que la inversión de polaridad solo afecta a determinadas bandas.",
+            "La inversión de polaridad introduce una demora de varios milisegundos que solo afecta a altas frecuencias; el desfase altera la fase uniforme en todas las bandas.",
+            "Ambas son equivalentes: tanto inversión de polaridad como desfase temporal producen siempre el mismo efecto de cancelación completa.",
+            "La inversión de polaridad invierte el signo de la señal en todas las frecuencias; al sumar con la original puede producir cancelación completa de una fuente centrada; el desfase temporal (delay) genera comb filtering dependiente de la frecuencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: la inversión de polaridad (sign inversion) es uniforme en frecuencia y puede causar cancelación completa cuando se suma con la fuente original; un desfase temporal introduce un retardo que produce comb filtering (frecuencia‑dependiente). Los distractores confunden los efectos: la 2 y la 4 atribuyen características incorrectas, y la 3 es falsa porque los efectos son distintos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_relink",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento para resolver enlaces incorrectos (relink) en un proyecto de edición cuando los ficheros se han movido de ubicación:",
+          "options": [
+            "Reconstruir enlaces basándose en nombre de fichero únicamente y actualizar rutas en el proyecto.",
+            "Realizar relink usando marca temporal de inicio (timecode de origen) + duración y metadatos de identificación (reel/take/ID) para localizar la misma posición en la esencia original.",
+            "Volver a transcodificar todos los proxies y reemplazarlos por nuevos archivos con nombres iguales a los originales.",
+            "Eliminar las entradas offline y volver a importar los ficheros actuales sin preservar metadata previa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 2 es el procedimiento fiable: relink mediante timecode de inicio combinado con duración y metadatos de identificación permite localizar la misma posición en la esencia original aun cuando cambie la ruta o el nombre. Los demás métodos (basarse solo en nombre, reimportar sin preservar metadatos o transcodificar sin referencia) no garantizan coincidencia exacta ni trazabilidad.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico ante un cable XLR largo que presenta alta sensibilidad a interferencias y pérdida de rechazo de ruido de fondo:",
+          "options": [
+            "La longitud del cable excede el límite físico del conector XLR y por eso no funciona la línea balanceada.",
+            "El previo de micrófono está mal calibrado y produce saturación que se interpreta como ruido externo.",
+            "La inversión de polaridad entre canales provoca pérdida de rechazo y aumento de ruido aleatorio.",
+            "La pantalla (shield) está interrumpida o el conductor 'cold' (normalmente pin 3) está puesto a masa, perdiendo la capacidad de rechazo diferencial."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: si la pantalla está interrumpida o un conductor está puesto a masa se pierde la diferencia entre conductores y, por tanto, la rechazo de modo común. La 2 describe un problema de ganancia (no de rechazo diferencial); la 3 confunde inversión de polaridad con pérdida de CMRR; la 4 es imprecisa: la longitud por sí sola no anula la conexión balanceada si está correctamente cableada.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Ante la sospecha de que la entrada X no está realmente cruzada a la salida Y de una matriz, ¿qué procedimiento operativo es el más adecuado para localizar y verificar el crosspoint?:",
+          "options": [
+            "Ajustar ganancia y ecualización en la entrada X hasta que la señal sea audible en la salida Y.",
+            "Limpiar todas las conexiones físicas y esperar a que la matriz resuelva automáticamente inconsistencias por sí sola.",
+            "Enviar por la entrada sospechosa una señal de prueba identificable (pulsos o barras con audio tono identificable), observar en la salida Y la presencia del patrón y comparar con la tabla de rutas y los registros del controlador de la matriz.",
+            "Reiniciar la matriz para que el sistema vuelva a su configuración por defecto y comprobar si el problema persiste."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es la correcta: introducir una señal de prueba identificable y comparar la salida con la tabla de rutas y logs permite localizar y verificar el crosspoint de forma trazable. Reiniciar o ajustar ganancia no localiza el crosspoint ni deja registro operativo; reiniciar puede alterar estado sin diagnosticar la causa.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_umid",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo para garantizar identificación persistente del material audiovisual mediante UMID a lo largo de transcoding y copias:",
+          "options": [
+            "Embedar el UMID en los metadatos del contenedor y asegurar que los procesos de transcodificación preservan o copian ese campo en los ficheros derivados, registrando además el UMID en el catálogo central.",
+            "Confiar solo en nombres de fichero y rutas para identificar material en procesos de transcoding y archivo.",
+            "Recalcular un nuevo UMID para cada derivado y eliminar el antiguo para evitar confusiones.",
+            "Usar únicamente una tabla externa que relacione checksums con nombres de fichero sin ninguna marca embebida."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 es correcta: el UMID debe embeberse en los metadatos del contenedor y mantenerse en las derivaciones; además conviene registrar el UMID en el catálogo para trazabilidad. Las otras opciones (fiar en nombres, regenerar UMID o depender solo de una tabla externa) no garantizan persistencia ni rastreabilidad técnica across transcodes.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las medidas previstas por el Plan de Igualdad y la Guía de Igualdad para prevenir representaciones sexistas y el acoso:",
+          "options": [
+            "Implantar protocolos de actuación y canales confidenciales de denuncia ante situaciones de acoso.",
+            "Formación obligatoria en lenguaje inclusivo y sensibilización para el personal de contenidos y realización.",
+            "Realizar auditorías periódicas de contenidos y revisar guiones para evitar estereotipos sexistas.",
+            "Prohibición general de emitir cualquier contenido que aborde roles de género con puntos de vista críticos o conflictivos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 3 es la excepción: el Plan busca prevenir representaciones sexistas y promover la igualdad, pero no impone una prohibición general de contenidos críticos sobre roles de género (eso sería censura). Las demás opciones son medidas habituales del plan: protocolos de denuncia, formación y auditorías para evitar estereotipos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique la medida preventiva más adecuada para reducir el riesgo de trastornos musculoesqueléticos en un operario que trabaja prolongadamente con teclado, ratón y tableta:",
+          "options": [
+            "Recomendar el uso exclusivo de tabletas y evitar teclado y ratón para eliminar riesgos.",
+            "Incrementar la sensibilidad del ratón para reducir movimientos y obligar al uso de guantes de apoyo permanentemente.",
+            "Ajustar la altura de la silla y mesa para que los antebrazos queden aproximadamente paralelos al suelo, disponer apoyo lumbar y promover descansos y micro‑pausas regulares.",
+            "Impedir el uso de reposamuñecas y mantener los antebrazos elevados para mejorar la circulación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es la correcta: postura con antebrazos paralelos, apoyo lumbar y pausas periódicas son medidas preventivas reconocidas. Las otras opciones son erróneas o contraproducentes (guantes no son solución, eliminar teclado no siempre es viable, impedir reposamuñecas o mantener antebrazos elevados aumenta riesgo). ",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Cuál de estas estrategias es la más adecuada para comprimir tiempo narrativo mediante una elipsis sin comprometer la comprensión:",
+          "options": [
+            "Corte a un plano que muestre una consecuencia clara y contextual (por ejemplo, sujeto rehaciendo acción en otro lugar) manteniendo continuidad causal visual o sonora.",
+            "Eliminar todos los planos intermedios sin aportar ninguna señal contextual y dejar al espectador deducir lo ocurrido.",
+            "Usar únicamente un rótulo textual indicando el tiempo transcurrido, sin apoyo visual.",
+            "Acelerar los planos (speed ramp) sin señal visual de transición ni plano de establecimiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 es correcta: una elipsis eficaz combina un corte con una imagen que sugiere la consecuencia o nueva situación, preservando la comprensión. Los distractores carecen de contexto (2 y 4) o dependen exclusivamente de texto (3), que puede ser menos eficaz narrativamente.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_matchframe",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estas afirmaciones sobre los límites o variantes del comando Match Frame en un NLE:",
+          "options": [
+            "Match Frame puede localizar el fotograma de origen siempre que el material fuente conserve metadata de timecode y referencia única; si la esencia fue consolidada sin conservar el timecode original, Match Frame puede no encontrar coincidencia exacta.",
+            "Match Frame recrea automáticamente efectos y correcciones aplicadas en la timeline sobre el clip fuente.",
+            "Match Frame funciona independientemente de que el clip original haya sido renombrado o movido sin conservar metadatos de timecode.",
+            "Match Frame genera una nueva copia transcodificada del fotograma buscado si no existe el original."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 es correcta: Match Frame depende de metadata (timecode/referencia) en la esencia original; si esa información se pierde durante consolidación/transcode, el comando puede fallar. Las otras opciones son incorrectas: no aplica efectos automáticamente a la fuente, no funciona sin metadatos y no genera copias si el original no está disponible.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_lut_log",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En qué caso conviene aplicar una LUT en la cadena de visualización (monitor) y en qué caso debe aplicarse como corrección creativa en el master:",
+          "options": [
+            "No usar LUTs en absoluto: convertir log a display solo con curvas manuales garantiza uniformidad.",
+            "Aplicar la misma LUT tanto en monitor como en master siempre, para asegurar que lo visto y el master sean idénticos en todos los sistemas.",
+            "Usar LUT de visualización en monitores para previsualizar look sin modificar archivos maestros; aplicar LUT creativa durante etalonaje y bakearla en el master cuando la intención artística deba fijarse.",
+            "Aplicar LUTs de visualización directamente al archivo maestro porque son reversibles y no afectan a la integridad del material."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es la correcta: una LUT de visualización sirve para previsualizar sin alterar el archivo; la LUT creativa se aplica durante etalonaje y se puede bakear en el master si se decide fijar el aspecto. La 2 asume idéntica aplicación siempre, lo cual no es operativo; la 3 niega utilidad práctica de LUTs y la 4 es falsa: bakear una LUT modifica el master y no siempre es reversible.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Durante visionado y selección en un flujo XDCAM, cuál es la relación y uso correcto del proxy respecto a la esencia de alta resolución:",
+          "options": [
+            "El proxy contiene metadatos distintos e incompatibles que impiden cualquier relink a la esencia original.",
+            "El proxy sustituye permanentemente a la esencia alta y se usa directamente para emisión final.",
+            "El proxy es una representación de baja resolución para navegación y selección; las decisiones de selección se aplican luego sobre la esencia alta mediante relink basándose en metadatos y timecode.",
+            "El proxy es idéntico en bit‑exact al original pero con otro nombre de fichero."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es correcta: el proxy se usa para browsing/selección y luego las decisiones se relinkean a la esencia alta usando metadatos/timecode. Las otras opciones son incorrectas: el proxy no sustituye al master para emisión final, ni impide relink por diseño, ni es bit‑exacto del original.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Cuál es el procedimiento operativo adecuado y su límite al usar checksums para verificar integridad antes y después de una operación sobre ficheros:",
+          "options": [
+            "Recalcular checksum en destino y sobrescribir el original con el nuevo valor sin conservar el anterior, para mantener consistencia.",
+            "Usar checksum como sustituto de control manual de calidad audiovisual, porque si coinciden los bytes no es necesario comprobar reproducción.",
+            "Confiar en la comparación de tamaños de fichero en lugar de checksum para asegurar integridad, porque es más rápido y suficiente.",
+            "Calcular checksum antes de la copia, verificar checksum tras la copia y registrar ambos; limitación: un checksum verifica igualdad de bytes pero no garantiza que el archivo sea reproducible o que la estructura lógica interna sea correcta."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: procedimiento estándar es comparar checksums antes y después y registrar los valores; su límite es que confirma igualdad de bytes pero no la reproductibilidad o integridad lógica del contenedor. Las otras opciones son malas prácticas: checksum no sustituye a QC manual, tamaño no es suficiente y sobrescribir el valor original elimina trazabilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Respecto al III Convenio Colectivo, cuál de estas afirmaciones describe con mayor precisión su regulación sobre jornada, descansos y turnicidad:",
+          "options": [
+            "Regula únicamente el salario y no aborda jornada ni descansos.",
+            "Establece normas sobre duración máxima de la jornada, descansos entre jornadas y condiciones específicas para trabajo a turnos incluyendo compensaciones y adaptaciones.",
+            "Prohíbe el trabajo a turnos en la Corporación RTVE.",
+            "Sustituye la normativa laboral estatal y elimina derechos básicos de descanso."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es correcta: el convenio regula jornada, descansos y condiciones de trabajo a turnos, con medidas específicas. Las otras afirmaciones son incorrectas: el convenio no se limita solo a salarios, no prohíbe turnos y no anula la normativa laboral básica.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Un gráfico con fondo transparente coloca un borde blanquecino sobre el fondo cuando se compone; diagnóstico:",
+          "options": [
+            "La tarjeta gráfica no soporta alpha y sustituye transparencia por blanco por defecto.",
+            "El monitor está calibrado mal y genera halos por saturación de la señal RGB en ganancias altas.",
+            "La secuencia tiene el clip desplazado un fotograma adelante, produciendo franja blanca por superposición temporal.",
+            "El archivo tiene canal alfa 'straight' pero se está interpretando como 'premultiplied', lo que provoca halos claros alrededor de los bordes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: un halo blanquecino indica que un archivo con alpha 'straight' se ha tratado como 'premult' (o viceversa), produciendo incorrecta combinación de canales; es la causa típica de halos claros. Las otras opciones no explican por qué aparecen específicamente halos de borde por interpretación del canal alpha.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_intelectual",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Cuál de estas afirmaciones define con mayor precisión el 'montaje intelectual' como recurso creativo:",
+          "options": [
+            "Es exclusivamente la técnica de empalmar planos para mantener continuidad espacial.",
+            "Consiste en la yuxtaposición de imágenes sin relación literal para generar una idea, asociación o nuevo significado en el espectador.",
+            "Es la aplicación de efectos de sonido para disimular cortes visuales.",
+            "Es la técnica que prioriza el raccord de ojos por encima de cualquier otro criterio."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es correcta: el montaje intelectual crea significado por asociación entre planos que no tienen necesariamente relación literal. Las otras opciones describen técnicas concretas de continuidad o de audio, no la creación de significado por yuxtaposición.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la distinción operativa entre ventanas de loudness (integrated, short‑term, momentary):",
+          "options": [
+            "'Momentary' mide en ventanas muy breves (≈400 ms) y sirve para evaluar fluctuaciones muy rápidas.",
+            "'Short‑term' se aplica únicamente para ajustar el objetivo de emisión estándar de −23 LUFS.",
+            "'Integrated' proporciona la medida acumulada durante toda la duración del material.",
+            "'Short‑term' evalúa loudness en ventanas intermedias (≈3 s) para valorar secciones cortas del programa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 4 es la excepción: el uso de 'short‑term' no está limitado a ajustar un único objetivo de emisión; sirve para evaluar niveles en secciones breves. Las demás opciones describen correctamente las ventanas momentary (~400 ms), short‑term (~3 s) e integrated (acumulada).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Para publicar en EVS/IPDirector una playlist destinada a emisión que incluya cortes y transiciones con precisión, qué procedimiento operativo garantiza con mayor seguridad que el playout respetará orden y transiciones:",
+          "options": [
+            "Publicar la playlist con las instrucciones de transición (metadata de corte y duración) y verificar en el servidor de playout que interpreta dichas instrucciones antes de confirmar la publicación.",
+            "Confiar en que el servidor de destino ajustará automáticamente cualquier transición aunque la playlist no incluya metadatos de transición.",
+            "Exportar solo un listado de clips sin transiciones y pedir al operador que ejecute las transiciones en directo.",
+            "Renderizar localmente la playlist completa en un único archivo y publicar solo ese archivo, evitando playlist con transiciones."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 es correcta: publicar la playlist con metadatos de transición y verificar que el servidor de playout interpreta esos metadatos garantiza que la reproducción respete orden y tiempos. Renderizar todo en un solo archivo (opción 4) es una alternativa práctica pero no siempre viable para edición y handles; las otras opciones dependen de intervención manual o suponen que el servidor corregirá carencias sin control.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Acción que debe realizar el empleador en materia de prevención de riesgos para cumplir obligaciones de información, formación y cooperación:",
+          "options": [
+            "Proporcionar formación específica al puesto, informar sobre riesgos identificados, facilitar medios adecuados y promover la cooperación con los trabajadores en su uso correcto.",
+            "Anunciar las obligaciones generales en el tablón de anuncios una vez al año sin acciones formativas prácticas.",
+            "Delegar totalmente la formación en el trabajador sin recursos ni supervisión.",
+            "Exigir que el trabajador busque por su cuenta material formativo fuera de la empresa y presente certificados externos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 es correcta: el empleador debe informar, formar específicamente, facilitar medios adecuados y fomentar cooperación; las otras opciones incumplen obligaciones al delegar o limitar la acción a comunicación pasiva.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "079",
       "title": "Examen 079",
