@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-17",
+  "updatedAt": "2026-10-18",
   "exams": [
+    {
+      "id": "081",
+      "title": "Examen 081",
+      "date": "2026-10-18",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la afirmación que describe con mayor precisión una obligación concreta derivada de los principios de la acción preventiva de la Ley 31/1995:",
+          "options": [
+            "Realizar una evaluación de riesgos y planificar medidas preventivas proporcionadas a los riesgos identificados.",
+            "Contratar un seguro que cubra todas las contingencias laborales derivadas de la actividad.",
+            "Exigir al trabajador el uso de dispositivos de protección individual sin previo análisis de riesgos.",
+            "Limitar la acción preventiva a informar a los trabajadores mediante fichas generales sobre seguridad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley exige evaluar riesgos y planificar medidas proporcionales; las otras opciones son parciales o insuficientes: contratar un seguro no sustituye la evaluación, imponer equipos sin análisis no es planificación preventiva, y solo informar sin evaluación ni medidas es insuficiente.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que reúne correctamente distancia, altura, orientación, iluminación y control de reflejos para un puesto de trabajo con pantalla de visualización:",
+          "options": [
+            "Pantalla situada a 50–70 cm del usuario, borde superior ligeramente por debajo del nivel de los ojos, eje de visión perpendicular a ventanas o fuentes de luz y regulación de iluminación ambiental para minimizar reflejos; usar filtros antirreflejos cuando proceda.",
+            "Pantalla lo más cerca posible para facilitar lectura, borde superior a la altura de la barbilla, orientación frontal sin considerar fuentes luminosas y eliminación total de luz ambiental para evitar contrastes.",
+            "Colocar la pantalla a más de 1 m para reducir fatiga, elevar el borde superior por encima de la frente para aumentar campo visual, orientar hacia ventanas para aprovechar luz natural y aumentar brillo del monitor.",
+            "Disponer la pantalla a la altura que el trabajador prefiera, con orientación variable y no intervenir en el control de iluminación; si hay reflejos, aumentar el contraste del monitor."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta integra distancia de referencia (brazo/50–70 cm), borde superior ligeramente bajo para ángulo de visión, evitar orientación que produzca reflejos y controlar iluminación; las otras opciones proponen medidas contraproducentes o insuficientes para minimizar reflejos y posturas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Elija la afirmación que mejor explica la diferencia temporal y el artefacto típico asociado al entrelazado frente al progresivo:",
+          "options": [
+            "El progresivo divide cada fotograma en dos campos temporales para mejorar compatibilidad con pantallas antiguas; por tanto, es el progresivo el que produce combing.",
+            "El entrelazado captura la imagen completa en un instante y ofrece mayor calidad en movimiento; el progresivo intercala campos temporales y produce combing.",
+            "Ambos sistemas actualizan la imagen frame a frame en el mismo instante; la diferencia principal es únicamente de nomenclatura y no genera artefactos temporales.",
+            "El entrelazado transmite campos tomados en instantes distintos (semifotogramas) y suele provocar efectos de 'peine' o combing en objetos en movimiento; el progresivo captura la imagen completa en un solo instante y evita ese artefacto."
+          ],
+          "correctIndex": 3,
+          "explanation": "Entre­lazado entrega campos separados en el tiempo que pueden producir 'peine' en movimiento; el progresivo genera fotogramas completos en un único instante y evita ese artefacto. Las otras opciones invierten o niegan esa dependencia temporal.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor vincula elección de transición (corte, fundido, encadenado) con su función narrativa y significado temporal:",
+          "options": [
+            "El fundido mantiene inmediatez y continuidad espacial; el corte siempre indica salto temporal; el encadenado carece de valor temporal y es puramente decorativo.",
+            "El corte preserva continuidad temporal e inmediación dramática; el fundido (a negro o a blanco) suele señalar cierre, pausa o salto temporal; el encadenado (disolve) sugiere solapamiento o relación temporal/afectiva entre planos.",
+            "El encadenado se utiliza únicamente para indicar flashbacks; el corte implica siempre una discontinuidad narrativa irreparable; el fundido se emplea solo en transiciones de noticias.",
+            "Todas las transiciones tienen el mismo valor narrativo y se eligen solo por motivos estéticos sin implicación temporal."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta asigna funciones narrativas habituales: corte para inmediatez, fundido para cierre o salto temporal y encadenado para solapamiento sugestivo. Los distractores atribuyen usos incorrectos o absolutos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la afirmación que describe mejor una medida preventiva adecuada para reducir riesgos durante una misión o desplazamiento profesional:",
+          "options": [
+            "Exigir al trabajador que firme una exención de responsabilidad respecto a riesgos durante la misión para evitar acciones preventivas adicionales.",
+            "Limitar la prevención a la entrega de un justificante administrativo que acredite la misión y dejar la gestión de riesgos al trabajador en destino.",
+            "Evaluar los riesgos del lugar de destino, proporcionar información específica, planificar medios de transporte y equipos necesarios y formación sobre tareas concretas que se realizarán fuera del centro habitual.",
+            "Programar la misión sin inspección previa y resolver incidencias según vayan surgiendo, por ser actos puntuales no sujetos a planificación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La medida correcta es evaluar el lugar, informar y formar, y facilitar medios y equipos adecuados antes de la misión. Las otras opciones delegan la prevención al trabajador, eluden evaluación o evitan planificación preventiva.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las consecuencias típicas de una adaptación de impedancias incorrecta en una cadena audiovisual:",
+          "options": [
+            "Pérdida de nivel y potencia efectiva entre etapas, con reducción de relación señal/ruido.",
+            "Aparición de inversión de polaridad absoluta (inversión de fase de 180°) en la señal de audio o vídeo.",
+            "Reflejos en la línea que generan respuesta en frecuencia irregular y resonancias locales.",
+            "Aumento de susceptibilidad a interferencias y pérdida de calidad por desadaptación en enlaces coaxiales o balanceados."
+          ],
+          "correctIndex": 1,
+          "explanation": "La inversión absoluta de fase no es una consecuencia directa habitual de una desadaptación de impedancias; las otras opciones (pérdida de nivel, reflexiones/alteración de respuesta y mayor ruido/interferencias) son efectos comprobables de una adaptación incorrecta.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: tras montar dos planos consecutivos de dos interlocutores, la mirada del segundo plano no parece dirigida hacia el primero. Señale la causa espacial más precisa:",
+          "options": [
+            "Uso de lentes distintos que cambia la profundidad de campo y provoca un efecto de mirada incorrecta.",
+            "Desequilibrio de color que altera la percepción de profundidad y por tanto la orientación de la mirada.",
+            "Desincronización de audio que rompe la sensación de diálogo y aparenta fallo de raccord de mirada.",
+            "Violación del eje de 180° provocando incoherencia en la dirección de mirada entre planos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La violación del eje 180° cambia la orientación relativa de los sujetos y es la causa espacial típica de un raccord de mirada erróneo; las otras opciones afectan color, audio o profundidad pero no explican directamente la incoherencia de dirección de mirada.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Según la Ley 13/2022, ¿cuál de estas obligaciones debe cumplir un prestador audiovisual respecto a menores y acceso a contenidos?:",
+          "options": [
+            "Limitarse a incluir una advertencia textual sin mecanismos de control técnico sobre el acceso de menores.",
+            "Implementar sistemas de clasificación por edades y medidas de control de acceso que permitan impedir el acceso inadecuado de menores a contenidos potencialmente dañinos.",
+            "Depositar todo el contenido en un archivo con acceso libre y dejar la clasificación a los usuarios.",
+            "Ofrecer únicamente recomendaciones generales para padres sin implantación de controles técnicos o de clasificación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley impone obligaciones activas: clasificación por edades y sistemas de control de acceso. Las otras opciones suponen medidas pasivas o ausencia de controles exigidos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estrategias de preservación: ¿cuál de las siguientes políticas atiende mejor obsolescencia, verificación periódica y migración de soportes?",
+          "options": [
+            "Delegar la preservación completa a un único proveedor externo sin controles periódicos locales ni políticas de migración.",
+            "Conservar únicamente el soporte físico original hasta que aparezcan errores y entonces migrar masivamente sin comprobación previa.",
+            "Mantener varias copias en medios actuales, programar verificaciones periódicas de integridad y migrar a formatos/soportes actualizados antes de que fallen los originales.",
+            "Reescribir el contenido en cualquier formato más reciente sin conservar metadatos de verificación ni registros de las migraciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La política correcta combina copias múltiples, verificaciones periódicas y migración preventiva; las demás estrategias postergan acciones, eliminan controles o descuidan trazabilidad, incrementando riesgo de pérdida por obsolescencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare AVC (H.264) y HEVC (H.265): indique la afirmación que resume mejor sus diferencias operativas en flujos audiovisuales:",
+          "options": [
+            "AVC es siempre más eficiente en bitrate que HEVC y además requiere menos recursos de decodificación.",
+            "HEVC proporciona mayor eficiencia de compresión a igual calidad pero exige mayor complejidad de codificación/decodificación y tiene compatibilidad hardware/software más limitada que AVC.",
+            "HEVC y AVC ofrecen idéntica compatibilidad en dispositivos antiguos; la elección solo afecta el nombre del contenedor.",
+            "HEVC reduce la complejidad de decodificación respecto a AVC por su estructura de predicción más simple."
+          ],
+          "correctIndex": 1,
+          "explanation": "HEVC ofrece mejor eficiencia a costa de mayor complejidad y menor compatibilidad en equipos antiguos; las otras afirmaciones invierten o exageran la relación entre eficiencia y complejidad/compatibilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_export_qc",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Selección de verificación en exportación: cuál de estas listas resume mejor los controles técnicos imprescindibles al exportar un master para emisión:",
+          "options": [
+            "Exportar en cualquier contenedor y añadir una nota manual con instrucciones para emisión en lugar de metadatos formales.",
+            "Sólo comprobar que el códec elegido sea el más reciente y confiar en el NLE para los niveles y metadatos.",
+            "Ajustar únicamente la resolución y el bitrate sin verificar sincronía ni campos; los receptores se encargan del resto.",
+            "Comprobación del formato y códec de entrega, niveles de luminancia y crominancia dentro de referencias legales, sincronía audiovisual, tratamiento correcto de campos (interlaced/progressive) y metadatos requeridos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La exportación profesional exige verificar formato/códec, niveles legales, sincronía, campos y metadatos; las otras opciones descuidan controles esenciales o confían en procesos ajenos al entregable.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En un RGB Parade (Rec.709) aparece que el canal rojo se mantiene alrededor de +3 dB respecto a verde y azul en las altas luces. ¿Cuál es el diagnóstico operativo más directo?",
+          "options": [
+            "Compresión excesiva del códec que reduce la componente roja en altas luces.",
+            "Problema de sincronización entre campos del vídeo que descompensa los canales cromáticos.",
+            "Fallo de conexión que invierte la polaridad del canal rojo respecto a los demás.",
+            "Dominante roja en altas luces por exceso de componente roja que requerirá ajuste de ganancia en canal rojo o corrección global de altas."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un nivel más alto sostenido en el canal rojo indica dominante de color en esa región que se corrige ajustando ganancia o curvas en altas; las otras opciones no explican un desequilibrio sostenido por canal en el parade.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Sobre la sincronización multicámara mediante forma de onda de audio: seleccione la afirmación que describe correctamente su condición de fiabilidad y sus limitaciones:",
+          "options": [
+            "Sustituye completamente la necesidad de código de tiempo siempre que se disponga de pistas de audio.",
+            "Funciona siempre independientemente del tipo de micrófono o de la distancia entre cámaras.",
+            "Es fiable cuando las pistas contienen transitorios claros y la misma fuente sonora; resulta poco fiable con microfonías distantes, ruido ambiente o cuando las cámaras graban canales distintos sin coincidencia de contenido.",
+            "Es especialmente adecuada para sincronizar cámaras que usan distintos códecs pero nunca para material con diálogo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La sincronización por forma de onda es efectiva si hay transitorios coincidentes y la misma fuente; falla con micrófonos distintos, ruido o separación. No sustituye siempre al código de tiempo y puede ser inadecuada en ciertos diálogos o condiciones.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al principio operativo de grabación en bucle (loop) y la recuperación de ejecuciones en servidores EVS:",
+          "options": [
+            "La grabación en bucle garantiza la retención permanente y automática de las últimas 24 horas sin necesidad de protección manual.",
+            "Es posible recuperar una ejecución concreta si fue protegida o registrada explícitamente en un índice/playlist antes de la sobrescritura del buffer.",
+            "Los canales de grabación en EVS son independientes y permiten recuperar acciones por pista sin afectar a las demás.",
+            "La grabación en bucle mantiene un buffer circular donde los tramos más antiguos se sobrescriben cuando se alcanza la capacidad; se dispone de mecanismos para proteger o marcar clips que no deben sobrescribirse."
+          ],
+          "correctIndex": 0,
+          "explanation": "La grabación en bucle no garantiza retención permanente sin gestión: los datos se sobrescriben cuando el buffer se llena a menos que se protejan. Las otras afirmaciones describen el funcionamiento y medidas de recuperación habituales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que refleja con mayor precisión el contenido sustantivo del principio constitucional de igualdad y la prohibición de discriminación:",
+          "options": [
+            "La igualdad constitucional exige trato idéntico en todos los casos, prohibiendo cualquier medida positiva destinada a corregir desigualdades.",
+            "Todas las personas son iguales ante la ley y está prohibida cualquier discriminación por nacimiento, raza, sexo, religión, opinión o cualquier otra condición o circunstancia personal o social, permitiéndose medidas específicas para corregir desigualdades.",
+            "La Constitución sólo prohíbe discriminaciones en el ámbito laboral, no en el social o político.",
+            "El principio de igualdad implica que el Estado debe tratar siempre en primer lugar a los grupos mayoritarios."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Constitución consagra igualdad y prohíbe discriminación por diversas circunstancias y admite medidas positivas para corregir desigualdades; las demás opciones contradicen o restringen incorrectamente ese principio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en una toma con dominante verde en las sombras, ¿qué ajuste corresponde a corrección primaria y cuál a corrección secundaria para resolver el problema?",
+          "options": [
+            "Primaria: aplicar una LUT creativa al shot; secundaria: ajustar el contraste global del master.",
+            "Primaria: aplicar una máscara HSL sobre sombras; secundaria: cambiar espacio de color globalmente a 4:4:4.",
+            "Primaria: usar keying por luminancia para aislar altos y alterar selectivamente los medios; secundaria: modificar balance blanco de todo el clip.",
+            "Primaria: ajustar lift/gamma/gain o curvas globales para neutralizar dominante en sombras; secundaria: aislar por HSL la piel o el sujeto y refinar solo esa gama de tonos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La corrección primaria aborda ajustes globales (lift/gamma/gain, curvas) para neutralizar dominantes generales; la secundaria actúa selectivamente (HSL, claves) sobre rangos o regiones. Las otras opciones confunden ámbitos o propuestas no adecuadas para primaria/ secundaria.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En un vectorscopio, ¿qué indican principalmente el ángulo y la distancia al centro de una traza?:",
+          "options": [
+            "El ángulo indica el tono/hue (posición cromática) y la distancia al centro indica la saturación (intensidad cromática).",
+            "El ángulo indica la luminosidad y la distancia al centro indica la frecuencia de muestreo.",
+            "El ángulo mide la fase entre canales y la distancia al centro cuantifica el nivel de audio.",
+            "El ángulo representa la resolución espacial de la imagen y la distancia al centro la profundidad de bits."
+          ],
+          "correctIndex": 0,
+          "explanation": "El vectorscopio muestra la representación cromática: el ángulo corresponde al tono y la distancia al centro a la saturación. Las otras opciones confunden conceptos de colorimetría con magnitudes no relacionadas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Identifique la opción que describe correctamente y diferencia operación de captura (capture), importación (import), enlace (link) e ingesta (ingest):",
+          "options": [
+            "Capture: convertir códecs al vuelo y perder timecode; Import: sólo generar proxies; Link: reunir todos los códecs en un único archivo; Ingest: eliminación de metadatos redundantes.",
+            "Capture: renombrado manual de ficheros en cámara; Import: grabación desde cámara a cinta; Link: grabación en bucle; Ingest: solo copiar sin verificación.",
+            "Capture: volcado directo desde dispositivo con preservación de timecode y posible 'growing file'; Import: copia y reempaquetado en el proyecto creando nuevos archivos; Link: referencia en proyecto a ficheros existentes sin copiarlos; Ingest: proceso completo de transferencia con verificación, metadatos y registro para flujos de producción/archivo.",
+            "Capture: proceso exclusivo de cámara en SDI, Import: exclusivo de archivos de audio, Link: traslado físico de discos, Ingest: sincronización de multicámara."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta distingue cada operación: capture preserva timecode y puede producir growing files; import copia/reenvasa; link crea referencias sin duplicar; ingest engloba transferencia + checksum/ metadatos/trazabilidad. Las otras descripciones son incorrectas o parciales.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las consecuencias visuales y operativas del submuestreo 4:4:4, 4:2:2 y 4:2:0:",
+          "options": [
+            "4:4:4 y 4:2:2 son equivalentes en todas las operaciones de posproducción; 4:2:0 solo afecta a audio.",
+            "4:2:0 conserva más información cromática que 4:4:4; 4:2:2 elimina completamente el canal de crominancia; 4:4:4 comprime menos la luminancia.",
+            "4:4:4 conserva crominancia por píxel y es ideal para keying y etalonaje exigente; 4:2:2 reduce la resolución cromática horizontal con buena calidad para producción profesional; 4:2:0 reduce crominancia horizontal y vertical, sufriendo mayor pérdida de detalle de color y limitaciones en keying y rotoscopia.",
+            "Todas las variantes afectan únicamente a la resolución espacial y no a la reproducción de color ni a las operaciones de etalonaje."
+          ],
+          "correctIndex": 2,
+          "explanation": "4:4:4 mantiene crominancia completa, 4:2:2 subsamplea horizontalmente y 4:2:0 subsamplea en ambos ejes, lo que afecta keying y grading. Las otras opciones contienen afirmaciones falsas o irrelevantes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la consecuencia de un error de decodificación en un fotograma P dentro de una GOP IPB:",
+          "options": [
+            "El error afecta al propio fotograma P y a los fotogramas dependientes (P y B posteriores) que lo utilizan como referencia hasta el siguiente fotograma I, provocando artefactos en ese segmento.",
+            "El error sólo afecta al siguiente fotograma I y no influye en los demás fotogramas predictivos.",
+            "Un fallo en un fotograma P sólo provoca pérdida de audio sin impacto visual.",
+            "La corrupción de un P puede recuperarse instantáneamente sin efecto en fotogramas adyacentes gracias a la redundancia intraframe."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un P corrupto degrada él mismo y los fotogramas predictivos que dependen de él hasta que aparece una referencia intra (I); las otras opciones minimizan o niegan esa dependencia predictiva.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "080",
       "title": "Examen 080",
