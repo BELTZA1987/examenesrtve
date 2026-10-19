@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-18",
+  "updatedAt": "2026-10-19",
   "exams": [
+    {
+      "id": "082",
+      "title": "Examen 082",
+      "date": "2026-10-19",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Indique la afirmación que describe con mayor precisión la función de la clasificación profesional y la 'ocupación tipo' en el III Convenio Colectivo de RTVE:",
+          "options": [
+            "Definen grupos y ocupaciones tipo que determinan funciones, responsabilidades y niveles retributivos, facilitando la organización del trabajo.",
+            "Son listados orientativos sin efecto en la asignación de funciones ni en la retribución individual.",
+            "Establecen exclusivamente las categorías salariales y no contienen referencia alguna a tareas u organización del trabajo.",
+            "Asignan a cada trabajador concreto sus obligaciones diarias e instrucciones operativas detalladas."
+          ],
+          "correctIndex": 0,
+          "explanation": "El III Convenio articula grupos y 'ocupaciones tipo' que sirven para asignar funciones, responsabilidades y niveles retributivos y permiten organizar el trabajo; la diferencia clave frente al distractor más próximo es que no son meras tablas salariales ni descripciones individualizadas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las recomendaciones posturales para un puesto de edición:",
+          "options": [
+            "Ajustar la altura de la silla para que los pies queden apoyados en el suelo o en reposapiés.",
+            "Mantener soporte lumbar que respete la curva natural de la zona lumbar.",
+            "Apoyar los antebrazos en una superficie elevada, rígida y sin almohadilla durante la jornada prolongada.",
+            "Ajustar la altura de la mesa y reposabrazos para que los codos queden aproximados a 90°."
+          ],
+          "correctIndex": 2,
+          "explanation": "Apoyar antebrazos en una superficie rígida y sin almohadilla es una excepción a las recomendaciones: puede aumentar presión y molestias; las otras opciones son prácticas ergonómicas correctas (altura de asiento, soporte lumbar y ángulo de antebrazos).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Respecto a MXF OP1a frente a OP‑Atom, señale la diferencia estructural decisiva y su adecuación operativa:",
+          "options": [
+            "OP‑Atom es un formato cerrado de playout; OP1a es un formato abierto orientado únicamente al archivado.",
+            "OP‑Atom encapsula metadatos complejos para emisión y OP1a está diseñado exclusivamente para edición no lineal.",
+            "OP1a crea un fichero por cada pista de audio, mientras OP‑Atom combina audio y vídeo en un único contenedor para simplificar archivos.",
+            "OP1a agrupa varias pistas/essencias en un único fichero apto para entrega y playout; OP‑Atom distribuye cada esencia en ficheros separados, facilitando edición y reconformado."
+          ],
+          "correctIndex": 3,
+          "explanation": "La diferencia clave es estructural: OP1a acostumbra a usarse como paquete único listo para playout/entrega; OP‑Atom mantiene essencias atomizadas en ficheros separados, lo que facilita tareas de edición y reconformado. Los distractores invierten o exageran esas funciones.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_music_sync",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estrategias de sincronización del montaje con música o sonido y señale la afirmación más precisa:",
+          "options": [
+            "Evitar cualquier superposición sonora entre planos es la regla para mantener continuidad sonora; los acentos musicales no condicionan los cortes.",
+            "Cortar siempre al downbeat de cada compás asegura continuidad dramática independientemente de la frase musical.",
+            "Alinear cortes con el final de frases musicales y con acentos fuertes mantiene continuidad rítmica; el contrapunto puede usarse para generar contraste sin romper continuidad sonora.",
+            "Para sincronizar imagen y música es preferible ignorar la frase musical y ajustar cortes a la duración estricta de planos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta valora frase musical y acentos: cortar en límites de frase o en acentos refuerza ritmo y continuidad; el contrapunto es una herramienta expresiva. Los distractores proponen reglas generales erróneas (p. ej. downbeat absoluto o eliminar solapamientos sonoros).",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En un mezclador de vídeo, ¿cuál de estas afirmaciones describe con mayor precisión la función operativa del programa, previo, la key y la transición?:",
+          "options": [
+            "El 'previo' es un bus auxiliar que reemplaza al programa en emisión; la key se aplica siempre sobre el previo y no permite transiciones.",
+            "El bus 'programa' entrega la señal al aire, 'previo' permite preparar la fuente; la key modifica una señal para incrustarla sobre programa y la transición se ejecuta desde previo a programa.",
+            "El 'programa' es solo un monitor de control; la transición se prepara en el bus de efectos, no en previo ni programa.",
+            "La key transforma cualquier mezcla A/B en una transición automática sin intervención del operador de previo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La descripción correcta: 'programa' es salida al aire y 'previo' sirve para preparar; la key permite incrustar (overlay) y las transiciones se realizan desde previo preparado hacia programa. Los distractores interpretan mal funciones básicas del mezclador.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_fiction",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Al montar una escena de ficción con cobertura amplia y planos cortos de los intérpretes, ¿qué prioridad editorial preserva mejor la continuidad dramática y la interpretación?:",
+          "options": [
+            "Priorizar siempre la continuidad espacial absoluta aunque ello obligue a sacrificar micro‑matices de la interpretación.",
+            "Priorizar la continuidad interpretativa (miradas, tempo, respiración) incluso si exige elegir planos que duren menos para respetar el ritmo interpretativo.",
+            "Eliminar tomas que muestran inconsistencias interpretativas y reconstruir la escena con planos alternativos sin consultar a realización.",
+            "Aplicar ritmo audiovisual rápido para mantener la tensión narrativa sin considerar continuidad interpretativa."
+          ],
+          "correctIndex": 1,
+          "explanation": "En ficción la prioridad es mantener la continuidad dramática y la interpretación del actor; elegir planos que preserven tempo y matices es preferible a imponer rectificaciones espaciales que dañen la actuación. Los distractores privilegian espacio o procedimientos que pueden romper la coherencia dramática.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Se detecta humo procedente de un equipo eléctrico en plató. Diagnóstico: actuación prioritaria inmediata compatible con seguridad eléctrica y evacuación:",
+          "options": [
+            "Apagar las luces del plató y cubrir el equipo con mantas húmedas para sofocar el fuego.",
+            "Usar un extintor de agua sobre la regleta para enfriar y continuar la grabación tras ventilar el área.",
+            "Intentar retirar el equipo con las manos para aislar el foco y apagarlo desconectando sin priorizar la evacuación.",
+            "Desconectar la alimentación general solo si puede hacerse sin riesgo directo, ordenar evacuación, y si es seguro intentar extinción con un extintor de CO2 o polvo para fuegos eléctricos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La actuación prioritaria es seguridad: cortar alimentación si puede hacerse sin riesgo, evacuar y usar extintor adecuado (CO2 o polvo) para fuegos eléctricos; agua y mantas húmedas son peligrosos en instalaciones eléctricas y no son la opción adecuada.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación que mejor resume la misión y obligaciones de servicio público atribuidas a la Corporación RTVE por la Ley 17/2006:",
+          "options": [
+            "Limitar su actividad exclusivamente a la producción de contenidos de entretenimiento para audiencias masivas.",
+            "Maximizar beneficios comerciales mediante prioridad de contenidos publicitarios sobre información pública.",
+            "Delegar en prestadores privados la responsabilidad de programación informativa para reducir la responsabilidad pública.",
+            "Garantizar la pluralidad y la veracidad informativa, el acceso universal a contenidos culturales y educativos y la prestación de un servicio de interés general independiente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 17/2006 asigna a RTVE misión de servicio público: pluralidad, calidad y acceso universal; los distractores plantean objetivos comerciales o limitaciones contrarias a su función pública.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento ante una lectura de medidor de correlación que cae desde +0,9 a valores próximos a −0,7 en pasajes con amplia ambiental estéreo:",
+          "options": [
+            "Ignorar la lectura porque la correlación negativa es normal en pasajes estéreo amplio y no requiere acción.",
+            "Aumentar el nivel de graves para compensar la caída de correlación.",
+            "Comprobar fase entre canales y aplicar corrección (invertir fase o reajustar paneo) para evitar cancelaciones en mezcla mono.",
+            "Reducir la ganancia general del canal izquierdo para forzar correlación positiva."
+          ],
+          "correctIndex": 2,
+          "explanation": "Procedimiento correcto: una correlación negativa cercana a −1 indica posible desfase y riesgo de cancelación en suma mono; se comprueba y corrige fase o paneo. Los distractores proponen acciones inadecuadas o inútiles.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En entornos con bins compartidos, ¿qué práctica técnica garantiza mejor compatibilidad entre usuarios y previene sobrescrituras?:",
+          "options": [
+            "Implementar bloqueo de bins (check‑out/check‑in) y permisos por usuario junto a control de versiones.",
+            "Permitir que todos los usuarios editen el mismo bin sin restricciones y confiar en las copias locales.",
+            "Eliminar versiones antiguas automáticamente para liberar espacio y evitar conflictos.",
+            "Trabajar únicamente con proxies locales sin actualizar metadatos compartidos."
+          ],
+          "correctIndex": 0,
+          "explanation": "El uso de locking y permisos con control de versiones evita sobrescrituras y conflictos; los distractores permiten condiciones que provocan pérdida de trabajo o ausencia de trazabilidad.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Si una fuente de cámara no está genlockeada y se produce un cambio de plano en un mezclador multicámara: diagnóstico y corrección por frame‑sync:",
+          "options": [
+            "No ocurrirá ninguna consecuencia observable; el genlock solo afecta al audio.",
+            "Aparecerán saltos o desalineaciones temporales en la imagen al cortar; un frame‑sync reprocesa y alinea temporalmente la fuente con la referencia para eliminar el artefacto.",
+            "El único efecto será una pérdida de color; la corrección requiere reinstalar el driver de cámara.",
+            "El problema solo afecta a la resolución y se corrige cambiando el formato de salida de la cámara."
+          ],
+          "correctIndex": 1,
+          "explanation": "La consecuencia típica es desajuste temporal visible en transiciones; el frame‑sync actúa como búfer que realinea la fuente con la referencia de genlock. Los distractores confunden efectos distintos (audio, color, resolución).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Calcule la capacidad mínima de enlace: 500 usuarios, concurrencia estimada 10%, consumo por usuario 4,0 Mbps; la utilización máxima admisible es 80%.",
+          "options": [
+            "200 Mbps",
+            "240 Mbps",
+            "300 Mbps",
+            "250 Mbps"
+          ],
+          "correctIndex": 3,
+          "explanation": "Concurrentes = 500×0,10 = 50 usuarios; demanda = 50×4 Mbps = 200 Mbps; con utilización máxima 80% la capacidad mínima = 200 / 0,8 = 250 Mbps. Distractores son cálculos parciales o sin aplicar el margen.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor diferencia el principio y la compatibilidad operativa entre PQ y HLG:",
+          "options": [
+            "Ambas curvas son idénticas en comportamiento y solo difieren en nombre comercial.",
+            "HLG requiere metadatos específicos para cada display mientras que PQ es intrínsecamente compatible con SDR sin conversiones.",
+            "PQ (Perceptual Quantizer) es una EOTF fija optimizada para mastering HDR con mapeo perceptual y suele requerir metadatos; HLG (Hybrid Log‑Gamma) permite compatibilidad con pantallas SDR sin metadatos y se usa frecuentemente en emisiones en directo.",
+            "PQ es exclusivo para emisión en directo y HLG solo para playout en salas de postproducción."
+          ],
+          "correctIndex": 2,
+          "explanation": "PQ es una curva EOTF orientada a mastering HDR (a menudo con metadata); HLG está pensada para compatibilidad HDR/SDR en emisión sin metadatos. Los distractores falsean requisitos de metadata o funciones de uso.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que mejor resume prácticas recomendadas tras la ingesta de soportes de estado sólido (SSD):",
+          "options": [
+            "Desfragmentar el SSD para optimizar el rendimiento tras la ingesta.",
+            "Realizar un formateo rápido inmediato y reutilizar el SSD sin copias previas, ya que la esencia queda siempre en el propio soporte.",
+            "Verificar integridad con checksum, copiar a almacenamiento primario/archivo antes de formatear y, para reutilizar, emplear utilidades del fabricante o secure‑erase en lugar de formateos rápidos sin verificación.",
+            "Confiar en la ingestión única; no es necesario conservar metadatos técnicos ni comprobantes de copia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica adecuada es verificar con checksums y archivar antes de formatear; el formateo seguro o herramientas del fabricante son preferibles a formateos rápidos. Los distractores recomiendan procedimientos erróneos (desfragmentar SSD, no guardar metadatos).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "¿Cuál fue la finalidad operativa esencial de la reforma introducida por la Ley 5/2017 relativa a RTVE?:",
+          "options": [
+            "Reforzar la independencia y el pluralismo mediante un procedimiento parlamentario para la elección de los órganos de gobierno de RTVE.",
+            "Eliminar la obligación de servicio público para permitir mayor flexibilidad comercial.",
+            "Transferir la selección de los órganos de RTVE al Gobierno por decreto.",
+            "Privatizar parcialmente la Corporación para mejorar su eficiencia."
+          ],
+          "correctIndex": 0,
+          "explanation": "La reforma de 2017 buscó recuperar independencia y pluralismo introduciendo un sistema parlamentario de designación de los órganos de RTVE; los distractores atribuyen medidas no vinculadas a dicha reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la tolerancia a fallos y la reconstrucción en niveles RAID:",
+          "options": [
+            "RAID 0 no ofrece redundancia y no tolera fallos de disco.",
+            "RAID 5 tolera la pérdida simultánea de dos discos sin pérdida de datos.",
+            "RAID 1 tolera la pérdida de un disco copiando el contenido desde su espejo para reconstruir.",
+            "RAID 6 puede tolerar la falla de hasta dos discos gracias a doble paridad."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación sobre RAID 5 es la excepción: RAID 5 tolera solo la pérdida de un disco; RAID 6 sí tolera dos. Los demás enunciados describen correctamente las propiedades de RAID 0, 1 y 6.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_metadatos",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que mejor describe la función operativa de los metadatos técnicos y descriptivos en flujos audiovisuales:",
+          "options": [
+            "Sustituyen la necesidad de conservar la esencia audiovisual en archivo.",
+            "Facilitan catalogación, búsquedas, interoperabilidad y automatización de flujos (ingesta, relink y distribución).",
+            "Son únicamente campos libres sin utilidad para procesos automáticos.",
+            "Se usan exclusivamente para generar informes de emisión y no influyen en la edición."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los metadatos permiten catalogación, búsqueda e intercambio y soportan automatización; no sustituyen la esencia ni son meramente informativos. Los distractores sobredimensionan o minusvaloran su función.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para que un auxiliary timecode grabado en una cámara sirva como referencia fiable en relink automático durante reconformado, ¿qué operación es imprescindible en el flujo de ingesta?:",
+          "options": [
+            "Registrar el auxiliary timecode en los metadatos de ingesta y mapearlo explícitamente al campo que el NLE utiliza (source/record) para sincronización.",
+            "Renombrar los ficheros con la hora de creación del sistema operativo y confiar en nombres para el relink.",
+            "Eliminar otros códigos de tiempo para evitar conflictos y dejar solo el auxiliary en el contenedor.",
+            "Convertir el auxiliary timecode a un audio track con tonos de 1 kHz para su detección posterior."
+          ],
+          "correctIndex": 0,
+          "explanation": "Es imprescindible ingestar y mapear el auxiliary timecode en metadatos según el campo que el NLE usa (source o record) para que el relink automático lo reconozca; los distractores proponen métodos no fiables o inadecuados.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un servidor de vídeo compartido, ¿qué magnitud determina con mayor precisión el número máximo de canales de reproducción simultáneos sostenibles?:",
+          "options": [
+            "El tamaño total del pool de almacenamiento en TB sin tener en cuenta rendimiento.",
+            "La capacidad nominal del procesador en GHz sin considerar I/O.",
+            "El número de usuarios registrados en el servidor aunque no estén reproduciendo.",
+            "La tasa sostenida de lectura/throughput del almacenamiento (Gbit/s) disponible para lecturas concurrentes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La magnitud decisiva es el throughput sostenido del almacenamiento para lecturas concurrentes; capacidad CPU, número de usuarios registrados o tamaño en TB son secundarios si no van acompañados de throughput adecuado.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a limitaciones típicas de sistemas de archivos aplicables a soportes audiovisuales:",
+          "options": [
+            "HFS+ impone un límite de fichero de 2 GB, por lo que no es apto para archivos de vídeo de alta resolución.",
+            "exFAT permite ficheros mayores y es más adecuado para soportes con ficheros de gran tamaño.",
+            "NTFS soporta ficheros grandes y control de permisos, siendo generalmente adecuado para flujos profesionales.",
+            "FAT32 limita el tamaño máximo de fichero a 4 GiB menos 1 byte, lo que afecta el manejo de masters grandes."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación sobre HFS+ es la excepción: HFS+ no impone un límite práctico de 2 GB para ficheros; los otros enunciados describen limitaciones reales (FAT32) o cualidades (exFAT, NTFS). ",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "081",
       "title": "Examen 081",
