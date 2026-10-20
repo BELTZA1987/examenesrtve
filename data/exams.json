@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-20",
   "exams": [
+    {
+      "id": "083",
+      "title": "Examen 083",
+      "date": "2026-10-20",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que describe con mayor precisión una obligación concreta de accesibilidad impuesta por la Ley 13/2022 a prestadores audiovisuales:",
+          "options": [
+            "Sustituir permanentemente la pista original de un contenido por una versión accesible de manera exclusiva para todas las plataformas sin conservar la original.",
+            "Facilitar, según calendarios legales, pistas y servicios de accesibilidad (subtítulos, audiodescripción, lengua de signos) para los contenidos sujetos a obligación, garantizando su inclusión en las versiones destinadas al público.",
+            "Limitar las obligaciones de accesibilidad únicamente a la programación infantil, excluyendo noticias y emisiones en directo.",
+            "Eximir a los prestadores de cualquier obligación de accesibilidad cuando supongan costes adicionales, sin calendario de implantación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta señala la obligación concreta: aportar pistas y servicios de accesibilidad conforme a los plazos previstos. Los distractores erran porque proponen sustitución total de la esencia (no exigida), restringen la obligación solo a contenidos infantiles o plantean una exención absoluta por coste; la diferencia decisiva es que la ley obliga a implantar servicios accesibles según calendario y alcance legal, no a eliminar versiones originales ni a limitar el ámbito exclusivamente a un género.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Indique la medida organizativa más eficaz para reducir simultáneamente fatiga visual y postural en un puesto de pantallas de visualización:",
+          "options": [
+            "Aumentar el brillo de pantalla y reducir el contraste para disminuir el esfuerzo ocular durante sesiones continuadas.",
+            "Programar micro‑pausas periódicas combinadas con alternancia de tareas (trabajo en pantalla → tareas físicas o diferentes posturas) y rotación de actividades entre operadores.",
+            "Consolidar jornadas largas con una pausa de 30 minutos cada cuatro horas sin modificar la alternancia de tareas.",
+            "Limitar la resolución y tamaño de ventana de trabajo para reducir la cantidad de información visual en pantalla."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta combina pausas frecuentes con alternancia de tareas, que reduce la exposición sostenida a la misma postura y estímulo visual. Los distractores fallan porque se centran en ajustes puntuales de pantalla o en pausas espaciadas sin rotación de tareas; la diferencia decisiva es que la alternancia de actividad y pausas breves actúa sobre ambos factores (visual y postural).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_chromakey",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Orden operativo correcto y diagnóstico inicial para una incrustación por chromakey:",
+          "options": [
+            "Corrección primaria del sujeto, creación de garbage matte, generación del key, aplicación de choke/soften y spill suppression.",
+            "Generación del key, ajuste de LUT creativa, aplicación de spill suppression, luego garbage matte.",
+            "Aplicación de spill suppression antes de generar el key, recorte de plano y corrección final sin garbage matte.",
+            "Composición final, luego corrección primaria y por último generación del garbage matte."
+          ],
+          "correctIndex": 0,
+          "explanation": "El orden correcto empieza por adaptar color y exposición del sujeto, limpiar el área con garbage matte, obtener el key, refinar bordes (choke/soften) y suprimir derrames de color. Los distractores alteran ese flujo (por ejemplo, intentar spill suppression antes del key o posponer la garbage matte), lo que impide un key uniforme; la diferencia decisiva es la necesidad de limpiar la geometría y normalizar la imagen antes de refinar bordes y spill.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estas descripciones diagnósticas y señale la que corresponde con mayor precisión a un bucle de masa en un sistema audiovisual:",
+          "options": [
+            "Pérdida de sincronismo SDI localizada en cables largos causada por impedancia incorrecta del conector BNC.",
+            "Ruido digital intermitente y pérdida de paquetes en flujo IP producido por saturación de switch, mitigable con QoS.",
+            "Desajuste de fase entre canales estéreo que produce cancelación en mono y depende exclusivamente de inversión de polaridad en un preamplificador.",
+            "Bajo zumbido a 50/60 Hz perceptible en salas con equipos conectados a distintas tomas de tierra; la señal desaparece o cambia al desconectar una masa o al elevar un equipo mediante aislador."
+          ],
+          "correctIndex": 3,
+          "explanation": "La primera opción describe el síntoma y la prueba diagnóstica típica de un bucle de masa (hum a la frecuencia de la red y cambio al interrumpir tierras). Los distractores aluden a problemas de red, inversión de polaridad o desadaptación de impedancias que producen síntomas distintos; la diferencia decisiva es que el bucle de masa se reconoce por un zumbido en baja frecuencia correlacionado con la conexión a tierra y su eliminación al aislarla.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la relación entre niveles legales, gamut y limitación automática:",
+          "options": [
+            "Un legalizer puede recortar o reducir saturación y luminancia para mantener la señal dentro de los límites legales, alterando matiz o saturación en colores extremos.",
+            "El gamut define límites cromáticos (coordenadas) de un espacio de color; cualquier contenido fuera de ese locus requiere recorte o remapeo para garantizar compatibilidad de visualización.",
+            "Los límites legales de luminancia se aplican sobre la señal compuesta destinada a emisión y constituyen una restricción técnica que puede provocar modificaciones perceptibles en tonos intensos.",
+            "La limitación automática garantiza siempre preservar la intención creativa del colorista sin alterar tono ni saturación cuando actúa sobre colores fuera de gamut."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 3 es la excepción: los limitadores automáticos no garantizan preservar la intención creativa en todos los casos y suelen alterar tono o saturación. Las otras opciones describen efectos reales: legalizers recortan, el gamut es un límite cromático y los límites de luminancia son restricciones de emisión; la diferencia decisiva es que la afirmación 3 atribuye una garantía que no existe.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico operativo: para intercambiar material en un directo entre EVS y un NLE manteniendo disponibilidad para retransmisión, indique la afirmación más precisa:",
+          "options": [
+            "Transferir exclusivamente proxies de baja resolución desde EVS y borrar los originales en el servidor de playout para liberar espacio.",
+            "Exportar clips desde EVS con handles suficientes y en códec compatible con el NLE, mantener las referencias en EVS para que el material siga accesible en playout durante la reconformación.",
+            "Copiar únicamente metadatos de EVS al NLE; la reconformación no necesita esencia, basta con la referencia temporal.",
+            "Realizar la transferencia al finalizar la retransmisión para evitar conflictos de acceso; no es viable editar durante emisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta recoge la práctica operativa: exportar con handles y en códec compatible, y conservar el origen en EVS para que el material continúe disponible en retransmisión. Los distractores son erróneos porque proponen eliminar originales, suponer que solo metadatos bastan o impedir la edición en emisión; la diferencia decisiva es que la reconformación en directo requiere esencia accesible y continuidad en el servidor de playout.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: al decidir entre montaje paralelo y montaje alterno, indique el criterio operativo que mejor distingue ambos:",
+          "options": [
+            "Montaje paralelo requiere ritmo lento y planos largos; montaje alterno exige cortes rápidos para mantener coherencia.",
+            "Montaje paralelo siempre utiliza divisiones de pantalla; montaje alterno sólo admite cortes directos sin fundidos.",
+            "Montaje paralelo intercala eventos que se suceden contemporáneamente para sugerir simultaneidad y convergencia temática; montaje alterno contrapone acciones sucesivas para comparar o contrastar sin simultaneidad temporal obligatoria.",
+            "Montaje paralelo es exclusivo de ficción; montaje alterno es propio del documental."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta identifica la distinción operativa: el paralelo sugiere simultaneidad y convergencia temática mediante intercalado; el alterno contrapone acciones que pueden no ser simultáneas. Los distractores confunden recursos formales (división de pantalla, ritmo) o aplicabilidad por género; la diferencia decisiva es la relación temporal y narrativa entre las acciones intercaladas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor distingue la libertad de información y sus límites constitucionales:",
+          "options": [
+            "La Constitución consagra la libertad de información sin límites ni responsabilidad civil o penal por su ejercicio.",
+            "La libertad de información protege la publicación de datos e ideas, pero está sujeta a límites constitucionales como el derecho al honor, la intimidad y el procedimiento de tutela judicial; no implica ausencia de responsabilidad.",
+            "La libertad de información obliga a los medios a publicar única y exclusivamente información favorable al Gobierno para garantizar orden público.",
+            "La libertad de información exime a los profesionales de contrastar fuentes y verificar hechos en interés de la rapidez informativa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta refleja el equilibrio constitucional: libertad con límites (honor, intimidad) y responsabilidad. Los distractores son falsos porque plantean ausencia de límites, obligación de sesgo gubernamental o exención del deber de verificación; la diferencia decisiva es la coexistencia de libertad y tutela de otros derechos constitucionales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: ¿qué elemento es imprescindible para que un desplazamiento se califique como accidente 'in itinere'?",
+          "options": [
+            "Que el desplazamiento sea habitual entre el domicilio y el lugar de trabajo siguiendo la ruta normal y sin interrupciones voluntarias no justificadas.",
+            "Que el trabajador utilice exclusivamente vehículo de empresa durante el desplazamiento.",
+            "Que el suceso ocurra durante una actividad de ocio posterior a la jornada laboral.",
+            "Que el desplazamiento incluya necesariamente paradas no relacionadas con la actividad laboral, como recados personales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta indica el requisito central: desplazamiento habitual y directo entre domicilio y lugar de trabajo sin interrupciones no justificadas. Los distractores erran porque condicionan la calificación a uso de vehículo de empresa, a hechos posteriores a la jornada o a paradas personales; la diferencia decisiva es la continuidad y finalidad del trayecto ligado al trabajo.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a aspectos estructurales relevantes del formato XDCAM, más allá de carpetas e índices:",
+          "options": [
+            "XDCAM puede emplear spanning para repartir la esencia de clips muy largos en varios archivos físicos en el medio.",
+            "XDCAM garantiza acceso aleatorio universal a los clips desde cualquier reproductor estándar sin necesidad de herramientas específicas del fabricante.",
+            "Metadatos técnicos y descriptivos se almacenan en ficheros XML asociados que permiten reconstrucción del catálogo por herramientas compatibles.",
+            "El acceso fiable a clips a menudo requiere utilidades capaces de leer la estructura propia y recomponer entries cuando el soporte presenta particionados."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 3 es la excepción: XDCAM no garantiza acceso aleatorio universal sin herramientas compatibles, ya que la estructura y metadatos pueden requerir utilidades específicas. Las otras opciones describen características reales (spanning, XML de metadatos, necesidad de herramientas para reconstrucción); la diferencia decisiva es la falsa generalización sobre accesibilidad sin herramientas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Según el teorema de Nyquist, ¿cuál es la mínima frecuencia de muestreo que evita aliasing para una banda audible hasta 20 kHz?",
+          "options": [
+            "20 kHz",
+            "44,1 kHz",
+            "48 kHz",
+            "40 kHz"
+          ],
+          "correctIndex": 3,
+          "explanation": "Nyquist exige una frecuencia de muestreo mayor o igual al doble de la frecuencia máxima de la banda (2 × 20 kHz = 40 kHz). 44,1 kHz y 48 kHz son valores de muestreo prácticos superiores; 20 kHz es insuficiente. La diferencia decisiva es la relación mínima 2× de Nyquist.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que describe con mayor precisión la diferencia operativa entre EDL y AAF en intercambio de proyectos:",
+          "options": [
+            "AAF solo sirve para transferir audio y no incluye información de video.",
+            "EDL incorpora automáticamente todas las pistas de audio multicanal y efectos complejos; AAF solo exporta una simple lista de cortes.",
+            "EDL y AAF son equivalentes en alcance y capacidad de transmitir efectos, metadatos y pistas múltiples.",
+            "EDL es una lista de cortes básica (timecode, reels) con alcance limitado a edits alternos simples; AAF puede transferir múltiples pistas, referencias de medios, efectos simples y metadatos más completos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta distingue la simplicidad de EDL frente al mayor alcance de AAF en pistas, referencias y metadatos. Los distractores son incorrectos porque atribuyen capacidades a EDL que no tiene, equiparan ambos formatos o limitan AAF a audio; la diferencia decisiva es el alcance transferible y la riqueza de metadatos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_intra_longgop",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación práctica: para un flujo que requiere acceso aleatorio fotograma a fotograma y edición intensiva, ¿qué afirmación resume mejor la elección entre cómputo Intra y Long‑GOP?",
+          "options": [
+            "Intra es siempre incompatible con sistemas NLE modernos y solo Long‑GOP es aceptado para edición profesional.",
+            "Long‑GOP proporciona acceso aleatorio más rápido y mayor robustez en edición que Intra, por su compresión interframes.",
+            "XAVC Intra (o códecs intraframe) facilita acceso aleatorio y es más robusto para recortes y color grading a costa de mayor bitrate; Long‑GOP ofrece mayor eficiencia pero complica operaciones frame‑accurate y aumenta la carga de decodificación.",
+            "No existe diferencia operativa entre Intra y Long‑GOP para la edición y la elección es exclusivamente estética."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta describe la compensación real: intra‑frame facilita acceso y es más adecuado para edición intensiva; Long‑GOP es más eficiente pero más complejo para recortes fotograma a fotograma. Los distractores son falsos porque invierten la relación, afirman incompatibilidad inexistente o niegan diferencias operativas; la diferencia decisiva es la granularidad de compresión y sus implicaciones para la edición.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_true_peak",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que mejor diferencia 'True Peak' frente a 'Sample Peak':",
+          "options": [
+            "True Peak sólo se aplica a señales analógicas y no tiene relación con dBFS.",
+            "Sample Peak siempre es igual o mayor que True Peak en todo caso.",
+            "True Peak estima picos entre muestras mediante reconstrucción y detecta sobreelevaciones que el sample peak no refleja; es crucial para control de entrega y evitar clipping tras conversión D/A o intersample overs.",
+            "Sample Peak mide la energía perceptual en ventanas de 400 ms."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta explica que True Peak calcula picos inter‑muestra (interpolados) y puede exceder el sample peak, siendo crítico para cumplir límites de entrega. Los distractores confunden conceptos: el sample peak no siempre cubre true peaks, true peak no es exclusivo de analógico y la ventana de 400 ms corresponde a una medida de loudness momentary o similar, no al sample peak; la diferencia decisiva es la detección de picos entre muestras.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: señale la afirmación que mejor resume un principio o restricción del modelo de financiación previsto por la Ley 8/2009 para la Corporación RTVE:",
+          "options": [
+            "El modelo combina financiación pública (presupuesto estatal) y aportaciones específicas del sector audiovisual, incorporando límites y reglas dirigidas a garantizar la suficiencia financiera y la independencia frente a presiones comerciales.",
+            "La ley obliga a RTVE a financiarse exclusivamente mediante publicidad comercial sin aportación presupuestaria pública.",
+            "El modelo impone que toda financiación provenga de cuotas obligatorias individualizadas a los espectadores.",
+            "La ley permite la asignación discrecional de fondos sin requisitos de transparencia ni control presupuestario."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta resume el principio: financiación mixta con reglas para suficiencia e independencia. Los distractores son incorrectos porque atribuyen financiación exclusiva por publicidad, cuotas obligatorias a espectadores o ausencia de transparencia; la diferencia decisiva es que la ley establece fuentes combinadas y principios de control, no fórmulas exclusivas o opacas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: se observa que un rush XAVC presenta mayor facilidad para cortes y grading sin artefactos. ¿Qué afirmación describe mejor la variante probable del códec y su aplicación?",
+          "options": [
+            "Es probable que sea XAVC Intra, pues las variantes intra‑frame proporcionan frames independientes adecuados para recortes y etalonaje intensivo; XAVC Long‑GOP sería más eficiente en almacenamiento pero menos práctico para edición frame‑accurate.",
+            "Es probable que sea XAVC Long‑GOP porque compresión interframe mejora la calidad de cada frame individual y facilita grading.",
+            "No hay diferencia entre Intra y Long‑GOP en términos de edición y etalonaje; la observación es independiente del perfil XAVC.",
+            "Si un rush es fácil de editar sin artefactos, eso indica siempre un perfil de baja resolución dentro de XAVC."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta identifica XAVC Intra como la variante más conveniente para edición y grading por frames independientes. Los distractores contradicen la relación técnica (Long‑GOP no mejora acceso frame‑by‑frame), niegan diferencias operativas o asocian facilidad de edición a baja resolución; la diferencia decisiva es la naturaleza intra‑frame frente a inter‑frame.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la secuencia correcta de ingesta verificada y control de calidad:",
+          "options": [
+            "Calcular checksums únicamente en el destino, sin comparar con un valor original, y posteriormente registrar las copias como verificadas.",
+            "Copiar la esencia, calcular checksums en origen y destino, validar la integridad comparando checksums y registrar la operación en el sistema de catálogo.",
+            "Verificar estructura de ficheros y metadatos además de la integridad bit‑a‑bit antes de borrar el soporte original temporal.",
+            "Registrar en el catálogo información de origen, cómputos de checksum y resultados de las validaciones para trazabilidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción: calcular checksums solo en destino sin comparación no asegura integridad porque falta la referencia original. Las otras opciones describen pasos correctos (checksum origen/destino, verificación de estructura/metadatos, registro para trazabilidad); la diferencia decisiva es la necesidad de comparación entre valores originales y generados tras la copia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: al convertir material 25 fps a 29.97 fps mediante duplicación/pulldown frente a interpolación por motion‑comp, ¿qué efecto distingue principalmente ambos métodos?",
+          "options": [
+            "Motion‑comp elimina cualquier necesidad de retoque y es completamente transparente en escenas con movimiento complejo.",
+            "Pulldown produce siempre resultados más fluidos que motion‑comp y carece de artefactos visuales.",
+            "Pulldown/duplicación genera repeticiones de fotogramas que suelen producir sensación de judder o saltos; la interpolación por motion‑compensa suaviza el movimiento pero puede introducir artefactos de muñeco o ghosting en bordes en movimiento.",
+            "Pulldown y motion‑comp producen efectos idénticos en todas las condiciones de movimiento."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta identifica la consecuencia clave: pulldown/duplicación causa judder por fotogramas repetidos; motion‑compensa ofrece fluidez pero puede generar interpolaciones visibles. Los distractores son falsos porque idealizan uno u otro método o niegan diferencias; la diferencia decisiva son los tipos de artefacto y su percepción en movimiento complejo.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en un archivo LTO con LTFS aparecen fallos de lectura esporádicos y varios ficheros sin entradas en el catálogo. ¿Cuál es la causa operativa más probable?",
+          "options": [
+            "Significa que la cinta tiene necesariamente rotura física irreversible en la zona donde estaban esos ficheros.",
+            "La causa más probable es un códec de vídeo incompatible que impide la lectura de ficheros desde cinta.",
+            "El catálogo LTFS está desincronizado o corrupto respecto al contenido físico de la cinta (índice incompleto o no finalizado), impidiendo localizar entradas aunque la esencia esté presente.",
+            "Que el sistema de archivos del servidor de ingest es FAT32 y no soporta ficheros grandes."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta apunta a desincronización o corrupción del catálogo LTFS, causa típica de ficheros ausentes en índice pese a lectura física parcial. Los distractores atribuyen el problema a incompatibilidad de códec (no afecta al catálogo), rotura física irreversible (posible pero no la causa más probable frente a índice corrupto) o al sistema de archivos del servidor (no se aplica a LTO/LTFS); la diferencia decisiva es la relación catálogo↔contenido en LTFS.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_match_action",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare criterios técnicos: al ejecutar un raccord de movimiento (match on action), ¿qué criterio operativo es más determinante para preservar la continuidad perceptiva del movimiento?",
+          "options": [
+            "Que los planos compartan idéntico balance de audio; la continuidad de movimiento depende esencialmente del emparejamiento sonoro.",
+            "La coincidencia exacta de colorimetría entre planos; la continuidad de movimiento depende principalmente del match de color.",
+            "Que ambos planos tengan la misma distancia focal numérica (f‑stop) y relación de aspecto; sólo así se mantiene continuidad de acción.",
+            "La coincidencia del vector de movimiento principal y la alineación temporal del punto de máxima aceleración/acción entre planos, más que la mera correspondencia de posiciones iniciales o finales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta sitúa el criterio en el vector y la sincronía temporal de la acción (momento de máxima aceleración), que garantizan la percepción de continuidad. Los distractores asignan prioridad a color, parámetros ópticos o audio; aunque relevantes en el plano general, no son el criterio decisivo para el raccord de movimiento. La diferencia decisiva es la coherencia espacial y temporal del gesto.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "082",
       "title": "Examen 082",
