@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-20",
+  "updatedAt": "2026-10-21",
   "exams": [
+    {
+      "id": "084",
+      "title": "Examen 084",
+      "date": "2026-10-21",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que mejor refleja la regulación del III Convenio sobre jornada, descansos y turnicidad:",
+          "options": [
+            "El convenio obliga a las empresas a implantar exclusivamente jornadas partidas para todos los puestos con turnicidad.",
+            "El convenio prohíbe cualquier sistema de rotación de turnos por motivos organizativos.",
+            "El convenio regula la organización por turnos y establece mecanismos de compensación mediante descansos y complementos retributivos según la turnicidad.",
+            "El convenio delega completamente en la dirección de cada centro la fijación de descansos sin exigir medidas compensatorias."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta indica la existencia de regulación sobre turnos y medidas de compensación (descansos y/o complementos) propia de un convenio colectivo. Los distractores fallan porque proponen una prohibición absoluta (C), una delegación total sin compensación (D) o una obligación de jornada partida universal (A), que no se corresponden con el carácter regulador y compensatorio del convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_backup_321",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Según la política 3‑2‑1, cuál de estas estrategias cumple correctamente la regla para material audiovisual:",
+          "options": [
+            "Tres copias: la original más dos copias; al menos dos tipos de soporte (por ejemplo disco y cinta) y una copia almacenada fuera del sitio, copias independientes entre sí.",
+            "Tres copias locales en RAID idéntico en el mismo armario para garantizar redundancia inmediata.",
+            "Una copia principal y un espejo en la misma cabina de almacenamiento con sincronización continua; es equivalente a backup si existe doble controlador.",
+            "Duplicación en SAN con snapshots diarios y replicación remota incrementa la tolerancia y sustituye la necesidad de múltiples soportes distintos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta recoge el principio 3‑2‑1: tres copias, en mínimo dos tipos de soporte y al menos una copia fuera del sitio, todas independientes. El distractor más próximo (D) confunde replicación/remoto con la exigencia de soportes distintos e independencia física; (A) y (C) dependen de la misma ubicación o tecnología (RAID/mirror) y no cumplen la independencia requerida.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Ante la sospecha de que la entrada X no está realmente conectada a la salida Y de una matriz, ¿qué procedimiento operativo permite localizar y verificar el crosspoint con mayor trazabilidad?:",
+          "options": [
+            "Comprobar únicamente el estado lógico del crosspoint en el panel de control y confiar en su indicación.",
+            "Reproducir una señal de audio identificable en la entrada y pedir confirmación oral desde la cabina de destino.",
+            "Enviar desde la entrada un test visual identificable (patrón o timecode burn‑in), verificar su recepción en la salida con monitor y forma de onda, y contrastar con el registro de eventos de la matriz.",
+            "Reiniciar la matriz y comprobar si el problema desaparece; si persiste, cambiar cables aleatoriamente hasta localizar el fallo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta combina señal de prueba en la entrada, verificación física en la salida con herramientas de medida y contraste con registros de control, proporcionando trazabilidad. El distractor más próximo (A) es insuficiente porque el estado lógico puede no reflejar un fallo físico; (C) depende solo de audio y (D) es rudimentario y no trazable.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_consolidate_transcode",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la afirmación que diferencia correctamente 'Consolidate' de 'Transcode' en un flujo de edición:",
+          "options": [
+            "Consolidate re‑codifica todos los clips a un nuevo códec manteniendo handles; Transcode copia bit‑a‑bit los originales sin alterarlos.",
+            "Consolidate copia segmentos seleccionados de las fuentes originales (incluyendo handles si se configura) sin cambiar el códec; Transcode genera nuevos ficheros re‑codificados a un códec distinto, alterando la esencia original.",
+            "Consolidate elimina metadatos y normaliza timecode; Transcode solo cambia resolución manteniendo la cadena de bits original.",
+            "Consolidate crea proxies de baja resolución para editar rápidamente; Transcode sincroniza automáticamente los proyectos entre estaciones."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta distingue que consolidate copia trozos de la esencia original (posibilidad de handles) sin recodificar, mientras que transcode produce ficheros re‑codificados en otro códec. El distractor más cercano (A) invierte los procesos; (C) y (D) describen acciones incorrectas o mezcladas que no definen correctamente ambas operaciones.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Durante visionado y selección en un flujo XDCAM, señale la afirmación que constituye una excepción respecto a la relación proxy‑esencia de alta resolución:",
+          "options": [
+            "El proxy facilita una reproducción ágil para selección en estaciones con recursos limitados manteniendo enlace a la esencia original para reconformado.",
+            "El proxy suele tener códec y resolución reducidos, adecuados para rough cuts, mientras que la esencia mantiene la calidad para finalización.",
+            "Durante la ingesta se asocia proxy y esencia para permitir relink fiable en la etapa de conformado.",
+            "El proxy reemplaza completamente la esencia para etalonaje final sin necesidad de relink a alta resolución."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta (excepción) afirma erróneamente que el proxy es suficiente para etalonaje final: el proxy no garantiza colorimetría ni resolución necesarias. Los distractores describen usos válidos: reproducción rápida (A), diferencias de códec/resolución (B) y la asociación para relink (D).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_color_order",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto al orden operativo habitual en corrección de color (normalización, balance, contraste, matching, look), indique la afirmación que constituye una excepción:",
+          "options": [
+            "Aplicar primero la normalización de exposición y negros, luego balance de blancos, después ajuste de contraste, matching entre planos y finalmente aplicar el look creativo.",
+            "Ejecutar matching de color entre planos tras las correcciones primarias y antes del look final para mantener coherencia.",
+            "Realizar el look creativo antes de normalizar para ahorrar tiempo en pruebas de estilo.",
+            "Corregir balance y contraste en correcciones primarias antes de pasar al matching y al look."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es una excepción porque aplicar el look creativo antes de normalizar distorsiona el proceso técnico: las correcciones primarias (normalización, balance, contraste) deben preceder al matching y al look. Los demás enunciados respetan la secuencia técnica aceptada.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En un diagnóstico de compresión para emisión, ¿qué ventaja técnica aporta YCbCr frente a RGB?:",
+          "options": [
+            "YCbCr es siempre incompatible con estaciones de etalonaje profesionales que trabajan en RGB.",
+            "YCbCr preserva los canales rojo, verde y azul por separado, evitando la necesidad de convertir a otro espacio para compresión.",
+            "YCbCr elimina la componente de luminancia para priorizar la información de color en emisión.",
+            "YCbCr separa luminancia (Y) y crominancias (Cb,Cr), lo que permite submuestrear color (por ejemplo 4:2:2) reduciendo bitrate sin degradar la información de luminancia crítica para la percepción."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta expone que YCbCr separa luminancia y crominancia, habilitando submuestreo de color y mayor eficiencia de compresión sin afectar tanto la luminancia. Los distractores son incorrectos: B confunde con RGB; C es falso (YCbCr no elimina luminancia); D es falso: YCbCr es compatible con flujos profesionales mediante conversiones adecuadas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare estas descripciones y señale la más ajustada a la naturaleza y estructura básica de la Corporación según la Ley 17/2006:",
+          "options": [
+            "Corporación con carácter público que dispone de órganos colegiados de gobierno y órganos de gestión ejecutiva diferenciados.",
+            "Entidad privada sometida únicamente al derecho mercantil y sin órganos de control público.",
+            "Organismo administrativo sin personalidad propia integrado en un ministerio y dirigido por un funcionario nombrado libremente por el titular del departamento.",
+            "Empresa municipal dependiente de administraciones locales con autonomía plena para la contratación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta describe la condición pública y la existencia de órganos de gobierno colegiados y gestión ejecutiva, que es la aproximación adecuada al régimen orgánico previsto. Los distractores proponen fórmulas privadas, ausencia de personalidad o dependencia municipal que no se ajustan a la ley.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que describe con precisión el efecto de un 'ripple trim', 'roll trim' y 'slip/slide':",
+          "options": [
+            "Ripple: crea un fundido entre clips; Roll: recorta sólo la entrada de un clip; Slide: recorta sólo la salida de un clip.",
+            "Ripple: mueve el contenido interno del clip sin alterar la timeline; Roll: cambia la duración total del proyecto; Slip: corta y borra material automáticamente.",
+            "Ripple: modifica un punto de corte desplazando la duración de la secuencia; Roll: ajusta simultáneamente salida y entrada de dos clips sin cambiar la duración total; Slip/Slide: desplazan el contenido interno de un clip (slip) o la posición del clip en la timeline (slide) manteniendo puntos opuestos.",
+            "Ripple: intercambia dos clips manteniendo duración; Roll: añade handles automáticos; Slip/Slide: ajusta el audio pero no el vídeo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta define correctamente los efectos: ripple desplaza posterior/precedente afectando duración; roll ajusta puntos de corte adyacentes sin cambiar duración total; slip altera el contenido interno del clip manteniendo su posición en la timeline; slide mueve el clip manteniendo el contenido visible. Los distractores contienen definiciones incorrectas o mezcladas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Respecto al uso de la línea de tono de piel en el vectorscopio, ¿cuál es su aplicación y límite operativo?:",
+          "options": [
+            "Indica exclusivamente la cantidad de saturación que deben tener todas las pieles en emisión; valores fuera de la línea son automáticamente ilegales.",
+            "Se utiliza como referencia angular para verificar matiz de tonos de piel y orientar correcciones; no garantiza luminancia ni uniformidad por variación étnica, por lo que debe combinarse con control de exposición.",
+            "Sustituye a la medición de balance de blancos porque define temperatura de color exacta del sensor.",
+            "Debe usarse como único criterio para etalonaje, ya que asegura reproducción idéntica en todas las pantallas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta explica que la skin line es referencia de matiz (ángulo) y su límite: no determina luminancia ni acomoda variaciones étnicas, por lo que debe complementarse. Los distractores sobre obligatoriedad legal, sustitución del balance o exclusividad son incorrectos.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Al preparar una playlist en EVS/IPDirector con orden y transiciones para emisión, qué práctica garantiza con más seguridad que el playout respetará exactamente orden y transiciones:",
+          "options": [
+            "Publicar la playlist incluyendo las transiciones y asegurarse de que todos los clips referenciados y las versiones necesarias estén presentes en el servidor de playout antes de la publicación.",
+            "Exportar solo una lista de nombres de clips y depender de la resolución automática en el servidor de emisión.",
+            "Crear una playlist en el NLE y esperar que EVS la interprete sin conversión ni comprobación.",
+            "Reproducir localmente las transiciones en la estación de edición y asumir que el servidor aplicará las mismas curvas de transición."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta exige publicar la playlist con transiciones y verificar la presencia de todas las versiones en el servidor de playout; así se asegura que el servidor tenga los elementos y la información necesaria. Los distractores (B,C,D) omiten la verificación, conversión o compatibilidad necesaria.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor interpreta derechos y obligaciones en prevención de riesgos laborales:",
+          "options": [
+            "El empleador debe proporcionar información y formación sobre riesgos y medios de protección; los trabajadores deben utilizar adecuadamente los medios facilitados y colaborar en las medidas preventivas.",
+            "Los trabajadores son los únicos responsables de su seguridad y el empleador no tiene obligaciones formativas.",
+            "La obligación de formación es opcional y se limita a puestos con riesgo evidente de caída de altura.",
+            "La cooperación del trabajador es subsidiaria; la información puede omitirse si existen manuales técnicos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta recoge la obligación del empleador de informar y formar y la obligación del trabajador de usar los medios y cooperar. Las demás opciones minimizan o niegan responsabilidades legales establecidas en PRL.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Comparando J‑cut y L‑cut, ¿qué diferencia en la entrada o permanencia del audio es la más precisa?:",
+          "options": [
+            "Un L‑cut adelanta visualmente el siguiente plano y un J‑cut retrasa la imagen anterior.",
+            "En un J‑cut el audio se elimina por completo; en un L‑cut el audio se duplica.",
+            "Un J‑cut y un L‑cut son la misma técnica aplicada indistintamente al diálogo.",
+            "En un J‑cut el audio del plano siguiente comienza antes de que aparezca su imagen; en un L‑cut el audio del plano anterior permanece mientras se muestra la imagen siguiente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta distingue que el J‑cut adelanta el audio del siguiente plano y el L‑cut mantiene el audio del plano anterior sobre la imagen siguiente. Los demás enunciados son imprecisos o incorrectos sobre la naturaleza de ambas técnicas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que distingue con precisión contenedor frente a códec en relación con MOV, MP4 y MXF:",
+          "options": [
+            "MOV/MP4 y MXF son sinónimos exactos e intercambiables en todos los flujos profesionales sin necesidad de conversión.",
+            "MOV y MP4 son códecs que definen cómo se comprime el vídeo; MXF es un formato de archivo de imagen fija.",
+            "MXF siempre contiene solo audio sin vídeo; MOV/MP4 solo contienen vídeo sin audio.",
+            "MOV/MP4 y MXF son contenedores que encapsulan flujos codificados por códecs; MXF está diseñado para interoperabilidad profesional y metadatos estructurados, mientras que MOV/MP4 son contenedores de uso general más extendidos en entornos consumidores y de postproducción."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta aclara que los tres son contenedores y que MXF ofrece características profesionales (metadatos, estructuras OP) frente a MOV/MP4 de uso general. Los distractores confunden contenedor con códec o contienen afirmaciones falsas sobre su contenido o equivalencia.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Según el II Plan de Igualdad y la Guía de Igualdad de RTVE, indique la medida específica destinada a prevenir representaciones sexistas en los contenidos:",
+          "options": [
+            "Limitar la presencia de mujeres en pantalla al 30% sin más medidas complementarias.",
+            "Establecer revisión y validación de guiones y contenidos mediante guías de lenguaje no sexista y formación obligatoria para el personal creativo.",
+            "Permitir que cada dirección artística decida sin criterios comunes para evitar intervencionismo editorial.",
+            "Eliminar todo tipo de ficción que incluya conflictos de género."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta es una medida concreta y coherente: revisión de guiones, guías de lenguaje y formación. Las otras opciones son arbitrarias, ineficaces o desproporcionadas y no corresponden a las políticas de prevención y corrección que propone el plan.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a compatibilidad entre HDR y SDR, ¿cuál afirmación describe con más precisión la limitación práctica?:",
+          "options": [
+            "Cualquier señal HDR se convierte automáticamente a SDR en equipos de emisión sin pérdida de información gracias a metadatos.",
+            "HDR y SDR son completamente intercambiables sin transformación y se muestran idénticos en cualquier pantalla.",
+            "Un master HDR contiene mayor rango de luminancia; para visualizarlo en SDR es necesario aplicar mapeo de tono o conversión, pues una reproducción directa en pantalla SDR no preserva la intención lumínica.",
+            "La única diferencia entre HDR y SDR es la resolución espacial."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta apunta que HDR tiene mayor rango lumínico y requiere tone‑mapping o conversión para SDR; la reproducción directa en SDR no preserva la intención creativa. Los distractores son incorrectos porque confunden compatibilidad automática, niegan diferencias esenciales o reducen la diferencia a resolución.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_target",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Al adaptar el estilo de edición de un magazine para un público juvenil, qué diagnóstico sobre ritmo y recursos es el más apropiado:",
+          "options": [
+            "Aumentar la cadencia de cortes, densidad de planos y uso de recursos gráficos dinámicos para mantener atención y adecuarse al target.",
+            "Reducir al mínimo los cortes y evitar recursos gráficos para no distraer al espectador joven.",
+            "Mantener ritmo lento y planos largos porque el público juvenil prefiere contemplación estética.",
+            "Eliminar por completo la música contemporánea y centrarse solo en diálogos largos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta prescribe mayor cadencia, densidad y recursos gráficos, coherente con prácticas para audiencias jóvenes. Los distractores proponen ralentizar o eliminar elementos clave de dinamismo, lo que sería contraproducente para ese target.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_checksum",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Sobre el uso de checksums para verificar integridad antes y después de una operación, cuál afirmación describe con mayor precisión su límite operativo:",
+          "options": [
+            "Un checksum es innecesario si la copia se realiza en la misma cabina física porque los datos siempre son idénticos.",
+            "Un checksum puede detectar cambios semánticos en la interpretación del contenido aun cuando los bits no cambian.",
+            "Un checksum corrige automáticamente errores detectados durante la copia si existe discrepancia.",
+            "Un checksum confirma identidad bit‑a‑bit entre origen y destino; sin embargo, cualquier cambio en metadatos o contenedor (p. ej. re‑envolver) altera el checksum aunque la esencia visual pueda seguir siendo reproducible."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta explica que los checksums verifican identidad bit‑a‑bit y su límite: cambios en metadatos o re‑envolvimientos alteran el checksum sin que necesariamente la esencia sea ilegible. Los demás enunciados asumen capacidades de detección semántica, corrección automática o seguridad absoluta que los checksums no proporcionan.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Comparando factores de riesgo y medidas preventivas para trastornos musculoesqueléticos en teclado, ratón y tableta, cuál opción resume mejor las medidas recomendadas:",
+          "options": [
+            "Mantener manos elevadas y descansando sobre bordes afilados para mayor precisión.",
+            "Ajuste ergonómico del puesto (altura de silla y mesa), apoyo de antebrazos, uso de reposamuñecas neutros, alternancia de dispositivo y pausas micro‑ergonómicas frecuentes.",
+            "Eliminar pausas para aumentar productividad; la prevención se realiza con analgésicos.",
+            "Forzar postura fija y evitar cualquier ajuste dinámico para crear hábito."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta incluye ajustes ergonómicos, variedad de dispositivos y pausas frecuentes, que son medidas preventivas reconocidas. Los distractores promueven prácticas perjudiciales o incorrectas (posturas forzadas, ausencia de pausas, remedios inadecuados).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a la ley de Ohm y la potencia en equipos audiovisuales, señale la afirmación que constituye una excepción (incorrecta):",
+          "options": [
+            "En un circuito resistivo, la relación operativa es V = I·R y la potencia disipada P = V·I.",
+            "Si se duplica la resistencia en un circuito alimentado por tensión constante, la potencia consumida por la resistencia se duplica.",
+            "Aumentar la tensión aplicada a un equipo, manteniendo la resistencia, aumenta la potencia disipada proporcionalmente al cuadrado de la tensión.",
+            "Si se mantiene constante la tensión de alimentación y se duplica la resistencia, la corriente disminuye a la mitad y la potencia en la resistencia se reduce."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta (excepción) es falsa: con tensión constante, duplicar la resistencia reduce la corriente a la mitad y la potencia P=V^2/R se reduce a la mitad, no se duplica. Las demás opciones expresan relaciones correctas entre V, I, R y P.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "083",
       "title": "Examen 083",
