@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-22",
   "exams": [
+    {
+      "id": "085",
+      "title": "Examen 085",
+      "date": "2026-10-22",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al diseñar controles de acceso a una plataforma audiovisual para cumplir Ley 13/2022 sobre protección de menores, indique la medida técnica operativa que debe implantarse para limitar el acceso de menores a contenidos clasificados por edad:",
+          "options": [
+            "Aplicar un sistema de verificación de edad y control de acceso asociado a cuentas de usuario, integrado con la clasificación por edad.",
+            "Incluir en cada programa una etiqueta visible de clasificación por edad y un aviso informativo al inicio del contenido.",
+            "Limitar la emisión de los contenidos clasificados a franjas horarias protegidas sin controles de acceso adicionales.",
+            "Ofrecer una opción para que los padres activen manualmente un filtro desde las opciones del reproductor sin verificación de identidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La obligación normativa exige medidas efectivas de control de acceso: la verificación de edad y controles de cuenta impiden accesos no autorizados. Las etiquetas y avisos son obligatorias pero insuficientes (distractor más próximo); las franjas horarias o filtros manuales sin verificación no garantizan que un menor no acceda.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En edición lineal A/B‑Roll, ¿cuál es la función principal de la prelectura (preview) al preparar una transición?",
+          "options": [
+            "Enviar automáticamente la fuente seleccionada al bus de programa en el siguiente corte.",
+            "Permitir comprobar y ajustar puntos de entrada/salida de las fuentes A o B sin alterar la señal de programa.",
+            "Aplicar la transición definitiva simulada sobre la salida de programa para ensayo en vivo.",
+            "Bloquear las entradas A y B para evitar cambios accidentales durante la preparación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La prelectura permite verificar y preparar los puntos de corte en las fuentes A/B sin afectar el programa. El distractor más cercano (enviar al programa) confunde preview con programa: preview no altera la salida en directo.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_elipsis",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la opción que constituye una excepción respecto al uso de la elipsis para comprimir tiempo narrativo sin comprometer la comprensión:",
+          "options": [
+            "Sustituir una larga travesía por una serie de planos de recurso que indiquen progresión temporal.",
+            "Usar un fundido o recurso gráfico que marque el salto temporal entre dos escenas relacionadas.",
+            "Omitir una acción causal imprescindible para la comprensión de la siguiente secuencia.",
+            "Reducir la duración de planos de transición manteniendo información contextual suficiente."
+          ],
+          "correctIndex": 2,
+          "explanation": "Omitir una acción causal imprescindible rompe la cadena lógica y perjudica la comprensión; por eso es la excepción. Los otros distractores son técnicas válidas para indicar el paso del tiempo sin pérdida de comprensión.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Tras la ingesta desde un soporte de estado sólido (SSD), cuál de las siguientes prácticas interpreta mejor las recomendaciones operativas:",
+          "options": [
+            "Ejecutar TRIM y optimización del SSD como primer paso antes de transferir los ficheros al archivo.",
+            "Formatear inmediatamente el SSD para liberarlo y evitar duplicidades, manteniendo copia única en servidor.",
+            "Verificar integridad mediante checksum y consolidar copias en almacenamiento de archivo antes de formatear el soporte.",
+            "Conservar el SSD como copia única de seguridad primaria sin generar copias adicionales."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica recomendada es verificar integridad (checksums) y consolidar copias antes de formatear el SSD. Formatear inmediatamente o usar el SSD como única copia son riesgos; TRIM es una operación de mantenimiento, no sustituye la verificación y copia previa (distractor próximo).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que describe correctamente la adecuación de black burst y tri‑level sync según SD y HD:",
+          "options": [
+            "Black burst es la referencia habitual en señales SD entrelazadas; tri‑level sync es la referencia preferida para señales HD progresivas.",
+            "Tri‑level sync se usa exclusivamente en SD; black burst es imprescindible en HD.",
+            "Ambas señales son intercambiables en cualquier entorno sin diferencias operativas.",
+            "Black burst contiene información de color que tri‑level sync no soporta, por lo que ambos son complementarios."
+          ],
+          "correctIndex": 0,
+          "explanation": "Black burst se emplea en señales SD (entrela zadas) y tri‑level sync en HD/progresivo por su mayor precisión de flanco; por eso la primera opción es correcta. Los demás distractores confunden ámbitos de uso o inventan diferencias técnicas incorrectas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_incendio",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Se detecta humo en un rack de equipos eléctricos en plató. Ordene la actuación prioritaria correcta:",
+          "options": [
+            "Priorizar apagar todos los equipos por orden de cercanía con agua pulverizada y solo después avisar al responsable.",
+            "Intentar apagar manualmente el equipo afectado desconectando cables en caliente y continuar operación si el humo cesa.",
+            "Verificar el origen sin avisar al resto del personal, aislar físicamente el rack y reiniciar alimentación tras enfriamiento.",
+            "Aislar la alimentación desde el cuadro si es seguro hacerlo, avisar y coordinar la evacuación, y si procede extinguir con agente apropiado para riesgo eléctrico."
+          ],
+          "correctIndex": 3,
+          "explanation": "La secuencia prioriza seguridad eléctrica y evacuación: aislar alimentación si es seguro, avisar/evacuar y usar un extintor adecuado para electricidades (CO2 o polvo seco). Los distractores proponen acciones inseguras (desconexión en caliente, uso de agua) o falta de aviso, por eso son incorrectos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Sobre ProRes y DNxHR como códecs intermedios: señale la afirmación que mejor interpreta su uso y características:",
+          "options": [
+            "Ambos son códecs intra‑frame destinados a postproducción; ofrecen perfiles con distintas tasas y buena compatibilidad entre NLEs.",
+            "Son códecs pensados únicamente para entrega final y no recomendados para edición intermedia.",
+            "ProRes es siempre de 8 bits y DNxHR solamente admite Long‑GOP para compatibilidad con Avid.",
+            "Ambos son contenedores que no afectan a la velocidad de edición y prescinden de perfiles de calidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "ProRes y DNxHR son códecs intra‑frame usados como intermediarios en edición, con diversos perfiles y amplia compatibilidad. Los distractores son incorrectos: no son exclusivos de entrega, admiten 10 bits/perfiles y no son contenedores neutros.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al contenido sustantivo del principio constitucional de igualdad y prohibición de discriminación:",
+          "options": [
+            "El principio prohíbe discriminaciones por nacimiento, raza, sexo, religión, opinión o cualquier otra condición personal o social.",
+            "El principio permite que la administración establezca tratos diferenciados arbitrarios por razones de conveniencia administrativa.",
+            "La ley puede establecer medidas de acción positiva para corregir desigualdades de hecho entre colectivos.",
+            "Las autoridades públicas deben adoptar medidas para promover condiciones que hagan efectivo el principio de igualdad."
+          ],
+          "correctIndex": 1,
+          "explanation": "La última afirmación es falsa y por tanto la excepción: el principio no autoriza tratos diferenciados arbitrarios. Las tres primeras reflejan contenidos reales: prohibición de discriminación, obligación de actuación pública y posibilidad de acción positiva.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En la dimensionamiento de un servidor de vídeo para reproducción concurrente, ¿qué magnitud determina con mayor precisión el número máximo de canales reproducibles simultáneamente?",
+          "options": [
+            "Throughput sostenido de lectura del almacenamiento (ancho de banda efectivo).",
+            "Capacidad total del almacenamiento en terabytes.",
+            "Número de IOPS aleatorios máximo del sistema de ficheros.",
+            "Velocidad de rotación nominal de los discos (RPM)."
+          ],
+          "correctIndex": 0,
+          "explanation": "El número de canales concurrentes está limitado principalmente por el throughput sostenido (MB/s o Gbit/s) que el almacenamiento y la red pueden suministrar. Capacidad o RPM no determinan simultaneidad directa; IOPS importan para accesos aleatorios, pero para flujo continuo de vídeo el throughput es decisivo (distractor próximo).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: una secuencia compuesta por planos muy cortos carentes de movimiento interno o puntos de interés tiende a producir:",
+          "options": [
+            "Una mayor claridad narrativa, ya que la ausencia de movimiento interno reduce la distracción.",
+            "Percepción de gran dinamismo sostenido por la sola reducción de la duración de plano.",
+            "Una sensación rítmica fragmentaria y desconectada por falta de ritmo interno que sostenga los cortes.",
+            "La sensación de continuidad espacial plena, compensando cortes rápidos."
+          ],
+          "correctIndex": 2,
+          "explanation": "Cuando los planos son muy cortos pero carecen de movimiento interno, falta un ritmo interno que conecte los cortes, resultando en sensación fragmentaria. Los otros enunciados confunden duración con coherencia: cortar rápido no garantiza dinamismo ni continuidad sin elementos internos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Cuando varias cámaras comparten un código de tiempo común para edición multicámara, qué condición es imprescindible para utilizar ese TC como referencia fiable en reconformado:",
+          "options": [
+            "Que cada cámara tenga su propio TC independiente y que el NLE calcule la alineación por audio.",
+            "Que el código de tiempo sea continuo y coherente en todas las cámaras (sin resets) y que framerate y velocidad de grabación coincidan.",
+            "Que baste con el nombre de archivo para que el relink automático funcione, independientemente del TC.",
+            "Que las cámaras usen distintos orígenes de TC pero con marcas de clapper para sincronizar manualmente."
+          ],
+          "correctIndex": 1,
+          "explanation": "Para que el TC común sirva como referencia fiable se requiere continuidad del TC en todas las cámaras y coincidencia de framerate/velocidad; los demás métodos son alternativos o imprecisos y no permiten relink automático fiable.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al preparar una señal destinada a un canal con ancho de banda fijo y multiplexado, cuál es la estrategia de bitrate más adecuada:",
+          "options": [
+            "Elegir VBR para maximizar calidad media sin considerar variaciones de ocupación del enlace.",
+            "Configurar CBR para garantizar ocupación constante del enlace y evitar sobrepasos en el multiplex.",
+            "Asignar bitrate dinámico al encoder sin restricciones, permitiendo picos por encima del ancho de banda asignado.",
+            "Usar VBR con picos ilimitados y rely on network buffering to absorb peaks."
+          ],
+          "correctIndex": 1,
+          "explanation": "En canales con ancho de banda fijo y multiplexado es procedimentalmente correcto usar CBR para asegurar que la señal no sobrepase la asignación del enlace. VBR puede mejorar calidad pero introduce variabilidad que puede provocar pérdida en un enlace fijo (distractor más próximo).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico operativo: archivos en un fondo de archivo presentan codecs obsoletos y algunos lectores no abren ficheros. Qué plan prioritario responde mejor al problema:",
+          "options": [
+            "Borrar los ficheros no legibles para liberar espacio y conservar solo los que abren en sistemas actuales.",
+            "Realizar verificación de integridad, documentar formatos obsoletos y planificar migración a formatos soportados con preservación de master y checksums.",
+            "Mantener los ficheros en su formato original indefinidamente y esperar interoperabilidad futura del software.",
+            "Convertir masivamente a un códec con pérdida máxima para ahorrar espacio sin controles previos."
+          ],
+          "correctIndex": 1,
+          "explanation": "El diagnóstico correcto contempla verificar integridad, catalogar formatos obsoletos y planificar migración controlada a formatos actuales preservando masters y checksums. Borrar o convertir sin control o confiar en compatibilidad futura son respuestas inadecuadas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_offline_online",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que describe con mayor precisión la relación entre montaje proxy (offline), la lista de decisiones y el reconformado a originales (online):",
+          "options": [
+            "El montaje en proxy genera una lista de decisiones (EDL/AAF/OC) que contiene referencias temporales y metadatos necesarios para reconformar a los originales sin depender de rutas absolutas.",
+            "La lista de decisiones incluye automáticamente todos los efectos GPU aplicados en el proxy para replicarlos en los originales.",
+            "El reconformado exige que los proxies y los originales conserven exactamente la misma ruta de archivo en disco.",
+            "El montage offline reemplaza los originales y por tanto no requiere reconformado."
+          ],
+          "correctIndex": 0,
+          "explanation": "La relación correcta es que el offline produce una lista de decisiones con referencias temporales/metadatos que permite reconformar a originales; no incluye necesariamente efectos procesados en proxy ni exige mismas rutas absolutas; tampoco sustituye originales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare principios de la Ley 31/1995: ¿qué enunciado distingue mejor la obligación preventiva del empleador frente a la mera orientación general del principio?",
+          "options": [
+            "Considerar la prevención como una opción discrecional que puede aplicarse solo en actividades de alto riesgo.",
+            "Limitarse a difundir mensajes genéricos de seguridad sin documentación ni seguimiento de medidas.",
+            "Delegar totalmente la prevención en los trabajadores sin participación del empleador.",
+            "Integrar la prevención en la organización empresarial mediante evaluación de riesgos, planificación de medidas y comprobación periódica de su eficacia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley exige integrar la prevención en la gestión empresarial: evaluación, planificación y verificación periódica. Los distractores minimizan obligaciones: son enfoques insuficientes o erróneos frente a la obligación legal.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_red_ip",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Diagnóstico básico: si un puesto de edición no accede a recursos de red compartida, qué comprobación distingue mejor un problema de direccionamiento IP de uno de puerta de enlace:",
+          "options": [
+            "Modificar la puerta de enlace por otra al azar hasta que el acceso funcione.",
+            "Intentar acceso vía protocolo SMB; si falla, cambiar la máscara de subred aleatoriamente.",
+            "Reiniciar la tarjeta de red sin comprobar la configuración IP para restaurar conectividad.",
+            "Hacer ping a la puerta de enlace local; si responde, el problema es probablemente de ruta hacia fuera; si no responde, revisar IP/máscara del equipo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La comprobación correcta para diferenciar problemas es hacer ping a la puerta de enlace: su respuesta indica que el direccionamiento local y la puerta de enlace están operativos; si no responde, hay problema de IP/máscara. Los demás pasos son improvisados y no diagnósticos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la opción que constituye una excepción respecto a criterios adecuados para diseñar proxies para edición (resolución, bitrate, códec):",
+          "options": [
+            "Optar por un códec intraframe de baja resolución y bitrate moderado para asegurar scrubbing y relink fiable.",
+            "Elegir una resolución que preserve relación de aspecto y timecode 1:1 respecto al original.",
+            "Incluir metadatos que permitan relink (UMID, reel, timecode) junto al fichero proxy.",
+            "Usar códecs Long‑GOP altamente comprimidos como único proxy destinado a edición interactiva."
+          ],
+          "correctIndex": 3,
+          "explanation": "El uso exclusivo de códecs Long‑GOP muy comprimidos como proxy es la excepción: dificultan scrubbing y relink fiable. Las otras opciones son prácticas recomendadas: intraframe o formatos edit‑friendly, mantener relación de aspecto/timecode y metadatos para reconformado.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: ante una estación donde la reproducción en timeline es fluida pero los efectos GPU‑acelerados tardan en renderizar y el export del master es lento, indique la intervención prioritaria para CPU, GPU y RAM respectivamente:",
+          "options": [
+            "Aumentar solo la RAM para resolver todos los problemas de render y export.",
+            "Priorizar ampliar únicamente la CPU; la GPU y la RAM no influyen en render de efectos ni export.",
+            "Incrementar GPU para acelerar efectos en tiempo real; optimizar CPU para codificación de export; aumentar RAM si aparece swapping durante render.",
+            "Sustituir el disco del sistema por otro más grande sin tocar CPU/GPU/RAM."
+          ],
+          "correctIndex": 2,
+          "explanation": "La intervención ordenada corresponde a GPU (efectos en tiempo real), CPU (codificación/export) y RAM (evitar swapping durante render). Los demás distractores ignoran roles específicos o proponen medidas irrelevantes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Durante una grabación en ubicación externa (misión) el trabajador debe manipular equipos pesados en local ajeno. ¿Cuál es la medida preventiva del empleador más adecuada?",
+          "options": [
+            "Exigir que se realice la tarea solo fuera del horario laboral sin valoración previa.",
+            "No intervenir; delegar toda responsabilidad al responsable del local visitante.",
+            "Permitir la manipulación sin medidas si el trabajador declara experiencia previa.",
+            "Realizar evaluación de riesgos específica de la misión, informar y formar al trabajador, y facilitar equipos de protección y coordinación con el responsable local."
+          ],
+          "correctIndex": 3,
+          "explanation": "En misión corresponde evaluar riscos específicos, formar/informar y proporcionar medios y coordinación con el receptor. Delegar total responsabilidad o confiar solo en experiencia son prácticas inadecuadas según obligaciones preventivas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "measure_waveform_luma",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor describe el uso del monitor de forma de onda para verificar niveles y legalidad de luminancia en una cadena de emisión:",
+          "options": [
+            "Ajustar colores basándose únicamente en la traza vertical del waveform sin considerar el vectorscopio.",
+            "Usar el waveform exclusivamente para comprobar crominancia y ajustar matiz.",
+            "Medir picos y valores medios de luminancia para comprobar que no excedan los límites legales y aplicar corrección (ganancia/clip/ legalizer) si es necesario.",
+            "Ignorar picos de luminancia si el histograma indica exposición media correcta."
+          ],
+          "correctIndex": 2,
+          "explanation": "El waveform se usa para medir picos y niveles de luminancia y verificar legalidad; permite decidir correcciones de ganancia, clipping o legalizer. Los distractores confunden funciones (crominancia es vectorscopio), proponen dependencias incorrectas o ignoran picos relevantes.",
+          "category": "Equipos de medida y control"
+        }
+      ]
+    },
     {
       "id": "084",
       "title": "Examen 084",
