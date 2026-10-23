@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-22",
+  "updatedAt": "2026-10-23",
   "exams": [
+    {
+      "id": "086",
+      "title": "Examen 086",
+      "date": "2026-10-23",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la consecuencia operativa esencial de la reforma de 2017 en la designación de los órganos de RTVE y el paso inmediato requerido para su implementación:",
+          "options": [
+            "Remitir los nombramientos al poder judicial para ratificación previa y aplicar las designaciones tras resolución judicial.",
+            "Delegar la designación en el Gobierno y formalizar los nombramientos por real decreto inmediato.",
+            "Permitir la elección interna por cooptación entre los miembros actuales de los órganos de RTVE antes de su toma de posesión.",
+            "Transferir la competencia de nombramiento al Parlamento y proceder a la convocatoria parlamentaria para elegir a los miembros mediante el procedimiento previsto por la norma."
+          ],
+          "correctIndex": 3,
+          "explanation": "La reforma de 2017 recuperó la elección parlamentaria de los órganos de RTVE; operacionalmente exige que la designación se tramite ante el Parlamento. Los distractores confunden la vía (Gobierno, cooptación o judicial), que no reflejan la alteración esencial introducida por la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_lut_log",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al uso de LUT en un flujo logarítmico:",
+          "options": [
+            "Aplicar la misma LUT como corrección definitiva sobre los archivos maestros sin conservar la versión sin LUT.",
+            "Aplicar una LUT únicamente en el monitor para visualización mantiene la esencia original del archivo sin alterar el master.",
+            "Guardar la LUT aplicada en la sesión y consignarla en metadatos para reproducibilidad y trazabilidad.",
+            "Usar LUTs de visualización en el monitor y aplicar transformaciones finales separadas en la etapa de entrega."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es aplicar una LUT directamente sobre los archivos maestros sin conservar la versión sin LUT: confunde visualización con corrección irreversiblemente aplicada. Las otras opciones describen prácticas válidas de visualización, registro y separación de etapas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_evs_loop",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál es el principio operativo que permite recuperar una ejecución concreta en un servidor EVS configurado en grabación en bucle (loop)?",
+          "options": [
+            "Requerir ingest manual a fichero independiente; el loop solo mantiene referencias temporales no recuperables.",
+            "Contabilizar versiones completas en RAID externo para impedir cualquier sobrescritura en el buffer circular.",
+            "Duplicar automáticamente cada ejecución en un almacenamiento secundario independiente al producirse grabación en loop.",
+            "Marcar puntos IN/OUT sobre el buffer circular y registrar timecode/ID del clip para preservar y recuperar la ejecución antes de la sobreescritura."
+          ],
+          "correctIndex": 3,
+          "explanation": "La recuperación en loop se basa en marcas (IN/OUT) y metadatos (timecode/clip ID) sobre el buffer circular. Los distractores atribuyen mecanismos distintos a los habituales (duplicado automático en RAID o exclusión de recuperación) que no describen el principio operativo del loop.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_intelectual",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la definición de 'montaje intelectual' como recurso creativo:",
+          "options": [
+            "Depende exclusivamente de efectos visuales y transiciones para crear nuevas ideas.",
+            "El montaje intelectual genera significado por la yuxtaposición de planos que establecen relaciones de sentido más allá de la continuidad lineal.",
+            "Opera mediante asociación de ideas y relaciones entre imágenes que no necesariamente siguen la cronología literal.",
+            "Puede utilizar fragmentos documentales o de archivo para configurar argumentos metafóricos o conceptuales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es afirmar que depende exclusivamente de efectos y transiciones: el montaje intelectual se basa en asociaciones de ideas entre imágenes, no en efectos técnicos como causa exclusiva. Las otras opciones describen características válidas del recurso.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: durante un directo, los ficheros en crecimiento aparecen como inaccesibles para reconformado hasta el cierre de la esencia. Señale la causa operativa más probable:",
+          "options": [
+            "El sistema de archivos está corrupto y bloquea el acceso hasta una reparación en caliente.",
+            "El NLE o sistema exige la bandera de cierre del fichero (tabla de índices completa) para exponer el clip; hasta entonces no permite reconformado fiable.",
+            "Las growing files carecen de código de tiempo hasta finalizar la grabación, por lo que no son válidos para edición.",
+            "El servidor de ingest impide acceso por licencias concurrentes mientras graba, independiente del estado del fichero."
+          ],
+          "correctIndex": 1,
+          "explanation": "La causa típica es que muchos NLE requieren que el fichero esté cerrado (índices completados) para exponer clips y permitir reconformado; los otros distractores describen fallos o restricciones menos habituales o incorrectas respecto al síntoma descrito.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre conexión balanceada y rechazo de modo común. ¿Cuál es la más precisa?",
+          "options": [
+            "El rechazo de modo común es independiente de la longitud del cable y del apantallamiento usado.",
+            "La conexión balanceada elimina la necesidad de conexión a tierra, por lo que nunca es necesario usar la pantalla del cable.",
+            "El beneficio del balanceado depende exclusivamente del tipo de conector empleado, no del principio diferencial.",
+            "Una conexión balanceada transmite la señal diferencial en dos conductores con inversión de fase, y un receptor diferencial cancela ruidos comunes mejorando el rechazo de interferencias."
+          ],
+          "correctIndex": 3,
+          "explanation": "La descripción diferencial es la precisa: la señal se transmite en dos conductores, invertida en uno, y el receptor diferencial cancela ruido común. Los distractores confunden aspectos prácticos (masa, longitud, apantallamiento) o atribuyen el efecto solo al conector, lo que es incorrecto.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En una interfaz SDI serial, ¿cómo se transportan simultáneamente el vídeo, el audio embebido y los datos auxiliares (ANC)?",
+          "options": [
+            "El audio se multiplexa dentro de las muestras de crominancia y se recupera por separación espectral.",
+            "El vídeo se transmite en las muestras del raster activo; el audio embebido y otros datos viajan como paquetes ANC insertados en las porciones de blanking (HANC/VANC) según la especificación.",
+            "SDI reserva conexiones físicas separadas fuera del flujo serial para audio y datos auxiliares.",
+            "El audio embebido sustituye muestras de luminancia en líneas activas para optimizar ancho de banda."
+          ],
+          "correctIndex": 1,
+          "explanation": "En SDI el vídeo ocupa las muestras del raster activo; audio embebido y demás datos viajan como paquetes ANC en las porciones de blanking (HANC/VANC). Los distractores proponen multiplexados inadecuados o canales físicos fuera del flujo, que no describen la estructura SDI.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: identifique la afirmación que mejor sintetiza las fuentes y restricciones del modelo de financiación previsto por la Ley de 2009 para RTVE:",
+          "options": [
+            "La financiación se articula exclusivamente mediante ingresos íntegros por publicidad comercial sin recursos públicos.",
+            "El modelo combina aportaciones públicas y recursos procedentes de actividades propias, con restricciones en la publicidad y obligaciones de transparencia y control presupuestario.",
+            "La Ley obliga a financiar RTVE mediante aportaciones obligatorias de operadores privados mediante contratos bilaterales.",
+            "El modelo establece un canon único recaudado por ciudadanos como única fuente de financiación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley de 2009 contempla una combinación de fuentes (públicas y de actividad propia) y restricciones (publicidad limitada, transparencia). Las otras opciones presentan modelos exclusivos o forzados que no reflejan el modelo real.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: ante una lectura de correlación que cae de +0,9 a −0,7 en pasajes con amplia ambiental estéreo, indique la intervención prioritaria:",
+          "options": [
+            "Aplicar compresión multibanda para reducir la energía y estabilizar la correlación.",
+            "Comprobar inversión de polaridad en una de las pistas estéreo e invertir la polaridad si se confirma la inversión.",
+            "Convertir la pista a mono de forma inmediata para eliminar la discrepancia.",
+            "Aumentar la separación estéreo mediante procesamiento MS para recuperar correlación positiva."
+          ],
+          "correctIndex": 1,
+          "explanation": "Una caída a valores negativos sugiere inversión de polaridad en una pista; la intervención prioritaria es comprobar e invertir polaridad si procede. Los otros pasos son secundarios o inapropiados ante una posible inversión de fase.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: compare estos enunciados y seleccione el que describe con precisión tolerancia a fallos y reconstrucción en RAID:",
+          "options": [
+            "RAID5 tolera simultáneamente la pérdida de dos discos y reconstruye usando doble paridad distribuida.",
+            "RAID1 requiere como mínimo tres discos para tolerar un único fallo y reconstruye mediante striping con paridad.",
+            "RAID6 tolera la pérdida de hasta dos discos simultáneamente; RAID5 tolera la pérdida de uno, y la reconstrucción en RAID5 deja el conjunto degradado durante el rebuild.",
+            "RAID0 ofrece redundancia mediante paridad y permite reconstrucción tras fallo de un disco."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta indica que RAID5 tolera un fallo y RAID6 hasta dos; la reconstrucción en RAID5 deja el sistema en estado degradado y con mayor riesgo durante el rebuild. Los demás distractores describen incorrectamente capacidades de tolerancia o atribuyen paridad a RAID0/RAID1 de forma errónea.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la configuración de puesto con pantalla más compatible con distancia, altura, orientación, iluminación y control de reflejos:",
+          "options": [
+            "Monitor situado a 50–70 cm, borde superior ligeramente por debajo de la línea de mirada, pantalla orientada perpendicular a fuentes de luz, iluminación difusa y control de reflejos mediante visera o tratamiento antirreflejo.",
+            "Monitor a 30 cm del usuario, borde superior por encima de la línea de ojos, luz directa de ventana frontal sin control de reflejos.",
+            "Monitor a 100 cm con borde superior a nivel de ojos y fuente de luz puntual detrás del operador para máxima luminosidad.",
+            "Monitor inclinado hacia atrás a 40 cm, brillo al máximo para contrarrestar reflejos y sin reposapiés."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 cumple las recomendaciones ergonómicas: distancia 50–70 cm, borde superior por debajo de la mirada, orientación y control de iluminación/reflejos. Los distractores proponen distancias/iluminaciones que favorecen reflejos, incomodidad o postura inadecuada.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estas afirmaciones sobre la regla de los 180°: ¿cuál describe mejor la consecuencia de cambiar el eje de acción sin cobertura adecuada?",
+          "options": [
+            "La regla de los 180° es inaplicable en montaje documental y no produce problemas de comprensión.",
+            "Cambiar el eje no afecta a la percepción espacial si el diálogo y el sonido permanecen continuos.",
+            "Romper el eje invierte las posiciones relativas en pantalla y provoca confusión espacial si no se establece una nueva línea de eje mediante planos de enlace.",
+            "Un corte seco siempre preserva la continuidad espacial aunque se cambie el eje sin cobertura."
+          ],
+          "correctIndex": 2,
+          "explanation": "Cambiar el eje sin planos de enlace altera la relación izquierda/derecha entre sujetos, causando confusión; las otras afirmaciones minimizan o niegan el efecto, lo que es incorrecto.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a diferencias temporales y artefactos entre entrelazado y progresivo:",
+          "options": [
+            "El entrelazado divide los fotogramas en campos separados en el tiempo, lo que puede producir 'combing' en objetos en movimiento si se visualiza como frame completo.",
+            "El progresivo presenta cada fotograma completo en el tiempo, evitando artefactos de combing y facilitando procesado fotograma a fotograma.",
+            "El entrelazado elimina las diferencias temporales entre campos, por lo que no genera artefactos de movimiento.",
+            "La conversión de entrelazado a progresivo puede requerir desentrelazado para evitar artefactos en movimiento."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación 4 es la excepción: el entrelazado sí introduce diferencias temporales entre campos y puede generar artefactos de movimiento. Las otras opciones describen correctamente características y consecuencias técnicas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Identifique la correspondencia correcta entre las operaciones capture, import, link e ingest:",
+          "options": [
+            "Capture: grabación directa desde dispositivo a proyecto; Import: copiar/transcodificar ficheros al banco de medios; Link: crear referencias a ficheros sin duplicarlos; Ingest: proceso de registro formal que puede incluir checksum, metadatos y catalogación en MAM.",
+            "Capture: transferir por red sin registro; Import: grabación en tiempo real desde cámara; Link: transcodificación en el servidor; Ingest: sólo copia manual de seguridad.",
+            "Capture: crear proxies a partir del master; Import: sólo referencia externa; Link: eliminar ficheros originales; Ingest: acción de emisión en directo.",
+            "Capture: consolidar en LTO; Import: solo lectura; Link: indexar en la NLE; Ingest: clasificación por operador manual."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 asigna correctamente funciones operativas: capture=grabación directa, import=copiar/transcodificar, link=referenciar sin duplicar e ingest=registro formal con checksum/metadata. Los demás distractores mezclan o desvirtúan las operaciones.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la función de la clasificación profesional y la 'ocupación tipo' en el III Convenio Colectivo:",
+          "options": [
+            "La clasificación tiene carácter meramente estadístico sin efecto en la organización del trabajo.",
+            "La clasificación es una lista cerrada de puestos que impide la movilidad entre categorías.",
+            "La ocupación tipo únicamente regula la jornada laboral y no influye en funciones ni retribución.",
+            "La clasificación organiza grupos profesionales y la ocupación tipo delimita las funciones y tareas habituales que orientan la asignación de puestos y la organización del trabajo."
+          ],
+          "correctIndex": 3,
+          "explanation": "El convenio utiliza la clasificación y la ocupación tipo para ordenar grupos profesionales y definir funciones orientativas para la organización del trabajo. Los distractores reducen o niegan ese carácter operativo y vinculante.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la diferencia operativa entre código de tiempo drop‑frame y non‑drop‑frame en 29,97 fps:",
+          "options": [
+            "Drop‑frame reduce la tasa de fotogramas efectiva a 29,00 fps ajustando el contenido.",
+            "Non‑drop mantiene numeración ajustada al tiempo real evitando cualquier desalineación temporal.",
+            "Drop‑frame altera la numeración de frames (omitiendo ciertos números) para que el código de tiempo siga el tiempo real en 29,97 fps; no elimina fotogramas del material.",
+            "Non‑drop consiste en eliminar campos para igualar la numeración con el tiempo real."
+          ],
+          "correctIndex": 2,
+          "explanation": "Drop‑frame corrige la diferencia entre conteo de frames y tiempo real mediante ajuste de numeración (saltos en el contador), sin eliminar ni duplicar fotogramas. Los distractores confunden numeración con eliminación o cambio de tasa real.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "basic_dbfs",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor explica la consecuencia operativa de alcanzar 0 dBFS en una señal digital:",
+          "options": [
+            "0 dBFS significa que siempre existe headroom suficiente para procesamiento analógico posterior.",
+            "0 dBFS indica un nivel analógico seguro por debajo del ruido de cuantificación.",
+            "Alcanzar 0 dBFS equivale a eliminar la componente de continua (0 V) en la señal analógica.",
+            "0 dBFS es el techo digital; superar ese umbral provoca recorte (clipping) de las muestras y pérdida irreversible de información en esas muestras."
+          ],
+          "correctIndex": 3,
+          "explanation": "0 dBFS representa el máximo nivel digital y su superación produce clipping en las muestras afectadas. Los distractores confunden conceptos analógicos y suposiciones sobre headroom.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_metadatos",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un flujo audiovisual profesional, ¿qué función operativa desempeñan principalmente los metadatos técnicos y descriptivos para facilitar la catalogación, la búsqueda y el intercambio entre sistemas?",
+          "options": [
+            "Su función principal es actuar como depósito de toda la información legal y contractual previa a la distribución, evitando la consulta de sistemas o catálogos externos sobre derechos y licencias.",
+            "Sustituyen la verificación de integridad y la comprobación de ficheros (checksums), de modo que una ficha de metadatos correcta exonera de realizar verificaciones de integridad sobre la esencia.",
+            "Permiten la indexación y localización automática de activos mediante atributos estructurados (resolución, códec, TC, título, palabras clave, etc.), posibilitando decisiones automatizadas de procesamiento, reconformado y enrutado entre sistemas sin inspección manual del contenido.",
+            "Actúan como contenedores alternativos de la esencia: si falta el fichero de vídeo, los metadatos por sí solos permiten reproducir o reconstruir el contenido."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la primera: los metadatos técnicos y descriptivos definen atributos estructurados que permiten indexar, localizar y filtrar activos y automatizar pasos del flujo (transcodificación, relink, selección para playout, enrutado, etc.) sin necesidad de inspección manual. Esto distingue su papel operativo de funciones relacionadas pero diferentes: B es incorrecta porque la verificación de integridad requiere checksums y procesos específicos (los metadatos descriptivos no garantizan la integridad de la esencia); C es imprecisa: los metadatos pueden incluir información de derechos, pero no suponen la función principal operativa ni reemplazan la consulta o gestión contractual externa; D es falso: los metadatos describen la esencia pero no contienen ni permiten reproducirla si el fichero original falta.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_postura",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: un editor refiere dolor lumbar, hombros tensos y pies sin apoyo tras jornadas largas. Señale la intervención ergonómica prioritaria:",
+          "options": [
+            "Incrementar la iluminación de la pantalla y reducir pausas para mantener concentración.",
+            "Ajustar la silla con soporte lumbar y altura correctos, asegurar apoyo de antebrazos a la mesa y proporcionar reposapiés para mantener ángulo de rodilla adecuado.",
+            "Sustituir el teclado por uno vertical sin revisar ajuste de asiento ni reposapiés.",
+            "Reducir resolución de pantalla para disminuir movimientos oculares y así evitar tensión postural."
+          ],
+          "correctIndex": 1,
+          "explanation": "La intervención prioritaria es ajustar silla (soporte lumbar, altura), apoyar antebrazos y proporcionar reposapiés; actúa sobre las causas posturales. Los distractores proponen medidas erróneas o irrelevantes para el síntoma descrito.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: en un entorno compartido de Avid NEXIS, ¿qué acción técnica prioritaria mantiene el rendimiento concurrente sin degradación?",
+          "options": [
+            "Dimensionar y reservar recursos de almacenamiento y ancho de banda (shares/quota por pool), asegurar enlaces de red adecuados y promover uso de proxies/cache para reducir I/O sobre el sistema compartido.",
+            "Aumentar únicamente la CPU de los puestos de edición sin tocar configuración de almacenamiento ni red.",
+            "Comprimir todo el material en el servidor para reducir tráfico sin ajustar cuotas ni enlaces.",
+            "Centralizar todo el trabajo en un único volumen sin límites de concurrencia."
+          ],
+          "correctIndex": 0,
+          "explanation": "La medida prioritaria es dimensionar y reservar recursos (shares/quota), garantizar enlaces de red y usar proxies/cache para reducir I/O concurrente. Los distractores intentan soluciones parciales o contraproducentes que no abordan cuello de botella en almacenamiento/red.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "085",
       "title": "Examen 085",
