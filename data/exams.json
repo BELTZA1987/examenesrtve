@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-24",
   "exams": [
+    {
+      "id": "087",
+      "title": "Examen 087",
+      "date": "2026-10-24",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según la Ley 17/2006, ¿cuál de las siguientes afirmaciones describe mejor la misión y obligaciones de servicio público atribuidas a la Corporación RTVE?",
+          "options": [
+            "Emitir exclusivamente programación institucional y no contenidos críticos hacia poderes públicos.",
+            "Garantizar pluralismo, independencia editorial, información veraz y servicio al interés general en sus emisiones.",
+            "Priorizar la obtención de beneficios económicos sobre la pluralidad informativa.",
+            "Ejercer control de contenidos de prestadores privados para homogeneizar la oferta audiovisual."
+          ],
+          "correctIndex": 1,
+          "explanation": "La misión de RTVE es prestar un servicio público que garantice pluralismo, independencia y la difusión de información veraz en interés general; las otras opciones contradicen ese mandato (a y c presentan objetivos incorrectos; d excede las competencias de la Corporación).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: ¿Cuál de las siguientes actuaciones del empleador corresponde a sus obligaciones en materia de información, formación y cooperación en prevención?",
+          "options": [
+            "Facilitar equipos de protección sin proporcionar formación ni información sobre riesgos.",
+            "Limitar la formación preventiva a un comunicado anual enviado por correo electrónico.",
+            "Delegar totalmente en el trabajador la búsqueda de información y formación en prevención.",
+            "Proporcionar información sobre riesgos, formación práctica a los trabajadores y promover la cooperación con la representación de los trabajadores."
+          ],
+          "correctIndex": 3,
+          "explanation": "La obligación preventiva incluye informar, formar de forma adecuada y cooperar con la representación de los trabajadores; las demás opciones son actuaciones insuficientes o delegatorias que no cumplen esas obligaciones.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a soportes XDCAM, además de conservar carpetas e índices, indique la afirmación correcta sobre aspectos a verificar para garantizar acceso fiable en archivo:",
+          "options": [
+            "Convertir inmediatamente todo el contenedor XDCAM a MP4 para facilitar el acceso futuro.",
+            "Bastar con verificar únicamente la presencia de los nombres de carpeta sin comprobar la integridad de ficheros.",
+            "Comprobar spanning y continuidad de clips multi‑archivo, así como la integridad de metadatos que permiten reconstruir el clip.",
+            "Eliminar metadatos no estándar para reducir el tamaño del soporte."
+          ],
+          "correctIndex": 2,
+          "explanation": "Los soportes XDCAM pueden guardar clips en varios ficheros (spanning) y dependen de metadatos para reconstruirlos; verificar continuidad y metadatos es esencial. Las otras opciones son insuficientes o contraproducentes para acceso fiable.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: ¿Cuál es la consecuencia operativa más probable de una adaptación de impedancia incorrecta entre dos dispositivos en una cadena audiovisual?",
+          "options": [
+            "Reducción del jitter de reloj en señales digitales por la desadaptación.",
+            "Mejora automática de la relación señal/ruido gracias a la alteración de impedancias.",
+            "Protección del equipo ante sobrecarga eléctrica sin efectos en la señal.",
+            "Aparición de pérdidas de nivel y degradación de la respuesta en frecuencia en la señal."
+          ],
+          "correctIndex": 3,
+          "explanation": "Una mala adaptación de impedancias suele causar pérdidas de nivel y alteraciones en la respuesta en frecuencia por reflexiones o desajuste; las otras opciones son incorrectas o no son consecuencias de la desadaptación.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_news",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a prácticas habituales en la edición de noticias y su coordinación con redacción:",
+          "options": [
+            "La prioridad informativa condiciona la selección, orden y duración de los planos y totales.",
+            "La locución se adapta al tiempo disponible y a los recursos facilizados por redacción.",
+            "El editor respeta los tiempos asignados y coordina recursos con la redacción para cumplir la emisión.",
+            "La edición debe priorizar recursos estéticos por encima de la veracidad para lograr mayor impacto."
+          ],
+          "correctIndex": 3,
+          "explanation": "Priorizar la estética sobre la veracidad es una excepción y contraviene la práctica informativa; las otras afirmaciones describen prácticas habituales y correctas en coordinación con redacción.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Qué elemento es imprescindible para que un desplazamiento se considere accidente 'in itinere'?",
+          "options": [
+            "Que sea el trayecto entre el domicilio y el centro de trabajo por la ruta habitual y en horario razonable.",
+            "Que el trabajador realice tareas laborales durante el trayecto con el vehículo de la empresa.",
+            "Que exista autorización expresa y documentada del empleador para ese desplazamiento.",
+            "Que el vehículo utilizado sea propiedad del empleador."
+          ],
+          "correctIndex": 0,
+          "explanation": "El accidente 'in itinere' requiere el trayecto habitual entre domicilio y lugar de trabajo; las otras condiciones no son imprescindibles para su calificación.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_project_media",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: al trasladar un proyecto de NLE entre estaciones, ¿qué acción diferencia claramente los metadatos de proyecto de los archivos de esencia?",
+          "options": [
+            "Exportar solo el archivo de proyecto y no copiar las carpetas de media, dejando las essences en el equipo origen.",
+            "Copiar únicamente los bins sin exportar ni consolidar las essences.",
+            "Consolidar o copiar las essences junto al archivo de proyecto y mantener los metadatos del proyecto independientes para preservar enlaces y facilitar relink.",
+            "Reencapsular todos los ficheros de esencia a un contenedor propietario antes de mover el proyecto."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta es trasladar o consolidar las essences junto al proyecto para mantener relaciones; eso diferencia los metadatos (archivo de proyecto/bins) de los archivos de esencia. Las otras opciones rompen enlaces o son innecesarias.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: ante la intención de emitir una noticia con acusaciones no contrastadas hacia un particular, ¿qué principio constitucional debe primar y cuál es la actuación compatible con los límites constitucionales?",
+          "options": [
+            "Primar la protección del honor y exigir comprobación razonable antes de emitir, limitando la difusión si no hay verificación.",
+            "Primar la libertad de información y emitir la noticia sin comprobaciones para preservar inmediatez.",
+            "Evitar toda crítica hacia poderes públicos para no poner en riesgo la neutralidad informativa.",
+            "Publicar inmediatamente y rectificar posteriormente si se demuestra inexactitud, sin más comprobaciones."
+          ],
+          "correctIndex": 0,
+          "explanation": "La libertad de información debe compatibilizarse con la protección de derechos (honor, reputación); por ello es obligatorio verificar antes de emitir acusaciones. Las otras opciones priorizan inmediatez o evitan críticas indebidamente.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: para indicar narrativamente un salto temporal prolongado hacia el pasado (flashback) manteniendo continuidad espacial, ¿qué transición y por qué son las más adecuadas?",
+          "options": [
+            "Corte directo, porque transmite continuidad temporal sin indicar salto.",
+            "Fundido a negro, porque cierra la secuencia y no sugiere relación temporal clara.",
+            "Encadenado (dissolve) para suavizar el paso temporal y sugerir continuidad espacial entre escenas separadas en el tiempo.",
+            "Wipe horizontal, aplicable únicamente por motivos estilísticos y sin valor temporal establecido."
+          ],
+          "correctIndex": 2,
+          "explanation": "El encadenado (dissolve) es la transición convencional para sugerir un desplazamiento temporal manteniendo conexión espacial; el corte suele indicar continuidad temporal inmediata, el fundido a negro cierra secuencias y el wipe no tiene un valor temporal tan claro.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a limitaciones y consideraciones de LTO/LTFS para archivo a largo plazo:",
+          "options": [
+            "Requieren un catálogo y pueden presentar fallos de lectura por degradación o por errores en el índice.",
+            "Las cintas LTO con LTFS proporcionan acceso aleatorio rápido comparable al de un disco duro.",
+            "La verificación mediante checksums y la actualización del catálogo son prácticas recomendadas para integridad y trazabilidad.",
+            "La compatibilidad entre generaciones y la capacidad física condicionan las políticas de migración planificada."
+          ],
+          "correctIndex": 1,
+          "explanation": "La afirmación 1 es excepción/incorrecta: LTO/LTFS no ofrecen acceso aleatorio tan rápido como disco; las demás son limitaciones y prácticas reales asociadas al uso de LTO/LTFS.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_bit_depth",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Comparación: señale la afirmación más precisa sobre profundidad de bits respecto a niveles, banding y margen de procesado:",
+          "options": [
+            "12‑bit ofrece menos niveles cuantificados que 10‑bit pero mejora la compatibilidad de hardware.",
+            "8‑bit ofrece 256 niveles por canal y presenta mayor riesgo de banding en gradientes que 10‑bit o 12‑bit.",
+            "16‑bit reduce la distancia entre niveles perceptibles en comparación con 8‑bit, por lo que aumenta el banding.",
+            "Mayores profundidades de bits siempre incrementan la latencia de procesamiento de forma significativa."
+          ],
+          "correctIndex": 1,
+          "explanation": "8‑bit tiene 256 niveles por canal y por tanto mayor riesgo de banding frente a 10/12 bit; las otras opciones son incorrectas (12‑bit no tiene menos niveles que 10‑bit, 16‑bit no aumenta banding y la latencia no depende siempre de la profundidad de bits).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según una GOP IPB, ¿cuál es la consecuencia operativa directa de un error de decodificación en un fotograma I dentro de la GOP?",
+          "options": [
+            "Sólo se pierde la información de ese fotograma sin afectar a otros.",
+            "No tiene impacto porque los fotogramas I no son usados como referencia.",
+            "Mejora la compresión de la GOP siguiente.",
+            "Afecta a los fotogramas dependientes P y B hasta que aparece un siguiente I correcto."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un I es referencia para P y B; un error en I compromete la decodificación de los dependientes hasta la próxima referencia válida. Las demás opciones contradicen la naturaleza de dependencias de GOP.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: al componer un gráfico con canal alpha sobre vídeo, ¿qué artefacto es característico de una interpretación errónea entre alfa premultiplicado y straight?",
+          "options": [
+            "Incremento notable del bitrate durante la exportación del master.",
+            "Desincronización de audio respecto al vídeo en la composición.",
+            "Aparición de un halo claro o borde de color erróneo en los contornos del gráfico.",
+            "Cambio involuntario del espacio de color del proyecto."
+          ],
+          "correctIndex": 2,
+          "explanation": "La interpretación incorrecta entre premultiplied y straight produce halos o bordes de color (fringing) en los bordes del gráfico; los otros efectos no son consecuencia directa de esa confusión.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: indique la secuencia habitual de pasos en una ingesta verificada y control de calidad:",
+          "options": [
+            "Transcodificación inmediata a formato de entrega y eliminación del original.",
+            "Copia de la esencia, cálculo de checksum, validación de estructura y registro en catálogo.",
+            "Reproducción para emisión sin verificación previa de integridad.",
+            "Solo registro en catálogo sin comprobación de integridad física."
+          ],
+          "correctIndex": 1,
+          "explanation": "La ingesta verificada incluye copia, checksum para integridad, validación estructural y registro; las otras opciones omiten verificaciones críticas o proponen eliminación prematura del original.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 13/2022, ¿cuál de estas obligaciones concretas debe asumir un prestador audiovisual respecto a la accesibilidad?",
+          "options": [
+            "Proporcionar subtitulado para personas sordas y audiodescripción para personas ciegas cuando proceda.",
+            "Eliminar todo contenido sensible sin ofrecer alternativas accesibles.",
+            "Limitar el cumplimiento de accesibilidad solo a plataformas de pago.",
+            "Publicar contenidos en redes sociales sin medidas específicas de accesibilidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La ley impone obligaciones concretas de accesibilidad, como subtitulado y audiodescripción donde proceda; las otras opciones no cumplen ni describen obligaciones legales de accesibilidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en una cadena con ancho de banda limitado y diversidad de dispositivos de reproducción, ¿qué decisión técnica es la más adecuada?",
+          "options": [
+            "Emplear AVC/H.264 para priorizar compatibilidad de reproducción pese a mayor consumo de ancho de banda.",
+            "Optar por HEVC por su mayor eficiencia aunque varios dispositivos no lo soporten nativamente.",
+            "Usar códecs sin compresión para preservar calidad máxima en todos los dispositivos.",
+            "Transmitir solo la pista de audio y eliminar vídeo para ajustar al ancho de banda."
+          ],
+          "correctIndex": 0,
+          "explanation": "Con diversidad de dispositivos la compatibilidad es prioritaria; AVC/H.264 ofrece compatibilidad amplia aunque sea menos eficiente. Elegir HEVC puede causar incompatibilidades; las otras opciones son imprácticas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Compatibilidad: ¿qué ventanas de loudness son las más apropiadas para evaluar la sonoridad global de un programa y para detectar variaciones muy breves respectivamente?",
+          "options": [
+            "True Peak para la sonoridad total; Short‑term para variaciones breves.",
+            "Momentary para la sonoridad total; Integrated para detectar variaciones muy breves.",
+            "Short‑term para la sonoridad total; Integrated para picos transitorios.",
+            "Integrated para evaluar la sonoridad total del programa; Momentary para detectar variaciones muy breves."
+          ],
+          "correctIndex": 3,
+          "explanation": "Integrated mide la sonoridad acumulada del programa; Momentary (ventana muy corta) sirve para observar variaciones inmediatas. Las otras combinaciones confunden ventanas y aplicaciones.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: para un flujo de edición intensiva y reconformado frecuente, ¿qué variante MXF es la más adecuada y por qué?",
+          "options": [
+            "OP1a, porque empaqueta todos los essences en un único archivo y facilita la edición por clip.",
+            "OP‑Atom, porque guarda cada esencia por separado facilitando sustitución y reconformado sin reescribir todo el archivo.",
+            "OP1a, porque impide la edición accidental al contener todo en un único paquete.",
+            "OP‑Atom, porque no admite metadatos y reduce la complejidad del archivo."
+          ],
+          "correctIndex": 1,
+          "explanation": "OP‑Atom almacena essences por separado y facilita operaciones de edición y reconformado; OP1a es más adecuado para un master único listo para playout. Las otras descripciones son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_export_qc",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Compatibilidad: al exportar un máster para emisión, ¿cuál de las siguientes listas incluye los controles técnicos imprescindibles?",
+          "options": [
+            "Revisar solo metadatos y subtítulos, dejando la sincronía para procesos posteriores.",
+            "Comprobar únicamente la resolución y el bitrate de vídeo sin verificar audio ni metadatos.",
+            "Verificar contenedor y códec, niveles de luminancia y crominancia, sincronía audio‑vídeo, campos/entrelazado, metadatos y timecode.",
+            "Validar códec y eliminar el timecode para reducir tamaño del fichero."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un QC completo para emisión debe verificar contenedor/códec, niveles de luminancia y crominancia, sincronía, campos/entrela­zado y metadatos/timecode; las otras opciones omiten controles esenciales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: al activar un legalizer/gamut en la salida para cumplir niveles legales, se observan ligeras desaturaciones en colores muy saturados. ¿Cuál es la explicación operativa más precisa?",
+          "options": [
+            "El dispositivo reduce amplitud cromática para forzar la señal dentro del gamut legal, provocando ligera pérdida de saturación.",
+            "El legalizer incrementa el rango dinámico y por tanto reduce la saturación de forma intencional.",
+            "La desaturación indica un fallo de sincronía entre audio y vídeo.",
+            "Se trata de un defecto de codec en origen que no está relacionado con el legalizer."
+          ],
+          "correctIndex": 0,
+          "explanation": "El legalizer limita valores cromáticos fuera del gamut legal, lo que puede reducir la saturación de colores muy intensos; las demás opciones no explican este efecto operativo.",
+          "category": "Equipos de medida y control"
+        }
+      ]
+    },
     {
       "id": "086",
       "title": "Examen 086",
