@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-24",
+  "updatedAt": "2026-10-25",
   "exams": [
+    {
+      "id": "088",
+      "title": "Examen 088",
+      "date": "2026-10-25",
+      "level": "Muy alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las obligaciones del empleador derivadas de los principios de la acción preventiva.",
+          "options": [
+            "Integrar la prevención en la organización del trabajo y en las condiciones laborales.",
+            "Asumir los costes necesarios para las medidas preventivas de forma que no repercutan en los trabajadores.",
+            "El empleador solo está obligado a informar sobre riesgos cuando éstos sean graves e inminentes.",
+            "Facilitar la participación y consulta de los representantes de los trabajadores en materia preventiva."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la tercera porque la obligación de información es general y no condicionada exclusivamente a riesgos graves e inminentes; las otras opciones describen obligaciones reales del empleador. El distractor más próximo reduce la obligación a un supuesto concreto, por eso es incorrecto.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Señale la afirmación más precisa sobre la relación y compatibilidad operativa entre PQ y HLG para distribución HDR.",
+          "options": [
+            "PQ y HLG comparten transferencia de color equivalente y no requieren remapeo de color en conversión HDR↔SDR; solo la luminancia precisa ajuste.",
+            "HLG codifica luminancias absolutas iguales a PQ pero con curva diferente, por tanto ambos son intercambiables sin conversión.",
+            "PQ codifica luminancias con referencia absoluta al mastering display y requiere metadatos de mastering para mapeos precisos; HLG adapta la señal al display y puede distribuirse con menor dependencia de metadatos.",
+            "PQ está diseñado para compatibilidad directa con SDR sin necesidad de tone mapping; HLG requiere siempre conversiones complejas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La primera opción recoge que PQ (ST2084) usa referencia de mastering y metadata para un tone‑mapping preciso, mientras HLG está diseñado para adaptarse al display sin metadata obligatoria. El distractor más cercano (4) invierte la verdad sobre compatibilidad y por eso es incorrecto.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Para estimar el número máximo de canales reproducibles simultáneamente en un servidor de vídeo, ¿qué magnitud ofrece la medida más precisa?",
+          "options": [
+            "Capacidad total de almacenamiento (TB).",
+            "Ancho de banda agregado del subsistema de I/O (Gbps).",
+            "Número total de ficheros almacenados.",
+            "Velocidad de rotación o RPM de los discos."
+          ],
+          "correctIndex": 1,
+          "explanation": "El ancho de banda agregado del subsistema de I/O determina cuántos flujos pueden ser servidos simultáneamente; la capacidad total solo limita cantidad, no concurrencia. El distractor más próximo (capacidad) no refleja la restricción por throughput.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Indique la medida organizativa más eficaz para reducir la fatiga visual y postural en un puesto con pantallas de visualización.",
+          "options": [
+            "Alternar tareas de pantalla con tareas no visuales y programar pausas breves y regulares.",
+            "Incrementar el brillo de la pantalla para mejorar contraste.",
+            "Permitir jornadas continuas sin pausas pero con descansos más largos al final del día.",
+            "Sustituir siempre teclado y ratón por tableta gráfica sin más ajustes."
+          ],
+          "correctIndex": 0,
+          "explanation": "Alternar tareas y programar pausas breves reduce exposición continua y permite recuperación visual y postural; los distractores proponen medidas insuficientes o inapropiadas (brillo, pausas concentradas o cambio único de periférico).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Para preservar coherencia espacial en un raccord de mirada entre dos planos, ¿cuál es la condición técnica más relevante?",
+          "options": [
+            "Los ejes ópticos de ambas cámaras deben coincidir exactamente en longitud focal.",
+            "La dirección de la mirada en cada plano debe corresponder en ángulo y altura al punto de referencia fuera de cuadro, manteniendo la relación izquierda/derecha respecto al eje de acción.",
+            "Ambos planos deben filmarse desde la misma distancia focal para evitar discrepancias de perspectiva.",
+            "Es suficiente que los intérpretes miren en la misma dirección general sin respetar la posición relativa del eje."
+          ],
+          "correctIndex": 1,
+          "explanation": "La condición decisiva es que la eyeline apunte al mismo punto fuera de cuadro (ángulo/altura y relación lado del eje), lo que preserva la percepción de interlocución; los distractores confunden factor ópticos (foco) o proponen tolerancias incorrectas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Según la política 3‑2‑1, ¿cuál de estas estrategias cumple correctamente sus requisitos para material audiovisual?",
+          "options": [
+            "Mantener tres copias en el mismo RAID para redundancia; se considera suficiente si el RAID tiene paridad.",
+            "Tener tres copias: original en servidor RAID, una copia en disco diferente y una copia fuera de sede en cinta LTO.",
+            "Fabricar tres copias idénticas en el mismo soporte físico para simplificar gestión.",
+            "Confiar en un único sistema con snapshot diario como una de las tres copias."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta recoge 3 copias, en dos tipos de soporte y una copia offsite; almacenar todas las copias en el mismo RAID o soporte viola la exigencia de soportes independientes y ubicación externa que la política persigue. El distractor más próximo (2) confunde redundancia RAID con copias independientes.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Operario con hormigueo y rigidez en muñeca y dedos tras uso prolongado de tableta y ratón. Señale la causa más probable y la medida preventiva prioritaria.",
+          "options": [
+            "Causa: fallo en la tarjeta gráfica; Medida: actualizar controladores.",
+            "Causa: postura mantenida y extensión de muñeca; Medida: reposamuñecas y alternancia de tareas con pausas y ajuste de altura.",
+            "Causa: iluminación insuficiente; Medida: aumentar iluminación general.",
+            "Causa: contenido de trabajo estresante; Medida: reducir duración de la jornada sin cambios ergonómicos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los síntomas son típicos de sobrecarga por postura y repetición; la intervención prioritaria combina ajuste ergonómico (altura/reposamuñecas) y pausas. Los distractores atribuyen causas no relacionadas con TME.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las afirmaciones sobre la regulación del III Convenio en jornada, descansos y turnicidad y señale la más precisa.",
+          "options": [
+            "Establece una jornada lectiva única igual para todos los puestos sin variaciones por turnos.",
+            "Permite que la empresa suprima descansos diarios por acuerdo unilateral con el trabajador sin compensación.",
+            "No contempla reglas sobre turnos ni compensaciones por trabajo nocturno.",
+            "Regula la jornada y establece reglas sobre descansos y compensaciones por turnicidad, incluyendo criterios para planificación y compensaciones económicas o de tiempo."
+          ],
+          "correctIndex": 3,
+          "explanation": "El convenio define condiciones de jornada, descansos y compensaciones por turnicidad; las otras opciones son incompatibles con la regulación colectiva que prevé criterios y compensaciones. El distractor más cercano presenta una falsa facultad de suprimir descansos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Sobre sincronización multicámara por forma de onda de audio: ¿qué limita su fiabilidad?",
+          "options": [
+            "Es infalible incluso si las pistas están grabadas con pre‑delay o latencia notable.",
+            "Funciona de forma fiable con cualquier pista mono de ambiente sin condiciones previas.",
+            "Se requiere contenido con transitorios claros y buena relación señal/ruido; reverberación intensa o pistas con poco ataque reducen fiabilidad.",
+            "Exige obligatoriamente código de tiempo común para poder aplicarse."
+          ],
+          "correctIndex": 2,
+          "explanation": "La sincronización por forma de onda es fiable cuando las pistas contienen transitorios y buena SNR; reverberación o señales continuas reducen coincidencias claras. El distractor que exige TC confunde métodos: la forma de onda puede funcionar sin TC si hay contenido adecuado.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_music_sync",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Al sincronizar montaje y música, ¿qué criterio operativo guía la colocación de cortes respecto a la frase musical?",
+          "options": [
+            "Sincronizar exclusivamente con el tempo medio sin atender acentos y frase.",
+            "Evitar cortar nunca en acentos musicales para no perturbar la frase.",
+            "Colocar cortes aleatorios para crear sorpresa, sin considerar la estructura musical.",
+            "Alinear cortes con acentos y el inicio o final de frases musicales para respetar fraseo y continuidad rítmica."
+          ],
+          "correctIndex": 3,
+          "explanation": "Cortes en acentos o al inicio/final de frases preservan el fraseo y la coherencia rítmica; los distractores ignoran la estructura musical o proponen reglas contraproducentes.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a soportes de estado sólido tras ingesta: señale la afirmación que equilibra ventajas, riesgos y prácticas de descarga/formatado.",
+          "options": [
+            "Tras la ingesta, conservar la tarjeta sin formatear hasta verificar integridad mediante checksum y copias en medios distintos.",
+            "Formatear inmediatamente en cámara tras descarga como única medida de seguridad.",
+            "Depender de una sola copia en SSD como copia maestra es aceptable si el fabricante garantiza alta MTBF.",
+            "Borrar con formateo rápido y reutilizar la tarjeta sin registro de ingestas ni verificación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica segura es verificar integridad y tener copias antes de formatear; formateos inmediatos o confiar en una sola copia son riesgos. El distractor más cercano propone formateo inmediato sin verificación, por eso es incorrecto.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En un mezclador con buses programa y previo y una key activa, ¿qué secuencia de operaciones produce una transición limpia desde previo a programa?",
+          "options": [
+            "Intervalos aleatorios de fader sin coordinar key y transición.",
+            "Cambiar directamente la fuente de programa sin gestionar la key.",
+            "Desactivar permanentemente la key y luego hacer la transición.",
+            "Inhibir la key en previo → ejecutar fader/auto transition para pasar previo a programa → reactivar la key en programa."
+          ],
+          "correctIndex": 3,
+          "explanation": "La secuencia correcta coordina la key y la transición: antes de pasar la vista, se ajusta la key en previo y se ejecuta la transición hacia programa, donde la key debe estar correctamente sintetizada. Los distractores omiten coordinación clave entre key y cambio de bus.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación más precisa sobre límites de tamaño de fichero en sistemas de archivos usados en soportes audiovisuales.",
+          "options": [
+            "Todos los sistemas de archivos usados en video aplican el mismo límite de 4 GiB por compatibilidad.",
+            "FAT32 permite archivos de hasta 16 TiB, suficiente para material de larga duración.",
+            "exFAT impone un límite de 2 GiB por fichero igual que FAT16.",
+            "FAT32 limita el tamaño de archivo a 4 GiB−1; para ficheros mayores se usan exFAT, NTFS, ext4 o XFS que admiten tamaños muy superiores."
+          ],
+          "correctIndex": 3,
+          "explanation": "FAT32 tiene el límite conocido de 4 GiB−1; sistemas modernos como exFAT/NTFS/ext4 admiten archivos mucho mayores. Los otros distractores dan límites incorrectos o generalizaciones falsas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "En un vectorscopio, ¿qué indican prioritariamente el ángulo de la traza y la distancia al centro?",
+          "options": [
+            "Ángulo → velocidad de señal; distancia → relación señal/ruido.",
+            "Ángulo → luminancia; distancia → crominancia total.",
+            "Ángulo → balance RGB; distancia → nivel de blanco.",
+            "Ángulo → matiz (hue); distancia al centro → saturación (cantidad de crominancia)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El vectorscopio representa el matiz por el ángulo alrededor del círculo y la saturación por la distancia al centro. Los distractores confunden luminancia o métricas no representadas por el vectorscopio.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique cuál de las siguientes medidas forma parte del II Plan de Igualdad y la Guía de RTVE para prevenir representaciones sexistas y el acoso.",
+          "options": [
+            "Incluir directrices sobre lenguaje inclusivo y criterios de representación visual que eviten estereotipos y medidas contra el acoso en el entorno de trabajo.",
+            "Implantar controles de programación que impidan cualquier tratamiento de temas sensibles.",
+            "Eliminar la formación en igualdad y concentrarla solo en recursos humanos.",
+            "Permitir la autovalidación por parte de las productoras sin revisión editorial."
+          ],
+          "correctIndex": 0,
+          "explanation": "El plan contempla directrices sobre lenguaje y representación y medidas preventivas contra el acoso; los distractores proponen medidas inadecuadas o contrarias al objetivo de prevención y revisión.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al mezclar material con cadencias distintas en una misma secuencia, ¿qué efecto es más probable y qué método técnico reduce artefactos en movimiento?",
+          "options": [
+            "Aparece judder o saltos en movimiento; la interpolación por motion‑compensated temporal reduce artefactos frente a la simple duplicación/pulldown.",
+            "No hay efecto perceptual al mezclar cadencias; duplicar fotogramas es siempre suficiente.",
+            "La única solución es convertir todo a 24 fps recortando fotogramas sin interpolación.",
+            "La conversión de cadencia no afecta a la sincronía de audio por defecto."
+          ],
+          "correctIndex": 0,
+          "explanation": "La mezcla de cadencias suele producir judder; los métodos de interpolación por motion‑comp permiten suavizar movimiento mejor que duplicar/insertar fotogramas. Los distractores niegan el efecto o proponen soluciones insuficientes.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "En un RGB Parade (Rec.709) donde el canal rojo aparece sistemáticamente más alto en altas luces que verde y azul, ¿cuál es el diagnóstico operativo más directo?",
+          "options": [
+            "Se ha producido saturación (clipping) exclusivo del canal verde.",
+            "Existe una dominante roja en la captura o en el balance de blancos que eleva el rojo en altas luces.",
+            "El monitor está descalibrado solo en el canal azul.",
+            "El codec ha eliminado información cromática solo en sombras."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un incremento relativo del canal rojo en altas luces indica dominante en captura o balance incorrecto; los otros distractores atribuyen problemas poco verosímiles o específicos que no se ajustan a la traza observada.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Tras verificar checksums antes y después de una copia, aparecen diferencias en algunos ficheros. ¿Cuál es la conclusión más probable y cuál es la limitación del checksum ante esta situación?",
+          "options": [
+            "Conclusión: el formato de contenedor cambia el orden de bytes y el checksum es inútil; límite: los checksums siempre fallan con contenedores.",
+            "Conclusión: diferencia solo en metadatos de fecha; límite: el checksum corrige automáticamente metadatos.",
+            "Conclusión: corrupción en la transferencia o almacenamiento; límite: el checksum detecta la modificación pero no repara ni indica dónde ocurrió.",
+            "Conclusión: el checksum puede restaurar la copia original; límite: solo requiere relanzar la copia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La diferencia indica integridad comprometida (error en transferencia/almacenamiento); un checksum detecta la discrepancia pero no repara ni localiza el bit dañado. Los demás distractores atribuyen propiedades falsas al checksum.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Secuencia con dominante fría en sombras pero pieles correctas: ¿qué corresponde a corrección primaria y qué a corrección secundaria?",
+          "options": [
+            "Corrección primaria: sólo añadir LUT creativa; corrección secundaria: normalizar la señal completa.",
+            "Corrección primaria: aplicar máscaras puntuales; corrección secundaria: cambiar curva primaria globalmente.",
+            "Corrección primaria: ajustes globales de lift/ganancia y balance de blancos para neutralizar dominante general; corrección secundaria: aislar sombras con qualifier y ajustar matiz/saturación localmente.",
+            "Corrección primaria: ajustar únicamente contraste; corrección secundaria: ajustar exposición global."
+          ],
+          "correctIndex": 2,
+          "explanation": "La corrección primaria trata desequilibrios globales (lift/gamma/gain, balance), y la secundaria aísla regiones (sombras) para correcciones selectivas. Los distractores invierten funciones o describen prácticas incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la relación entre bitrate agregado, concurrencia y margen de red en el cálculo de ancho de banda.",
+          "options": [
+            "Es suficiente usar el bitrate promedio sin considerar picos de simultaneidad cuando el número de usuarios es alto.",
+            "El dimensionamiento debe basarse en bitrate por flujo multiplicado por concurrencia estimada y añadiendo margen para overhead y picos.",
+            "Se debe reservar margen para variaciones, retransmisiones y control de calidad (overhead).",
+            "Conviene considerar tanto el bitrate agregado como políticas de QoS y latencia al dimensionar enlaces."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la segunda porque omitir picos y usar solo bitrate medio es una práctica inadecuada; las otras opciones describen precauciones legítimas (margen, QoS) necesarias en el cálculo.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "087",
       "title": "Examen 087",
