@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-26",
   "exams": [
+    {
+      "id": "089",
+      "title": "Examen 089",
+      "date": "2026-10-26",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según la Ley 17/2006, ¿cómo se describe la naturaleza jurídica básica de la Corporación RTVE?",
+          "options": [
+            "Agencia independiente del Gobierno con personalidad jurídica de derecho privado y gestión totalmente mercantil.",
+            "Empresa privada participada mayoritariamente por el Estado, con régimen societario mercantil y ánimo de lucro.",
+            "Entidad de titularidad estatal con forma de corporación de derecho público dedicada a la prestación de servicios audiovisuales de titularidad estatal.",
+            "Organismo autónomo inserto en la Administración General del Estado sin personalidad jurídica propia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Corporación RTVE es una entidad de titularidad estatal organizada como corporación de derecho público para la gestión del servicio público audiovisual. Las otras opciones describen formas jurídicas distintas (empresa mercantil con ánimo de lucro, agencia de derecho privado o mero organismo sin personalidad), que no coinciden con la redacción legal de la Ley 17/2006.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a ventajas, limitaciones y adecuación de CBR y VBR:",
+          "options": [
+            "CBR garantiza un uso constante del ancho de banda, siendo adecuado en canales con ancho fijo y multiplexados.",
+            "VBR optimiza la calidad visual al variar bitrate según complejidad de escena, reduciendo bitrate en contenido estático.",
+            "CBR siempre produce menor latencia de codificación que VBR en todas las implementaciones prácticas.",
+            "VBR puede complicar dimensionamiento de multiplexación y exige buffers o margen adicional en transporte."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación incorrecta (excepción) es la que generaliza que CBR siempre tiene menor latencia que VBR; la latencia depende de la implementación del codificador y de los buffers, no es una regla inherente y universal. Las otras opciones describen ventajas y limitaciones reales y comprobables de CBR y VBR en transporte y calidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Señale la afirmación que constituye una excepción respecto a causas y diagnóstico de un bucle de masa en una instalación audiovisual:",
+          "options": [
+            "Un bucle de masa se descarta si la impedancia del cable es baja; la única causa es siempre una mala conexión de XLR.",
+            "La presencia de zumbido audible en altavoces que varía al tocar carcasas sugiere diferencia de potencial entre tierras.",
+            "La medición con multímetro entre chasis de equipos puede mostrar tensiones continuas o alternas indicativas de bucle.",
+            "La desconexión temporal del conductor de tierra de una de las fuentes (prueba controlada) ayuda a identificar el segmento afectado."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción marcada es la excepción porque afirma categóricamente que la única causa es una mala conexión de XLR y que se descarta con baja impedancia; en realidad los bucles de masa pueden originarse por múltiples rutas (alimentación, tierra, equipos conectados a distintas tomas) y no se eliminan automáticamente por baja impedancia del cable. Las otras opciones son diagnósticos o pruebas pertinentes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "En un entorno con bins compartidos entre varios editores, ¿qué práctica técnica previene sobrescrituras de material y conserva concurrencia?",
+          "options": [
+            "Asignar permisos de escritura por subcarpeta y utilizar bloqueo de edición (check‑out) sobre elementos que se vayan a modificar.",
+            "Trabajar todos en la misma versión sin bloqueo y confiar en que el último en salvar tiene la versión correcta.",
+            "Eliminar permisos de lectura para todos los usuarios excepto uno, para forzar edición secuencial.",
+            "Copiar localmente todos los bins y combinar manualmente las versiones al final del día."
+          ],
+          "correctIndex": 0,
+          "explanation": "La medida correcta es asignar permisos y usar mecanismos de 'check‑out' o bloqueo para evitar sobrescrituras concurrentes. Las otras opciones son prácticas inseguras o ineficaces: confiar en sobrescrituras, revocar lectura o copias manuales no impiden conflictos ni preservan trazabilidad.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_en_mision",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Durante una misión externa que requiere manipular equipos pesados en local ajeno, indique la medida preventiva del empleador que prioriza la seguridad del trabajador:",
+          "options": [
+            "Limitar la responsabilidad a facilitar instrucciones por escrito y esperar que el trabajador siga las instrucciones sin supervisión.",
+            "Exigir al trabajador que firme una aceptación de riesgo y delegar la responsabilidad de la manipulación al personal del local ajeno.",
+            "Realizar una evaluación de riesgos específica de la misión que incluya condiciones del lugar, ergonomía de manipulación y medios auxiliares, y proveer formación y equipos de protección adecuados.",
+            "Permitir la manipulación sin formación específica si el trabajador tiene más de cinco años de experiencia en tareas similares."
+          ],
+          "correctIndex": 2,
+          "explanation": "La actuación prioritaria del empleador es realizar una evaluación de riesgos específica para la misión y suministrar formación, medios auxiliares y EPI. Las otras opciones delegan o atenúan la obligación preventiva, contraviniendo el principio de evaluación y provisión de medidas activas de prevención.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes prácticas para localizar y verificar un crosspoint en una matriz de vídeo: ¿cuál es la más trazable y fiable?",
+          "options": [
+            "Reiniciar la matriz y esperar que la configuración se restablezca correcta sin verificación adicional.",
+            "Pedir al operador de destino que confirme manualmente y confiar en su testimonio sin señal de identificación.",
+            "Reconectar físicamente cables uno a uno hasta que la señal aparezca en la salida esperada.",
+            "Enviar una señal de prueba identificable por patrón o tono desde la fuente y comprobar en las salidas mediante receptor y registro de trazas, anotando log de cambio de crosspoints."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta utiliza señal de prueba identificable y registros para localizar y verificar el crosspoint con trazabilidad. Las otras alternativas son menos fiables: depender del testimonio sin señal, reconectar manualmente sin trazabilidad o reiniciar sin verificación no permiten confirmar ni auditar el cruce.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_umid",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para garantizar identificación persistente del material a través de transcodings y copias, ¿qué operación es imprescindible respetar sobre el UMID en el flujo?",
+          "options": [
+            "Regenerar un nuevo UMID en cada transcodificación para reflejar la nueva versión.",
+            "Preservar y propagar el UMID original en los metadatos del fichero resultante en cada operación de transcoding o copia, sin regenerarlo.",
+            "Eliminar el UMID en operaciones de consolidación para reducir metadatos redundantes.",
+            "Almacenar el UMID únicamente en una base de datos externa y no incrustarlo en el fichero."
+          ],
+          "correctIndex": 1,
+          "explanation": "Para mantener identificación persistente es imprescindible conservar y propagar el UMID original dentro de los metadatos de cada fichero. Regenerarlo o eliminarlo rompe la trazabilidad; dejarlo solo en una base de datos externa sin incrustación puede perderse con cambios de soporte.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Un prestador audiovisual ofrece contenidos clasificados por edad sin controles de acceso. Según la Ley 13/2022, ¿cuál es la omisión principal a subsanar?",
+          "options": [
+            "Eliminar cualquier contenido con escenas sensibles para evitar clasificación por edades.",
+            "Implantar medidas técnicas de limitación del acceso para menores a contenidos clasificados por edad y facilitar información de clasificación clara.",
+            "Limitar la accesibilidad por horario únicamente y no implementar controles de identificación de usuario.",
+            "Delegar la vigilancia del cumplimiento exclusivamente en los padres sin medidas técnicas obligatorias."
+          ],
+          "correctIndex": 1,
+          "explanation": "La obligación clave es implantar medidas técnicas que limiten el acceso de menores a contenidos clasificados y ofrecer información de clasificación. Las otras opciones son insuficientes o inapropiadas frente a los requisitos legales que exigen medidas operativas y técnicas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Ante un rush XAVC para edición y etalonaje, ¿qué característica distingue una variante Intra de una Long‑GOP y su aplicación práctica?",
+          "options": [
+            "Intra codifica cada fotograma de forma independiente (I only), facilitando recortes y grading; Long‑GOP usa dependencias entre fotogramas para mayor compresión pero con menor acceso fotograma a fotograma.",
+            "Intra comprime mediante predicción temporal extrema con GOP largos; Long‑GOP codifica cada fotograma de forma independiente.",
+            "Intra siempre emplea 10 bits y Long‑GOP siempre 8 bits, sin excepciones.",
+            "Long‑GOP es preferible para conformado final y etalonaje porque ofrece mayor calidad absoluta que Intra en todas las escenas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La distinción operativa es que Intra codifica fotogramas independientemente, favoreciendo acceso fotograma a fotograma para edición y grading, mientras Long‑GOP depende de fotogramas vecinos para reducir bitrate. Las otras opciones invierten definiciones o hacen afirmaciones categóricas incorrectas sobre bits o calidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Cuál de las siguientes afirmaciones describe mejor la diferencia entre montaje paralelo y montaje alterno:",
+          "options": [
+            "Montaje paralelo siempre implica elipsis temporal; montaje alterno siempre mantiene simultaneidad exacta.",
+            "Montaje paralelo muestra dos o más acciones simultáneas para comparar o contrastar; montaje alterno intercala escenas de distintos lugares o tiempos que no son simultáneas pero se asocian temáticamente.",
+            "Montaje alterno es sinónimo de montaje paralelo y ambos son intercambiables en función narrativa.",
+            "Montaje paralelo intercala fragmentos sin relación temática; montaje alterno une acciones que ocurren exactamente al mismo instante."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta señala la diferencia funcional: el paralelo sugiere simultaneidad (convergencia o contraste), el alterno intercala acciones distintas que se relacionan por tema o tensión sin ser simultáneas. Las otras opciones confunden simultaneidad y relación temática o son incorrectas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Al comparar EDL y AAF para intercambio de proyecto entre sistemas, ¿qué elemento suele transferir AAF y no una EDL básica?",
+          "options": [
+            "La EDL contiene información completa de mezcla de audio multicanal y automatizaciones por defecto, que AAF no puede manejar.",
+            "La EDL incluye automáticamente los archivos de esencia embebidos y los efectos renderizados, mientras que AAF solo contiene timecodes.",
+            "Ambos formatos transfieren de forma idéntica información de pistas, efectos avanzados y metadatos de color.",
+            "Metadatos de pistas múltiples, elementos de audio y efectos básicos y referencias de medios, mientras que una EDL simple suele contener únicamente recortes y códigos de tiempo para pista de vídeo principal."
+          ],
+          "correctIndex": 3,
+          "explanation": "AAF transfiere más alcance: múltiples pistas, referencias de audio, algunos efectos y metadatos; una EDL básica suele limitarse a cortes y timecodes para una pista de vídeo. Las demás opciones exageran capacidades o equiparan ambos formatos incorrectamente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_incendio",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "En caso de incendio originado en un equipo eléctrico en plató, ¿qué extintor es el más idóneo como primera opción para intervenir con seguridad eléctrica?",
+          "options": [
+            "Extintor de agua pulverizada, por su capacidad de enfriamiento sobre todo en equipos eléctricos energizados.",
+            "Extintor de dióxido de carbono (CO2), por ser no conductor y adecuado para fuegos tipo C/B en equipos eléctricos.",
+            "Extintor de espuma de alta expansión, por su efecto de cobertura sobre equipos eléctricos.",
+            "Usar únicamente mantas ignífugas e impedir la entrada de bomberos hasta que el equipo se enfríe."
+          ],
+          "correctIndex": 1,
+          "explanation": "El extintor de CO2 es el más adecuado para fuegos originados en equipos eléctricos porque no conduce electricidad y no deja residuos conductores. El agua o espuma presentan riesgo de conducción eléctrica; la opción de no intervención o esperar es insegura.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Durante ingesta y fase de visionado/selección en un flujo XDCAM, indique la afirmación que constituye una excepción respecto al papel y limitaciones del proxy frente a la esencia de alta resolución:",
+          "options": [
+            "El proxy facilita reproducción fluida en estaciones con recursos limitados y se utiliza para generar la lista de decisiones (EDL/AAF) que luego se reconforma con la esencia de alta resolución.",
+            "El proxy puede generarse en cámara o en el sistema de ingesta y asociarse a la esencia mediante metadatos, nombres o timestamps para permitir relink automático durante el reconformado.",
+            "El proxy incluye necesariamente todos los códecs, todas las subpistas de audio y la información de metadatos necesarios para realizar una conformación exacta sin volver a acceder a la esencia de alta resolución.",
+            "Para que los cortes y marcadores hechos sobre el proxy se puedan reconformar de forma fiable sobre la esencia, la lista de decisiones debe contener referencias temporales persistentes (p. ej. timecode o UMID) que permitan el relink independiente de la ruta de archivos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta (excepción) es la tercera: el proxy no incluye necesariamente todos los códecs, subpistas de audio ni todo el detalle de metadatos requeridos para una conformación exacta; su función es ofrecer una copia de baja resolución para selección y edición offline, pero no sustituye a la esencia para el master final. Las otras opciones son verosímiles: los proxies se usan para generar listas de decisiones (A), pueden crearse en cámara o en ingesta y asociarse a la esencia mediante metadatos/convenciones de nombre o timestamps para relink (B), y el reconformado fiable exige referencias temporales persistentes como timecode o UMID (D), que permiten localizar la posición exacta en la esencia durante el relink.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál es la consecuencia más habitual cuando varias fuentes de vídeo no están sincronizadas por genlock en un directo multicámara?",
+          "options": [
+            "Mejoramiento automático del chroma y del color debido a la diferencia de fase entre fuentes.",
+            "Aparición de saltos, rolling o desfases temporales en los cortes entre cámaras; corrección mediante frame‑sync o re‑sincronización de señales.",
+            "Incremento del bitrate de cada señal hasta que coincida la temporización.",
+            "Activación automática de redundancia en la matriz que corrige la falta de genlock sin intervención."
+          ],
+          "correctIndex": 1,
+          "explanation": "La consecuencia típica es discontinuidad temporal en cortes (saltos, rolling) por falta de sincronía, que se corrige con frame‑sync o re‑genlock. Las otras opciones son incorrectas: la falta de genlock no mejora color, no ajusta bitrate ni es corregida automáticamente por la matriz.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor expresa el núcleo del principio constitucional de igualdad y prohibición de discriminación:",
+          "options": [
+            "La prohibición de discriminación se limita únicamente a ámbitos laborales y no afecta a otros derechos.",
+            "La igualdad constitucional obliga a tratar idénticamente situaciones distintas sin posibilidad de medidas compensatorias.",
+            "La Constitución reconoce la igualdad pero permite discriminación por sexo siempre que lo justifique la empresa.",
+            "Todas las personas son iguales ante la ley y se prohíbe cualquier discriminación por nacimiento, raza, sexo, religión, opinión o cualquier otra condición o circunstancia personal o social."
+          ],
+          "correctIndex": 3,
+          "explanation": "La afirmación correcta refleja literalmente el principio: igualdad ante la ley y prohibición de discriminación por motivos enumerados y cualquier otra condición. Las otras opciones deforman el principio introduciendo exclusiones o interpretaciones erróneas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_elipsis",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Al aplicar una elipsis temporal en montaje para comprimir varios minutos en un corte, ¿qué criterio editorial y técnico es esencial para mantener la comprensión narrativa?",
+          "options": [
+            "Sustituir la elipsis por un fundido a negro, que siempre mantiene la comprensión sin más ayudas.",
+            "Eliminar cualquier referencia temporal o espacial para reforzar ambigüedad y obligar al espectador a deducir la acción sin ayudas.",
+            "Usar cortes rápidos sin relación visual ni sonora entre planos para maximizar la sensación de tiempo comprimido.",
+            "Conservar elementos de continuidad espacial o indicadores temporales (props, vestuario, locución o insertos) que permitan al espectador inferir la continuidad pese al salto temporal."
+          ],
+          "correctIndex": 3,
+          "explanation": "Para que la elipsis mantenga comprensión es esencial ofrecer claves de continuidad espacial o indicios temporales que permitan reconstruir la acción. Las otras opciones o bien eliminan pistas necesarias o presuponen una solución que no garantiza comprensión.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Al preparar una playlist en un servidor EVS para emisión con transiciones y orden específico, ¿qué práctica garantiza con mayor seguridad que el playout respetará exactamente el orden y las transiciones?",
+          "options": [
+            "Usar solamente nombres de clips en carpeta de red sin publicación de playlist, confiando en que el playout los interpretará por orden alfabético.",
+            "Enviar la lista en un documento de texto al operador de playout para que la introduzca manualmente en el servidor en el momento de emisión.",
+            "Reproducir los clips en local en el ordenador de realización y confiar en que el EVS interpretará el mismo orden automáticamente.",
+            "Publicar la playlist desde la interfaz de control del EVS/IPDirector marcando y verificando las transiciones y luego comprobar en modo de previsualización del playout antes de activar salida en directo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica segura es publicar la playlist con sus transiciones desde la propia interfaz del EVS/IPDirector y verificar en previsualización que el playout respeta el orden y efectos. Las demás opciones son procedimientos manuales o poco fiables que no garantizan que el servidor reproducirá exactamente lo previsto.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Al combinar dos micrófonos sobre la misma fuente, cuál es el síntoma típico que sugiere inversión de polaridad en una de las señales:",
+          "options": [
+            "Pérdida notable de energía en bajas frecuencias y cancelación parcial en mono, perceptible como voz o instrumento debilitado.",
+            "Aumento uniforme del nivel en todas las frecuencias y mayor pegada en mono.",
+            "Cambio del timbre hacia agudos sin variación en el nivel en mono.",
+            "Aparición de distorsión armónica apreciable únicamente en canales L o R por separado."
+          ],
+          "correctIndex": 0,
+          "explanation": "La inversión de polaridad produce cancelación parcial, notable en bajas frecuencias al combinarse en mono, y reduce la energía percibida. Las otras opciones describen efectos distintos (aumento de nivel, cambios tonales o distorsión) que no corresponden a inversión de polaridad.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para una política de preservación que atienda obsolescencia y aseguramiento de acceso, ¿qué estrategia combina mejor verificación periódica y migración de soportes?",
+          "options": [
+            "Mantener copias en soportes contemporáneos, verificar integridad periódica mediante checksums y planificar migraciones regulares a formatos y soportes vigentes documentadas en un inventario.",
+            "Guardar una única copia maestra en un soporte LTO antiguo sin verificaciones periódicas para ahorrar costes.",
+            "Confiar exclusivamente en almacenamiento en el mismo servidor de producción sin copias externas ni pruebas de integridad.",
+            "Destruir copias antiguas inmediatamente tras migración sin validar que la migración fue completa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La política adecuada combina copias en soportes actuales, verificación mediante checksums y migraciones periódicas documentadas. Las demás opciones son riesgosas: una sola copia sin verificación, confiar en producción o eliminar sin validar ponen en riesgo la preservación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para que un auxiliary timecode (ATC) grabado en una cámara pueda servir de referencia fiable en relink automático durante reconformado, ¿qué operación es imprescindible durante la ingesta?",
+          "options": [
+            "Convertir el ATC a un timecode de referencia nuevo sin mantener la relación con el original.",
+            "Borrar el ATC para evitar conflictos y usar únicamente el timecode de archivo del servidor.",
+            "Registrar y mapear el ATC en los metadatos del clip en el sistema de ingesta y mantenerlo como referencia en la copia de media usada por el NLE.",
+            "Ignorar el ATC y basarse exclusivamente en el nombre de fichero para el relink."
+          ],
+          "correctIndex": 2,
+          "explanation": "Es imprescindible conservar y mapear el ATC en los metadatos durante la ingesta para que el relink automático lo use como referencia fiable. Borrar, regenerar sin relación o depender solo del nombre de fichero impide un relink preciso.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "088",
       "title": "Examen 088",
