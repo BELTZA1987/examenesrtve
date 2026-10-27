@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "exams": [
+    {
+      "id": "090",
+      "title": "Examen 090",
+      "date": "2026-10-27",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las fuentes, restricciones y principios generales del modelo de financiación previsto por la Ley 8/2009:",
+          "options": [
+            "La financiación se articula mediante ingresos destinados y supresibles por su carácter finalista, con límites legales para asegurar servicio público.",
+            "El modelo combina recursos presupuestarios con ingresos propios regulados, respetando principios de transparencia y control.",
+            "La Ley establece restricciones sobre la afectación de determinados ingresos a fines distintos del servicio público.",
+            "El modelo prohíbe la obtención de ingresos por publicidad en cualquier circunstancia, garantizando exclusividad de financiación pública."
+          ],
+          "correctIndex": 3,
+          "explanation": "La segunda opción es la excepción: la Ley no prohíbe la publicidad en toda circunstancia; regula y limita fuentes, pero no establece una prohibición absoluta. Las otras opciones reflejan principios y restricciones previstos (recursos afectados, transparencia y límites sobre afectación).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_relink",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Para resolver enlaces incorrectos en un proyecto de edición, ¿qué criterio técnico es el más robusto como primer intento de coincidencia de esencia?",
+          "options": [
+            "Comparación visual manual de la forma de onda y la imagen buscando similitudes.",
+            "Coincidencia exclusiva del nombre de fichero y la carpeta de origen.",
+            "Coincidencia del timecode de inicio y duración combinada con checksum de la esencia.",
+            "Búsqueda por metadatos descriptivos (etiquetas y notas del catálogo) sin cotejo de esencia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La combinación de timecode/duración con checksum identifica de forma fiable la misma esencia técnica; los distractores son menos robustos: el nombre de fichero puede cambiar, la comparación visual es lenta y subjetiva, y las etiquetas descriptivas no garantizan coincidencia de fichero.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare las siguientes afirmaciones sobre derechos y obligaciones en prevención y señale la más precisa:",
+          "options": [
+            "El trabajador tiene derecho a información y formación sobre riesgos; su obligación se limita únicamente a utilizar equipos de protección individual si los demanda el empleador.",
+            "La obligación del trabajador es exclusiva respecto al uso de equipos comunes, sin deber de cooperar en la planificación preventiva.",
+            "El empleador debe proporcionar información y formación; el trabajador debe colaborar y utilizar correctamente los medios puestos a su disposición.",
+            "La acción preventiva recae enteramente en el delegado de prevención; el trabajador solo responde por su conducta individual."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es la más precisa: el empleador facilita información y formación y el trabajador tiene la obligación de cooperar y usar correctamente las medidas y equipos. Los distractores omiten la obligación de cooperación o atribuyen indebidamente la responsabilidad exclusiva a terceros.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_evs_loop",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al principio operativo de grabación en bucle y la gestión de canales en servidores EVS:",
+          "options": [
+            "La grabación en bucle sobrescribe el material más antiguo cuando se alcanza la capacidad asignada al canal.",
+            "Un canal suele asociarse a una pista o flujo independiente cuyo historial de ejecuciones puede consultarse por tiempo y marcas.",
+            "Las ejecuciones pueden marcarse (flag) para evitar su sobreescritura y permitir su recuperación posterior.",
+            "Cada canal de servidor EVS crea automáticamente una copia archivada permanente de todas las ejecuciones por defecto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La segunda afirmación es la excepción: el modo bucle no crea copias archivadas permanentes por defecto; sobrescribe salvo que las ejecuciones se marquen o exporten. Las demás opciones describen funcionamiento habitual (sobrescritura, marcaje y consulta por canal).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la relación contenedor frente a códec en MOV, MP4 y MXF:",
+          "options": [
+            "MOV, MP4 y MXF actúan como contenedores que pueden encapsular distintos códecs; la compatibilidad depende de ambos niveles.",
+            "MXF impone un único códec obligatorio para todos los usos profesionales, por lo que evita incompatibilidades entre estaciones.",
+            "Un mismo códec puede almacenarse en distintos contenedores; el contenedor define metadatos y estructura de archivo.",
+            "La elección de contenedor afecta interoperabilidad con sistemas de emisión y metadatos necesarios para workflows."
+          ],
+          "correctIndex": 1,
+          "explanation": "La tercera opción es la excepción: MXF no impone un único códec obligatorio; admite varios perfiles y su interoperabilidad depende del perfil elegido. Las otras afirmaciones reflejan la distinción y sus consecuencias.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Si un medidor de correlación de fase muestra un valor estable cercano a −0,8 en pasajes con amplia señal ambiental estéreo, ¿qué interpretación técnica es la más adecuada?",
+          "options": [
+            "Sugiere inversión de polaridad en una de las ramas provocando riesgo de cancelación al mezclar a mono.",
+            "Indica alta compatibilidad mono y señal centrada con predominio de energía en fase.",
+            "Corresponde a señal perfectamente balanceada entre canales sin implicaciones para compatibilidad.",
+            "Denota un fallo de medición y no admite interpretación operativa sobre mono o estéreo."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un valor cerca de −0,8 indica fuerte componente fuera de fase; eso sugiere inversión o desincronización entre canales y riesgo de cancelación al sumarse en mono. No es señal de compatibilidad ni simple error de medida.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a compatibilidad entre HDR y SDR, indique la afirmación que describe con mayor precisión la limitación práctica:",
+          "options": [
+            "La diferencia de rango dinámico obliga a aplicar mapeo de tonos al convertir HDR a SDR para evitar recorte y pérdida de detalle en luces.",
+            "Un master HDR puede reproducirse en un monitor SDR sin ajuste alguno sin pérdida significativa de detalle en altas luces.",
+            "SDR ofrece siempre mayor detalle de sombras que HDR por su curva gamma estandarizada.",
+            "La conversión de SDR a HDR es trivial y no requiere gestión de luminancia ni metadatos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta explica que sin un mapeo de tonos apropiado la conversión HDR→SDR suele provocar recorte de altas luces y pérdida de detalle; las demás opciones son incorrectas respecto al control de rango dinámico y tratamiento necesario.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Respecto al III Convenio Colectivo y la definición de la 'ocupación tipo' para la ocupación EDICIÓN, MONTAJE Y PROCESOS AUDIOVISUALES, ¿cuál de las siguientes afirmaciones describe con mayor precisión una consecuencia práctica de dicha clasificación en la organización del trabajo?",
+          "options": [
+            "La 'ocupación tipo' impone que el trabajador realice únicamente las tareas listadas en su ficha de ocupación, prohibiendo la asignación de funciones afines sin tramitar un nuevo encuadramiento.",
+            "La 'ocupación tipo' sirve de referencia para el encuadramiento profesional, los requisitos formativos y las funciones básicas, permitiendo asignar al trabajador tareas afines dentro de su agrupación profesional sin alterar su encuadramiento individual.",
+            "La 'ocupación tipo' determina una progresión salarial automática vinculada exclusivamente a la antigüedad, sin relación con la formación o la movilidad funcional dentro de la agrupación.",
+            "La 'ocupación tipo' tiene únicamente valor descriptivo y no condiciona la organización de turnos o funciones; estas se fijan libremente por la dirección en cada unidad organizativa sin relación con el encuadramiento."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta (B) refleja el papel operativo de la 'ocupación tipo' en el III Convenio: actúa como referencia para encuadramiento, requisitos y funciones básicas y permite la asignación de tareas relacionadas dentro de la misma agrupación profesional sin necesidad de reclasificar al trabajador. La opción A es incorrecta porque presenta la ficha como una limitación absoluta que impide la asignación de funciones afines, cuando en la práctica el convenio admite tareas compatibles dentro de la agrupación. La C es falsa al atribuir una vinculación salarial exclusiva a la antigüedad, y la D exagera su carácter al negar cualquier efecto organizativo de la ocupación sobre funciones y turnos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a la relación operativa entre tensión (V), corriente (I), resistencia (R) y potencia (P) en equipos audiovisuales, seleccione la expresión que describe correctamente esa compatibilidad:",
+          "options": [
+            "P = V ÷ R, que determina la potencia directamente sin depender de la corriente.",
+            "P = V + I − R, una suma que estima la potencia en componentes pasivos.",
+            "P = V × I, que también puede expresarse como P = I² × R o P = V² / R según la variable conocida.",
+            "P = I × R, equivalente a potencia en todos los casos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La relación correcta es P = V·I; algebraicamente también puede escribirse P = I²·R o P = V²/R. Las otras fórmulas no representan la potencia eléctrica válida.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_true_peak",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Para garantizar el cumplimiento técnico de niveles en la entrega de un máster, indique la afirmación que describe con mayor precisión la ventaja operativa de medir 'True Peak' frente a 'Sample Peak':",
+          "options": [
+            "El 'Sample Peak' mide los máximos de los valores digitales muestreados y, siempre que éstos estén por debajo de 0 dBFS, garantiza que no habrá clipping en la reproducción analógica, por lo que basta para verificar niveles de entrega.",
+            "El 'True Peak' estima los picos entre muestras representando la reconstrucción analógica (mediante interpolación/oversampling) y por tanto detecta sobreshoots que pueden provocar clipping en la reproducción; es la medida apropiada para control de entrega.",
+            "El 'True Peak' obtiene el valor del pico analógico real tras el DAC mediante una medición directa en el dominio analógico, de modo que reemplaza cualquier cálculo basado en muestras digitales.",
+            "Un medidor de 'Sample Peak' suele registrar picos iguales o superiores a los de 'True Peak' en señales procesadas por filtros o limitadores, por lo que protege frente a posibles picos entre muestras."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta es la 1ª: el medidor 'True Peak' estima picos entre muestras aplicando interpolación/oversampling para modelar la señal tras la reconstrucción analógica, de modo que detecta sobreshoots no visibles en los valores muestreados y evita clipping en la reproducción. La opción más próxima (2ª) es incorrecta: el 'Sample Peak' solo evalúa los valores discretos de la señal digital y puede no reflejar picos que ocurren entre muestras tras el DAC, por lo que no garantiza por sí mismo el cumplimiento de entrega. Asimismo, la 3ª confunde estimación con medición directa: el 'True Peak' es una estimación sobre la base de la señal digital, no una medición analógica posterior al conversor; la 4ª es falsa técnicamente porque un 'Sample Peak' puede quedar por debajo del 'True Peak' y, por tanto, no siempre ofrece mayor protección.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estas afirmaciones y señale cuál corresponde con precisión a la operación 'roll trim':",
+          "options": [
+            "Recorta un punto de corte y desplaza todo el material posterior en la secuencia, modificando la duración total.",
+            "Ajusta simultáneamente el punto de salida de un clip y el punto de entrada del siguiente sin alterar la duración total de la secuencia.",
+            "Desplaza el contenido interno de un clip entre los mismos puntos de corte manteniendo duración y posición.",
+            "Corta y elimina un segmento central, uniendo extremos y cambiando la sincronía de audio y vídeo."
+          ],
+          "correctIndex": 1,
+          "explanation": "El 'roll trim' mueve el punto de corte entre dos clips (ajusta salida de uno y entrada del otro) sin cambiar la duración total de la secuencia. Los distractores describen ripple (opción 2), slip/slide (opción 3) y una eliminación central (opción 4).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_postura",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento ergonómico prioritario para ajustar un puesto de edición: indique la secuencia más adecuada.",
+          "options": [
+            "Ajustar altura de la silla para que los antebrazos queden aproximadamente paralelos al escritorio, soporte lumbar adecuado, reposapiés si los pies no apoyan completamente.",
+            "Primero colocar todos los monitores lo más alto posible, luego forzar postura de antebrazos y ajustar silla al máximo recorrido.",
+            "Colocar teclado elevado encima de la mesa para mantener muñecas en extensión y ajustar reposabrazos por debajo del nivel del codo.",
+            "Priorizar la estética del puesto sobre la ergonomía; ajustar postura solo si aparecen molestias."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 describe la secuencia adecuada: altura de silla que permita antebrazos paralelos, apoyo lumbar y apoyo de pies. Las otras opciones proponen prácticas que empeoran la postura o ignoran la prevención.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Compare y seleccione la afirmación que describe con precisión la tolerancia a fallos y reconstrucción de RAID:",
+          "options": [
+            "RAID 6 permite tolerancia a la falla de dos discos mediante doble paridad y reconstrucción con dos discos sustitutos.",
+            "RAID 0 ofrece tolerancia a fallos mediante espejo entre discos y reconstrucción automática.",
+            "RAID 1 distribuye la paridad entre todos los discos y tolera la falla de un disco menos uno.",
+            "RAID 5 no permite reconstrucción tras fallo de un disco porque carece de paridad."
+          ],
+          "correctIndex": 0,
+          "explanation": "RAID 6 usa doble paridad y soporta la pérdida de hasta dos discos; las demás opciones son incorrectas: RAID 0 no tiene tolerancia, RAID 1 es espejo y tolera un fallo por conjunto, y RAID 5 sí tiene paridad y permite reconstrucción tras un fallo de disco (uno).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Indique la consecuencia operativa más precisa del submuestreo 4:2:0 respecto a 4:2:2 y 4:4:4 en tareas de etalonaje y keying:",
+          "options": [
+            "4:2:0 ofrece mayor resolución de croma que 4:2:2, por lo que es la opción óptima para etalonaje intensivo.",
+            "4:2:0 preserva crominancia completa y es preferible para keying profesional frente a 4:4:4.",
+            "4:2:0 solo afecta la luminancia, por lo que no tiene impacto en correcciones de color o keying.",
+            "4:2:0 reduce la resolución de crominancia en ambas direcciones, lo que puede producir pérdida de detalle de color y menor fiabilidad al realizar chroma‑key o correcciones finas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 describe correctamente que 4:2:0 reduce crominancia horizontal y vertical, afectando detalle de color y fiabilidad en keying; las otras opciones contradicen la naturaleza del submuestreo.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Respecto a la finalidad operativa esencial de la reforma de 2017 y la elección parlamentaria de órganos de RTVE, señale la afirmación más ajustada:",
+          "options": [
+            "La reforma perseguía reforzar la independencia y pluralismo mediante la elección parlamentaria de los órganos de gobierno de RTVE.",
+            "La reforma instauró la gestión directa por el Gobierno sin intervención parlamentaria para agilizar decisiones operativas.",
+            "El objetivo principal fue privatizar partes de la Corporación para diversificar financiación.",
+            "La reforma eliminó la necesidad de controles externos sobre nombramientos y programación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 es correcta: la Ley 5/2017 promovió mecanismos de elección parlamentaria para reforzar independencia y pluralismo. Los demás enunciados distorsionan el propósito real de la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: al intercambiar clips desde un servidor EVS a un sistema de edición durante una retransmisión en curso, ¿qué medida técnica es esencial para garantizar disponibilidad y posibilidad de edición con 'handles' sin interrumpir el playout?",
+          "options": [
+            "Modificar el códec del servidor en pleno directo a uno de mayor compresión para reducir tamaño durante la retransmisión.",
+            "Esperar al cierre definitivo del clip en EVS y copiar solo ficheros cerrados para evitar cualquier interferencia con el playout.",
+            "Transferir únicamente metadatos y solicitar a la realización que interrumpa la grabación para extraer la esencia.",
+            "Realizar un exchange que incluya handles suficientes y transcodificación a un códec intermedio compatible con la estación de edición mientras el EVS mantiene el archivo en modo growing o cerrado según el caso."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es la medida adecuada: exchange con handles y códec intermedio permite editar sin interrumpir playout; los demás supuestos son imprácticos o riesgosos durante retransmisión.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Identifique la correspondencia correcta para la operación 'link' en flujos de trabajo de media: capture, import, link e ingest.",
+          "options": [
+            "Link: copiar físicamente el soporte al almacenamiento central y generar nuevos identificadores UMID.",
+            "Link: crear una referencia en el proyecto a un archivo externo sin copiar físicamente la esencia al storage del proyecto.",
+            "Link: capturar desde dispositivo en tiempo real con control de hardware y checksums.",
+            "Link: proceso de transcodificación y consolidado de múltiples pistas en un único archivo intermedio."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 define 'link': referenciar un archivo externo sin copiarlo. Las otras opciones describen import/capture/transcode, no el enlace.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: un plano con objetos en movimiento presenta 'peines' visibles y desplazamiento temporal entre mitades de la imagen. ¿Cuál es la causa técnica más probable?",
+          "options": [
+            "Indica pérdida de crominancia por submuestreo 4:2:0 en altas frecuencias.",
+            "Se trata de un defecto de compresión típico de Long‑GOP que no tiene relación con entrelazado.",
+            "Es síntoma de exceso de rango dinámico y no está relacionado con el modo de exploración.",
+            "Es un artefacto característico de la señal entrelazada: las dos fields representan instantes distintos y generan combing en movimiento."
+          ],
+          "correctIndex": 3,
+          "explanation": "La presencia de 'peines' y desplazamiento temporal es síntoma típico del entrelazado: cada field captura un instante distinto. Los distractores atribuyen erróneamente el problema a compresión o croma.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Comparando J‑cut y L‑cut, ¿cuál describe con precisión la función del J‑cut respecto al audio?",
+          "options": [
+            "El J‑cut elimina el audio de ambos planos para favorecer un corte seco.",
+            "El J‑cut prolonga el audio del plano anterior durante la imagen del plano siguiente.",
+            "El J‑cut introduce el audio del plano siguiente antes de que aparezca su imagen en pantalla.",
+            "El J‑cut es una técnica de mezclador que altera la curva de gain durante la transición."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 define la función del J‑cut: anticipar la entrada del audio del siguiente plano. Las demás opciones describen prolongación (L‑cut), acciones distintas o técnicas de mezcla no relacionadas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_fiction",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Al reconformar una escena de ficción con cobertura amplia y varios primeros planos tomados en distintas ejecuciones, si entre tomas existen pequeñas variaciones en la interpretación de los actores, ¿qué criterio editorial debe priorizarse para mantener la continuidad dramática y la coherencia interpretativa?",
+          "options": [
+            "Buscar alternancia visual constante entre cobertura amplia y primeros planos para mantener ritmo y dinamismo, aunque haya ligeras rupturas en la interpretación.",
+            "Priorizar la coincidencia técnica estricta (posición exacta de cámara, iluminación y exposición) para minimizar trabajo de postproducción, aunque suponga sacrificar fragmentos interpretativos.",
+            "Seleccionar fragmentos que respeten la evolución emocional, el tempo y los microgestos de la interpretación (respiración, pausas, miradas), incluso si exige resolver pequeñas diferencias técnicas posteriormente.",
+            "Priorizar el respeto absoluto al eje de acción y la regla de los 180° para asegurar continuidad espacial, incluso si ello obliga a cortar a tomas cuya interpretación es menos coherente."
+          ],
+          "correctIndex": 2,
+          "explanation": "La continuidad dramática depende principalmente de la coherencia de la interpretación: continuidad en tempo, pausas, microgestos y dirección de la mirada preserva el arco emocional y la verosimilitud. Los ajustes técnicos (color, exposición, estabilización) y pequeñas correcciones de raccord espacial son solucionables en postproducción; en cambio, discontinuidades en la actuación suelen romper la inmersión del espectador. El distractor más próximo es la prioridad por coincidencia técnica (opción 2): si bien la concordancia técnica facilita el proceso, no debe anteponerse a la integridad interpretativa, porque la corrección técnica es en general más tratable que la reconstrucción de una intención actoral coherente.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "089",
       "title": "Examen 089",
