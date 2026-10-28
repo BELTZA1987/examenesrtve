@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "exams": [
+    {
+      "id": "091",
+      "title": "Examen 091",
+      "date": "2026-10-28",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 13/2022, indique cuál de las siguientes obligaciones concretas debe cumplir un prestador audiovisual respecto a la accesibilidad de sus contenidos audiovisuales:",
+          "options": [
+            "Ofrecer siempre un servicio de lengua de signos en directo para todos los programas lineales independientemente del tipo de emisión.",
+            "Limitar la accesibilidad a la indicación de un contacto para solicitar adaptaciones de formato en el plazo que estime conveniente el prestador.",
+            "Publicar únicamente una transcripción textual en la web del contenido como única medida de accesibilidad para emisoras bajo demanda.",
+            "Facilitar, cuando proceda, subtitulado para sordos y audiodescripción para personas con discapacidad visual en los contenidos accesibles, así como información clara sobre las opciones de accesibilidad disponibles."
+          ],
+          "correctIndex": 3,
+          "explanation": "La correcta exige la provisión activa de subtitulado y audiodescripción cuando corresponda y la información sobre las opciones disponibles; las otras opciones son insuficientes o obligan a medidas pasivas o generalizadas no exigidas por la Ley 13/2022.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Sobre ProRes y DNxHR como códecs intermedios en postproducción, señale la afirmación más precisa:",
+          "options": [
+            "ProRes y DNxHR son códecs intraframe orientados a postproducción; elegir perfiles de mayor preservación (p. ej. ProRes 4444 o DNxHR HQX) para 4:4:4 y conservación de alpha, y usar el contenedor recomendado según plataforma y herramienta.",
+            "ProRes solo existe en contenedor .mov y por tanto no puede utilizarse en flujos de trabajo basados en MXF o en plataformas Windows.",
+            "DNxHR es un códec de entrega final que no admite perfiles orientados a edición ni conservación de canales alpha.",
+            "Los perfiles de ProRes y DNxHR son intercambiables en bitrate y profundidad de color sin afectar la compatibilidad entre plataformas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta reconoce que ambos son intraframe para postproducción y que los perfiles más altos preservan 4:4:4 y alpha; a diferencia del distractor más próximo, ProRes puede contenerse también en MXF y DNxHR sí tiene perfiles específicos para edición y alpha.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Un puesto de edición reproduce timeline de 4K sin saltos, pero los efectos GPU‑acelerados tardan mucho en renderizar y el export final es lento. ¿Cuál es el cuello de botella más probable?",
+          "options": [
+            "GPU con capacidad insuficiente o controladores inadecuados, que limita el procesamiento de efectos acelerados y exportes que usan la GPU.",
+            "Memoria RAM insuficiente, que provoca swapping y ralentiza tanto reproducción como efectos.",
+            "Almacenamiento con IOPS insuficientes, que impediría la reproducción fluida del timeline.",
+            "CPU saturada por procesos en segundo plano; la GPU no influye en el rendimiento de efectos acelerados."
+          ],
+          "correctIndex": 0,
+          "explanation": "La descripción señala reproducción fluida (descarta I/O como causa principal) y lentitud específica en efectos GPU‑acelerados y export; por tanto la GPU es el cuello de botella, a diferencia del distractor más cercano (CPU) que no explica la reproducción fluida.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Respecto a LTO con LTFS para archivo a largo plazo, indique cuál de las siguientes afirmaciones describe una limitación operativa relevante:",
+          "options": [
+            "Permite acceso aleatorio instantáneo idéntico al de un disco local, sin dependencia del catálogo.",
+            "LTFS elimina la necesidad de mantener registros externos de inventario o checksums.",
+            "Las cintas LTO no requieren verificación de integridad porque son medios inmutables con prácticamente cero tasa de error.",
+            "El acceso a ficheros suele ser mucho más lento que en disco; la localización eficiente depende del catálogo LTFS y, sin él, puede requerir búsqueda secuencial en cinta."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta señala la limitación real: acceso más lento y dependencia del catálogo; los distractores asumen prestaciones de disco o descartan la verificación y el inventario, que sí son necesarias.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Para un flujo de edición offline con multicámara y limitaciones de red y almacenamiento, ¿qué diseño de proxy ofrece el mejor equilibrio entre fluidez de edición, precisión visual y ocupación de espacio?",
+          "options": [
+            "ProRes Proxy (intraframe) a 720p con bitrate moderado: buena respuesta en scrubbing, tolerancia al trimming y suficiente precisión para conformar decisiones.",
+            "Proxy H.264 de baja resolución 480p con bitrate muy bajo: mínimo espacio, pero scrubbing y precisión de color limitados.",
+            "Proxy 1080p Long‑GOP con bitrate reducido: alta resolución aparente pero decodificación pesada y peor rendimiento en scrubbing.",
+            "Imagenes JPEG secuenciales a resolución completa: máxima calidad visual pero ocupación y exigencia I/O muy altas."
+          ],
+          "correctIndex": 0,
+          "explanation": "ProRes Proxy intraframe a 720p equilibra rendimiento interactivo (scrubbing y trims) y tamaño; el distractor más cercano (1080p Long‑GOP) penaliza la fluidez por la decodificación GOP compleja pese a mayor resolución.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_match_action",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al realizar un raccord de movimiento (match on action) para preservar continuidad perceptiva del movimiento, ¿qué pauta de corte es la más adecuada?",
+          "options": [
+            "Cortar justo antes de que comience la acción para mostrar el inicio en el siguiente plano.",
+            "Cortar sólo cuando la acción haya finalizado en el primer plano para mostrar la reacción en el segundo plano.",
+            "Cortar en el punto de máxima acción o movimiento y proseguir la misma dirección y velocidad en el plano siguiente.",
+            "Evitar cortar durante la acción; preferir cortes en pausas o puntos neutros para evitar discontinuidad."
+          ],
+          "correctIndex": 2,
+          "explanation": "El procedimiento correcto es cortar durante el movimiento (punto de máxima acción) y continuar la acción en el siguiente plano; los distractores rompen la continuidad o evitan el principio operativo del match on action.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_chromakey",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Orden operativo habitual y diagnóstico inicial para una incrustación por chromakey:",
+          "options": [
+            "Aplicar primeramente spill suppression, después generar la matte, luego ajustar bordes y finalmente realizar limpieza de color.",
+            "Primer paso: corrección de exposición y balance para homogenizar fondo; generar matte; limpiar bordes y spill; afinar máscara y luego componer sobre el fondo.",
+            "Componer directamente la capa sobre el fondo y aplicar la matte como último recurso si se detectan artefactos.",
+            "Convertir la imagen a escala de grises, realizar key por luminancia y luego reintroducir el canal de color original."
+          ],
+          "correctIndex": 1,
+          "explanation": "La secuencia correcta comienza por acondicionar la imagen (exposición/balance), generar la matte, limpiar bordes y spill y ajustar máscara antes de la composición; los distractores invierten pasos o proponen métodos no habituales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Según el II Plan de Igualdad y la Guía de Igualdad de RTVE, indique la medida que coincide con las políticas para prevenir representaciones sexistas y el acoso:",
+          "options": [
+            "Establecer un protocolo de actuación frente al acoso, formación obligatoria sobre igualdad, y guías de lenguaje y representación no sexista en contenidos y producción.",
+            "Implantar cuotas fijas de reparto de papeles por género en todas las producciones sin posibilidad de excepción.",
+            "Eliminar totalmente personajes que representen estereotipos de cualquier tipo incluso cuando forman parte del contenido crítico.",
+            "Permitir reclamaciones verbales sin registro formal para agilizar resoluciones internas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta incluye protocolos, formación y guías de representación, que son medidas recogidas en el Plan; las demás opciones son medidas extremas, imprácticas o carentes de registro y tramitación formal.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En un sistema de edición lineal A/B‑Roll, cuál es la función de las fuentes A y B y de la prelectura (preview):",
+          "options": [
+            "Las fuentes A y B actúan como dos cámaras en directo; la prelectura sólo sirve para visualizar el resultado final después de la transición.",
+            "A y B son dos máquinas de reproducción que permiten preparar distintas fuentes para transiciones; la prelectura ajusta la posición y sincronía antes de que el mezclador ejecute la transición en programa.",
+            "A y B duplican la misma fuente para redundancia; la prelectura crea una copia temporal para el mezclador.",
+            "Las fuentes A/B sirven únicamente para efectos y nunca para cortes directos; la prelectura es opcional y rara vez utilizada."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta describe que A y B son fuentes preparadas para transiciones y la prelectura permite ajustar la sincronía y punto de corte antes de que el mezclador realice la transición; los distractores confunden funciones o minimizan la prelectura.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_intra_longgop",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Para un flujo de trabajo que requiere cortes cuadro a cuadro frecuentes y reconformados en timeline con alta tolerancia a corrupción parcial, ¿qué evaluación técnica es la más adecuada entre intraframe e interframe Long‑GOP?",
+          "options": [
+            "Long‑GOP es preferible por su mayor eficiencia de compresión y menor carga de decodificación por fotograma, sin penalizaciones en reconformado cuadro a cuadro.",
+            "No hay diferencias operativas relevantes entre ambos para edición intensiva; elegir según disponibilidad de licencias.",
+            "Intraframe (Intra) es preferible: permite acceso fotograma a fotograma, edición y reconformado más robustos frente a errores locales y menor dependencia de GOP contiguos.",
+            "Long‑GOP ofrece mayor robustez frente a corrupción porque los fotogramas P y B permiten reconstrucción mediante referencias redundantes."
+          ],
+          "correctIndex": 2,
+          "explanation": "Intra ofrece acceso aleatorio por fotograma y mayor robustez ante corrupción al no depender de referencias previas; los distractores sobreparaplican ventajas de Long‑GOP que penalizan la edición cuadro a cuadro.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a factores que limitan la concurrencia de reproducción en un servidor de vídeo:",
+          "options": [
+            "La concurrencia máxima está limitada por el ancho de banda disponible por canal y la capacidad agregada de la red y el servidor.",
+            "El rendimiento de disco (throughput y IOPS) y la capacidad de la cabina de almacenamiento determinan el número sostenido de canales simultáneos.",
+            "La cantidad de licencias de reproducción es el único factor limitante; la capacidad de red y disco no influyen en la concurrencia.",
+            "La CPU y la capacidad de transcodificación pueden limitar la concurrencia cuando el servidor realiza conversiones en tiempo real."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta (excepción) es falsa: la concurrencia no depende solo de licencias; red, disco y CPU influyen; los distractores restantes son factores reales que limitan concurrencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación práctica de la línea de tono de piel en un vectorscopio: ¿qué uso y límite operativo corresponde?",
+          "options": [
+            "Usarla como objetivo rígido para nivelar saturación de todas las pieles al mismo valor porcentual en el vectorscopio.",
+            "Ignorar la línea de piel para calibración de tonos, ya que sólo es útil en señales SD.",
+            "Ajustar exclusivamente la luminancia de la piel con la posición en la línea y considerar fuera de rango cualquier traza que no toque exactamente la línea de piel.",
+            "Utilizarla como referencia de ángulo (hue) para verificar que los tonos de piel caen cercanos al eje de referencia; no es una medida absoluta de corrección porque la tonalidad y saturación varían entre individuos y etnias."
+          ],
+          "correctIndex": 3,
+          "explanation": "La línea de piel sirve como guía de matiz (ángulo) pero no dicta una saturación única por la variación étnica; los distractores tratan la línea como una regla fija o la descartan indebidamente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Indique la opción que reúne con precisión los elementos que caracterizan un desplazamiento habitual domicilio–trabajo susceptible de calificarse como accidente in itinere:",
+          "options": [
+            "Ruta alternativa elegida ocasionalmente por preferencia del trabajador (más corta o más cómoda) aunque suponga variar sustancialmente la trayectoria habitual, siempre que se respete el horario de entrada.",
+            "Cualquier desplazamiento realizado en vehículo facilitado por la empresa durante la jornada, aunque incluya paradas personales prolongadas o desvíos no relacionados con la prestación laboral.",
+            "Desplazamiento entre domicilio y trabajo que admite paradas breves inevitables (combustible, incidencias) y también escalas prolongadas por motivos personales antes de iniciar la jornada.",
+            "Desplazamiento habitual y necesario entre el domicilio y el lugar de trabajo, efectuado por la ruta directa o usual sin interrupciones o desvíos voluntarios relevantes, dentro del horario habitual de inicio/fin de la jornada y con comienzo/terminación en el domicilio o lugar de prestación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 reúne los elementos esenciales: habitualidad del trayecto, necesidad de desplazamiento entre domicilio y lugar de trabajo, desarrollo por la ruta directa o habitual sin desvíos voluntarios relevantes, y temporalidad coincidente con la jornada (inicio/fin en domicilio o puesto). La opción 3 es el distractor más próximo porque admite paradas breves justificadas —que no rompen la continuidad del desplazamiento— pero incorpora explícitamente «escalas prolongadas por motivos personales», que constituyen desviaciones voluntarias que impiden la calificación como in itinere.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al trabajar el ritmo de montaje en una secuencia, ¿qué decisión editorial afecta tanto al ritmo interno como al ritmo externo?",
+          "options": [
+            "Aumentar la resolución de imagen para influir directamente en el tempo del montaje.",
+            "Reducir la duración de los planos manteniendo movimientos internos activos para acelerar el ritmo sin perder legibilidad.",
+            "Eliminar movimiento interno en todos los planos para homogeneizar el ritmo sin alterar la duración de cada plano.",
+            "Sustituir cortes por fundidos únicamente para acelerar la percepción temporal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Acortar planos conservando movimiento interno incrementa ritmo externo mientras mantiene interés interno; los distractores introducen medidas no relacionadas con ritmo (resolución) o contraproducentes (eliminar movimiento o usar fundidos para acelerar).",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Distinga correctamente entre libertad de expresión y derecho a la información según principios constitucionales:",
+          "options": [
+            "La libertad de expresión es absoluta; el derecho a la información no admite limitaciones legales.",
+            "La Constitución no establece garantías respecto a la veracidad ni a la protección de derechos de terceros en la actividad informativa.",
+            "El derecho a la información permite difundir acusaciones sin comprobación previa porque prima la libertad de prensa sobre otros derechos.",
+            "Ambas son garantías constitucionales que admiten límites: protección del honor, intimidad y derechos de terceros, y su ejercicio puede regularse por ley para garantizar otros derechos constitucionales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta reconoce que ambas libertades son constitucionales pero sujetas a límites (honor, intimidad, seguridad jurídica) y regulables por ley; los distractores absolutizan o niegan límites y garantías.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "¿Cuál de las siguientes afirmaciones NO es correcta respecto al comportamiento operativo de los niveles legales, la gestión de gamut y la limitación automática (legalizer) en la cadena de salida?",
+          "options": [
+            "La limitación automática solo corrige picos de luminancia (Y) y nunca altera los componentes de crominancia (Cb/Cr) de la señal.",
+            "La gestión de gamut actúa principalmente sobre la crominancia reduciendo saturación de colores fuera del espacio de primarios, sin necesidad de modificar de forma significativa la luminancia.",
+            "La activación de la limitación automática puede producir una ligera desaturación de colores muy saturados como efecto colateral al ajustar crominancia para cumplir gamut y niveles legales.",
+            "Un legalizer aplica recorte o compresión para evitar que componentes de luminancia o crominancia excedan los límites legales antes de codificar o emitir."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción marcada es la excepción porque los legalizers y las rutinas de gamut pueden actuar sobre crominancia (Cb/Cr) además de sobre luminancia; no se limitan exclusivamente a picos de Y. La opción más próxima es la 2, que es correcta: describe el efecto real de que la gestión de gamut reduce saturación en colores fuera de primarios sin necesariamente cambiar la luminancia de forma apreciable. Las opciones 0 y 2 describen funciones operativas reales del legalizer y del mapeo de gamut, respectivamente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Seleccione la configuración de puesto con pantalla que reune distancia, altura, orientación, iluminación y control de reflejos recomendados para evitar fatiga visual y reflejos:",
+          "options": [
+            "Monitor elevado por encima del nivel de los ojos; distancia 20–30 cm para detalle; iluminación intensiva directa sobre la pantalla.",
+            "Monitor centrado frente al operador; centro de la pantalla 10–20° por debajo del nivel de los ojos; distancia de 50–70 cm; iluminación uniforme lateral y sin fuentes directas que generen reflejos.",
+            "Pantalla orientada hacia una ventana amplia para aprovechar luz natural; posición del centro de pantalla a la altura de la frente; brillo máximo para evitar sombras.",
+            "Colocar varias pantallas en ángulo cerrado sin control de iluminación para compensar con mayor luminosidad del monitor."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta recoge recomendaciones ergonómicas: centro ligeramente por debajo del nivel de los ojos, distancia 50–70 cm y control y uniformidad de la iluminación para evitar reflejos; las otras opciones introducen configuraciones que generan fatiga o reflejos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_offline_online",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Relación entre montaje offline (proxy), lista de decisiones y reconformado a originales:",
+          "options": [
+            "El reconformado se hace siempre manualmente porque las listas de decisiones no contienen información suficiente para localizar originales.",
+            "El montaje offline genera una lista de decisiones (EDL/AAF/AAF enriquecido) que sirve para conformar los originales en el online; los proxies no deben ser renombrados ni perder relación con los originales para permitir relink.",
+            "Los proxies son equivalentes a los originales en metadata y no requieren ninguna operación de relink o reconformado.",
+            "No es necesario tener 'handles' (márgenes) en la edición offline si se dispone de proxies de alta resolución."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta explica que el offline produce listas de decisiones usadas para conformar los originales en el online y que mantener la trazabilidad (relink) es esencial; los distractores minimizan la función de las listas o los handles.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_red_ip",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción (incorrecta) respecto a comprobaciones básicas de conectividad en una red de edición:",
+          "options": [
+            "Si dos equipos tienen direcciones IP en la misma subred y máscara correcta, deberían comunicarse directamente sin pasar por la puerta de enlace.",
+            "Un conflicto de direcciones IP (dos equipos con la misma IP) puede impedir el acceso a recursos compartidos hasta resolver duplicidad.",
+            "Si el ping a la puerta de enlace funciona y no hay respuesta a hosts de la misma subred, el problema nunca puede ser de VLANs o segmentación de red.",
+            "Si la conectividad falla hacia recursos de la red por nombre pero la conexión por dirección IP funciona, el problema es de DNS y no de direccionamiento IP."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación correcta como excepción es la 3ª (índice 3): es falsa porque incluso con ping a la puerta de enlace funcionando, la ausencia de respuesta a otros hosts puede deberse a VLANs o segmentación; los otros enunciados describen causas válidas o comprobaciones útiles.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Tras la descarga verificada de un soporte de estado sólido (SSD) utilizado en rodaje, ¿cuál es la práctica operativa más adecuada antes de reutilizarlo?",
+          "options": [
+            "Formatear inmediatamente a bajo nivel en la cámara y no conservar registros de integridad, porque la cámara prepara el SSD para la siguiente ingesta.",
+            "Reutilizar el SSD sin procedimiento porque los soportes flash no sufren pérdida de datos tras una ingesta correcta.",
+            "Verificar checksums y registros de transferencia, registrar metadatos e identificación del soporte, y formatear con el método o sistema de archivos requerido por el flujo de trabajo antes de volver a usarlo.",
+            "Eliminar físicamente las particiones antiguas sin comprobación de integridad y usar utilidades de terceros sin registrar el soporte."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta exige verificar integridad, registrar metadatos e identificar el soporte y formatearlo según el flujo de trabajo; los distractores proponen prácticas inseguras, presuponen inexistencia de verificación o uso de métodos no trazables.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "090",
       "title": "Examen 090",
