@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "exams": [
+    {
+      "id": "092",
+      "title": "Examen 092",
+      "date": "2026-10-29",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la medida operativa que mejor implementa la obligación de servicio público atribuida a la Corporación RTVE en materia de pluralismo y acceso universal:",
+          "options": [
+            "Imponer cuotas rígidas de presencia de formaciones políticas en todos los espacios informativos en función de audiencias.",
+            "Delegar en productoras privadas la selección de contenidos culturales sin requisitos de accesibilidad.",
+            "Priorizar la externalización de producción informativa para reducir costes, con control eventual sobre contenidos.",
+            "Diseñar y mantener una programación y políticas editoriales que garanticen pluralismo, imparcialidad, accesibilidad y atención al interés general."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la segunda: traduce la obligación de servicio público en medidas editoriales y de accesibilidad. La A plantea una medida cuantitativa rígida (no es la vía operativa preferente), C y D externalizan responsabilidades que la Corporación debe asumir o supervisar.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_metadatos",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Función operativa principal de los metadatos técnicos y descriptivos en un sistema de gestión de medios:",
+          "options": [
+            "Ordenar los ficheros por checksum para validar su integridad.",
+            "Codificar la señal de vídeo para su transmisión en multiplex.",
+            "Sustituir la necesidad de proxies en los flujos de edición.",
+            "Facilitar la catalogación, búsqueda y el intercambio entre sistemas mediante campos estandarizados."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la segunda: los metadatos permiten descubrir, filtrar y transferir activos entre sistemas. El checksum es una comprobación de integridad (A) pero no la función principal de catalogación; C y D confunden metadatos con procesos de media o codificación.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_waveform_luma",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al emplear el monitor de forma de onda para verificar la legalidad de la luminancia de una señal, ¿qué procedimiento operativo es el más adecuado?",
+          "options": [
+            "Ignorar mediciones y basarse solo en la percepción del operador en sala.",
+            "Alinear la traza del monitor de forma de onda con el vectorscopio para corregir la crominancia.",
+            "Ajustar la visualización del monitor usando una LUT creativa antes de hacer mediciones.",
+            "Medir los picos y niveles globales de luminancia y ajustar ganancia y offset para mantenerlos dentro de los límites legales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La primera opción es correcta: el uso operativo del waveform para legalidad consiste en medir picos y niveles y actuar sobre ganancia/offset. Las otras opciones confunden objetivos: la B trata crominancia (vectorscopio), C altera la visualización y D es una práctica insuficiente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia mínima de pasos en una ingesta verificada orientada al control de calidad:",
+          "options": [
+            "Copia de archivos al almacenamiento → generación y comparación de checksum antes/después → comprobación de estructura y registro en catálogo.",
+            "Visionado completo de todos los ficheros → transcodificación inmediata → borrado de originales.",
+            "Generación de proxies → exportación de EDL → cálculo de checksum en destino.",
+            "Copia a almacenamiento RAID → eliminación de metadatos → registro manual."
+          ],
+          "correctIndex": 0,
+          "explanation": "La A describe la secuencia estándar: copia con verificación bit a bit y comprobación de estructura y catalogación. Las otras opciones omiten la verificación previa/registro correcto o incorporan pasos inapropiados (borrado de originales, eliminación de metadatos).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_color_order",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Orden operativo recomendado en una sesión de etalonaje para asegurar normalización y matching entre planos:",
+          "options": [
+            "Aplicar look creativo → matching entre planos → ajuste de balance y normalización.",
+            "Matching → normalización → aplicación de LUT de visualización → balance final.",
+            "Normalización de niveles → balance de blancos → contraste/offset → matching entre planos → aplicación de look.",
+            "Balance → aplicar LUT creativa → normalización → matching."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción B es la correcta: primero normalizar niveles base, luego balancear y ajustar contraste para permitir matching consistente antes de aplicar el look creativo. Las otras secuencias aplican look o matching antes de asegurar niveles y balance base.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_backup_321",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Según la política 3‑2‑1, ¿qué estrategia cumple correctamente sus requisitos de copias independientes, soportes y ubicación?",
+          "options": [
+            "Tres copias almacenadas en el mismo servidor RAID materialmente separadas por carpetas.",
+            "Dos copias en dos discos locales distintos y una copia adicional en la misma sala en otro armario.",
+            "Tres copias: original en almacenamiento principal, copia en disco externo y copia offsite en cinta LTO o en otro centro físico.",
+            "Confiar únicamente en RAID‑6 porque proporciona redundancia suficiente para recuperación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción B cumple 3‑2‑1 (3 copias mínimas, 2 medios distintos, 1 copia offsite). A y C no garantizan independencia ni ubicación separada; D confunde redundancia de RAID con copias independientes para preservación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_checksum",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Cuál es la comprobación que describe mejor el uso de checksums durante una copia de ficheros:",
+          "options": [
+            "Generar y comparar checksum antes y después de la copia para detectar cualquier alteración bit a bit; sin embargo, un checksum no repara ni localiza físicamente sectores dañados ni es infalible ante colisiones extremas.",
+            "Usar checksum como criterio principal para clasificar y etiquetar contenidos temáticos.",
+            "Sustituir la verificación visual del contenido por la sola lectura del checksum.",
+            "Confiar en checksum para corregir automáticamente errores de transferencia."
+          ],
+          "correctIndex": 0,
+          "explanation": "La A es correcta: el procedimiento es comparar checksums pre y post copia; su límite es que no corrige errores ni identifica la causa física y las colisiones son improbables pero teóricas. Las demás opciones atribuyen funciones que no corresponden al checksum.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Cuál de estos enunciados distingue mejor una obligación preventiva del empleador frente a una mera orientación general del principio de acción preventiva:",
+          "options": [
+            "Evaluar riesgos y adoptar medidas concretas y proporcionales para eliminarlos o reducirlos, manteniendo registro de actuaciones.",
+            "Sugerir a la plantilla recomendaciones generales sobre salud sin programa específico.",
+            "Publicar material informativo sobre riesgos sin plan de actuación.",
+            "Delegar la gestión de prevención exclusivamente en el trabajador."
+          ],
+          "correctIndex": 0,
+          "explanation": "La A es correcta: impone evaluar y actuar (obligación). Las otras opciones son enfoques informativos, pasivos o de delegación que no satisfacen la obligación activa del empleador.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_lut_log",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "¿Cuál describe correctamente la diferencia entre una LUT de visualización y una LUT creativa en un flujo logarítmico?",
+          "options": [
+            "Ambas LUT tienen el mismo propósito y pueden intercambiarse sin impacto en el etalonaje.",
+            "La LUT de visualización transforma una señal logarítmica para apariencia de monitor (preview); la LUT creativa altera color y contraste con intención estética y no sustituye la corrección primaria.",
+            "La LUT de visualización incrementa la resolución; la creativa reduce el bitrate.",
+            "La LUT de visualización solo se aplica en cámara y la creativa solo en master de salida."
+          ],
+          "correctIndex": 1,
+          "explanation": "La A es la correcta: la LUT de visualización sirve para ver la señal log en forma perceptible; la LUT creativa modifica la estética y debe aplicarse tras correcciones primarias. Las demás opciones son incorrectas o inexactas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la afirmación correcta sobre la adecuación de black burst y tri‑level sync para referencias de señal en SD/HD:",
+          "options": [
+            "No existe diferencia operativa entre ambos; son intercambiables en cualquier entorno.",
+            "Tri‑level sync se utiliza exclusivamente en SD y black burst en HD.",
+            "Black burst es adecuado como referencia en entornos SD; tri‑level sync es preferible en HD/UHD por su mayor resolución temporal y menor jitter de sincronismo.",
+            "Black burst incorpora automáticamente audio embebido para sincronización multicanal."
+          ],
+          "correctIndex": 2,
+          "explanation": "La A es correcta: black burst es histórico para SD; tri‑level ofrece mejor precisión temporal para HD/HD‑video. Las demás opciones son incorrectas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Si una conversión analógico‑digital utiliza una frecuencia de muestreo de 44,1 kHz, ¿cuál es la máxima frecuencia de la señal que puede representarse sin producir aliasing (frecuencia de Nyquist)?",
+          "options": [
+            "20 kHz",
+            "22,05 kHz",
+            "11,025 kHz",
+            "44,1 kHz"
+          ],
+          "correctIndex": 1,
+          "explanation": "La frecuencia de Nyquist es la mitad de la frecuencia de muestreo: fN = fs/2. Con fs = 44,1 kHz, fN = 22,05 kHz, por lo que cualquier componente por debajo de 22,05 kHz puede representarse sin aliasing. 20 kHz es inferior a la Nyquist (es la cota aproximada del oído humano) pero no es el límite máximo; 11,025 kHz equivale a fs/4 y es menor que la Nyquist; 44,1 kHz es la frecuencia de muestreo, no la máxima frecuencia representable (una señal a fs se aliasaría).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique cuál de las siguientes situaciones constituye una excepción que desaconseja el uso de fundido como transición, por su función narrativa y significado temporal:",
+          "options": [
+            "La superposición de dos acciones simultáneas para indicar transición gradual entre ellas.",
+            "Un desplazamiento temporal hacia un flashback dilatado en el que se quiere marcar la separación cronológica.",
+            "Un cambio inmediato y continuo de plano donde se requiere mantener la inmediatez temporal y la continuidad de acción.",
+            "Una secuencia onírica que necesita una disolución progresiva hacia otra imagen."
+          ],
+          "correctIndex": 2,
+          "explanation": "La A es la excepción: el fundido introduce separación temporal y podría romper la inmediatez y continuidad; las otras opciones son usos adecuados del fundido por su carga temporal o expresiva.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Ante ruido de alta frecuencia y captación de interferencias en una línea de micrófono balanceada, diagnóstico operativo más probable relacionado con el principio del balanceado y rechazo de modo común:",
+          "options": [
+            "La conexión balanceada siempre elimina cualquier interferencia; por tanto el problema es del micrófono.",
+            "Invertir la polaridad en uno de los conductores corrige sistemáticamente el problema.",
+            "El uso de cable más corto incrementa la probabilidad de interferencia en líneas balanceadas.",
+            "Un conductor de la línea diferencial dañado o mal conectado reduce el rechazo de modo común, dejando la señal expuesta a interferencias."
+          ],
+          "correctIndex": 3,
+          "explanation": "La B es correcta: un fallo en la integridad de la conexión diferencial reduce el rechazo de modo común y permite que ruidos externos entren. A es falso, C no es causa general ni determinante y D es incorrecto porque invertir polaridad no restaura un conductor dañado.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la corrección que realiza el código de tiempo drop‑frame en 29,97 fps:",
+          "options": [
+            "Drop‑frame ajusta la numeración para mantener concordancia con el tiempo real sin eliminar fotogramas.",
+            "Non‑drop mantiene numeración secuencial sin corrección del desfase acumulado respecto al tiempo real.",
+            "Drop‑frame elimina fotogramas físicos periódicamente para sincronizar el tiempo real con la numeración.",
+            "Drop‑frame altera números de frame en momentos específicos de cada minuto para corregir el desfase."
+          ],
+          "correctIndex": 2,
+          "explanation": "La B es la excepción incorrecta: drop‑frame no elimina fotogramas reales, solo ajusta la numeración (modifica números de frames) para que coincida con el tiempo real; C y D describen correctamente el comportamiento de los esquemas de TC.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Según el III Convenio Colectivo, qué disposición regula directamente la organización de la jornada, descansos y turnicidad:",
+          "options": [
+            "La determinación exclusiva del salario por jornada sin límites a la duración.",
+            "La negociación colectiva que establece jornada, descansos y turnos con límites y compensaciones.",
+            "La regulación única de evaluación de riesgos sin referencia a turnos.",
+            "La posibilidad de sustituir vacaciones por compensación económica sin acuerdo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La A es correcta: el convenio regula jornada, descansos y turnicidad mediante negociación colectiva. Las demás opciones no describen la regulación sustantiva sobre tiempo de trabajo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Condición imprescindible para usar un código de tiempo común como referencia fiable en sincronización multicámara:",
+          "options": [
+            "Que todas las baterías de las cámaras estén totalmente cargadas.",
+            "Que todas las cámaras utilicen el mismo modelo y fabricante.",
+            "Que todas las tarjetas de memoria tengan la misma capacidad.",
+            "Que todas las cámaras hayan grabado el mismo código de tiempo y que éste se haya preservado en metadatos durante la ingesta."
+          ],
+          "correctIndex": 3,
+          "explanation": "La A es correcta: el TC común debe estar presente y preservado en metadatos para servir de referencia. Las otras opciones son irrelevantes para la fiabilidad del TC.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Además de conservar carpetas e índices, qué verificación práctica es relevante para garantizar acceso fiable a soportes XDCAM en archivo:",
+          "options": [
+            "Verificar spanning, identificar archivos fragmentados y registrar metadatos de clips para asegurar reconstrucción y acceso.",
+            "Reescribir todos los ficheros en formato MOV para garantizar lectura universal.",
+            "Eliminar proxies y conservar solo la esencia para ahorrar espacio.",
+            "Formatear de nuevo la tarjeta para estabilizar la estructura de carpetas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La A es correcta: XDCAM puede tener spanning y fragmentación; registrar metadatos y comprobar fragmentos asegura accesibilidad. Las otras opciones son operaciones innecesarias o dañinas para preservación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "language_intelectual",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "¿Qué efecto editorial produce el montaje intelectual basado en yuxtaposición de planos?",
+          "options": [
+            "Mejorar la calidad técnica de la imagen sin alterar su sentido.",
+            "Generar un nuevo significado o asociación de ideas que no se deduce de cada plano por separado.",
+            "Reducir la duración de la escena sin crear enlaces semánticos nuevos.",
+            "Corregir errores de continuidad mediante recortes mecánicos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La A es correcta: el montaje intelectual crea nuevos significados por la relación entre planos. Las demás opciones confunden funciones técnicas o editoriales diferentes.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que reúne correctamente clase de fuego en equipos eléctricos, extintor idóneo y medida inmediata segura:",
+          "options": [
+            "En incendio originado en equipo eléctrico: usar extintor de CO2 o polvo fino y, si es seguro, desconectar la alimentación; priorizar evacuación y avisos.",
+            "Para incendios en equipos eléctricos, emplear como primera opción extintor de agua a presión para enfriar circuitos.",
+            "No intentar cortar la alimentación y usar siempre polvo ABC sin desconectar, porque cortar puede crear arcos.",
+            "Priorizar la ventilación de la sala antes de evacuar para disipar gases y humos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La A es correcta: para fuegos en equipos eléctricos se recomienda CO2 o polvo, y cortar alimentación si es seguro; las otras opciones proponen prácticas peligrosas o inadecuadas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Operario con hormigueo y rigidez en muñeca y dedos tras uso prolongado de tableta y ratón. Diagnóstico y medida preventiva prioritaria:",
+          "options": [
+            "Problema exclusivamente vascular que precisa medicación inmediata; la ergonomía no es prioritaria.",
+            "Síntomas compatibles con síndrome del túnel carpiano o sobrecarga; priorizar evaluación ergonómica, ajuste de postura, pausas activas y adaptación de dispositivos ergonómicos.",
+            "Dolor lumbar referido por uso de manos; priorizar reposo lumbar y ajuste de silla solamente.",
+            "Síntoma visual por fatiga ocular; recomendar lentes y cambiar brillo de pantalla."
+          ],
+          "correctIndex": 1,
+          "explanation": "La A es correcta: los signos son típicos de trastornos musculoesqueléticos de extremidad superior; la intervención prioritaria es ergonómica y preventiva. Las demás opciones atribuyen causas o medidas no coherentes con el cuadro.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "091",
       "title": "Examen 091",
