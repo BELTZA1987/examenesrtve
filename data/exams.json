@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-10-30",
   "exams": [
+    {
+      "id": "093",
+      "title": "Examen 093",
+      "date": "2026-10-30",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Indique la obligación que, según la normativa sobre protección de menores en el ámbito audiovisual, corresponde de forma directa al prestador de contenidos bajo demanda y servicios de accesibilidad para control de acceso por edad:",
+          "options": [
+            "Implantar geolocalización para negar el acceso a contenidos fuera del territorio de publicación.",
+            "Emitir una etiqueta de patrocinio visible en todo contenido dirigido a menores.",
+            "Garantizar subtitulado y audiodescripción en todos los contenidos independientemente de su clasificación de edad.",
+            "Clasificar los contenidos por edad y aplicar mecanismos técnicos que limiten el acceso de menores a contenidos no aptos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La obligación central respecto a menores es la clasificación por edad y la adopción de medidas técnicas que restrinjan el acceso de menores a contenidos no aptos; esa combinación (clasificación + control de acceso) es el núcleo protector. El distractor más próximo es la obligación de accesibilidad (subtítulos/audiodescripción), que es otra exigencia distinta; geolocalización o etiquetas de patrocinio no sustituyen ni definen la obligación de proteger el acceso de menores.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione la afirmación que describe con precisión los distintos tipos de ventanas de loudness y su uso operativo en control de emisión:",
+          "options": [
+            "Integrated: mide picos inmediatos para evitar clipping; Short‑term: indicador de la sonoridad promedio del canal en horas; Momentary: equivalente a la medición True Peak.",
+            "Integrated: promedio global del programa para cumplimiento; Short‑term (≈3 s): detectar variaciones de media duración; Momentary (≈400 ms): controlar variaciones muy breves y transitorios.",
+            "Integrated: sirve para ajustar niveles de mezcla en tiempo real; Short‑term: sustituye al medidor de picos; Momentary: no se emplea en control de emisión.",
+            "Integrated: ventana de 400 ms para medir escenas cortas; Short‑term: promedio de todo el programa; Momentary: ventana de 3 s para variaciones medias."
+          ],
+          "correctIndex": 1,
+          "explanation": "La definición correcta diferencia Integrated (promedio global para cumplimiento), Short‑term (ventana ~3 s para variaciones medias) y Momentary (ventana ~400 ms para variaciones muy breves). El distractor más próximo confunde las ventanas y atribuye funciones incorrectas (por ejemplo, True Peak no es equivalente a Momentary), por eso resulta incorrecto.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Durante visionado y selección en un flujo XDCAM, ¿cuál es la descripción operativa correcta de la relación y uso del proxy respecto a la esencia de alta resolución?",
+          "options": [
+            "El proxy se utiliza para visionado y preselección rápida; la esencia de alta resolución se conserva para ingesta final y conformado; el proxy no sustituye a la esencia en el máster.",
+            "El proxy contiene todos los metadatos técnicos necesarios para emisión, por lo que la esencia alta puede descartarse después de seleccionar.",
+            "La esencia de alta resolución se convierte siempre a proxy en el archivo y el original se elimina para ahorrar espacio.",
+            "El proxy y la esencia son equivalentes: ambos se emplean indistintamente para etalonaje y entrega final."
+          ],
+          "correctIndex": 0,
+          "explanation": "En flujos XDCAM el proxy facilita visionado y selección ágil, mientras la esencia alta se mantiene para ingesta verificada y conformado; el proxy no sustituye al original. El distractor más cercano afirma que la esencia puede descartarse tras selección, lo cual es incorrecto: la esencia debe conservarse para calidad y entrega.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "¿Cuál es el efecto más habitual al mezclar secuencias con cadencias distintas sin aplicar conversión adecuada?",
+          "options": [
+            "Aparición de judder o irregularidad en el movimiento por mapeo desigual de frames.",
+            "Cambio de balance de color perceptible entre planos.",
+            "Pérdida de resolución espacial permanente en todas las tomas.",
+            "Desincronización automática del audio respecto al vídeo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La consecuencia típica de mezclar cadencias sin conversión es el judder o irregularidad en movimiento por mapeo inadecuado de frames entre cadencias. Los otros distractores (cambio de color, pérdida de resolución permanente, desincronización automática) no son la consecuencia primaria de mezclar cadencias sin conversión.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la consecuencia operativa más plausible de una adaptación de impedancias incorrecta entre dos etapas de una cadena audiovisual:",
+          "options": [
+            "Generación de un bucle de masa e inmediato zumbido audible en todas las tomas.",
+            "Reflexiones en la línea y pérdidas de nivel/señal útiles que degradan relación señal/ruido y pueden producir distorsión.",
+            "Cambio de la tasa de muestreo en la conversión A/D siguiente.",
+            "Neutralización del sync genlock en equipos SDI adyacentes."
+          ],
+          "correctIndex": 1,
+          "explanation": "Una adaptación de impedancias incorrecta suele provocar reflexiones y pérdidas de nivel que degradan la S/N y pueden introducir distorsión por degradación de la señal. El distractor más cercano (bucle de masa y zumbido) responde más a problemas de toma de tierra que a impedancia; los otros efectos (cambio de muestreo, pérdida de genlock) no son consecuencia directa de adaptación de impedancias.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En edición durante un directo con ficheros en crecimiento (growing files), ¿qué condición técnica es la que garantiza la disponibilidad estable de la esencia para reconformado y publicación definitiva?",
+          "options": [
+            "La finalización (cierre) del fichero o la creación explícita de una versión consolidada por el servidor; hasta entonces la esencia puede ser parcial o inestable.",
+            "La mera existencia de un proxy en el mismo servidor garantiza que la esencia de alta resolución esté completa y editable.",
+            "El uso de codecs Long‑GOP convierte automáticamente los ficheros en no‑crecientes, garantizando acceso inmediato.",
+            "Cerrar el proyecto de edición local hace que el servidor convierta los ficheros en esenciales estables."
+          ],
+          "correctIndex": 0,
+          "explanation": "La disponibilidad estable de la esencia para reconformado exige que el fichero en crecimiento se finalice o que el servidor genere una copia/versión consolidada; antes de ese cierre la esencia puede ser parcial o inestable. El distractor más próximo confunde proxy con esencia completa: el proxy puede facilitar edición pero no sustituye la necesidad de cierre/finalización del fichero original.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Al preparar una playlist en EVS/IPDirector destinada a emisión con transiciones específicas, ¿qué práctica técnica reduce con mayor seguridad el riesgo de que el playout no respete el orden y la transición prevista?",
+          "options": [
+            "Publicar la playlist sin verificaciones y editar las transiciones en el control de realización en tiempo real.",
+            "Crear una copia local de cada clip y confiar en la configuración del mezclador para las transiciones.",
+            "Fijar las transiciones y el orden dentro de la propia playlist y verificar que el modo de playout use las transiciones de playlist, no las del mezclador.",
+            "Renombrar los clips para forzar al servidor a ordenarlos por nombre en playout."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica segura es definir orden y transiciones en la playlist y asegurarse de que el playout aplique las transiciones almacenadas allí; de lo contrario el mezclador o la realización podrían imponer otras reglas. El distractor más cercano sugiere confiar en el mezclador o renombrar clips, que no garantizan coherencia entre playlist y playout.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En el contexto de la norma constitucional sobre igualdad y no discriminación, señale la actuación de un servicio de comunicación audiovisual que vulneraría directamente ese principio:",
+          "options": [
+            "Ofrecer espacios informativos centrados en minorías para promover la diversidad.",
+            "Incluir contenidos que reflejen opiniones adversas sobre políticas públicas con derecho de réplica.",
+            "Emitir contenidos que defiendan la exclusión de personas por razón de sexo, raza o creencia sin justificación informativa.",
+            "Aplicar criterios de financiación pública basados en criterios objetivos y transparentes."
+          ],
+          "correctIndex": 2,
+          "explanation": "Difundir contenidos que promuevan la exclusión por motivos protegidos (sexo, raza, creencia) vulnera el principio constitucional de igualdad. El distractor más cercano (espacios sobre minorías) es compatible con el principio porque fomenta pluralismo; las otras opciones son prácticas legítimas cuando se aplican con criterios jurídicos adecuados.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_en_mision",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Durante una misión externa que implica manipular equipamiento en un local ajeno, ¿qué medida preventiva debe priorizar el empleador antes de iniciar la tarea?",
+          "options": [
+            "Realizar una evaluación específica de riesgos del lugar y de la tarea, y proporcionar instrucciones y medios de protección correspondientes.",
+            "Limitar la actividad a personal voluntario sin tareas preventivas formales.",
+            "Esperar a que el trabajador adapte su propio equipo personal al entorno.",
+            "Delegar toda responsabilidad de seguridad al responsable del local sin coordinación previa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La medida prioritaria es la evaluación específica de riesgos en el lugar de misión y la provisión de instrucciones y medidas preventivas. Los distractores suponen delegación indebida, ausencia de evaluación o medidas improvisadas, todas contrarias a la prevención requerida.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_export_qc",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la lista que contiene los controles técnicos imprescindibles en un control de calidad de exportación de un máster para emisión:",
+          "options": [
+            "Verificación de contenedor/formato, niveles de vídeo (luminancia/legalidad), sincronía audio‑vídeo, orden de campos (si procede) y metadatos esenciales.",
+            "Comprobación únicamente del bitrate y resolución del vídeo final.",
+            "Solo verificación de subtítulos y audiodescripción.",
+            "Comprobación exclusiva del nombre de fichero y carpeta de destino."
+          ],
+          "correctIndex": 0,
+          "explanation": "El QC de exportación debe verificar contenedor/formato, niveles legales de vídeo, sincronía A/V, orden de campos y metadatos; esa lista es exhaustiva respecto a controles técnicos básicos. Los distractores se centran en elementos parciales (bitrate, subtítulos, nombre de fichero) y omiten controles esenciales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En una interfaz SDI serial, ¿cómo se transportan de forma compatible el vídeo, el audio embebido y los datos auxiliares (ANC)?",
+          "options": [
+            "El audio siempre viaja por AES/EBU paralelo a la SDI y los datos ANC por IP separado.",
+            "Todo se multiplexa en la trama serial: el vídeo en la carga de línea y el audio y datos en paquetes ANC en las líneas de datos auxiliares.",
+            "El vídeo y el audio se transportan por separado y se sincronizan mediante SMPTE timecode externo.",
+            "Los datos auxiliares solo pueden transmitirse por VANC y no con audio embebido."
+          ],
+          "correctIndex": 1,
+          "explanation": "SDI transporta vídeo en la carga útil serial y utiliza el espacio de datos auxiliares (ANC) para paquetes que pueden incluir audio embebido y otros datos; así todos se multiplexan en la misma señal serial. El distractor más cercano afirma separación obligatoria del audio por AES/EBU, lo cual es incorrecto cuando se emplea audio embebido dentro de SDI.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la situación que constituye una excepción que desaconseja el uso de la elipsis para comprimir tiempo narrativo:",
+          "options": [
+            "Reducir una travesía repetitiva mostrando solo inicio y final para mantener ritmo.",
+            "Resumir varios minutos de espera mediante un corte a la escena siguiente con continuidad de personajes y ubicación.",
+            "Omitir una acción causal imprescindible para entender la consecuencia inmediata mostrada en el plano siguiente.",
+            "Saltar de una conversación a otra manteniendo las réplicas esenciales que conservan el sentido."
+          ],
+          "correctIndex": 2,
+          "explanation": "La elipsis no debe eliminar una acción causal cuya visión es necesaria para comprender la consecuencia mostrada después; su omisión rompe la comprensión narrativa. Los distractores describen usos habituales y correctos de la elipsis para condensar tiempo manteniendo coherencia.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En un entorno Avid NEXIS/SAN con múltiples editores concurrentes, ¿qué medida técnica preserva de forma más efectiva el rendimiento cuando hay cargas simultáneas intensas?",
+          "options": [
+            "Aumentar únicamente la resolución de las estaciones de trabajo para compensar la latencia.",
+            "Reservar y gestionar ancho de banda y I/O por Storage Pool o Storage Group, evitando que una sola tarea consuma todo el rendimiento.",
+            "Eliminar controles de cuotas y confiar en la velocidad bruta del RAID por defecto.",
+            "Concentrar todo el almacenamiento en un LUN único sin segmentación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica adecuada es reservar y gestionar el ancho de banda por grupos de almacenamiento (Storage Pools/Groups) para evitar que procesos intensivos degraden globalmente el rendimiento. Los distractores proponen medidas ineficaces o contraproducentes (subir resolución, eliminar cuotas, centralizar sin segmentación).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Para reducir fatiga visual y postural en un puesto de pantallas de visualización, ¿qué organización de tareas es la más eficaz?",
+          "options": [
+            "Restringir la rotación de tareas para que cada trabajador realice siempre la misma función.",
+            "Mantener sesiones largas de trabajo concentrado y una pausa única larga al final de la jornada.",
+            "Aumentar únicamente el brillo de la pantalla para compensar fatiga.",
+            "Establecer pausas cortas y frecuentes y alternar tareas que cambien el enfoque visual y la postura del cuerpo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La medida más eficaz combina pausas cortas y frecuentes con alternancia de tareas para variar la postura y la tensión visual. Los distractores proponen soluciones inadecuadas o contraproducentes (una sola pausa, aumentar brillo, eliminar rotación de tareas).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la finalidad operativa principal de la reforma y el paso inmediato requerido para su aplicación en la designación de los órganos de la Corporación:",
+          "options": [
+            "Transferir la dirección ejecutiva al Gobierno sin intervención parlamentaria.",
+            "Restaurar la independencia y pluralismo mediante elección parlamentaria de los órganos; acto inmediato: proceder a la designación por los órganos legislativos competentes.",
+            "Permitir que la dirección de la Corporación designe unilateralmente sus órganos internos sin control externo.",
+            "Establecer la elección por sorteo público de los miembros del órgano rector."
+          ],
+          "correctIndex": 1,
+          "explanation": "La reforma persigue garantizar independencia y pluralismo mediante la elección parlamentaria de los órganos; el paso operativo inmediato es la designación por las cámaras competentes. Los distractores indican procedimientos que contradicen la finalidad (poder ejecutivo exclusivo, designación interna o sorteo), por eso son incorrectos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la diferencia operativa entre RGB y YCbCr:",
+          "options": [
+            "RGB está optimizado para compresión en transmisión televisiva y permite submuestreo 4:2:0 sin pérdida de luminancia.",
+            "YCbCr es un espacio aditivo de primarios físicos idéntico a RGB pero con nombres distintos.",
+            "RGB codifica directamente los primarios de color (canales rojo, verde y azul) y se emplea en captura/etalonaje y pantallas; YCbCr separa luminancia (Y) y crominancias (Cb,Cr) para optimizar compresión y compatibilidad con transmisión.",
+            "YCbCr no contiene información de luminancia; solo almacena componentes de color."
+          ],
+          "correctIndex": 2,
+          "explanation": "RGB representa los primarios y se usa en captura/etalonaje/pantallas; YCbCr separa luminancia y crominancia para favorecer compresión y compatibilidad con transmisión. Los distractores confunden la naturaleza de ambos (por ejemplo, afirmar que YCbCr no contiene luminancia o que RGB es equivalente a YCbCr) y por tanto son incorrectos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En una GOP tipo IPB, un paquete que contiene un fotograma P queda corrupto y no puede reconstruirse correctamente en el decodificador. ¿Cuál es la consecuencia operativa más inmediata sobre la reproducción y calidad de los fotogramas posteriores dentro de la misma GOP?",
+          "options": [
+            "La corrupción quedará limitada únicamente al fotograma P afectado; los B y P posteriores se decodificarán correctamente si sus propias referencias no están corruptas.",
+            "El decodificador sustituye el P corrupto mediante interpolación espacial/local inmediata, evitando la propagación del error a los P y B posteriores; por tanto, la degradación queda limitada al propio P.",
+            "El decodificador detiene la reproducción y bloqueará la salida hasta que el flujo proporcione una corrección o una retransmisión del GOP afectado.",
+            "Los B que referencian ese P y cualquier P subsecuente que dependa de él presentarán artefactos o fallos de decodificación que pueden propagarse hasta el siguiente fotograma I; el decodificador puede aplicar concealment (p. ej. copia de cuadro) pero la degradación suele persistir."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un fotograma P actúa como referencia predictiva para B y para P posteriores dentro de la GOP; si su reconstrucción falla, las dependencias hacen que los cuadros que lo usan como referencia queden afectados y los errores se propaguen hasta el siguiente I. Aunque los decodificadores aplican técnicas de error concealment (por ejemplo copiar el cuadro anterior o interpolación espacial), son soluciones paliativas: reducen el impacto visual inmediato pero no restauran la información de referencia perdida, por lo que la degradación puede persistir. El distractor más próximo (opción 3) describe una interpolación que evitaría la propagación; en la práctica esa interpolación puede mitigar artefactos localmente pero no recupera las referencias necesarias para decodificar correctamente P posteriores, por eso no evita la propagación completa del error. Las opciones 0 y 2 son incorrectas: 0 subestima las dependencias predictivas de P sobre otros fotogramas; 2 no refleja el comportamiento operativo de decodificadores en emisión en tiempo real, que no suelen detener la reproducción esperando retransmisión.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Para afrontar obsolescencia y asegurar acceso a largo plazo, ¿qué estrategia operativa combina mejor preservación y verificación periódica?",
+          "options": [
+            "Mantener los soportes originales sin copia adicional y sin seguimiento.",
+            "Confiar exclusivamente en un único soporte LTO sin verificación periódica.",
+            "Borrar versiones antiguas en cuanto se crea una copia nueva para ahorrar espacio.",
+            "Programar verificaciones periódicas de integridad (checksums) y migrar soportes/formatos antes de que queden obsoletos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La estrategia correcta combina verificación periódica (checksums) con migración planificada a soportes y formatos actuales antes de obsolescencia. Los distractores proponen prácticas inseguras (una sola copia, borrado sin control, sin verificaciones).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_news",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Al montar un teletipo para emisión con duración limitada, ¿qué criterio editorial y operativo debe primar para coordinar edición y redacción?",
+          "options": [
+            "Dejar a criterio exclusivo del editor la introducción de contenido no contrastado para aumentar interés.",
+            "Incluir la máxima cantidad de declaraciones posibles sin ajustar el tiempo asignado.",
+            "Priorizar la jerarquía informativa: encabezamiento con hechos esenciales, lectura de locutor ajustada al tiempo, selección de declaraciones y totales audiovisuales que soporten el mensaje y coordinación previa con redacción sobre tiempos y textos.",
+            "Priorizar montajes de recursos visuales largos sobre la información principal para mejorar estética."
+          ],
+          "correctIndex": 2,
+          "explanation": "En edición de noticias debe primar la jerarquía informativa: presentar hechos esenciales, adaptar locución y recursos al tiempo disponible, y coordinar con redacción. Los distractores proponen sobrecarga de declaraciones, inclusión de contenido no contrastado o priorizar estética sobre información, lo cual contraviene prácticas editoriales de redacción y coordinación.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Compare AVC/H.264 y HEVC/H.265 en términos de eficiencia, complejidad y compatibilidad en flujos audiovisuales:",
+          "options": [
+            "HEVC es un códec sin pérdida obligatorio para másteres y elimina la necesidad de transcodificar.",
+            "HEVC reduce complejidad de codificación y es más compatible que AVC en todos los dispositivos.",
+            "AVC siempre ofrece mejor compresión que HEVC y menor latencia de decodificación.",
+            "HEVC ofrece mayor eficiencia de compresión a igual calidad pero requiere mayor complejidad de códec y menor compatibilidad en dispositivos antiguos."
+          ],
+          "correctIndex": 3,
+          "explanation": "HEVC suele entregar mejor eficiencia compresiva a igual calidad, pero aumenta la complejidad de codificación/decodificación y su compatibilidad en dispositivos antiguos es menor. El distractor más cercano afirma menor complejidad o mayor compatibilidad de HEVC, lo cual es incorrecto.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "092",
       "title": "Examen 092",
