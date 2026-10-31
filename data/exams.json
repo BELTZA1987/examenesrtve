@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-10-31",
   "exams": [
+    {
+      "id": "094",
+      "title": "Examen 094",
+      "date": "2026-10-31",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la naturaleza jurídica y la estructura básica de la Corporación RTVE según la Ley 17/2006 (texto vigente):",
+          "options": [
+            "Organismo autónomo sin personalidad patrimonial diferenciada, integrado en la Administración General del Estado.",
+            "Sociedad mercantil anónima cotizada con accionariado mixto y consejo de administración elegido por el mercado financiero.",
+            "Servicio administrativo dependiente del Ministerio correspondiente, dirigido por un director general nombrado por el Gobierno.",
+            "Entidad de derecho público con personalidad y patrimonio propios, sometida a control parlamentario y organizada mediante órganos de gobierno con funciones separadas de supervisión y gestión."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 17/2006 configura RTVE como entidad de derecho público con personalidad y patrimonio propios, sujeta a control parlamentario y dotada de órganos de gobierno (separando funciones de supervisión y dirección), frente a las otras opciones que describen formas jurídicas o dependencias distintas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "En un mezclador con buses 'program' y 'preview' y una key activa en 'preview', ¿cuál es la secuencia operativa correcta para ejecutar una transición limpia que lleve la key a programa?",
+          "options": [
+            "Enviar la key a un aux, realizar la transición en el aux y luego copiar manualmente la salida del aux a program.",
+            "Armar la key directamente en program, forzar la salida del preview y ejecutar la transición sin cambiar buses.",
+            "Desarmar la key en preview, seleccionar la fuente a program, luego rearmar la key y cortar manualmente sin usar la función de transición.",
+            "Armar la key en preview, seleccionar la transición (cut/dissolve), ejecutar la transición desde preview a program; tras confirmar, desarmar la key en preview."
+          ],
+          "correctIndex": 3,
+          "explanation": "La operación correcta es armar la key en preview, seleccionar la transición deseada y ejecutar la transición para pasar preview a program; las otras opciones omiten el uso ordenado de preview→program o introducen rutas innecesarias que no garantizan una transición limpia.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Indique la actuación del empleador que mejor cumple simultáneamente las obligaciones de información, formación, cooperación y provisión de medios en prevención para un puesto de edición:",
+          "options": [
+            "Publicar una política general de prevención en la intranet y exigir al trabajador que solicite formación si la considera necesaria.",
+            "Proporcionar información escrita y formación específica sobre riesgos del puesto, facilitar equipos ergonómicos ajustables y promover la participación de los trabajadores en la evaluación de riesgos.",
+            "Recomendar ejercicios generales para la oficina y dejar a criterio del trabajador la elección del mobiliario y equipos.",
+            "Contratar formación teórica única al año sin medidas concretas de ajuste de puesto ni seguimiento."
+          ],
+          "correctIndex": 1,
+          "explanation": "La obligación del empleador incluye informar y formar de forma específica, facilitar medios y equipos ergonómicos y fomentar la cooperación con los trabajadores en la evaluación; las otras opciones son insuficientes o meramente formales.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En la lectura de un vectorscopio, ¿qué representan respectivamente el ángulo de la traza y la distancia desde el centro?",
+          "options": [
+            "Ángulo = tono (hue); distancia al centro = saturación (chroma).",
+            "Ángulo = luminancia; distancia al centro = saturación.",
+            "Ángulo = fase de audio; distancia al centro = ganancia de audio embebido.",
+            "Ángulo = temperatura de color; distancia al centro = balance de grises."
+          ],
+          "correctIndex": 0,
+          "explanation": "El vectorscopio codifica el hue en el ángulo de la traza y la cantidad de chroma en la distancia al centro; las otras combinaciones confunden luminancia, audio o temperatura de color con parámetros que no mide el vectorscopio.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Se intenta copiar un fichero único de 48 GB a un volumen montado en FAT32 y la operación falla. Diagnóstico técnico más probable:",
+          "options": [
+            "El problema es que FAT32 no soporta directorios anidados; hay que crear la raíz.",
+            "La operación falla porque FAT32 no soporta nombres de fichero con más de 8 caracteres.",
+            "FAT32 no permite ficheros binarios, solo texto plano, por lo que la copia se rechaza.",
+            "El sistema de archivos FAT32 tiene un límite de tamaño de fichero que impide copiar archivos mayores a 4 GB."
+          ],
+          "correctIndex": 3,
+          "explanation": "FAT32 tiene un límite máximo de tamaño por fichero (~4 GiB), por eso un fichero de 48 GB no puede copiarse; las demás afirmaciones son incorrectas o irrelevantes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál es la consecuencia visual habitual de cambiar el eje de acción (regla de 180°) sin cobertura adecuada entre dos planos?",
+          "options": [
+            "Cambio en la profundidad de campo que obliga a re‑etalonar ambos planos.",
+            "Aumento automático de la saturación de color en el segundo plano.",
+            "Inversión de lateralidad en la relación espacial entre personajes y ruptura de continuidad de mirada, generando confusión en la posición relativa.",
+            "Pérdida del código de tiempo común y desincronización de audio."
+          ],
+          "correctIndex": 2,
+          "explanation": "Romper la regla de los 180° produce inversión aparente de las posiciones y rompe la continuidad espacial y de eyeline; las otras opciones no son consecuencias directas de cambiar el eje de acción.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Ordene la secuencia de ajustes ergonómicos que debe realizarse prioritariamente al corregir la postura en un puesto de edición:",
+          "options": [
+            "Ajustar altura de silla para que pies apoyen, regular apoyo lumbar, ajustar altura de mesa/antebrazos y colocar monitor a nivel visual.",
+            "Colocar reposapiés, aumentar brillo de pantalla, cambiar teclado y luego ajustar respaldo lumbar.",
+            "Subir el monitor, ajustar color y verificar software antes de cualquier ajuste físico.",
+            "Cambiar la silla por una nueva sin modificar altura ni soportes hasta probarla varios días."
+          ],
+          "correctIndex": 0,
+          "explanation": "La secuencia prioritaria es ajustar la altura para apoyo de pies, asegurar apoyo lumbar, ajustar altura de antebrazos y colocar monitor a nivel visual; las otras opciones priorizan elementos menos urgentes o son inadecuadas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las fuentes, restricciones y principios del modelo de financiación previsto por la Ley 8/2009:",
+          "options": [
+            "La financiación se articula mediante asignaciones presupuestarias y mecanismos previstos legalmente con principios de sostenibilidad y control.",
+            "Se establecen restricciones para evitar dependencia excesiva de intereses comerciales directos y garantizar servicio público.",
+            "La Ley autoriza financiarse exclusivamente mediante ingresos ilimitados por publicidad comercial sin restricciones.",
+            "El modelo incorpora principios de transparencia y control presupuestario en la asignación de recursos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación 2 es la excepción: la Ley no permite financiación basada en ingresos publicitarios ilimitados; por el contrario, establece asignación pública, restricciones y principios de sostenibilidad y control.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_umid",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para asegurar identificación persistente de un archivo a través de transcodings y copias, ¿qué debe hacerse con el UMID original?",
+          "options": [
+            "Conservar el UMID original en operaciones sucesivas de copia y transcodificación siempre que sea posible.",
+            "Regenerar un nuevo UMID en cada transcodificación para mantener trazabilidad local.",
+            "Eliminar el UMID del contenedor y añadir un identificador propio del sistema de gestión.",
+            "Mapear el UMID original a un identificador numérico secuencial reemplazándolo en metadatos."
+          ],
+          "correctIndex": 0,
+          "explanation": "Para mantener identificación persistente, el UMID original debe preservarse; regenerarlo o eliminarlo rompe la trazabilidad entre copias y transcodings.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_consolidate_transcode",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique la diferencia operativa esencial entre 'Consolidate' y 'Transcode' en flujos de edición:",
+          "options": [
+            "Ambos términos son sinónimos y siempre implican creación de proxies únicamente.",
+            "Consolidate recodifica el material a un códec intermedio; Transcode solo copia ficheros sin modificar.",
+            "Consolidate copia los archivos de esencia originales (posiblemente con trims y handles) sin recodificar; Transcode genera nuevos archivos recodificando la esencia a otro códec.",
+            "Consolidate elimina metadatos y Transcode conserva todos los metadatos originales."
+          ],
+          "correctIndex": 2,
+          "explanation": "Consolidate realiza copias de la esencia original (con o sin handles) sin cambiar el códec; Transcode implica re‑codificación a otro formato. Las demás opciones son incorrectas o invertidas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Qué nivel RAID proporciona tolerancia a fallo de dos discos simultáneos y permite reconstrucción tras tales fallos:",
+          "options": [
+            "RAID 0",
+            "RAID 1",
+            "RAID 5",
+            "RAID 6"
+          ],
+          "correctIndex": 3,
+          "explanation": "RAID 6 incorpora doble paridad y permite tolerar la falla simultánea de dos discos; RAID 5 tolera un solo fallo, RAID 1 tolera uno (mirroring) y RAID 0 no ofrece redundancia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_matchframe",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que describe una limitación típica del comando Match Frame al localizar la fuente original:",
+          "options": [
+            "Match Frame puede reconstruir la esencia original automáticamente a partir de un proxy sin metadatos de tiempo.",
+            "Match Frame localiza siempre el clip original incluso si el fichero fuente ha sido movido sin actualizar vínculos.",
+            "Match Frame solo localiza el material original si el clip fuente conserva referencia temporal o metadatos que permitan la coincidencia y el media está online.",
+            "Match Frame funciona de forma fiable aunque se haya transcodificado y renombrado el original sin conservar ningún metadato."
+          ],
+          "correctIndex": 2,
+          "explanation": "Match Frame depende de referencias temporales o metadatos y de que el media esté accesible; no puede localizar la fuente si el original ha perdido esos índices o está offline, a diferencia de las afirmaciones incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "language_music_sync",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Al sincronizar cortes con la música, ¿qué criterio operativo debe guiar la colocación de cortes para respetar la frase musical?",
+          "options": [
+            "Alinear los puntos de corte con los límites de frase y los acentos musicales relevantes.",
+            "Cortar en cualquier punto entre notas para aumentar dinamismo sin atender a la frase.",
+            "Evitar cualquier coincidencia con acentos musicales para evitar obviedad.",
+            "Mantener cortes cada número fijo de segundos sin relación con la estructura musical."
+          ],
+          "correctIndex": 0,
+          "explanation": "La colocación de cortes debe respetar las frases y acentos musicales para mantener coherencia rítmica; las demás opciones ignoran la relación entre estructura musical y montaje.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Para estimar el número máximo de reproducciones simultáneas que un servidor de vídeo puede soportar, ¿qué magnitud es la más determinante?",
+          "options": [
+            "La capacidad total de almacenamiento en TB del servidor.",
+            "El bitrate agregado requerido por las reproducciones simultáneas y la capacidad de ancho de banda de red disponible.",
+            "El número de núcleos de CPU del servidor sin tener en cuenta red ni I/O.",
+            "La latencia de los discos individuales medida en milisegundos sin considerar throughput."
+          ],
+          "correctIndex": 1,
+          "explanation": "El factor clave es el bitrate agregado de todas las reproducciones simultáneas y la capacidad de red/I/O para sostener ese flujo; capacidad en TB o núcleos CPU aislados no determinan la concurrencia práctica.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Ante una reorganización donde a un puesto de montaje se le asignan tareas no técnicas repetidamente, ¿qué criterio indica que esas funciones no corresponden a la 'ocupación tipo' definida en el III Convenio para EDICIÓN, MONTAJE Y PROCESOS AUDIOVISUALES?",
+          "options": [
+            "Si las nuevas tareas implican más uso de software, automáticamente se consideran dentro de la misma ocupación tipo.",
+            "Si el trabajador acepta las tareas sin protestar, se considerarán siempre parte de la ocupación tipo.",
+            "Si las tareas dejan de requerir competencia técnica propia de la ocupación tipo y afectan la carga y organización del trabajo definida en el convenio.",
+            "Si las tareas son menores en duración, no afectan a la clasificación profesional aunque cambien su naturaleza."
+          ],
+          "correctIndex": 2,
+          "explanation": "La 'ocupación tipo' define funciones técnicas y organización del trabajo; si se añaden tareas que no requieren la competencia definida y alteran la organización, no corresponden a la ocupación tipo. Las otras opciones son incorrectas o simplistas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo trazable para localizar y verificar un crosspoint en una matriz de vídeo cuando la documentación es inconsistente:",
+          "options": [
+            "Apagar la matriz, desconectar físicamente cables y volver a enchufar aleatoriamente hasta encontrar la conexión correcta.",
+            "Enviar una señal de test identificable desde la entrada sospechosa, forzar la ruta en la matriz hacia la salida prevista, comprobar la recepción en el destino con monitor y registrar el cambio en el log de control.",
+            "Cambiar todas las entradas por rotación hasta que el destino muestre imagen y luego documentar sin pruebas adicionales.",
+            "Modificar configuraciones del destinatario para que acepte cualquier entrada sin verificar el origen en la matriz."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica trazable es inyectar una señal de test, forzar la ruta en la matriz, confirmar recepción y dejar registro; las otras opciones son inseguras, poco trazables o inadecuadas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Comparación de estrategias para dimensionar red ante 20 reproducciones simultáneas de 8 Mbps cada una: ¿cuál proporciona un margen de red operativo razonable?",
+          "options": [
+            "Dimensionar 160 Mbps + 20% de margen operativo (192 Mbps) para absorber picos y overhead.",
+            "Dimensionar exactamente 20 × 8 = 160 Mbps sin margen adicional.",
+            "Dimensionar solo para la mitad (80 Mbps) esperando que no se alcancen todas las reproducciones.",
+            "Dimensionar 20 × 8 Mbps y confiar en compresión adicional en tiempo real para picos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La correcta es sumar la tasa agregada y añadir un margen (ej. 20%) para picos y overhead; dimensionar sin margen o subdimensionar compromete la calidad y la concurrencia.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: ¿qué diferencia operativa clave distingue PQ frente a HLG en distribución HDR?",
+          "options": [
+            "HLG impone límites de luminancia más estrictos que PQ y no puede usarse en emisiones en directo.",
+            "PQ es compatible hacia SDR sin conversión y HLG siempre requiere metadata de gestión de color.",
+            "Ambas curvas son idénticas en implementación y no requieren consideraciones de compatibilidad.",
+            "PQ es un método de transferencia que requiere metadata y transformaciones en la cadena, HLG es una curva diseñada para compatibilidad hacia pantallas SDR sin metadata adicional."
+          ],
+          "correctIndex": 3,
+          "explanation": "Operativamente PQ (PQ/Perceptual Quantizer) precisa metadata y workflows de mapeo, mientras HLG fue concebida para retrocompatibilidad con displays SDR sin metadata; las otras afirmaciones son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Tras una ingesta verificada desde un SSD de rodaje, ¿qué práctica operativa es la más adecuada antes de volver a emplearlo en rodaje?",
+          "options": [
+            "Formatear rápidamente en cámara sin comprobar integridad ni estado SMART y reutilizarlo inmediatamente.",
+            "Verificar checksums de copias, ejecutar verificación SMART/estado y reformatar al sistema de archivos objetivo registrando el ciclo de uso.",
+            "Mantener los ficheros antiguos en la tarjeta como historial y no tocar formateo hasta que falle.",
+            "Renombrar la unidad cada vez y reutilizar sin registro para agilizar flujo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica correcta combina verificación de integridad (checksums), comprobación del estado SMART y reformatado al FS requerido, además de registrar el ciclo; las otras opciones son riesgosas o inadecuadas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la elección MXF más adecuada para entrega de un máster final en un único contenedor frente a un flujo de edición que requiere gestión frame‑accurate de cada esencia:",
+          "options": [
+            "OP‑Atom para entrega en un único contenedor y OP1a para edición frame‑accurate con pistas separadas.",
+            "OP1a para entrega en un único archivo contenedor; OP‑Atom para flujos de edición y gestión de esencias independientes.",
+            "Ambos formatos son idénticos en estructura y se eligen indistintamente según preferencia.",
+            "OP1a almacena cada pista en ficheros separados por frame; OP‑Atom combina todas las esencias en uno."
+          ],
+          "correctIndex": 1,
+          "explanation": "OP1a es un contenedor monolítico adecuado para entrega de máster único; OP‑Atom mantiene esencias atomizadas para edición y gestión independiente. Las demás afirmaciones invierten o confunden ambas variantes.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "093",
       "title": "Examen 093",
