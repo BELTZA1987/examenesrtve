@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31",
+  "updatedAt": "2026-11-01",
   "exams": [
+    {
+      "id": "095",
+      "title": "Examen 095",
+      "date": "2026-11-01",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según el II Plan de Igualdad (2022‑2026) y la Guía de Igualdad de RTVE, ¿qué medida corresponde directamente a la prevención de representaciones sexistas, al uso no sexista del lenguaje y a la prevención del acoso en los contenidos audiovisuales?",
+          "options": [
+            "Priorizar la contratación temporal de personal de un determinado género en puestos técnicos cuando la plantilla histórica muestre un desequilibrio, hasta alcanzar paridad estadística.",
+            "Fijar cuotas obligatorias de tiempo en pantalla por minuto para garantizar una igualdad exacta y constante entre mujeres y hombres en todas las franjas horarias.",
+            "Crear un canal temático independiente sobre igualdad y diversidad para agrupar allí todos los contenidos relativos a prevención del acoso y representaciones no sexistas.",
+            "Implantar un protocolo de revisión editorial previo a emisión que identifique y corrija estereotipos de género, expresiones o imágenes sexistas y posibles situaciones de acoso en materiales y guiones."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es la primera: el Plan y la Guía promueven medidas editoriales y de estilo (protocolos de revisión, guías de lenguaje inclusivo y control previo de contenidos) destinadas a detectar y corregir estereotipos y expresiones sexistas y a prevenir situaciones de acoso en los materiales antes de su difusión. El distractor más próximo (B) propone una cuota de tiempo en pantalla por minuto, que es una medida extrema y cuantitativa que no corresponde al enfoque operativo del Plan, que prioriza criterios de representación equilibrada y revisión editorial antes que cuotas temporales estrictas. C es insuficiente porque centralizar contenidos en un canal no evita representaciones sexistas en el resto de la programación; D plantea una práctica de contratación discriminatoria contraria a los principios de igualdad que el propio Plan regula.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que resulte FALSA respecto al comportamiento operativo y la adecuación de CBR (bitrate constante) y VBR (bitrate variable) en entornos de transmisión y almacenamiento:",
+          "options": [
+            "CBR facilita el dimensionado de enlaces y la multiplexación en sistemas con ancho de banda fijo, porque mantiene una tasa instantánea predecible que simplifica la planificación de capacidad.",
+            "VBR suele lograr mayor eficiencia de compresión y mejor calidad visual promedio para un objetivo de calidad dado, al asignar más bits a pasajes complejos y menos a pasajes sencillos.",
+            "VBR elimina la necesidad de buffering y de gestión de jitter en el receptor, puesto que su tasa media establecida garantiza ausencia de picos significativos en la transmisión.",
+            "CBR es habitualmente la elección en aplicaciones con baja tolerancia a jitter y latencia determinista (por ejemplo contribución en tiempo real o ciertos enlaces satelitales), debido a su comportamiento temporal predecible."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta (la excepción) es la 3. VBR no elimina la necesidad de buffers ni de gestión de jitter: aunque la tasa media pueda cumplir un objetivo, el bitrate instantáneo varía y genera picos que requieren buffering y medidas de control de flujo para evitar pérdidas o desincronización en el receptor y complican la multiplexación. En contraste, la opción 1 (distractor más próximo) es verdadera: CBR aporta predictibilidad en tasa instantánea, lo que facilita dimensionar enlaces y multiplexadores. Las opciones 2 y 4 también son verdaderas: VBR suele ser más eficiente en calidad/bitrate al adaptar la asignación de bits, y CBR es preferible cuando se necesita latencia y jitter controlados.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia operativa para corregir en directo una cámara no genlockeada mediante frame‑sync:",
+          "options": [
+            "Desconectar la cámara del sistema y reencuadrar la toma para ocultar el desfase, evitando uso de frame‑sync para no añadir latencia.",
+            "Conectar la salida de la cámara al frame‑sync, seleccionar entrada, ajustar el retardo/frame delay hasta coincidencia con la referencia y reasignar la salida del frame‑sync a la matriz.",
+            "Ajustar la ganancia de la cámara para ocultar el desfase visual y usar buffers de audio para alinear sonido.",
+            "Forzar la cámara a usar su reloj interno como referencia principal y sincronizar la matriz a la cámara."
+          ],
+          "correctIndex": 1,
+          "explanation": "El procedimiento correcto es introducir la cámara en un frame‑sync, ajustar delay/temporización hasta coincidir con la referencia y volver a enrutar la salida; las otras opciones evitan la corrección o introducen medidas inapropiadas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_evs_loop",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Pasos trazables para recuperar una ejecución concreta en un servidor EVS configurado en grabación en bucle (loop):",
+          "options": [
+            "Ejecutar un flush completo de canales, reiniciar el servidor para forzar reescritura del bucle y luego comprobar nombre de clip generado.",
+            "Detener inmediatamente todo playout del servidor, restaurar la cinta maestra, copiar el archivo a un NAS y reiniciar el playout sin más verificación.",
+            "Identificar el evento en el log de bucle por marca temporal, usar search/jog para localizar in‑point, crear nuevo clip con handles, asignarlo a un channel libre y registrar en playlist de extracción.",
+            "Renombrar el archivo en disco del bucle para forzar reindexado y esperar a que el sistema regenere el clip recuperable."
+          ],
+          "correctIndex": 2,
+          "explanation": "La recuperación exige localizar el evento en el log, marcar in/out con handles, generar un clip independiente y asignarlo a un channel/playlist; las otras opciones son disruptivas o no garantizan recuperación segura.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un incendio originado en un equipo eléctrico en plató, seleccione la acción más correcta inmediata:",
+          "options": [
+            "Usar un extintor de agua para apagar rápidamente y evitar propagación en instalaciones técnicas.",
+            "Si es seguro hacerlo, cortar la alimentación eléctrica del equipo y actuar con extintor de CO2 o polvo; evacuar si no es seguro.",
+            "Intentar trasladar el equipo incendiado fuera del plató para proteger al resto del material.",
+            "Aplicar una manta húmeda directamente sobre el equipo sin cortar la alimentación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La actuación prioriza seguridad: cortar alimentación si resulta seguro y utilizar extintores adecuados para fuegos eléctricos (CO2 o polvo); agua o mover equipo energizado son medidas peligrosas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor describe el síntoma que diferencia inversión de polaridad entre dos micrófonos respecto a desfase temporal parcial:",
+          "options": [
+            "La inversión de polaridad produce atenuación o cancelación marcada al sumar a mono; un desfase temporal parcial genera filtrado en peine y cambios tonales no siempre cancelantes.",
+            "Ambas causas producen exactamente la misma atenuación en todas las frecuencias y son indistinguibles en mono.",
+            "La inversión de polaridad solo afecta a altas frecuencias, mientras que el desfase solo afecta a graves.",
+            "Un desfase temporal parcial siempre se corrige con un delay de 1 ms; la inversión de polaridad requiere ecualización para corregirse."
+          ],
+          "correctIndex": 0,
+          "explanation": "La diferencia decisiva es que la inversión de polaridad causa cancelación significativa al sumar a mono; el desfase parcial produce comb filtering con notches y picos en frecuencias, no una cancelación uniforme.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la opción que constituye una excepción respecto a los elementos que caracterizan un desplazamiento habitual domicilio–trabajo susceptible de calificarse como accidente in itinere:",
+          "options": [
+            "Uso de la ruta habitual y directa entre domicilio y centro de trabajo dentro de horarios razonables.",
+            "Desplazamiento realizado con finalidad laboral y sin interrupciones prolongadas por actos personales.",
+            "Trayecto realizado por medios habituales (vehículo particular, transporte público) entre domicilio y puesto.",
+            "Desvío prolongado y voluntario para realizar gestiones personales antes de llegar al trabajo."
+          ],
+          "correctIndex": 3,
+          "explanation": "El desvío prolongado por motivos personales es la excepción: rompe la habitualidad y finalidad laboral exigidas para considerarse accidente in itinere; las otras opciones son características típicas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare la libertad de expresión y el derecho a la información y seleccione la afirmación que mejor refleja su diferencia esencial en alcance, objeto y garantías constitucionales.",
+          "options": [
+            "La libertad de expresión protege únicamente opiniones y manifestaciones artísticas, mientras que el derecho a la información faculta exclusivamente a los periodistas para publicar datos de interés público sin límites.",
+            "La libertad de expresión es un derecho individual sin efecto especial en el ámbito mediático; el derecho a la información obliga al Estado a suministrar contenidos oficiales y no admite restricciones.",
+            "Ambos derechos son equivalentes y aplicables de la misma manera: cualquier límite que afecte a la libertad de expresión se traslada automáticamente al derecho a la información sin consideración de la función informativa.",
+            "La libertad de expresión ampara la manifestación de ideas y opiniones por cualquier persona; el derecho a la información protege la obtención y difusión de datos veraces de interés general, especialmente en la actividad informativa, y ambos cuentan con garantía frente a la censura previa pero están sujetos a límites legales para tutela de derechos como el honor, la intimidad y la protección de menores."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta (segunda) distingue adecuadamente el alcance y el sujeto típico de cada institución: la libertad de expresión protege la manifestación de ideas de cualquier sujeto, mientras que el derecho a la información se vincula a la obtención y difusión de datos veraces de interés público, especialmente en la labor periodística. Además señala dos garantías constitucionales relevantes y su límite: protección frente a la censura previa (garantía) y la posibilidad de restricciones legales orientadas a preservar derechos como el honor, la intimidad o la protección de menores. El distractor más próximo (tercera) falla al afirmar equivalencia absoluta entre ambos derechos; en la práctica y en el control constitucional es relevante la función informativa y el interés público a la hora de ponderar limitaciones y responsabilidades, de modo que no son intercambiables sin más.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento correcto para evitar halos al componer un gráfico con canal alpha premultiplicado sobre vídeo:",
+          "options": [
+            "Convertir el alpha a máscara binaria para eliminar halos y luego recomponer el gráfico sobre el vídeo.",
+            "Tratar siempre el canal alpha como straight independientemente del origen y aplicar corrección de color directamente en RGB sin modificar alpha.",
+            "Verificar si el gráfico está premultiplicado; si lo está, configurar el compositor para interpretar premult o 'unpremultiply' antes de aplicar correcciones de color; ajustar matte contract/feather si procede.",
+            "Aplicar una ligera desaturación al vídeo de fondo para disimular halos del gráfico sin cambiar el tratamiento del alpha."
+          ],
+          "correctIndex": 2,
+          "explanation": "La solución técnica es identificar si el alpha está premultiplicado y ajustar la interpretación o unpremultiply antes de correcciones; los distractores ignoran la naturaleza del alpha o aplican remedios que no resuelven el problema real.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Ante un rush XAVC destinado a edición multicámara y múltiples recortes cuadro a cuadro, ¿qué variante es la más adecuada y por qué?",
+          "options": [
+            "XAVC‑L (Long‑GOP): porque reduce la latencia en edición cuadro a cuadro y mejora la precisión de referencia por fotograma.",
+            "XAVC‑I (Intra): porque codifica cada fotograma independientemente, facilita cortes cuadro a cuadro y minimiza dependencias de GOP.",
+            "Cualquiera de las variantes es equivalente para edición cuadro a cuadro; la elección depende solo del contenedor.",
+            "XAVC‑L es preferible porque siempre ofrece mayor profundidad de bits que XAVC‑I."
+          ],
+          "correctIndex": 1,
+          "explanation": "XAVC‑I (intraframe) es la opción adecuada para edición intensiva cuadro a cuadro por no depender de fotogramas predictivos; los distractores confunden eficiencia con edición o hacen afirmaciones incorrectas sobre profundidad de bits.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a LTO con LTFS y archivo a largo plazo, indique una limitación operativa relevante:",
+          "options": [
+            "LTFS permite acceso instantáneo y latencia equivalente a SSD, por lo que no requiere políticas de catálogo.",
+            "El acceso aleatorio es relativamente lento y las búsquedas frecuentes requieren un catálogo y verificación adicional para localizar ficheros.",
+            "Las cintas LTFS no admiten checksums ni verificación de integridad durante la copia.",
+            "LTO/LTFS impide copiar ficheros parciales; solo acepta contenedores propietarios no legibles por sistemas estándar."
+          ],
+          "correctIndex": 1,
+          "explanation": "La limitación práctica es el acceso aleatorio lento y la necesidad de catálogo/índices; las otras opciones son falsas o exageradas sobre capacidades y herramientas de LTO/LTFS.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En una instalación, al sumar dos señales balanceadas se oye un zumbido armónico persistente; interpretación técnica más probable:",
+          "options": [
+            "Fallo de la tarjeta de sonido que provoca aliasing y artefactos en banda audible aleatoria.",
+            "Conexión incorrecta de fase entre micrófonos que solo afecta a altas frecuencias y no produce 50/60 Hz.",
+            "Bucle de masa originado por diferencias de potencial entre puntos de tierra de distintos equipos, que introduce 50/60 Hz y sus armónicos.",
+            "Interferencia electromagnética por radiofrecuencia que solo se corrige con apantallamiento del cable sin afectar a la masa."
+          ],
+          "correctIndex": 2,
+          "explanation": "El síntoma descrito (zumbido a 50/60 Hz al sumar señales) es típico de bucle de masa por diferencias de potencial de tierra; los demás distractores no explican el patrón armónico ligado a la red eléctrica.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "language_target",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la opción que constituye una excepción respecto a ajustes de ritmo y recursos al adaptar la edición de un magazine a un target juvenil:",
+          "options": [
+            "Reducir deliberadamente la claridad narrativa y sacrificar comprensión por ritmo acelerado.",
+            "Incorporar música contemporánea y grafismos dinámicos coherentes con el target.",
+            "Incrementar la densidad de cortes y alternar recursos visuales ágiles para mantener atención.",
+            "Aumentar uso de recursos transmedia y llamadas a interacción para favorecer participación."
+          ],
+          "correctIndex": 0,
+          "explanation": "Reducir la claridad narrativa en detrimento de comprensión es la excepción; adaptar a un público juvenil requiere ritmo y recursos, pero sin sacrificar la comprensión esencial del contenido.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la correspondencia correcta entre operación y ejemplo práctico:",
+          "options": [
+            "Capture: transcodificar a entrega final; Import: captura de audio en directo al servidor; Link: grabación en bucle en servidor EVS; Ingest: control de calidad visual sin registro.",
+            "Capture: copiar fichero directamente desde NAS sin metadatos; Import: crear proxy sin copiar la esencia; Link: transcodificar a códec maestro; Ingest: solo etiquetar ficheros sin moverlos.",
+            "Capture: grabación directa desde cámara a servidor con generación de proxy y metadatos; Import: copiar fichero al proyecto local; Link: crear referencia a fichero en su ubicación original; Ingest: proceso completo de verificación, transcodificación y registro.",
+            "Capture: archivado a LTO; Import: envío a emisión en vivo; Link: consolidación de media en disco; Ingest: mezcla de audio definitiva."
+          ],
+          "correctIndex": 2,
+          "explanation": "La correspondencia correcta define cada operación: capture (grabación con metadatos), import (copiar al proyecto), link (referenciar sin duplicar) e ingest (flujo técnico de verificación y registro); los demás enunciados mezclan funciones incorrectamente.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Según la Ley 13/2022, indique cuál de estas obligaciones concretas debe asumir un prestador audiovisual:",
+          "options": [
+            "Ofrecer subtitulado para sordos y audiodescripción para personas con discapacidad visual en los contenidos señalados por la norma y disponer de mecanismos de control de accesibilidad en plataformas a la hora de emisión.",
+            "Limitar las medidas de accesibilidad a resúmenes escritos en la web, sin requerir subtitulados ni audiodescripción en los contenidos.",
+            "Aplicar accesibilidad únicamente a contenidos en directo, excluyendo catálogo a la carta y emisiones diferidas.",
+            "Suprimir pistas alternativas de audio para priorizar una única mezcla que simplifique la entrega."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley impone medidas concretas como subtitulado y audiodescripción y exige mecanismos operativos en plataformas; las otras opciones contradicen las obligaciones legales de accesibilidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En un entorno multicámara, ¿qué describe mejor la función de un auxiliary timecode (ATC) frente a source y record timecode?",
+          "options": [
+            "El ATC es idéntico al source TC y no aporta información adicional ni diferencias operativas.",
+            "El ATC reemplaza automáticamente al source y al record TC en todas las operaciones sin necesidad de verificación en ingesta.",
+            "El ATC siempre marca el inicio de la grabación principal y es la referencia preferente para conformados finales.",
+            "El ATC actúa como referencia auxiliar cuando el source TC es irregular o ausente, pero suele requerir recontextualización durante el relink porque no siempre identifica fotograma absoluto como el record TC."
+          ],
+          "correctIndex": 3,
+          "explanation": "El ATC sirve como referencia suplementaria cuando faltan o son inconsistentes otros códigos; sin embargo, requiere manejo cuidadoso en relink porque no siempre tiene la autoridad del record TC; las demás afirmaciones sobre su equivalencia absoluta son incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un RGB Parade (Rec.709) de una señal finalizada se mide lo siguiente en 10 bits: en medios tonos R=512, G=509, B=510; en altas luces un patch blanco muestra R=1020, G=992, B=990. ¿Cuál es el diagnóstico operativo más probable?",
+          "options": [
+            "Presencia de compresión no lineal en altas luces (knee/curve o LUT aplicada) que eleva selectivamente el canal rojo en el extremo superior del rango.",
+            "Desajuste de ganancia (RGB gain / balance de blancos) en la cámara, que normalmente provoca un desplazamiento consistente en todo el rango tonal.",
+            "Desplazamiento del pedestal/black level en la cadena de vídeo, que produciría diferencias apreciables en sombras y bajos niveles.",
+            "Saturación/clipping del canal rojo por exceso en el sensor o en la etapa A/D, que se manifestaría como valores fijados en máximo en picos y bandas quemadas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La medición muestra coincidencia de canales en medios tonos y una desviación pronunciada sólo en altas luces; eso es típico de una compresión no lineal o ajuste de knee/LUT que afecta el comportamiento en el extremo superior, no de un balance RGB global (que desplazaría todo el rango) ni de un pedestal (que afecta sombras). La saturación/clipping produciría valores idénticos al máximo y artefactos de recorte, no un ascenso diferenciado sin llegar necesariamente al tope. Operación práctica: revisar/sustituir LUTs y comprobar ajustes de knee/gamma en cámara o en la cadena de procesado en altas luces.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Indique la afirmación que mejor diferencia entrelazado y progresivo respecto a artefactos en movimiento:",
+          "options": [
+            "El entrelazado elimina el efecto de flicker en todo tipo de material y siempre es preferible para deportes.",
+            "El progresivo siempre produce combing y el entrelazado nunca presenta artefactos por movimiento.",
+            "Ambos modos son equivalentes ante movimiento rápido y requieren las mismas técnicas de conversión.",
+            "El entrelazado puede mostrar combing o desplazamiento entre campos en objetos en rápido movimiento si se visualiza sin desentrelazado; el progresivo reproduce el fotograma completo evitando ese efecto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La diferencia clave es que el entrelazado divide el fotograma en campos provocando combing en movimiento sin desentrelazado; el progresivo presenta el fotograma completo y evita ese artefacto.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare montaje paralelo y montaje alterno: indique la afirmación más ajustada a sus diferencias en simultaneidad y asociación temática:",
+          "options": [
+            "El montaje paralelo presenta escenas que se desarrollan simultáneamente en distintos espacios para establecer asociación temática o convergencia; el montaje alterno alterna acciones separadas para crear tensión o comparación sin necesidad de simultaneidad estricta.",
+            "El montaje alterno siempre implica simultaneidad absoluta entre las acciones mostradas; el paralelo ordena cronológicamente sucesos únicos.",
+            "Ambos términos son sinónimos y se usan indistintamente en teoría del montaje sin diferencias operativas.",
+            "El montaje paralelo evita cualquier relación temática entre planos, mientras que el alterno busca explícitamente la convergencia de tramas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La distinción decisiva es que el paralelo enfatiza simultaneidad y relaciones temáticas/convergencia; el alterno alterna secuencias para contrastar o aumentar tensión sin exigir simultaneidad absoluta; las otras opciones son incorrectas o contradictorias.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor diferencia el alcance de una EDL básica frente a un AAF en intercambio de proyecto:",
+          "options": [
+            "Una EDL incluye siempre todos los efectos y parámetros de audio y vídeo mientras que el AAF solo contiene una lista simple de cortes.",
+            "Una EDL básica transfiere decisiones de corte (reel, TC in/out) y suele perder múltiples pistas, efectos y parámetros; un AAF puede incluir referencias a multitrack, efectos, transiciones y metadatos adicionales.",
+            "EDL y AAF tienen exactamente el mismo alcance técnico y son intercambiables sin pérdida de información entre todos los NLE.",
+            "Una EDL almacena contenedores de media y ficheros asociados; un AAF solo contiene archivos proxy sin metadatos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La diferencia clave es que la EDL básica transmite cortes y timecodes con limitaciones, mientras que AAF transporta más estructura: pistas múltiples, efectos y metadatos; los distractores simplifican o confunden capacidades.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "094",
       "title": "Examen 094",
