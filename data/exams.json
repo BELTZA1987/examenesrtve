@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-01",
+  "updatedAt": "2026-11-02",
   "exams": [
+    {
+      "id": "096",
+      "title": "Examen 096",
+      "date": "2026-11-02",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la afirmación que mejor expresa la finalidad operativa de la reforma de 2017 y su consecuencia inmediata en la designación de los órganos de la Corporación RTVE:",
+          "options": [
+            "La reforma persigue reforzar la competitividad comercial de RTVE y transfiere la elección de sus órganos al Gobierno mediante decreto, acelerando la toma de decisiones ejecutivas.",
+            "La reforma prioriza la externalización de contenidos y delega la elección de los órganos en una comisión mixta de sindicatos y productores para asegurar pluralismo sectorial.",
+            "La reforma introduce control financiero estricto y encomienda la selección de los órganos a un comité técnico independiente nombrado por el propio ente para garantizar experiencia profesional.",
+            "La reforma busca recuperar independencia y pluralismo; establece un procedimiento de designación parlamentaria para los órganos de gobierno con mecanismos destinados a reducir la dependencia directa del ejecutivo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta identifica la finalidad principal (recuperar independencia y pluralismo) y la consecuencia operativa inmediata: la elección parlamentaria de los órganos, diseñada para reducir la dependencia del poder ejecutivo. Los distractores confunden objetivos (competitividad, externalización) o atribuyen la designación a órganos distintos a los previstos por la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Según la política 3‑2‑1, cuál de las siguientes estrategias cumple sus requisitos de copias independientes, soportes y ubicación:",
+          "options": [
+            "Tres copias totales: el original en servidor de producción, una copia en un disco externo distinto al servidor y una copia adicional almacenada físicamente en una ubicación geográfica separada; al menos dos de las copias en soportes distintos.",
+            "Tres copias en el mismo NAS con RAID, una de ellas en un disco espejo interno y una cuarta copia en la nube; todas gestionadas por el mismo sistema de ficheros.",
+            "Dos copias en el mismo tipo de disco pero en racks distintos y una copia en cinta LTO guardada en la misma sala de máquinas; si se usan volúmenes RAID no hace falta copia adicional.",
+            "Una copia local en almacenamiento de alta disponibilidad y una copia incremental diaria sobre el mismo sistema; la redundancia interna del almacenamiento reemplaza la necesidad de copia externa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta describe 3 copias, al menos 2 tipos de soporte y al menos una ubicación fuera del sitio, que es la esencia de la política 3‑2‑1. Los distractores confunden RAID interno con copias independientes o localizaciones insuficientes.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Seleccione la configuración que cumple las recomendaciones ergonómicas para pantallas de visualización respecto a distancia, altura, orientación, iluminación y control de reflejos:",
+          "options": [
+            "Pantalla con borde superior por encima de la línea de visión, distancia de 30 cm, orientación frente a ventana sin control de cortinas y luz directa de techo intensa.",
+            "Pantalla ajustada con borde superior ligeramente por debajo de la línea de visión, distancia de 50–70 cm, orientación perpendicular a fuentes de luz para minimizar reflejos, iluminación general difusa y control de brillo y contraste.",
+            "Pantalla fijada a altura de hombros, distancia de 1,2 m, orientación paralela a ventanas y lámparas puntuales sobre la mesa para aumentar contraste y visibilidad.",
+            "Pantalla a nivel de ojos con distancia variable según usuario sin límite recomendado; orientación al gusto del trabajador y recomendación de usar filtros antirreflejos siempre que haya ventanas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta especifica distancia (50–70 cm), borde superior ligeramente por debajo de la línea de visión, orientación que reduce reflejos y luz difusa, que son las medidas preventivas adecuadas. Los distractores proponen distancias, alturas o controles de iluminación inadecuados o imprecisos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación que mejor distingue contenedor y códec y refleja compatibilidades prácticas entre MOV, MP4 y MXF:",
+          "options": [
+            "MOV y MP4 son contenedores de uso general; pueden empaquetar códecs similares pero MP4 está más dirigido a distribución y tiene restricciones de metadatos; MXF es un contenedor profesional con perfiles SMPTE que facilita gestión frame‑accurate y múltiples esencias.",
+            "MOV, MP4 y MXF son códecs y sólo determinan la compresión; la compatibilidad depende exclusivamente del reproductor que los soporte.",
+            "MP4 y MXF son intercambiables en sistemas profesionales sin pérdida de metadatos, mientras que MOV no soporta audio embebido ni metadatos técnicos.",
+            "MXF es un subconjunto de MP4 optimizado para edición, compatible con todos los códecs usados en MOV y MP4 sin necesidad de transwrapping."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta diferencia contenedor y códec: MOV/MP4 son contenedores de uso general (MP4 más orientado a distribución), y MXF es un contenedor profesional con perfiles para múltiples esencias y gestión frame‑accurate. Los distractores confunden contenedor con códec o exageran compatibilidades.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Si la resistencia equivalente R de un equipo audiovisual permanece constante y la tensión aplicada V se duplica, ¿qué factor de variación experimenta la potencia eléctrica P disipada por esa resistencia?",
+          "options": [
+            "Se duplica (×2)",
+            "Se multiplica por ocho (×8)",
+            "Permanece igual (×1)",
+            "Se cuadruplica (×4)"
+          ],
+          "correctIndex": 3,
+          "explanation": "Con R constante, I = V/R, por tanto P = V·I = V·(V/R) = V²/R. Si V se duplica (V → 2V), la potencia cambia como (2V)²/R = 4·(V²/R), es decir se cuadruplica. El distractor más próximo («Se duplica») confunde mantener I constante; ese razonamiento sería correcto sólo si la corriente no variara, pero con R fija I aumenta proporcionalmente a V, por eso P escala con el cuadrado de V, no linealmente.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En soportes XDCAM donde un mismo clip puede estar dividido entre varios soportes físicos (spanning), ¿qué verificación práctica en el archivo es imprescindible para asegurar la recuperabilidad íntegra del clip?",
+          "options": [
+            "Generar y conservar un único checksum del primer soporte; si coincide al restaurar, se considera que el clip completo es recuperable.",
+            "Comprobar que cada parte física conserva el mismo identificador único de clip (UMID) y que las partes están registradas con metadatos de orden para permitir su reconstrucción por una herramienta compatible.",
+            "Verificar únicamente la presencia e integridad de las carpetas e índices locales en cada soporte; los índices locales son suficientes para relinkar automáticamente las partes.",
+            "Asegurarse de que los ficheros de vídeo en cada soporte están encapsulados como MXF OP‑Atom; esa estructura garantiza que cualquier reproductor estándar podrá reconstruir automáticamente clips spanning."
+          ],
+          "correctIndex": 1,
+          "explanation": "La comprobación de que todas las partes comparten el mismo UMID y que existe información de orden en los metadatos es la verificación práctica que permite identificar y ensamblar las porciones de un clip dividido mediante herramientas compatibles con XDCAM. Los checksums por sí solos (opción B) confirman integridad física de partes, pero no proporcionan la referencia lógica necesaria para reconstruir un clip multipartido. La presencia de índices locales (opción C) ayuda, pero sin el identificador único y la información de orden puede ser insuficiente para relink fiable entre soportes. El encapsulado MXF OP‑Atom (opción D) describe un formato posible, pero no garantiza por sí solo la existencia de metadatos de UMID/orden ni la interoperabilidad automática en todas las herramientas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para indicar narrativamente un salto temporal suave hacia un recuerdo que mantiene relación temática con la escena presente, qué transición es la más motivada y por qué:",
+          "options": [
+            "Corte seco: mantiene continuidad temporal y obliga a la audiencia a inferir la relación sin marcar la distancia temporal.",
+            "Barrido (wipe): marca una separación geográfica y espacial tajante, ideal para transiciones temáticas íntimamente relacionadas.",
+            "Fundido (dissolve): sugiere un solapamiento temporal y una continuidad psicológica que conecta presente y recuerdo con una sensación de transición temporal gradual.",
+            "Empalme con match cut: sustituye el significado temporal por una correspondencia visual exacta, siendo la mejor opción cuando se desea subrayar que ambos momentos son simultáneos."
+          ],
+          "correctIndex": 2,
+          "explanation": "El fundido (dissolve) es la transición que motiva un salto temporal suave y una conexión psicológica entre presente y recuerdo. El corte seco aporta inmediatez; el wipe sugiere separación espacial; el match cut enfatiza correspondencia visual, no necesariamente una distancia temporal gradual.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la regulación de jornada, descansos y turnicidad en el III Convenio Colectivo:",
+          "options": [
+            "El convenio fija límites y distribución de la jornada laboral, determinando jornada máxima y modalidades de jornada.",
+            "El convenio regula los descansos mínimos entre jornadas y los descansos semanales obligatorios.",
+            "El convenio fija horarios concretos por provincias para entrada y salida del personal, con días laborables y festivos diferenciados por territorio.",
+            "El convenio establece criterios generales para la organización de turnos y derechos específicos por trabajo en turnicidad."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 3 es la excepción: el convenio establece criterios y derechos sobre jornada, descansos y turnicidad pero no fija horarios concretos por provincia (esa concreción suele quedar en acuerdos locales o programación interna). Las otras afirmaciones describen materias reguladas por el convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En relación con trastornos musculoesqueléticos de extremidad superior por uso de teclado, ratón o tableta, indique la afirmación que mejor relaciona factor de riesgo y medida preventiva:",
+          "options": [
+            "El uso prolongado sin pausas y posturas forzadas aumenta riesgo; la medida prioritaria es alternar tareas, introducir microdescansos y adoptar periféricos ergonómicos ajustados a la mano.",
+            "La principal causa es la fuerza dinámica ejercida ocasionalmente; la única medida eficaz es reducir el tiempo total de jornada.",
+            "Los trastornos aparecen por falta de entrenamiento técnico; la solución es aumentar la velocidad de trabajo para reducir esfuerzo sostenido.",
+            "El riesgo depende exclusivamente de la edad del trabajador; la prevención se centra en cambiar de puesto de trabajo entre trabajadores mayores."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta identifica factores de riesgo (posturas estáticas, repetición, ausencia de pausas) y medidas preventivas eficaces (microdescansos, alternancia de tareas, periféricos ergonómicos). Los distractores sobregeneralizan o asignan causas/soluciones incorrectas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Al recibir material con submuestreo de crominancia (p. ej. 4:2:0) para una sesión de etalonaje y composición por chroma‑key, ¿cuál es la consecuencia operativa más relevante y qué medida de trabajo resulta necesaria para evitar problemas en keying y matching de color?",
+          "options": [
+            "Desalineación temporal entre canales de color que produce flicker en claves; solución: resample temporal y conversión a progresivo para estabilizar la reproducción.",
+            "Aumento del ruido de luminancia que provoca banding al ajustar sombras y altas luces; solución: aplicar denoise de luminancia previo al etalonaje.",
+            "Reducción de resolución de crominancia que provoca pérdida de detalle en bordes finos y bleeding de color (cabello, contornos); obliga a disponer del máster con crominancia completa o a aplicar upsampling y refinamiento de mates antes de etalonar y keyear.",
+            "Pérdida general de nitidez en luminancia que exige aplicar un sharpening global tras etalonaje para recuperar definición. "
+          ],
+          "correctIndex": 2,
+          "explanation": "El submuestreo de crominancia reduce la resolución de información de color, por lo que los detalles finos dependientes del crominance (cabello, bordes de traje, transiciones de piel) quedan degradados y aparecen bleeding y bordes imprecisos que dificultan el keying y el matching. La medida operativa adecuada es trabajar con la fuente de crominancia completa (máster sin submuestreo) o, si no está disponible, realizar upsampling de crominancia y procesos de refinamiento de matte antes de etalonar. El distractor más próximo (denoise de luminancia) confunde crominancia con luminancia: el submuestreo afecta resolución de color, no el ruido ni el banding de luminancia, por lo que tratar únicamente la luminancia no resuelve la pérdida de detalle cromático necesaria para un keying preciso.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "En un entorno con bins compartidos entre varios editores, cuál es la práctica técnica que previene sobrescrituras y preserva concurrencia:",
+          "options": [
+            "Confiar en backups periódicos y en sincronización horario entre estaciones sin bloqueo de bins; recuperar versiones en caso de conflicto.",
+            "Usar únicamente copias locales de los bins en cada estación y sincronizarlas semanalmente para evitar bloqueos en tiempo real.",
+            "Permitir edición simultánea en el mismo bin y resolver conflictos manualmente, dejando que el sistema sobrescriba la versión más reciente.",
+            "Implementar bloqueo (check‑out) a nivel de bin o ítem con gestión de permisos y control de versiones para que un editor trabaje en exclusiva en un bin mientras otros consultan."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta describe el mecanismo típico: bloqueo/check‑out por bin o ítem y control de permisos/versionado para evitar sobrescrituras. Los distractores proponen recuperar tras el daño, editar simultáneamente sin control, o sincronizaciones offline que no protegen contra sobrescrituras concurrentes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la compatibilidad operativa entre HDR y SDR:",
+          "options": [
+            "Un simple downmix de la profundidad de bits de 10 a 8 bits garantiza sin cambios perceptibles la compatibilidad entre HDR y SDR en todos los casos.",
+            "Algunos metadatos HDR no se interpretan por pantallas SDR y es necesario aplicar tonemapping para evitar recortes o negras saturadas.",
+            "La conversión directa de un máster HDR a SDR requiere mapeo de rango y ajustes de luminancia para preservar intención visual en displays SDR.",
+            "Las diferencias entre PQ y HLG afectan al flujo de distribución y requieren políticas de conversión específicas para mantener legalidad y legibilidad en canalizaciones mixtas."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción (falsa): reducir la profundidad de bits por sí sola no garantiza compatibilidad HDR→SDR; se requiere mapeo de luminancia/tonemapping y gestión de gamut. Las otras afirmaciones describen limitaciones reales y la necesidad de adaptación.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "En un medidor de correlación de fase, ¿qué interpretación indica compatibilidad mono adecuada y relación estéreo coherente?",
+          "options": [
+            "Valor cercano a 0: señal perfectamente monofónica sin información estéreo relevante.",
+            "Valor cercano a +1: alto grado de correlación entre canales; buena compatibilidad mono y sensación de amplitud normal.",
+            "Valor cercano a −1: absoluta correlación y perfecta compatibilidad mono sin riesgo de cancelación.",
+            "Valor intermitente entre +0,5 y +1 indica inversión de polaridad permanente en un canal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Un valor cercano a +1 indica alta correlación entre canales (buena compatibilidad mono y una señal estéreo coherente). Valores cercanos a −1 indican riesgo de cancelación en mono; 0 indica señales no correlacionadas/ambiente; las otras opciones contienen interpretaciones incorrectas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En una secuencia, el sonido perteneciente a la siguiente toma se escucha antes de que aparezca en pantalla su imagen. ¿Qué término describe esta relación temporal entre audio y vídeo?",
+          "options": [
+            "Split edit (edición partida) como término genérico que desajusta intencionalmente la sincronía entre audio y vídeo.",
+            "J‑cut: el audio de la toma entrante comienza antes de que aparezca su imagen.",
+            "Voice‑over o narración superpuesta independiente de la continuidad de planos.",
+            "Crossfade de audio para fundir y suavizar la transición sonora entre dos tomas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta es la primera: un J‑cut consiste en que el audio asociado a la toma entrante comienza antes de que su imagen aparezca. El distractor más próximo, 'split edit', es un término genérico que describe cualquier edición donde audio y vídeo no cortan simultáneamente (incluye ambos casos de adelantamiento o prolongación del audio) y por tanto no identifica la dirección temporal concreta; los otros distractores son conceptos distintos: voice‑over es una narración superpuesta y crossfade es una técnica de fundido de audio, no la regla de sincronía que define un J‑cut.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que mejor distingue una obligación preventiva del empleador frente a una mera orientación general del principio de acción preventiva (Ley 31/1995):",
+          "options": [
+            "El principio de acción preventiva se limita a recomendar buenas prácticas y no impone actuaciones evaluables por la autoridad laboral.",
+            "El empleador debe evaluar riesgos, planificar la actividad preventiva y adoptar medidas técnicas y organizativas concretas para eliminar o reducir riesgos identificados.",
+            "Bajo el principio, corresponde únicamente a los representantes de los trabajadores proponer medidas preventivas, sin obligación del empleador de implementarlas.",
+            "La ley deja todos los detalles operativos a la negociación colectiva, por lo que el empleador no tiene obligaciones directas mientras existan acuerdos sindicales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta señala obligaciones concretas del empleador: evaluación de riesgos, planificación y adopción de medidas técnicas/organizativas. Las otras opciones minimizan o trasladan la obligación a terceros, lo que no refleja la normativa.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_checksum",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Tras comparar checksums antes y después de una copia, qué afirmación resume con precisión su utilidad y sus límites prácticos:",
+          "options": [
+            "Un checksum permite determinar la calidad editorial del clip y si corresponde a la versión final aprobada por producción.",
+            "Si el checksum coincide, no cabe ninguna posibilidad de corrupción posterior ni de errores en la estructura interna del archivo.",
+            "Los checksums detectan automáticamente pérdidas de archivos en una carpeta y reparan diferencias estructurales del contenedor.",
+            "Un checksum coincide sólo si la copia es idéntica bit a bit; sin embargo, confirma integridad binaria pero no garantiza que el contenedor sea reproducible o que los metadatos asociados estén intachables."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta explica que el checksum verifica igualdad bit a bit (útil antes/después) pero no certifica que el archivo sea reproducible o que su contenedor/metadatos sean válidos. Los distractores atribuyen capacidades que los checksums no tienen (reparar, garantizar reproducibilidad o valorar calidad editorial).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la distinción entre corrección primaria y secundaria de color:",
+          "options": [
+            "La corrección primaria ajusta parámetros globales como balance de blancos, exposición y contraste para todo el plano.",
+            "La corrección secundaria permite aislar y modificar selectivamente rangos de tonos, saturaciones o zonas específicas dentro de la imagen.",
+            "La corrección primaria se realiza necesariamente sobre capas individuales de color por objeto, no afectando al resto de la imagen.",
+            "La corrección secundaria se emplea para tratar pieles, cielos o elementos concretos sin alterar el balance global."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 (índice 2) es la excepción: la corrección primaria no exige trabajar por capas u objetos individuales; actúa de forma global sobre el plano. Las demás afirmaciones describen correctamente primaria y secundaria.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "En una ingesta verificada, señale la secuencia operativa correcta entre estas opciones:",
+          "options": [
+            "Copiar origen → calcular y comparar checksums antes/después → validar estructura y metadatos de los ficheros → registrar la ingesta en el sistema de gestión.",
+            "Registrar en el sistema, copiar, comprobar checksum, validar estructura de archivo y cerrar entrada de ingesta.",
+            "Validar estructura y metadatos antes de copiar para evitar transferencias innecesarias, luego calcular checksum único de la carpeta y no compararlo.",
+            "Calcular checksum en origen y eliminar el original si la copia ocupa menos espacio; registrar sólo si el espacio es suficiente."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta describe el orden adecuado: copia, verificación mediante checksums antes/después, validación de estructura y metadatos, y registro. Los distractores proponen órdenes incorrectos o prácticas inseguras (registrar antes, validar antes de copiar, borrar originales sin verificación completa).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Cuál de las siguientes condiciones limita la fiabilidad de la sincronización multicámara basada en forma de onda de audio:",
+          "options": [
+            "Uso de la misma tarjeta de audio en todas las cámaras con la misma frecuencia de muestreo.",
+            "Presencia de códigos de tiempo comunes sincronizados a todas las cámaras.",
+            "Ausencia de pista compartida o baja correlación de la señal (micrófonos distintos, SNR bajo) que impide al algoritmo identificar picos coincidentes.",
+            "Grabación de una claqueta sonora al inicio de la toma para marcar el instante de corte."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta señala que baja correlación o diferentes captaciones (micrófonos distintos, ruido ambiente) impiden la fiabilidad de sincronización por forma de onda. Las otras opciones describen condiciones que favorecen la sincronización.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "measure_true_peak",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que describe con mayor precisión la ventaja operativa de medir 'True Peak' frente a 'Sample Peak' en entregas:",
+          "options": [
+            "Medir Sample Peak y escalar la ganancia es equivalente a medir True Peak para todos los formatos de entrega.",
+            "Sample Peak siempre detecta picos reales entre muestras, por lo que True Peak no aporta información adicional práctica.",
+            "True Peak sólo se aplica a audio comprimido y no tiene relevancia en ficheros PCM sin procesar.",
+            "True Peak mide picos interpolados entre muestras que pueden superar el valor de las muestras discretas; su control evita clipping tras conversión D/A y garantiza cumplimiento de límites de entrega."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta explica que True Peak estima picos entre muestras (inter‑sample peaks) que Sample Peak no detecta; por tanto, su control es esencial para evitar clipping tras reconstrucción y para cumplir límites de entrega. Los distractores niegan su utilidad o son técnicamente incorrectos.",
+          "category": "Equipos de medida y control"
+        }
+      ]
+    },
     {
       "id": "095",
       "title": "Examen 095",
