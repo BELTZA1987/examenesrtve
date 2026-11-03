@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-03",
   "exams": [
+    {
+      "id": "097",
+      "title": "Examen 097",
+      "date": "2026-11-03",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las obligaciones del prestador audiovisual en materia de protección de menores y acceso a contenidos:",
+          "options": [
+            "Implementar sistemas de control de acceso por edad en contenidos bajo demanda cuando lo requiera la clasificación.",
+            "Establecer mecanismos de clasificación por edades y señalizar claramente la calificación en la interfaz de usuario.",
+            "Obligación de supervisar constantemente los comentarios de usuarios en contenidos emitidos en directo para evitar exposición de menores a material no apto.",
+            "Facilitar información al público sobre las medidas disponibles para limitar el acceso de menores a contenidos inapropiados."
+          ],
+          "correctIndex": 2,
+          "explanation": "La excepción es la obligación de supervisar continuamente los comentarios en directos: la ley exige controles de acceso, clasificación y provisión de información y herramientas, pero no impone una vigilancia permanente de todos los comentarios en directo; esa tarea puede requerir medidas proporcionadas y específicas, no una obligación general de supervisión continua. Los distractores más próximos describen obligaciones concretas y exigibles (control de acceso, señalización y información).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Durante una retransmisión en curso, al transferir un clip desde un servidor EVS a un sistema de edición para cortar con 'handles', ¿qué medida técnica es esencial para garantizar disponibilidad y edición sin interrumpir el playout?",
+          "options": [
+            "Realizar una copia del clip en el NLE desde un punto final cerrado (archivo final) y renombrarlo inmediatamente.",
+            "Solicitar al realizador detener el playout del clip en emisión mientras se realiza la transferencia para evitar corrupción.",
+            "Transferir el clip en modo 'read-only' y asegurarse de que el EVS mantenga el clip activo en almacenamiento hasta confirmar la copia verificada.",
+            "Convertir el clip en un proxy en el EVS antes de la transferencia para minimizar el tiempo de copia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La medida esencial es transferir en modo read-only y garantizar que el EVS mantenga el clip activo hasta la verificación de la copia: así se permiten handles y edición sin afectar el playout. Detener la emisión no es aceptable; crear proxies puede ayudar pero no asegura integridad frente a playout; renombrar no resuelve la concurrencia ni la verificación.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_red_ip",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Se dispone de una estación con IP 192.168.10.45, máscara 255.255.255.0 y puerta de enlace 192.168.11.1. No hay conectividad con el resto de la red 192.168.10.0/24. Diagnóstico más probable:",
+          "options": [
+            "La máscara es demasiado restrictiva y debería ser 255.255.0.0 para conectar con el resto de la red.",
+            "Fallo de resolución DNS impide el acceso a recursos de la red, pese a la conectividad IP correcta.",
+            "Existe un conflicto de IP duplicada en la red 192.168.10.0/24 que impide la conectividad.",
+            "La puerta de enlace está en una subred distinta a la de la estación (192.168.11.x), por lo que las rutas salen por una gateway no alcanzable localmente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La puerta de enlace indicada (192.168.11.1) pertenece a otra subred; con máscara /24 la estación no puede alcanzar esa gateway, impidiendo la salida. La máscara /24 es correcta para esa subred; DNS o duplicidad de IP no explican que la gateway esté fuera de la subred.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estas afirmaciones sobre soportes SSD: ventajas, riesgos y prácticas de descarga o formateo. Indique la más correcta:",
+          "options": [
+            "Tras una ingesta verificada, es recomendable ejecutar un 'borrado seguro' de baja latencia en el SSD para restaurar bloques y optimizar vidas de celda antes de su reutilización.",
+            "No es necesario verificar mediante checksum tras la copia desde una cámara porque los SSD modernos gestionan la integridad con ECC interno.",
+            "La principal ventaja es la ausencia de partes mecánicas; riesgo operativo relevante es la degradación progresiva de celdas y la posibilidad de pérdida silenciosa; la práctica recomendada es verificar integridad mediante checksums y formatear con la herramienta del fabricante o el dispositivo que lo originó.",
+            "Para reutilizar un SSD tras descarga basta con eliminar los archivos desde un ordenador y crear el sistema de carpetas habitual; no se recomienda formatear con la cámara."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta reconoce ventaja y riesgo reales (no mecánico pero desgaste y posibles pérdidas) y establece la práctica adecuada: verificación por checksums y formateo con la cámara o herramienta del fabricante. El 'borrado seguro' puede provocar desgaste adicional y no es paso estándar; confiar exclusivamente en la ECC sin verificación es incorrecto; eliminar archivos sin formatear con la cámara puede dejar metadatos incompatibles.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento correcto para preservar coherencia espacial en un raccord de mirada entre dos planos:",
+          "options": [
+            "Igualar la iluminación entre planos es suficiente para garantizar la coherencia de mirada.",
+            "Mantener exactamente la misma distancia focal y cortar siempre en plano medio para evitar variaciones en la percepción espacial.",
+            "Cambiar la orientación del actor en el segundo plano para que la mirada apunte al centro del encuadre, independientemente de la posición del objeto.",
+            "Determinar la posición relativa del objeto observado respecto al eje de cámara y colocar la segunda cámara de modo que la eyeline del actor mire hacia la misma posición horizontal en el encuadre; ajustar altura y angulación si cambia el plano."
+          ],
+          "correctIndex": 3,
+          "explanation": "La práctica correcta es posicionar la cámara para que la eyeline coincida con la posición aparente del objeto en el espacio, incluyendo ajustes de altura y ángulo. Igualar focal o iluminación no asegura coherencia espacial; reorientar al actor hacia el centro altera la relación espacial y rompe el raccord.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la afirmación que mejor distingue derechos y obligaciones en materia de prevención de riesgos laborales:",
+          "options": [
+            "Solo existe obligación de formación inicial; la formación continua es voluntaria para el empleador.",
+            "El trabajador tiene la obligación exclusiva de definir los riesgos del puesto y proponer las medidas preventivas, mientras el empleador actúa solo como facilitador administrativo.",
+            "La obligación de la provisión de medios de protección recae exclusivamente en los delegados de prevención y no en el empleador.",
+            "El empleador debe proporcionar información, formación, medios y organizar la prevención; el trabajador tiene el derecho a recibir esa información y la obligación de utilizar correctamente los medios y colaborar con las medidas preventivas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta recoge la distribución real: empleador responsable de información, formación y provisión de medios; trabajador derecho a recibirlos y deber de uso y cooperación. Las otras opciones atribuyen obligaciones incorrectas o limitan responsabilidades que corresponden legalmente al empleador.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_project_media",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Al trasladar un proyecto de NLE a otra estación, los bins están presentes pero faltan las imágenes en timeline. Diagnóstico más probable que diferencie metadatos del proyecto y archivos de esencia:",
+          "options": [
+            "Los metadatos contienen las propias imágenes en un formato empaquetado, por lo que basta con importar el proyecto para recuperar las esencias.",
+            "Los metadatos de proyecto (bins, cortes, marcadores) se han copiado correctamente; las referencias a los archivos de esencia apuntan a rutas locales no transferidas, por lo que es necesario relinkear las fuentes o consolidar media.",
+            "El proyecto ha perdido los metadatos y solo existen los ficheros de esencia sueltos en la carpeta raíz.",
+            "Un archivo de proyecto siempre incorpora una copia de las esencias por defecto; la ausencia se debe a una corrupción del archivo de proyecto."
+          ],
+          "correctIndex": 1,
+          "explanation": "La distinción clave es que el proyecto guarda metadatos y referencias a las esencias; si las rutas no se han trasladado o consolidado, los bins aparecen pero las esencias faltan y deben relinkearse o consolidarse. Los proyectos no incluyen por defecto las esencias empaquetadas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación compatible con el principio constitucional de igualdad y prohibición de discriminación:",
+          "options": [
+            "Un servicio audiovisual que garantiza acceso y representación equilibrada de diferentes grupos sociales sin excluir colectivos por razones de género, raza o religión cumple ese principio.",
+            "Incluir contenidos con estereotipos sexistas siempre que sean mayoritariamente populares y aceptados por la audiencia es compatible con el principio de igualdad.",
+            "La libertad editorial permite discriminar a ciertos colectivos en la programación por motivos comerciales si se avisa en la política de empresa.",
+            "Priorizar sistemáticamente la contratación de contenidos de un solo género cultural en los espacios de máxima audiencia es plenamente compatible con la Constitución."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta describe una conducta compatible: garantizar acceso y representación equilibrada sin discriminación. Las otras opciones justifican discriminación o exclusión por motivos no compatibles con el principio constitucional de igualdad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para un flujo de postproducción que requiere edición y etalonaje en 10‑bit 4:2:2 preservando calidad para conformado, ¿cuál de estas opciones es la más adecuada como códec intermedio?",
+          "options": [
+            "H.264 de alta calidad 4:2:0 a bitrate elevado.",
+            "ProRes 422 HQ o DNxHR HQX en perfiles 10‑bit 4:2:2.",
+            "MP3 embebido en contenedor MOV para reducir tamaño de archivo.",
+            "ProRes Proxy en 8‑bit como códec final para etalonaje."
+          ],
+          "correctIndex": 1,
+          "explanation": "ProRes 422 HQ o DNxHR HQX son códecs intermedios diseñados para conservar calidad en edición y etalonaje en 10‑bit 4:2:2; H.264 es eficiente pero subóptimo para edición debido a GOP interframe y submuestreo; MP3 no es relevante para vídeo y ProRes Proxy de 8‑bit limita margen de color para etalonaje.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_en_mision",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Durante una misión externa para instalar equipamiento en local ajeno, ¿qué medida preventiva debe priorizar el empleador antes de iniciar la tarea?",
+          "options": [
+            "Proporcionar al trabajador un listado de herramientas sin realizar evaluación del local, y dejar que el técnico valore in situ los riesgos.",
+            "Realizar una evaluación específica de riesgos del lugar de trabajo, informar al trabajador sobre riesgos identificados y facilitar equipos de protección y plan de actuación.",
+            "Limitar la responsabilidad al transporte seguro del equipo y delegar las condiciones de seguridad al responsable del local ajeno.",
+            "Exigir que el trabajador firme una hoja de conformidad con el trabajo sin facilitar formación ni información previa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La medida prioritaria es realizar una evaluación de riesgos específica del local, informar y proporcionar medios de protección y procedimientos: es la obligación preventiva antes de iniciar la misión. Las otras opciones delegan responsabilidad o omiten formación e información, contraviniendo principios de PRL.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la distinción entre ritmo interno y ritmo externo del montaje:",
+          "options": [
+            "La elección de la música afecta exclusivamente al ritmo externo y no puede alterar el ritmo interno de un plano.",
+            "El movimiento interno (gestos, desplazamientos) puede influir en la percepción del tempo aun con planos largos; por tanto ambos ritmos se afectan mutuamente.",
+            "El ritmo interno se refiere a la duración y movimiento dentro de cada plano; el ritmo externo es la duración de los planos y la cadencia de los cortes.",
+            "Acelerar la sucesión de planos modifica el ritmo externo aunque los movimientos internos no cambien."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es afirmar que la música afecta exclusivamente al ritmo externo: en realidad la música puede influir también en la percepción del ritmo interno. Las otras opciones describen relaciones correctas entre movimiento interno, duración de planos y cortes.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_metadatos",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Paso imprescindible para asegurar catalogación, búsqueda e intercambio de un activo en un sistema MAM:",
+          "options": [
+            "Dejar la catalogación para la fase de archivo final y trabajar en bruto durante toda la postproducción.",
+            "Renombrar el fichero con el título del proyecto y la fecha para facilitar búsquedas sin añadir metadatos adicionales.",
+            "Asignar metadatos técnicos y descriptivos normalizados durante la ingesta y registrar identificadores persistentes que acompañen al activo en intercambios.",
+            "Confiar en el nombre de usuario que creó el archivo como único índice para la búsqueda."
+          ],
+          "correctIndex": 2,
+          "explanation": "Asignar metadatos normalizados en ingesta y usar identificadores persistentes es imprescindible para búsqueda y intercambio. Renombrar o confiar en nombres de usuario no ofrece interoperabilidad ni robustez frente a transcodings o cambios de contenedor.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_dbfs",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Indique la consecuencia operativa directa de alcanzar 0 dBFS en una señal digital:",
+          "options": [
+            "0 dBFS equivale a 0 voltios en la señal, es decir ausencia de señal.",
+            "El valor 0 dBFS indica una referencia analógica física medida en voltios que siempre deja margen de 3 dB para picos transitorios.",
+            "Al llegar a 0 dBFS el sistema automáticamente reduce la ganancia analógica para evitar clipping en la conversión.",
+            "Se produce saturación/clipping digital de la señal y pérdida de información, por lo que no hay margen para aumentos de nivel posteriores sin distorsión."
+          ],
+          "correctIndex": 3,
+          "explanation": "Alcanzar 0 dBFS implica clipping digital y pérdida de información; no existe margen digital adicional para subir nivel. Las otras afirmaciones confunden referencia digital con efectos analógicos o son incorrectas técnicamente.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_offline_online",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a la relación entre montaje proxy (offline), lista de decisiones (conform) y reconformado a originales:",
+          "options": [
+            "Los proxies deben incluir obligatoriamente todos los efectos y renderizados finales para que el reconformado a originales reproduzca exactamente el resultado visual final.",
+            "El proceso offline/online exige mantener identificadores persistentes de los clips (como UMID o filename consistente) para asegurar reconformado fiable.",
+            "Una lista de decisiones (EDL/AAF/XML) contiene referencias de timecode y permite reconformar el timeline sobre los archivos originales para generar el master final.",
+            "El reconformado se realiza sobre las esencias de mayor calidad aplicando las decisiones del montaje offline; cualquier discrepancia suele deberse a diferencias de codecs, framerate o metadatos de timecode."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es afirmar que los proxies deben incluir todos los efectos y renderizados finales: en el flujo offline/online los proxies no suelen contener efectos renderizados finales; el reconformado aplica las decisiones al material original para generar los efectos y renders definitivos. Las otras afirmaciones describen requisitos correctos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la afirmación que mejor diagnostica la misión y obligaciones de servicio público atribuidas a RTVE:",
+          "options": [
+            "RTVE tiene la obligación de promover pluralismo, acceso universal y contenidos de interés general sin someterse exclusivamente a criterios comerciales.",
+            "La misión principal de RTVE es maximizar beneficios comerciales y delegar la pluralidad en operadores privados.",
+            "RTVE solo debe garantizar la producción de contenidos locales y dejar fuera obligaciones sobre pluralismo o acceso universal.",
+            "La Ley obliga a RTVE a evitar cualquier cobertura de asuntos polémicos para mantener la neutralidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta sintetiza la misión legal: servicio público basado en pluralismo, acceso y contenidos de interés general, no subordinados a criterios comerciales. Las otras opciones deforman la finalidad legal o proponen medidas incompatibles con la Ley 17/2006.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a capacidad, ancho de banda y concurrencia en un servidor de vídeo, indique la afirmación que expresa correctamente la relación de compatibilidad operativa:",
+          "options": [
+            "La concurrencia práctica está limitada por el recurso más escaso entre ancho de banda de salida total disponible, rendimiento sostenido de los discos (throughput) y número de licencias/conexiones simultáneas del software.",
+            "La concurrencia máxima de reproducciones se determina únicamente por la capacidad de CPU del servidor; almacenamiento y red no son determinantes.",
+            "Si el servidor tiene suficiente espacio en disco, la concurrencia puede aumentarse indefinidamente sin considerar la red ni el I/O de disco.",
+            "La única magnitud relevante para concurrencia es la latencia de acceso al disco; el ancho de banda de red se puede ignorar si la latencia es baja."
+          ],
+          "correctIndex": 0,
+          "explanation": "La concurrencia está limitada por el recurso que primero se agota: ancho de banda de salida, throughput sostenido del almacenamiento y licencias/conexiones. CPU, espacio o latencia por sí solos no determinan la concurrencia práctica sin considerar los otros factores.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: para un flujo de edición offline con limitaciones de red y la necesidad de mantener buena precisión de color y rendimiento de scrubbing, ¿qué diseño de proxy es el más adecuado?",
+          "options": [
+            "H.264 720p 4:2:0 VBR a bitrate muy bajo, priorizando mínimo tamaño sobre fidelidad cromática.",
+            "Códec intraframe (p. ej. DNxHR LB o ProRes Proxy) en 720p o 1080p con 4:2:2 y bitrate moderado para equilibrar fluidez de edición y precisión de color.",
+            "Proxy a 480p en cualquier códec porque la resolución no influye en la precisión de color durante el etalonaje offline.",
+            "Crear proxies en 4:4:4 10‑bit a bitrate muy alto para asegurar idéntica calidad a los originales, sin considerar limitaciones de red."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta propone un códec intraframe y crominancia 4:2:2 a resolución moderada: es la elección que equilibra fluidez de edición y fidelidad de color en condiciones de red limitada. H.264 4:2:0 sacrifica color y scrubbing; 480p es insuficiente; 4:4:4 de muy alto bitrate contradice la limitación de red/espacio.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor describe la compatibilidad entre niveles legales de señal, gamut y la limitación automática (legalizer):",
+          "options": [
+            "Un legalizer actúa solo sobre luminancia y no afecta a la crominancia, por lo que nunca altera la saturación ni el matiz.",
+            "Si la señal está dentro de niveles de luminancia, no es necesario verificar el gamut porque los dos conceptos son independientes.",
+            "La gestión de gamut y la legalización son incompatibles; activar un legalizer implica desactivar cualquier corrección de gamut previa.",
+            "La limitación automática puede recortar o comprimir componentes de crominancia y/o luminancia para mantener la señal dentro de niveles legales; esa corrección puede reducir saturación en colores muy saturados."
+          ],
+          "correctIndex": 3,
+          "explanation": "La afirmación correcta reconoce que un legalizer puede recortar o comprimir luma y croma para cumplir límites, lo que frecuentemente reduce saturación en colores muy intensos. Es falso que actúe solo sobre luminancia o que sea incompatible con gestión de gamut; aunque relacionados, luma y gamut requieren control conjunto.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Para afrontar obsolescencia y asegurar acceso a largo plazo, indique la política operativa más adecuada:",
+          "options": [
+            "Conservar un único archivo en su soporte original indefinidamente; comprobar su integridad solo cuando se necesite acceder al contenido.",
+            "Programar migraciones periódicas a soportes actuales, realizar verificaciones de integridad (checksums) tras cada migración y registrar metadatos de verificación y procedencia.",
+            "Depositar todos los soportes en una ubicación sin procedimientos de verificación para reducir costos operativos.",
+            "Convertir todo el archivo a un contenedor propietario compacto y dejar de mantener las copias en formato original."
+          ],
+          "correctIndex": 1,
+          "explanation": "La política recomendada combina migraciones periódicas antes de fin de vida, verificación por checksums y registro de metadatos; así se mitiga la obsolescencia y se asegura accesibilidad. Las otras opciones ignoran verificación, redundancia o introducen riesgo al depender de formatos propietarios sin preservación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Aplicación práctica de la línea de tono de piel en el vectorscopio: indique la afirmación más precisa sobre su uso y límites:",
+          "options": [
+            "La posición en el vectorscopio de la traza de piel depende exclusivamente de la luminancia, no del matiz ni de la saturación.",
+            "La línea de tono de piel determina exactamente la saturación que todas las pieles deben tener, por lo que la distancia al centro debe ser fija.",
+            "La línea de tono de piel indica un ángulo de matiz de referencia; las distintas pieles deben alinearse en ese ángulo manteniendo variaciones en la distancia al centro (saturación) y no en el ángulo.",
+            "La línea de tono de piel varía libremente entre cada toma, por lo que no es útil como referencia para corrección de color."
+          ],
+          "correctIndex": 2,
+          "explanation": "La línea de tono de piel marca el ángulo de matiz esperado; las diferentes tonalidades de piel varían en saturación (distancia al centro) y luminancia pero deben mantener aproximación en el ángulo. No fija una saturación única ni depende solo de luminancia; es una referencia útil y estable para correcciones de matiz.",
+          "category": "Equipos de medida y control"
+        }
+      ]
+    },
     {
       "id": "096",
       "title": "Examen 096",
