@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-04",
   "exams": [
+    {
+      "id": "098",
+      "title": "Examen 098",
+      "date": "2026-11-04",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia correcta para verificar la compatibilidad de una nueva fuente de ingresos con las restricciones y principios del modelo de financiación de la Ley 8/2009:",
+          "options": [
+            "Aceptar la fuente si cumple requisitos fiscales → aplicar inmediatamente a programas de contenido editorial → comunicarlo en el siguiente informe anual",
+            "Solicitar autorización administrativa previa → incorporar la factura al libro de contabilidad → solicitar opinión al comité editorial",
+            "Comprobar el origen legal del ingreso → verificar que no contraviene prohibiciones específicas de explotación comercial → registrar la previsión en el presupuesto público correspondiente",
+            "Realizar auditoría externa → modificar las cláusulas del contrato del proveedor → entregar la financiación a la unidad editorial para distribución"
+          ],
+          "correctIndex": 2,
+          "explanation": "La comprobación debe iniciar por la legalidad del origen, confirmar que la actividad o forma de explotación no está prohibida o restringida por el modelo de financiación y, finalmente, reflejar la asignación en el presupuesto. Las otras opciones omiten pasos de verificación jurídica o confunden funciones administrativas y editoriales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Al preparar y publicar una playlist en EVS/IPDirector destinada a emisión con transiciones y 'handles':",
+          "options": [
+            "Publicar únicamente referencias a clips en el directorio de montaje y confiar en que el playout reconstruya las transiciones",
+            "Consolidar en el servidor de playout la playlist incluyendo los 'handles' y los metadatos de transición antes de publicar",
+            "Exportar una EDL y depositarla en el servidor sin adjuntar metadatos de transición",
+            "Renombrar los clips con prefijos numéricos para forzar el orden de reproducción"
+          ],
+          "correctIndex": 1,
+          "explanation": "Consolidar la playlist al servidor con los 'handles' y metadatos garantiza que el playout dispone de la esencia y la instrucción de transición tal y como fue editada. Las otras opciones dependen de reconstrucciones o atajos que no aseguran la preservación de las transiciones editadas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Para identificar y verificar un crosspoint concreto en una matriz de vídeo cuando la documentación y el controlador no son fiables:",
+          "options": [
+            "Inyectar en la fuente un patrón de prueba con identificador y observar su aparición en el destino para localizar el crosspoint",
+            "Borrar y volver a cargar la tabla de enrutamiento del controlador sin pruebas de señal",
+            "Sustituir el módulo de control de la matriz por uno de recambio y comprobar si desaparece el problema",
+            "Realizar un reinicio eléctrico completo de la matriz y comprobar estados lógicos"
+          ],
+          "correctIndex": 0,
+          "explanation": "La medida trazable y de menor impacto es enviar una señal de prueba identificable desde la fuente y observar su llegada al destino; así se localiza el crosspoint operativo. Reinicios o reemplazos sin verificación no identifican el punto de cruce real.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_intelectual",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál es el efecto editorial característico del montaje intelectual por yuxtaposición de planos?",
+          "options": [
+            "Reducción de la motivación dramática al priorizar el ritmo sobre la interpretación",
+            "Mejora automática de la continuidad temporal sin necesidad de cobertura adicional",
+            "Generación de un nuevo significado que surge de la relación entre los planos, más allá del contenido de cada uno",
+            "Sustitución del raccord tradicional por transiciones continuas que evitan asociaciones temáticas"
+          ],
+          "correctIndex": 2,
+          "explanation": "El montaje intelectual crea significado emergente por la yuxtaposición; el sentido reside en la relación entre planos. Las otras opciones confunden efectos técnicos o narrativos distintos y no describen la asociación de ideas que define este montaje.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_chromakey",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Orden operativo correcto del proceso de incrustación por chromakey para diagnosticar y corregir artefactos:",
+          "options": [
+            "Integrar fondo → generar la máscara → ecualizar la clave → reducir el alpha",
+            "Aplicar reducción de spill → generar la máscara → aplicar corrección creativa → ajustar bordes",
+            "Generar la máscara (matte) → limpiar y ajustar bordes → reducir spill de color → integrar la capa de fondo",
+            "Ajustar bordes → integrar fondo → generar máscara → eliminar spill"
+          ],
+          "correctIndex": 2,
+          "explanation": "Primero se extrae la máscara para definir áreas, luego se refina bordes, después se corrige el spill de color y finalmente se compone con el fondo. Las otras secuencias mezclan pasos en un orden que impide un diagnóstico y corrección progresiva correcta.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Principio operativo de una conexión de audio balanceada que explica el rechazo de interferencias de modo común:",
+          "options": [
+            "Se utiliza un único conductor con filtrado paso‑bajo en cada extremo para eliminar la interferencia",
+            "Un conductor transporta la señal y el otro la masa; el blindaje absorbe totalmente las interferencias",
+            "La impedancia de entrada baja elimina cualquier ruido captado en la línea",
+            "Dos conductores con señales iguales en amplitud y opuestas en fase; el receptor resta las señales y cancela la componente común"
+          ],
+          "correctIndex": 3,
+          "explanation": "En balanceado se transmiten dos señales iguales en amplitud y opuestas en fase; al diferenciar en el receptor se elimina la interferencia común (rechazo de modo común). Las otras opciones describen técnicas distintas o incorrectas para el balanceado.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estas organizaciones de tareas para reducir fatiga visual y postural en un puesto con pantallas:",
+          "options": [
+            "Mantener bloques largos de trabajo visual concentrado y compensar con una pausa única larga al final de la jornada",
+            "Alternancia de tareas entre pantalla y tareas no visuales cada 45–60 min, con micro‑pausas de 2–3 min cada 20–30 min (eficaz)",
+            "Rotación exclusiva de operadores sin ajustar la duración de sesiones frente a pantalla",
+            "Incrementar el tamaño de fuente y brillo al máximo para reducir la necesidad de pausas"
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta combina alternancia de tareas y micro‑pausas, método efectivo para reducir tensión visual y postural. Las demás opciones son insuficientes o aplican medidas contraproducentes que no atacan la fatiga acumulada.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En la revisión de un dossier de contenidos donde aparecen estereotipos de género y lenguaje sexista: medida operativa conforme al II Plan de Igualdad y la Guía de RTVE:",
+          "options": [
+            "Delegar la decisión exclusivamente al productor responsable sin registro documental",
+            "Limitar la emisión a horas con menor audiencia y dejar registro para formación interna",
+            "Incluir una nota informativa en la cabecera del programa sin modificar el contenido",
+            "Realizar una evaluación de impacto de género sobre el material y aplicar un plan de corrección editorial (reformular lenguaje, equilibrar representaciones y documentar cambios)"
+          ],
+          "correctIndex": 3,
+          "explanation": "El Plan exige medidas activas: evaluación de impacto y corrección editorial documentada para prevenir representaciones sexistas y acoso. Las otras opciones evitan la corrección real o delegan sin control, por lo que no cumplen las medidas previstas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en un sistema de edición lineal A/B‑Roll la prelectura muestra la transición correctamente, pero en el programa final la transición produce un salto brusco en el momento de ejecución. Más probable:",
+          "options": [
+            "Fallo físico del mezclador que altera la forma de onda de vídeo durante el paso a programa",
+            "Desajuste de la compensación de prelectura (offset) entre las cabezas A y B que provoca desincronización en el mezclador",
+            "Corrupción del material fuente en el carrete B que sólo se detecta en la salida",
+            "Configuración incorrecta del codec de ingest que altera la velocidad de fotogramas"
+          ],
+          "correctIndex": 1,
+          "explanation": "En A/B‑Roll la prelectura debe estar sincronizada con la ejecución; un offset incorrecto entre cabezas produce que lo visto en preview no coincida con el momento real en el mezclador. Las otras causas son menos coherentes con la diferencia entre preview y programa que describe el caso.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_intra_longgop",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Para un flujo que requiere frecuentes reconformados y edición cuadro‑a‑cuadro:",
+          "options": [
+            "Un códec intraframe (Intra) facilita acceso aleatorio y edición robusta aunque ocupe más espacio (recomendado)",
+            "Un Long‑GOP ofrece mejor acceso aleatorio y menor carga de decodificación por cuadro",
+            "Long‑GOP es siempre preferible por menor latencia de decodificación",
+            "Intra impide cualquier tarea de conformado a resolución final"
+          ],
+          "correctIndex": 0,
+          "explanation": "Los códecs intraframe almacenan cada cuadro de forma independiente, mejorando acceso aleatorio y robustez en reconformados; Long‑GOP es más eficiente en espacio pero complica el acceso y aumenta la carga en reconformados. Las otras opciones son incorrectas o exageradas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Ante la simultánea pérdida de dos discos en un arreglo RAID y la necesidad de reconstrucción, ¿qué configuración habría permitido reconstrucción tras ambos fallos?",
+          "options": [
+            "RAID0, porque distribuye datos y permite reconstrucción por striping",
+            "RAID5, porque la paridad distribuida tolera dos fallos simultáneos",
+            "RAID6, porque usa doble paridad y tolera la caída de dos discos",
+            "JBOD, porque cada disco actúa independientemente y facilita restauración"
+          ],
+          "correctIndex": 2,
+          "explanation": "RAID6 incorpora doble paridad y puede reconstruirse tras la pérdida de dos discos. RAID5 tolera un único fallo; RAID0 y JBOD no ofrecen tolerancia y no permiten reconstrucción tras fallos múltiples.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_fiction",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "En la coordinación de montaje de ficción con realización, cuál de estas afirmaciones es compatible con mantener continuidad dramática y la indicación de cobertura:",
+          "options": [
+            "Priorizar la continuidad interpretativa y la coherencia dramática al seleccionar planos, incluso si ello exige sacrificar una cobertura técnicamente perfecta",
+            "Reemplazar planos por cualquier cobertura disponible para ajustar tiempos de emisión sin consultar realizador",
+            "Aplicar siempre la toma con mejor iluminación aunque difiera en interpretación",
+            "Eliminar planos de cobertura para acortar la escena y mantener ritmo a toda costa"
+          ],
+          "correctIndex": 0,
+          "explanation": "La compatibilidad entre montaje y realización exige favorecer la continuidad dramática y la interpretación del actor; las demás opciones priorizan aspectos técnicos o de ritmo en detrimento de la coherencia narrativa.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento para diagnosticar si la CPU, la GPU o la RAM son el cuello de botella en una estación de edición con rendimiento de efectos lento:",
+          "options": [
+            "Monitorizar uso de CPU y GPU durante render y reproducción → comprobar uso de RAM y swap → revisar I/O de disco y cargar una tarea de prueba dirigida",
+            "Actualizar drivers de GPU inmediatamente → reinstalar el sistema operativo → reemplazar la placa base",
+            "Aumentar resolución del proyecto para forzar a la GPU → deshabilitar la CPU multihilo → disminuir la RAM disponible",
+            "Cambiar el códec de exportación sin medir cargas de CPU/GPU/RAM"
+          ],
+          "correctIndex": 0,
+          "explanation": "El diagnóstico debe comenzar midiendo cargas de CPU/GPU y uso de RAM, y revisar la I/O de disco. Las otras opciones son intervenciones no diagnósticas o contraproducentes.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a los efectos de mezclar cadencias y métodos de conversión:",
+          "options": [
+            "La conversión 24→25 fps mediante re‑muestreo progresivo puede introducir ligero stutter si no se ajusta correctamente",
+            "La inserción de pulldown 3:2 al convertir 24→29,97 fps introduce judder en algunos movimientos",
+            "El uso de interpolación óptica puede generar artefactos en objetos de movimiento rápido",
+            "Duplicar fotogramas para ajustar cadencia siempre preserva la fluidez original del movimiento"
+          ],
+          "correctIndex": 3,
+          "explanation": "Duplicar fotogramas es una técnica simple que reduce fluidez y puede provocar saltos; por ello la afirmación de que 'siempre preserva la fluidez' es la excepción. Las otras afirmaciones describen efectos y riesgos reales de conversiones de cadencia.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las consecuencias prácticas de la clasificación profesional en el III Convenio Colectivo:",
+          "options": [
+            "La clasificación impide en todos los casos asignar tareas ocasionales distintas a las recogidas en la ocupación tipo",
+            "La clasificación establece la ocupación tipo y orienta la asignación de funciones y recursos en la organización del trabajo",
+            "La clasificación facilita la planificación de formación y evaluación de competencias por grupo profesional",
+            "La clasificación sirve de referencia para ordenar las ocupaciones y definir perfiles y tareas habituales"
+          ],
+          "correctIndex": 0,
+          "explanation": "La clasificación orienta la organización y planificación, pero no impide en todos los casos la asignación temporal de funciones distintas; por tanto la opción 2 es la excepción. Las demás son consecuencias prácticas compatibles con la clasificación profesional.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Durante visionado y selección de material XDCAM: relación operativa correcta entre proxy y esencia de alta resolución:",
+          "options": [
+            "El proxy sustituye definitivamente a la esencia de alta resolución en todo el flujo si la calidad aparente es suficiente",
+            "El proxy se usa para scrubbing y selección rápida; mantiene un enlace referenciado a la esencia auténtica que se emplea para conformado final",
+            "La esencia de alta resolución siempre se utiliza para selección; el proxy sólo es una copia de seguridad",
+            "Es indiferente editar con proxy o con la esencia porque ambos contienen idénticos metadatos de tiempo real"
+          ],
+          "correctIndex": 1,
+          "explanation": "En flujos XDCAM el proxy agiliza visionado y selección manteniendo un enlace a la esencia de alta resolución para reconformado y entrega final. Las otras opciones confunden roles o implican usos incorrectos del proxy.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_postura",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a ajustes posturales correctos en un puesto de edición:",
+          "options": [
+            "La silla debe permitir apoyo lumbar y ajuste de altura para que los pies reposen en el suelo o en reposapiés",
+            "Los antebrazos deben apoyarse a nivel del escritorio para minimizar tensión en hombros y muñecas",
+            "El monitor debe colocarse de forma que la línea de visión quede ligeramente por encima del nivel horizontal inferior",
+            "Los antebrazos deben permanecer colgando sin apoyo para favorecer la circulación"
+          ],
+          "correctIndex": 3,
+          "explanation": "Es incorrecto recomendar que los antebrazos cuelguen sin apoyo; lo aconsejable es un apoyo que reduzca tensión. Las otras afirmaciones describen ajustes posturales correctos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: tras aplicar un 'ripple trim' en el extremo de un clip de vídeo, el audio del plano subsecuente queda desfasado. ¿Cuál es la causa?",
+          "options": [
+            "Se aplicó por error un 'roll trim' que sólo altera el punto de corte entre dos clips sin cambiar duración",
+            "El 'ripple' modificó la duración del clip y desplazó todo lo siguiente en la pista, rompiendo la sincronía con pistas adyacentes",
+            "Se usó 'slip' que desplaza el contenido interno del clip manteniendo puntos de corte",
+            "El trim aplicado fue 'slide', que mueve el clip sin afectar a la sincronía general"
+          ],
+          "correctIndex": 1,
+          "explanation": "El 'ripple' cambia la duración y desplaza material siguiente en la línea de tiempo, produciendo desincronización si no se ajustan pistas adyacentes. Las otras operaciones no producen ese desplazamiento general.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación compatible con la adecuación de señales de referencia para SD y HD:",
+          "options": [
+            "Tri‑level sync sólo es compatible con señales entrelazadas y no sirve para progresivo",
+            "Black burst y tri‑level son idénticos y ambas son adecuadas indistintamente para SD y HD",
+            "Black burst es adecuado para referencias en SD; tri‑level sync es más apropiado para señales HD por su mayor frecuencia y menor jitter en genlock",
+            "Black burst ofrece mayor precisión de sincronismo en 1080p que tri‑level"
+          ],
+          "correctIndex": 2,
+          "explanation": "Black burst se emplea tradicionalmente en SD; tri‑level sync, con transición más rápida, es la referencia preferente en HD/progresivo. Las demás afirmaciones son técnicamente incorrectas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_lut_log",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que distingue operacionalmente una LUT de visualización de una LUT creativa en un flujo logarítmico:",
+          "options": [
+            "Una LUT de visualización modifica permanentemente la curva log para optimizar la compresión del códec",
+            "Ambas LUTs tienen la misma finalidad y siempre deben incorporarse definitivamente en la esencia de cámara",
+            "La LUT creativa transforma datos log a linea de emisión legalizada, mientras que la de visualización solo ajusta la resolución",
+            "Una LUT de visualización convierte señales log a apariencia de monitor para revisión sin alterar la esencia; una LUT creativa aplica corrección estética que puede 'bakearse' en el material"
+          ],
+          "correctIndex": 3,
+          "explanation": "La LUT de visualización sirve para monitorizar y no debe confundirse con la LUT creativa, que modifica la apariencia y puede aplicarse definitivamente. Las otras opciones confunden propósito y efecto técnico de las LUTs.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "097",
       "title": "Examen 097",
