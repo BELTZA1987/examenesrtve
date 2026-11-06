@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-06",
   "exams": [
+    {
+      "id": "100",
+      "title": "Examen 100",
+      "date": "2026-11-06",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Indique la afirmación que mejor expresa una obligación concreta del empleador según la Ley 31/1995:",
+          "options": [
+            "Trasladar al trabajador la responsabilidad exclusiva de control y seguimiento de las medidas preventivas.",
+            "Sustituir toda la organización del trabajo por medidas generales sin identificar los riesgos por puesto.",
+            "Limitar la prevención a proporcionar instrucciones verbales en el momento de la contratación.",
+            "Realizar evaluación de riesgos específica del puesto y planificar medidas preventivas derivadas de esa evaluación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La evaluación de riesgos y la planificación de medidas son obligaciones directas del empleador; los distractores describen acciones insuficientes o que trasladan responsabilidades al trabajador, que no sustituyen la evaluación objetiva exigida.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Para dimensionar la red: 50 usuarios acceden simultáneamente a flujos de 8 Mbps cada uno y se exige un margen operativo del 20%. ¿Cuál es el ancho de banda agregado requerido?",
+          "options": [
+            "400 Mbps",
+            "560 Mbps",
+            "520 Mbps",
+            "480 Mbps"
+          ],
+          "correctIndex": 3,
+          "explanation": "Ancho agregado = 50 × 8 Mbps = 400 Mbps. Añadiendo margen del 20% → 400 × 1,20 = 480 Mbps; los otros valores no aplican correctamente el margen.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Orden de comprobaciones para diagnosticar degradación de rendimiento concurrente en un almacenamiento compartido:",
+          "options": [
+            "Revisar estado físico de discos; luego reiniciar todos los clientes; finalmente sustituir cables de red.",
+            "Verificar uso de CPU en estaciones; comprobar configuración de permisos en el SAN; limpiar cachés locales.",
+            "Actualizar firmware de controladora; migrar datos a otro volumen; ajustar parámetros de proyecto en el NLE.",
+            "Medir I/O y latencia del storage; comprobar reservas/QoS y límites de volumen; revisar concurrencia y uso de canales por cliente."
+          ],
+          "correctIndex": 3,
+          "explanation": "El diagnóstico correcto prioriza medir I/O y latencia del almacenamiento, luego verificar políticas de reserva/QoS y, finalmente, revisar la concurrencia cliente por canal; las otras opciones omiten la medición de rendimiento y las reservas del sistema.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a obligaciones de los trabajadores en prevención:",
+          "options": [
+            "Realizar la evaluación de riesgos del puesto de trabajo y elaborar el plan preventivo.",
+            "Cooperar con el empleador y seguir las instrucciones relativas a medidas preventivas y equipos facilitados.",
+            "Participar en las acciones formativas en materia de prevención que organice la empresa.",
+            "Usar correctamente los equipos de protección individual proporcionados por la empresa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La evaluación de riesgos y la elaboración del plan son obligaciones del empleador; los trabajadores deben cooperar, formarse y usar los medios, por lo que la opción 2 (índice 2) es la excepción.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Compare las afirmaciones sobre lectura de un vectorscopio: ¿cuál es la más precisa?",
+          "options": [
+            "La distancia al centro marca el balance de blancos y el ángulo indica la tasa de contraste.",
+            "El ángulo indica luminancia y la distancia al centro indica la relación señal/ruido.",
+            "El ángulo de la traza representa la tonalidad (hue) y la distancia al centro representa la saturación.",
+            "El ángulo mide la frecuencia de muestreo y la distancia al centro la profundidad de bits."
+          ],
+          "correctIndex": 2,
+          "explanation": "Correcto: ángulo = tono/tonalidad (ubicación hacia R,G,B, piel, etc.); distancia al centro = saturación. Los distractores confunden conceptos de luminancia, ruido y parámetros físicos no representados en vectorscopio.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Indique la afirmación que mejor expresa la relación que limita el número máximo de reproducciones simultáneas en un servidor de vídeo:",
+          "options": [
+            "La latencia de la red local no influye en la concurrencia si los clientes son estaciones potentes.",
+            "La capacidad total del disco (TB) es el único parámetro que fija el número de reproducciones simultáneas.",
+            "El número de núcleos CPU del servidor determina exclusivamente la concurrencia de reproducción sin depender del storage.",
+            "El factor determinante principal es el ancho de banda agregado de lectura sostenida desde el almacenamiento al que acceden los clientes."
+          ],
+          "correctIndex": 3,
+          "explanation": "La limitación principal suele ser la capacidad de lectura sostenida (ancho de banda) del storage; la capacidad en TB, CPU o latencia aisladas no determinan por sí solas la concurrencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "basic_bit_depth",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: pasar de 8 bit a 10 bit por canal en procesamiento de color produce principalmente:",
+          "options": [
+            "Duplicación de niveles por canal y eliminación total del banding sin necesidad de dithering.",
+            "Cuatro veces más niveles por canal (256 → 1024), reducción del banding y mayor margen para gradación.",
+            "Incremento de la resolución espacial de la imagen y reducción de ruido de captura.",
+            "Aumento del rango dinámico físico de la cámara en el momento de la captura."
+          ],
+          "correctIndex": 1,
+          "explanation": "10 bit ofrece 1024 niveles frente a 256 (factor 4), reduciendo banding y permitiendo más margen de gradación; no duplica niveles ni cambia resolución espacial o rango físico de captura.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Según el III Convenio Colectivo, ¿qué regla corresponde a la regulación de jornada, descansos y turnicidad?",
+          "options": [
+            "La jornada de trabajo está fijada por ley sin posibilidad de acuerdo colectivo sobre turnos y descansos.",
+            "La regulación de jornada, descansos y turnos se establece mediante la negociación colectiva del convenio, que fija jornada ordinaria, descansos mínimos y criterios de turnicidad.",
+            "El convenio prohíbe expresamente cualquier cambio de jornada que implique turnicidad.",
+            "Los descansos se determinan exclusivamente por decisión unilateral del empleador sin referencia al convenio."
+          ],
+          "correctIndex": 1,
+          "explanation": "El III Convenio regula estas materias por negociación colectiva, estableciendo jornada, descansos y reglas para la turnicidad; las otras opciones contradicen el papel negociador del convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "language_news",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "En la edición de un avance informativo de 30 s, indique la priorización operativa adecuada:",
+          "options": [
+            "Priorizar efectos gráficos y música para favorecer impacto visual por encima del titular informativo.",
+            "Incluir máximo de testimonios largos para aportar profundidad aunque se exceda el tiempo previsto.",
+            "Priorizar titular y datos esenciales en locución, usar totales que contextualicen y reducir recursos visuales a lo imprescindible para cumplir el tiempo.",
+            "Extender locución con datos secundarios y añadir cortes adicionales para completar ritmo."
+          ],
+          "correctIndex": 2,
+          "explanation": "En edición de noticias la prioridad es la información esencial: titular y datos clave en locución, totales y recursos que aporten contexto y ajuste estricto al tiempo; los distractores priorizan elementos que sacrificarían la prioridad informativa.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia de medidas preventivas recomendadas para reducir trastornos musculoesqueléticos en uso intensivo de tableta gráfica:",
+          "options": [
+            "Incrementar sensibilidad de la tableta; prolongar jornadas sin pausas; evitar formación ergonómica.",
+            "Evaluar posturas y ajustar altura del puesto; alternar descansos activos y ejercicios; proporcionar formación y dispositivos ergonómicos adecuados.",
+            "Reducir iluminación de pantalla y exigir mayor presión sobre la tableta para mayor control.",
+            "Sustituir el uso de tableta por ratón sin adaptar el entorno ni ofrecer pausas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La secuencia correcta incluye evaluación ergonómica, ajuste del puesto, pausas/ejercicios, formación y dispositivos adecuados; los distractores proponen medidas inadecuadas o contrarias a la prevención.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Condición imprescindible para sincronización multicámara mediante código de tiempo común:",
+          "options": [
+            "Cada cámara use un offset de timecode diferente que luego se corrija manualmente en el NLE.",
+            "Todas las cámaras registran el mismo código de tiempo de referencia (jam o señal) con la misma frecuencia de cuadro y unidades temporales coherentes.",
+            "Basta que las cámaras tengan relojes internos aproximados sin coincidencia de framerate.",
+            "Que solo una cámara tenga código de tiempo y las demás se sincronicen solo por audio."
+          ],
+          "correctIndex": 1,
+          "explanation": "Para sincronización fiable todas las cámaras deben registrar el mismo timecode coherente y compartir la misma framerate; las alternativas dependen de correcciones manuales o una única referencia, menos fiables.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Empareje tipo de ventana de loudness con su uso operativo:",
+          "options": [
+            "Integrated → evaluación del nivel medio de todo el programa; Short‑term (3 s) → medir variaciones en pasajes; Momentary (400 ms) → supervisión instantánea de dinámica.",
+            "Integrated → medir picos instantáneos; Short‑term → control de nivel medio del programa; Momentary → medir desempeño de loudness en 30 s.",
+            "Integrated → uso exclusivo en publicidad; Short‑term → cumplimiento de normas de emisión; Momentary → no se utiliza en control de emisiones.",
+            "Integrated → sustituye al true peak; Short‑term → mide frame a frame; Momentary → mide la media del programa."
+          ],
+          "correctIndex": 0,
+          "explanation": "La correspondencia correcta: Integrated evalúa el nivel medio del programa completo; Short‑term (≈3 s) mide variaciones en pasajes; Momentary (≈400 ms) ofrece lectura instantánea. Los distractores asignan usos incorrectos o imposibles.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "language_music_sync",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo para sincronizar cortes con la música respetando frase y acentos:",
+          "options": [
+            "Sincronizar únicamente por beat‑matching sin considerar fraseología o acentos musicales.",
+            "Ignorar la estructura musical y cortar cada cuatro segundos sin consideración de frase; ajustar volumen después.",
+            "Cortar en puntos de tensión musical: al final de frases o en acentos marcados; alinear entradas de planos con ataque rítmico y usar contrapunto sólo si busca contraste.",
+            "Colocar cortes aleatorios y ajustar música para que encaje posteriormente mediante crossfades prolongados."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica adecuada es alinear cortes con la frase y acentos musicales y utilizar contrapunto cuando se quiera contraste; los distractores descuidan fraseología o proponen soluciones reactivas que dañan continuidad musical.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la política 3‑2‑1 de copias:",
+          "options": [
+            "Mantener una copia primaria en RAID en el mismo gabinete del original sin copias en otro soporte físico ni ubicación externa.",
+            "Tener tres copias: original, copia en un dispositivo externo y otra copia almacenada en ubicación geográficamente distinta.",
+            "Guardar dos copias adicionales en soportes independientes y una copia fuera de las instalaciones.",
+            "Asegurar que las copias estén en soportes distintos y que al menos una copia sea offline o fuera de la sede."
+          ],
+          "correctIndex": 0,
+          "explanation": "La 3‑2‑1 exige tres copias en al menos dos soportes y una en ubicación distinta; confiar únicamente en RAID en el mismo gabinete no cumple la política, por eso es la excepción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación compatible con la finalidad de la reforma de la Ley 5/2017:",
+          "options": [
+            "La reforma transfiere la elección de directivos a órganos ejecutivos de empresas privadas.",
+            "La reforma establece la privatización parcial de RTVE para garantizar pluralismo.",
+            "La reforma elimina cualquier control parlamentario sobre la designación de los órganos de RTVE.",
+            "La reforma persigue reforzar la independencia mediante el procedimiento de designación parlamentaria de los órganos de dirección de RTVE."
+          ],
+          "correctIndex": 3,
+          "explanation": "La reforma de 2017 recupera independencia y pluralismo mediante la elección parlamentaria de órganos; las demás opciones contradicen su finalidad o introducen privatización no prevista.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en una GOP IPB, un paquete que contiene un fotograma P queda corrupto. ¿Cuál es la consecuencia operativa más inmediata?",
+          "options": [
+            "Los B y P que dependan de ese P mostrarán artefactos o fallos de reconstrucción hasta que aparezca el siguiente I que rompa la dependencia.",
+            "Aparecerá únicamente una congelación de imagen en el fotograma corrupto sin afectar a frames posteriores.",
+            "La corrupción del P no afecta a B frames porque éstos únicamente dependen del I inicial de la GOP.",
+            "El decodificador ignorará el P corrupto y generará una interpolación perfecta sin impacto visible."
+          ],
+          "correctIndex": 0,
+          "explanation": "En GOP con predicción, la corrupción de un P afecta a todos los fotogramas que dependan de él (B y P siguientes) hasta un I que reinicie la referencia; los distractores subestiman la dependencia o asumen una recuperación perfecta.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_relink",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Ante enlaces incorrectos en un proyecto de edición, ¿qué criterio técnico es más robusto como primer intento de relink?",
+          "options": [
+            "Coincidencia por nombre de fichero exacto exclusivamente.",
+            "Coincidencia por punto de inicio de timecode (start TC) y duración en fotogramas, con comprobación de framerate.",
+            "Coincidencia por codec y bitrate sin verificar timecode.",
+            "Coincidencia por marca de fecha/hora del fichero en el sistema de ficheros."
+          ],
+          "correctIndex": 1,
+          "explanation": "Relink robusto combina start timecode y duración (y framerate) para asegurar coincidencia frame‑accurate; nombre, codec o timestamp por sí solos son menos confiables y dan lugar a enlaces incorrectos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a diferencias y compatibilidad entre PQ y HLG:",
+          "options": [
+            "HLG es una aproximación híbrida que facilita compatibilidad hacia displays SDR sin metadatos.",
+            "PQ (ST 2084) es una función electro‑óptica absoluta pensada para señal de luminancia objetivo.",
+            "HLG requiere metadatos HDR10 para su correcta reproducción en dispositivos compatibles.",
+            "La distribución basada en PQ suele requerir información de metadatos estática o dinámica para un mapeado correcto."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación 0 es falsa: HLG está diseñada para funcionar sin metadatos y ofrecer compatibilidad con SDR; las otras enunciaciones describen propiedades reales de PQ y HLG.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para garantizar recuperabilidad de un clip dividido entre varios soportes (spanning) en XDCAM, ¿qué verificación operativa es imprescindible?",
+          "options": [
+            "Comprobar que el tamaño total de los ficheros en TB coincide con la duración esperada sin validar índices.",
+            "Verificar únicamente que los nombres de fichero sean idénticos en cada soporte.",
+            "Comprobar que existen todas las extensiones del clip en cada soporte y que la herramienta de recuperación reconoce los metadatos de spanning.",
+            "Solo copiar la primera extensión del clip y confiar en que el NLE reconstruirá el resto automáticamente."
+          ],
+          "correctIndex": 2,
+          "explanation": "Es imprescindible verificar la presencia de todas las extensiones y que los metadatos indiquen spanning; basarse solo en nombres o tamaños no garantiza reconstrucción íntegra.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_umid",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "¿Qué operación asegura la persistencia identificativa de un activo a través de transcodings y copias?",
+          "options": [
+            "Incrustar el UMID original en los metadatos del archivo derivado y conservarlo invariado en todas las versiones.",
+            "Generar un nuevo UMID para cada transcodificación y usar siempre el último como referencia única.",
+            "Eliminar el UMID y usar únicamente el nombre de fichero y ruta para identificar el activo.",
+            "Registrar el UMID original solo en un documento externo no vinculado a los ficheros."
+          ],
+          "correctIndex": 0,
+          "explanation": "Para mantener identificación persistente hay que conservar e incrustar el UMID original en los metadatos de las derivaciones; generar nuevos UMID o usar solo nombres/rutas o documentos externos rompe la trazabilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "099",
       "title": "Examen 099",
