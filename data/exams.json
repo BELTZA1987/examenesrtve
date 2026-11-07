@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-07",
   "exams": [
+    {
+      "id": "101",
+      "title": "Examen 101",
+      "date": "2026-11-07",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Indique la afirmación que mejor resume el contenido sustantivo del principio constitucional de igualdad y la prohibición de discriminación en el ámbito de la comunicación audiovisual:",
+          "options": [
+            "Obligación de no discriminar por razón de nacimiento, sexo, orientación, religión u otras condiciones, garantizando iguales oportunidades y trato, permitiendo medidas específicas para corregir desigualdades reales.",
+            "Prohibición absoluta de cualquier distinción entre personas en los contenidos, sin atender a contextos ni objetivos legítimos.",
+            "Facultad del servicio público para regular la representación de grupos con independencia de la existencia de sesgos sociales previos.",
+            "Permitir representaciones diferenciadas si se justifican por criterios de audiencia y viabilidad económica del servicio."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta define el principio sustantivo: prohibición de discriminación por motivos recogidos en la Constitución y posibilidad de medidas positivas para corregir desigualdades. El distractor más cercano (opción 0) es erróneo porque afirma una prohibición absoluta sin admitir medidas correctoras ni valorar contexto; la opción 1 equilibra no discriminación y medidas de igualdad, que es la diferencia decisiva.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento recomendado para minimizar riesgos y desgaste al preparar un SSD de rodaje para su reutilización tras descarga de material:",
+          "options": [
+            "Realizar un borrado rápido (quick format) y volver a usar inmediatamente; el borrado rápido restaura el sistema de ficheros sin afectar al firmware.",
+            "Aplicar repetidos ciclos de escritura aleatoria para 'nivelar' celdas y así mejorar el rendimiento antes de cada nuevo rodaje.",
+            "Conectar el SSD al NLE y confiar en la función de 'reconectar media' sin más verificaciones para ahorrar tiempo en el set.",
+            "Ejecutar verificación de integridad (checksum) de las copias realizadas, comprobar registros de transferencia y, si todo es correcto, efectuar un formateo de bajo nivel o secure erase según fabricante antes de volver a usarse."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta combina verificación de la descarga (checksums/registro) y el formateo seguro según fabricante; distingue entre comprobar integridad (evitar reutilizar datos corruptos) y aplicar el método de borrado recomendado. El distractor más cercano (opción 0) es insuficiente porque el 'quick format' no asegura eliminación ni reposición de estructuras ni respeta recomendaciones del fabricante; por eso la opción 1 es la decisiva.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Para indicar en la narrativa un salto temporal progresivo hacia un recuerdo (suavizado temporal y continuidad temática), ¿qué transición es la más motivada?",
+          "options": [
+            "Corte seco (cut).",
+            "Congelado de imagen (freeze frame).",
+            "Barrera o wipe geométrico.",
+            "Fundido encadenado (dissolve)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El fundido encadenado (dissolve) es la transición motivada para suavizar el paso temporal y conectar presente y recuerdo; el corte seco implica simultaneidad o continuidad inmediata, que es la diferencia clave respecto al dissolve (distractor más próximo).",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Identifique la afirmación que mejor explica la diferencia temporal entre entrelazado y progresivo y el artefacto típico que resulta en movimiento:",
+          "options": [
+            "El progresivo capta dos campos en instantes sucesivos produciendo peines, mientras que el entrelazado captura toda la trama a la vez reduciendo artefactos.",
+            "En entrelazado cada campo refleja la imagen en tiempos distintos provocando desplazamientos temporales en objetos en movimiento y 'peines'; en progresivo la captura es simultánea por fila y evita peines, aunque puede mostrar blur por movimiento y muestreo temporal uniforme.",
+            "Ambos formatos capturan la escena en el mismo instante; la diferencia principal es solo en la manera de empaquetar los datos, sin efectos visibles en movimiento.",
+            "El entrelazado elimina el aliasing espacial completamente, y el progresivo crea aliasing por mover objetos entre frames."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta señala que el entrelazado recoge campos en tiempos distintos, provocando 'peines' en bordes en movimiento, mientras que el progresivo captura el frame completo en un instante; la diferencia decisiva frente al distractor más próximo (opción 1) es que esta última invierte la relación temporal real entre formatos y por tanto es incorrecta.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare políticas de preservación frente a obsolescencia: ¿cuál de las siguientes combina mejor migración periódica y verificación para mantener accesibles los archivos?",
+          "options": [
+            "Mantener originales en su formato en un único archivo maestro y sustituir hardware a medida que falla; verificar sólo al recuperar un activo.",
+            "Conservar solo versiones transcodificadas en códecs modernos para ahorrar espacio, descartando originales propietarios tras una sola verificación visual.",
+            "Planificar migraciones periódicas a formatos y soportes actuales según riesgo, mantener múltiples copias independientes y comprobar integridad mediante checksums y registros de verificación en cada migración.",
+            "Depender exclusivamente de emulación de hardware antiguo para leer soportes originales sin migración de archivos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta propone migraciones periódicas, copias redundantes y verificación con checksums, que son prácticas complementarias frente a la obsolescencia. El distractor más cercano (opción 0) falla porque solo verifica al recuperar, exponiendo a pérdidas entre verificaciones; esa diferencia de alcance en la verificación es decisiva.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un mezclador de vídeo con buses 'program' y 'preview' y una clave (key) configurada en preview, ¿qué conjunto de acciones asegura que la clave pase correctamente a programa al ejecutar una transición?",
+          "options": [
+            "Desactivar la key en preview y activarla directamente en program justo antes de ejecutar la transición.",
+            "Activar la key en preview, seleccionar el tipo de transición en el fader/auto, ejecutar la transición desde preview a program; el bus program recibe la key sin cambios.",
+            "Ejecutar la transición sin tocar preview; el mezclador automáticamente reubicará la key en program aunque esté en preview.",
+            "Configurar la key en un bus auxiliar independiente y confiar en que el mezclador la copiará al programa en cuanto se haga cut manual."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta refleja la operación estándar: preparar la key en preview y usar el control de transición (fader/auto) para llevarla a program; la diferencia con el distractor más próximo (opción 1) es que activar manualmente en program justo antes puede producir saltos o discontinuidades si no se hace sincronizada con la transición, mientras que la operación en preview+transición garantiza continuidad.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_en_mision",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Respecto a riesgos y prevención durante una misión profesional fuera del centro habitual, indique la afirmación más adecuada:",
+          "options": [
+            "La responsabilidad de la prevención recae exclusivamente en el trabajador que ejecuta la misión, que debe adaptar su conducta al entorno.",
+            "El empleador debe evaluar riesgos específicos del lugar de trabajo ajeno, informar y proporcionar equipos de protección y procedimientos antes de iniciar la misión.",
+            "No es necesario evaluar riesgos si la misión dura menos de una jornada laboral.",
+            "Basta con comunicar por correo electrónico la ubicación y que el trabajador actúe con prudencia; no se requiere información ni formación adicional."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta refleja la obligación del empleador de evaluar riesgos del lugar ajeno, informar y proporcionar medios preventivos antes de la misión. El distractor más cercano (opción 3) reduce obligaciones a una mera comunicación y carece de la evaluación e información exigida, que es la diferencia clave.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las medidas previstas por el II Plan de Igualdad y la Guía de Igualdad de RTVE:",
+          "options": [
+            "Promover el uso no sexista del lenguaje y la representación equilibrada de géneros en contenidos.",
+            "Establecer protocolos de prevención y atención frente al acoso sexual y por razón de sexo en el ámbito de producción.",
+            "Realizar auditorías periódicas de género y formación para personal técnico y creativo.",
+            "Exigir cuotas fijas por programa que determinen de forma rígida la presencia mínima de un género en pantalla en todo tipo de formatos sin análisis de contexto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 2 es la excepción: el Plan prevé medidas de igualdad y acciones correctoras pero no impone cuotas rígidas universales sin análisis contextual. Las otras opciones describen medidas reales del Plan; la diferencia decisiva es la imposición inflexible de cuotas sin valoración (falso en este contexto).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las características de la familia XAVC y sus variantes (Intra vs Long‑GOP, perfiles y aplicaciones):",
+          "options": [
+            "XAVC es incompatible con contenedores MXF y sólo puede empaquetarse en MP4.",
+            "XAVC Long‑GOP sacrifica cierta facilidad de edición por mayor eficiencia en bitrate frente a Intra.",
+            "XAVC Intra utiliza codificación intraframe adecuada para edición cuadro a cuadro y alta calidad por frame.",
+            "Los perfiles y niveles de XAVC se usan para adaptar calidad y bitrates a producción, emisión o archivo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 2 es la excepción: XAVC puede encapsularse en MXF y MP4 según implementaciones; afirmar que es incompatible con MXF es incorrecto. Las demás opciones describen características reales: Intra vs Long‑GOP y uso de perfiles, que es la diferencia clave frente al distractor incorrecto.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Para garantizar compatibilidad entre un sistema de edición y ficheros en crecimiento generados durante un directo, ¿qué condición técnica es la más determinante?",
+          "options": [
+            "Que el NLE soporte lectura de ficheros mientras se escriben, con gestión del índice intermedio y capacidad de reindexado al cierre del fichero.",
+            "Que el NLE descargue automáticamente el fichero completo al terminar el directo y bloquee acceso durante la grabación.",
+            "Que el sistema produzca únicamente contenedores con GOP largo para reducir tamaño, sin consideración del comportamiento durante escritura.",
+            "Que los ficheros se marquen como 'finalizados' desde el inicio de la grabación para evitar lecturas parciales."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta indica la necesidad de que el NLE lea archivos en crecimiento y gestione índices temporales y reindexado al cierre del fichero; el distractor más cercano (opción 1) sería bloquear acceso y no permite edición durante el evento, por eso la capacidad de lectura/gestión de índices es la diferencia decisiva.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Durante una ingesta verificada, si un checksum de un archivo queda discrepante tras la copia, ¿cuál es la interpretación operativa correcta de ese resultado?",
+          "options": [
+            "Aceptar la copia y continuar la sesión; el checksum sólo es un indicador secundario.",
+            "Poner el archivo en cuarentena, detener su puesta en circulación y reintentar la ingesta o recuperar otra fuente; la discrepancia indica posible corrupción durante la transferencia.",
+            "Ignorar la discrepancia si la duración y el aspecto visual parecen correctos tras una comprobación rápida.",
+            "Corregir el checksum en el destino para que coincida con el origen y registrar la operación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta interpreta la discrepancia como indicio de corrupción y obliga a cuarentenar y reingestar o recuperar otra copia. El distractor más próximo (opción 2) minimiza el riesgo basándose en verificación visual, que no detecta corrupción silente; esa omisión explica por qué es incorrecto.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estas afirmaciones: ¿qué diferencia operativa existe entre fuentes no sincronizadas y su corrección mediante un frame‑sync?",
+          "options": [
+            "Fuentes no sincronizadas sólo afectan al audio; el frame‑sync corrige automáticamente cualquier desfase de audio sin intervención adicional.",
+            "Si las fuentes no están sincronizadas, no se aprecia efecto en la conmutación; el frame‑sync sólo mejora la calidad de imagen.",
+            "El frame‑sync elimina la necesidad de referencia común (genlock) y no introduce latencia alguna.",
+            "Fuentes no sincronizadas pueden mostrar saltos o desfases temporales entre señales; un frame‑sync reconstruye temporalmente la señal de entrada introduciendo latencia y alineando frames para conmutación limpia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta describe el efecto de desajuste (saltos/desfases) y la función del frame‑sync que añade latencia para re‑sincronizar; es distinta a los distractores que niegan latencia o confunden audio y vídeo, siendo la latencia añadida la diferencia decisiva.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Síntoma: al conectar una cámara y un monitor mediante cables XLR en un set aparece un zumbido de 50/60 Hz que desaparece al desconectar uno de los equipos. Diagnóstico más probable:",
+          "options": [
+            "Bucle de masa por diferencia de potencial entre las masas de los equipos, que crea corriente de modo común y zumbido audible.",
+            "Mala polaridad en las conexiones, que sólo requiere invertir fase en el micrófono.",
+            "Ruido térmico normal del equipo cuando trabaja a temperatura alta.",
+            "Fallo del convertidor A/D de la cámara, que introduce hum por defecto."
+          ],
+          "correctIndex": 0,
+          "explanation": "El síntoma descrito (zumbido que desaparece al desconectar) es típico de bucle de masa por diferencia de potencial entre chasis; la diferencia frente al distractor más próximo (opción 1) es que invertir fase no eliminaría un zumbido 50/60 Hz originado por corriente de masa.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Configuración ergonómica recomendada para pantallas de visualización respecto a distancia y altura:",
+          "options": [
+            "Colocar la pantalla a nivel de la vista y a menos de 20 cm para mejorar detalle; las luces deben apuntar directamente hacia la pantalla.",
+            "Distancia 20–30 cm, parte superior de la pantalla a la altura de los ojos y pantalla orientada hacia ventanas para mejor iluminación.",
+            "Distancia de visualización de 50–70 cm, parte superior de la pantalla ligeramente por debajo del nivel de los ojos y perpendicular a fuentes de luz predominantes para reducir reflejos.",
+            "Cualquier distancia es aceptable si el brillo está al máximo; la orientación y reflejos no son importantes."
+          ],
+          "correctIndex": 2,
+          "explanation": "La configuración correcta incluye distancia moderada (50–70 cm) y la parte superior ligeramente por debajo del nivel de los ojos para reducir tensión y reflejos; el distractor más cercano (opción 1) propone distancias y orientación que aumentan fatiga y deslumbramiento, por eso es incorrecto.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento que debe aplicar un prestador audiovisual para proteger a menores y controlar acceso conforme a la Ley 13/2022:",
+          "options": [
+            "Clasificar contenidos por edades y aplicar controles de acceso (auth, PIN, verificación), ubicar contenidos sensibles fuera de horarios infantiles, mantener metadatos de clasificación y facilitar mecanismos de denuncia y bloqueo.",
+            "Limitarse a advertir en la descripción que el contenido no es apto para menores sin medidas técnicas de control.",
+            "Eliminar cualquier contenido que pueda resultar molesto para menores sin clasificación ni matices.",
+            "Confiar en que los padres son los únicos responsables y no implantar medidas técnicas de restricción."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta enumera obligaciones concretas: clasificación por edades, controles técnicos de acceso, horario y metadatos, que son requerimientos de la Ley; el distractor más cercano (opción 1) reduce obligaciones a una mera advertencia, insuficiente según la normativa, que es la diferencia clave.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para diseño de proxies destinados a edición offline con alto número de cortes cuadro‑a‑cuadro y recursos limitados, ¿qué especificación técnica equilibra mejor fluidez, precisión de scrubbing y ocupación de espacio?",
+          "options": [
+            "Proxy H.264 720×576 con GOP largo y bitrate variable alto: reduce espacio pero ofrece malo scrubbing y baja precisión cuadro‑a‑cuadro.",
+            "Proxy en formato imagen secuencia TIFF sin compresión para máxima precisión y mínimo consumo de CPU.",
+            "Proxy intraframe (ProRes Proxy o DNxHR LB) a resolución reducida (p. ej. 720p) y bitrate constante moderado: facilita scrubbing y cortes cuadro‑a‑cuadro manteniendo bajo peso.",
+            "Proxy HEVC Long‑GOP de baja resolución para minimizar espacio y mantener precisión de scrubbing."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta recomienda un codec intraframe ligero y resolución reducida; los intraframe mantienen accesibilidad por frame y facilitan scrubbing frente a codecs Long‑GOP. El distractor más cercano (opción 0) usa H.264 Long‑GOP que ahorra espacio pero perjudica scrubbing y precisión cuadro‑a‑cuadro, que es la diferencia decisiva.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un medidor de correlación de fase, ¿qué lectura y su interpretación indican simultáneamente buena compatibilidad al sumarse a mono y una imagen estéreo coherente y estable?",
+          "options": [
+            "Valor muy cercano a +1 (p. ej. 0,9–1,0): canales altamente correlados; excelente compatibilidad mono pero imagen estéreo muy reducida (prácticamente mono).",
+            "Valor negativo estable cercano a −1: canales esencialmente en fase invertida; alto riesgo de cancelación total al mezclar a mono y señal estéreo inconsistente. ",
+            "Valor próximo a 0 (p. ej. −0,1 a +0,1) con fluctuaciones rápidas: canales poco correlacionados; amplia imagen estéreo pero riesgo de incompatibilidad al sumar a mono.",
+            "Valores positivos moderados (p. ej. +0,3 a +0,8) con ligeras variaciones según contenido: correlación suficiente para evitar cancelaciones al pasar a mono y suficiente diferencia entre canales para una imagen estéreo coherente."
+          ],
+          "correctIndex": 3,
+          "explanation": "Valores positivos moderados (aprox. +0,3 a +0,8) señalan que los canales izquierdo y derecho están correlados en suficiente medida para evitar cancelaciones al sumar a mono, pero mantienen diferencias de fase/amplitud que permiten una imagen estéreo clara y estable. El distractor más próximo (valor ≈ +1) corresponde a señal fuertemente correlada: asegura compatibilidad mono, pero describe esencialmente una mezcla mono (poca o nula información estéreo), por lo que no cumple la condición de 'imagen estéreo coherente' en la misma medida. Los valores cercanos a 0 indican decorrelación (amplia espacialidad pero menor compatibilidad mono) y los negativos indican inversión de fase y riesgo de cancelaciones.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para soportes audiovisuales externos que deben alojar ficheros individuales mayores de 4 GB y ser ampliamente compatibles entre cámaras y estaciones de montaje, ¿qué sistema de archivos es el más adecuado?",
+          "options": [
+            "FAT32.",
+            "exFAT.",
+            "ISO9660.",
+            "FAT16."
+          ],
+          "correctIndex": 1,
+          "explanation": "exFAT soporta ficheros de gran tamaño (>4 GB) y es ampliamente compatible con cámaras y estaciones modernas. FAT32 tiene límite de ~4 GB por fichero (distractor más cercano) y por tanto no cumple el requisito; esa limitación es la diferencia decisiva.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: una secuencia intercala planos de dos personajes en localizaciones distintas mostrando acciones simultáneas que no convergen hasta el final; ¿qué tipo de montaje describe mejor esta estrategia?",
+          "options": [
+            "Montaje intelectual por yuxtaposición: no establece relación temporal sino sólo semántica.",
+            "Montaje alterno: presenta sucesos en orden lineal único sin intención de simultaneidad.",
+            "Montaje paralelo: combina acciones que ocurren al mismo tiempo en distintos lugares para enfatizar simultaneidad y contraste.",
+            "Montaje en continuidad estricta: sólo usado en plano‑secuencia y no aplicable aquí."
+          ],
+          "correctIndex": 2,
+          "explanation": "La descripción corresponde al montaje paralelo: intercalado de acciones simultáneas en lugares distintos que refuerzan la simultaneidad y la relación temática. El distractor más próximo (opción 1) confunde con alterno sin simultaneidad; la simultaneidad es la diferencia decisiva.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al alcance comparado de una EDL frente a un AAF en intercambio de proyectos:",
+          "options": [
+            "Una EDL básica suele contener listas de cortes con referencias de reels y timecode y carece de información detallada de pistas múltiples, efectos complejos y metadatos extensos.",
+            "Un AAF puede transportar múltiples pistas, referencias a media, efectos, transiciones y metadatos, facilitando reconformado más preciso.",
+            "Una EDL normalmente incluye todos los efectos nativos del NLE y sus parámetros completos para un reconformado sin pérdida de información.",
+            "AAF facilita transferencia de estructuras de proyecto y metadatos que una EDL no puede contener en su forma básica."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es la excepción: una EDL básica no incluye todos los efectos nativos ni sus parámetros completos; por eso afirmar que sí lo hace es incorrecto. Las demás opciones describen diferencias reales entre EDL y AAF; la incapacidad de la EDL básica para transportar efectos completos es la diferencia decisiva.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "100",
       "title": "Examen 100",
