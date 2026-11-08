@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-08",
   "exams": [
+    {
+      "id": "102",
+      "title": "Examen 102",
+      "date": "2026-11-08",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor describe una fuente de financiación compatible con los principios y restricciones generales del modelo de la Ley 8/2009 para RTVE:",
+          "options": [
+            "Distribución de beneficios entre accionistas privados como objetivo principal de la gestión.",
+            "Financiación exclusiva mediante venta de espacios publicitarios gestionada por terceros privados.",
+            "Asignaciones procedentes del Presupuesto General del Estado bajo criterios de suficiencia y estabilidad.",
+            "Cobro directo de tarifas de usuario final para acceder a la programación lineal."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley 8/2009 establece un modelo basado en asignaciones públicas (Presupuesto) y otras fuentes reguladas, buscando suficiencia y estabilidad. Las otras opciones describen mecanismos incompatibles con la naturaleza pública o contrarios a las restricciones previstas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que diferencia correctamente un contenedor (MOV/MP4/MXF) de un códec:",
+          "options": [
+            "Un contenedor y un códec son intercambiables: cambiar el contenedor modifica la compresión del vídeo sin recodificar.",
+            "El códec siempre determina la estructura de ficheros y metadatos; por ello MXF solo acepta códecs propietarios.",
+            "Un contenedor empaqueta pistas y metadatos; el códec define cómo se comprimen esas pistas, por eso MOV/MP4/MXF pueden contener distintos códecs.",
+            "MOV y MP4 incorporan necesariamente códecs de baja calidad; MXF solo admite códecs sin pérdida."
+          ],
+          "correctIndex": 2,
+          "explanation": "La distinción es que el contenedor organiza essences y metadatos y el códec realiza la compresión; por tanto MOV/MP4/MXF pueden encapsular distintos códecs. Los demás enunciados confunden función y capacidades reales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En un RGB Parade (Rec.709) los tres canales muestran la misma forma pero el canal verde está consistentemente 30 unidades por encima de rojo y azul en sombras y medios. Diagnóstico operativo:",
+          "options": [
+            "Compresión cromática aplicada sólo al canal verde.",
+            "Clipping selectivo del canal verde en altas luces.",
+            "Desalineación temporal de los canales R, G y B.",
+            "Dominante de color por balance de blancos desviado hacia el verde."
+          ],
+          "correctIndex": 3,
+          "explanation": "Una elevación sistemática del canal verde respecto a R y B indica un dominante por balance de blancos o corrección de color incorrecta. El clipping afectaría sólo altas luces; desalineación temporal produciría desplazamientos, y la compresión selectiva de canal no es una causa operativa habitual.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Seleccione la opción que asigna correctamente J‑cut y L‑cut a estas situaciones (primera descripción = J‑cut, segunda = L‑cut):",
+          "options": [
+            "La imagen del siguiente plano aparece antes de su sonido; ambos planos comparten el mismo plano sonoro sin solapamiento.",
+            "La voz del siguiente plano se oye antes de que aparezca su imagen; la música del plano anterior continúa una vez aparecida la nueva imagen.",
+            "Ambas descripciones corresponden a cortes secos sin solapamiento de audio entre planos.",
+            "La voz del plano anterior se silencia exactamente en el momento del corte; la imagen del siguiente plano se solapa con su propio sonido."
+          ],
+          "correctIndex": 1,
+          "explanation": "La pareja correcta muestra la entrada anticipada del audio del siguiente plano (característica del J‑cut) y la permanencia del audio del plano anterior tras el corte (característica del L‑cut). Las otras opciones no establecen correctamente ambos comportamientos en comparación.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la detección y consecuencias de problemas de fase o polaridad en audio:",
+          "options": [
+            "Desplazamientos temporales de pocos milisegundos entre dos señales pueden producir comb filtering perceptible.",
+            "Problemas de fase entre dos pistas causan cancelaciones parciales que se notan en pérdida de graves al sumarse a mono.",
+            "La inversión de polaridad entre dos pistas puede detectarse visualmente con un medidor de correlación cercano a ‑1.",
+            "La inversión de polaridad entre dos micrófonos idénticos no altera la curva de respuesta en frecuencia individual de cada micrófono."
+          ],
+          "correctIndex": 3,
+          "explanation": "La afirmación seleccionada es la excepción porque invertir la polaridad no cambia la respuesta en frecuencia de cada micrófono por separado; las demás describen consecuencias y detección correctas de problemas de fase/polaridad.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_eje_180",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Para mantener continuidad espacial al cambiar el eje de acción entre planos, ¿qué medida es la más adecuada?",
+          "options": [
+            "Sustituir la continuidad espacial por planos detalle que eliminen la percepción del eje.",
+            "Cambiar el eje directamente sin cobertura para acelerar el ritmo y generar dinamismo.",
+            "Alterar la dirección de cámara del personaje principal sin plano intermedio ni eje de referencia.",
+            "Introducir un plano de transición (plano de paso o neutro) que cruce gradualmente el eje y reoriente la mirada."
+          ],
+          "correctIndex": 3,
+          "explanation": "La medida correcta es usar un plano de paso o neutro que sirva de puente y permita invertir o variar el eje sin romper la continuidad espacial; las otras opciones incrementan el riesgo de confusión o mantienen ruptura de eje.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo para insertar un clip entre dos elementos de una playlist en EVS/IPDirector sin perder las transiciones previstas:",
+          "options": [
+            "Insertar el clip con handles suficientes, recalcular o reasignar transiciones en la playlist y publicar la versión actualizada antes del playout.",
+            "Recrear toda la playlist desde cero en el servidor de playout para garantizar orden y transiciones.",
+            "Copiar el clip directamente en el dispositivo de almacenamiento del playout sin actualizar la playlist.",
+            "Desactivar las transiciones de la playlist original y publicar el clip insertado en un nuevo bloque separado."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica correcta es insertar con handles, ajustar las transiciones/recalcular la playlist y publicar la versión actualizada; recrear la playlist completa o publicar sin actualizar pueden perder las transiciones previstas.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Según el III Convenio Colectivo, ¿qué criterio ayuda a clasificar una ocupación dentro del grupo 'Edición, montaje y procesos audiovisuales'?",
+          "options": [
+            "La prestación de servicios comerciales orientados exclusivamente a ventas y marketing.",
+            "La ejecución mayoritaria de funciones administrativas y de gestión de contratos.",
+            "La realización habitual de tareas técnicas especializadas de montaje y tratamiento de imagen y sonido.",
+            "La asignación temporal de tareas de montaje durante una campaña puntual sin perfil técnico."
+          ],
+          "correctIndex": 2,
+          "explanation": "La clasificación se basa en la naturaleza técnica habitual de las funciones; realizar tareas técnicas de montaje es el criterio que define la ocupación tipo. Las demás opciones describen actividades no propias de la ocupación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Durante visionado y selección en un flujo XDCAM, ¿qué indicio operativo confirma que proxies y esencia de alta resolución están correctamente enlazados para reconformado?",
+          "options": [
+            "Coincidencia del identificador único del clip (UMID) o identificador de clip entre proxy y essence.",
+            "Que los nombres de archivo del proxy y de la esencia contengan la misma extensión.",
+            "Que la duración visualizada del proxy sea aproximada pero no idéntica a la de la esencia.",
+            "Que el proxy tenga mayor resolución de imagen que la esencia para facilitar scrubbing."
+          ],
+          "correctIndex": 0,
+          "explanation": "La correspondencia basada en un identificador único (UMID/ID de clip) es la prueba operativa que permite reconformar con seguridad; coincidencias de nombres o duraciones aproximadas no garantizan integridad, y un proxy nunca tiene mayor resolución que la esencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_postura",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia prioritaria de ajustes ergonómicos en un puesto de edición para corregir postura:",
+          "options": [
+            "Ajustar la altura del asiento (pies planos), regular el apoyo lumbar, acomodar la altura de los antebrazos y, finalmente, posicionar los pies y la pantalla.",
+            "Colocar el reposapiés, ajustar la pantalla primero, luego la altura del asiento y finalmente los antebrazos.",
+            "Ajustar la iluminación, después el ratón y por último la altura del asiento.",
+            "Configurar los atajos del NLE, ajustar el respaldo y terminar con la inclinación del monitor."
+          ],
+          "correctIndex": 0,
+          "explanation": "La secuencia correcta prioriza soporte básico (pies y soporte lumbar), seguida del ajuste de antebrazos y posición de pantalla; las otras secuencias omiten prioridades ergonómicas fundamentales o incluyen acciones secundarias.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la relación entre niveles legales de señal, gamut y la función de limitación automática (legalizer):",
+          "options": [
+            "Un legalizer puede reducir saturación y recortar valores para asegurar cumplimiento de gamut y niveles legales.",
+            "Los niveles legales de luminancia y crominancia son límites operativos aplicables en la cadena de salida para emisión.",
+            "La limitación automática siempre preserva exactamente el matiz original sin introducir cambios de tono perceptible.",
+            "La corrección automática puede generar shifts perceptibles que requieren revisión manual en casos límite."
+          ],
+          "correctIndex": 2,
+          "explanation": "Decir que la limitación automática preserva exactamente el matiz original es la excepción; en la práctica la corrección automática puede alterar tonos y requiere control manual. Las otras afirmaciones describen funciones y efectos reales del legalizer.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para realizar un relink fiable al material original tras transcode, ¿qué tipo de código de tiempo es el más idóneo como referencia primaria?",
+          "options": [
+            "Record timecode (el tiempo asignado en la cinta o master tras la grabación).",
+            "Source timecode (el código de tiempo original registrado por la cámara).",
+            "Auxiliary timecode (ATC) usado para sincronizar periféricos externos).",
+            "User timecode modificado manualmente durante la edición."
+          ],
+          "correctIndex": 1,
+          "explanation": "El source timecode es la referencia primaria para localizar el material original. El record o auxiliary pueden ser útiles en otros contextos, pero para relink fiable se debe usar el timecode origen integrado en los archivos de cámara.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un enlace de emisión en tiempo real con ancho de banda garantizado y limitaciones estrictas de transmisión, ¿qué modo de bitrate es el más adecuado?",
+          "options": [
+            "Dos‑pass VBR, porque adapta el bitrate durante la emisión en directo.",
+            "VBR (bitrate variable), porque optimiza la calidad instantánea reaccionando a la complejidad de cada escena.",
+            "CBR (bitrate constante), porque mantiene ocupación de canal predecible y evita fluctuaciones en el enlace.",
+            "CBR con GOP variable, porque mantiene bitrate constante y aporta eficiencia de compresión adicional."
+          ],
+          "correctIndex": 2,
+          "explanation": "Para transmisión en tiempo real con canal garantizado, CBR es preferible por su predictibilidad de ancho de banda. VBR es ventajoso para almacenamiento y calidad por archivo, pero no para enlaces con restricción real de bit rate.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al componer un gráfico que utiliza canal alpha premultiplicado y aparecen halos oscuros en los bordes sobre un fondo de alto contraste, ¿qué acción corrige el problema?",
+          "options": [
+            "Aplicar una capa de corrección de color al fondo para igualar el borde.",
+            "Interpretar o convertir el alpha como 'straight' (unpremultiply) antes de la composición.",
+            "Volver a premultiplicar el RGB por el alpha en la composición.",
+            "Aumentar la opacidad del gráfico para ocultar los halos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Si el gráfico está premultiplicado pero se interpreta como straight se generan halos; la solución es convertir correctamente entre premultiplied y straight (unmult) o ajustar la interpretación. Las otras acciones no solucionan la incompatibilidad de interpretación.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la medida que mejor se ajusta a las obligaciones de servicio público atribuidas a la Corporación por la Ley 17/2006:",
+          "options": [
+            "Limitar la difusión de contenidos a plataformas de pago para financiar la programación.",
+            "Maximizar la rentabilidad comercial priorizando mercados internacionales.",
+            "Ceder la gestión editorial a operadores privados para mejorar eficiencia.",
+            "Garantizar pluralismo informativo y acceso universal a contenidos de interés general."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 17/2006 atribuye a la Corporación obligaciones de servicio público como pluralismo y acceso universal; las otras opciones contravienen la finalidad de servicio público al priorizar lucro o externalizar gestión editorial.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "prl_incendio",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a prevención y actuación ante incendios en entornos de producción audiovisual:",
+          "options": [
+            "Usar un extintor de agua sobre un equipo eléctrico energizado.",
+            "Conocer la clase de fuego para elegir el extintor adecuado.",
+            "Priorizar la evacuación rápida y segura del personal ante fuego eléctrico.",
+            "Asegurar desconexión de la alimentación eléctrica cuando sea seguro hacerlo."
+          ],
+          "correctIndex": 0,
+          "explanation": "Aplicar agua sobre un fuego generado por un equipo eléctrico es una excepción peligrosa; las otras son medidas correctas: identificar clase de fuego, evacuar y cortar alimentación si procede.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "¿Cuál es la consecuencia más habitual al reproducir contenido HDR en un display SDR sin aplicar mapping o conversión adecuada?",
+          "options": [
+            "El contenido HDR se muestra con negros más profundos y detalle extra en sombras.",
+            "Las altas luces exceden la capacidad de reproducción SDR y se recortan o aparecen sobreexpuestas.",
+            "La diferencia de gama cromática se corrige automáticamente por el display sin pérdida.",
+            "La conversión aumenta el rango dinámico efectivo en el display SDR."
+          ],
+          "correctIndex": 1,
+          "explanation": "Sin tone‑mapping las altas luces HDR exceden el rango SDR y se recortan o saturan; los demás enunciados describen efectos incorrectos sobre la compatibilidad de visualización.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_matchframe",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "¿Cuál es una limitación habitual del comando Match Frame al localizar la fuente original de un fotograma en un proyecto de edición?",
+          "options": [
+            "No funciona cuando el clip está offline en el proyecto aunque el archivo exista in situ con el mismo nombre.",
+            "Falla si el material original ha sido transcodificado o consolidado con un identificador distinto al original.",
+            "No encuentra la fuente si el timeline contiene efectos de corrección de color aplicados.",
+            "Busca únicamente por nombre de archivo y no utiliza timecode como referencia."
+          ],
+          "correctIndex": 1,
+          "explanation": "Match Frame suele basarse en metadatos de origen (timecode/ID); si el material fue transcodificado o consolidado cambiando identificadores, la localización puede fallar. Los demás enunciados son imprecisos: Match Frame sí puede usar timecode y puede verse afectado por offline, pero la causa decisiva es la alteración de identificadores.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Si la tensión aplicada V se mantiene y la resistencia R se reduce a la mitad, ¿cómo varían la corriente I y la potencia P disipada?",
+          "options": [
+            "La corriente I no cambia y la potencia P se reduce un 25%.",
+            "La corriente I se reduce a la mitad y la potencia P se mantiene.",
+            "La corriente I se duplica y la potencia P se reduce a la mitad.",
+            "La corriente I se duplica y la potencia P se cuadruplica."
+          ],
+          "correctIndex": 3,
+          "explanation": "Con R/2, I = V/R aumenta al doble y P = V·I = V²/R aumenta por cuatro. Las otras opciones contradicen la relación básica P = V²/R = I²·R = V·I.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Qué nivel RAID proporciona tolerancia a la pérdida simultánea de dos discos y permite reconstrucción tras esos fallos:",
+          "options": [
+            "RAID 6 (doble paridad).",
+            "RAID 5 (paridad simple).",
+            "RAID 1 (mirroring simple).",
+            "RAID 0 (striping sin redundancia)."
+          ],
+          "correctIndex": 0,
+          "explanation": "RAID 6 incorpora doble paridad y tolera la pérdida de dos discos simultáneamente; RAID 5 solo tolera un fallo, RAID 1 tolera uno por conjunto espejo y RAID 0 no ofrece tolerancia.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "101",
       "title": "Examen 101",
