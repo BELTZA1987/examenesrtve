@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-08",
+  "updatedAt": "2026-11-09",
   "exams": [
+    {
+      "id": "103",
+      "title": "Examen 103",
+      "date": "2026-11-09",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según la Ley 13/2022, ¿cuál de las siguientes obligaciones de accesibilidad corresponde a un prestador de servicios audiovisuales lineales y bajo demanda?",
+          "options": [
+            "Incorporar subtitulado, audiodescripción y lengua de signos en la totalidad de emisiones sin excepciones.",
+            "Excluir obligaciones de accesibilidad para emisiones de producción externa cuando se trate de contenidos de socios privados.",
+            "Ofrecer únicamente opciones de accesibilidad bajo demanda mediante descargas auxiliares separadas del propio reproductor.",
+            "Adoptar medidas progresivas para facilitar subtitulado, audiodescripción o lengua de signos en un porcentaje determinado de contenidos, con especial atención a la programación de interés general."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley exige medidas progresivas y prioriza contenidos de interés general; no impone la obligación absoluta inmediata sobre toda la parrilla (opción 0), ni limita la accesibilidad solo a descargas (2) ni exime contenidos por procedencia (3). La diferencia decisiva es la obligación gradual y prioritaria, no la cobertura total inmediata.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "basic_red_ip",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En una estación de edición: IP 192.168.10.45, máscara 255.255.255.128 y puerta de enlace 192.168.10.1. No hay conectividad con hosts del rango 192.168.10.128–192.168.10.200; en cambio los pings a 192.168.10.1 responden correctamente. Diagnóstico más probable:",
+          "options": [
+            "La máscara /25 (255.255.255.128) sitúa la estación en 192.168.10.0/25; los hosts 192.168.10.128–255 quedan en otra subred, por eso no hay conectividad directa con ese rango.",
+            "La puerta de enlace está configurada en una subred distinta a la estación, por eso no enruta tráfico fuera de la subred local.",
+            "Conflicto de dirección IP duplicada en la red que provoca pérdida de conectividad selectiva con algunos hosts.",
+            "Fallo físico o deshabilitación de la interfaz de red (cable suelto o NIC deshabilitada) que impide cualquier comunicación."
+          ],
+          "correctIndex": 0,
+          "explanation": "La máscara 255.255.255.128 (/25) divide 192.168.10.0 en dos subredes: 192.168.10.0–127 y 192.168.10.128–255. Con la /25 la estación queda en la primera mitad y los hosts 192.168.10.128–200 en la segunda, por eso no hay conectividad directa hacia ese rango; el hecho de que 192.168.10.1 responda confirma que la puerta de enlace está en la misma subred de la estación, por lo que no es el fallo. El distractor más próximo (puerta de enlace en otra subred) sería incompatible con la respuesta positiva de ping al gateway; un conflicto de IP produce síntomas de conectividad intermitente y ARP conflicts, y un fallo físico dejaría sin respuesta incluso a la puerta de enlace.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_metadatos",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Función operativa principal de los metadatos técnicos y descriptivos en un sistema MAM para intercambio entre departamentos:",
+          "options": [
+            "Sustituir los ficheros de esencia como referencia única cuando el contenedor cambia.",
+            "Comprimir la esencia para reducir el ancho de banda requerido al transferir activos.",
+            "Permitir catalogación, búsqueda y facilitar reconformado y transferencia entre aplicaciones mediante campos estándar y mapeos compatibles.",
+            "Garantizar la integridad de los archivos sustituyendo la necesidad de checksums."
+          ],
+          "correctIndex": 2,
+          "explanation": "Los metadatos sirven para catalogación, búsqueda e intercambio mediante campos y mapeos; no sustituyen la esencia (0), no realizan compresión (2) ni reemplazan checksums para integridad (3). La diferencia clave es su papel descriptivo/operativo, no de transporte o verificación de integridad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Entre las siguientes afirmaciones, ¿cuál describe con mayor precisión los elementos que caracterizan un desplazamiento habitual domicilio–trabajo susceptible de calificarse como accidente in itinere?",
+          "options": [
+            "Cualquier trayecto realizado en vehículo facilitado por la empresa entre el domicilio y el puesto de trabajo, aunque incluya paradas para gestiones personales.",
+            "Origen en el domicilio o lugar de pernocta, destino en el centro de trabajo habitual, coincidencia temporal con el inicio/fin de la jornada y recorrido razonable y directo sin desvíos personales significativos.",
+            "Desplazamiento entre dos centros de trabajo distintos autorizado por la empresa durante la jornada; aunque la salida no haya sido desde el domicilio, se mantiene la consideración de in itinere.",
+            "Trayecto que incluye, de forma recurrente, desvíos voluntarios para realizar compras o actividades personales siempre que el regreso al puesto se realice en el mismo día laboral."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es la correcta porque agrupa los elementos relevantes: origen en el domicilio o lugar de pernocta, destino en el centro de trabajo habitual, coincidencia temporal con el inicio o fin de la jornada y un recorrido razonable y directo sin desvíos personales que rompan la continuidad del itinerario. El distractor más próximo (opción 2) confunde la presencia de un medio de transporte empresarial con un elemento definitorio: que la empresa facilite el vehículo puede influir en la calificación, pero no sustituye los requisitos esenciales (origen/destino habituales, temporalidad y ausencia de desvíos personales). Las otras opciones describen situaciones (desplazamientos entre centros de trabajo o detenciones voluntarias) que alteran la configuración típica del itinerario y pueden impedir la calificación como accidente in itinere.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para dimensionar un servidor de vídeo que debe atender 120 reproducciones simultáneas de streams de 6 Mbps cada una con un margen operativo del 25%, la característica más determinante a verificar es:",
+          "options": [
+            "Capacidad total de almacenamiento bruto disponible en el servidor.",
+            "Número de entradas de I/O simultáneas soportadas por el subsistema y el ancho de banda de red agregado disponible.",
+            "Tipo de formato de contenedor (OP‑Atom vs OP1a) empleado en cada archivo.",
+            "Latencia de la base de datos de metadatos al consultar títulos de los activos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La concurrencia depende del ancho de banda agregado y las I/O simultáneas del subsistema; almacenamiento bruto (0) o el contenedor (2) y latencia de metadatos (3) son secundarios. La diferencia decisiva es la capacidad de servir tantos flujos simultáneos en red y disco.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Diferencia operativa esencial entre RGB y YCbCr en procesos de edición y transmisión:",
+          "options": [
+            "RGB representa componentes primarias del color (R,G,B) útiles en edición y composición; YCbCr separa luminancia (Y) de componentes de diferencia de color (Cb, Cr) optimizando compresión y compatibilidad con televisores.",
+            "RGB codifica luminancia y crominancia por separado; YCbCr mantiene canales independientes por color primario.",
+            "YCbCr solo se usa en cámaras y nunca es apropiado para etalonaje; RGB es exclusivo de postproducción.",
+            "Ambos modelos son idénticos en almacenamiento y no afectan a submuestreo ni profundidad de bit."
+          ],
+          "correctIndex": 0,
+          "explanation": "RGB usa primarias; YCbCr separa luminancia y crominancia para compresión y transmisión. La opción 0 invierte conceptos, 2 es falsa (YCbCr sí sirve en etalonaje con cuidado), 3 es incorrecta respecto a submuestreo y bit depth.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Cuál de estas organizaciones de tareas reduce de forma más eficaz la fatiga visual y postural en un puesto con pantallas:",
+          "options": [
+            "Alternar tareas de lectura de guion o metadatos con periodos de corrección de color y pausas activas cada 50–60 minutos, y variar la distancia focal del trabajo.",
+            "Concentrar operaciones de selección intensiva de planos en sesiones largas seguidas para aprovechar el ajuste visual sostenido.",
+            "Mantener pantalla y brillo constantes y sólo cambiar la postura al finalizar la jornada.",
+            "Evitar pausas intermedias y dedicar tiempo a ejercicios de estiramiento fuera del puesto al final del día."
+          ],
+          "correctIndex": 0,
+          "explanation": "Alternar tareas y programar pausas activas cada hora reduce fatiga visual y postural; las otras opciones prolongan tensión o posponen medidas, por lo que son menos eficaces. La diferencia clave es la alternancia y pausas regulares.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Respecto a la reforma introducida por la Ley 5/2017, cuál de las siguientes afirmaciones describe mejor su finalidad y consecuencia en la elección de los órganos de RTVE:",
+          "options": [
+            "La reforma busca recuperar independencia y pluralismo mediante un procedimiento parlamentario para designar los órganos de la Corporación, reduciendo la intervención exclusiva del ejecutivo.",
+            "La reforma privatiza parte de RTVE y permite la elección de directivos por el Consejo de Administración empresarial.",
+            "La reforma delega la elección de los órganos exclusivamente en el poder judicial para garantizar imparcialidad.",
+            "La reforma elimina cualquier control parlamentario sobre RTVE y transfiere la gestión a una agencia técnica independiente sin supervisión."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley 5/2017 restablece elección parlamentaria para garantizar independencia y pluralismo; no privatiza ni entrega elección al poder judicial ni elimina control parlamentario. La diferencia decisiva es el procedimiento parlamentario para la designación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Durante una ingesta verificada, se comparan checksums antes y después de la copia: identificando una discrepancia en un único archivo, la interpretación operativa correcta es:",
+          "options": [
+            "Ignorar la discrepancia si la mayoría de archivos coinciden; el archivo afectado se puede usar igualmente.",
+            "Repetir la copia de ese archivo y verificar nuevamente; si persiste la discrepancia, recuperar desde la fuente original o marcar el activo como corrupto.",
+            "Modificar el checksum destino para que coincida con el origen y continuar la ingesta.",
+            "Considerar que el contenedor es incompatible y convertir el archivo sin más comprobaciones."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica correcta es reintentar la copia y verificar; si persiste, recuperar desde la fuente o marcar como corrupto. No se debe ignorar (0), ni alterar checksums (2), ni convertir sin resolver integridad (3). La diferencia es la priorización de la integridad demostrable.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_offline_online",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En un flujo offline/online, tras completar montaje en proxies se genera la lista de decisiones (EDL/AAF). Para reconformar a los originales, la relación operativa correcta es:",
+          "options": [
+            "El reconformado usa los proxies como referencia única y sustituye los originales si coinciden los nombres de archivo.",
+            "El reconformado siempre requiere volver a cortar manualmente cada plano usando los originales.",
+            "No es necesario conservar la lista de decisiones si se dispone de los originales con idéntica duración total del proyecto.",
+            "La lista de decisiones debe mapear códigos de tiempo y identificadores para localizar y sustituir segmentos proxy por la esencia original durante el conformado."
+          ],
+          "correctIndex": 3,
+          "explanation": "El reconformado se basa en la lista de decisiones que mapea timecodes e identificadores para reemplazar proxies por originales; usar proxies como referencia única (0) o re-cortar manualmente (3) es ineficiente y arriesgado; la mera coincidencia de duración (2) no garantiza relink frame‑accurate.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento correcto al usar la línea de tono de piel en el vectorscopio para evaluar tonos de piel en etalonaje:",
+          "options": [
+            "Ajustar exposición hasta que la traza de piel coincida exactamente con la línea sin considerar variaciones étnicas y contexto, y aplicar recorte si es necesario.",
+            "Forzar la coincidencia de la traza con la línea aumentando la saturación selectiva de canal rojo en todas las tomas.",
+            "Ignorar la línea de piel y basar el ajuste exclusivamente en la gráfica de waveform para proteger luminancia.",
+            "Utilizar la línea como referencia orientativa, verificar en varias escenas y tonos de piel diferentes, y ajustar balance y saturación con criterio contextual evitando desplazar todas las pieles a un único punto."
+          ],
+          "correctIndex": 3,
+          "explanation": "La línea de piel es una guía; se debe usar con criterio, comprobando diversas escenas y respetando variaciones étnicas y contextuales. Forzar coincidencia absoluta (0,3) o ignorarla (2) son acciones incorrectas. La diferencia clave es uso orientativo y contextual.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Indique la secuencia operativa correcta para distinguir y aplicar ajustes de corrección primaria y secundaria en una sala de etalonaje:",
+          "options": [
+            "Aplicar primero correcciones secundarias puntuales sobre piel y objetos, después ajustar contraste y balance global para no afectar selecciones.",
+            "Realizar primero la normalización y balance primario (luminancia, punto negro/blanco, balance de blancos), luego aplicar correcciones secundarias selectivas (aislar rangos de color o zonas) para matizar sin romper la neutralidad general.",
+            "Evitar correcciones primarias y trabajar exclusivamente con curvas y máscaras secundarias para preservar la intención original de la cámara.",
+            "Aplicar primero LUT creativa, luego corregir globalmente solo si el resultado lo requiere, y finalmente ajustar corrección secundaria."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica estándar es normalizar y balancear globalmente (primarias) antes de aplicar correcciones locales (secundarias). Hacerlo al revés (0) o prescindir de primarias (2) puede producir selecciones erróneas; aplicar LUT creativa antes de normalizar (3) complica matching.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Al seleccionar un códec intermedio para postproducción multicámara y etalonaje con reconformado frame‑accurate, ¿qué afirmación sobre ProRes y DNxHR es la más adecuada?",
+          "options": [
+            "ProRes y DNxHR son equivalentes en perfiles y compatibilidad; elegir uno es indiferente para todas las plataformas NLE.",
+            "DNxHR no soporta 4:2:2 ni 10‑bit, por lo que no es recomendable para etalonaje; solo ProRes es válido.",
+            "Ambos son adecuados como códecs intermedios: ofrecer perfiles con alta calidad y soporte de 10‑bit; la elección depende de compatibilidad del NLE, plataforma y perfiles disponibles (por ejemplo, DNxHR en sistemas Avid y ProRes en entornos Apple).",
+            "ProRes impide reconformado frame‑accurate y debería evitarse en flujos que requieran conformado."
+          ],
+          "correctIndex": 2,
+          "explanation": "Ambos códecs son adecuados intermedios y la elección depende de compatibilidad y perfiles; no son idénticos (0), DNxHR sí soporta 10‑bit/4:2:2 (2 es falso), y ProRes no impide reconformado (3). La diferencia clave es la compatibilidad de la plataforma y perfil.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Condición que limita la fiabilidad de sincronización multicámara basada exclusivamente en la forma de onda de audio:",
+          "options": [
+            "Todas las cámaras deben usar exactamente el mismo preset de color para que la forma de onda sea usable.",
+            "La presencia de ruido de fondo, ganancias diferentes, o líneas de tiempo con desincronización entre canales reduce significativamente la fiabilidad del alineado por forma de onda.",
+            "La forma de onda es infalible siempre que el codec de audio sea PCM.",
+            "La forma de onda sólo falla cuando se usan micrófonos diferentes en cada cámara."
+          ],
+          "correctIndex": 1,
+          "explanation": "Ruido, niveles y desincronización afectan la correlación entre formas de onda y reducen fiabilidad. Igual preset de color (0) no influye en audio; no es infalible aunque sea PCM (2), y usar micrófonos distintos (3) no es la única causa de fallo. La diferencia es la calidad y consistencia de la señal audio.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Distinción operativa entre libertad de expresión y derecho a la información según la Constitución, en su aplicación a contenidos audiovisuales:",
+          "options": [
+            "La libertad de expresión protege exclusivamente la difusión de datos verificados; el derecho a la información protege opiniones personales.",
+            "La Constitución dedica el derecho a la información sólo a los periodistas profesionales y excluye a los medios públicos.",
+            "Ambos términos son sinónimos y no establecen límites operativos diferentes en emisión audiovisual.",
+            "La libertad de expresión abarca manifestación de ideas y opiniones; el derecho a la información protege al público para recibir información veraz y plural, ambos con límites constitucionales para garantizar derechos ajenos y el interés público."
+          ],
+          "correctIndex": 3,
+          "explanation": "Libertad de expresión protege manifestaciones; derecho a la información protege recibir información veraz y plural. No son sinónimos (2), ni exclusivos a periodistas (3), ni invierten funciones (0). La diferencia decisiva es alcance y destinatario: emisión de ideas vs acceso público a información.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Diferencie las operaciones: capture, import, link e ingesta en un flujo de edición:",
+          "options": [
+            "Capture: copiar frame‑accurate desde fuente por interfaz; Import: traer fichero existente al proyecto; Link: referenciar archivo sin duplicarlo; Ingesta: proceso general que puede incluir verificación y generación de proxies.",
+            "Capture e import son sinónimos; link siempre crea una copia local; ingesta solo renombra archivos.",
+            "Link siempre convierte el archivo a otro códec; capture solo funciona con cintas físicas; import no verifica integridad.",
+            "Ingesta es exclusiva de EVS y no aplica en NLEs; capture solo crea proxies."
+          ],
+          "correctIndex": 0,
+          "explanation": "Definiciones estándar: capture=transferencia desde fuente; import=traer fichero existente; link=referenciar sin copiar; ingesta=proceso amplio con verificación/proxies. Las otras opciones mezclan o invalidan términos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_ritmo",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Compatibilidad entre ritmo interno y externo del montaje: cuál de estas afirmaciones describe mejor su relación operativa al ajustar duración de planos y estructura de secuencia para un target determinado:",
+          "options": [
+            "Ritmo interno (movimiento y duración del plano) y ritmo externo (duración relativa entre planos) son independientes; cambiar uno no afecta percepción del otro.",
+            "El ritmo interno se aplica únicamente en montaje musical; en ficción solo importa el ritmo externo.",
+            "Solo el ritmo externo determina la percepción temporal del espectador; el interno es irrelevante para la adecuación al público.",
+            "Ritmo interno y externo deben combinarse de forma coherente: reducir la duración de planos (ritmo externo) sin respetar el movimiento y los acentos internos (ritmo interno) puede producir cortes abruptos; la adaptación al target exige coherencia entre ambos niveles."
+          ],
+          "correctIndex": 3,
+          "explanation": "Ambos ritmos interactúan: cambios externos sin respetar acentos internos generan cortes abruptos. No son independientes (0), ni uno es irrelevante (2,3). La diferencia crucial es la coherencia entre movimiento interno y estructura de planos según el target.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Respecto a LTO con LTFS y archivo a largo plazo, indique la limitación operativa que constituye una excepción (es decir, NO es una limitación habitual):",
+          "options": [
+            "Dependencia del hardware y controladoras específicas al restaurar cintas antiguas.",
+            "Necesidad de catalogación y verificación periódica para asegurar recuperabilidad.",
+            "Acceso aleatorio inmediato comparable a disco magnético.",
+            "Tasa de transferencia más baja que discos y posible latencia en restauración."
+          ],
+          "correctIndex": 2,
+          "explanation": "LTO/LTFS no ofrecen acceso aleatorio inmediato como disco; por tanto esa afirmación NO es una limitación (es falsa como limitación), las otras son limitaciones reales: catalogación y verificación (1), dependencia hardware (2), menor tasa/latencia (3). La diferencia es que el acceso aleatorio inmediato no aplica a LTO.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "measure_true_peak",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Respecto a la medición 'True Peak' frente a 'Sample Peak', señale la afirmación que constituye una excepción (no describe su ventaja operativa):",
+          "options": [
+            "True Peak detecta picos inter‑muestra que pueden superar 0 dBFS tras conversión D/A y procesamiento, por lo que es relevante en entregas; Sample Peak solo mide muestras discretas.",
+            "Medir True Peak permite prevenir clipping en la reproducción analógica o en procesos de conversión, siendo indispensable en entregas prestablecidas.",
+            "Sample Peak siempre es suficiente para controlar máximos en todas las cadenas de emisión modernas sin necesidad de True Peak.",
+            "True Peak requiere algoritmos de interpolación para estimar valores entre muestras."
+          ],
+          "correctIndex": 2,
+          "explanation": "Decir que Sample Peak siempre es suficiente es la excepción falsa: en muchas cadenas True Peak es necesario para prevenir inter‑muestra clipping. Las otras opciones describen ventajas y características reales de True Peak.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_target",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Para adaptar el estilo de edición de un magazine a un target juvenil, la medida editorial y técnica más apropiada es:",
+          "options": [
+            "Aumentar la duración media de planos y reducir la frecuencia de cortes para favorecer atención prolongada.",
+            "Eliminar recursos gráficos y sonoros para no distraer al público joven.",
+            "Incrementar la densidad de cortes, reducir la duración media de planos y utilizar recursos gráficos y ritmos cercanos a formatos digitales, cuidando legibilidad y continuidad.",
+            "Mantener ritmo y recursos idénticos a la versión para público general; la audiencia juvenil se adapta a cualquier formato."
+          ],
+          "correctIndex": 2,
+          "explanation": "Target juvenil suele responder a mayor densidad de cortes y recursos gráficos; mantener o aumentar duración media (0) o eliminar recursos (2) serían contraproducentes; la opción 3 ignora adaptación al público. La diferencia decisiva es ajustar ritmo y recursos sin sacrificar continuidad.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "102",
       "title": "Examen 102",
