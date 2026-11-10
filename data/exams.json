@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09",
+  "updatedAt": "2026-11-10",
   "exams": [
+    {
+      "id": "104",
+      "title": "Examen 104",
+      "date": "2026-11-10",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Según el III Convenio Colectivo de RTVE, la regulación de la turnicidad persigue fundamentalmente:",
+          "options": [
+            "Imponer que todo el personal tenga jornada diaria fija sin rotaciones.",
+            "Garantizar la continuidad del servicio mediante la planificación rotatoria de turnos y su compensación.",
+            "Eliminar descansos semanales para optimizar la producción.",
+            "Asignar nocturnidad de manera indistinta a todo el personal sin compensación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La turnicidad en un convenio colectivo organiza la rotación de turnos para asegurar continuidad operativa y establece compensaciones; las otras opciones contradicen la finalidad protectora y compensatoria propia de la regulación laboral.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_intelectual",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Un plano de una mujer mirando fijamente a un cielo gris seguido de un plano de una fábrica humeante: efecto editorial más coherente por montaje intelectual:",
+          "options": [
+            "Marcar un raccord de mirada entre personajes.",
+            "Garantizar continuidad temporal estricta entre ambas acciones.",
+            "Establecer una relación simbólica o asociativa que sugiera causa o metáfora.",
+            "Resolver un salto temporal mediante un fundido encadenado."
+          ],
+          "correctIndex": 2,
+          "explanation": "El montaje intelectual crea significado por yuxtaposición; unir la mirada al plano de la fábrica genera una lectura simbólica. Los distractores describen continuidad temporal, raccord o transición, que son recursos distintos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Según la política 3‑2‑1, cuál de las siguientes estrategias cumple correctamente sus principios de copias independientes, soportes y ubicación:",
+          "options": [
+            "Una matriz RAID en producción con duplicación interna y respaldo en la misma sala.",
+            "Tres copias físicas del máster en el mismo servidor, sin copia externa.",
+            "Dos copias en la misma cabina y una copia adicional en la misma red local.",
+            "Máster en disco principal, copia en disco local distinto y copia adicional fuera del emplazamiento en otro soporte."
+          ],
+          "correctIndex": 3,
+          "explanation": "3‑2‑1 exige al menos tres copias, dos tipos de soporte y una copia fuera de sitio. La opción correcta cumple independencia de soportes y ubicación; los distractores fallan por ubicaciones coincidentes o depender solo de RAID.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para sincronizar en un mismo sistema fuentes SD y HD con un sincronizador central, la acción operativa adecuada es:",
+          "options": [
+            "Configurar las fuentes SD al black‑burst y las HD al tri‑level en el sincronizador o mediante conversión adecuada.",
+            "Forzar todas las fuentes a black‑burst, ya que es universal.",
+            "Usar exclusivamente tri‑level para todas las fuentes sin conversión.",
+            "Desconectar la referencia y usar sólo timecode para sincronizar."
+          ],
+          "correctIndex": 0,
+          "explanation": "Black‑burst y tri‑level corresponden a referencias tradicionales SD y HD; la práctica adecuada es mantener cada tipo en su referencia o convertirlas antes de mezclar. Forzar una sola referencia sin conversión puede causar errores de fase o timing.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Medida preventiva prioritaria para reducir trastornos musculoesqueléticos en usuarios intensivos de tableta gráfica, teclado y ratón:",
+          "options": [
+            "Proporcionar ajuste ergonómico del puesto (silla, altura, reposamuñecas) y programar pausas y ejercicios de microdescanso.",
+            "Obligar a usar guantes ergonómicos que inmovilicen la muñeca.",
+            "Reducir la jornada a 1 hora de trabajo seguido por 7 horas de inactividad.",
+            "Sustituir la tableta por ratón estándar sin evaluar la tarea."
+          ],
+          "correctIndex": 0,
+          "explanation": "La prevención eficaz combina ajuste ergonómico y pausas activas; las otras opciones son irreales o contraproducentes (inmovilización, jornadas inviables o sustituciones sin análisis ergonómico).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En edición lineal A/B‑Roll, la función principal de la prelectura (preview) es:",
+          "options": [
+            "Almacenar permanentemente la fuente A mientras B alimenta el programa.",
+            "Permitir comprobar y ajustar la mezcla/transición en el mezclador antes de pasar a programa.",
+            "Generar automáticamente los metadatos de proyecto.",
+            "Sustituir la necesidad de controles de audio."
+          ],
+          "correctIndex": 1,
+          "explanation": "La prelectura permite verificar la transición y la clave en el mezclador antes de llevarla a programa; las demás opciones no describen la función operativa de preview en edición lineal.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Indique cuál de estas obligaciones del trabajador contribuye directamente a la eficacia del sistema de prevención:",
+          "options": [
+            "Elaborar la evaluación de riesgos de su puesto de forma independiente.",
+            "Participar en la formación preventiva, aplicar las instrucciones recibidas y utilizar correctamente los medios facilitados.",
+            "Negarse a colaborar con el servicio de prevención sin justificación.",
+            "Cambiar las medidas preventivas adoptadas por iniciativa propia."
+          ],
+          "correctIndex": 1,
+          "explanation": "La ley exige cooperación, asistencia a la formación e uso correcto de los medios; los distractores implican atribuciones indebidas o conducta contraria a la prevención.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Según la Ley 17/2006, ¿cuál de las siguientes afirmaciones describe mejor la naturaleza y finalidad de la Corporación RTVE?:",
+          "options": [
+            "Es una empresa privada dedicada exclusivamente a producción comercial.",
+            "Es una entidad pública encargada de la prestación de servicios de radio y televisión de titularidad estatal con fines de servicio público.",
+            "Es un órgano regulador independiente del sector audiovisual.",
+            "Es una asociación sin ánimo de lucro gestionada por particulares."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 17/2006 configura RTVE como entidad pública responsable de servicios audiovisuales de titularidad estatal y servicio público; las demás opciones describen figuras jurídicas distintas y no aplicables.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Mezclar material rodado a 24 fps con secuencias a 25 fps sin conversión apropiada normalmente produce:",
+          "options": [
+            "Cambio súbito del espacio cromático.",
+            "Pérdida de información de color permanente.",
+            "Desincronización instantánea del audio en todos los planos.",
+            "Irregularidad en el movimiento (judder/telecine) y discrepancias de cadencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "La mezcla de cadencias distintas sin conversión induce artefactos de movimiento y judder; los otros efectos (color, audio) no son la consecuencia directa típica de mezclar cadencias.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para preparar un SSD de rodaje antes de volver a utilizarlo tras descarga verificada, la práctica técnica más adecuada es:",
+          "options": [
+            "Formatearlo rápidamente en cámara y reutilizar sin más comprobaciones.",
+            "Ejecutar un borrado seguro o comando de limpieza del fabricante, comprobar la salud S.M.A.R.T. y verificar espacio y desgaste antes de su reutilización.",
+            "Eliminar ficheros manualmente desde el explorador del sistema y volver a usarlo.",
+            "Confiar en la operación RAID para proteger el SSD y no realizar pruebas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica recomendada incluye borrado seguro y comprobación de salud del SSD; formateos rápidos o borrados superficiales no garantizan integridad y depender solo de RAID no sustituye verificación del soporte.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_intra_longgop",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a intraframe vs Long‑GOP, indique la afirmación que constituye una excepción (NO es correcta):",
+          "options": [
+            "Long‑GOP reduce la carga de decodificación en comparación con intraframe.",
+            "Long‑GOP ofrece mayor eficiencia de compresión para secuencias con redundancia temporal.",
+            "Los códecs intraframe facilitan el acceso aleatorio y edición cuadro a cuadro sin dependencias de otros fotogramas.",
+            "Long‑GOP suele ser menos robusto ante corrupción de paquetes que un intraframe."
+          ],
+          "correctIndex": 0,
+          "explanation": "Long‑GOP aumenta la complejidad de decodificación porque requiere reconstruir fotogramas a partir de referencias; por tanto afirmar que reduce la carga es incorrecto. Las otras afirmaciones describen ventajas y desventajas reales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_evs_loop",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En un servidor EVS configurado en grabación en bucle (loop) se marca una acción puntual para recuperación. Procedimiento correcto para asegurar recuperación posterior y conservación:",
+          "options": [
+            "Reiniciar el servidor para forzar la persistencia del marcaje en el disco.",
+            "Esperar a que el bucle sobrescriba el segmento y confiar en el marcaje para reconstruirlo automáticamente.",
+            "Localizar la acción en el log por su ID, señalar in/out del rango en el buffer y copiar/exportar inmediatamente el clip marcado a almacenamiento permanente.",
+            "Eliminar otros clips para liberar espacio y conservar el marcado."
+          ],
+          "correctIndex": 2,
+          "explanation": "La operación fiable es extraer y copiar el fragmento marcado a almacenamiento permanente tras localizarlo por ID; confiar en el marcador sin copia puede perder el segmento cuando el loop sobrescriba.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Si la documentación y el controlador de una matriz de vídeo no son fiables, la forma más directa de verificar un crosspoint concreto es:",
+          "options": [
+            "Apagar y encender la matriz para que reinicie sus crosspoints.",
+            "Confiar únicamente en la interfaz web del controlador y su estado reportado.",
+            "Inyectar una señal de prueba conocida en la fuente sospechosa y comprobar físicamente la salida en el destino mientras se audita el estado del punto de cruce en el panel local.",
+            "Sustituir la tarjeta de interfaz sin más comprobaciones."
+          ],
+          "correctIndex": 2,
+          "explanation": "La verificación práctica requiere insertar una señal de test y observar el destino físico; confiar solo en el controlador o reinicios no verifica el enrutamiento real ni detecta discrepancias hardware/documentación.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "digital_lut_log",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un flujo logarítmico, ¿qué distingue una LUT de visualización de una LUT creativa?:",
+          "options": [
+            "La LUT creativa debe usarse siempre antes que la de visualización para evitar clipping.",
+            "La LUT de visualización añade correcciones creativas; la LUT creativa sólo normaliza la señal para monitor.",
+            "Ambas son idénticas en función y uso.",
+            "La LUT de visualización transforma la señal log a espacio display para monitorizar, la LUT creativa altera la imagen para un ‘look’ y requiere aplicación deliberada en etalonaje."
+          ],
+          "correctIndex": 3,
+          "explanation": "La LUT de visualización convierte log a display‑referred para monitorizado sin alterar el flujo de trabajo creativo; la LUT creativa aplica un look. Los distractores mezclan funciones o imponen un orden incorrecto.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Según la Ley 31/1995, ¿cuál de las siguientes obligaciones recae de forma directa sobre el empleador en materia de acción preventiva?:",
+          "options": [
+            "Limitar la prevención a facilitar folletos informativos sin formación práctica.",
+            "Garantizar por contrato que ningún trabajador sufrirá lesión irreparable.",
+            "Dejar la evaluación de riesgos exclusivamente a los trabajadores sin supervisión.",
+            "Evaluar los riesgos laborales del puesto y planificar medidas de prevención proporcionadas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 31/1995 obliga al empleador a evaluar riesgos y adoptar medidas preventivas; las otras opciones son irreales o incumplen la exigencia de evaluación y planificación de medidas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto al principio operativo del audio balanceado y rechazo de modo común:",
+          "options": [
+            "El cable balanceado usa un par diferencial para que la señal de ruido común se cancele en la entrada diferencial del receptor.",
+            "Una entrada diferencial o transformador permite rechazar interferencias comunes en largos recorridos.",
+            "El blindaje del cable balanceado sustituye completamente la necesidad de una entrada diferencial para rechazo de ruido.",
+            "La conexión balanceada reduce la sensibilidad a interferencias inducidas en trayectos largos."
+          ],
+          "correctIndex": 2,
+          "explanation": "El blindaje ayuda pero no sustituye la acción diferencial de la entrada; la cancelación eficaz del ruido común requiere la disposición diferencial. Las otras afirmaciones describen propiedades reales del balanceado.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un entorno con bins compartidos entre varios editores, la medida técnica que previene sobrescrituras y gestiona concurrencia es:",
+          "options": [
+            "Implementar bloqueo/checkout de bins y permisos de escritura por usuario en el sistema de gestión de activos.",
+            "Confiar en la disciplina de los usuarios sin controles técnicos.",
+            "Permitir edición simultánea sin control y resolver conflictos manualmente.",
+            "Duplicar todos los bins localmente en cada estación sin sincronización."
+          ],
+          "correctIndex": 0,
+          "explanation": "El control mediante bloqueo/checkout y permisos evita sobrescrituras y conflictos; confiar sólo en disciplina humana o duplicados locales sin sincronización no ofrece garantías operativas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "language_elipsis",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la situación que ejemplifica mejor una elipsis narrativa aplicada para comprimir tiempo manteniendo comprensión:",
+          "options": [
+            "Insertar textos explicativos pero mantener todos los eventos cronológicos completos.",
+            "Mostrar un plano continuo de horas transcurridas sin cortes para detallar cada acción.",
+            "Usar encadenados largos para mostrar todo el proceso en tiempo real.",
+            "Montaje de varias acciones sucesivas (mañana, tarde, noche) mediante cortes rápidos a actividades relevantes sin mostrar los intervalos intermedios."
+          ],
+          "correctIndex": 3,
+          "explanation": "La elipsis elimina porciones de tiempo irrelevantes y muestra sólo fragmentos significativos para mantener la comprensión; los otros métodos preservan la totalidad temporal o añaden texto sin comprimir narrativamente.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_consolidate_transcode",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Se requiere preparar un conjunto de clips usados en timeline para llevar a otra estación manteniendo el códec original y solo copiar los tramos necesarios con handles. La operación apropiada es:",
+          "options": [
+            "Exportar un nuevo códec intermedio cambiando handles.",
+            "Transcode (recodificar todo el material al códec de destino).",
+            "Consolidate (copiar segmentos usados con handles sin recodificar).",
+            "Renderizar la secuencia final como master en el mismo códec."
+          ],
+          "correctIndex": 2,
+          "explanation": "Consolidate copia los segmentos seleccionados incluyendo handles sin cambiar el códec; transcode recodifica, exportar a otro códec implica recodificación, y renderizar produce un máster no apto para reconformado en la otra estación.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En una estación de edición, los efectos en tiempo real basados en shaders muestran caída de frames; monitor de recursos indica CPU 18%, GPU 98% y uso de RAM moderado. ¿Cuál es el cuello de botella más probable?",
+          "options": [
+            "GPU.",
+            "CPU.",
+            "RAM.",
+            "Disco."
+          ],
+          "correctIndex": 0,
+          "explanation": "La alta utilización de la GPU frente a CPU baja indica que la GPU es el recurso limitado para efectos con shaders; las otras opciones no coinciden con las métricas observadas.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "103",
       "title": "Examen 103",
