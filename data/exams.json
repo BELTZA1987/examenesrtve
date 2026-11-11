@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10",
+  "updatedAt": "2026-11-11",
   "exams": [
+    {
+      "id": "105",
+      "title": "Examen 105",
+      "date": "2026-11-11",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En el contexto de la comunicación audiovisual, cuál de estas consecuencias deriva directamente del principio constitucional de igualdad y la prohibición de discriminación:",
+          "options": [
+            "Prohibición de emitir cualquier contenido que contraste con las opiniones mayoritarias de la audiencia.",
+            "Facultad del prestador para restringir el acceso informativo a grupos minoritarios por motivos operativos.",
+            "Prioridad editorial de contenidos que favorezcan la competitividad comercial de la cadena.",
+            "Obligación de evitar representaciones y prácticas que excluyan o estigmaticen colectivos protegidos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La prohibición constitucional exige evitar exclusión o estigmatización de colectivos protegidos; los otros enunciados no emanan del principio: la aceptación mayoritaria, la competitividad comercial o restricciones operativas no justifican discriminación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Al preparar la transferencia desde un servidor EVS a una estación de edición durante playout activo, indique la opción que constituye una excepción (no recomendada) entre medidas técnicas habituales:",
+          "options": [
+            "Solicitar al sistema EVS una copia parcial con handles y un códec intermedio compatible para edición inmediata.",
+            "Programar la operación en modo 'background' que mantenga la referencia de clip en el playout y permita edición en paralelo.",
+            "Forzar la reescritura del clip original en disco para convertirlo al códec de edición y mejorar rendimiento local.",
+            "Reservar y bloquear temporalmente la referencia del clip en el servidor para impedir su eliminación mientras dura la edición."
+          ],
+          "correctIndex": 2,
+          "explanation": "Forzar la reescritura del clip original implica manipular la esencia en playout y puede interrumpir o corromper la emisión; las otras medidas (copiar con handles, background copy, reservar referencia) son prácticas que garantizan disponibilidad sin afectar playout.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Un plano corto muestra a un personaje mirando a la derecha; el plano siguiente, de otra cámara, lo muestra en plano medio mirando aparentemente hacia la izquierda. Interprete la coherencia espacial que revela esta relación:",
+          "options": [
+            "Raccord correcto si la motivación dramática es opuesta; la inversión no afecta a la fluidez narrativa.",
+            "Raccord intencionado que sugiere un desplazamiento físico contrario a la posición anterior sin afectar a la dirección de mirada.",
+            "Violación de la continuidad espacial por cambio del eje de acción que genera desconcierto en la percepción.",
+            "Indica simplemente una variación de cobertura sin impacto en la coherencia siempre que los diálogos coincidan."
+          ],
+          "correctIndex": 2,
+          "explanation": "La inversión de direcciones de mirada sin justificar rompe la continuidad espacial (regla de 180°/eje de acción) y puede confundir; las otras opciones justifican o minimizan incorrectamente el efecto sobre coherencia.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "basic_dbfs",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a una señal digital en dBFS, cuál es una consecuencia práctica de alcanzar frecuentemente el valor máximo de escala (0 dBFS) en la cadena:",
+          "options": [
+            "Se obtiene un incremento de rango dinámico que mejora la calidad sin efectos adversos.",
+            "La señal puede truncarse o recortarse, produciendo distorsión irreversible en muestras afectadas.",
+            "Significa que el nivel de referencia analógica es óptimo y no requiere ajuste posterior.",
+            "Indica únicamente un pico momentáneo sin repercusión en el proceso de emisión o master."
+          ],
+          "correctIndex": 1,
+          "explanation": "Alcanzar 0 dBFS puede provocar clipping digital y distorsión irreversible en las muestras; no aumenta rango dinámico, no garantiza referencia analógica adecuada y no siempre es inofensivo aunque sea momentáneo.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "prl_en_mision",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Durante una intervención fuera del centro habitual, cuál es la medida preventiva prioritaria para reducir riesgo en desplazamientos profesionales:",
+          "options": [
+            "Realizar una evaluación de riesgos del lugar y proporcionar instrucciones y EPIs adecuados.",
+            "Confiar en la experiencia del trabajador sin planificación previa de la tarea.",
+            "Permitir que el trabajador decida sobre herramientas y montaje al llegar al lugar sin coordinación previa.",
+            "Minimizar tiempo de planificación para acelerar la prestación del servicio."
+          ],
+          "correctIndex": 0,
+          "explanation": "En misión es esencial evaluar riesgos del lugar y dotar de instrucciones y equipos de protección; las otras opciones fomentan improvisación y aumento de riesgo.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Para proxies destinados a edición offline con limitaciones de CPU, cuál de estas especificaciones representa mejor el equilibrio entre resolución, bitrate y códec:",
+          "options": [
+            "Alta resolución 4K con códec intraframe de alto bitrate para máxima fidelidad de color.",
+            "Resolución 720p con códec ligero (por ejemplo H.264 a bitrate moderado) y perfiles que prioricen scrubbing fluido.",
+            "Resolución 480p con bitrate muy bajo y GOP largo para minimizar espacio, sacrificando precisión de edición cuadro a cuadro.",
+            "Resolución 1080p y VBR alto manteniendo códec Long‑GOP complejo sin optimización de lectura secuencial."
+          ],
+          "correctIndex": 1,
+          "explanation": "720p con códec eficiente y bitrate moderado ofrece equilibrio entre fluidez de scrubbing en CPU limitada y calidad suficiente para offline; 4K o 1080p con bitrates altos y Long‑GOP exigen más recursos; 480p puede impedir edición cuadro a cuadro precisa.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_export_qc",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Ordene la verificación técnica mínima al exportar un archivo para emisión:",
+          "options": [
+            "Exportar en el códec más comprimido disponible para ahorrar espacio; comprobar imagen solo visualmente.",
+            "Solo confirmar tamaño de archivo y nombre del fichero; la estación de emisión ajustará el resto.",
+            "Comprobar metadatos, verificar sincronía audio‑vídeo, revisar niveles y verificar campos y formato.",
+            "Enviar el archivo sin verificación y validar tras subir al servidor de emisión."
+          ],
+          "correctIndex": 2,
+          "explanation": "La verificación debe incluir metadatos, sincronía, niveles, campos y formato; confiar en la emisión o en comprobaciones parciales no garantiza la calidad requerida.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Respecto a la Ley 13/2022 sobre protección de menores, compare estas obligaciones y elija la que mejor describe una exigencia específica:",
+          "options": [
+            "Permitir acceso irrestricto a todo el material bajo la libertad editorial sin controles adicionales.",
+            "Clasificar contenidos y aplicar medidas de control de acceso para evitar exposición de menores a materiales no adecuados.",
+            "Sustituir clasificación por etiquetas informales en redes sociales sin medidas técnicas de bloqueo.",
+            "Limitar la protección solo a contenidos informativos y no a entretenimiento."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley impone clasificación y medidas de control de acceso para menores; las otras opciones son exenciones o prácticas insuficientes respecto a la normativa.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "En una cadena audiovisual, cuál es la consecuencia operativa más probable de una adaptación de impedancias incorrecta entre etapas:",
+          "options": [
+            "Mejora de la relación señal/ruido y aumento de nivel sin reflejos.",
+            "Solo provoca un leve retardo en el transporte sin afectar a la calidad de la señal.",
+            "Aislamiento total entre componentes que elimina interferencias y evita cualquier pérdida.",
+            "Reflejos de señal, pérdida de nivel, degradación de frecuencia y posible desajuste en respuesta de fase."
+          ],
+          "correctIndex": 3,
+          "explanation": "Una adaptación incorrecta produce reflexiones, pérdida de nivel y alteraciones en respuesta en frecuencia y fase; no mejora SNR ni aísla totalmente, ni se limita a un retardo.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_chromakey",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "En el diagnóstico de problemas al incrustar con chromakey, cuál de estas afirmaciones describe correctamente un orden lógico para localizar la causa:",
+          "options": [
+            "Corregir el spill primero, luego rehacer la luz del set y dejar el matte para el final sin revisarlo.",
+            "Ajustar únicamente los parámetros de matte antes de revisar iluminación o color del fondo.",
+            "Comprobar primero la iluminación y fondo, luego el balance de color del sujeto, después ajuste de matte y por último corrección de spill.",
+            "Saltar la comprobación de balance de color del sujeto si el fondo tiene color uniforme."
+          ],
+          "correctIndex": 2,
+          "explanation": "El diagnóstico empieza por condiciones físicas (iluminación/fondo), seguido del color del sujeto, luego el ajuste del matte y tratamiento de spill; proceder en otro orden puede ocultar la causa real.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Ante un conato de incendio originado por un equipo eléctrico en plató, cuál es la actuación inmediata y correcta:",
+          "options": [
+            "Desconectar la alimentación si es seguro, activar alarma, evacuar según protocolo y usar extintor apropiado para fuego eléctrico.",
+            "Intentar apagar con agua inmediatamente para enfriar el equipo y evitar propagación.",
+            "Mover el equipo sobre la marcha a una zona segura para continuar la grabación.",
+            "Esperar a que el fuego se apague por sí solo si parece contenido."
+          ],
+          "correctIndex": 0,
+          "explanation": "En incendio eléctrico hay que cortar la alimentación si es seguro, alertar, evacuar y usar extintores adecuados (CO2/Polvo); agua es peligrosa en fuegos eléctricos y mover equipos o esperar incrementa riesgos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Respecto a la elección de transición (corte, fundido, encadenado) por su función narrativa, indique la opción que constituye una excepción (no suele ser motivo válido):",
+          "options": [
+            "Elegir un fundido para indicar un paso gradual del tiempo o un recuerdo lírico.",
+            "Aplicar encadenado como recurso sistemático en escenas de acción para acelerar el ritmo sin consideración de contenido.",
+            "Usar corte duro para mantener dinamismo y continuidad temporal inmediata.",
+            "Seleccionar transiciones en función de la relación temporal que se quiere sugerir entre planos."
+          ],
+          "correctIndex": 1,
+          "explanation": "Usar encadenados sistemáticamente para acelerar ritmo sin atender a la función narrativa es una mala práctica; las otras opciones describen motivaciones narrativas válidas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Sobre MXF OP1a frente a OP‑Atom, cuál afirmación describe mejor su adecuación operativa:",
+          "options": [
+            "OP1a es obligatorio para edición y OP‑Atom solo se usa para archivo de larga duración.",
+            "OP1a crea un archivo por pista de audio y otro por vídeo; OP‑Atom siempre encapsula todo en un solo archivo por programa.",
+            "OP1a es incompatible con metadatos técnicos; OP‑Atom no permite inserción de timecode.",
+            "OP1a agrupa todas las esencias en un único archivo, adecuado para entregas finales; OP‑Atom mantiene un archivo por esencia facilitando la gestión frame‑accurate en edición."
+          ],
+          "correctIndex": 3,
+          "explanation": "OP1a empaqueta múltiples esencias en un solo contenedor ideal para entrega; OP‑Atom mantiene archivos separados por esencia, útil para edición y reconformado frame‑accurate; las otras opciones son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "En XDCAM con spanning (clip dividido entre soportes), señale la afirmación que constituye una excepción respecto a verificaciones operativas necesarias:",
+          "options": [
+            "Omitir comprobaciones si la carpeta principal y el índice están presentes, asumiendo integridad del clip.",
+            "Confirmar que el player o herramienta reconoce y concatena automáticamente los fragmentos para reproducción continua.",
+            "Verificar que el descriptor del clip contiene referencias a todos los fragmentos y su orden físico.",
+            "Comprobar checksums y metadatos de cada soporte involucrado en el spanning."
+          ],
+          "correctIndex": 0,
+          "explanation": "Omitir verificaciones por tener carpeta e índice es riesgoso; es imprescindible verificar referencias, reconocimiento por herramientas y checksums de cada fragmento; por eso esa opción es la excepción.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Ante la detección de lenguaje sexista en un guion que será emitido por RTVE, cuál es la medida operativa que mejor aplica el II Plan de Igualdad y la Guía de Igualdad:",
+          "options": [
+            "Modificar el texto para eliminar estereotipos, aplicar lenguaje no sexista y registrar las acciones en el plan de contenidos.",
+            "Mantener el texto intacto por respeto a la autoría, sin intervención editorial.",
+            "Sustituir sistemáticamente personajes femeninos por masculinos para evitar referencias sensibles.",
+            "Posponer cualquier revisión hasta recibir instrucciones individuales del departamento legal."
+          ],
+          "correctIndex": 0,
+          "explanation": "El Plan exige medidas activas: corregir lenguaje y representaciones sexistas y documentar la actuación; mantener texto sin cambios o sustituir caracteres arbitrariamente no responde a las medidas de prevención y equidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Durante una ingesta verificada, cuál es la secuencia operativa correcta:",
+          "options": [
+            "Borrar inmediatamente el soporte origen tras la copia para liberar espacio y confiar en el servidor.",
+            "Copiar ficheros, generar checksum fuente y destino, validar coincidencia, registrar resultado y conservar medios origen hasta verificación final.",
+            "Copiar y procesar sin generar registros de verificación, documentando solo en caso de error.",
+            "Transferir sin checksum y validar visualmente los primeros y últimos archivos únicamente."
+          ],
+          "correctIndex": 1,
+          "explanation": "La ingesta verificada exige copia, cálculo y comparación de checksums, validación y registro, y mantener soportes origen hasta confirmar integridad; las otras prácticas son insuficientes.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En un medidor de correlación de fase, qué lectura indica simultáneamente buena compatibilidad al sumarse a mono y una relación estéreo estable:",
+          "options": [
+            "Lectura cercana a +1 (o posición derecha del indicador), señal de correlación positiva y contenido con mínima cancelación en mono.",
+            "Lectura cercana a -1, lo que indica fase invertida y mejor compatibilidad mono.",
+            "Lectura fluctuante entre +1 y -1 constantemente, señal de imagen estéreo estable y mono sin problemas.",
+            "Lectura exactamente 0, que siempre asegura combinación perfecta a mono y máxima anchura estéreo."
+          ],
+          "correctIndex": 0,
+          "explanation": "Una lectura cercana a +1 indica alta correlación positiva y mínima cancelación al sumar a mono; -1 indica inversión de fase; fluctuación constante sugiere problemas; 0 no garantiza combinación perfecta.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Comparando AVC (H.264) y HEVC (H.265), cuál es una ventaja operativa clara de HEVC en flujos audiovisuales:",
+          "options": [
+            "Ausencia de problemas de licencias frente a AVC.",
+            "Total compatibilidad con todos los equipos antiguos sin necesidad de hardware adicional.",
+            "Menor latencia de codificación y decodificación en todos los escenarios en tiempo real.",
+            "Mayor eficiencia de compresión para igual calidad, a costa de mayor complejidad de codificación/decodificación."
+          ],
+          "correctIndex": 3,
+          "explanation": "HEVC ofrece mayor eficiencia de compresión a igual calidad pero requiere más potencia y puede tener compatibilidad limitada; no es universalmente más rápida ni libre de cuestiones de licencia.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En una interfaz SDI, cuál afirmación describe mejor el transporte de señales auxiliares (ANC) y audio embebido:",
+          "options": [
+            "ANC en SDI es incompatible con metadata y solo admite control remoto básico.",
+            "SDI solo transporta vídeo; el audio y datos auxiliares requieren cables separados AES o Ethernet.",
+            "El audio embebido reemplaza los canales de vídeo en la señal SDI y reduce resolución.",
+            "La trama SDI incorpora líneas de datos auxiliares donde se insertan audio embebido, VITC y otros datos ANC dentro del flujo serial."
+          ],
+          "correctIndex": 3,
+          "explanation": "SDI incluye espacios para datos auxiliares en línea (ANC) que alojan audio embebido y otros datos; no requiere cables adicionales ni sustituye vídeo ni limita metadata como indican los distractores.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para mitigar obsolescencia y garantizar preservación, cuál es la política operativa más adecuada:",
+          "options": [
+            "Mantener copias sin verificación y depender de restauraciones puntuales cuando se detecte un problema.",
+            "Confiar en un único almacenamiento RAID local y evitar migraciones para no alterar archivos originales.",
+            "Planificar migraciones periódicas a formatos y soportes vigentes y realizar verificaciones e integridad (checksums) tras cada migración.",
+            "Almacenar en soporte propietario de alta densidad sin documentar formato ni procedimiento de recuperación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La política de preservación eficaz combina migraciones periódicas y verificaciones de integridad; confiar en un único RAID o soportes propietarios sin verificación supone riesgo de pérdida por obsolescencia o corrupción.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "104",
       "title": "Examen 104",
