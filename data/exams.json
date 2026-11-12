@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-12",
   "exams": [
+    {
+      "id": "106",
+      "title": "Examen 106",
+      "date": "2026-11-12",
+      "level": "Muy alto",
+      "timeMinutes": 35,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según el III Convenio Colectivo de RTVE, ¿qué criterio se emplea para clasificar una ocupación dentro de los grupos profesionales?",
+          "options": [
+            "El salario histórico percibido por la persona que ocupa el puesto.",
+            "La antigüedad del trabajador en la Corporación.",
+            "La naturaleza y contenido de las funciones y responsabilidades asignadas a la ocupación.",
+            "La ubicación geográfica del centro de trabajo."
+          ],
+          "correctIndex": 2,
+          "explanation": "El Convenio clasifica ocupaciones por las funciones y responsabilidades efectivas que definen el puesto; antigüedad, salario o ubicación son circunstancias ajenas al criterio de clasificación profesional.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_music_sync",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al sincronizar un montaje con una pieza musical, ¿qué estrategia preserva mejor la continuidad sonora y el sentido de la frase musical?",
+          "options": [
+            "Cortar siempre en la mitad de un compás para generar contraste rítmico.",
+            "Cortar en un acento o en el punto final de una frase musical para respetar la métrica y los acentos.",
+            "Alinear cortes con silencios breves, aunque rompan la frase musical, para acentuar el ritmo visual.",
+            "Ignorar la estructura de frase y ajustar los cortes sólo por duración visual del plano."
+          ],
+          "correctIndex": 1,
+          "explanation": "Cortar en acentos o al cierre de frase respeta la métrica y mantiene continuidad sonora; las otras opciones rompen la frase o priorizan solo el ritmo visual en detrimento de la continuidad musical.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_color_order",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Orden de operaciones recomendado en un flujo de etalonaje:",
+          "options": [
+            "Aplicar 'look' creativo → matching → contraste → balance → normalización.",
+            "Normalización/legalidad → balance de blancos/exposición → contraste/primarias → matching entre planos → aplicar 'look' creativo.",
+            "Contrastar y añadir 'look' → normalizar → ajustar balance → matching final.",
+            "Matching entre planos → aplicar 'look' → normalización → balance y contraste."
+          ],
+          "correctIndex": 1,
+          "explanation": "El flujo correcto normaliza para legalidad, corrige balance/exposición, ajusta contraste/primarias, hace matching entre planos y finalmente aplica el 'look'; las otras secuencias ponen el look o matching antes de garantizar legalidad y balance.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_postura",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Ajustes ergonómicos esenciales en un puesto de edición para mantener postura saludable:",
+          "options": [
+            "Pantalla lo más alta posible, silla sin apoyo lumbar y antebrazos colgando para mayor libertad.",
+            "Silla elevada al máximo para estirar piernas, brazos en ángulo agudo y pantalla al mismo nivel que la cara.",
+            "Reposapiés elevado, asiento bajo y muñecas apoyadas continuamente sobre la mesa.",
+            "Altura y profundidad del asiento para apoyo lumbar, reposabrazos alineados con mesa y pies apoyados en el suelo o reposapiés."
+          ],
+          "correctIndex": 3,
+          "explanation": "La configuración correcta combina apoyo lumbar, reposabrazos alineados y pies apoyados; las otras opciones favorecen posturas forzadas o ausencia de soporte lumbar.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las consecuencias operativas del submuestreo de crominancia:",
+          "options": [
+            "El submuestreo reduce información de croma, lo que puede dificultar el keying fino y requiere más cuidado en chroma‑key.",
+            "Un mayor submuestreo habitualmente disminuye el tamaño de archivo y la carga de procesamiento en edición y transmisión.",
+            "El submuestreo no afecta a la precisión tonal en etalonaje de detalles finos de color y siempre permite igual flexibilidad que 4:4:4.",
+            "Al convertir material submuestreado a formatos sin pérdida de croma, se genera interpolación que puede introducir artefactos en bordes de alto detalle cromático."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación 3 es la excepción: el submuestreo sí limita la precisión tonal en detalles y reduce flexibilidad respecto a 4:4:4; las demás son consecuencias operativas reales.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico de compatibilidad: ¿qué diferencia fundamental explica por qué HLG suele ofrecer mayor compatibilidad con displays SDR sin conversión explícita frente a PQ?",
+          "options": [
+            "HLG está diseñado como espacio híbrido que permite reproducción razonable en pantallas SDR mediante mapeo implícito; PQ requiere transformación de master y metadatos para un mapeo perceptual consistente.",
+            "PQ descarta la luminancia alta para garantizar compatibilidad con SDR; HLG codifica niveles superiores que SDR no puede interpretar.",
+            "HLG utiliza curvas lineales que coinciden con Rec.709; PQ usa curvas logarítmicas incompatibles con cualquier SDR.",
+            "PQ incorpora metadatos que obligan a los decodificadores a reproducir siempre en HDR nativo, mientras HLG ignora metadatos."
+          ],
+          "correctIndex": 0,
+          "explanation": "HLG fue diseñado para compatibilidad broadcast con representación aceptable en pantallas SDR; PQ es una curva perceptual de referencia que suele necesitar mapeo/metadata para conversión correcta a SDR.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Comparación: ¿qué describe mejor la función del código de tiempo drop‑frame frente al non‑drop‑frame?",
+          "options": [
+            "Non‑drop corrige la numeración para coincidir con el reloj real; drop‑frame marca fotogramas extra para sincronizar.",
+            "Drop‑frame elimina fotogramas redundantes para corregir la velocidad de reproducción; non‑drop conserva todos los fotogramas.",
+            "Drop‑frame ajusta la numeración del timecode en ciertos instantes para que el código refleje el tiempo real sin eliminar fotogramas; non‑drop mantiene numeración constante y se desvía frente al tiempo real.",
+            "Ambos modos alteran la estructura de frames físicamente en la secuencia de vídeo para sincronizar con audio."
+          ],
+          "correctIndex": 2,
+          "explanation": "Drop‑frame modifica la numeración del timecode en puntos específicos para compensar la diferencia entre 29,97 fps y tiempo real sin suprimir fotogramas; las otras opciones confunden numeración con eliminación física de frames.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto al modelo de financiación establecido por la Ley 8/2009: ¿qué fuente es compatible con sus principios y restricciones?",
+          "options": [
+            "Financiación por donaciones privadas sin límites ni supervisión pública.",
+            "Financiación exclusiva mediante suscripciones privadas al servicio público sin control de publicidad.",
+            "Ingresos por publicidad con límites y reglas de comercialización, combinados con aportaciones del Estado conforme a topes y controles.",
+            "Transferencias estatales ilimitadas que sustituyen toda actividad comercial."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley contempla ingresos por publicidad regulada y aportaciones públicas sujetas a límites y controles; las demás opciones contradicen las restricciones y principios del modelo.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "measure_waveform_luma",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: en un monitor de forma de onda la luminancia muestra picos que superan sistemáticamente el límite legal. ¿Cuál es la interpretación operativa más precisa?",
+          "options": [
+            "Es un defecto del vectorscopio que debe recalibrarse, la forma de onda no mide luminancia.",
+            "Se está aplicando exceso de ganancia o de lift/highlight en la cadena de cámara o etalonaje y es necesario reducir exposición o aplicar limitación para cumplir legalidad.",
+            "La presencia de picos altos indica pérdida de sincronismo vertical en la señal entrelazada.",
+            "La señal está comprimida en exceso por el códec y por tanto la forma de onda muestra picos inexistentes en origen."
+          ],
+          "correctIndex": 1,
+          "explanation": "Picos por encima de límites legales indican niveles de luminancia exagerados por exposición o ajustes de etalonaje; el vectorscopio sí mide luminancia y las otras causas son menos coherentes con ese síntoma.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare y elija la afirmación correcta sobre cálculo de ancho de banda para servicio con concurrencia:",
+          "options": [
+            "El ancho de banda efectivo depende solo de la latencia de la red y no del bitrate agregado.",
+            "Bastará dimensionar por el bitrate medio de un stream y multiplicar por la concurrencia máxima sin margen adicional.",
+            "Se debe atender únicamente al número de conexiones TCP concurrentes; el bitrate por conexión es irrelevante si la red es gigabit.",
+            "El ancho de banda requerido es la suma de los bitrates de las reproducciones simultáneas multiplicada por (1 + margen operativo)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El dimensionamiento correcto suma los bitrates concurrentes y añade un margen operativo; las otras opciones ignoran margen, bitrate individual o confunden latencia con capacidad.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "¿Qué modo de trim permite desplazar los puntos de entrada y salida dentro de un clip manteniendo fijos los cortes externos y sin variar la duración total de la secuencia?",
+          "options": [
+            "Slide: mueve el clip en la línea de tiempo y modifica los puntos de corte adyacentes alterando la sincronía.",
+            "Ripple: ajusta el punto de corte y desplaza todos los elementos posteriores, cambiando la duración total.",
+            "Roll: altera los puntos de corte entre dos clips pero mantiene la duración total combinada.",
+            "Slip: mueve el contenido interno del clip sin alterar sus puntos en la línea de tiempo ni la duración total."
+          ],
+          "correctIndex": 3,
+          "explanation": "Slip modifica los puntos de entrada/salida internos del clip sin tocar la duración del proyecto; roll también mantiene la duración total pero no mantiene fijos los cortes externos del clip; ripple y slide cambian la duración o afectan cortes adyacentes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "¿Qué ventana de loudness se utiliza para evaluar variaciones de nivel en intervalos de aproximadamente 3 segundos?",
+          "options": [
+            "Integrated, que mide el programa completo y no ventanas cortas.",
+            "Short‑term (S), ventana de ~3 s para analizar cambios rápidos en segmentos cortos.",
+            "Momentary (M), que mide en ventanas de 400 ms y sirve para transitorios muy breves.",
+            "True Peak, que mide picos de muestreo y no ventanas de loudness temporal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Short‑term (≈3 s) se emplea para evaluar variaciones rápidas en segmentos; Integrated cubre todo el programa, Momentary es para transitorios más breves y True Peak no es una medida de loudness temporal.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En servidores de vídeo, ¿qué factor suele ser el determinante primario de la concurrencia máxima soportada?",
+          "options": [
+            "El rendimiento agregado de lectura/trasmisión (ancho de banda del almacenamiento y salida de red).",
+            "La versión del sistema operativo del servidor.",
+            "La longitud de los nombres de archivo almacenados en disco.",
+            "La resolución de la pantalla del operador que solicita las reproducciones."
+          ],
+          "correctIndex": 0,
+          "explanation": "La concurrencia depende principalmente del throughput combinado de disco y red; sistema operativo o metadatos no son el limitador inmediato en comparación con la capacidad de transferencia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: si un paquete que contiene un fotograma P queda corrupto en una GOP Long‑GOP, ¿cuál es la consecuencia operativa inmediata más habitual?",
+          "options": [
+            "Los fotogramas dependientes posteriores (B y/o P) dentro de la GOP mostrarán artefactos hasta que alcance el siguiente fotograma I.",
+            "Solo el primer fotograma I se verá afectado y el resto permanecerá intacto.",
+            "La corrupción se autocorrige en la decodificación sin efecto visible en pantalla.",
+            "El reproductor sustituirá automáticamente el GOP completo por un GOP vacío sin artefactos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La predicción en GOP crea dependencias: la corrupción de un P afecta a fotogramas dependientes posteriores hasta el siguiente I; las demás opciones no reflejan la dependencia de predicción.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Según la Ley 17/2006, función de servicio público: indique la obligación que corresponde a RTVE:",
+          "options": [
+            "Programar únicamente contenidos con alto rendimiento económico sin consideración de pluralismo.",
+            "Actuar exclusivamente como medio de promoción comercial de empresas privadas.",
+            "Garantizar una oferta plural, independiente y de calidad que informe, eduque y culturalmente atienda a la ciudadanía.",
+            "Delegar totalmente la gestión de su programación a entidades privadas sin control público."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley asigna a RTVE el deber de servicio público con pluralismo e independencia; las otras opciones contradicen su misión y obligaciones legales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_umid",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "En un flujo de trabajo en el que se generan transcodings y copias de un fichero audiovisual, ¿qué procedimiento garantiza que el UMID original siga identificando de forma persistente el mismo material en los ficheros derivados?",
+          "options": [
+            "Recalcular un nuevo UMID para cada fichero derivado y mantener una tabla de equivalencias en el sistema de gestión.",
+            "Generar y comparar checksums del contenido para reconocer el mismo material entre transcodings y copias.",
+            "No tocar el UMID pero usar el nombre de archivo o un UUID del sistema como identificador primario para el rastreo del activo.",
+            "Copiar y conservar el valor del UMID original en los metadatos del fichero transcodificado/recapsulado (es decir, propagar el UMID en el contenedor destino)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El UMID funciona como identificador persistente cuando su valor original se preserva y se incorpora en los metadatos de los ficheros derivados; por tanto, la práctica correcta es copiar/propagar el UMID al contenedor destino. Recalcular el UMID rompe la persistencia (cada copia tendría un identificador distinto). Usar solo nombre de fichero o UUID del sistema depende del entorno y no acompaña necesariamente al archivo fuera de ese sistema, por lo que no garantiza trazabilidad universal. Los checksums identifican una instancia concreta de datos y cambian con transcodings o reencapsulados, de modo que no son fiables para mantener una identidad persistente del mismo material tras procesados.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_news",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En la edición de un informativo con actualización de última hora, ¿qué prioridad editorial y técnica debe aplicar el editor en coordinación con redacción?",
+          "options": [
+            "Repriorizar titulares y redestribuir tiempo, regrabar locución si es necesario y garantizar que los 'totales' y recursos encajen en la duración asignada.",
+            "Mantener la escaleta original sin cambios aunque la noticia sea prioritaria.",
+            "Eliminar imágenes de apoyo para ahorrar tiempo sin coordinar con redacción.",
+            "Posponer la actualización para la siguiente edición para evitar rework."
+          ],
+          "correctIndex": 0,
+          "explanation": "El editor debe ajustar prioridad informativa, tiempos y locución en coordinación con redacción; las otras opciones ignoran la necesidad de reordenar y adaptar recursos y tiempos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Cuál de las siguientes configuraciones RAID emplea paridad dual distribuida y, en un arreglo estándar, permite la reconstrucción de los datos tras la pérdida simultánea de dos discos en ubicaciones arbitrarias del conjunto?",
+          "options": [
+            "RAID 10 (1+0) — conjuntos por espejos y stripe; puede tolerar varios fallos sólo si no afectan al mismo espejo, pero no garantiza reconstrucción ante cualquier par de discos fallidos.",
+            "RAID 6 — paridad doble distribuida; reconstrucción tras dos fallos simultáneos.",
+            "RAID 5 — paridad simple distribuida; tolera un único fallo de disco; dos fallos simultáneos provocan pérdida de datos.",
+            "RAID 1 — espejo simple; tolera fallo de un disco por espejo; no está diseñado para reconstrucción tras la pérdida simultánea de dos discos en el mismo espejo."
+          ],
+          "correctIndex": 1,
+          "explanation": "RAID 6 utiliza dos bloques de paridad independientes (paridad dual distribuida, p. ej. P y Q) que permiten reconstruir la información aunque fallen simultáneamente dos discos en cualquier posición del conjunto, por eso es la opción correcta. RAID 10 (1+0) ofrece alta disponibilidad mediante espejos y striping y puede sobrevivir a más de un fallo en algunos casos, pero su tolerancia a dos fallos depende de qué discos fallen (si ambos pertenecen al mismo espejo el arreglo queda inaccesible), por lo que no garantiza reconstrucción ante cualquier par de fallos; es el distractor más cercano. RAID 5 solo dispone de paridad simple y no puede reconstruir si fallan dos discos simultáneamente. RAID 1 es un espejo que cubre fallo de un disco por copia espejo, pero no está concebido para reconstruir cuando se pierden simultáneamente las dos copias del mismo conjunto.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Configuración recomendada para una pantalla de visualización que minimice reflejos y tensión visual:",
+          "options": [
+            "Distancia aproximadamente de un brazo, borde superior de pantalla a la altura de los ojos o ligeramente por debajo, orientación perpendicular a fuentes de ventana y control de iluminación para reducir reflejos.",
+            "Pantalla colocada lo más alta posible para mirar hacia arriba y con ventanas detrás del trabajador sin control de luz.",
+            "Distancia mínima para acercar detalles, pantalla inclinada hacia atrás 45° y luz ambiental intensa directa sobre la pantalla.",
+            "Colocar la pantalla lateralmente respecto al usuario para evitar mirar de frente, con iluminación desde atrás."
+          ],
+          "correctIndex": 0,
+          "explanation": "La configuración 1 reúne distancia, altura, orientación e iluminación recomendadas; las demás generan reflejos, posturas incómodas o exposición directa a luz que aumenta la fatiga.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Al insertar un clip entre dos elementos de una playlist en EVS/IPDirector sin perder transiciones previstas, la operación correcta es:",
+          "options": [
+            "Eliminar la playlist y crear una nueva desde cero para incluir el clip.",
+            "Agregar el clip al final y luego reordenar manualmente, lo que preserva automáticamente todas las transiciones originales.",
+            "Reemplazar el clip adyacente por el nuevo clip para mantener el orden sin tocar transiciones.",
+            "Usar la función de inserción de playlist en modo edición, especificando handles y conservando las transiciones programadas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La inserción en modo edición con handles permite colocar el clip y mantener o ajustar transiciones; reordenar manualmente o reemplazar suele romper transiciones y recrear la playlist es innecesario.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "105",
       "title": "Examen 105",
