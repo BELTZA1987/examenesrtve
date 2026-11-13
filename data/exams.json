@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-13",
   "exams": [
+    {
+      "id": "107",
+      "title": "Examen 107",
+      "date": "2026-11-13",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a obligaciones de accesibilidad impuestas por la Ley 13/2022 a prestadores de servicios audiovisuales:",
+          "options": [
+            "Proveer subtitulado para personas con discapacidad auditiva en programas pregrabados y, en determinados supuestos, en servicios bajo demanda.",
+            "Facilitar audiodescripción para personas con discapacidad visual en programas de ficción y otros contenidos cuando proceda según criterios de cobertura.",
+            "Garantizar reproductores y menús accesibles en servicios bajo demanda para permitir navegación y control por usuarios con discapacidad.",
+            "Exigir la emisión simultánea en lengua de signos de todos los contenidos televisivos lineales sin excepción."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta (emitir simultáneamente en lengua de signos para todos los contenidos) es la excepción: la normativa obliga a facilitar accesibilidad mediante subtitulado, audiodescripción y accesibilidad de interfaces en determinados casos, pero no impone la interpretación en lengua de signos de todos los contenidos de forma universal; las obligaciones varían según tipo de servicio y criterios de cobertura.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_match_action",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estas descripciones y elija la que distingue con mayor precisión el efecto narrativo del raccord de movimiento frente al raccord de mirada y al raccord de eje:",
+          "options": [
+            "El raccord de movimiento mantiene la continuidad perceptiva al prolongar la trayectoria del gesto entre planos; el raccord de mirada prioriza direcciones oculares y el de eje la coherencia espacial entre cámaras.",
+            "El raccord de movimiento enfatiza coincidencia de iluminación entre planos; el raccord de mirada preserva la escala y el raccord de eje gestiona continuidad de color.",
+            "El raccord de movimiento reorganiza la secuencia temporal para crear montaje intelectual; el raccord de mirada busca simultaneidad cronológica y el de eje genera elipsis.",
+            "El raccord de movimiento depende exclusivamente del plano contraplano; el raccord de mirada y el de eje son equivalentes en función espacial."
+          ],
+          "correctIndex": 0,
+          "explanation": "La primera afirmación diferencia correctamente los tres tipos: el raccord de movimiento actúa sobre la continuidad de la trayectoria del gesto (manteniendo la percepción de desplazamiento), mientras que el raccord de mirada regula la dirección de la mirada y el raccord de eje asegura coherencia espacial entre cámaras. Las otras opciones atribuyen funciones incorrectas o imprecisas a estos raccords.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento correcto para corregir desfases de cuadro entre dos fuentes SDI no sincronizadas mediante frame‑sync:",
+          "options": [
+            "Desconectar la fuente con desfase y reinyectar su señal por un convertidor de formato sin comprobar reloj ni fase.",
+            "Identificar la fuente que actúa como referencia de genlock, aplicar frame‑sync a la(s) fuente(s) desincronizada(s) ajustando delay y reloj hasta coincidencia de borde activo, y monitorizar forma de onda y código de tiempo.",
+            "Cambiar la frecuencia de muestreo de una de las fuentes a ojo hasta que las imágenes parezcan coincidir en el monitor de programa.",
+            "Forzar un reescalado de resolución en el mezclador para ocultar el desfase visual y conservar ambos relojes independientes."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es la secuencia adecuada: identificar referencia, aplicar frame‑sync a las fuentes desincronizadas y ajustar delay/reloj mientras se verifica en forma de onda y TC. Las otras opciones omiten sincronización de reloj o proponen acciones que ocultan el problema sin corregir la temporización.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Interprete cuál de estas afirmaciones refleja con mayor precisión la distribución de responsabilidades en prevención respecto a información, formación, cooperación y uso de medios:",
+          "options": [
+            "La cooperación en prevención es informativa pero sin carácter obligatorio para los trabajadores; el deber real recae solo en el personal de prevención.",
+            "Los trabajadores son responsables de diseñar los planes de prevención y de suministrar los medios necesarios, mientras el empleador sólo supervisa su cumplimiento.",
+            "La formación es responsabilidad exclusiva de los servicios externos contratados; ni el empleador ni los trabajadores asumen obligaciones directas.",
+            "El empleador debe proporcionar información y formación adecuadas, facilitar los medios de protección y organizar la cooperación; los trabajadores deben usar correctamente los medios facilitados y participar en la formación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 sintetiza correctamente las obligaciones recíprocas: el empleador debe informar, formar, proveer medios y organizar cooperación; los trabajadores deben usar medios, seguir formación y colaborar. Las otras opciones trasladan indebidamente responsabilidades o reducen obligaciones obligatorias.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: una secuencia intercala acciones en dos lugares distintas mostrando simultaneidad que desemboca en un encuentro final. ¿Qué tipo de montaje describe mejor esta estrategia?",
+          "options": [
+            "Montaje en continuidad de eje: prioriza mantener la misma línea de acción entre cortes.",
+            "Montaje paralelo intelectual: yuxtapone planos por asociación temática pero sin implicar simultaneidad.",
+            "Montaje en serie: presenta acciones en un único hilo temporal continuo sin alternancia.",
+            "Montaje alterno (cross‑cut): alterna acciones simultáneas en distintos espacios hasta su convergencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "El montaje alterno describe precisamente la alternancia de acciones simultáneas en distintos lugares que convergen; el montaje paralelo intelectual enfatiza asociación temática sin necesidad de simultaneidad, y las otras opciones no encajan con la convergencia temporal descrita.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estas afirmaciones sobre entrelazado y progresivo: ¿cuál expresa con mayor precisión la diferencia temporal y el artefacto típico de movimiento?",
+          "options": [
+            "Ambos sistemas usan campos temporales idénticos; la única diferencia es el ratio de bits que requieren para compresión.",
+            "El progresivo divide cada fotograma en dos campos y genera combing; el entrelazado registra fotogramas completos evitando motion blur.",
+            "El entrelazado compone cada imagen a partir de dos campos temporales distintos y tiende a producir 'combing' en objetos en movimiento; el progresivo captura el fotograma completo en un instante, donde el artefacto habitual es el 'motion blur' por integración temporal.",
+            "El entrelazado elimina por completo el judder en cámaras con panning rápido, mientras que el progresivo lo amplifica indefinidamente."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 distingue correctamente: el entrelazado usa campos separados en el tiempo provocando efectos de combing en movimientos rápidos; el progresivo presenta integración temporal del fotograma y suele mostrar motion blur. Las otras opciones son inexactas o contradictorias con la naturaleza temporal de ambos modos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que describe mejor una práctica adecuada para reutilizar un soporte SSD de rodaje tras la descarga verificada:",
+          "options": [
+            "Sobrescribir varias veces todo el contenido con datos aleatorios antes de volver a rodar para asegurar limpieza absoluta del soporte.",
+            "Tras verificar la copia mediante checksum, realizar un formateo rápido al sistema de archivos requerido por la cámara y mantener registros de verificación; evitar borrados completos que incrementen desgaste innecesario.",
+            "No formatear nunca; reutilizar archivos residuales para ahorrar ciclos de borrado y prolongar la vida útil del SSD.",
+            "Ejecutar un borrado seguro a bajo nivel (zero‑fill) tras cada descarga para garantizar integridad futura del dispositivo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 refleja la práctica correcta: tras checksum verificado, formateo rápido al FS requerido y registro es adecuado; sobrescrituras o borrados a bajo nivel aumentan desgaste inútil en SSD, y no formatear deja residuos y riesgos operativos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la afirmación que distingue con mayor precisión libertad de expresión y derecho a la información en el marco constitucional:",
+          "options": [
+            "La libertad de expresión protege la manifestación de ideas y opiniones individuales; el derecho a la información garantiza el acceso público a datos e informaciones veraces y pluralidad de fuentes, ambos sujetos a límites para proteger derechos y orden público.",
+            "La libertad de expresión obliga a los medios a publicar cualquier información sin contraste; el derecho a la información es un privilegio exclusivo del Estado.",
+            "La libertad de expresión sólo se aplica a personas físicas, mientras el derecho a la información se aplica exclusivamente a entidades jurídicas.",
+            "Ambos términos son sinónimos y no implican diferencias en su aplicación constitucional."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 diferencia correctamente: libertad de expresión protege manifestaciones individuales; el derecho a la información se refiere al acceso público y pluralidad; ambos admiten límites. Las otras opciones contienen falsedades o simplificaciones incompatibles con la Constitución.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para soportes externos que alojarán ficheros individuales mayores de 4 GB y deben ser ampliamente compatibles entre cámaras y estaciones de montaje, ¿qué sistema de archivos es el más adecuado?",
+          "options": [
+            "exFAT",
+            "FAT32",
+            "ext3",
+            "FAT16"
+          ],
+          "correctIndex": 0,
+          "explanation": "exFAT permite ficheros de tamaño superior a 4 GB y amplia compatibilidad entre cámaras, macOS y Windows sin las limitaciones de FAT32 (4 GB límite) o FAT16; ext3 es menos compatible con sistemas de cámara y estaciones sin drivers específicos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Al trasladar una sesión de montaje entre estaciones, señale la afirmación que constituye una excepción respecto a las capacidades habituales de una EDL frente a un AAF en cuanto a alcance, pistas, efectos y metadatos transferibles:",
+          "options": [
+            "Una EDL suele exportar principalmente decisiones de corte (timecodes de entrada/salida, orden de clips y transiciones simples) y no transporta parámetros detallados de efectos ni automatizaciones por pista.",
+            "Un AAF puede contener referencia a múltiples pistas de audio y vídeo, incluir handles y metadatos de clip que permiten reconstruir la sesión con mayor fidelidad que una EDL.",
+            "Las EDLs son ampliamente capaces de incluir parámetros detallados de plug‑ins (presets y automatizaciones de efectos de terceros), mientras que los AAF típicamente los excluyen.",
+            "Ambos formatos suelen referenciar la esencia por identificadores temporales; la diferencia práctica es que el AAF facilita además metadatos extendidos y, en muchos flujos, la posibilidad de incorporar o enlazar media embebida."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la tercera porque es la única que no se ajusta a la comparación habitual: las EDLs (formato simple tipo CMX) no transportan parámetros detallados de plug‑ins ni automatizaciones complejas; están limitadas a cortes, transiciones básicas y referencias de reel/timecode. En cambio, los AAF sí pueden transportar información de múltiples pistas, handles y metadatos extendidos, y en algunos casos efectos y parámetros básicos o referencias a ellos. La opción más próxima es la segunda (B), que es verdadera: resume la mayor capacidad del AAF para reconstruir la sesión frente a la EDL.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento de diagnóstico y corrección ante zumbido de 50/60 Hz presuntamente causado por bucle de masa entre cámara y monitor:",
+          "options": [
+            "Comprobar conexiones de tierra y señal, aislar galvánicamente la ruta de audio/video para diagnosticar (transformador de audio o separador de vídeo), y establecer una única referencia de masa en la instalación.",
+            "Desconectar permanentemente el conductor de tierra de uno de los equipos para eliminar el bucle.",
+            "Incrementar el volumen de ganancia en la cadena de audio hasta enmascarar el zumbido y continuar grabando.",
+            "Conectar un cable adicional entre carcasas de equipos para aumentar referencia de tierra y reducir inductancia del bucle."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 propone el método correcto: comprobar tierras, usar aislamiento galvánico para diagnóstico y conseguir una única referencia de masa. Desconectar tierra es peligroso; enmascarar el ruido o añadir conexiones ad hoc puede empeorar o crear riesgos eléctricos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación práctica: si varias cámaras comparten código de tiempo común pero una cámara registra ocasionales saltos de TC, ¿qué estrategia es la más adecuada para integrarla en una sesión multicámara?",
+          "options": [
+            "Excluir automáticamente cualquier cámara con saltos de TC y rehacer la grabación completa.",
+            "Usar el TC común como base para la sesión multicámara y, para la cámara con saltos, realizar alineación secundaria mediante forma de onda de audio y marcar clips problemáticos para reconformado puntual.",
+            "Ignorar las inconsistencias de TC y confiar exclusivamente en el relink por nombre de archivo en el NLE.",
+            "Reescribir el código de tiempo de la cámara corrupta a mano en todos los clips sin conservar metadatos originales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es la práctica adecuada: mantener TC común para la mayoría, y alinear la cámara con saltos mediante audio waveforms y marcarla para reconformado. Excluirla o reescribir TC sin conservar metadatos no es operativo; confiar solo en nombres de archivo es poco robusto.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_checksum",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estas afirmaciones sobre el uso de checksums en ingesta antes/después: ¿cuál expresa con mayor precisión su alcance y limitación operativa?",
+          "options": [
+            "Un checksum confirma la igualdad bit a bit entre origen y copia en el momento de la verificación, pero no garantiza que el contenido sea correcto desde un punto de vista lógico ni protege frente a corrupciones posteriores al cálculo.",
+            "Un checksum valida semánticamente el contenido y corrige automáticamente diferencias detectadas entre ficheros.",
+            "Un checksum reemplaza la necesidad de cualquier verificación visual o auditiva del material, ya que garantiza calidad editorial.",
+            "Un checksum evita la necesidad de mantener registros de auditoría porque su simple existencia es suficiente prueba de integridad a largo plazo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 resume correctamente: checksum verifica igualdad bit a bit al comparar origen y copia, pero no valida semántica ni evita corrupciones posteriores; las otras afirmaciones atribuyen capacidades que un checksum no tiene (corrección automática, validación editorial o sustitución de registros).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: señale la afirmación que describe con mayor precisión una limitación operativa habitual de LTO con LTFS para archivo a largo plazo:",
+          "options": [
+            "Las cintas LTO no son susceptibles a degradación alguna y por tanto no requieren copias ni migraciones.",
+            "LTO con LTFS permite acceso instantáneo y latencias equivalentes a un SSD; no requiere catálogos ni verificación posterior.",
+            "Acceso aleatorio a ficheros es significativamente más lento que en disco; además, la dependencia de compatibilidad de generación de drive y cartucho y la necesidad de catálogos y verificaciones periódicas son limitaciones operativas.",
+            "LTFS impide cualquier recuperación de archivos individuales sin restaurar exclusivamente la cinta completa en un sistema propietario."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es correcta: LTO/LTFS tiene acceso más lento que disco, requiere verificación y atención a compatibilidad de generaciones, y gestión de catálogos. Las otras afirmaciones exageran propiedades (acceso instantáneo, inexistencia de degradación o imposibilidad de acceso por fichero).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento general para la elección de órganos de RTVE tras la reforma de la Ley 5/2017:",
+          "options": [
+            "Elección por concurso público entre empleados de la Corporación según méritos técnicos administrativos excluyendo intervención parlamentaria.",
+            "Nombramiento directo por el Gobierno tras informe no vinculante del Parlamento.",
+            "Iniciativa parlamentaria, tramitación y designación mediante procedimiento parlamentario orientado a garantizar pluralismo e independencia, evitando nombramientos directos por el Ejecutivo.",
+            "Designación por sorteo entre grupos de interés y sindicatos representativos del sector."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 refleja la finalidad de la reforma: reforzar independencia y pluralismo mediante elección parlamentaria de órganos. Las otras opciones (nombramiento ejecutivo directo, concurso interno o sorteo) no corresponden al objetivo ni al procedimiento establecido por la reforma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un flujo XDCAM con edición offline sobre proxies y posterior reconformado a la esencia, ¿qué metadato o condición del proxy facilita de forma más fiable el relink frame‑accurate a los archivos MXF de alta resolución?",
+          "options": [
+            "Coincidencia exacta del código de tiempo de origen entre proxy y esencia, aunque el proxy tenga un nombre de archivo distinto.",
+            "Conservación del identificador único de material (UMID) del MXF original en los metadatos del proxy, de modo que el relink se base en un identificador persistente.",
+            "Mismo nombre de archivo entre proxy y esencia (solo difiriendo en extensión o carpeta) para que el NLE los empareje directamente.",
+            "Que el proxy reproduzca a un bitrate y fecha de creación idénticos a la esencia para evitar discrepancias en la identificación y orden."
+          ],
+          "correctIndex": 1,
+          "explanation": "El UMID contenido en los MXF es un identificador persistente y no ambigüo que permite al sistema vincular automáticamente un proxy con su esencia XDCAM original. El código de tiempo es útil pero puede repetirse, desplazarse o no ser exclusivo entre clips, por lo que por sí solo resulta menos fiable (distractor más próximo). El nombre de archivo o atributos como bitrate/fecha son frágiles y pueden cambiar durante transcodings o copias, por tanto no garantizan un relink seguro.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "¿Qué lectura del vectorscopio indica, de forma operativa, un tono de piel dentro del estándar Rec.709 con saturación moderada?",
+          "options": [
+            "Punto alineado con el ángulo del azul/cian y muy próximo al centro, que indica tono de piel correcto.",
+            "Punto situado exactamente en el centro del vectorscopio con máxima distancia al borde que indica saturación nula.",
+            "Punto en ángulo contrario a la marca de piel y a máxima distancia del centro, que indica sobre‑saturación y color no natural.",
+            "Punto cercano a la línea o marca de tonos de piel (ángulo aproximado correspondiente al matiz piel) y con una distancia al centro que indica saturación media."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 describe correctamente la interpretación: el ángulo define el matiz (la línea de tonos de piel en Rec.709) y la distancia al centro la saturación; una distancia intermedia indica saturación moderada. Las otras opciones ubican el punto en posiciones incompatibles con tono de piel natural o confunden matiz y saturación.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación: ¿cuál de estas situaciones reúne los elementos característicos que permiten considerar un accidente como in itinere?",
+          "options": [
+            "Accidente durante una pausa personal fuera del horario laboral en un lugar no relacionado con el trabajo.",
+            "Desplazamiento habitual del domicilio al centro de trabajo por la ruta normal, en horario y vehículo propio o transporte público, sufriendo un accidente durante ese trayecto.",
+            "Accidente ocurrido al realizar una actividad recreativa voluntaria con compañeros fuera del trayecto habitual.",
+            "Accidente derivado de negligencia intencional del trabajador en tiempo libre."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 contiene los elementos típicos del accidente in itinere: desplazamiento habitual entre domicilio y trabajo por la ruta normal en horario laboral; las otras opciones ocurren fuera de ese marco y no califican como in itinere.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_project_media",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor diferencia metadatos de proyecto y archivos de esencia en un NLE:",
+          "options": [
+            "Los archivos de esencia son configuraciones del NLE y los metadatos son los ficheros de imagen y audio en bruto.",
+            "Los metadatos de proyecto contienen el vídeo en baja resolución y los archivos de esencia solo miniaturas de vista previa.",
+            "Los metadatos de proyecto incluyen estructura de bins, decisiones de edición, markers y referencias; los archivos de esencia contienen los datos de audio/vídeo reales almacenados en disco.",
+            "Los metadatos del proyecto ocupan habitualmente más espacio en disco que los archivos de esencia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es la distinción correcta: metadatos abarcan la estructura del proyecto y decisiones de edición; la esencia son los ficheros de audio/vídeo. Las otras opciones invierten funciones o contienen afirmaciones inverosímiles.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_xavc",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que mejor diferencia XAVC Intra de XAVC Long‑GOP en términos de perfil y aplicación práctica:",
+          "options": [
+            "XAVC Intra no admite perfiles de alta calidad y se usa exclusivamente para proxies; Long‑GOP es la única opción para masters de alta fidelidad.",
+            "XAVC Long‑GOP almacena cada fotograma de forma independiente y es preferido para edición cuadro‑a‑cuadro; XAVC Intra solo sirve para transmisión en vivo.",
+            "Ambas variantes son idénticas en estructura de compresión y solo difieren en contenedor de archivo.",
+            "XAVC Intra comprime cada fotograma de forma independiente (intraframe), favoreciendo edición y calidad por fotograma a costa de mayor bitrate; XAVC Long‑GOP usa compresión inter‑frame para menor bitrate y eficiencia de almacenamiento, siendo más exigente en reconformado y decodificación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 explica correctamente la diferencia operativa: Intra es intraframe y facilita edición fotograma a fotograma con mayor bitrate; Long‑GOP es inter‑frame, más eficiente en almacenamiento pero más complejo para reconformado. Las otras opciones contienen errores sobre estructura y usos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "106",
       "title": "Examen 106",
