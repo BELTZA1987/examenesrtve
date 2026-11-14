@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-14",
   "exams": [
+    {
+      "id": "108",
+      "title": "Examen 108",
+      "date": "2026-11-14",
+      "level": "Muy alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según la regulación colectiva de jornadas y turnos en el III Convenio Colectivo, ¿qué describe con mayor precisión la noción de turnicidad?",
+          "options": [
+            "La obligación de prestar guardias voluntarias fuera de la jornada ordinaria sin compensación específica.",
+            "El derecho exclusivo a percibir plus por horas extraordinarias realizadas fuera del turno habitual.",
+            "La organización del trabajo mediante rotaciones o ciclos de horarios que alteran periódicamente el turno de los trabajadores.",
+            "Un sistema de trabajo aplicable únicamente a personal técnico y excluido para personal administrativo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La turnicidad se refiere a la organización en turnos rotativos o cíclicos que afectan a la distribución horaria del personal; las otras opciones confunden conceptos accesorios (plus, guardias) o introducen excepciones no definitorias.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a CBR y VBR, señale la afirmación que describe mejor la ventaja operativa de VBR frente a CBR:",
+          "options": [
+            "VBR entrega calidad media superior en contenidos de complejidad variable para un tamaño medio dado, pero complica la garantía de ancho de banda constante en transmisión en directo.",
+            "VBR elimina completamente la necesidad de buffering en streaming en redes con fluctuaciones de tráfico.",
+            "CBR siempre produce mejor calidad visual por fotograma que VBR al mantener un flujo constante de bits.",
+            "CBR permite archivos más pequeños que VBR para material de complejidad variable gracias a su estabilidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "VBR adapta el bitrate a la complejidad del contenido, logrando mejor calidad media para un tamaño objetivo; sin embargo, exige gestión de ancho de banda porque no mantiene flujo constante, lo que diferencia del distractor más próximo que confunde transmisión estable con ventaja de calidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_backup_321",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Un técnico dispone de un RAID en un servidor, una copia idéntica en otro disco dentro del mismo centro y una copia adicional en la nube gestionada por el proveedor. Diagnóstico respecto a cumplimiento de la política 3‑2‑1:",
+          "options": [
+            "Cumple 3‑2‑1: tres copias, dos tipos de soporte y ubicación remota.",
+            "Cumple si la copia en la nube usa el mismo proveedor y las credenciales del servidor original.",
+            "No hace falta copia externa si el RAID ofrece redundancia equivalente.",
+            "Cumple parcialmente: hay tres copias pero las dos copias locales no son soportes independientes físicamente separados; falta copia en un soporte independiente fuera del centro."
+          ],
+          "correctIndex": 3,
+          "explanation": "La política 3‑2‑1 exige copias en soportes independientes y al menos una fuera del sitio; un RAID no sustituye copias independientes y tener dos copias en mismo centro no garantiza independencia física, que es la diferencia decisiva frente al distractor que confunde RAID con backup.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la organización de tareas más compatible con la reducción de fatiga visual y postural en un puesto con pantallas:",
+          "options": [
+            "Sustituir pausas por ejercicios activos únicamente durante la pausa de comida, sin cambios en la organización del trabajo.",
+            "Concentrar tareas de pantalla en bloques de 3 horas sin interrupciones para maximizar productividad, compensando con una pausa larga al final.",
+            "Mantener tareas de alta concentración frente a pantalla todo el turno y delegar pausas en una decisión individual del trabajador.",
+            "Alternancia periódica entre tareas ante pantalla y tareas sin pantalla cada 20–30 minutos, breves micro‑pausas visuales, variación de distancia focal y rotación de actividades posturales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La medida compatible combina alternancia de tareas, micro‑pausas y variación postural para reducir tensión visual y musculoesquelética; los distractores proponen pausas insuficientes o dejar la organización a decisión individual, que no mitigan correctamente los riesgos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "En un mezclador con buses 'program' y 'preview' y una clave (key) activada en preview, ¿qué secuencia asegura que la clave pase a programa al ejecutar la transición?",
+          "options": [
+            "Desconectar preview y enviar la clave por el bus auxiliar mientras se hace un corte manual en program.",
+            "Activar la clave directamente en el bus de program y ejecutar la transición sin usar preview.",
+            "Asignar la fuente de key al bus de preview, comprobar visualización en preview y ejecutar la transición (take/auto) para llevar preview a program.",
+            "Ejecutar la transición en program y después reasignar la clave a program en caliente."
+          ],
+          "correctIndex": 2,
+          "explanation": "El flujo correcto usa preview para preparar la clave y luego la transición la lleva a program; las otras opciones omiten el uso ordenado de buses o proponen manipulación en caliente que puede generar saltos o pérdida de sincronía entre key y video.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "language_fiction",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento que mejor garantiza continuidad dramática y aprovechamiento de cobertura al coordinar montaje de ficción con realización:",
+          "options": [
+            "Elegir siempre el plano con mayor duración aunque suponga sacrificar continuidad de interpretación para mantener ritmo.",
+            "Revisar cobertura por escena, priorizar tomas que mantengan la intención actoral y continuidad de eje/eyeline, y comunicar al realizador necesidades de pick‑ups antes del montaje final.",
+            "Limitarse a seguir la lista de tomas entregada por realización sin solicitar nuevas coberturas para evitar demoras.",
+            "Eliminar systematically planos que no encajen en duración del guion aunque contengan continuidad interpretativa."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta prioriza continuidad dramática, cobertura y comunicación con realización; los distractores priorizan duración o cumplimiento rígido sobre continuidad e interpretación, que es lo que distingue la opción correcta.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Para garantizar compatibilidad sin pérdida de calidad entre estaciones que requieren MXF como contenedor, la operación técnica adecuada es:",
+          "options": [
+            "Reencapsular (re‑wrap) la esencia en un contenedor MXF si el códec ya es compatible, evitando recompresión.",
+            "Convertir siempre a MP4 porque es el contenedor más universal y reduce problemas.",
+            "Desmultiplexar y recomprimir a un nuevo códec dentro de MOV para asegurar metadata avanzada.",
+            "Copiar el fichero MOV a MXF renombrando la extensión sin modificar el encabezado."
+          ],
+          "correctIndex": 0,
+          "explanation": "Si el códec es compatible con MXF, reencapsular evita recomprimir y conserva calidad; recomprimir o renombrar son soluciones incorrectas (calidad alterada o contenedor inconsistentes) y convertir siempre a MP4 no garantiza requisitos de estaciones profesionales que demandan MXF.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estas afirmaciones y elija la que mejor refleja la naturaleza y estructura prevista por la Ley 17/2006 de la Corporación RTVE:",
+          "options": [
+            "RTVE es una sociedad privada dependiente del Estado con estructura única de dirección ejecutiva sin órganos independientes.",
+            "RTVE está concebida como entidad pública con finalidad de servicio público, dotada de órganos de gobierno y gestión para garantizar su función informativa y audiovisual.",
+            "RTVE actúa exclusivamente como organismo administrativo sin personalidad propia ni órgano de gobierno específico.",
+            "RTVE funciona como una agencia de contratación comercial sin obligaciones de servicio público."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 17/2006 configura RTVE como entidad pública orientada a servicio público con órganos de gobierno y gestión; los distratores reducen su naturaleza a formas privadas o administrativas que no se corresponden con la regulación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "record_evs_loop",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Principio operativo que describe correctamente la grabación en bucle (loop) en servidores estilo EVS y su recuperación mediante marcaje de acción:",
+          "options": [
+            "El servidor graba solo cuando se activa manualmente y no admite recuperación automática de segmentos previos.",
+            "El servidor registra continuamente en buffers circulares por canal; al marcar una acción se copia o etiqueta ese segmento para evitar sobreescritura y permitir su recuperación.",
+            "La grabación en bucle solo mantiene un único archivo global; marcar una acción no evita que el contenido sea sobreescrito.",
+            "Las acciones marcadas permanecen en memoria RAM y se pierden al reiniciar el servidor."
+          ],
+          "correctIndex": 1,
+          "explanation": "La grabación en bucle usa buffers circulares y el marcaje (action/flag) protege o copia segmentos para recuperación; las otras opciones contradicen el principio operativo del sistema.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a niveles legales, gamut y limitación automática (legalizer), indique la afirmación que combina correctamente su función y diferencia:",
+          "options": [
+            "El legalizer y el gamut son términos intercambiables que se refieren a la misma función de limitación.",
+            "El legalizer amplía la saturación para alcanzar gamut nominal; el gamut regula solo luminancia.",
+            "El gamut corrige automáticamente luminancia fuera de norma; el legalizer solo añade metadata sin alterar la señal.",
+            "El gamut define el área de crominancia máxima permitida; el legalizer actúa sobre luminancia y crominancia para mantener niveles legales, pudiendo recortar o escalar la señal con impacto en la saturación."
+          ],
+          "correctIndex": 3,
+          "explanation": "El gamut limita crominancia, y el legalizer ajusta luminancia/crominancia para cumplir límites legales; los distractores confunden funciones o afirman equivalencia incorrecta.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para mostrar correctamente contenido HDR en un display SDR sin conversiones automáticas del receptor, la estrategia operativa adecuada es:",
+          "options": [
+            "Mantener metadatos HDR sin procesar; el display SDR aplicará la conversión de forma transparente.",
+            "Reducir simplemente el contraste para todo el rango sin ajuste de highlights, lo que mantiene la relación de luminancias original.",
+            "Aplicar tone mapping que comprima highlights y ajuste gamma, preservando detalle en altas luces y evitando clipping en SDR.",
+            "Aumentar el brillo para compensar la menor capacidad del display SDR."
+          ],
+          "correctIndex": 2,
+          "explanation": "El tone mapping ajusta rango dinámico para SDR preservando detalle y evitando clipping; los otros enfoques (reducir contraste sin mapping, confiar en display o aumentar brillo) no resuelven la incompatibilidad de rango y tonalidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico probable cuando un NLE no puede acceder a un fichero en crecimiento generado durante un directo:",
+          "options": [
+            "El NLE nunca puede leer ficheros en crecimiento por limitaciones inherentes a todos los contenedores.",
+            "El fichero en crecimiento está corrupto y no podrá recuperarse aunque se cierre.",
+            "El contenedor requiere información final (footer/MOOV) que no está escrita hasta el cierre del fichero; por tanto el NLE no procesa la esencia completa hasta la finalización o uso de un protocolo de captura en vivo.",
+            "La única solución es esperar a que finalice el directo y reiniciar la estación de montaje."
+          ],
+          "correctIndex": 2,
+          "explanation": "Muchos contenedores requieren estructuras finales para indexado; por eso el NLE puede no leer correctamente hasta cierre o si se usa un flujo/captura en vivo compatible; no todos los ficheros son irreparables ni es imprescindible reiniciar sin alternativas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Si la documentación y el controlador de una matriz de vídeo son poco fiables, ¿cuál de las siguientes acciones constituye una excepción (NO recomendada) para verificar directamente un crosspoint concreto?",
+          "options": [
+            "Enviar una señal de prueba identificable por patrón al supuesto origen y comprobar su presencia en el destino con monitor de referencia.",
+            "Solicitar bloqueo y coordinación operativa y medir en el destino con un generador para identificar visualmente el cruce.",
+            "Inserción de un tono/elemento identificador corto y observación en el destino para confirmar el cruce.",
+            "Manipular crosspoints al azar en la matriz en horario de programa para localizar el cruce por prueba‑error."
+          ],
+          "correctIndex": 3,
+          "explanation": "Probar en horario activo o manipular crosspoints sin coordinación puede interrumpir emisiones y es inseguro; las demás acciones consisten en señales de prueba y coordinación, que son métodos recomendables.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Para mantener rendimiento concurrente aceptable en un almacenamiento compartido tipo NEXIS, ¿qué factor operativo suele ser determinante?",
+          "options": [
+            "El color del chasis del equipo y su ubicación física en la sala de servidores.",
+            "La reserva y capacidad de ancho de banda por sesión en la red y la arquitectura de distribución de datos (stripes) entre discos.",
+            "Únicamente la capacidad total en TB, sin relación con el ancho de banda de red.",
+            "El número de usuarios registrados en el directorio aunque no accedan simultáneamente."
+          ],
+          "correctIndex": 1,
+          "explanation": "El rendimiento concurrente depende de ancho de banda efectivo por sesión y cómo los datos se distribuyen/leyen; capacidad en TB sin banda no garantiza concurrencia, y las otras opciones son irrelevantes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Según la Ley 31/1995, ¿qué afirmación describe con mayor precisión un principio básico de la acción preventiva y la obligación empresarial?",
+          "options": [
+            "Solo procede la prevención cuando el trabajador lo solicite por escrito al empleador.",
+            "La prevención es responsabilidad exclusiva del trabajador, que debe autorregular su exposición a riesgos sin intervención empresarial.",
+            "Las obligaciones preventivas se limitan a emitir un documento genérico sin implementar medidas concretas.",
+            "El empleador debe evaluar riesgos, planificar medidas preventivas y proporcionar medios, información y formación para reducir los riesgos en el trabajo."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 31/1995 impone al empleador la evaluación de riesgos y la planificación/posición de medidas, además de información y formación; los distractores externalizan la responsabilidad o minimizan obligaciones.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En flujos de edición, ¿qué operación define correctamente 'link'?",
+          "options": [
+            "Capturar datos desde un dispositivo en vivo hacia el almacenamiento creando nueva copia del archivo.",
+            "Crear referencias en el proyecto hacia los archivos de esencia existentes sin duplicarlos ni copiarlos localmente.",
+            "Importar y convertir ficheros al formato nativo del sistema, creando nuevas versiones transcodificadas.",
+            "Ingerir y consolidar material aplicando verificación de checksums y copia en el MAM."
+          ],
+          "correctIndex": 1,
+          "explanation": "El 'link' consiste en referenciar archivos existentes sin copiarlos; captura, import e ingesta implican creación o conversión de copias y verificación, que distinguen las otras opciones.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Si la tensión aplicada V se mantiene constante y la resistencia R se reduce a la mitad, ¿cómo cambian la corriente I y la potencia P disipada?",
+          "options": [
+            "La corriente se duplica y la potencia disipada se duplica.",
+            "La corriente se duplica y la potencia se cuadruplica.",
+            "La corriente se reduce a la mitad y la potencia se reduce a la mitad.",
+            "La corriente permanece igual y la potencia se reduce a la mitad."
+          ],
+          "correctIndex": 0,
+          "explanation": "I=V/R, por lo que si R se reduce a la mitad I se duplica; P=V*I (o V^2/R), así P también se duplica al halvar R. El distractor más próximo confunde P con V^2 que llevaría a otros factores.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un puesto de edición con uso intensivo y combinado de teclado, ratón y tableta gráfica, ¿qué intervención en el diseño del puesto reduce con mayor eficacia la carga estática y la desviación postural de muñeca y antebrazo?",
+          "options": [
+            "Ajustar la altura y la disposición del teclado y los dispositivos para que los antebrazos estén apoyados y las muñecas mantengan posición neutra (ajuste de silla/mesa y apoyabrazos).",
+            "Sustituir el ratón convencional por un ratón vertical u otra alternativa ergonómica de agarre.",
+            "Programar pausas activas breves y microdescansos (por ejemplo, 5 min cada 30–60 min) para reducir la repetitividad.",
+            "Uso continuado de muñequeras o férulas de compresión durante la jornada para inmovilizar la muñeca mientras se trabaja."
+          ],
+          "correctIndex": 0,
+          "explanation": "La intervención más eficaz para reducir carga estática y desviaciones de muñeca/antebrazo es el ajuste ergonómico del puesto que permita antebrazos apoyados y muñecas en posición neutra; esto disminuye la tensión tendinosa y la desviación ulnar/extension que causan TME en uso combinado de teclado, ratón y tableta. El distractor más próximo (ratón vertical) reduce la pronación de la mano y puede beneficiar el uso del ratón, pero no corrige la postura global ni la interacción simultánea con teclado y tableta. Las pausas activas son medidas complementarias útiles, pero su eficacia máxima depende de un diseño postural correcto; las férulas no son una medida preventiva de diseño de puesto y pueden limitar la destreza necesaria para el trabajo.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al teorema de Nyquist y la frecuencia de muestreo:",
+          "options": [
+            "Para evitar aliasing la frecuencia de muestreo debe ser al menos el doble de la máxima frecuencia presente en la señal.",
+            "La aplicación de un filtro anti‑alias pasa‑bajo antes del muestreo previene energía por encima de Nyquist.",
+            "Aumentar la frecuencia de muestreo reduce directamente el ruido de cuantificación para una misma profundidad de bits.",
+            "Si se usa muestreo por debajo de Nyquist sin filtrado, se produce aliasing irreversiblemente en el dominio muestreado."
+          ],
+          "correctIndex": 2,
+          "explanation": "La reducción del ruido de cuantificación depende de la profundidad en bits, no directamente del aumento de la frecuencia de muestreo; las otras afirmaciones describen principios correctos del teorema y anti‑aliasing.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Relacione estas dos situaciones con J‑cut y L‑cut: primera = el audio de la siguiente toma comienza antes de aparecer su imagen; segunda = la pista sonora de la toma anterior continúa después del corte. Asigne correctamente:",
+          "options": [
+            "Primera: J‑cut. Segunda: L‑cut.",
+            "Primera: L‑cut. Segunda: J‑cut.",
+            "Ambas son J‑cut.",
+            "Ambas son L‑cut."
+          ],
+          "correctIndex": 0,
+          "explanation": "El J‑cut adelanta la entrada de audio de la siguiente toma antes de su imagen; el L‑cut mantiene el audio de la toma previa tras el corte; la diferencia decisiva es la anticipación frente a la permanencia del audio.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "107",
       "title": "Examen 107",
