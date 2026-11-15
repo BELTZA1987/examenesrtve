@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-14",
+  "updatedAt": "2026-11-15",
   "exams": [
+    {
+      "id": "109",
+      "title": "Examen 109",
+      "date": "2026-11-15",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según la Ley 13/2022, ¿qué obligación específica deben cumplir los prestadores de servicios audiovisuales respecto al acceso de menores a contenidos?",
+          "options": [
+            "Delegar la verificación de edad exclusivamente en herramientas de pago externas sin obligación adicional.",
+            "Prohibir cualquier emisión de contenidos que puedan resultar inadecuados para menores en horario diurno.",
+            "Adoptar medidas técnicas y organizativas razonables que impidan el acceso de menores a contenidos no aptos y clasificar los contenidos por edad.",
+            "Limitarse a incluir un aviso en la cabecera del programa indicando la edad recomendada, sin medidas de control de acceso."
+          ],
+          "correctIndex": 2,
+          "explanation": "La Ley exige medidas activas: clasificación por edades y controles técnicos/organizativos para impedir el acceso indebido. Los distractores omiten la obligación de medidas de control (1 correcto) o la confunden con simples avisos o delegación sin medidas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_en_mision",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Durante una misión profesional fuera del centro habitual, ¿qué medida preventiva debe priorizar la empresa para reducir riesgos asociados al desplazamiento y la tarea en destino?",
+          "options": [
+            "Realizar una evaluación específica de riesgos del desplazamiento y la actividad en el lugar, informar y facilitar medios y comunicaciones de emergencia.",
+            "Limitarse a facilitar un seguro de viaje que cubra accidentes y daños materiales.",
+            "Exigir al trabajador que organice por sí mismo el transporte y la vivienda sin valoración previa de riesgos.",
+            "Proveer únicamente un pago de dietas y asumir que la formación habitual en PRL es suficiente."
+          ],
+          "correctIndex": 0,
+          "explanation": "La medida prioritaria es la evaluación específica de riesgos y la adopción de medidas preventivas y de comunicación. Los distractores reducen la responsabilidad a compensaciones económicas o seguros sin evaluación ni medidas concretas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Al componer un gráfico sobre fondo de alto contraste aparecen halos oscuros en los bordes; ¿qué acción corrige el problema cuando el gráfico proviene con canal alpha premultiplicado?",
+          "options": [
+            "Tratar el archivo como 'straight' (no premultiplicado) y aplicar la operación de dividir RGB entre alpha.",
+            "Marcar/interpretar el archivo como 'premultiplicado' o re‑premultiplicar la RGB con su alpha antes de la composición.",
+            "Aplicar una máscara de desenfoque (feather) al alpha para suavizar el borde sin cambiar la interpretación.",
+            "Aumentar el gamma del fondo para disimular el halo."
+          ],
+          "correctIndex": 1,
+          "explanation": "Si la imagen está almacenada premultiplicada, debe interpretarse como tal o re‑premultiplicarse; tratarla como straight genera halos oscuros. El distractor más cercano (tratar como straight) es incorrecto porque provoca la propia aparición de halos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un servidor que sirve ficheros preencodeados a clientes, ¿qué parámetro técnico suele determinar primero la máxima concurrencia de reproducciones simultáneas?",
+          "options": [
+            "La potencia de la GPU del servidor.",
+            "La velocidad de rotación del disco en cada unidad del RAID.",
+            "La capacidad de salida de red (ancho de banda agregado) disponible en el servidor.",
+            "La longitud de los nombres de archivo en el sistema de ficheros."
+          ],
+          "correctIndex": 2,
+          "explanation": "Para ficheros preencodeados servidos a clientes, la limitación primaria es el ancho de banda de salida agregado. Los distractores son verosímiles (disco puede afectar I/O, GPU no relevante) pero ninguno domina tanto como la capacidad de red.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_red_ip",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Dos estaciones en el mismo switch tienen direcciones 192.168.10.10/24 y 192.168.11.20/24 y no se ven entre sí; ¿cuál es la causa más probable del fallo de conectividad directa?",
+          "options": [
+            "Un fallo en el servidor DNS que impide la resolución de nombres entre estaciones.",
+            "Pertenecer a subredes diferentes por máscara/adresado (192.168.10.0/24 vs 192.168.11.0/24) sin enrutamiento entre ellas.",
+            "Un problema de latencia en la red que impide el establecimiento de la conexión.",
+            "Un conflicto de direcciones MAC en la tabla de la switch."
+          ],
+          "correctIndex": 1,
+          "explanation": "Las IP pertenecen a subredes distintas (/24), por lo que sin un router/enrutamiento no pueden comunicarse directamente. Los demás distractores afectan otros niveles; el más próximo (conflicto MAC) produciría síntomas distintos (tráfico errático), no aislamiento por subred.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_true_peak",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Antes de entregar un programa con límite de pico entre muestras, ¿qué procedimiento técnico debe aplicarse para garantizar el cumplimiento de 'True Peak'?",
+          "options": [
+            "Usar un compresor multibanda sin medición previa y confiar en la reducción de picos.",
+            "Medir únicamente el sample peak del fichero WAV y ajustar niveles para que ningún sample alcance 0 dBFS.",
+            "Normalizar todo a −1 dBFS sin medición de picos entre muestras.",
+            "Medir con un medidor de True Peak que detecte picos entre muestras (upsampling/interpolación) y, de ser necesario, aplicar un limitador True‑Peak certificado."
+          ],
+          "correctIndex": 3,
+          "explanation": "True Peak requiere medición que detecte picos entre muestras (interpolación/upsampling) y, si procede, limitación True‑Peak. Los distractores confunden sample peak con true peak o proponen medidas insuficientes.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_ritmo",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Si se desea aumentar el ritmo percibido de una secuencia sin alterar la acción dentro de los planos, ¿qué ajuste corresponde al ritmo externo?",
+          "options": [
+            "Modificar la composición interna del plano para intensificar la acción.",
+            "Aumentar la velocidad de reproducción de los clips para acelerar el movimiento interno.",
+            "Reducir la duración de los planos manteniendo el movimiento interno intacto.",
+            "Aplicar un efecto de aceleración de movimiento (time remapping) sobre los personajes."
+          ],
+          "correctIndex": 2,
+          "explanation": "El ritmo externo depende de la duración de los planos; acortar planos acelera la percepción temporal sin cambiar lo que ocurre dentro de cada plano. Los distractores alteran el ritmo interno (velocidad o composición), no sólo el externo.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al principio constitucional de igualdad y prohibición de discriminación:",
+          "options": [
+            "La Constitución autoriza la eliminación completa y permanente de todas las diferencias de trato por género en todos los contextos sin excepción.",
+            "La Constitución permite medidas razonables de acción positiva para corregir desigualdades objetivas.",
+            "La no discriminación impide cualquier distinción basada en criterios objetivos relacionados con la capacidad profesional para un puesto.",
+            "El principio obliga a tratar a las personas con igualdad efectiva ante la ley y a prevenir discriminaciones por sexo o ideología."
+          ],
+          "correctIndex": 0,
+          "explanation": "La excepción es la afirmación 4: la Constitución permite medidas específicas y razonables, pero no exige la eliminación completa e incondicional de toda diferencia en todos los contextos. La diferencia decisiva es que 4 plantea una eliminación absoluta que no refleja el principio jurídico real.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a las diferencias operativas entre RGB y YCbCr:",
+          "options": [
+            "YCbCr describe directamente la sensibilidad de los conos retinianos humanos y es un espacio perceptual equivalente a LMS.",
+            "YCbCr separa luminancia (Y) y crominancia (Cb/Cr), facilitando submuestreo y eficiencia en compresión.",
+            "YCbCr es preferible para transmisión y compresión por permitir reducción de resolución cromática sin afectar tanto la percepción de luminancia.",
+            "RGB representa directamente canales de color primarios (R, G, B) útiles en procesos de creación y compuestos por píxel."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación 4 es la excepción: YCbCr es una representación técnica de luminancia/crominancia derivada de RGB, no un espacio basado directamente en la respuesta de los conos (LMS). Las demás describen funciones operativas correctas.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "prl_incendio",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En un conato de incendio localizado en un equipo eléctrico en plató, ¿qué combinación de agente extintor y medida de seguridad eléctrica es la más adecuada para intervenir de forma inmediata y segura?",
+          "options": [
+            "Emplear un extintor de polvo químico seco (ABC) sobre el equipo tras cortar la alimentación eléctrica; mantener la actividad del plató salvo indicación de emergencia.",
+            "Emplear un extintor de CO2 dirigido al foco y, si es posible sin riesgo, cortar la alimentación eléctrica desde el interruptor o diferencial; activar alarma y evacuar si no se controla.",
+            "Desconectar el equipo y aplicar un extintor de agua pulverizada sobre el incendio; ventilar la zona inmediatamente y notificar a servicios de mantenimiento.",
+            "Aplicar espuma extintora sobre el equipo y cortar la alimentación únicamente si el fuego se propaga; evacuar al personal solo en caso de humo denso."
+          ],
+          "correctIndex": 1,
+          "explanation": "La actuación correcta es cortar la alimentación eléctrica (si puede hacerse con seguridad) y extinguir con CO2: el CO2 es no conductor y no deja residuos que dañen los equipos, por lo que resulta idóneo para fuegos incipientes en aparatos eléctricos. Cortar la alimentación evita riesgo de electrocución y reduce la probabilidad de re‑ignición. El distractor más próximo (uso de polvo ABC tras cortar la alimentación) es técnicamente viable —el polvo es eficaz contra incendios eléctricos— pero deja residuos corrosivos y puede dañar equipos y complicar la recuperación, por eso CO2 es preferible cuando está disponible. El agua y las espumas son inapropiadas en equipos eléctricos por su conductividad y riesgo añadido; retrasar el corte de la alimentación o mantener la actividad del plató sería inseguro.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para mitigar la obsolescencia y garantizar preservación a largo plazo, ¿qué política operativa es la más adecuada?",
+          "options": [
+            "Plan de migración periódica a formatos y soportes actuales, verificación de integridad (checksums) y copias en soportes y ubicaciones diversas.",
+            "Mantener los archivos en el formato original sin tocar y confiar en el soporte físico más robusto disponible.",
+            "Realizar migraciones solo cuando el soporte falla y no mantener registros sobre versiones.",
+            "Usar un único formato propietario de alta calidad y una sola copia almacenada en un centro con acceso restringido."
+          ],
+          "correctIndex": 0,
+          "explanation": "La política correcta combina migración periódica, verificaciones de integridad y copias múltiples en ubicaciones distintas. Los distractores omiten verificación, redundancia o suponen confiar en un solo soporte/format propietario.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_offline_online",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Relación entre edición en proxies (offline), la lista de decisiones y el reconformado a los originales:",
+          "options": [
+            "El reconformado se realiza automáticamente sin necesidad de metadatos si los nombres de archivo coinciden parcialmente.",
+            "Es suficiente que la lista indique solo la duración final de la secuencia para reconstruir el proyecto en originales.",
+            "El reconformado exige que la lista de decisiones refiera de manera fidedigna timecodes/reel IDs o identificadores del material fuente para link frame‑accurate con los originales.",
+            "Basta con conservar los previews de la sesión offline para obtener un reconformado perfecto a los originales."
+          ],
+          "correctIndex": 2,
+          "explanation": "El reconformado requiere referencias precisas (timecode, identificadores del origen) para relink frame‑accurate. Los distractores subestiman la necesidad de metadatos y referencias precisas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_metadatos",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Un MAM recibe archivos sin metadatos técnicos (codec, perfil, resolución). ¿Cuál es la consecuencia operativa inmediata más habitual?",
+          "options": [
+            "Capacidad de búsqueda enriquecida por defecto al no añadir metadatos técnicos.",
+            "Pérdida automática del contenido audiovisual por corrupción del archivo.",
+            "Mejora en la velocidad de ingest al no procesar metadatos técnicos.",
+            "Imposibilidad de automatizar transcodings y verificación de compatibilidad de reproducción, obligando a inspección manual y riesgos de error."
+          ],
+          "correctIndex": 3,
+          "explanation": "La ausencia de metadatos técnicos impide operaciones automatizadas (transcoding, comprobación de compatibilidad), forzando intervenciones manuales. Los demás distractores son incorrectos o contrarios a la realidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_elipsis",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Elija la descripción que mejor diferencia la elipsis de la compresión temporal frente a otras técnicas de montaje:",
+          "options": [
+            "La elipsis reutiliza el mismo plano repetido para crear un efecto de bucle temporal.",
+            "La elipsis ralentiza el tiempo interno del plano para intensificar la emoción del personaje.",
+            "La elipsis fusiona simultáneamente dos acciones diferentes en pantalla dividida.",
+            "La elipsis elimina intervalos temporales narrativos entre dos sucesos manteniendo la comprensión causal y secuencial."
+          ],
+          "correctIndex": 3,
+          "explanation": "La elipsis es precisamente la eliminación de tiempo entre acciones manteniendo continuidad narrativa. Los distractores describen ralentización, pantalla dividida o bucles, que no son elipsis.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Respecto al II Plan de Igualdad y la Guía de Igualdad de RTVE, ¿qué medida es coherente con sus líneas de actuación?",
+          "options": [
+            "Externalizar completamente la revisión de guiones sin formación interna en igualdad.",
+            "Imponer cuotas fijas de presencia por género en todos los puestos de trabajo sin análisis previo.",
+            "Permitir representaciones estereotipadas en programas siempre que exista una nota editorial justificativa.",
+            "Establecer protocolos de prevención y actuación ante el acoso sexual, y revisar lenguaje y representación no sexista en contenidos."
+          ],
+          "correctIndex": 3,
+          "explanation": "El Plan promueve protocolos de prevención del acoso y medidas en lenguaje y representación. Los distractores proponen medidas extremas, justifican estereotipos o externalizan sin formación, contrarias al Plan.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Para asegurar recuperabilidad de un clip XDCAM con spanning (dividido entre soportes), ¿qué acción operacional es imprescindible al copiar el material?",
+          "options": [
+            "Copiar únicamente los ficheros MXF sueltos, ignorando los archivos de índice.",
+            "Conservar y copiar la estructura de carpetas y los ficheros de índice/metadatos propios del soporte XDCAM antes de abrir o reimportar.",
+            "Renombrar los MXF para numeración continua y borrar las carpetas originales.",
+            "Convertir inmediatamente todos los MXF a MOV antes de verificar spanning."
+          ],
+          "correctIndex": 1,
+          "explanation": "Los clips spanning requieren preservar la estructura de carpetas y los índices/metadatos para reconstrucción. Copiar solo MXF o renombrar rompe la relación; conversión previa sin índices puede impedir la recuperación frame‑accurate.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un RGB Parade (Rec.709) la forma de onda indica que en las sombras los tres canales coinciden, pero a partir de los tonos medios y en altas luces el canal azul queda aproximadamente 30 unidades por debajo de rojo y verde. Diagnóstico operativo:",
+          "options": [
+            "Offset (pedestal) del canal azul incorrecto, que desplaza hacia abajo sólo las sombras.",
+            "Ganancia (gain) del canal azul insuficiente, causando un desplazamiento hacia abajo en medios y altas luces.",
+            "Aplicación errónea de una corrección de gamma al canal azul que comprime medios y altas luces.",
+            "Atenuación por fallo de conexión o cableado del canal azul que afecta uniformemente todo el rango."
+          ],
+          "correctIndex": 1,
+          "explanation": "La ganancia (gain) actúa principalmente sobre tonos medios y altas luces; una ganancia azul insuficiente produce exactamente que el azul quede ~30 unidades por debajo en medios/altas mientras las sombras permanezcan alineadas. El distractor más cercano es la corrección de gamma (C), pero la gamma modifica la forma de la curva de modo no lineal y produciría una desviación variable y no un desplazamiento casi constante en medios/altas; el offset/pedestal (B) afectaría las sombras y no sólo medios/altas; y la atenuación por cableado (D) tendería a reducir el nivel de forma más uniforme en todo el rango, incluida la zona de sombras.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Comparación de métodos para mezclar cadencias distintas: ¿qué efecto es característico del uso de frame blending frente a un método de conversión con motion‑compensation?",
+          "options": [
+            "La conversión por motion‑compensation siempre produce parpadeo en zonas estáticas.",
+            "El frame blending elimina por completo cualquier judder sin artefactos.",
+            "El frame blending produce imágenes fantasma o borrosas en movimiento; la conversión con motion‑compensation busca mantener continuidad de movimiento reduciendo esos artefactos.",
+            "El frame blending genera judder más pronunciado que la simple duplicación de frames."
+          ],
+          "correctIndex": 2,
+          "explanation": "Frame blending mezcla fotogramas provocando ghosting; motion‑compensation reduce ghosting y judder mejor. Los demás distractores son falsos o exageran efectos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Una cámara ha grabado un canal de 'auxiliary timecode' (LTC) en una pista de audio además del timecode interno: ¿cómo debe procederse en la ingest para usar ese AUX-TC como referencia de sincronización?",
+          "options": [
+            "Eliminar la pista de audio que contiene el LTC para evitar confusiones.",
+            "Ignorar la pista de audio y confiar únicamente en el timecode interno de la cámara.",
+            "Reemplazar el timecode interno por valores de tiempo manuales.",
+            "Configurar en la operación de ingest que la pista de audio LTC sea interpretada como timecode fuente y asignarla como 'source timecode' para ese clip."
+          ],
+          "correctIndex": 3,
+          "explanation": "Para usar el auxiliary LTC como referencia hay que mapearlo como source timecode durante la ingest. Ignorar o eliminar la pista impide aprovechar la referencia externa.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a ProRes y DNxHR como códecs intermedios en postproducción, indique la afirmación más adecuada para asegurar compatibilidad y flujo de trabajo:",
+          "options": [
+            "Ambos son códecs intraframe diseñados para edición y reconformado frame‑accurate; la elección depende de plataforma, perfiles y requisitos de color/profundidad.",
+            "ProRes es un códec de Long‑GOP orientado a streaming y DNxHR es exclusivamente para archivo frío.",
+            "ProRes no admite señales en 10 bit mientras que DNxHR sí soporta solo 8 bit.",
+            "Uno de ellos garantiza siempre compatibilidad automática con todas las estaciones sin necesidad de perfiles o plugins."
+          ],
+          "correctIndex": 0,
+          "explanation": "La afirmación correcta indica que ambos son intraframe y adecuados para edición; la elección depende de plataforma y perfiles. Los distractores contienen errores técnicos: ProRes no es Long‑GOP, ProRes sí tiene perfiles 10‑bit, y ninguna solución garantiza compatibilidad absoluta sin considerar perfiles/plugins.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "108",
       "title": "Examen 108",
