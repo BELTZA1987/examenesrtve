@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-15",
+  "updatedAt": "2026-11-16",
   "exams": [
+    {
+      "id": "110",
+      "title": "Examen 110",
+      "date": "2026-11-16",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según el III Convenio Colectivo de RTVE, ¿qué criterio principal se emplea para clasificar las ocupaciones en grupos profesionales?",
+          "options": [
+            "La jornada semanal y el régimen de turnos asignado al puesto.",
+            "La antigüedad del trabajador en la Corporación y la titulación académica.",
+            "La descripción de funciones, responsabilidades y requisitos profesionales del puesto.",
+            "La adscripción geográfica del puesto y la unidad organizativa donde presta servicio."
+          ],
+          "correctIndex": 2,
+          "explanation": "El criterio decisivo para la clasificación es la descripción de funciones y responsabilidades y los requisitos profesionales; es la base para agrupar ocupaciones. El distractor más próximo (antigüedad/titulación) puede influir en condiciones salariales, pero no define el grupo profesional.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Procedimiento operativo: al etalonar retratos, ¿cómo debe emplearse la línea de tono de piel en el vectorscopio y cuál es su limitación?",
+          "options": [
+            "Usarla como control absoluto de gamut; cualquier desviación implica rechazo del material por incumplimiento de estándar.",
+            "Alinear siempre los tonos de piel exactamente sobre la línea sin excepción; la coincidencia asegura fidelidad universal.",
+            "Emplearla únicamente para ajustar luminancia de pieles; el vectorscopio no aporta información útil sobre crominancia.",
+            "Usarla como referencia orientativa de matiz y saturación, teniendo en cuenta que la posición exacta varía según etnia e iluminación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La línea sirve como referencia para matiz y saturación pero no es un valor absoluto: la posición puede variar por etnia, iluminación y estética. El distractor más cercano (alinear siempre) falla porque niega la variabilidad práctica y estética.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_intra_longgop",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: elija la afirmación que resume correctamente las diferencias operativas entre códecs intraframe y Long‑GOP en acceso aleatorio, eficiencia, carga de decodificación y robustez de edición.",
+          "options": [
+            "Ambos tipos presentan idéntico comportamiento en edición y acceso aleatorio; la única diferencia es el nombre técnico.",
+            "Long‑GOP facilita acceso frame‑accurate y es más robusto ante errores de edición, mientras que intraframe requiere decodificación de GOP completas para cada fotograma.",
+            "Intraframe siempre requiere mayor carga de decodificación que Long‑GOP; Long‑GOP es superior en todos los demás aspectos operativos.",
+            "Intraframe ofrece acceso frame‑accurate y mayor robustez en edición pero menor eficiencia de compresión; Long‑GOP mejora la eficiencia, complica el acceso aleatorio y exige más decodificación de referencias."
+          ],
+          "correctIndex": 3,
+          "explanation": "La decisión operativa clásica: intraframe permite acceso y edición frame‑accurate con menos dependencia de tramas de referencia pero ocupa más; Long‑GOP es más eficiente en bitrate pero aumenta la complejidad de decodificación y reduce la robustez para cortes precisos. El distractor más cercano (que invierte las ventajas) confunde el comportamiento real en edición.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_matchframe",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Seleccione una limitación operativa habitual del comando Match Frame al localizar la fuente original de un fotograma:",
+          "options": [
+            "No funciona si la fuente original ha sido eliminada del proyecto y no existe referencia a su archivo de origen.",
+            "Falla sistemáticamente cuando el clip ha sido movido dentro del mismo proyecto aunque mantenga el mismo archivo de origen.",
+            "Localiza siempre la toma original aunque el clip en la línea de tiempo esté retocado con speed‑ramp o timewarp.",
+            "Encuentra la versión original aunque ésta haya sido consolidada y su metadata técnica modificada sin actualizar."
+          ],
+          "correctIndex": 0,
+          "explanation": "Match Frame requiere conservar la referencia a la fuente; si el archivo origen fue eliminado del proyecto o la referencia perdida, no localizará la fuente. El distractor más próximo (consolidado/metadata modificada) es plausible pero depende de si la referencia de proyecto se conserva; la limitación habitual y segura es la ausencia de la fuente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Tras una copia verificada del contenido de un soporte SSD de rodaje, ¿cuál es la práctica operativa adecuada antes de volver a usarlo en grabación?",
+          "options": [
+            "Sobrescribir inmediatamente sin más comprobaciones para ahorrar tiempo operativo.",
+            "Formatear el soporte en el dispositivo o formato previsto únicamente después de comprobar y registrar la copia verificada y el estado del soporte.",
+            "Eliminar manualmente ficheros antiguos con el explorador y empezar a grabar, sin formatear.",
+            "Realizar siempre un formateo de bajo nivel que borre todas las celdas, como rutina obligatoria tras cada descarga."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica adecuada es verificar y registrar la copia y el estado antes de formatear al sistema objetivo; evita pérdida de datos y conserva trazabilidad. El distractor más próximo (formateo de bajo nivel siempre) es perjudicial por aumentar desgaste y no es necesario tras copia verificada.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: al sumar a mono una mezcla estéreo el diálogo sufre atenuación marcada. ¿Cuál es la causa más probable?",
+          "options": [
+            "Una inversión de polaridad en uno de los canales que provoca cancelación parcial de las frecuencias coincidentes al sumarse a mono.",
+            "Un exceso de compresión dinámica en el canal izquierdo que reduce el nivel medio del diálogo.",
+            "Un fallo en la tarjeta de sonido que reduce la ganancia de salida del bus master.",
+            "La presencia de reverb excesiva en la mezcla que disminuye la inteligibilidad al sumarla a mono."
+          ],
+          "correctIndex": 0,
+          "explanation": "La inversión de polaridad en uno de los canales genera cancelación al sumar a mono, explicando la atenuación súbita. El distractor más cercano (exceso de compresión) puede bajar niveles pero no produce la cancelación característica que sugiere un problema de fase/polaridad.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "language_intelectual",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al montaje intelectual y la asociación de ideas por yuxtaposición:",
+          "options": [
+            "Busca generar significado mediante la colocación de planos que establecen relaciones conceptuales entre elementos.",
+            "Se apoya en la elipsis narrativa y la metáfora visual para evocar ideas sin explicarlas explícitamente.",
+            "Pretende asegurar una continuidad espacial y causal estricta entre planos como su objetivo principal.",
+            "Utiliza contrastes y asociaciones inesperadas para crear lectura crítica o simbólica."
+          ],
+          "correctIndex": 2,
+          "explanation": "El montaje intelectual no tiene como objetivo principal la continuidad espacial y causal estricta; esa es más propia del montaje clásico. El distractor más próximo (uso de metáfora) es coherente con la naturaleza asociativa del montaje intelectual.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Según la reforma de la Ley 5/2017, señale la finalidad esencial de la modificación y la forma de designación de los órganos de RTVE:",
+          "options": [
+            "Privatizar parcialmente la gestión de RTVE para garantizar pluralismo, con designación directa por el Gobierno.",
+            "Restablecer la independencia y pluralismo mediante la elección parlamentaria de sus órganos por mayoría cualificada, concretamente un acuerdo en las Cortes con mayoría reforzada.",
+            "Delegar la elección de órganos en una comisión interna de RTVE para acelerar procedimientos y evitar dependencia parlamentaria.",
+            "Asignar la elección de los órganos al Tribunal Constitucional para asegurar su imparcialidad."
+          ],
+          "correctIndex": 1,
+          "explanation": "La reforma persigue recuperar independencia y pluralismo mediante elección parlamentaria con requisitos de mayoría cualificada; los distractores proponen mecanismos distintos y no reflejan la finalidad y el procedimiento legislativo real.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Seleccione la afirmación que constituye una excepción respecto a criterios adecuados para diseñar proxies de edición (resolución, bitrate, códec):",
+          "options": [
+            "Mantener mismo frame rate y aspect ratio que la esencia original para evitar desajustes temporales o de encuadre.",
+            "Elegir una resolución reducida (p. ej. 1/4–1/3) y un bitrate suficiente para scrubbing fluido sin ocupar espacio excesivo.",
+            "Usar un bitrate extremadamente bajo (p. ej. <200 kbps) en códec interframe para minimizar espacio en disco cuando se requiere scrubbing cuadro‑a‑cuadro.",
+            "Preferir códecs intra‑frame cuando la CPU es limitada y se necesita scrubbing y corte frame‑accurate."
+          ],
+          "correctIndex": 2,
+          "explanation": "Un bitrate extremadamente bajo en códec interframe no es adecuado para scrubbing cuadro‑a‑cuadro: produce artefactos y dificulta acceso aleatorio. El distractor más cercano (uso de intraframe con CPU limitada) es correcto operativamente porque reduce dependencia de decodificación de referencias.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "language_eje_180",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para cambiar el eje de acción entre planos sin perder continuidad espacial, ¿qué recurso operativo es el más adecuado?",
+          "options": [
+            "Invertir el encuadre horizontal en postproducción para mantener la continuidad sin necesidad de nuevo material.",
+            "Realizar el corte directo y confiar en la atención del espectador para restablecer la dirección sin recurso visual intermedio.",
+            "Insertar un plano neutral situado exactamente sobre la línea de base (plano de paso/establishing shot en la línea) o mostrar el movimiento de los personajes cruzando la línea para reorientar el eje.",
+            "Cambiar únicamente la distancia focal entre planos para compensar el cambio de eje."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta es reorientar con un plano neutral en la propia línea o mostrar el cruce del eje mediante movimiento; garantiza continuidad espacial. Los distractores (corte directo, inversión horizontal) son soluciones que rompen o falsean la coherencia espacial.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Interpretación: en una sesión de efectos en tiempo real acelerados por GPU, ¿cuál es la relación operativa entre CPU, GPU y RAM y cuál suele ser el cuello de botella más habitual?",
+          "options": [
+            "La CPU ejecuta todos los efectos en tiempo real; la GPU sólo se utiliza para salida a pantalla; la RAM no influye en el rendimiento de efectos.",
+            "La GPU ejecuta sombreadores y efectos por píxel siendo el cuello de botella principal en efectos intensivos; la CPU gestiona I/O, descompresión y coordinación; la RAM limita caches y búferes.",
+            "La RAM realiza cómputos de efectos y es el componente limitante siempre; la CPU y la GPU realizan tareas auxiliares sin impacto en tiempo real.",
+            "El almacenamiento (HDD/SSD) sustituye a RAM en sistemas modernos, por lo que la memoria no es factor determinante."
+          ],
+          "correctIndex": 1,
+          "explanation": "En flujos con efectos GPU‑accelerated, la GPU suele ser el cuello de botella para shaders y operaciones por píxel; la CPU gestiona descompresión, decodificación y control; la RAM limita buffers. Los distractores atribuyen funciones incorrectas y subestiman el papel de la GPU y la RAM.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estas disposiciones ergonómicas: ¿qué combinación reduce con mayor eficacia la tensión postural en un puesto de edición?",
+          "options": [
+            "Silla alta sin apoyo lumbar, pantalla colocada por debajo de la línea de mirada y teclado elevado sobre la mesa.",
+            "Silla ajustada con soporte lumbar, reposabrazos que mantengan antebrazos paralelos al plano de trabajo y pies apoyados en el suelo o reposapiés.",
+            "Silla fija, antebrazos apoyados en el borde de la mesa y uso intensivo de atajos de teclado sin reposamuñecas.",
+            "Reposapiés elevado, pantalla muy cerca del rostro y asiento sin ajuste de altura."
+          ],
+          "correctIndex": 1,
+          "explanation": "La combinación que incluye soporte lumbar, apoyo de antebrazos a la altura del plano de trabajo y pies apoyados ofrece la mejor reducción de tensión. Los distractores contienen disposiciones que empeoran la postura o aumentan tensión cervical y de extremidades.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Compare estos niveles RAID y elija el que permite reconstrucción tras la pérdida simultánea de dos discos en una configuración estándar de paridad distribuida:",
+          "options": [
+            "RAID 0",
+            "RAID 1",
+            "RAID 5",
+            "RAID 6"
+          ],
+          "correctIndex": 3,
+          "explanation": "RAID 6 emplea paridad doble distribuida y tolera la pérdida simultánea de dos discos permitiendo reconstrucción; RAID 5 tolera sólo un fallo de disco, RAID 1 doble espejo tolera fallos según configuración pero no ofrece paridad distribuida como RAID 6. RAID 0 no ofrece tolerancia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la obligación del trabajador en materia de prevención según la normativa vigente:",
+          "options": [
+            "Utilizar correctamente los equipos de protección y medidas preventivas facilitadas por la empresa.",
+            "Proporcionar la formación en prevención a sus compañeros.",
+            "Establecer el plan de prevención de la empresa.",
+            "Realizar las evaluaciones de riesgo del centro de trabajo."
+          ],
+          "correctIndex": 0,
+          "explanation": "El trabajador tiene la obligación de usar correctamente los medios de protección puestos a su disposición; las otras opciones corresponden a responsabilidades de la empresa o servicios de prevención.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Respecto al modelo de financiación de la Ley 8/2009, ¿qué fuente se ajusta mejor a sus principios y restricciones?",
+          "options": [
+            "Financiación exclusiva por suscripciones voluntarias de espectadores.",
+            "Publicidad comercial ilimitada y patrocinio comercial directo como principal fuente.",
+            "Asignación presupuestaria del Estado específicamente destinada a RTVE y aportaciones públicas reguladas.",
+            "Venta indiscriminada de contenidos a terceros sin control presupuestario."
+          ],
+          "correctIndex": 2,
+          "explanation": "El modelo previsto se basa en financiación pública regulada (asignación presupuestaria y aportaciones establecidas), con restricciones sobre la comercialización. Los distractores proponen fuentes contrarias a las limitaciones establecidas por la ley.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique la secuencia operativa mínima correcta durante una ingesta verificada:",
+          "options": [
+            "Copiar archivos al almacenamiento de destino → generar y comparar checksums → validar estructura y metadatos → registrar la ingesta.",
+            "Generar checksums en origen → formatear soportes → copiar archivos → borrar originales.",
+            "Validar estructura y metadatos → copiar archivos → generar checksums → registrar ingesta sin comprobación.",
+            "Copiar archivos → renombrar archivos por lote → registrar ingesta → efectuar checksums sólo si hay error."
+          ],
+          "correctIndex": 0,
+          "explanation": "La secuencia mínima fiable es copiar, generar y comparar checksums para verificar integridad, validar estructura/metadatos y registrar. Los otros órdenes omiten o retrasan comprobaciones esenciales o introducen pasos arriesgados.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que diferencia correctamente corrección primaria y secundaria:",
+          "options": [
+            "La corrección primaria es siempre creativa y la secundaria únicamente técnica.",
+            "La corrección primaria solo afecta al canal alfa; la secundaria solo modifica la luminancia.",
+            "La corrección primaria se aplica únicamente al master final; la secundaria solo en proxies.",
+            "La corrección primaria ajusta parámetros globales (exposición, balance y contraste); la secundaria actúa sobre selecciones o máscaras para corregir zonas o tonos concretos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La corrección primaria trata ajustes globales mientras la secundaria trabaja sobre selecciones/máscaras para cambios localizados. Los distractores atribuyen funciones incorrectas o limitadas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento: al sincronizar fuentes SD y HD en una instalación mixta, ¿qué señal de referencia debe emplearse para cada caso?",
+          "options": [
+            "Tri‑level sync para señales SD y black burst para señales HD.",
+            "Black burst para señales SD y tri‑level sync para señales HD.",
+            "Usar siempre black burst independientemente de la resolución.",
+            "No es necesario usar señales de referencia en instalaciones profesionales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica estable es emplear black burst en SD y tri‑level para HD; usar la referencia adecuada garantiza sincronismo correcto. Los distractores invierten o descartan la señal de referencia, lo cual no es correcto operativamente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_relink",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: ante enlaces incorrectos en un proyecto de edición, ¿qué criterio técnico suele ser el primer intento más robusto para relinkear material a sus archivos originales?",
+          "options": [
+            "Coincidencia por la ubicación física del archivo en la estructura de carpetas sin considerar metadata.",
+            "Coincidencia exclusiva por fecha de modificación del archivo en el sistema de ficheros.",
+            "Coincidencia por tamaño de archivo en bytes como único criterio fiable.",
+            "Coincidencia por timecode de inicio y nombre/reel del clip (timecode + identificador de origen)."
+          ],
+          "correctIndex": 3,
+          "explanation": "El criterio más robusto de primer intento combina timecode y nombre/reel del clip para identificar la toma; los otros distractores (fecha, tamaño, ubicación) son frágiles y pueden producir enlaces incorrectos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_lut_log",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la distinción entre LUT de visualización (para señales log) y LUT creativa de corrección:",
+          "options": [
+            "Una LUT de visualización debe sustituir siempre a la corrección primaria como paso final de etalonaje creativo.",
+            "La LUT creativa está pensada para definir el 'look' final y suele aplicarse como etapa de corrección secundaria/creativa.",
+            "Una LUT de visualización transforma log a aspecto de monitor para valoración, sin alterar la corrección base del material.",
+            "Las LUTs de visualización y creativas se aplican en momentos diferentes del flujo y tienen objetivos distintos: evaluación frente a estilo."
+          ],
+          "correctIndex": 0,
+          "explanation": "Decir que una LUT de visualización debe sustituir a la corrección primaria como paso final es incorrecto; las LUT de visualización son para valorar la imagen y no pretenden reemplazar la corrección primaria ni el proceso creativo. El distractor más cercano confunde función de evaluación con decisión creativa.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "109",
       "title": "Examen 109",
