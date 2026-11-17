@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16",
+  "updatedAt": "2026-11-17",
   "exams": [
+    {
+      "id": "111",
+      "title": "Examen 111",
+      "date": "2026-11-17",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la afirmación que mejor diferencia libertad de expresión y derecho a la información en el marco constitucional:",
+          "options": [
+            "La libertad de expresión ampara la manifestación de pensamientos y opiniones personales; el derecho a la información reconoce además un interés social colectivo en el acceso a hechos relevantes y en la actividad informativa profesional.",
+            "La libertad de expresión protege únicamente la actividad de los medios profesionales; el derecho a la información es un derecho individual que permite a cualquier persona exigir noticias veraces.",
+            "Ambos términos son sinónimos en la Constitución: se utilizan indistintamente para garantizar que todos puedan publicar noticias sin límite alguno.",
+            "La libertad de expresión es un derecho absoluto; el derecho a la información está supeditado exclusivamente a la gestión administrativa de los medios públicos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La diferencia decisiva es que la libertad de expresión protege la manifestación de ideas individuales, mientras que el derecho a la información incorpora un componente social y profesional (acceso a hechos relevantes y función informativa); las otras opciones confunden alcance o afirman absolutos incorrectos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Antes de publicar una playlist en emisión, ¿qué comprobación previene con mayor probabilidad la pérdida de transiciones previstas entre clips?",
+          "options": [
+            "Crear proxies de baja resolución que sustituyan temporalmente la esencia para acelerar la publicación.",
+            "Transcodificar todos los clips al mismo códec de máxima calidad para evitar reescalados durante el playout.",
+            "Eliminar cualquier metadato de spanning para forzar la concatenación física de archivos en un único fichero.",
+            "Verificar que todos los clips tienen timecode continuo sin gaps y que la opción de reproducción seamless o gapless está activada en el servidor y en la playlist."
+          ],
+          "correctIndex": 3,
+          "explanation": "La comprobación determinante es la continuidad temporal y la activación del modo gapless; transcodificar o manipular metadatos no garantiza ausencia de saltos si la reproducción no está configurada como seamless, y crear proxies no afecta a la continuidad en playout.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "En una cadena audiovisual basada en etapas analógicas o entradas/salidas de línea, ¿cuál es la consecuencia operativa más probable cuando existe una desadaptación de impedancias entre la salida de una etapa y la entrada de la siguiente?",
+          "options": [
+            "Pérdida apreciable de nivel de señal y empeoramiento de la relación señal‑ruido, con posible distorsión por carga incorrecta.",
+            "Aparición de reflexiones y anillos temporales que producen ecos visibles en la imagen.",
+            "Aumento significativo del consumo de corriente en la etapa emisora hasta provocar sobrecalentamiento del equipo.",
+            "Cambio permanente en la cromaticidad y en el gamut de la señal de vídeo independientemente del nivel. "
+          ],
+          "correctIndex": 0,
+          "explanation": "La desadaptación entre salida y entrada suele comportarse como un divisor de tensión cuando la impedancia de carga no es la adecuada, lo que provoca pérdida de nivel y, por tanto, empeoramiento de la relación señal‑ruido y posible distorsión por sobrecarga o por operar fuera del rango lineal. Las reflexiones y anillos (opción B) son típicas de desadaptaciones en líneas de transmisión a altas frecuencias o en enlaces coaxiales largos (problema de terminations), pero no son el síntoma más inmediato entre etapas electrónicas cortas; el sobrecalentamiento (C) y la alteración permanente de cromaticidad (D) no son consecuencias directas y habituales de una simple desadaptación de impedancias.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "En un medidor de correlación de fase estéreo, ¿qué lectura y su interpretación indican simultáneamente buena compatibilidad al sumarse a mono y una relación estéreo estable?",
+          "options": [
+            "Valor cercano a +1: los canales están fuertemente correlados, la suma a mono mantiene nivel y la imagen estéreo es coherente.",
+            "Valor cercano a 0: los canales son independientes y la suma a mono será exactamente la media sin riesgo de cancelaciones.",
+            "Valor cercano a -1: indica fase opuesta y por tanto máxima compatibilidad mono y anchura estéreo deseable.",
+            "Lectura variable entre -1 y +1 no aporta información técnica útil sobre mono‑compatibilidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "Un coeficiente próximo a +1 refleja alta correlación y buena mono‑compatibilidad; 0 indica poca correlación (imagen amplia pero riesgo de pérdida de coherencia) y -1 indica inversión de fase con riesgo de cancelaciones al sumar a mono.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_target",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Para adaptar el estilo de edición a un target juvenil en un magazine de entretenimiento: ¿qué combinación de ritmo, densidad de planos y recursos es la más apropiada?",
+          "options": [
+            "Ritmo lento, planos largos y mínima superposición sonora para favorecer reflexión y profundidad temática.",
+            "Ritmo moderado con cortes simétricos y ausencia de gráficos para priorizar contenido hablado.",
+            "Ritmo variable con predominio de fundidos largos; baja frecuencia de cambios de plano para reducir fatiga visual.",
+            "Ritmo acelerado, mayor densidad de planos por minuto, recursos gráficos dinámicos y montaje rítmico ligado a música energética."
+          ],
+          "correctIndex": 3,
+          "explanation": "El target juvenil suele responder a tempos más rápidos, mayor variedad visual y recursos gráficos y sonoros dinámicos; las otras opciones favorecen ritmos más lentos o moderados incompatibles con ese público.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Aplicación práctica: ¿cuáles son los elementos que deben concurrir para considerar un desplazamiento habitual domicilio‑trabajo como accidente in itinere?",
+          "options": [
+            "Cualquier desplazamiento desde el domicilio a un lugar eventual de trabajo aunque se altere sustancialmente la ruta por motivos personales o de ocio.",
+            "Salida desde el domicilio hacia el puesto habitual por la ruta razonable y directa, en el trayecto normal y usando medios habituales, sin desvíos indebidos por motivos personales.",
+            "Un desplazamiento intrajornada entre centros de trabajo distinto del habitual aunque no tenga relación con el domicilio del trabajador.",
+            "Viaje puntal y no habitual con vuelta al domicilio el mismo día; la frecuencia no influye en la calificación."
+          ],
+          "correctIndex": 1,
+          "explanation": "El accidente in itinere exige desplazamiento habitual y directo entre domicilio y centro de trabajo por la ruta y medios normales; desvíos por motivos personales o trayectos no habituales rompen esa condición.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique cuál de las siguientes prácticas o características NO contribuye al rechazo de modo común en una línea de audio balanceada:",
+          "options": [
+            "Usar un receptor diferencial que amplifique la diferencia entre las dos conductoras y rechace las tensiones comunes.",
+            "Conectar la pantalla (malla) a tierra en ambos extremos con la intención de asegurar continuidad del blindaje.",
+            "Emplear cable trenzado y mantener impedancias iguales respecto a tierra en ambas conductoras para equilibrar el acoplamiento de interferencias.",
+            "Separar el cableado de audio de fuentes de alimentación y RF y evitar bucles de masa entre equipos."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta (excepción) es la segunda: conectar la malla a tierra en ambos extremos puede provocar circulación de corrientes de tierra (bucle de masa) que introducen diferencias de potencial entre conductores y convierten parte de la señal común en señal diferencial, reduciendo el rechazo de modo común. Las otras opciones describen mecanismos o prácticas que sí favorecen el rechazo de modo común: el receptor diferencial (op. 1) es el principio funcional básico; el trenzado y la igualdad de impedancias (op. 3) minimizan acoplamientos desiguales que generan señales diferenciales; y la separación de cables y la evitación de bucles de masa (op. 4) previenen la inducción y corrientes no deseadas que degradan la CMRR.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 17/2006, función de servicio público: ¿cuál de estas obligaciones corresponde a RTVE?",
+          "options": [
+            "Producir exclusivamente contenidos comerciales orientados a maximizar ingresos publicitarios.",
+            "Garantizar el pluralismo, la objetividad y la veracidad de la información y asegurar el acceso universal a contenidos públicos.",
+            "Gestionar servicios de telecomunicaciones de carácter privado en competencia directa con operadores sin limitaciones.",
+            "Delegar íntegramente la selección informativa en empresas externas sin responsabilidad propia sobre el contenido."
+          ],
+          "correctIndex": 1,
+          "explanation": "La ley impone obligaciones de servicio público como pluralismo, veracidad y acceso universal; las demás opciones contradicen la misión pública o introducen responsabilidades indebidas.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "En edición lineal A/B‑Roll, ¿qué función cumple el mezclador (switcher) al ejecutar una transición entre fuentes A y B:",
+          "options": [
+            "Consolida los metadatos de los clips A y B dentro del mezclador para el reconformado offline.",
+            "Transcodifica automáticamente las señales A y B a un códec común antes de cualquier corte.",
+            "Permite seleccionar la fuente program y la preview, controlando la prelectura de la fuente entrante y aplicando la transición definida por el operador.",
+            "Sustituye la necesidad de prelectura al forzar siempre corte directo sin posibilidad de disolución."
+          ],
+          "correctIndex": 2,
+          "explanation": "El mezclador gestiona program/preview, aplica la transición configurada y usa la prelectura para preparar la fuente entrante; no realiza transcodificación ni consolida metadatos de edición.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique la limitación operativa habitual de LTO con LTFS aplicable al archivo a largo plazo:",
+          "options": [
+            "Compatibilidad universal inmediata con todos los reproductores de archivos del mercado sin necesidad de software específico.",
+            "Incapacidad de almacenar metadatos técnicos junto a la esencia en cinta.",
+            "Imposibilidad de verificar la integridad de los datos mediante checksum tras la copia a cinta.",
+            "Acceso secuencial y tiempos de búsqueda relativamente largos frente al acceso aleatorio de disco, lo que limita respuesta en consulta inmediata."
+          ],
+          "correctIndex": 3,
+          "explanation": "La limitación clásica de cinta/LTFS es el acceso secuencial y mayor latencia en búsquedas; las otras afirmaciones son incorrectas (LTFS sí permite metadatos, checksums se usan y no hay compatibilidad absoluta sin controladores adecuados).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Respecto a la función narrativa: ¿qué transición es la más motivada para indicar un paso progresivo del presente a un recuerdo suave y parcialmente difuso?",
+          "options": [
+            "Corte seco entre planos para enfatizar continuidad temporal sin ambigüedad.",
+            "Wipe geométrico agresivo para marcar un cambio de capítulo y ruptura temporal clara.",
+            "Fundido encadenado (cross‑dissolve) para sugerir continuidad temática y suavizar el paso temporal hacia el recuerdo.",
+            "Hard cut con salto de eje para enfatizar choque dramático y ruptura de tiempo."
+          ],
+          "correctIndex": 2,
+          "explanation": "El fundido encadenado suele indicar progresión temporal o transición a memoria; las otras opciones son transiciones más abruptas o que implican ruptura y no suavizado temporal.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al diseñar un enlace SDI que transporte vídeo, audio embebido y datos auxiliares (ANC), señale la afirmación operativa correcta:",
+          "options": [
+            "Los datos auxiliares deben insertarse en la misma línea de sincronismo vertical que el VBI analógico clásico sin estructura de paquetes.",
+            "El audio embebido siempre se inserta como señal analógica en paralelo al SDI y no forma parte del flujo digital.",
+            "El contenido de vídeo ocupa el payload principal; el audio embebido y otros datos auxiliares se transportan como paquetes ANC en líneas y espacios reservados (HANC/VANC) según las especificaciones del estándar.",
+            "SDI no admite transporte simultáneo de audio y datos auxiliares; es necesario enlaces separados para cada tipo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La estructura SDI reserva espacios para paquetes ANC (HANC/VANC) que transportan audio embebido y otros datos; las demás opciones contradicen el diseño digital y las especificaciones del estándar.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Para garantizar un reconformado fiable tras selección en proxies XDCAM, ¿qué característica del proxy resulta operativamente más útil durante visionado y selección?",
+          "options": [
+            "Reducción del número de pistas de audio a mono para acelerar el scrubbing.",
+            "Conservación de timecode frame‑accurate y un identificador único (UMID o mapping persistente) que vincule cada frame del proxy con la esencia de alta resolución.",
+            "Transcodificación del proxy a un formato propietario no documentado para proteger el material.",
+            "Eliminación de metadatos técnicos para reducir el tamaño del fichero y simplificar la gestión."
+          ],
+          "correctIndex": 1,
+          "explanation": "La conservación de timecode y un identificador persistente permiten relink frame‑accurate; las otras medidas perjudican la fiabilidad del reconformado.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico ergonómico: ¿qué configuración de pantalla minimiza reflejos y tensión visual en un puesto de edición?",
+          "options": [
+            "Pantalla colocada a la altura de la barbilla, a 20 cm del operador y enfrentada directamente a una ventana sin visera para maximizar iluminación natural.",
+            "Pantalla colocada con el borde superior ligeramente por debajo del nivel ocular, distancia de 50–80 cm, orientación perpendicular a fuentes de luz intensa y control de iluminación ambiente para evitar reflejos.",
+            "Pantalla inclinada significativamente hacia atrás y montada en el techo para ahorrar espacio en el escritorio.",
+            "Pantalla alejada a más de 3 metros para reducir la necesidad de parpadeo y forzar visión lejana."
+          ],
+          "correctIndex": 1,
+          "explanation": "La postura recomendada sitúa la parte superior de la pantalla por debajo del nivel ocular y a distancia de brazo (50–80 cm), con control de orientación e iluminación para minimizar reflejos; las otras opciones generan tensión o son impracticables.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a obligaciones concretas de accesibilidad impuestas por la Ley 13/2022:",
+          "options": [
+            "Imponer la obligación de generar una versión en lengua de signos de todos los contenidos a la carta sin excepción alguna.",
+            "Facilitar mecanismos de control parental adaptados para contenidos dirigidos a menores.",
+            "Ofrecer subtítulos y opciones de audio descriptivo en los contenidos accesibles según exigencias de cuota y tipo de servicio.",
+            "Garantizar accesibilidad de interfaces y metadatos que permitan la localización y uso por personas con discapacidad."
+          ],
+          "correctIndex": 0,
+          "explanation": "La exigencia generalizada de versión en lengua de signos para todos los contenidos on‑demand no es una obligación universal y constituye la excepción; las otras son obligaciones concretas previstas en la norma.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_export_qc",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Respecto al control de calidad en la exportación técnica de un master, indique la afirmación que constituye una excepción (no es una verificación técnica pertinente):",
+          "options": [
+            "Asegurarse de que la fecha de creación del archivo coincida exactamente con la fecha real de emisión prevista.",
+            "Verificar niveles de luminancia y si procede legalización y cumplimiento de norma de emisión.",
+            "Confirmar que el archivo incluye metadatos obligatorios (timecode de inicio, formatos y descriptores necesarios).",
+            "Comprobar sincronía audio‑vídeo y ausencia de desfases de cuadro o muestras."
+          ],
+          "correctIndex": 0,
+          "explanation": "La fecha de creación del fichero no es una verificación técnica de QC esencial; las demás comprobaciones (sincronía, niveles, metadatos) sí son determinantes para la exportación y emisión.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "digital_checksum",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Comparación de checksums antes y después de una copia: ¿qué interpretación operativa es la más correcta cuando ambos sumas coinciden?",
+          "options": [
+            "La coincidencia garantiza al 100% que el fichero es semánticamente idéntico en todos los aspectos y que no hay riesgo alguno.",
+            "La coincidencia obliga a eliminar inmediatamente la fuente original sin más comprobaciones.",
+            "La coincidencia indica exclusivamente que los nombres de archivo son iguales, sin relación con el contenido real.",
+            "La coincidencia proporciona alta confianza en la integridad bit‑a‑bit de la copia, aunque no sustituye otras verificaciones de contexto o metadatos si estos se gestionan aparte."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un checksum coincidente es una fuerte garantía de integridad bit‑a‑bit; no es una garantía absoluta frente a colisiones criptográficas ni reemplaza comprobaciones complementarias de metadatos o catálogo.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Al sincronizar varias cámaras empleando exclusivamente la forma de onda de audio (sin usar código de tiempo externo ni marcadores manuales), ¿qué condición operativa mejora de forma más directa la fiabilidad de la alineación automatizada entre pistas de audio?",
+          "options": [
+            "Que cada cámara utilice micrófonos balanceados y conexiones digitales (por ejemplo AES/EBU) para minimizar ruido y pérdidas.",
+            "Que el nivel medio (RMS/LUFS) y la respuesta espectral de las pistas sean similares aun sin transitorios evidentes.",
+            "Que todas las cámaras registren con la misma frecuencia de muestreo y formato de fichero, aunque las pistas no compartan contenido sonoro común.",
+            "Presencia de un evento sonoro transitorio y de alta energía (por ejemplo claqueta o palmada) claramente registrado por todas las pistas, que proporcione un pico temporal coincidente."
+          ],
+          "correctIndex": 3,
+          "explanation": "La presencia de un transitorio de alta energía común a todas las pistas facilita la correlación temporal y la detección de la misma posición de tiempo mediante algoritmos de alineación por forma de onda; un pulso claro proporciona un marcador inequívoco. La opción B (niveles medios o similitud espectral) puede dar cierta correlación en condiciones estables pero resulta poco fiable cuando falta un punto temporal definido: señales estacionarias o ruido ambiente no ofrecen un pico coincidente fácil de alinear. La opción C (mismo muestreo/ formato) evita errores de muestreo y es necesaria para precisión, pero por sí sola no crea referencias temporales compartidas. La opción D (micrófonos balanceados/AES) reduce ruido y pérdidas de calidad, pero no garantiza la existencia de contenido sonoro común que permita la sincronización por forma de onda.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Compare AVC (H.264) y HEVC (H.265): ¿cuál afirmación refleja mejor una ventaja operativa clara de HEVC en flujos audiovisuales?",
+          "options": [
+            "HEVC y AVC son idénticos en eficiencia y complejidad; la elección es meramente administrativa.",
+            "HEVC es siempre menos eficiente que AVC pero más sencillo de implementar en hardware antiguo.",
+            "HEVC ofrece mayor eficiencia de compresión por calidad equivalente, a costa de mayor complejidad de codificación/decodificación y menor compatibilidad de dispositivos antiguos.",
+            "HEVC elimina la necesidad de contenedores y metadatos en los flujos de entrega."
+          ],
+          "correctIndex": 2,
+          "explanation": "La ventaja operativa de HEVC es su mejor eficiencia de compresión para igual calidad; esto implica mayor complejidad y problemas de compatibilidad en equipos antiguos; las demás opciones son incorrectas o imprecisas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Al preparar material para edición colaborativa y para entrega final, indique la afirmación que describe mejor la diferencia operativa entre MXF OP1a y OP‑Atom:",
+          "options": [
+            "OP1a es un contenedor obsoleto que no admite sonido embebido; OP‑Atom es el único contenedor actual compatible con NLE.",
+            "OP1a siempre divide cada frame en ficheros separados, mientras que OP‑Atom empaqueta todo en un único archivo con metadatos reducidos.",
+            "OP1a empaqueta todas las essences (audio, vídeo, pistas) en un único fichero por presentación, adecuado para entrega; OP‑Atom mantiene cada esencia en ficheros separados, facilitando edición frame‑accurate y gestión de medios.",
+            "OP1a y OP‑Atom son idénticos en estructura y finalidad; la única diferencia es la extensión del fichero."
+          ],
+          "correctIndex": 2,
+          "explanation": "La distinción esencial es estructural: OP1a es un paquete por presentación (preferible para entrega), OP‑Atom separa essences por fichero (mejor para edición y reconformado); las otras afirmaciones son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "110",
       "title": "Examen 110",
