@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-17",
+  "updatedAt": "2026-11-18",
   "exams": [
+    {
+      "id": "112",
+      "title": "Examen 112",
+      "date": "2026-11-18",
+      "level": "Muy alto",
+      "timeMinutes": 40,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Cuál de las siguientes prácticas contraviene directamente las directrices del II Plan de Igualdad y la Guía de Igualdad de RTVE:",
+          "options": [
+            "Establecer protocolos de prevención y actuación frente al acoso y hostigamiento.",
+            "Reservar plazas operativas de una unidad exclusivamente a un género sin justificación objetiva.",
+            "Implantar formación obligatoria en perspectiva de género para equipos de producción y contenidos.",
+            "Revisar y adaptar textos y titulares para eliminar lenguaje y representación sexistas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta (reservar plazas exclusivamente a un género sin justificación) constituye una práctica discriminatoria contraria a los principios de igualdad del Plan. Los otros enunciados son medidas coherentes con prevención del acoso y promoción de lenguaje y representación no sexista.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Un editor que usa teclado y ratón largos periodos refiere dolor en la región radial de la muñeca derecha, empeora al mantener la muñeca en extensión y al sujetar la tableta con el antebrazo elevado. Diagnóstico: combinación de factor de riesgo y medida preventiva más adecuada:",
+          "options": [
+            "Postura neutra de muñeca y antebrazo apoyado; instalar reposamuñecas acolchado y ajustar altura del teclado.",
+            "Uso de teclado y ratón con muñeca neutra y pausa activa cada 15 minutos.",
+            "Mantener muñeca en ligera extensión para mayor rapidez; aumentar la sensibilidad del ratón.",
+            "Sujetar la tableta con la mano libre para liberar el brazo; aumentar carga de trabajo para fortalecer músculos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La combinación correcta identifica la postura en extensión y brazo elevado como factores de riesgo y propone apoyo del antebrazo, ajuste de altura y reposamuñecas como medidas preventivas. Las otras opciones o fomentan la extensión o son inapropiadas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Desde el punto de vista de principio y compatibilidad de distribución, por qué HLG suele comportarse con mayor compatibilidad hacia displays SDR sin conversión explícita en comparación con PQ:",
+          "options": [
+            "Porque HLG codifica luminancia absoluta en cd/m² según ST2084, mientras PQ usa una curva relativa sin referencia a luminancia absoluta.",
+            "Porque HLG reduce resolución de crominancia automáticamente en displays SDR, mientras PQ mantiene 4:4:4 obligatoriamente.",
+            "Porque PQ está diseñado para emisiones en tiempo real y HLG para archivos de alto rango dinámico, lo que hace a HLG más compatible con SDR.",
+            "Porque HLG emplea una curva relativa/scene‑referred que permite solapamiento útil con curvas SDR y no requiere metadata de mapeo; PQ (ST2084) codifica luminancia de forma absoluta y precisa, necesitando tone‑mapping para SDR."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta distingue que HLG utiliza una respuesta relativa adecuada para compatibilidad con SDR sin metadata de mapeo, mientras PQ (ST2084) define luminancia absoluta y requiere conversión/tone‑mapping para mostrar correctamente en SDR. Los distractores contienen afirmaciones incorrectas acerca de ST2084, destino y chroma.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo para garantizar coherencia espacial en un raccord de mirada entre dos planos consecutivos:",
+          "options": [
+            "Cargar ambos planos en timeline y aplicar estabilizador; ajustar color para igualar exposición y suponer continuidad de eje.",
+            "Reencuadrar el segundo plano para que el sujeto mire hacia la misma posición en píxeles del encuadre sin considerar eje ni profundidad de campo.",
+            "Establecer eje de acción y eyeline en el plano maestro, registrar posiciones relativa de cámara y sujeto; en el plano siguiente mantener dirección de mirada, conservar líneas de pantalla y focales compatibles, y usar plano de establecimiento si hay duda.",
+            "Insertar obligatoriamente un plano de reacción neutro entre ambos para evitar incoherencias; ajustar la velocidad de reproducción del segundo plano."
+          ],
+          "correctIndex": 2,
+          "explanation": "La secuencia correcta exige definir el eje y la eyeline, mantener la dirección de mirada y cuidar parámetros ópticos y composición. Los distractores omiten la definición del eje o proponen soluciones inadecuadas (estabilizar o reencuadrar sin eje). ",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Cuál de las siguientes definiciones combina correctamente 'niveles legales', 'gamut' y la función de un legalizer:",
+          "options": [
+            "Niveles legales son perfiles de color; gamut es la medida de pico de audio; legalizer modifica el framerate para cumplir estándares.",
+            "Niveles legales fijan límites máximos/minimos de luminancia y audio; gamut define la paleta de colores; legalizer aplica corrección automática para recortar valores que exceden niveles o gamut.",
+            "Niveles legales aumentan la saturación; gamut reduce coste de compresión; legalizer reescala la resolución del video.",
+            "Niveles legales son metadatos de proyecto; gamut determina el tipo de compresión; legalizer solo actúa sobre audio."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta explica que niveles legales regulan límites de señal (luminancia/chroma), gamut define el espacio de color y el legalizer corrige automáticamente señales fuera de esos límites. Los distractores mezclan conceptos erróneamente.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un servidor que suministra clips preencodeados a playout durante retransmisión, aparece rebuffering cuando aumentan reproducciones concurrentes. ¿Qué acción aborda directamente la limitación de concurrencia?",
+          "options": [
+            "Aumentar el ancho de banda de salida agregado y mejorar IOPS del almacenamiento para soportar mayor throughput simultáneo.",
+            "Sustituir el códec por uno de menor compresión sin cambiar infraestructura de red ni discos.",
+            "Reducir la resolución de todos los clips en tiempo real desde la estación de edición.",
+            "Incrementar la prioridad de CPU en el servidor sin tocar la red ni el almacenamiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "La concurrencia en servidores de archivos preencodeados suele limitarse por el ancho de banda agregado y por las IOPS del storage; aumentar esos recursos aborda la causa. Cambiar códec o CPU no resuelve la saturación de red/IO directamente.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En una estructura GOP con predicción bidireccional, si un B‑frame intermedio queda corrupto y ese B no es referencia de otros frames, ¿cuál es la consecuencia operativa más habitual en reproducción?",
+          "options": [
+            "Errónea reconstrucción en cadena de todos los cuadros posteriores hasta el siguiente I‑frame.",
+            "Cambio permanente del color primario del clip por pérdida de información de crominancia.",
+            "Imposibilidad total de decodificar el GOP entero necesitando solicitar retransmisión del stream completo.",
+            "Artefactos localizados y posible pixelación visible en la zona temporal del B corrupto sin propagación más allá si no es referencia."
+          ],
+          "correctIndex": 3,
+          "explanation": "Si un B‑frame corrupto no sirve de referencia para otros frames, los errores suelen quedar localizados en ese B (pixelación o tearing temporal). La propagación en cadena ocurre cuando frames corruptos son usados como referencia; los otros distractores describen efectos más severos no aplicables si el B no es referencia.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la práctica compatible con lo dispuesto en el III Convenio Colectivo respecto a jornada, descansos y turnicidad:",
+          "options": [
+            "Establecer horarios de trabajo con turnos rotativos regulados, garantizando descansos mínimos legales y compensación por nocturnidad cuando proceda.",
+            "Imponer turnos rotativos continuos de 24 horas sin compensación de descanso.",
+            "Eliminar periodos de descanso entre turnos para aumentar productividad.",
+            "Obligar a renuncia previa a descansos compensatorios por parte de la plantilla."
+          ],
+          "correctIndex": 0,
+          "explanation": "El III Convenio regula turnos con descansos mínimos y compensaciones; la opción correcta respeta turnicidad regulada y descansos. Las otras opciones son incompatibles con la normativa laboral.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Al transferir material desde un servidor EVS a una estación de edición durante playout activo, ¿qué consideración técnica es prioritaria respecto a 'handles' y disponibilidad del clip?",
+          "options": [
+            "Modificar el códec del clip en origen antes de la transferencia para asegurar compatibilidad aun si se interrumpe el playout.",
+            "Transferir únicamente el fotograma central del clip para ahorrar ancho de banda; handles no son necesarios.",
+            "Esperar a que finalice el playout y entonces mover el original sin generar copia.",
+            "Solicitar copia que incluya handles suficientes y confirmar que el clip marcado no será sobreescrito durante el playout; si el clip está en uso, transferir una copia estable (con metadata) en lugar de mover el original."
+          ],
+          "correctIndex": 3,
+          "explanation": "Para intercambio durante retransmisión es esencial pedir copia con handles y asegurar que el clip no será sobrescrito; transferir una copia estable evita interferir con playout. Las otras opciones ignoran disponibilidad/continuidade o proponen acciones operativamente incorrectas.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En control de calidad, el programa tiene LUFS integrado dentro del objetivo, pero una escena muy breve presenta variaciones percibidas cada 400 ms. ¿Qué medición ofrece la sensibilidad adecuada para identificar esas variaciones rápidas?",
+          "options": [
+            "LUFS momentary (~400 ms).",
+            "LUFS short‑term (~3 s).",
+            "LUFS integrado (integrated).",
+            "Sample peak (muestra puntual)."
+          ],
+          "correctIndex": 0,
+          "explanation": "La medición 'momentary' (≈400 ms) detecta variaciones muy rápidas; short‑term (≈3 s) promedia intervalos más largos e integrated mide todo el programa. Sample peak no mide percepción temporal de loudness.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "prl_incendio",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Para un conato de incendio originado en un equipo eléctrico en plató, qué combinación de agente extintor y medida eléctrica es la más adecuada de forma inmediata y segura:",
+          "options": [
+            "Usar agua a presión y desconectar la alimentación manualmente tirando de cables.",
+            "Usar extintor de base acuosa y cubrir el equipo con una manta ignífuga sin cortar la electricidad.",
+            "Rociar espuma y mantener el equipo energizado para evitar pérdida de datos.",
+            "Aplicar polvo químico o CO2 sobre el foco y, si es posible y sin riesgo, cortar la alimentación eléctrica desde el cuadro o desconectar el equipo."
+          ],
+          "correctIndex": 3,
+          "explanation": "En fuegos eléctricos la técnica segura es usar polvo o CO2 (no agua) y, si puede hacerse con seguridad, cortar la alimentación desde el cuadro; agua y mantener energizado son peligrosos.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_chromakey",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare los siguientes órdenes de operación al diagnosticar un problema de incrustación (matte, spill y bordes). ¿Cuál secuencia es la más lógica para localizar y corregir la causa?",
+          "options": [
+            "Aplicar corrección de color general, luego spill suppression, finalmente generar matte y retocar bordes.",
+            "Generar y revisar el matte primero para comprobar separación sujeto/fondo; ajustar keying básico; aplicar spill suppression; refinar bordes y realizar integración final.",
+            "Refinar bordes antes de generar el matte; luego ajustar background y solo al final comprobar el spill.",
+            "Eliminar cualquier pre‑multiplicado y exportar; la incrustación debe ajustarse en la composición final sin tocar el matte."
+          ],
+          "correctIndex": 1,
+          "explanation": "La secuencia correcta es generar y evaluar el matte (separación), ajustar keying, aplicar spill suppression y luego refinar bordes e integración. Los otros órdenes retrasan la identificación del problema o ignoran pasos fundamentales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_bit_depth",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Al preparar material 8‑bit para colorización intensiva, cuál es el procedimiento técnico más adecuado para minimizar banding y preservar margen de procesamiento:",
+          "options": [
+            "Trabajar directamente en 8‑bit manteniendo master final en 8‑bit y aumentar la compresión al exportar.",
+            "Aumentar la saturación para enmascarar banding y luego reducir ruido; no cambiar profundidad de bits.",
+            "Transcodificar a un códec intermedio de al menos 10‑bit (p. ej. ProRes 422 HQ/DNxHR), realizar etalonaje en mayor profundidad y aplicar dithering al exportar a destino de menor profundidad.",
+            "Aplicar un sharpen fuerte antes de etalonar para evitar bandas visibles durante la gradación."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica correcta es elevar a un intermedio de ≥10‑bit para evitar cuantización durante el grading y aplicar dithering al final; trabajar en 8‑bit intensifica banding. Los distractores son ineficaces o dañinos.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Seleccione la estrategia que cumple correctamente la política 3‑2‑1 de copias:",
+          "options": [
+            "Tres copias idénticas en discos distintos dentro del mismo rack con RAID para redundancia.",
+            "Una copia en RAID del servidor y otra copia en la misma carcasa para mayor rapidez de restauración.",
+            "Tres copias: principal en servidor activo, copia local en disco independiente y copia remota en ubicación física separada o en nube; al menos dos tipos de soporte distintos.",
+            "Tres copias en el mismo centro en diferentes carpetas; uso exclusivo de copias sincronizadas en tiempo real."
+          ],
+          "correctIndex": 2,
+          "explanation": "La política 3‑2‑1 exige 3 copias, en al menos 2 tipos de soporte y 1 copia offsite; la opción correcta cumple esto. Las otras opciones no garantizan independencia de soportes o ubicación externa.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Según la Ley 31/1995 sobre prevención de riesgos laborales, cuál de estas afirmaciones refleja un principio general de la acción preventiva:",
+          "options": [
+            "La prevención debe integrarse en la gestión de la empresa y adaptarse al progreso técnico y a la protección colectiva de los trabajadores.",
+            "La prevención se limita a la entrega de equipos de protección individual sin evaluación de riesgos.",
+            "La prevención se aplica solo cuando hay accidentes previos en el puesto de trabajo.",
+            "La empresa puede delegar totalmente las obligaciones preventivas exclusivas en el trabajador."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley establece la integración de la prevención en la gestión empresarial, adaptación al progreso técnico y preferencia por medidas colectivas. Las demás opciones falsean o minorizan obligaciones legales del empresario.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_music_sync",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la práctica que constituye una excepción respecto a criterios adecuados para sincronizar montaje con música (frase musical, acentos y continuidad sonora):",
+          "options": [
+            "Cortar preferentemente en los acentos rítmicos para reforzar golpes musicales.",
+            "Ignorar la estructura de la frase y reubicar cortes arbitrariamente sin considerar acentos para priorizar planos cambiantes.",
+            "Respetar la frase musical evitando cortar en mitad de frase salvo por motivo narrativo claro.",
+            "Usar contraposición sonora (contrapunto) para crear tensión cuando la imagen lo requiere."
+          ],
+          "correctIndex": 1,
+          "explanation": "Ignorar estructura y acentos contradice criterios de sincronización musical; las otras opciones son prácticas legítimas: cortar en acentos, respetar frase o usar contrapunto según intención narrativa.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Se requiere un servidor que atienda 80 reproducciones simultáneas de streams de 8 Mbps cada una y se desea un margen operativo del 25%. ¿Cuál es la capacidad de salida agregada mínima requerida?",
+          "options": [
+            "640 Mbps.",
+            "720 Mbps.",
+            "800 Mbps.",
+            "1000 Mbps."
+          ],
+          "correctIndex": 2,
+          "explanation": "Cálculo: 80×8 Mbps = 640 Mbps; con margen del 25% → 640×1.25 = 800 Mbps. 640 y 720 son insuficientes; 1000 excede sin ser la mínima requerida.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "En un entorno con bins compartidos entre editores se detectan sobrescrituras accidentales. ¿Qué medida técnica previene de forma más fiable conflicto de concurrencia y pérdida de trabajo?",
+          "options": [
+            "Permitir edición simultánea sin bloqueo y confiar en sobrescritura automática del último guardado.",
+            "Configurar bloqueo por usuario (checkout) de bins/clips con control de versiones y mecanismos de check‑in/check‑out centralizados.",
+            "Guardar copias locales sin versión central y sincronizar manualmente al finalizar jornada.",
+            "Eliminar permisos y permitir acceso completo para agilizar el trabajo."
+          ],
+          "correctIndex": 1,
+          "explanation": "El checkout/lock con control de versiones y check‑in/check‑out evita sobrescrituras y gestiona concurrencia. Las otras opciones no garantizan integridad ni coordinación.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Cuál de las siguientes afirmaciones constituye una excepción respecto a las diferencias temporales y artefactos típicos entre entrelazado y progresivo:",
+          "options": [
+            "El entrelazado presenta desplazamiento temporal entre campos que puede generar efecto de 'combing' en objetos en movimiento.",
+            "El progresivo muestra cada cuadro completo en un instante, evitando combing y preservando la resolución temporal por cuadro.",
+            "El entrelazado siempre mejora la representación de movimiento respecto al progresivo, sin generar artefactos visibles.",
+            "El progresivo es preferible para postproducción y efectos que requieren cuadros completos consecutivos."
+          ],
+          "correctIndex": 2,
+          "explanation": "La afirmación 3 es falsa: el entrelazado no 'siempre' mejora movimiento y puede generar artefactos; por tanto es la excepción. Las otras describen diferencias y usos correctos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_evs_loop",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo correcto para asegurar recuperación de una acción marcada durante grabación en bucle (loop) en servidor tipo EVS:",
+          "options": [
+            "Solo anotar la hora de evento y esperar a que un operador recree el clip manualmente más tarde.",
+            "Apagar el servidor para evitar sobreescritura, luego copiar manualmente sectores del disco sin usar las herramientas de EVS.",
+            "Eliminar el bucle y reiniciar la grabación sin marcar; confiar en que el sistema conservará la porción requerida.",
+            "Marcar la acción en el control de reproducción del EVS para crear inmediatamente un clip permanente con handles y metadata; confirmar asignación de canal y proteger/lockear el clip en almacenamiento antes de sobrescribir buffer."
+          ],
+          "correctIndex": 3,
+          "explanation": "En EVS la práctica correcta es marcar la acción para crear y proteger un clip permanente con handles y metadata, asignar canal y bloquearlo para evitar pérdida; las alternativas son inseguras o impracticables.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "111",
       "title": "Examen 111",
