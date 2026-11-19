@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-19",
   "exams": [
+    {
+      "id": "113",
+      "title": "Examen 113",
+      "date": "2026-11-19",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Indique la afirmación que compara con mayor precisión la organización básica prevista para la Corporación RTVE en la Ley 17/2006:",
+          "options": [
+            "Funciona únicamente mediante una presidencia fuerte y directores ejecutivos por áreas, sin presencia de órgano colegiado representativo.",
+            "Se organiza como un conjunto de entes autónomos sin órgano colegiado de control, delegando la supervisión en ministerios sectoriales.",
+            "Se estructura mediante un órgano colegiado de gobierno responsable del control y una presidencia que ejerce la dirección ejecutiva, ambas con funciones diferenciadas.",
+            "Es una red de empresas privadas contratadas por el Estado para la prestación de servicio público, sin estructura propia de dirección."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta distingue explícitamente entre un órgano colegiado de gobierno y una presidencia ejecutiva, que es la estructura básica prevista; los distractores erran al suprimir el órgano colegiado, transformar la entidad en meras contratistas privadas o negar la coexistencia de gobierno colegiado y dirección ejecutiva.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Principal diferencia operativa entre montaje paralelo y montaje alterno en cuanto a simultaneidad y asociación temática:",
+          "options": [
+            "El montaje paralelo muestra simultaneidad temporal y suele converger temáticamente en un punto común; el alterno alterna acciones relacionadas pero no exige simultaneidad exacta.",
+            "El montaje alterno siempre implica simultaneidad temporal exacta entre las acciones; el paralelo sólo agrupa escenas por tono emocional.",
+            "El paralelo es exclusivo de documentales y el alterno exclusivo de ficción por requerir cortes más rápidos.",
+            "Ambos términos son sinónimos; solo difieren por la tradición terminológica."
+          ],
+          "correctIndex": 0,
+          "explanation": "La respuesta correcta identifica que el montaje paralelo enfatiza simultaneidad que converge temáticamente, mientras el alterno intercala acciones relacionadas sin exigir coincidencia temporal estricta; los distractores confunden funciones, limitan por género o afirman sinonimia incorrecta.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Cuál de estas prácticas constituye una excepción (no corrige) cuando varias fuentes no sincronizadas producen desalineaciones temporales en un mezclador de vídeo:",
+          "options": [
+            "Modificar manualmente el código de tiempo interno de una cámara en plena emisión sin usar un sincronizador externo.",
+            "Reforzar la referencia de genlock común en toda la instalación para evitar drift entre equipos.",
+            "Aplicar un frame‑sync por entrada para alinear timing y genlock de cada fuente.",
+            "Usar un conversor de estándar con retiming incorporado que recomponga fotogramas si es necesario."
+          ],
+          "correctIndex": 0,
+          "explanation": "Modificar manualmente el timecode interno en emisión no corrige de forma fiable la falta de sincronismo y puede introducir discontinuidades; las otras opciones (frame‑sync, referencia genlock común, conversor con retiming) son medidas que sí abordan el problema de fuentes no sincronizadas.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_metadatos",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo para que metadatos técnicos y descriptivos faciliten la catalogación y búsqueda en un MAM:",
+          "options": [
+            "Dejar metadatos opcionales para cada usuario y confiar en etiquetas libres introducidas por editores.",
+            "Definir campos obligatorios estandarizados (códec, resolución, UMID), aplicar metadatos en ingesta y validar mediante checksums y mapeos entre sistemas.",
+            "Almacenar solo metadatos descriptivos (sin técnicos) para simplificar la base y ejecutar conversión posterior si hace falta.",
+            "Mantener metadatos fuera del sistema MAM para evitar duplicidades y usar hojas de cálculo compartidas."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta describe un procedimiento completo: campos obligatorios estandarizados aplicados en ingesta y verificados, lo que favorece catalogación y intercambio; los distractores dependen de prácticas poco estructuradas o fragmentadas que impiden búsquedas y compatibilidad.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Medida esencial para mitigar la obsolescencia de soportes y asegurar preservación:",
+          "options": [
+            "Mantener todo el archivo en el formato original sin migraciones para preservar autenticidad.",
+            "Depositar una única copia en un único LTO y confiar en su durabilidad sin verificación.",
+            "Planificar migraciones periódicas de formatos y soportes y verificar integridad tras cada migración.",
+            "Eliminar antiguos masters al conservar únicamente proxies modernos para ahorrar espacio."
+          ],
+          "correctIndex": 2,
+          "explanation": "La respuesta correcta señala la necesidad de migraciones periódicas y verificación; los distractores proponen prácticas inseguras (una sola copia sin verificación, conservar solo originales sin migrar, o borrar masters), que contravienen preservación.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Comparación operativa entre código de tiempo drop‑frame y non‑drop‑frame:",
+          "options": [
+            "Non‑drop‑frame elimina fotogramas periódicamente para compensar desfase temporal; drop‑frame mantiene siempre tiempos exactos sin cambios numéricos.",
+            "Drop‑frame ajusta la numeración para que el timecode vuelva a coincidir con el tiempo real en pausas de 29,97 fps sin eliminar fotogramas; non‑drop‑frame mantiene conteo lineal sin corrección.",
+            "Drop‑frame reescala la duración de los medios afectando la sincronía de audio; non‑drop‑frame corrige automáticamente en exportación.",
+            "Ambos métodos son equivalentes en función y solo difieren en la notación textual del timecode."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta aclara que drop‑frame modifica la numeración para corregir desfase entre timecode y tiempo real (en 29,97 fps) sin suprimir fotogramas; los distractores confunden con eliminación de frames, efectos en audio o equiparan ambos métodos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación más correcta sobre conservación de material XDCAM con spanning:",
+          "options": [
+            "Basta con copiar solo los MXF individuales sin mantener carpetas ni índices; el spanning se resuelve automáticamente en cualquier NLE.",
+            "Es imprescindible preservar la estructura de carpetas y los índices y, en caso de spanning, conservar las piezas contiguas y usar herramienta que reconstruya el clip dividido.",
+            "Conviene renombrar libremente los ficheros MXF para uniformizar nombres antes de copiar; así se evita depender de software específico.",
+            "Al realizar copia, omitir los metadatos XML asociados porque no aportan información operativa relevante."
+          ],
+          "correctIndex": 1,
+          "explanation": "Mantener carpetas, índices y los fragmentos que componen un clip con spanning y usar herramientas compatibles es imprescindible; los distractores proponen prácticas que romperían la integridad (copias parciales, renombrado arbitrario, eliminación de XML).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Ante un contenido audiovisual que diferencia trato por género sin justificación editorial, cuál es el diagnóstico respecto al principio constitucional de igualdad:",
+          "options": [
+            "La igualdad constitucional obliga a homogeneizar todos los contenidos eliminando cualquier referencia a diferencias sociales o culturales.",
+            "La Constitución permite cualquier tratamiento de género siempre que respalde libertad de expresión, por lo que no existe vulneración.",
+            "Solo las normas administrativas pueden declarar discriminación; el principio constitucional no aplica a contenidos audiovisuales.",
+            "La diferenciación constituye una vulneración del principio de igualdad y prohibición de discriminación salvo que sea objetivamente justificada por finalidades legítimas y proporcionadas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta reconoce que el principio de igualdad prohíbe discriminación salvo justificación objetiva y proporcional; los distractores erran al excluir aplicación, subordinarlo totalmente a libertad de expresión o exigir homogeneización absoluta.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Medida organizativa más adecuada para reducir fatiga visual y postural en tareas con pantallas de visualización:",
+          "options": [
+            "Usar únicamente atajos de teclado para evitar movimiento ocular y cambiar postura únicamente al finalizar la jornada.",
+            "Prolongar sesiones evitando pausas para mantener continuidad de trabajo y reducir tiempo total empleado.",
+            "Establecer pausas periódicas y alternancia de tareas visuales con actividades de distinta demanda y ajustar brillo/contraste y posición de pantalla.",
+            "Eliminar monitores adicionales para reducir estimulación visual aunque se incremente la congestión de ventanas en uno solo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La respuesta correcta propone pausas y alternancia de tareas junto a ajustes ergonómicos; los distractores recomiendan prácticas contraproducentes (evitar pausas, cambios extremos de flujo de trabajo o concentrar todo en un único monitor).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_xavc",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Diferencia práctica entre XAVC Intra y XAVC Long‑GOP:",
+          "options": [
+            "Ambos formatos son intraframe y solo difieren en extensión de archivo; no hay diferencia de aplicación en postproducción.",
+            "Long‑GOP comprime cada fotograma de forma independiente, permitiendo edición más fluida; Intra usa predicción temporal para reducir bitrate.",
+            "XAVC Intra comprime por fotograma (intraframe) y facilita edición frame‑accurate; Long‑GOP usa predicción entre frames y es más eficiente en bitrate pero exige mayor decodificación para edición.",
+            "XAVC Intra solo se usa en cámaras de gama baja; Long‑GOP es exclusivo de sistemas de archivo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La respuesta correcta identifica Intra como intraframe y Long‑GOP como predictivo con implicaciones de edición y eficiencia; los distractores invierten conceptos o hacen afirmaciones incorrectas sobre usos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Interpretación técnica: ante la necesidad de almacenar ficheros individuales superiores a 4 GB y máxima compatibilidad entre cámaras, estaciones y sistemas operativos, cuál es la consideración de sistemas de archivos más relevante:",
+          "options": [
+            "Elegir un sistema de archivos que soporte tamaños de fichero superiores a 4 GB y que sea ampliamente soportado por cámaras y estaciones, evitando sistemas con límite de 4 GB.",
+            "Seleccionar el sistema con mejor compresión transparente para reducir tamaño de fichero independientemente del límite de tamaño por fichero.",
+            "Preferir siempre sistemas propietarios de alta performance incluso si no son reconocidos por cámaras, ya que la conversión es inmediata.",
+            "Usar FAT16 porque garantiza compatibilidad universal entre dispositivos antiguos y modernos."
+          ],
+          "correctIndex": 0,
+          "explanation": "La decisión clave es usar un filesystem que soporte >4 GB y sea compatible; los distractores proponen irrelevancias (compresión), soluciones incompatibles (propietarias sin reconocimiento) o sistemas obsoletos con límite de tamaño (FAT16).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "edit_project_media",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un NLE, qué acción distingue correctamente metadatos de proyecto de los archivos de esencia al preparar un paquete para otro editor:",
+          "options": [
+            "Copiar únicamente la carpeta del proyecto, asumiendo que todos los archivos de esencia están embebidos en los ficheros de proyecto.",
+            "Exportar los metadatos del proyecto (bins, marcadores, estructura de sequence) por separado y confeccionar un consolidado o 'media‑managed' que incluya sólo los archivos de esencia necesarios.",
+            "Editar directamente el archivo de proyecto en la nueva estación sin transferir ningún archivo de esencia; el NLE descargará lo que falta automáticamente.",
+            "Renombrar todos los ficheros de esencia para que coincidan con los nombres internos del proyecto en la nueva estación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta aplica la distinción: exportar metadatos de proyecto y consolidar media de esencia. Los distractores suponen integridad inexistente en el proyecto, descarga automática o renombrado inseguro.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Diferenciar operaciones: qué acción corresponde a 'capture' frente a 'import' y 'link' en una estación de edición:",
+          "options": [
+            "Capture: simplemente enlazar un fichero ya presente en disco; Import: transferir en tiempo real desde cámara; Link: crear una copia física en el proyecto.",
+            "Capture: transferencia de vídeo desde una fuente en tiempo real creando un archivo nuevo en el sistema; Import: copiar fichero existente al proyecto; Link: referencia al fichero sin duplicarlo.",
+            "Capture: proceso de consolidación de proxies únicamente; Import: captura desde SPTS en red; Link: conversión a codec intermedio.",
+            "Capture: exportación final del master para emisión; Import: registrar metadatos en MAM; Link: generar checksum del archivo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta define capture como grabación en tiempo real creando archivo, import como copia de fichero existente y link como referencia sin duplicado; los distractores mezclan o invierten las definiciones.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_en_mision",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Cuál de estas medidas constituye una excepción (no adecuada) en la prevención de riesgos durante una misión profesional fuera del centro habitual:",
+          "options": [
+            "Facilitar formación específica sobre riesgos del lugar de destino y medios de emergencia antes del desplazamiento.",
+            "Planificar el desplazamiento, informar de itinerarios, evaluar riesgos del destino y proporcionar medios de comunicación y protección necesarios.",
+            "No comprobar condiciones de transporte ni coordinar seguridad local, confiando en improvisación.",
+            "Revisar seguros y coberturas, y establecer protocolos de actuación y contacto con la central."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la excepción: no comprobar ni coordinar es una práctica inadecuada. Las otras opciones son medidas preventivas pertinentes para misiones fuera del centro.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Según la Ley 13/2022, cuál de estas obligaciones refleja mejor la exigencia respecto a protección de menores y acceso a contenidos:",
+          "options": [
+            "Sustituir la clasificación por la autoevaluación del autor del contenido sin controles técnicos adicionales.",
+            "Eliminar todo contenido con temática adulta de la parrilla general para evitar cualquier riesgo de acceso.",
+            "Permitir el acceso sin restricciones siempre que exista aviso inicial en la cabecera del programa.",
+            "Implementar mecanismos que impidan o limiten el acceso de menores a contenidos no aptos y aplicar clasificación y medidas de control según la normativa."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta indica obligación de implementar controles y clasificación para proteger menores; los distractores proponen medidas extremas, ausencia de controles o dejar la evaluación solo al autor, que no cumplen la normativa.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Comparación operativa: qué distingue principalmente a un contenedor (MOV/MP4/MXF) de un códec:",
+          "options": [
+            "La elección de contenedor y códec es irrelevante para compatibilidad entre estaciones; sólo importa la resolución.",
+            "El contenedor determina la calidad visual directamente; el códec solo nombra el formato del fichero.",
+            "Un contenedor siempre implica pérdida de información, mientras que el códec es siempre sin pérdida.",
+            "El contenedor empaqueta flujos de audio, vídeo y metadatos sin definir cómo se comprime el contenido; el códec define el método de compresión/descompresión del flujo dentro del contenedor."
+          ],
+          "correctIndex": 3,
+          "explanation": "La respuesta correcta distingue que el contenedor encapsula flujos y metadatos, mientras el códec define compresión; los distractores confunden roles, asignan calidad al contenedor o niegan la importancia de la combinación.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_elipsis",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Comparación: la elipsis como recurso de compresión temporal se diferencia de un corte directo en que:",
+          "options": [
+            "Ambos son equivalentes formalmente y no tienen efectos distintos en la comprensión temporal.",
+            "El corte directo siempre produce confusión narrativa mientras la elipsis nunca la produce.",
+            "La elipsis requiere fundido encadenado como única transición válida; el corte no.",
+            "La elipsis omite un intervalo temporal interno entre dos eventos manteniendo comprensión narrativa; un corte directo simplemente cambia de plano sin enfatizar la compresión temporal."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta explica que la elipsis selecciona y omite tiempo narrativo manteniendo la coherencia, mientras que el corte directo no implica necesariamente omisión temporal; los distractores exageran o equiparan ambos recursos.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_dbfs",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Consecuencia práctica de mantener niveles frecuentes en 0 dBFS en una cadena digital:",
+          "options": [
+            "Mantener 0 dBFS favorece la preservación de la dinámica respecto a limitar o normalizar por LUFS.",
+            "Aumento lineal de la inteligibilidad sin riesgo alguno, por lo que es recomendable alcanzar 0 dBFS constantemente.",
+            "0 dBFS indica siempre que la señal es legal para emisión independientemente de true‑peak o intersample peaks.",
+            "Riesgo de saturación/clipping digital y pérdida de margen para picos true‑peak; conviene mantener cabeza de dinámicas bajo 0 dBFS con margen para limitación."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta señala que 0 dBFS corresponde al techo digital y mantener niveles allí con frecuencia provoca clipping y problemas con true‑peak; los distractores ignoran true‑peak, sobrevaloran 0 dBFS y confunden con legalidad.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Cuál de estas afirmaciones constituye una excepción (no es cierta) al comparar alcance de un EDL frente a un AAF para intercambio de proyectos:",
+          "options": [
+            "Un AAF siempre asegura transferencia perfecta de todos los ajustes de efectos nativos y presets entre NLE distintos sin perder información.",
+            "Un EDL suele carecer de información sobre plugins, parámetros detallados de efectos y metadatos extensos que sí puede manejar un AAF.",
+            "Un EDL tradicional gestiona principalmente cortes en pistas únicas y tiempos but no suele incluir efectos complejos ni metadatos de pista; AAF puede transportar pistas múltiples, métricas de tiempo y cierta información de efectos y transcodings.",
+            "Ambos formatos tienen limitaciones frente a soluciones modernas (AAF/OMF/AAF extendido) respecto a efectos y metadata compleja."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta como excepción es que AAF 'siempre' asegura transferencia perfecta de todos los ajustes; en realidad AAF mejora alcance respecto a EDL pero no garantiza transferencia completa de parámetros nativos; las otras opciones describen limitaciones y diferencias reales.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "measure_waveform_luma",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En qué situación el monitor de forma de onda es la herramienta compatible y adecuada para verificar niveles y legalidad de luminancia:",
+          "options": [
+            "Al comprobar que los picos de luminancia de una señal no exceden los límites legales y que las zonas críticas se mantienen dentro del rango de transmisión.",
+            "Al identificar la tonalidad exacta de la piel en un plano sin usar vectorscopio.",
+            "Al evaluar la correlación estéreo entre canales de audio en un programa multicanal.",
+            "Al medir la profundidad de color en bits y la compresión chroma subsampling aplicada."
+          ],
+          "correctIndex": 0,
+          "explanation": "El waveform es la herramienta adecuada para medir niveles de luminancia y detectar picos que incumplen límites; los distractores asignan funciones de otras herramientas (vectorscopio para piel, correlómetro para fase audio, análisis de chroma para subsampling).",
+          "category": "Equipos de medida y control"
+        }
+      ]
+    },
     {
       "id": "112",
       "title": "Examen 112",
