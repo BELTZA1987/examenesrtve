@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-20",
   "exams": [
+    {
+      "id": "114",
+      "title": "Examen 114",
+      "date": "2026-11-20",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Respecto al modelo de financiación previsto por la Ley 8/2009, cuál de las siguientes fuentes se ajusta mejor a sus principios y restricciones:",
+          "options": [
+            "Ingresos derivados de espacios publicitarios comerciales vendidos libremente por la Corporación",
+            "Dotación presupuestaria anual del Estado combinada con cargas establecidas en la normativa sobre operadores de telecomunicaciones",
+            "Financiación mayoritaria mediante patrocinios y mecenazgo de empresas privadas sin limitación",
+            "Venta exclusiva de contenidos a plataformas privadas como principal fuente de ingresos"
+          ],
+          "correctIndex": 1,
+          "explanation": "La ley establece un modelo basado en recursos públicos (dotación presupuestaria) y contribuciones establecidas por la normativa a operadores, con restricciones sobre la comercialización publicitaria. El distractor más próximo (ingresos por publicidad) falla porque la normativa limita o elimina la publicidad como fuente principal, diferencia decisiva frente a la opción correcta.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Para garantizar la integridad y trazabilidad en una ingesta verificada desde un soporte de rodaje a almacenamiento central, seleccione la secuencia operativa mínima correcta entre las siguientes opciones.",
+          "options": [
+            "Calcular checksums en el soporte de origen antes de la copia; copiar los ficheros al destino; validar la estructura del contenedor y metadatos; registrar la operación.",
+            "Copiar los ficheros al almacenamiento destino; calcular checksums en origen y destino y compararlos; verificar la estructura del contenedor y metadatos (índices, códec, timecode); registrar en el sistema (log/MAM) el resultado y el estado del soporte.",
+            "Copiar los ficheros al destino; validar inmediatamente la estructura del contenedor y metadatos; calcular checksums en destino; registrar la operación.",
+            "Copiar los ficheros al destino; registrar la ingesta en el sistema (log/MAM); calcular checksums y, si procede, corregir metadatos o reintentar la copia."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta establece la secuencia mínima que garantiza verificación bit‑a‑bit y comprobación técnica: primero la copia, luego la comprobación mediante checksums comparando origen y destino para detectar corrupciones durante la transferencia; a continuación la verificación de la estructura del contenedor y metadatos para asegurar reproducibilidad y reconformado; por último, el registro documental de resultados y estado. El distractor más próximo (B) calcula checksums solo en origen antes de copiar, lo que no permite confirmar que la copia en destino sea idéntica salvo que se vuelva a calcular y comparar en destino; C valida la estructura antes de comprobar la integridad bit‑a‑bit, de modo que podrían pasar errores silenciosos que no impidan la lectura pero sí afecten al contenido; D registra antes de verificar, lo que compromete la trazabilidad fiable porque el registro podría marcar material como ingestada sin haberse confirmado su integridad y estructura.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Cuál de estas descripciones corresponde a un J‑cut:",
+          "options": [
+            "El sonido de la toma previa continúa después de que aparezca la siguiente imagen",
+            "El sonido de la siguiente toma empieza antes de que aparezca su imagen",
+            "Se realiza un fundido de audio entre dos planos sin solapamiento de imagen",
+            "Se aplica un corte seco tanto en audio como en imagen simultáneamente"
+          ],
+          "correctIndex": 1,
+          "explanation": "Un J‑cut anticipa el audio de la toma siguiente antes de su imagen. El distractor más próximo (audio que continúa tras la imagen siguiente) describe el efecto inverso y por tanto no es un J‑cut; esa diferencia sobre el orden temporal del audio es la clave.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Indique cuál de las siguientes obligaciones del trabajador contribuye de forma directa a la eficacia del sistema de prevención:",
+          "options": [
+            "Rechazar cooperar en acciones de mejora propuestas por el servicio de prevención",
+            "Negar la asistencia a cursos de formación alegando experiencia previa",
+            "Modificar los equipos de protección suministrados para mayor comodidad sin informar",
+            "Participar en la formación obligatoria sobre riesgos y utilizar correctamente los equipos de protección"
+          ],
+          "correctIndex": 3,
+          "explanation": "La participación en formación y el uso correcto de EPIs son obligaciones que permiten aplicar medidas preventivas. Los distractores suponen actitudes que impiden la eficacia del sistema; el más cercano (rechazo a cooperar) contrasta porque impide la coordinación y mejora continua requerida.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_news",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En la edición de un teletipo de última hora para emisión inmediata, ¿qué prioridad debe aplicar el editor en coordinación con redacción?",
+          "options": [
+            "Sustituir la locución por un texto en pantalla para acelerar la emisión sin consultar redacción",
+            "Priorizar siempre el uso de material gráfico aunque implique retrasar la locución para mayor impacto visual",
+            "Mantener la prioridad informativa y claridad en la locución, ajustar recursos y tiempos para emitir un total fiable",
+            "Editar la pieza al máximo para lograr el look deseado, aplazando comprobaciones técnicas"
+          ],
+          "correctIndex": 2,
+          "explanation": "En noticias la prioridad es la información clara y la coordinación con redacción para tiempos y recursos; asegurar locución y totales fiables es esencial. Los distractores priorizan aspectos visuales o decisiones unilaterales que comprometen rapidez, verificación o coordinación, lo que los descarta.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_mezclador_key",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En un mezclador con buses 'program' y 'preview' y una clave (key) armada en preview, ¿qué afirmación describe con mayor precisión la diferencia operativa entre ejecutar un CUT/TAKE y ejecutar una transición AUTO respecto a la presencia de la clave en la salida program?",
+          "options": [
+            "El CUT/TAKE traslada de forma instantánea la fuente y su key a program (sin fundido); la transición AUTO realiza una mezcla gradual en la que la key se incorpora progresivamente siguiendo la curva de la transición, alcanzando plenamente program al final del AUTO.",
+            "El CUT/TAKE mueve la imagen a program pero no la key; la clave permanece en preview y sólo se incorpora a program si se activa manualmente o al completar un AUTO.",
+            "La transición AUTO afecta únicamente al vídeo de fondo; las claves permanecen en preview y no se transfieren automáticamente con un AUTO, por lo que siempre requieren activación manual para pasar a program.",
+            "Tanto CUT/TAKE como AUTO trasladan la key a program, pero en AUTO ese traslado se aplica con un retardo configurado; funcionalmente ambos dejan la key en program una vez iniciada la operación, la diferencia es sólo la duración del cambio."
+          ],
+          "correctIndex": 0,
+          "explanation": "En la mayoría de mezcladores con buses program/preview la operación CUT/TAKE realiza un cambio inmediato de la fuente visible en program, incluyendo la key asociada, sin efectuar fundido. En cambio una transición AUTO interpola (funde) entre preview y program según la curva de transición; la key también se «funde» y sólo alcanza su nivel final en program al completarse la transición. La opción D es cercana pero imprecisa: no se trata sólo de un retardo configurable, sino de que AUTO aplica una interpolación progresiva a la clave; las opciones B y C son incorrectas porque afirman que CUT no traslada la key o que AUTO no la afecta, lo cual contradice el comportamiento operativo estándar de los mezcladores. ",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Al reproducir un master HDR en un monitor SDR sin conversión, cuál es el diagnóstico operativo más probable:",
+          "options": [
+            "Cambios aleatorios en framerate que afectan a la sincronía A/V",
+            "Reproducción idéntica en luminancia y color sin necesidad de ajuste",
+            "Aumento de contraste local controlado que mejora la percepción de detalle HDR",
+            "Pérdida de detalle en sombras y saturación o recorte en altas luces por rango dinámico mayor del origen"
+          ],
+          "correctIndex": 3,
+          "explanation": "Un display SDR no puede representar el rango luminoso completo de HDR, provocando pérdida en sombras y recorte/saturación en altas luces; diferencias en framerate no derivan del HDR/SDR. El distractor cercano (mejora de detalle) es incorrecto porque la incompatibilidad reduce, no mejora, la representación.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Según el III Convenio Colectivo, para clasificar un puesto dentro de la estructura profesional, ¿qué criterio operativo es pertinente al asignar funciones y organización del trabajo?",
+          "options": [
+            "Atributo principal: contenido y complejidad de las tareas y responsabilidades profesionales asignadas al puesto",
+            "La preferencia personal del trabajador por un horario concreto sin considerar funciones",
+            "La antigüedad exclusiva sin considerar competencias ni funciones reales",
+            "La ubicación física del puesto sin relación con funciones o nivel de responsabilidad"
+          ],
+          "correctIndex": 0,
+          "explanation": "El convenio clasifica ocupaciones por contenido y complejidad de las funciones y responsabilidades; los otros criterios (preferencia, antigüedad sola, ubicación física) no son criterios de clasificación profesional según el convenio. La diferencia decisiva es que la clasificación se basa en funciones y responsabilidades reales.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_postura",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Indique cuál de estas características forma parte del ajuste postural recomendado para un puesto de edición:",
+          "options": [
+            "Silla alta sin apoyo lumbar, antebrazos elevados y pies en punta para mejor movilidad",
+            "Apoyo lumbar adecuado, ajuste de silla a la altura de los muslos, antebrazos paralelos al plano de trabajo y pies apoyados",
+            "Reposabrazos rígidos que impidan el movimiento del antebrazo y monitor al nivel del techo",
+            "Apoyar los antebrazos sólo en la mesa, mantener la espalda en extensión completa y piernas cruzadas"
+          ],
+          "correctIndex": 1,
+          "explanation": "La ergonomía recomienda apoyo lumbar, ajuste de asiento, antebrazos alineados y pies apoyados. Los distractores proponen posturas que incrementan tensión postural o bloquean movilidad; la diferencia decisiva es la presencia de apoyo lumbar y alineación de antebrazos/pies.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Al mezclar material rodado a 24 fps con secuencias a 25 fps sin conversión, qué efecto es habitual:",
+          "options": [
+            "Sincronía perfecta de audio sin ajuste adicional",
+            "Mejora automática de la fluidez sin artefactos",
+            "Aparición de tirones o variación perceptible en la velocidad de reproducción (judder) en las partes afectadas",
+            "Incremento de la resolución espacial de las imágenes"
+          ],
+          "correctIndex": 2,
+          "explanation": "Mezclar cadencias distintas sin conversión provoca discrepancias temporales y judder por la diferencia de frames/segundo. Los otros distractores aducen efectos irreales (mejora fluidez, mejor resolución, sincronía automática) que no ocurren sin una conversión adecuada.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "En un vectorscopio, qué indica operativamente un punto de señal desplazado hacia la derecha en ángulo y a mayor distancia del centro:",
+          "options": [
+            "Tono (hue) orientado hacia la primario correspondiente al ángulo y mayor saturación por mayor distancia al centro",
+            "Pérdida de luminancia con balance de blancos correcto",
+            "Presencia de ruido temporal en el croma sin relación con tono ni saturación",
+            "Desplazamiento de la señal hacia la derecha indica únicamente un fallo del monitor"
+          ],
+          "correctIndex": 0,
+          "explanation": "En el vectorscopio el ángulo representa tono (hue) y la distancia al centro la saturación; por tanto desplazamiento angular a la derecha indica determinado tono y mayor distancia indica saturación mayor. Los distractores confunden luminancia o ruido o asignan la causa a fallo del monitor, que no explica la lectura cromática.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a la elección entre CBR y VBR, señale la afirmación que describe mejor la ventaja operativa de VBR frente a CBR:",
+          "options": [
+            "VBR simplifica el dimensionado de redes porque la tasa es predecible frame a frame",
+            "VBR garantiza un uso de ancho de banda constante sin picos en la transmisión",
+            "VBR asigna bitrate variable según complejidad visual, logrando mejor calidad media para igual tamaño de archivo",
+            "VBR elimina la necesidad de buffers en los clientes de reproducción"
+          ],
+          "correctIndex": 2,
+          "explanation": "VBR adapta bitrate a complejidad de la escena, optimizando calidad por tamaño. Los distractores confunden con propiedades de CBR (constancia y predictibilidad); la diferencia clave es la adaptabilidad al contenido que ofrece VBR.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Diagnóstico habitual ante un zumbido de baja frecuencia (50/60 Hz) en cadena de monitorización, sin otros ruidos: causa más probable relacionada con bucles de masa:",
+          "options": [
+            "Diferencia de potencial entre tierras de dos equipos conectados por señal de audio, provocando bucle de masa",
+            "Cableado digital defectuoso que genera pérdida de paquetes en la red",
+            "Compresión excesiva del audio en el codificador",
+            "Configuración incorrecta de los monitores de forma de onda"
+          ],
+          "correctIndex": 0,
+          "explanation": "Un zumbido a 50/60 Hz suele indicar un bucle de masa por diferencias de tierra entre equipos. Los otros distractores se refieren a problemas digitales o de medición no relacionados con el tono de red característico; la diferencia decisiva es la frecuencia y su origen eléctrico.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Compare niveles RAID: ¿qué configuración estándar permite reconstrucción tras la pérdida simultánea de dos discos en ubicaciones arbitrarias del conjunto?",
+          "options": [
+            "RAID 5 (paridad simple distribuida)",
+            "RAID 6 (paridad dual distribuida)",
+            "RAID 1 (mirror simple)",
+            "RAID 0 (striping sin paridad)"
+          ],
+          "correctIndex": 1,
+          "explanation": "RAID 6 usa paridad dual distribuida y permite tolerar pérdida de dos discos; RAID 5 sólo tolera uno, RAID 1 tolera uno por espejo pero no dos simultáneos en configuraciones estándar, y RAID 0 no ofrece tolerancia. La paridad dual es la diferencia decisiva frente al distractor más cercano (RAID 5).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Según la reforma introducida por la Ley 5/2017, cuál es la finalidad esencial y la consecuencia en la elección de los órganos de RTVE:",
+          "options": [
+            "Recuperar independencia y pluralismo mediante designación parlamentaria de los órganos de dirección",
+            "Concentrar la designación de órganos exclusivamente en la Presidencia del Gobierno",
+            "Externalizar la elección de órganos a empresas privadas de consultoría",
+            "Eliminar cualquier control parlamentario sobre la composición de los órganos"
+          ],
+          "correctIndex": 0,
+          "explanation": "La reforma buscó reforzar independencia y pluralismo mediante elección parlamentaria de los órganos. Los distractores proponen concentrar o externalizar la designación o suprimir control parlamentario, opciones contrarias a la finalidad de la reforma; la designación parlamentaria es la diferencia clave.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_color_order",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Orden de operaciones recomendado en colorización para asegurar coherencia entre planos:",
+          "options": [
+            "Ajustar sólo curvas para todos los planos y aplicar LUT creativa al final sin matching",
+            "Aplicación de look → contraste → balance de blancos → matching → normalización",
+            "Matching entre planos → aplicación de look → ignore balance de blancos → normalización final",
+            "Normalización (exposición) → balance de blancos → contraste/primaria → matching entre planos → aplicación de look"
+          ],
+          "correctIndex": 3,
+          "explanation": "El orden operativo adecuado es normalizar exposición, ajustar balance, definir primaria/contraste, hacer el matching entre planos y finalmente aplicar el look creativo. Los distractores invierten pasos o omiten matching/balance, lo que perjudica coherencia; la diferencia decisiva es respetar la secuencia técnica de normalización y matching antes del look.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Una fuente de tensión V alimenta una carga inicial R. Se considera además el caso en que la fuente tiene una resistencia interna r_s. Compare los efectos de reducir la resistencia de la carga a R/2 en los dos siguientes escenarios: (A) fuente ideal (r_s = 0); (B) fuente con r_s = R (valor igual a la resistencia original de la carga). Señale la afirmación correcta sobre la variación de la corriente que atraviesa la carga y de la potencia disipada en ella.",
+          "options": [
+            "A) Fuente ideal (r_s = 0): la corriente aumenta un 50% y la potencia aumenta un 125%. B) Fuente con r_s = R: la corriente se duplica y la potencia en la carga se cuadruplica.",
+            "A) Fuente ideal (r_s = 0): la corriente se duplica y la potencia en la carga se cuadruplica. B) Fuente con r_s = R: la corriente aumenta en un factor 4/3 (≈+33,3%) y la potencia en la carga aumenta aproximadamente un 11%.",
+            "A) Fuente ideal (r_s = 0): la corriente se duplica y la potencia en la carga se cuadruplica. B) Fuente con r_s = R: la corriente aumenta en un factor 4/3 (≈+33,3%) y la potencia en la carga disminuye (de V^2/(4R) a 2/9·V^2/R, ≈‑11,1%).",
+            "A) Fuente ideal (r_s = 0): la corriente se duplica y la potencia en la carga se cuadruplica. B) Fuente con r_s = R: la corriente no cambia y la potencia en la carga disminuye a la mitad."
+          ],
+          "correctIndex": 2,
+          "explanation": "Con fuente ideal (r_s=0): I = V/R pasa a I' = V/(R/2) = 2·(V/R) ⇒ la corriente se duplica; P = V^2/R pasa a P' = V^2/(R/2) = 4·(V^2/R) ⇒ la potencia se cuadruplica. Con r_s = R: inicialmente I1 = V/(R+r_s)=V/(2R) y P1 = I1^2·R = V^2/(4R). Tras reducir la carga a R/2, I2 = V/(R + R/2) = 2V/(3R) = (4/3)·I1, por tanto la corriente aumenta en un factor 4/3. La potencia en la carga es P2 = I2^2·(R/2) = 2/9·V^2/R ≈0,2222·V^2/R, que es menor que P1=0,25·V^2/R (reducción ≈11,1%). El distractor más próximo (opción 1) falla al invertir el signo del cambio de potencia en el caso con resistencia interna, ignorando la mayor caída de tensión en r_s que reduce la potencia entregada a la carga.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Si la documentación y el controlador de una matriz de vídeo son poco fiables, cuál de estas acciones NO es recomendable para verificar un crosspoint concreto:",
+          "options": [
+            "Enviar una señal de prueba sincronizada desde la fuente y comprobar salida física en el destino con monitor de referencia",
+            "Conectar temporalmente la salida del destino a la entrada de un grabador independiente y verificar presencia de la fuente",
+            "Inspeccionar cableado físico y realizar comprobación visual del estado de conectores y patch panels",
+            "Desconectar aleatoriamente otros crosspoints hasta que aparezca la señal en el destino"
+          ],
+          "correctIndex": 3,
+          "explanation": "Desconectar aleatoriamente otros crosspoints es una práctica insegura y disruptiva que no verifica sistemáticamente el punto de cruce. Las acciones recomendadas son enviar señal de prueba, comprobar con grabador y revisar cableado físico. La diferencia decisiva es que la opción señalada provoca cambios no controlados y puede interrumpir servicio.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Tras completar y verificar la copia de los ficheros de un SSD de rodaje, ¿qué procedimiento operativo debe aplicarse para dejar el soporte preparado para una nueva sesión de grabación, considerando integridad de datos, rendimiento del dispositivo y trazabilidad?",
+          "options": [
+            "Realizar un formateo rápido (quick format) en la cámara y reutilizar el SSD inmediatamente, anotando sólo la nueva sesión en el registro de medios.",
+            "Sobrescribir todo el contenido del SSD con ceros desde un ordenador para eliminar restos y, una vez completado, conectar la unidad a la cámara para seguir grabando sin más trámites.",
+            "Ejecutar la operación de 'secure erase' o 'sanitize' recomendada por el fabricante para restablecer internamente el SSD; a continuación formatear con el sistema de archivos requerido por la cámara y actualizar el registro de medios (n.º de serie, comprobante de copia, checksums).",
+            "Iniciar nuevas grabaciones sobre el mismo sistema de archivos sin formatear ni borrar, confiando en que los nuevos archivos sobrescribirán los anteriores y anotando la operación en el parte de rodaje."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es la 2. Un 'secure erase' o rutina de sanitización del fabricante está diseñada para SSDs: instruye al controlador a restablecer las celdas y las tablas de mapeo internas, lo que contribuye a recuperar rendimiento y evita dependencias de la estructura lógica anterior. Tras ello debe formatearse al formato requerido por la cámara y registrarse el número de serie y las evidencias de copia (checksums) para mantener trazabilidad. El distractor más próximo (sobrescribir con ceros) puede no afectar las celdas físicas de forma predecible debido al wear‑levelling y al mapeo interno del SSD, implica muchas escrituras innecesarias y suele ser más lento; el formateo rápido sólo restaura punteros lógicos y no garantiza eliminación de metadatos ni recuperación óptima del rendimiento; grabar sin formatear compromete integridad y trazabilidad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "En la línea de tiempo desea cambiar qué porción del material fuente se reproduce dentro de un clip ya colocado, sin mover los puntos de entrada/salida de ese clip en la secuencia ni modificar la duración total ni la sincronía con los clips adyacentes. ¿Qué modo de trim corresponde a esta operación?",
+          "options": [
+            "Ripple (desplaza extremos y afecta la duración de la secuencia)",
+            "Roll (desplaza el punto de corte entre dos clips, afectando las duraciones de ambos)",
+            "Slide (desplaza el clip en la línea de tiempo, moviendo los cortes adyacentes)",
+            "Slip (cambia la ventana de origen dentro del clip manteniendo fijos sus extremos en la secuencia)"
+          ],
+          "correctIndex": 3,
+          "explanation": "Slip es la operación que desplaza los puntos de entrada/salida en el material fuente dentro del mismo clip sin alterar los puntos de corte en la secuencia ni la duración total. Se diferencia de Roll —distractor más próximo— en que Roll mueve el límite entre dos clips (modifica las duraciones relativas de ambos) mientras mantiene constante la duración de la secuencia; Slip, en cambio, no cambia las duraciones de los clips en la línea de tiempo. Ripple altera la duración de la secuencia desplazando los clips posteriores, y Slide desplaza la posición del clip en la línea de tiempo moviendo los cortes vecinos mientras conserva la porción de origen visible.",
+          "category": "Edición de vídeo"
+        }
+      ]
+    },
     {
       "id": "113",
       "title": "Examen 113",
