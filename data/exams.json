@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-21",
   "exams": [
+    {
+      "id": "115",
+      "title": "Examen 115",
+      "date": "2026-11-21",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique cuál de las siguientes formulaciones refleja con mayor precisión un principio operativo de la acción preventiva exigible al empleador según la Ley 31/1995:",
+          "options": [
+            "Evaluar los riesgos laborales existentes en la actividad, planificar medidas proporcionales para su eliminación o reducción en origen y proporcionar información y formación a las personas trabajadoras.",
+            "Limitar las medidas preventivas a la dotación de equipos de protección individual, dejando al trabajador la responsabilidad de su aplicación.",
+            "Delegar en cada trabajador la evaluación de riesgos de su puesto sin coordinar procedimientos ni supervisión.",
+            "Aplicar medidas preventivas únicamente cuando se produzcan accidentes o se detecte una dolencia relacionada con el trabajo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta sintetiza los elementos recogidos en la Ley: evaluar riesgos, planificar actuaciones preferentemente en origen y formar/informar. Los distractores fallan porque atribuyen la prevención al trabajador, limitan las medidas a EPI o esperan a la lesión, lo que contradice la obligación empresarial de prevención proactiva.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "prl_incendio",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Respecto a la actuación ante un conato de incendio en un set, indique la opción que constituye una excepción (no es una medida adecuada):",
+          "options": [
+            "Desconectar la alimentación eléctrica del equipo afectado y activar el plan de evacuación según procedimiento.",
+            "Aplicar un extintor de CO2 sobre un equipo eléctrico energizado cuando sea posible aislar la zona y evitar contacto con sustancias inflamables líquidas.",
+            "Aplicar agua a chorro directamente sobre un equipo eléctrico energizado para refrigerar componentes y extinguir llamas.",
+            "Utilizar un extintor de polvo ABC sobre materiales sólidos y líquidos cerca del foco si el riesgo eléctrico está controlado."
+          ],
+          "correctIndex": 2,
+          "explanation": "Echar agua directamente sobre equipos eléctricos energizados es peligroso por conductividad y riesgo de electrocución; las otras opciones son medidas aceptables dependiendo de la evaluación del riesgo (aislar la alimentación, usar CO2 o polvo según el tipo de fuego).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "edit_offline_online",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que describe con mayor precisión la relación entre edición sobre proxies (offline), la lista de decisiones (EDL/AAF) y el reconformado a las originales:",
+          "options": [
+            "La lista de decisiones exportada desde proxies sólo incluye órdenes de corte y no contiene información suficiente para localizar material en los originales.",
+            "El reconformado requiere que los proxies y las essencias originales sean del mismo códec; sin ello no es posible una reconformación automática.",
+            "El montaje en proxies genera una lista de decisiones basada en timecodes y metadatos que permite reconformar frame‑a‑frame a las essencias originales si se preservan los mapeos de timecode y UMID.",
+            "El reconformado siempre exige volver a reproducir manualmente todo el material original y rehacer el montaje sobre éste."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta señala que un EDL/AAF con timecode y metadatos (UMID o mapeos) permite reconformar exactamente sobre las essencias originales. Los distractores fallan: no es necesario mismo códec, las listas sí aportan la información para localizar clips, y el reconformado no exige rehacer manualmente todo el montaje si la información está presente.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Ante una estación con CPU limitada y la necesidad de editar con fluidez y mantener trazabilidad para reconformado, ¿qué diseño de proxy resulta operativamente más recomendable?",
+          "options": [
+            "720p H.264 Long‑GOP a 2 Mbps: tamaño pequeño pero elevada carga de decodificación inter‑frame para scrubbing.",
+            "480p ProRes (perfil LT) intraframe a ≈10 Mbps: mayor tamaño pero decodificación más sencilla y acceso por fotograma fiable.",
+            "1080p HEVC a 8 Mbps: buena relación calidad/tamaño pero alto coste de decodificación en CPU limitada.",
+            "720p MJPEG a 6 Mbps: intraframe con tamaño moderado pero metadatos de timecode poco estándar para reconformado."
+          ],
+          "correctIndex": 1,
+          "explanation": "El proxy ideal en CPU limitada suele ser un códec intraframe (ProRes, DNx) que facilita scrubbing y edición por fotograma y mantiene metadatos útiles para reconformado; aunque ocupa más, reduce la carga de CPU frente a Long‑GOP o HEVC. El distractor más cercano es MJPEG (intraframe) pero su soporte de metadatos y perfil puede ser menos fiable para reconformado que ProRes LT ampliamente compatible.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "basic_red_ip",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Equipo A: 192.168.1.10 máscara 255.255.255.0. Equipo B: 192.168.1.200 máscara 255.255.255.128. Ambos conectados al mismo switch, no se comunican sin router. Diagnóstico más probable:",
+          "options": [
+            "El switch ha sido configurado con una lista de control de acceso que bloquea puertos.",
+            "Existe conflicto de direcciones IP duplicadas en la red, impidiendo comunicación.",
+            "Las máscaras de subred difieren; A y B quedan en subredes distintas y no pueden alcanzarse directamente sin enrutamiento.",
+            "Los cables de ambos equipos están defectuosos y deben sustituirse."
+          ],
+          "correctIndex": 2,
+          "explanation": "Con máscara /24 y máscara /25 las direcciones quedan en subredes distintas (A en 192.168.1.0/24, B en 192.168.1.128/25) impidiendo comunicación directa sin ruta. Los otros distractores son causas posibles en general pero no explican la diferencia de máscara indicada.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_true_peak",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare True Peak y Sample Peak: ¿cuál afirmación es la correcta?",
+          "options": [
+            "Sample Peak incluye la corrección por filtros de reproducción y por tanto siempre iguala al True Peak tras conversión.",
+            "Sample Peak mide los picos entre muestras y siempre es mayor que el True Peak.",
+            "True Peak sólo aplica a señales analógicas y no es pertinente en cadenas digitales.",
+            "True Peak estima los picos entre muestras (inter‑sample peaks) y es la referencia para cumplimiento de límites de entrega; Sample Peak mide sólo los valores de las muestras digitales."
+          ],
+          "correctIndex": 3,
+          "explanation": "True Peak estima posibles sobres de nivel entre muestras causados por reconstrucción DAC y es crítico para entregas; Sample Peak sólo considera valores muestreados. Los distractores confunden conceptos: Sample Peak no mide picos entre muestras ni siempre mayor, y True Peak sí es relevante en digital.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la secuencia operativa mínima correcta para archivar un paquete audiovisual en LTO con LTFS garantizando acceso y verificación:",
+          "options": [
+            "Copiar ficheros al cartucho con LTFS, calcular y registrar checksums, verificar checksums tras copia, actualizar catálogo/inventario con metadatos y ubicación.",
+            "Etiquetar cartucho, almacenar físicamente y calcular checksums en archivo local solo cuando sea necesario.",
+            "Transcodificar a formato propietario antes de escribir en LTO y confiar en la verificación visual para garantizar integridad.",
+            "Grabar directamente sin verificar (la verificación se realizará en migraciones futuras) y actualizar catálogo manualmente."
+          ],
+          "correctIndex": 0,
+          "explanation": "El procedimiento mínimo fiable es copia con LTFS, generación y verificación de checksums y actualización del catálogo para garantizar accesibilidad y trazabilidad. Los distractores omiten verificación inmediata, sustituyen checksums por comprobaciones manuales o posponen verificación, lo que compromete integridad y trazabilidad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "¿Cuál de las siguientes afirmaciones distingue con mayor precisión libertad de expresión y derecho a la información en el marco constitucional?",
+          "options": [
+            "Ambos derechos son absolutos y no admiten restricciones en ningún caso.",
+            "La libertad de expresión sólo ampara comunicados políticos; el derecho a la información obliga a los medios a emitir contenidos favorables al gobierno.",
+            "El derecho a la información suprime cualquier limitación para proteger la veracidad; la libertad de expresión puede limitarse sin más por intereses comerciales.",
+            "La libertad de expresión protege la manifestación de pensamientos y opiniones; el derecho a la información se dirige al acceso público a datos y hechos veraces, ambos con límites por otros derechos y garantías procesales."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta distingue que libertad de expresión cubre opiniones y manifestaciones, y el derecho a la información protege el acceso a información veraz, ambos sometidos a límites por otros derechos y garantías. Las otras opciones son inexactas o contrarias al marco constitucional.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "basic_audio_muestreo",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Respecto a la frecuencia de muestreo y el teorema de Nyquist, señale la afirmación que constituye una excepción (no es correcta):",
+          "options": [
+            "Para cubrir la banda audible hasta 20 kHz, la frecuencia de muestreo debe ser al menos 40 kHz según Nyquist.",
+            "El aliasing puede eliminarse posteriormente mediante normalización de nivel después de la conversión A/D.",
+            "Si se muestrea a 32 kHz, no es posible representar fielmente frecuencias superiores a 16 kHz sin aliasing.",
+            "La elección de 44,1 kHz como estándar de audio comercial proporciona margen respecto a Nyquist y facilita el filtrado antialiasing."
+          ],
+          "correctIndex": 1,
+          "explanation": "El aliasing es una pérdida irreversible de información por muestreo insuficiente y no se corrige por normalización de nivel tras la conversión. Las primeras tres opciones son correctas en relación con Nyquist y ejemplos de muestreo.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Al comparar checksums antes y después de una copia, ¿cuál es la interpretación operativa más correcta sobre su alcance y limitaciones?",
+          "options": [
+            "Un checksum idéntico sustituye la necesidad de mantener metadatos y catálogos del archivo.",
+            "Que los checksums coincidan garantiza que los ficheros estarán íntegros indefinidamente en cualquier soporte.",
+            "Si los checksums difieren, siempre indica que el dispositivo de origen está defectuoso.",
+            "La coincidencia de checksums indica que la copia es bit‑a‑bit en el momento de la verificación, pero no garantiza ausencia de corrupción posterior en almacenamiento."
+          ],
+          "correctIndex": 3,
+          "explanation": "La coincidencia demuestra integridad al momento de la verificación; sin embargo, no protege frente a bit‑rot futuro ni asegura preservación a largo plazo. Los distractores sobrestiman la cobertura del checksum o confunden su interpretación.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_directos_growing",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación operativa correcta sobre ficheros en crecimiento (growing files) durante una emisión en directo:",
+          "options": [
+            "Al cerrar el fichero en el servidor se pierde la información de timecode anterior y no es posible relinkear.",
+            "Un fichero en crecimiento nunca es reproducible hasta que el registro se cierra y el fichero se finalize.",
+            "Los ficheros en crecimiento deben transcodificarse inmediatamente a otro formato para poder ser usados en directo.",
+            "Un NLE o servidor puede reproducir y permitir selección de un fichero en crecimiento si el formato soporta lectura parcial y la aplicación gestiona adecuadamente la información de tamaño y timecode."
+          ],
+          "correctIndex": 3,
+          "explanation": "Muchos formatos y servidores permiten reproducir y trabajar con ficheros en crecimiento si la aplicación soporta lectura parcial y timecode; los otros enunciados son errores generales: no siempre es necesario transcodificar y la finalización no borra el timecode.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Respecto al uso de ProRes y DNxHR como códecs intermedios en postproducción, ¿qué práctica asegura mejor compatibilidad y flujo de trabajo?",
+          "options": [
+            "Seleccionar un perfil intraframe y una profundidad de color que mantenga la resolución y subsampling requeridos por corrección de color (por ejemplo 10‑bit 4:2:2) y registrar metadatos de color/camera.",
+            "Usar siempre el perfil de menor bitrate disponible para minimizar espacio, sin considerar subsampling ni profundidad.",
+            "Preferir códecs Long‑GOP para proxies de montaje final por su menor tamaño aun cuando el sistema de edición sea CPU limitado.",
+            "Eliminar todo metadato de camera para homogenizar archivos antes de etalonar."
+          ],
+          "correctIndex": 0,
+          "explanation": "La elección de un códec intermedio intraframe con la profundidad y subsampling adecuados mantiene calidad y compatibilidad para etalonaje y edición; los distractores sacrifican calidad o metadatos esenciales y perjudican el flujo.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación práctica: ¿cuáles son los elementos que deben concurrir para considerar un desplazamiento como accidente 'in itinere'?",
+          "options": [
+            "Desplazamiento entre domicilio y lugar de trabajo por la ruta habitual o razonablemente equivalente, sin desviaciones voluntarias significativas y dentro de un tiempo razonable relacionado con la jornada.",
+            "Cualquier accidente ocurrido cuando el trabajador se dirige a un lugar fuera del municipio de residencia, independientemente del motivo del desplazamiento.",
+            "Un percance ocurrido durante un desplazamiento recreativo antes de iniciar la jornada laboral, aun cuando no exista relación con el trayecto habitual.",
+            "Un siniestro durante una parada no autorizada por razones personales en la ruta hacia el trabajo."
+          ],
+          "correctIndex": 0,
+          "explanation": "La definición de in itinere exige desplazamiento entre domicilio y centro por la ruta habitual sin desviaciones voluntarias relevantes y en tiempo compatible con la jornada. Las otras opciones incluyen desviaciones, actos recreativos o paradas personales que excluyen la condición.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Durante la mezcla, el medidor de correlación de fase muestra de forma estable un valor aproximado de +0,85. ¿Cuál es la interpretación técnica más adecuada respecto a la compatibilidad al sumarse a mono y a la estabilidad de la relación estéreo?",
+          "options": [
+            "Indica mezcla esencialmente mono: la señal carece de separación estéreo relevante y la imagen espacial está colapsada a centro.",
+            "Valor cercano a +1 con componente estéreo presente: buena compatibilidad al sumar a mono y relación estéreo estable (presencia de información lateral sin inversión significativa de fase).",
+            "Correlación baja con riesgo de cancelaciones al sumar a mono: la lectura sugiere componentes fuera de fase y pérdida de energía al sumarse.",
+            "Lectura típica de señal fuera de fase completa: alto riesgo de anulación total de algunas frecuencias al sumar a mono."
+          ],
+          "correctIndex": 1,
+          "explanation": "Una lectura estable alrededor de +0,85 refleja una correlación positiva elevada: predominan componentes en fase (buena compatibilidad mono) pero no es exactamente +1, por lo que existe diferencia lateral que genera una imagen estéreo estable. El distractor más próximo (opción 1) confunde esa diferencia: una lectura exactamente próxima a +1 significaría casi mono absoluto; 0,85 mantiene separación. Las otras opciones describen situaciones de correlación baja o negativa (valores próximos a 0 o a −1) que sí comportan riesgo de cancelaciones o inversión de fase al sumar a mono.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "Según la Ley 13/2022, ¿cuál de las siguientes obligaciones representa una exigencia concreta para prestadores de servicios audiovisuales?",
+          "options": [
+            "Facilitar subtítulos, audiodescripción y lengua de signos en determinadas proporciones y plazos establecidos para servicios lineales y bajo demanda, conforme a accesibilidad progresiva.",
+            "Limitar obligaciones de accesibilidad únicamente a emisoras públicas, sin exigencias para prestadores privados.",
+            "Permitir que cada prestador decida libremente qué tipo de accesibilidad aplicar sin cumplir mínimos legales.",
+            "Sustituir la audiodescripción por resúmenes textuales en la misma franja horaria."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley impone obligaciones concretas como subtitulado, audiodescripción y lengua de signos con criterios y plazos; las demás opciones contradicen los requisitos de la norma o proponen sustituciones no equivalentes.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "edit_multicam_timecode",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para sincronización multicámara por código de tiempo común, ¿qué condición operativa es decisiva para asegurar una edición multicámara fiable?",
+          "options": [
+            "Que sólo la cámara principal lleve timecode; las demás se sincronizan por audio posteriormente sin problemas.",
+            "Que cada cámara tenga un timecode distinto pero arranque al mismo segundo, ya que el NLE ajustará automáticamente cualquier diferencia.",
+            "Que todas las cámaras registren el mismo timecode de referencia (misma velocidad de cuadro y sincronía) y que no exista drift significativo entre grabadores durante la toma.",
+            "Que se confíe exclusivamente en el código de fecha en los nombres de archivo para alinear material."
+          ],
+          "correctIndex": 2,
+          "explanation": "La sincronización multicámara fiable requiere un timecode común consistente en framerate y referencia para evitar drift; las alternativas subestiman la importancia del mismo o proponen métodos menos precisos (audio o nombres de archivo).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "language_ritmo",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Respecto al ritmo interno y externo del montaje, indique la afirmación que constituye una excepción (no correcta):",
+          "options": [
+            "El ritmo interno de un plano depende de su duración y del movimiento interno que contiene.",
+            "Aumentar la duración de los planos incrementa necesariamente el ritmo externo del montaje.",
+            "El ritmo externo se configura por la duración relativa de planos y la relación entre ellos en la estructura de la secuencia.",
+            "Un movimiento interno pronunciado dentro de un plano puede contribuir a la sensación de dinamismo aunque el plano sea largo."
+          ],
+          "correctIndex": 1,
+          "explanation": "Aumentar la duración de los planos suele disminuir el ritmo externo; por tanto la afirmación que asegura que aumentarla incrementa necesariamente el ritmo externo es incorrecta. Las demás opciones describen relaciones válidas entre ritmo interno y externo.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En EVS/IPDirector, antes de publicar una playlist en emisión se comprueba que las transiciones previstas aparecen abruptas y sin 'handles'. Diagnóstico operativo más probable:",
+          "options": [
+            "La red entre EVS y playout está saturada; los clips llegan incompletos en reproducción.",
+            "La playlist está correctamente montada; el problema es exclusivo del mezclador de audio en control de continuidad.",
+            "El codec de los clips en la playlist no es compatible con el playout y por eso se pierden transiciones.",
+            "Los clips se han importado o transferido sin handles suficientes (preroll/postroll) o el servidor ha sido configurado para recortar automáticamente los handles."
+          ],
+          "correctIndex": 3,
+          "explanation": "La ausencia de handles o la configuración de recorte de handles causa transiciones abruptas en playlists. Aunque codec o red pueden afectar reproducción, el síntoma descrito es típicamente debido a falta de preroll/postroll para transiciones.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "language_match_action",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Indique el procedimiento operativo más adecuado para asegurar un raccord de movimiento (match on action) entre dos planos:",
+          "options": [
+            "Aplicar un fundido encadenado para disimular cualquier desajuste de movimiento en lugar de ajustar los frames.",
+            "Cambiar el orden de planos hasta que la acción parezca coherente, sin considerar eje ni dirección.",
+            "Verificar la continuidad direccional del movimiento y el eje, localizar el frame de impacto en ambos planos, ajustar mediante trims la posición temporal y recortar para que la acción coincida frame‑a‑frame.",
+            "Sincronizar únicamente por la banda sonora y asumir que la continuidad visual se mantendrá."
+          ],
+          "correctIndex": 2,
+          "explanation": "El procedimiento correcto requiere comprobar eje/dirección y alinear el instante clave de la acción ajustando frames con trims. Los distractores proponen soluciones poco precisas (ordenar aleatoriamente, fundidos o sólo audio) que no aseguran continuidad de movimiento.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "En un flujo XDCAM con proxies y essencia de alta resolución, ¿qué afirmación describe mejor la relación operativa entre proxy y archivo MXF original durante visionado, selección e ingesta?",
+          "options": [
+            "Los proxies sustituyen permanentemente la essencia original en el archivo MXF y pueden usarse como master sin reconformado.",
+            "Los proxies permiten visionado y selección ágil; para reconformar y recuperar la essencia se requiere que el proxy incorpore o referencia metadatos de timecode/UMID que enlacen con los MXF originales.",
+            "La relación proxy‑essence no necesita metadatos siempre que los nombres de archivo coincidan parcialmente.",
+            "Durante la ingesta, los proxies deben eliminarse del sistema para evitar conflictos con los MXF originales."
+          ],
+          "correctIndex": 1,
+          "explanation": "La práctica correcta es usar proxies para selección y mantener metadatos (timecode, UMID) que permitan relink frame‑accurate a los MXF originales. Los distractores asumen sustituciones, dependencias de nombres o eliminación de proxies, lo cual rompe la trazabilidad y compatibilidad.",
+          "category": "Grabación y reproducción de vídeo"
+        }
+      ]
+    },
     {
       "id": "114",
       "title": "Examen 114",
