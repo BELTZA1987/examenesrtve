@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-22",
   "exams": [
+    {
+      "id": "116",
+      "title": "Examen 116",
+      "date": "2026-11-22",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Según el III Convenio Colectivo de RTVE, ¿qué medida se ajusta operativamente a la regulación de jornada, descansos y turnicidad?",
+          "options": [
+            "Asignar turnos rotativos con comunicación de calendario al trabajador con menos de 7 días de antelación.",
+            "Compensar las jornadas realizadas en horario nocturno mediante descansos equivalentes retribuidos en el período establecido por convenio.",
+            "Permitir la programación de turnos discontinuos sin establecer descansos compensatorios adicionales.",
+            "Reducir unilateralmente la jornada diaria y recuperar horas en semanas sucesivas sin acuerdo."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 es compatible con la doctrina de convenios: las jornadas nocturnas o turnos especiales deben compensarse mediante descansos o compensaciones establecidas. La opción 2 falla por el plazo de notificación irrealmente corto; la 3 omite la compensación obligatoria; la 4 vulnera acuerdos sobre recuperación de jornada.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_evs_loop",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Principio operativo de la grabación en bucle (loop) en servidores tipo EVS:",
+          "options": [
+            "Registro secuencial que nunca sobreescribe; conserva todo el material indefinidamente hasta borrado manual.",
+            "Buffer circular que graba continuamente sobreescribiendo y permite recuperar momentos mediante marcaje/lock antes de la sobreescritura.",
+            "Grabación únicamente durante playout, con pausa automática en continuidad de emisión.",
+            "Copiado automático directo a LTO cuando se alcanza el límite del buffer circular."
+          ],
+          "correctIndex": 1,
+          "explanation": "La grabación en bucle usa un buffer circular que sobreescribe y permite conservar segmentos señalados mediante marcaje o bloqueo. Las otras opciones describen modos distintos (retención indefinida, grabación condicionada o archivado automático) que no definen el principio del loop.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "language_fiction",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En montaje de ficción, ¿qué práctica favorece la continuidad dramática y la preservación de la interpretación al coordinar con realización?",
+          "options": [
+            "Usar siempre insertos y primeros planos para enmascarar pequeñas variaciones de interpretación entre tomas.",
+            "Conservar el plano maestro y escoger tomas parciales (singles) que mantengan el tempo y la intención actoral del maestro.",
+            "Reordenar la cobertura para priorizar interés visual aunque altere el arco interpretativo del actor.",
+            "Sustituir sistemáticamente diálogos completos por planos cortos para incrementar ritmo, aunque se pierda parte de la actuación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 1 preserva la continuidad dramática: usar el plano maestro como referencia y elegir singles que respeten tempo e intención mantiene la interpretación. Las otras opciones sacrifican interpretación o reordenan cobertura en detrimento de la continuidad.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_nexis_bandwidth",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la excepción entre las siguientes afirmaciones sobre rendimiento concurrente en almacenamiento compartido tipo NEXIS/SAN:",
+          "options": [
+            "Reservar ancho de banda o I/O por proyecto disminuye la contención entre sesiones de edición.",
+            "Configurar límites de conexiones simultáneas por share reduce la degradación cuando hay muchos clientes.",
+            "Limitar la concurrencia por volumen de proyecto no tiene efecto en la latencia de metadatos y por tanto no mejora el rendimiento.",
+            "La presencia de cache NVMe/SSD puede mitigar picos de I/O, pero no elimina la necesidad de gestionar concurrencia y cuotas."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es la excepción porque afirma que limitar concurrencia no mejora latencia de metadatos, lo cual es incorrecto: controlar concurrencia sí reduce contención y mejora latencias. Las demás opciones describen medidas válidas para gestionar rendimiento compartido.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_umid",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Función operativa del UMID (Unique Material Identifier) en ficheros audiovisuales:",
+          "options": [
+            "Identificador persistente que permite rastrear la misma unidad de material a través de transcodings y copias.",
+            "Campo que especifica el códec y perfil usado en la esencia.",
+            "Registro de la suma de comprobación (checksum) del fichero para verificar integridad.",
+            "Indicación del dispositivo físico o la ubicación de almacenamiento donde reside el archivo."
+          ],
+          "correctIndex": 0,
+          "explanation": "El UMID es un identificador único persistente del material que permanece en ficheros derivados; no describe códec, checksum ni ubicación física, que son metadatos distintos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "measure_waveform_rgb_parade",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En un RGB Parade, ¿qué lectura indica una dominante azul en las altas luces?",
+          "options": [
+            "Un desplazamiento angular pronunciado del azul en el vectorscopio en la zona de piel.",
+            "Los tres canales convergen en sombras y divergen solo en la parte baja del parade.",
+            "El canal azul muestra valores superiores en la banda de altas luces respecto a rojo y verde.",
+            "El canal azul aparece atenuado en altas luces respecto a rojo y verde."
+          ],
+          "correctIndex": 2,
+          "explanation": "La dominante azul en altas luces se refleja porque el canal azul marca mayores valores en la porción alta del parade. La opción 4 describe la situación opuesta; la 2 es ambigua y la 3 remite al vectorscopio, no al parade en altas luces.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "digital_lut_log",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Distinción operativa entre una LUT de visualización para señales log y una LUT creativa de corrección:",
+          "options": [
+            "La LUT de visualización siempre debe aplicarse al render final para garantizar compatibilidad entre estaciones.",
+            "Una LUT creativa se limita a corregir balance de blancos de cámara y nunca afecta saturación.",
+            "La LUT de visualización convierte log a una curva display‑referred para monitoreo sin alterar la esencia como operación final; la creativa modifica estética y color para look final.",
+            "Ambas LUTs son intercambiables y producen idéntico resultado si se aplican en distinto orden."
+          ],
+          "correctIndex": 2,
+          "explanation": "La LUT de visualización mapea log para ver en monitor sin pretender ser la corrección final; la LUT creativa altera estética. Las otras opciones son incorrectas: B es limitado y falso; C y D confunden propósito y orden operativo.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la excepción respecto a medidas coherentes con el II Plan de Igualdad y la Guía de Igualdad de RTVE:",
+          "options": [
+            "Imponer cuotas numéricas fijas y universales en todas las contrataciones sin análisis previo de puesto y contexto.",
+            "Formación obligatoria en lenguaje igualitario y no sexista para guionistas y redactores.",
+            "Protocolos específicos para prevenir y gestionar el acoso sexual y por razón de sexo.",
+            "Establecer canales de denuncia confidenciales y medidas de acompañamiento."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 3 es excepción: el plan promueve acciones positivas, pero imponer cuotas rígidas y universales sin análisis de contexto no sigue el enfoque indicado. Las otras medidas son coherentes con prevención, formación y denuncia.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Para minimizar reflejos y fatiga visual, compare distancia, altura y orientación de la pantalla:",
+          "options": [
+            "Pantalla a corta distancia (<30 cm), con borde superior por encima del nivel de los ojos y orientación hacia ventanas.",
+            "Pantalla muy elevada respecto a los ojos y paralela a ventanas para mejor ventilación.",
+            "Pantalla a una distancia de brazo extendido, borde superior ligeramente por debajo del nivel de los ojos y evitar orientación frente a fuentes de luz directa.",
+            "Colocación de la pantalla perpendicular al usuario y directamente frente a una fuente luminosa para maximizar brillo."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es la configuración ergonómica recomendada: distancia a brazo extendido, borde superior algo por debajo del ojo y evitar orientación frente a luz. Las otras opciones inciden en malas prácticas que aumentan reflejos o tensión.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Al dimensionar un servidor de vídeo para acceso concurrente, ¿qué magnitud afecta más directamente al número de reproducciones simultáneas soportadas?",
+          "options": [
+            "Ancho de banda de salida agregado del servidor (capacidad de red/storage para transmisión simultánea).",
+            "Tasa de refresco del monitor del operador.",
+            "Resolución de los metadatos en las cabeceras de los ficheros.",
+            "Número de entradas USB disponibles en el servidor."
+          ],
+          "correctIndex": 0,
+          "explanation": "La concurrencia admite reproducciones simultáneas limitadas por el ancho de banda agregado (I/O y red). Las otras opciones no condicionan directamente la concurrencia: el refresco, metadatos o puertos USB no son determinantes.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_intelectual",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "¿Cómo crea significado el montaje intelectual por yuxtaposición de planos?",
+          "options": [
+            "Por la sincronía exacta de ritmo con la música sin relación entre imágenes.",
+            "Mediante la continuidad espacial estricta entre los ejes de cámara.",
+            "Fundándose exclusivamente en la corrección de color para homogeneizar planos.",
+            "Al asociar dos imágenes no relacionadas cuyo contraste genera una nueva idea o juicio interpretativo."
+          ],
+          "correctIndex": 3,
+          "explanation": "El montaje intelectual funciona por asociación: colocar dos planos consecutivos crea una nueva lectura. Las otras opciones describen continuidad espacial, corrección técnica o ritmo musical, que no son la base de la yuxtaposición intelectual.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_blackburst_trilevel",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo para escoger referencia entre black‑burst y tri‑level en una instalación mixta SD/HD:",
+          "options": [
+            "Emplear black‑burst para equipos SD y tri‑level para equipos HD, interconectando mediante sincronizador cuando conviven ambos estándares.",
+            "Utilizar siempre black‑burst independientemente del estándar de resolución.",
+            "Adoptar tri‑level para SD por su mayor precisión temporal.",
+            "Prescindir de señal de referencia y sincronizar cámaras manualmente en edición."
+          ],
+          "correctIndex": 0,
+          "explanation": "La práctica correcta es usar black‑burst para SD y tri‑level para HD, y sincronizar mediante frame‑syncs o synchronizers cuando conviven. Las otras opciones son inadecuadas: black‑burst único no sirve bien para HD; tri‑level no es para SD; la sincronización manual es poco fiable.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "edit_consolidate_transcode",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "En la preparación de material para intercambio, ¿qué diferencia operativa entre 'Consolidate' y 'Transcode' es decisiva?",
+          "options": [
+            "Transcode copia exactamente byte a byte las porciones de origen sin modificar codecs.",
+            "Consolidate siempre cambia el códec a uno estándar; Transcode sólo crea metadatos sin copiar esencia.",
+            "Ambas operaciones sólo afectan a metadatos de proyecto y no alteran ficheros de esencia.",
+            "Consolidate copia los tramos usados manteniendo el códec original; Transcode genera nuevas essencias con un códec distinto y por tanto cambia la codificación del archivo."
+          ],
+          "correctIndex": 3,
+          "explanation": "Consolidate copia segmentos seleccionados conservando la esencia/codec original (posible trimming con handles); Transcode convierte la esencia a otro codec. Las otras opciones son incorrectas: consolidate no cambia siempre codec; transcode sí altera la esencia; ninguna es meramente metadatos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "record_backup_321",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Aplicación correcta de la política 3‑2‑1 para material de rodaje:",
+          "options": [
+            "Una sola copia en nube con tres ubicaciones lógicas del proveedor cuenta como 3‑2‑1.",
+            "Mantener RAID en el servidor, una copia idéntica en otro disco del mismo centro y considerar que la política 3‑2‑1 está cumplida.",
+            "Tres copias totales, en al menos dos tipos de soporte distintos y con al menos una copia ubicada fuera del lugar primario de archivo.",
+            "Conservar original en SSD y dos réplicas locales en el mismo rack; no es necesario offsite si hay redundancia."
+          ],
+          "correctIndex": 2,
+          "explanation": "La política 3‑2‑1 exige 3 copias, 2 medios distintos y 1 offsite; la opción 1 lo describe. La 2 falla porque RAID no reemplaza copias independientes; la 3 incumple el requisito de dos soportes diferentes; la 4 falla por ausencia de copia fuera de sitio.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según la Ley 17/2006, ¿qué obligación es propia de RTVE como servicio público?",
+          "options": [
+            "Operar únicamente mediante financiación privada sin control público.",
+            "Gestionar exclusivamente contenidos comerciales sin sujeción a criterios editoriales públicos.",
+            "Sustituir la responsabilidad editorial por dictado de organismos externos.",
+            "Garantizar pluralismo informativo y el derecho a la información en el marco de sus emisiones."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley 17/2006 asigna a RTVE funciones de servicio público como el pluralismo y el derecho a la información. Las otras opciones contradicen principios básicos de servicio público o proponen prácticas incompatibles.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_intra_longgop",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Compare intraframe (Intra) frente a Long‑GOP respecto a acceso aleatorio, eficiencia, carga de decodificación y robustez de edición:",
+          "options": [
+            "Ambos presentan idéntica carga de decodificación y comportamiento frente a corrupción de paquetes.",
+            "Long‑GOP permite acceso frame‑accurate más rápido que Intra y es menos exigente en decodificación.",
+            "Intra es siempre menos eficiente y requiere más decodificación que Long‑GOP en reproducción en tiempo real.",
+            "Intra ofrece mejor acceso aleatorio y robustez en la edición a costa de mayor tasa de datos; Long‑GOP es más eficiente en almacenamiento pero penaliza acceso aleatorio y aumenta la dependencia de decodificación interframe."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 resume correctamente las compensaciones: Intra facilita acceso aleatorio y edición robusta con mayor bitrate; Long‑GOP consigue compresión más eficiente, pero complica acceso aleatorio y aumenta la carga de decodificación al reconstruir frames. Las demás aseveraciones son incorrectas.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "edit_alpha_premult",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Al componer un gráfico con alpha premultiplicado y aparecen halos oscuros en los bordes sobre fondo de alto contraste, ¿cuál es la interpretación operativa más probable?",
+          "options": [
+            "El canal RGB del gráfico está premultiplicado y no se ha despremultiplicado antes de la composición, causando bordes oscuros.",
+            "El archivo tiene canal alpha straight y debe premultiplicarse para eliminar halos.",
+            "El problema indica fallo de gamma en el monitor, no relación con el alpha.",
+            "La solución es aumentar la opacidad del gráfico al 150%."
+          ],
+          "correctIndex": 0,
+          "explanation": "Los halos oscuros en premultiplicado son causados por combinar RGB premultiplicado sin despremultiplicar; la opción 1 identifica la causa. La 2 confunde straight/premult; la 3 e 4 no abordan la raíz.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_submuestreo",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la excepción entre las siguientes consecuencias operativas del submuestreo de crominancia:",
+          "options": [
+            "Pérdida de resolución de color que puede afectar a detalles finos y bordes de alto contraste.",
+            "Provoca aliasing evidente en la componente de luminancia.",
+            "Mayor eficiencia de almacenamiento a costa de información de crominancia reducida.",
+            "Puede limitar la eficacia de correcciones de color intensivas y keying muy fino."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 3 es la excepción: el submuestreo de crominancia afecta a color, no causa aliasing directo en luminancia; las demás son consecuencias reales (menor resolución cromática, ahorro de bitrate y limitaciones en corrección/keying).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En tareas prolongadas con teclado, ratón y tableta, ¿qué medida técnica reduce con mayor eficacia el riesgo de trastornos musculoesqueléticos en la extremidad superior?",
+          "options": [
+            "Usar reposamuñecas rígidos que mantengan la muñeca en posición de extensión.",
+            "Alternar manos en el uso del ratón y adoptar dispositivos ergonómicos (ratón vertical) y pausas activas frecuentes.",
+            "Mantener la muñeca en extensión y evitar cambios de posición durante la jornada.",
+            "Sujetar la tableta con el antebrazo elevado para mayor precisión."
+          ],
+          "correctIndex": 1,
+          "explanation": "Alternar manos, usar dispositivos ergonómicos y pausas activas reduce carga repetitiva y desviación postural; las otras opciones mantienen posturas de riesgo o incrementan la carga estática.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "basic_cpu_gpu_ram",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "En una sesión de efectos en tiempo real acelerados por GPU, si la GPU está plenamente saturada mientras CPU y RAM tienen margen, ¿cuál es el cuello de botella más habitual?",
+          "options": [
+            "El disco de arranque, que determina la latencia de render en tiempo real.",
+            "La CPU, que coordina la GPU y por tanto limita la velocidad.",
+            "La RAM, cuya latencia suele impedir la ejecución de shaders.",
+            "La GPU, porque realiza el procesamiento paralelo de píxeles y efectos."
+          ],
+          "correctIndex": 3,
+          "explanation": "Cuando la GPU está saturada y CPU/RAM con margen, la GPU es el cuello de botella por su papel en el procesamiento masivo de píxeles; las otras opciones no explican el síntoma descrito.",
+          "category": "Conocimientos básicos"
+        }
+      ]
+    },
     {
       "id": "115",
       "title": "Examen 115",
