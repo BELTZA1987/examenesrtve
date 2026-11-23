@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22",
+  "updatedAt": "2026-11-23",
   "exams": [
+    {
+      "id": "117",
+      "title": "Examen 117",
+      "date": "2026-11-23",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según los principios y restricciones del sistema de financiación previsto en la Ley 8/2009, cuál de las siguientes fuentes se ajusta mejor al modelo:",
+          "options": [
+            "Aportaciones incluidas en los Presupuestos Generales del Estado",
+            "Ingresos derivados de la publicidad comercial en emisión regular",
+            "Venta ocasional de participaciones societarias para cubrir gasto corriente",
+            "Patrocinios exclusivos condicionados por anunciantes privados"
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley 8/2009 organiza un modelo en el que la financiación pública incluye aportaciones presupuestarias; esto es coherente con el principio de servicio público. La publicidad comercial como fuente recurrente es incompatible con las restricciones que configuran el modelo (es la diferencia decisiva frente al distractor más próximo).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "basic_impedancia_adaptacion",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "Consecuencia operativa más probable de una desadaptación de impedancias entre salida y entrada en una cadena de vídeo/audio:",
+          "options": [
+            "Inversión de polaridad de la señal audible en todas las frecuencias",
+            "Aumento inmediato y sostenido del ruido de fondo por elevación térmica del circuito",
+            "Reflexiones y ringing en la traza de vídeo y pérdida de integridad temporal en señales altas frecuencias",
+            "Cambio automático de la frecuencia de muestreo en dispositivos digitales conectados"
+          ],
+          "correctIndex": 2,
+          "explanation": "La desadaptación causa reflexiones (ringing) y distorsiones de forma de onda, especialmente en señales de banda ancha como vídeo; esto afecta la integridad temporal y los bordes. Los demás distractores (ruido térmico, inversión de polaridad, cambio de muestreo) no son la consecuencia directa y verificable de una desadaptación de impedancias en la cadena. ",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_sdi_ancillary",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto al transporte en SDI de vídeo, audio embebido y datos auxiliares (ANC):",
+          "options": [
+            "Los datos ANC se sitúan en líneas de VANC o HANC separadas de la raster de vídeo visible",
+            "SDI permite transportar audio embebido junto con la esencia de vídeo en canales definidos por el estándar",
+            "SDI puede transportar señales de tiempo auxiliar (LTC) o datos de subtitulado mediante paquetes ANC",
+            "El audio embebido garantiza siempre la conservación de etiquetas de canal y metadatos de identificación en cualquier equipo"
+          ],
+          "correctIndex": 3,
+          "explanation": "No es cierto que el audio embebido garantice siempre la conservación de etiquetas y metadatos en todos los equipos; la persistencia de metadatos depende de implementaciones y del transporte/encapsulado. Las otras afirmaciones describen capacidades estándar del SDI y de los espacios ANC. ",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Para mitigar la obsolescencia y garantizar preservación operativa de un acervo audiovisual conviene:",
+          "options": [
+            "Guardar solamente las versiones con compresión máxima para ahorrar espacio y evitar migraciones",
+            "Confiar en la copia única en un soporte de calidad y mantenerla sin verificaciones hasta su lectura futura",
+            "Realizar migraciones periódicas a formatos/soportes vigentes acompañadas de verificación (checksums) y registros de cambio",
+            "Depender exclusivamente de emulación futura del hardware original sin migrar archivos"
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica adecuada es migrar periódicamente a formatos/soportes vigentes y verificar integridad con checksums y registros; la diferencia clave frente al distractor más próximo (copiar sin verificaciones) es la ausencia de validación y trazabilidad en éste, lo que no garantiza preservación. ",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_codec_avc_hevc",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Respecto a AVC (H.264) y HEVC (H.265), cuál afirmación resume mejor una ventaja operativa clara de HEVC en flujos audiovisuales:",
+          "options": [
+            "HEVC ofrece mayor eficiencia de compresión a coste de mayor complejidad de codificación/decodificación y menor compatibilidad inmediata",
+            "HEVC es siempre menos costoso en decodificación que AVC y por tanto más adecuado para dispositivos antiguos",
+            "HEVC elimina la necesidad de buffering en streaming gracias a su estructura interna",
+            "HEVC reduce la latencia de codificación respecto a AVC en todas las implementaciones"
+          ],
+          "correctIndex": 0,
+          "explanation": "HEVC proporciona una mayor eficiencia (mejor compresión por calidad) pero exige mayor complejidad de cómputo y no tiene la misma compatibilidad universal que AVC. Los distractores indican afirmaciones incorrectas o absolutas sobre decodificación, buffering o latencia que no se sostienen operativamente. ",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_xdcam_estructura",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Al conservar y reproducir material XDCAM con spanning, la acción operativa imprescindible es:",
+          "options": [
+            "Reempaquetar inmediatamente todo el material a un único archivo ProRes para evitar dependencias de spanning",
+            "Consolidar exclusivamente los archivos MXF de vídeo en un único contenedor sin conservar XML ni estructuras accesorias",
+            "Eliminar los ficheros de log y metadatos para ahorrar espacio y conservar solo la carpeta 'VIDEO'",
+            "Copiar y preservar los ficheros de esencia y los metadatos de índice/XML que permiten reconstruir los clips spanning con la herramienta compatible"
+          ],
+          "correctIndex": 3,
+          "explanation": "El spanning divide la esencia entre múltiples ficheros/soportes y requiere conservar los ficheros de índice y metadatos XML que permiten reconstruir el clip; simplemente conservar los MXF sin índices o reempaquetar sin preservar metadatos impide la reconstrucción fiable (diferencia decisiva frente al distractor más próximo).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_skin_tone",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "En un vectorscopio Rec.709, ¿qué lectura indica operativamente un tono de piel dentro del estándar con saturación moderada?",
+          "options": [
+            "Un punto en la periferia exactamente en la marca de primarios RGB",
+            "Un punto muy próximo al centro del vectorscopio sin desviación angular",
+            "Un desplazamiento máximo hacia el eje azul con gran distancia al centro",
+            "Un punto ubicado próximo a la llamada 'línea de tono de piel' (aprox. entre 10 y 11 horas) con distancia moderada al centro"
+          ],
+          "correctIndex": 3,
+          "explanation": "El tono de piel estándar se sitúa cerca de la línea de tono de piel (aprox. hacia las 10–11 h) y con saturación moderada (distancia media al centro). Los otros distractores indican baja saturación, dominante azul o primarios, que no corresponden al rango típico para piel. ",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Según la Ley 13/2022, obligación operativa que deben cumplir los prestadores para protección de menores:",
+          "options": [
+            "Prohibir cualquier emisión informativa que incluya escenas de violencia a cualquier hora",
+            "Implantar sistemas de clasificación y medidas técnicas que eviten el acceso de menores a contenidos no aptos",
+            "Solicitar autorización parental para todo acceso a contenidos televisivos",
+            "Eliminar todo contenido que pueda ser considerado controvertido por sectores sociales"
+          ],
+          "correctIndex": 1,
+          "explanation": "La ley exige medidas de clasificación y controles técnicos para limitar el acceso de menores a contenidos no aptos. Las otras opciones son desproporcionadas o incorrectas (no existe obligación general de prohibición absoluta ni de solicitar autorización parental para todo contenido).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "edit_color_primaries",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Comparación operativa entre corrección primaria y secundaria:",
+          "options": [
+            "La primaria siempre se aplica solo en la etapa de masterización y la secundaria solo durante el rodaje",
+            "La primaria modifica parámetros globales (balance, contraste, exposición) afectando toda la imagen; la secundaria actúa sobre selecciones (hue, rango tonal, máscaras) para ajustes locales",
+            "La primaria altera únicamente la saturación y la secundaria solo el contraste",
+            "La primaria se utiliza exclusivamente para efectos creativos y la secundaria para correcciones técnicas"
+          ],
+          "correctIndex": 1,
+          "explanation": "La corrección primaria opera sobre la imagen completa (balance, exposición, contraste), mientras que la secundaria aplica cambios selectivos mediante máscaras o selecciones; los distractores proporcionan definiciones incorrectas o restrictivas que no reflejan la distinción técnica real. ",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_mxf_op1a_opatom",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Al preparar material para entrega a emisión y, por separado, para un flujo de edición colaborativa, qué elección es la más adecuada:",
+          "options": [
+            "Entregar en OP1a cuando se desea mantener archivos por pista separados para edición colaborativa",
+            "Usar siempre OP‑Atom tanto para entrega como para edición por su simplicidad",
+            "Convertir todo a MP4 para compatibilidad máxima en edición profesional",
+            "Elegir MXF OP1a para entrega final a playout y OP‑Atom para facilitar edición y reconformado frame‑accurate"
+          ],
+          "correctIndex": 3,
+          "explanation": "OP1a empaqueta essencias en un archivo adecuado para playout/entrega, mientras que OP‑Atom conserva essencias por archivo permitiendo edición y reconformado más sencillo. Los distractores son incorrectos: OP‑Atom no es siempre óptimo para entrega y MP4 no ofrece la compatibilidad profesional requerida; la última opción invierte la finalidad de OP1a. ",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_timecode_aux",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Si una cámara ha grabado un timecode auxiliar (AUX‑TC) en una pista de audio además del TC interno, ¿qué campo debe priorizarse en la ingest para sincronización cuando el AUX‑TC es la referencia externa?:",
+          "options": [
+            "Source timecode (campo que contiene la información grabada en el medio)",
+            "Auxiliary timecode (AUX‑TC procedente de la pista de audio)",
+            "Record timecode (timecode de la línea temporal del NLE)",
+            "Timestamp del sistema de archivos"
+          ],
+          "correctIndex": 1,
+          "explanation": "Cuando el AUX‑TC en pista de audio es la referencia externa fiable, se debe priorizar el auxiliary timecode en la ingest; la diferencia clave frente al 'source timecode' es que este último puede corresponder al TC interno de cámara, no necesariamente a la referencia externa registrada en audio. ",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "prl_en_mision",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Durante una misión profesional fuera del centro, medida que la empresa debe priorizar para reducir riesgos asociados al desplazamiento y la tarea:",
+          "options": [
+            "Realizar evaluación de riesgos específica del desplazamiento y del destino e implementar medidas preventivas concretas (transporte, jornada, alojamiento y equipos de protección)",
+            "Limitar la información al trabajador para evitar alarmismo y confiar en su experiencia personal",
+            "Delegar totalmente la gestión de alojamiento y transporte al trabajador sin supervisión",
+            "Programar jornadas de trabajo más largas para compensar el tiempo de desplazamiento"
+          ],
+          "correctIndex": 0,
+          "explanation": "La prioridad es una evaluación de riesgos específica y la implementación de medidas preventivas relativas a transporte, jornada, alojamiento y equipos; las otras opciones omiten la obligación preventiva o la sustituyen por prácticas inseguras. ",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "language_elipsis",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "La elipsis como recurso de compresión temporal en montaje se caracteriza por:",
+          "options": [
+            "Omitir fragmentos de tiempo entre dos acciones conservando la continuidad causal para el espectador",
+            "Aumentar la duración de una acción mediante insertos de reacción",
+            "Sustituir un plano por otro sin relación temporal o causal",
+            "Repetir una acción desde ángulos múltiples para alargar la sensación temporal"
+          ],
+          "correctIndex": 0,
+          "explanation": "La elipsis elimina segmentos temporales manteniendo la comprensión de la secuencia causal; los distractores describen alargamiento, salto sin relación o repetición, que no son la definición operativa de la elipsis. ",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Indique la obligación del trabajador en materia de prevención que contribuye directamente a la eficacia del sistema de prevención:",
+          "options": [
+            "Elegir el equipo de protección personal sin consultar al servicio de prevención",
+            "Realizar él mismo las evaluaciones de riesgo del área de trabajo",
+            "Participar en la formación, utilizar correctamente los medios de protección y cooperar en las medidas preventivas",
+            "Modificar los procedimientos de trabajo sin comunicarlo a la empresa"
+          ],
+          "correctIndex": 2,
+          "explanation": "El trabajador debe recibir formación, usar correctamente los equipos y cooperar con las medidas preventivas; estas acciones mejoran la eficacia del sistema. Las otras opciones delegan responsabilidades inadecuadas o contrarias a la cooperación exigida. ",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Según el artículo 14 de la Constitución y la interpretación constitucional sobre igualdad y no discriminación, señale la afirmación que constituye una excepción legítima al principio de igualdad (es decir, un trato diferenciado permitido):",
+          "options": [
+            "Cualquier distinción normativa basada en la religión o en la opinión queda permitida si su aplicación persigue criterios de eficiencia administrativa.",
+            "La adopción de medidas temporales de acción positiva, orientadas a corregir desigualdades de hecho y proporcionadas en medios y duración, es compatible con la Constitución.",
+            "La prohibición constitucional de discriminación es absoluta y excluye expresamente cualquier tratamiento preferente destinado a compensar desventajas sociales o económicas.",
+            "Solo el Tribunal Constitucional puede autorizar, por norma o resolución, tratamientos diferenciados entre ciudadanos; el legislador ordinario no tiene competencia para ello."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta (1) describe las llamadas medidas de acción positiva —aceptadas por la doctrina constitucional— que permiten tratamientos diferenciados temporales y proporcionados para conseguir igualdad material. Las otras opciones son erróneas: la 2 justifica discriminaciones por religión u opinión en atención a eficiencia administrativa, lo cual vulnera la prohibición constitucional; la 3 afirma que la prohibición es absoluta y niega la posibilidad de medidas compensatorias, lo que contradice la jurisprudencia sobre igualdad sustantiva; la 4 atribuye exclusivamente al Tribunal Constitucional la autorización de tratamientos diferenciados, cuando en realidad el legislador puede establecerlos y es el Tribunal quien los controla en su caso por constitucionalidad.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "basic_fase_audio",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo para detectar y corregir inversión de polaridad entre dos micrófonos de la misma fuente sonora:",
+          "options": [
+            "Comprobar la correlación o el medidor de fase y, si hay fuerte anticorrelación, invertir la polaridad de una pista",
+            "Aplicar EQ paramétrica para compensar la pérdida de graves",
+            "Aumentar la ganancia de una de las pistas hasta igualar niveles",
+            "Eliminar una de las pistas y trabajar solo con la otra"
+          ],
+          "correctIndex": 0,
+          "explanation": "La detección mediante medidor de correlación (valores cercanos a −1) y la inversión de polaridad en una pista son el procedimiento correcto. Los distractores son medidas inadecuadas que no solucionan la cancelación por fase. ",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "En un entorno de edición, cuál de las siguientes definiciones corresponde a la operación 'link':",
+          "options": [
+            "Importar y copiar físicamente los ficheros dentro del proyecto",
+            "Capturar la señal desde dispositivo hacia el almacenamiento local grabando nuevos ficheros",
+            "Referenciar externamente los archivos originales sin copiarlos al repositorio del proyecto",
+            "Ingestar en un sistema MAM con registro y verificación"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Link' significa crear una referencia a los archivos externos sin copiarlos; 'capture' y 'import' implican creación o copia física, e 'ingest' suele implicar registro/verificación en un sistema de activos. Esa es la diferencia decisiva frente al distractor más cercano (import).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_export_qc",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En el control de calidad técnico de una exportación destinada a emisión, ¿qué verificación es específica y crítica para material entrelazado?:",
+          "options": [
+            "Confirmación de metadatos descriptivos del programa",
+            "Verificación del canal de audio principal por sincronía absoluta",
+            "Comprobación del orden de campos y ausencia de combing/artefactos de campos",
+            "Comprobación de la duración total del archivo en segundos"
+          ],
+          "correctIndex": 2,
+          "explanation": "Para material entrelazado es crítico verificar el orden de campos y la presencia de artefactos de campo (combing); aunque la sincronía de audio y metadatos son necesarios, la verificación de orden de campos es la comprobación específica que distingue material entrelazado de progresivo. ",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "digital_entrelazado_progresivo",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Compare entrelazado y progresivo: ¿qué artefacto es típico del tratamiento entrelazado frente al progresivo?",
+          "options": [
+            "Excesiva latitud de exposición en altas luces",
+            "Combing o separación visible de bordes en movimiento por la naturaleza de campos temporales",
+            "Ruido de cuantización por baja profundidad de bits",
+            "Pérdida de color por submuestreo de crominancia"
+          ],
+          "correctIndex": 1,
+          "explanation": "El entrelazado genera combing en objetos en movimiento por estar compuesto por campos capturados en instantes distintos; los otros distractores son problemas no exclusivos del entrelazado sino de otros factores técnicos. ",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "language_transition_motivation",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para indicar en montaje el paso del presente a un recuerdo parcial y difuso, cuál transición es narrativamente la más motivada:",
+          "options": [
+            "Inserción de un plano recurso sin transición",
+            "Corte seco y abrupto entre los dos momentos",
+            "Barrido geométrico lateral",
+            "Fundido encadenado (dissolve) que superpone y suaviza el cambio temporal"
+          ],
+          "correctIndex": 3,
+          "explanation": "El fundido encadenado suaviza la continuidad visual y sugiere progresión temporal o memoria parcial; el corte seco o barridos tienden a indicar ruptura o cambio espacial, por lo que el dissolve es la opción motivada para un recuerdo difuso. ",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        }
+      ]
+    },
     {
       "id": "116",
       "title": "Examen 116",
