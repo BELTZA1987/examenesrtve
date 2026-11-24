@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23",
+  "updatedAt": "2026-11-24",
   "exams": [
+    {
+      "id": "118",
+      "title": "Examen 118",
+      "date": "2026-11-24",
+      "level": "Alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley17_organizacion",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Según la organización institucional prevista para la Corporación RTVE, cuál de las siguientes implicaciones operativas refleja con mayor precisión la relación entre sus órganos de gobierno y la gestión ejecutiva:",
+          "options": [
+            "El órgano colegiado establece las políticas, controla su cumplimiento y la Presidencia actúa como responsable de la dirección ejecutiva.",
+            "El órgano de gestión ejecutiva dicta las políticas generales y el órgano colegiado las ejecuta diariamente.",
+            "Los órganos de RTVE son meramente consultivos; la gestión corresponde íntegramente a un director general nombrado por el Gobierno.",
+            "La estructura prevé órganos territoriales con plena autonomía para fijar la política editorial en sus respectivas sedes."
+          ],
+          "correctIndex": 0,
+          "explanation": "La relación operativa prevista asigna al órgano colegiado la definición y control de políticas y a la Presidencia la dirección ejecutiva. La diferencia decisiva frente al distractor más próximo (A) es la inversión de roles entre órgano colegiado y gestión diaria.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Tras completar y verificar la copia de contenido desde un SSD de rodaje, cuál de las siguientes prácticas es la más adecuada para preparar el soporte para una nueva sesión manteniendo rendimiento y trazabilidad:",
+          "options": [
+            "Ejecutar un formateo rápido en el sistema de archivos de destino sin registrar metadatos adicionales.",
+            "Copiar de nuevo un patrón binario de ceros sobre todo el disco mediante una herramienta genérica y reutilizarlo inmediatamente.",
+            "Reinicializar el dispositivo con la utilidad del fabricante (secure‑erase o low‑level erase), recrear el sistema de archivos y registrar en el control de ingesta el identificador y la fecha de limpieza.",
+            "Remontar el SSD en otra workstation con distinto sistema operativo para forzar reasignación de bloques y mejorar el rendimiento."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica recomendada es usar la utilidad del fabricante para un borrado seguro/reinicialización (preserva wear‑leveling y rendimiento) y registrar el identificador y la fecha para trazabilidad. El distractor más cercano (C) propone un zero‑fill genérico que puede no gestionar correctamente el controlador y no mantiene la trazabilidad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "prl_pvd_pausas",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Organice en orden de prioridad las medidas más efectivas para reducir fatiga visual y postural en tareas continuadas frente a pantallas:",
+          "options": [
+            "Incrementar brillo para mejorar legibilidad; aumentar el tamaño de fuente; trabajar sin descansos prolongados; cambiar a modo monocromo.",
+            "Ajuste ergonómico del puesto; descansos breves cada 20–30 min; alternancia de tareas; ejercicios o estiramientos periódicos.",
+            "Eliminar iluminación ambiental; acercar la pantalla para ver con más detalle; aumentar la velocidad de trabajo para terminar antes.",
+            "Sustituir monitor por uno de mayor resolución; mantener la misma postura; reducir frecuencia de pausas; usar lentes con mayor aumento."
+          ],
+          "correctIndex": 1,
+          "explanation": "La secuencia correcta prioriza ajuste ergonómico, pausas regulares, alternancia de tareas y ejercicios. La diferencia clave frente al distractor más próximo es que las otras opciones priorizan cambios tecnológicos o reducen pausas, lo que no mitiga adecuadamente la fatiga.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "record_ingest_verificacion",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare estos flujos de ingesta verificada. ¿Cuál secuencia incluye las etapas mínimas necesarias para garantizar integridad y trazabilidad de los ficheros:",
+          "options": [
+            "Copia → eliminar ficheros temporales en origen → cambiar nombres de archivo → registro en sistema de ingest.",
+            "Copia → solo verificación visual de vídeo → generar proxies → registro en sistema de ingest.",
+            "Copia → comprobación de integridad (checksum) en origen y destino → validación de contenedor/metadatos → registro en sistema de ingest.",
+            "Copia → reencode automático a nuevo códec → comprobación de duración aproximada → registro en sistema de ingest."
+          ],
+          "correctIndex": 2,
+          "explanation": "La secuencia correcta incorpora copia, verificación mediante checksum comparado origen/destino, validación de la estructura del contenedor y registro en el sistema de ingest. El distractor más próximo omite la comprobación criptográfica de integridad y/o la validación de metadatos.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "edit_lineal_abroll",
+          "difficulty": "difícil",
+          "questionType": "procedimiento",
+          "prompt": "En edición lineal A/B Roll con mezclador clásico, cuál es la secuencia operativa que asegura prelectura y una transición limpia desde la fuente A a la fuente B:",
+          "options": [
+            "Colocar B en programa directamente sin prelectura y activar AUTO‑transition; confiar en que el mezclador ajusta los handles automáticamente.",
+            "Armar la fuente B en preview y previsualizar, sincronizar puntos de entrada en origen, ejecutar TAKE para pasar B a program; el mezclador realiza la transición con los parámetros predefinidos.",
+            "Previsualizar A en preview, colocar B en un bus auxiliar y pulsar CUT; el mezclador intercambia las salidas físicas sin prelectura.",
+            "Desactivar preview, programar ambos buses en corte manual y ejecutar una eliminación progresiva de A mediante fader sin previsualizar B."
+          ],
+          "correctIndex": 1,
+          "explanation": "La operación correcta consiste en armar B en preview para prelectura, asegurar cues y ejecutar TAKE para que el mezclador realice la transición prevista. El distractor más cercano (D) omite la prelectura y el armado de la fuente B en preview, requisito esencial para transiciones controladas en A/B Roll.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_raid_niveles",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Compare estas afirmaciones sobre niveles RAID y tolerancia a fallos. ¿Cuál describe con mayor precisión la capacidad de reconstrucción típica de RAID5 frente a RAID6:",
+          "options": [
+            "RAID5 soporta la pérdida simultánea de dos discos y reconstruye la matriz; RAID6 soporta solo una unidad fallida.",
+            "RAID5 no realiza reconstrucción automática; RAID6 reconstruye mediante mirror interno.",
+            "RAID5 permite reconstrucción tras la pérdida de un único disco; RAID6 permite reconstrucción tras la pérdida simultánea de dos discos debido a doble paridad.",
+            "RAID5 y RAID6 ofrecen la misma tolerancia a fallos en configuraciones estándar."
+          ],
+          "correctIndex": 2,
+          "explanation": "RAID5 tiene paridad simple que permite reconstrucción tras un único fallo; RAID6 añade paridad doble y admite reconstrucción tras dos fallos simultáneos. La diferencia decisiva respecto al distractor más próximo es la capacidad de doble paridad de RAID6.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "edit_matchframe",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto al comando Match Frame en un NLE, cuál de las siguientes afirmaciones describe una limitación operativa habitual:",
+          "options": [
+            "Match Frame localiza siempre el archivo fuente aunque el original haya sido eliminado del almacenamiento.",
+            "Match Frame puede localizar el archivo fuente incluso si el proyecto fue copiado sin metadatos de origen.",
+            "Match Frame falla cuando la secuencia contiene una copia reconformada cuyo archivo fuente original está off‑line o ha sido transcodificado sin preservar timecode/reel.",
+            "Match Frame reconstruye un fotograma exacto desde el render de la secuencia si falta el material original."
+          ],
+          "correctIndex": 2,
+          "explanation": "Una limitación frecuente es que Match Frame requiere acceso al archivo fuente con metadatos originales; si el material fuente está off‑line o fue transcodificado sin conservar timecode/reel, el comando no puede localizar la fuente. El distractor más próximo presupone reconstrucción o localización aun cuando falta el original, lo cual no es correcto.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_ley5_independencia",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Cuál fue la finalidad esencial de la Ley 5/2017 y su consecuencia inmediata en la elección de los órganos de RTVE:",
+          "options": [
+            "Recuperar la independencia y pluralismo mediante la designación parlamentaria de sus órganos rectores.",
+            "Aumentar el control ejecutivo del Gobierno sobre RTVE mediante nombramientos administrativos directos.",
+            "Privatizar parcialmente los servicios de RTVE y delegar elección de órganos a operadores privados.",
+            "Limitar la intervención parlamentaria y otorgar pleno poder regulador al Consejo de Ministros."
+          ],
+          "correctIndex": 0,
+          "explanation": "La Ley 5/2017 buscó restaurar independencia y pluralismo reforzando la designación parlamentaria de los órganos de RTVE. La diferencia clave respecto al distractor más próximo es el traslado de la elección hacia el parlamento para asegurar pluralidad, no el control gubernamental.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_gop_ipb",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Respecto a una estructura GOP con I, P y B frames, cuál es la consecuencia habitual de la corrupción de un I‑frame frente a la de un B‑frame independiente:",
+          "options": [
+            "La corrupción de un I‑frame solo afecta a ese fotograma; la corrupción de un B‑frame provoca pérdida de todo el GOP.",
+            "La corrupción de un I‑frame se corrige automáticamente por los P‑frames; la corrupción de un B‑frame impide la reproducción de los I‑frames posteriores.",
+            "La corrupción de un P‑frame no afecta a otros frames; la corrupción de un B‑frame rompe la secuencia entera.",
+            "La corrupción de un I‑frame puede degradar la decodificación de todos los frames dependientes hasta el siguiente I; la corrupción de un B‑frame afecta normalmente solo a ese B y a la visualización puntual."
+          ],
+          "correctIndex": 3,
+          "explanation": "Un I‑frame es referencia principal; si se corrompe, las imágenes dependientes (P/B) hasta el siguiente I quedarán afectadas. Un B‑frame, si no es referencia, suele afectar solo a sí mismo en la reproducción. La diferencia decisiva frente al distractor más próximo es el alcance de la dependencia de predicción.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_ancho_banda",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Un servidor debe atender hasta 120 flujos simultáneos con un bitrate constante de 5 Mbps por flujo. Para dimensionar la capacidad de salida se reserva un margen de red del 20% sobre la demanda máxima. ¿Cuál es la capacidad mínima de salida agregada requerida (en Mbps)?",
+          "options": [
+            "1440 Mbps",
+            "600 Mbps",
+            "750 Mbps",
+            "720 Mbps"
+          ],
+          "correctIndex": 3,
+          "explanation": "Cálculo: demanda máxima = N × B = 120 × 5 Mbps = 600 Mbps. Aplicando el margen del 20%: capacidad = 600 × (1 + 0,20) = 720 Mbps. La opción de 600 Mbps corresponde a no aplicar el margen; 750 Mbps supone un margen aplicado erróneamente (por ejemplo 25%); 1440 Mbps dobla la demanda y no corresponde al margen indicado.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_multicam_waveform",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Para sincronizar automáticamente varias cámaras por la forma de onda de audio, cuál condición mejora de forma más directa la fiabilidad del algoritmo:",
+          "options": [
+            "Que cada cámara tenga un preamp idéntico de la misma marca.",
+            "Que exista una señal de audio común y con buena relación señal‑ruido (SNR) y transitorios reconocibles en todas las pistas.",
+            "Que todas las cámaras estén configuradas con modo de frame rate distinto para facilitar coincidencias.",
+            "Que los clips se hayan renderizado previamente en el mismo códec para igualar sus muestras."
+          ],
+          "correctIndex": 1,
+          "explanation": "La condición clave para la sincronización por forma de onda es disponer de una señal común, con buena SNR y transitorios que permitan al algoritmo alinear las pistas; el distractor más cercano (D) confunde códec con contenido de señal, que no mejora la alineación por forma de onda.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "measure_lufs_integrated",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "En control de loudness, ¿qué ventana de medición es la adecuada para detectar variaciones perceptibles que ocurren en intervalos del orden de 400 ms?:",
+          "options": [
+            "Loudness integrado (integrated).",
+            "Short‑term loudness (3 s).",
+            "True Peak loudness.",
+            "Momentary loudness (400 ms)."
+          ],
+          "correctIndex": 3,
+          "explanation": "La medida 'momentary' usa ventanas del orden de 400 ms y es la adecuada para identificar variaciones rápidas. El distractor más próximo, 'short‑term', emplea ventanas de ~3 s y no ofrece la sensibilidad temporal requerida.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_metadatos",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las funciones de los metadatos técnicos y descriptivos en catalogación, búsqueda e intercambio:",
+          "options": [
+            "Sustituyen la necesidad de comprobaciones criptográficas (checksums) para garantizar integridad de los ficheros transferidos.",
+            "Facilitan el intercambio entre sistemas describiendo códec, perfil y resolución.",
+            "Permiten filtrar y recuperar material por parámetros técnicos y editoriales.",
+            "Contribuyen a la trazabilidad entre proxies y archivos de alta resolución durante reconformado."
+          ],
+          "correctIndex": 0,
+          "explanation": "Los metadatos no sustituyen a los checksums: estos últimos son necesarios para verificar integridad binaria. Esa es la excepción; los otros enunciados describen funciones reales de los metadatos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "language_target",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Respecto a la adaptación del estilo de edición al target juvenil, indique la afirmación que constituye una excepción (no es una práctica adecuada):",
+          "options": [
+            "Reducir ritmo y densidad de planos para favorecer largos planos estáticos y mínima retórica visual.",
+            "Uso de lenguaje visual directo, cortes frecuentes y sonido con impacto rítmico.",
+            "Ritmo más ágil, mayor densidad de planos y recursos gráficos dinámicos.",
+            "Integrar elementos transmedia y referencias culturales del target con cortes sincronizados a la música."
+          ],
+          "correctIndex": 0,
+          "explanation": "Reducir ritmo y densidad favorece un estilo más contemplativo, no suele adaptarse al target juvenil que requiere ritmo y dinamismo. La diferencia clave frente a los distractores es la incompatibilidad entre ritmo lento y las expectativas del target.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_convenio_clasificacion",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Según el III Convenio Colectivo de RTVE, cuál criterio se emplea para la clasificación y organización profesional:",
+          "options": [
+            "Clasificación en grupos profesionales según funciones, responsabilidades y titulaciones requeridas.",
+            "Clasificación por antigüedad exclusivamente.",
+            "Asignación aleatoria de tareas según necesidad diaria sin grupos definidos.",
+            "Clasificación única por convenio sectorial estatal ajena a la estructura de puestos de RTVE."
+          ],
+          "correctIndex": 0,
+          "explanation": "El convenio organiza ocupaciones en grupos profesionales atendiendo a funciones, responsabilidades y requisitos formativos. La diferencia decisiva con el distractor más próximo es que no se basa solo en antigüedad ni en asignaciones arbitrarias.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_eje_180",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para cambiar el eje de acción entre dos planos sin pérdida de continuidad espacial, cuál recurso operativo es el más adecuado:",
+          "options": [
+            "Realizar un corte directo cruzando la regla sin más explicación visual.",
+            "Cambiar inmediatamente la relación de ejes y confiar en la continuidad sonora para mantener la orientación.",
+            "Insertar un plano neutral o de 180º (plano axial o plano de cruce) que muestre la cámara moviéndose a través del eje para reubicar la nueva línea de acción.",
+            "Usar zoom in y out brusco en el segundo plano para ocultar el cambio de eje."
+          ],
+          "correctIndex": 2,
+          "explanation": "La práctica operativa para reconfigurar el eje es insertar un plano neutro que cruce o muestre el desplazamiento a través del eje, reestableciendo la nueva orientación espacial. El distractor más cercano propone confiar solo en elementos sonoros, que no garantiza continuidad espacial.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_gamut_legalizer",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Antes de playout, qué acción técnica es la más adecuada para asegurar cumplimiento de niveles legales de luminancia y gamut sin deformar la intención cromática:",
+          "options": [
+            "Dejar que el receptor haga la adaptación automática sin intervención en cadena de emisión.",
+            "Reducir globalmente el contraste y la saturación en el master original sin usar legalizer.",
+            "Emplear únicamente una LUT creativa sin comprobación de niveles para corregir gamut.",
+            "Aplicar un legalizer configurado para limitar luminancia y recortar crominancia fuera de gamut con mapeo de color suave."
+          ],
+          "correctIndex": 3,
+          "explanation": "La medida adecuada es usar un legalizer configurado para limitar luminancia y ajustar crominancia fuera de gamut con estrategias de mapeo suaves, manteniendo la intención. El distractor más próximo sugiere reducir globalmente saturación, que degrada intención creativa sin garantizar legalidad.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_audio_balanceado",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico más probable cuando una línea balanceada continúa mostrando interferencias localizadas después de comprobar la polaridad y conexiones:",
+          "options": [
+            "La única causa posible es un fallo físico en el conector XLR que produce mala conexión de los pines.",
+            "El rechazo en modo común se activa automáticamente por el micrófono y no puede fallar.",
+            "El uso de cable balanceado elimina completamente cualquier necesidad de apantallamiento.",
+            "Existe una conversión a no balanceado en uno de los extremos (adaptador o dispositivo con entrada no balanceada)."
+          ],
+          "correctIndex": 3,
+          "explanation": "Si persisten interferencias, una causa habitual es la conversión inadvertida a no balanceado en uno de los extremos (adaptadores RCA, entradas no balanceadas), lo cual anula el rechazo en modo común. Es más probable y operativo que suponer fallo físico único o que el balanceado sea infalible.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "prl_postura",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento correcto para ajustar postura en un puesto de edición:",
+          "options": [
+            "Colocar silla lo más baja posible; hombros elevados para mejor visión; apoyar solo un antebrazo; elevar pies en taburete.",
+            "Ajustar altura de silla para apoyo lumbar; antebrazos paralelos al plano de trabajo con apoyo; pies apoyados en el suelo o reposapiés; monitor a nivel de mirada.",
+            "Cerrar la distancia entre ojos y pantalla minimizando movimientos de cabeza; usar cojín bajo los lumbares que impida movimiento; apoyar muñecas sobre el borde de la mesa.",
+            "Ignorar apoyo lumbar; colocar monitor en ángulo pronunciado; mantener antebrazos elevados sin apoyo para mayor movilidad."
+          ],
+          "correctIndex": 1,
+          "explanation": "El ajuste correcto incluye soporte lumbar, antebrazos apoyados y paralelos, pies apoyados y monitor a nivel de mirada. Los distractores priorizan posturas que aumentan la tensión postural y no cumplen la ergonomía básica.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_pq_hlg",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico más probable al reproducir sin conversión un master PQ frente a un master HLG en displays SDR no preparados:",
+          "options": [
+            "PQ mostrará mayor preservación de matices en altas luces sin necesidad de mapeo; HLG se saturará totalmente en sombras.",
+            "PQ tenderá a mostrar highlights fuera de escala o muy comprimidos si no hay mapping ST2084; HLG, por su naturaleza híbrida, suele integrarse de forma menos abrupta en SDR aunque requiere ajuste para preservar intención.",
+            "Ambos estándares son equivalentes en compatibilidad SDR y no requieren tratamiento distinto en la cadena de distribución.",
+            "HLG siempre produce mejor contraste en SDR y no necesita ninguna adaptación; PQ nunca puede visualizarse en SDR."
+          ],
+          "correctIndex": 1,
+          "explanation": "PQ (ST2084) es una curva perceptual basada en mastering de display y puede producir resultados abruptos sin mapeo (highlights fuera de escala). HLG es más compatible por diseño con displays SDR sin conversiones explícitas, mostrando transiciones menos severas. La diferencia clave frente al distractor más cercano es la naturaleza de mapeo y compatibilidad relativa.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "117",
       "title": "Examen 117",
