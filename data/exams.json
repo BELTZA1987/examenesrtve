@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-25",
   "exams": [
+    {
+      "id": "119",
+      "title": "Examen 119",
+      "date": "2026-11-25",
+      "level": "Alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_constitucion_derechos",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor diferencia, en clave constitucional, la libertad de expresión del derecho a la información y sus límites:",
+          "options": [
+            "La libertad de expresión protege toda manifestación individual de pensamiento sin otras restricciones, mientras que el derecho a la información es una obligación estatal de garantizar publicaciones oficiales.",
+            "El derecho a la información habilita a los medios a difundir siempre noticias veraces; la libertad de expresión, en cambio, sólo protege opiniones no comerciales.",
+            "La libertad de expresión es un derecho individual amplio que ampara opiniones y su difusión; el derecho a la información reconoce la función social y profesional de comunicar hechos de interés público, ambos sujetos a límites legales como la protección del honor, la intimidad y las decisiones judiciales.",
+            "Ambos derechos son indistinguibles: la Constitución los trata como una sola garantía que obliga al Estado a publicar y verificar todas las noticias previas a su difusión."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta distingue la naturaleza individual de la libertad de expresión y la función social/profesional del derecho a la información, e incorpora los límites constitucionales (honor, intimidad, resoluciones judiciales). Los distractores confunden obligación estatal con protección individual o presentan una fusión incorrecta de ambos derechos.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "language_paralelo_alterno",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Indique la afirmación que mejor aplica la diferencia operativa entre montaje paralelo y montaje alterno respecto a simultaneidad y asociación temática:",
+          "options": [
+            "Montaje paralelo intercala planos de acciones distintas no relacionadas temáticamente para crear contraste; montaje alterno muestra acciones simultáneas en distintos lugares hasta su convergencia temática.",
+            "Montaje paralelo y alterno son sinónimos en montaje contemporáneo: ambos buscan siempre simultaneidad temporal entre escenas; la elección es estilística.",
+            "Montaje paralelo presenta acciones simultáneas en espacios distintos enfatizando simultaneidad y relación temática; montaje alterno alterna acciones que pueden no ser simultáneas para establecer conexiones temáticas o desarrollar tensión narrativa.",
+            "Montaje alterno exige continuidad espacial entre planos para mantener eje; montaje paralelo se usa únicamente en estructuras documentales sin convergencia temática."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta señala que el paralelo enfatiza simultaneidad y asociación temática entre acciones distintas, mientras el alterno alterna secuencias que pueden no ser simultáneas para construir relación o tensión. Los distractores confunden términos o atribuyen restricciones incorrectas.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_xdcam_proxy_essence",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la relación y usos de proxy y esencia de alta resolución en flujos XDCAM durante visionado, selección e ingesta:",
+          "options": [
+            "Una vez generados los proxies y usadas para selección, es seguro descartar la esencia MXF original para liberar espacio, ya que el proxy contiene todos los metadatos necesarios para entrega final.",
+            "La esencia MXF de alta resolución es la referencia de calidad para la ingesta final y el reconformado; el proxy no sustituye a la esencia en el master final.",
+            "Durante la selección, los proxies sirven para generar EDL/AAF que luego se reconforman a la esencia original.</br>",
+            "El proxy se emplea para visionado y selección por su baja carga de datos, manteniendo timecode y sincronía con la esencia original."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la excepción: un proxy no sustituye la esencia para entrega final; descartarla sería incorrecto. Las otras tres describen usos válidos: proxies para visionado/selección, la esencia como referencia y el flujo de generación de EDL/AAF para reconformado.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "edit_relink",
+          "difficulty": "fácil",
+          "questionType": "interpretación",
+          "prompt": "Ante enlaces incorrectos en un proyecto de edición, ¿qué criterio técnico constituye el primer intento más robusto para relinkear automáticamente material a sus archivos originales:",
+          "options": [
+            "Coincidir por nombre de archivo y duración (timecode o muestreo) comprobando además coincidencia de checksum cuando esté disponible.",
+            "Reconciliar por fecha de creación del fichero y tamaño en bytes del archivo.",
+            "Basarse exclusivamente en la ruta de archivo original almacenada en metadatos del proyecto, asumiendo que la estructura de carpetas no ha cambiado.",
+            "Priorizar la coincidencia por códec y contenedor (p. ej. MXF vs MOV) independientemente de timecode o duración."
+          ],
+          "correctIndex": 0,
+          "explanation": "La coincidencia por nombre y timecode/duración, complementada con checksum si existe, es la estrategia más robusta y práctica; usar solo la ruta o solo el contenedor es frágil frente a movimientos y transcodificaciones. El distractor más próximo (ruta) falla si la estructura cambia.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "digital_xavc",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para un flujo de postproducción con cortes frecuentes y correcciones de color, ¿qué variante de la familia XAVC es más apropiada y por qué:",
+          "options": [
+            "XAVC Intra (I) porque codifica cada cuadro de forma independiente favoreciendo acceso aleatorio, edición y colorización sin dependencia de GOP.",
+            "XAVC Long‑GOP (L) por su eficiencia de almacenamiento y menor carga de decodificación en playout.",
+            "XAVC‑L en perfil 4:2:0 para preservar máxima información cromática en cada cuadro durante etalonado.",
+            "XAVC Intra en perfil 4:2:0 porque reduce ancho de banda manteniendo independencia de frames para edición ligera."
+          ],
+          "correctIndex": 0,
+          "explanation": "XAVC Intra codifica cada cuadro por separado (Intra), lo que facilita acceso aleatorio y edición intensiva y mejora la robustez en colorización; Long‑GOP es más eficiente en bitrates pero introduce dependencia entre cuadros que complica edición y etalonado. Los distractores confunden perfil cromático y ventajas de GOP.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "record_lto_ltfs",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "En un sistema de archivo a largo plazo basado en LTO con LTFS, ¿cuál es la limitación operativa que obliga a mantener un catálogo o índice externo para localizar y acceder rápidamente a ficheros?",
+          "options": [
+            "La latencia y coste de acceso físico a la cinta (carga de cartucho y búsqueda secuencial) hace impráctico depender solo del navegador LTFS para búsquedas ad‑hoc, por lo que es necesario un catálogo externo que mapee ficheros a cartuchos.",
+            "LTFS no permite realizar verificación de integridad mediante checksums tras la escritura, por lo que no es posible comprobar la integridad de los ficheros en cinta.",
+            "LTFS impone un límite máximo de tamaño de fichero que impide almacenar ficheros de alta resolución por encima de 4 GB.",
+            "Las cintas LTO con LTFS quedan inaccesibles para restauración tras un número determinado de lecturas sin necesidad de migración preventiva; por tanto hay que duplicar siempre cada cinta inmediatamente después de archivarla."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta es la primera: el acceso a cinta implica tiempos de carga/expulsión y búsqueda secuencial dentro del cartucho, por eso confiar únicamente en la vista de ficheros LTFS para localizar ítems es operativo y temporalmente ineficiente; se utiliza un catálogo externo (BDM/MAM o base de datos) que registre la ubicación del cartucho y metadatos para accesos rápidos. El distractor más próximo (sobre checksums) es incorrecto: LTFS no impide la verificación por checksum —es práctica habitual calcular y almacenar checksums y/o realizar lectura de verificación—; la limitación real que motiva el catálogo externo es la latencia física de la cinta, no la incapacidad de verificar integridad.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_correlacion_fase",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "En un medidor de correlación de fase estéreo, ¿qué lectura indica compatibilidad segura al sumarse a mono y estabilidad de la relación estéreo:",
+          "options": [
+            "-1.0 (valor negativo máximo) — indica buena compatibilidad mono y relación estéreo estable.",
+            "0.0 — indica fase aleatoria y perfecta compatibilidad mono.",
+            "+0.2 — indica correlación perfecta y mono idéntico.",
+            "+1.0 — indica correlación máxima, ausencia de cancelación al sumarse a mono y relación estéreo muy estable."
+          ],
+          "correctIndex": 3,
+          "explanation": "Una lectura de +1.0 significa correlación máxima y ausencia de inversión de fase, por tanto buena compatibilidad al sumarse a mono. Lecturas cercanas a 0 indican poca correlación; negativas indican inversión de fase y riesgo de cancelación.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_prl_principios",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Indique la afirmación más compatible con los principios generales de la Ley 31/1995 sobre acción preventiva y obligaciones empresariales:",
+          "options": [
+            "Basta con disponer de equipos de protección individual sin evaluación previa ni medidas organizativas para cumplir la acción preventiva.",
+            "La normativa exime a pequeñas empresas de evaluar riesgos siempre que cumplan con inspecciones externas periódicas.",
+            "La prevención es responsabilidad exclusiva de los representantes de los trabajadores; la empresa sólo debe facilitar recursos si lo solicita el comité de seguridad.",
+            "La empresa debe planificar la actividad preventiva integrándola en la organización, identificar y evaluar riesgos, y proporcionar formación e información a los trabajadores."
+          ],
+          "correctIndex": 3,
+          "explanation": "La Ley exige integración de la prevención en la organización, evaluación de riesgos, planificación y formación. Las otras opciones contradicen obligaciones específicas o reducen indebidamente la responsabilidad empresarial.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "digital_mov_mp4_mxf",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Para entrega de un máster de emisión con metadatos SMPTE y garantía de un solo fichero por programa, ¿qué contenedor es el procedimiento operativo más adecuado:",
+          "options": [
+            "MOV porque soporta todos los metadatos SMPTE y es el estándar de entrega broadcast.",
+            "MP4 porque garantiza compatibilidad con sistemas de emisión y contiene siempre metadata profesional.",
+            "Cualquiera de los tres; todos proporcionan idéntica trazabilidad y metadatos SMPTE por defecto.",
+            "MXF OP1a porque encapsula la esencia y metadatos en un único fichero diseñado para distribución y emisión broadcast."
+          ],
+          "correctIndex": 3,
+          "explanation": "MXF OP1a está diseñado para entregas de emisión como fichero único con metadatos SMPTE; MOV/MP4 son contenedores de propósito general y no garantizan la misma interoperabilidad broadcast ni estructura SMPTE por defecto. El distractor más próximo (MOV) no asegura un único estándar de metadatos.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "basic_filesystem_archivos",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Se requiere almacenar ficheros individuales superiores a 4 GB y máxima compatibilidad entre cámaras de rodaje, estaciones Windows/macOS/Linux y dispositivos de ingest. Diagnóstico: ¿qué sistema de archivos ofrece mejor compatibilidad práctica?",
+          "options": [
+            "exFAT — admite ficheros mayores de 4 GB y es compatible de forma nativa con la mayoría de cámaras modernas y estaciones Windows/macOS sin las limitaciones de FAT32.",
+            "NTFS — admite ficheros grandes y es nativo de Windows; macOS y algunos equipos de cámara requieren controladores adicionales.",
+            "FAT32 — ampliamente soportado por cámaras y estaciones, sin limitación de tamaño de fichero.",
+            "HFS+ — óptimo para compatibilidad entre cámaras y estaciones Windows sin drivers adicionales."
+          ],
+          "correctIndex": 0,
+          "explanation": "exFAT admite ficheros mayores de 4 GB y es la opción práctica para intercambio entre cámaras y sistemas modernos; FAT32 tiene límite ~4 GB, NTFS es Windows‑centric y suele requerir controladores en macOS/cámaras, HFS+ es específico de Apple.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "edit_edl_aaf",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que mejor resume la diferencia de alcance entre un EDL y un AAF para intercambio de proyectos de edición:",
+          "options": [
+            "El EDL transfiere múltiples pistas de vídeo y audio, efectos complejos y metadatos de color; el AAF solo contiene cortes y timecode.",
+            "Ambos, EDL y AAF, son equivalentes en capacidad de transferencia de efectos y metadatos, variando solo en la extensión del formato de archivo.",
+            "El AAF permite transferencia multitrack, handles, efectos y metadatos extensibles; el EDL contiene únicamente decisiones de corte básicas y datos de timecode en formato reducido.",
+            "El EDL es el formato moderno que reemplaza al AAF en todas las funciones de intercambio profesional."
+          ],
+          "correctIndex": 2,
+          "explanation": "AAF soporta intercambio multitrack, efectos y metadatos ampliables; EDL es limitado a decisiones de corte y timecode (y pierde efectos/metadata compleja). Los distractores sobre equivalencia o reemplazo son incorrectos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "language_music_sync",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la práctica que constituye una excepción (no es adecuada) para sincronizar montaje con música en términos de frase musical, acentos y continuidad sonora:",
+          "options": [
+            "Cortar preferentemente en los acentos fuertes de la frase musical para reforzar la continuidad rítmica.",
+            "Respetar la longitud de la frase musical cuando la narración lo requiere para evitar cortes abruptos en el sentido interno de la música.",
+            "Usar contrapunto sonoro intencional cuando se busca desajuste expresivo entre imagen y música, manteniendo coherencia narrativa.",
+            "Forzar cortes en puntos arbitrarios de la frase musical ignorando su acentuación para preservar la duración visual del plano."
+          ],
+          "correctIndex": 3,
+          "explanation": "Forzar cortes arbitrarios que ignoran la frase y acentos musicales suele romper continuidad sonora y coherencia rítmica: es la excepción. Las otras prácticas (cortar en acentos, respetar frases o usar contrapunto intencional) son técnicas válidas según intención editorial.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "prl_incendio",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Conato de incendio en un equipo eléctrico de plató con chispas y humo: diagnóstico de la medida inmediata más adecuada:",
+          "options": [
+            "Aplicar agua con extintor de mochila y continuar alimentación eléctrica para disipar calor.",
+            "Soplar el equipo para dispersar el humo y mantener alimentación para que el ventilador enfríe el equipo.",
+            "Desconectar alimentación eléctrica desde el cuadro, evacuar personal si procede y emplear extintor adecuado para fuegos eléctricos (CO2 o polvo) según riesgo de daños y seguridad.",
+            "Usar extintor de agua pulverizada sobre componentes electrónicos y mantener el sistema energizado para evitar pérdida de datos."
+          ],
+          "correctIndex": 2,
+          "explanation": "Ante fuego en equipo eléctrico hay que cortar la alimentación, evacuar si procede y usar un extintor adecuado (CO2 o polvo); el agua está contraindicado en electricidad. Los distractores proponen medidas inseguras o dañinas.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "measure_genlock_timing",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Consecuencia operativa habitual de mezclar fuentes de vídeo no sincronizadas en un mezclador sin frame‑sync:",
+          "options": [
+            "Pérdida de color en el crominance y dominante magenta.",
+            "Aumento del ruido de fondo en la pista de audio principal.",
+            "Desalineación de líneas y saltos de imagen (tearing/rollback) y problemas de conmutación limpia entre fuentes; la corrección mediante frame‑sync re‑timiza y alinea cuadros.",
+            "Reducción automática del bitrate de las fuentes hasta igualarlas."
+          ],
+          "correctIndex": 2,
+          "explanation": "Fuentes no sincronizadas provocan desalineación de barrido y transiciones con saltos; un frame‑sync corrige mediante buffering y re‑timing. Las otras opciones no describen la consecuencia típica de falta de genlock.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_accesibilidad",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Según la Ley 13/2022, señale la afirmación que constituye una excepción (no corresponde a una obligación concreta impuesta por la ley) en materia de accesibilidad audiovisual:",
+          "options": [
+            "Los prestadores deben facilitar subtitulado dirigido a personas sordas o con discapacidad auditiva en las emisiones lineales de programas de amplia audiencia.",
+            "Los prestadores están obligados a ofrecer interpretación en lengua de signos en la emisión lineal de todos los informativos y ediciones de noticias.",
+            "Los reproductores y las interfaces de las plataformas deben ofrecer controles accesibles y claramente etiquetados para activar/desactivar servicios de accesibilidad (subtítulos, audio descripción, lengua de signos).",
+            "Las plataformas a la carta (VOD) deben disponer de pista de audio descripción para películas y series para facilitar el acceso a personas con discapacidad visual."
+          ],
+          "correctIndex": 1,
+          "explanation": "La Ley 13/2022 exige medidas concretas de accesibilidad como subtitulado para personas con discapacidad auditiva, provisión de audio descripción en la oferta a la carta y la accesibilidad funcional de las plataformas y reproductores. Sin embargo, no impone de forma general y universal la obligación de proporcionar interpretación en lengua de signos en todos y cada uno de los informativos y ediciones de noticias; la normativa promueve y puede establecer requisitos en determinados contenidos o en función de la viabilidad técnica y proporcionalidad, pero la formulación absoluta de la opción D excede las obligaciones concretas establecidas. El distractor más próximo es la C, que también trata de accesibilidad de la interfaz; C sí recoge una exigencia operativa coherente con el espíritu y obligaciones prácticas de la ley, mientras que D declara una obligación universal que la norma no establece.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "record_evs_playlist",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Respecto a clips y playlists en EVS/IPDirector, indique la afirmación que mejor compara capacidades de edición, orden y publicación de una playlist:",
+          "options": [
+            "Una playlist reordenada localmente durante playout modifica automáticamente los clips fuente en el servidor y altera su essence original.",
+            "La publicación de una playlist en emisión solo requiere referencias a clips; las transiciones y efectos no dependen de handles ni de parámetros guardados en el clip.",
+            "Reordenar una playlist implica necesariamente la recodificación de todos los clips para adaptarlos al nuevo orden antes de publicación.",
+            "Una playlist controla el orden y las marcas de salida y puede incluir transiciones programadas, pero la ejecución correcta de transiciones complejas depende de la disponibilidad de handles y del formato del clip en el servidor."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta explica que la playlist gestiona orden y transiciones, pero la ejecución de transiciones complejas requiere que los clips dispongan de handles y del formato/codec adecuados en servidor. Los distractores confunden efectos con modificación de essence o recodificación necesaria.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "prl_in_itinere",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Indique cuáles de las siguientes condiciones son elementos que deben concurrir para considerar un desplazamiento como accidente 'in itinere':",
+          "options": [
+            "Cualquier desplazamiento fuera del horario laboral por motivos personales pero que ocurra en el trayecto habitual.",
+            "Desplazamiento habitual entre domicilio y trabajo, trayecto directo sin desvíos significativos y coincidencia temporal con el inicio o fin de la jornada.",
+            "Accidente durante una excursión de ocio organizada por la empresa fuera del domicilio y centro de trabajo.",
+            "Desplazamiento entre diferentes puestos informales dentro de la misma jornada sin relación con el domicilio."
+          ],
+          "correctIndex": 1,
+          "explanation": "Accidente in itinere requiere desplazamiento habitual hogar‑trabajo, trayecto directo sin desvíos significativos y ocurrir en tiempo y lugar relacionados con la jornada. Las otras opciones describen situaciones fuera de esa definición.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "basic_rgb_ycbcr",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Seleccione la afirmación que mejor describe la diferencia operativa entre RGB y YCbCr:",
+          "options": [
+            "RGB separa luminancia y dos canales de crominancia; YCbCr es un espacio compuesto por tres canales primarios idénticos a RGB.",
+            "RGB codifica directamente canales rojo, verde y azul para representación y procesamiento de color; YCbCr separa luminancia (Y) de componentes de crominancia (Cb, Cr) favoreciendo submuestreo y compresión.",
+            "YCbCr solo se usa en cámaras analógicas; RGB es exclusivo de vídeo digital.",
+            "RGB reduce datos al submuestrear color; YCbCr está pensado para representaciones lineales sin compresión."
+          ],
+          "correctIndex": 1,
+          "explanation": "RGB usa canales primarios (R,G,B); YCbCr separa luminancia y crominancia permitiendo submuestreo de color (p. ej. 4:2:2, 4:2:0) para compresión eficiente. Los distractores contienen errores técnicos sobre uso y propiedades.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "edit_evs_exchange",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Durante una retransmisión activa se transfiere un clip desde EVS a la estación de edición; el editor no puede realizar una transición con 'handles' suficientes ni reconformar. Diagnóstico más probable:",
+          "options": [
+            "El clip fue transferido en modo proxy y por tanto carece de metadatos de timecode para reconformado.",
+            "La exportación se realizó sin handles (trimado al PTC/ITC), dejando el clip sin margen para transiciones o recorte en la estación de edición.",
+            "El clip está en un códec intraframe incompatible con el NLE, por lo que la estación rechaza cualquier operación de edición aunque haya handles.",
+            "La estación de edición no soporta reproducir mientras el clip está en playout; por ello no es posible realizar ediciones aunque existan handles."
+          ],
+          "correctIndex": 1,
+          "explanation": "La falta de handles en la transferencia es el diagnóstico que explica por qué no se pueden realizar transiciones ni reconformar; la transferencia sin handles limita la edición. Los otros distractores implican problemas distintos (codec, proxy) pero no explican específicamente la carencia de handles.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_checksum",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Compare las afirmaciones sobre el uso de checksums antes y después de una copia — indique la más correcta sobre su alcance y límites:",
+          "options": [
+            "Coincidencia de checksums garantiza que el contenido es idéntico bit a bit y además garantiza que el archivo es reproducible en cualquier sistema sin más comprobaciones.",
+            "Si las sumas coinciden, la copia es bit‑a‑bit idéntica; sin embargo, la coincidencia no garantiza que ambos archivos sean semánticamente correctos (por ejemplo, ambos pueden estar corruptos de la misma forma) ni que el fichero sea interpretable por todas las aplicaciones.",
+            "Un checksum detecta cambios de metadatos de sistema de archivos y de permisos, pero no las diferencias en la esencia del fichero audiovisual.",
+            "La discrepancia de checksum puede ignorarse si el tamaño del fichero y la duración aparente coinciden, ya que son indicadores equivalentes de integridad."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta reconoce que checksums iguales confirman equivalencia bit‑a‑bit, pero no garantizan validez semántica o interpretabilidad (ambos archivos podrían ser igualmente dañados). Los otros distractores sobre alcance del checksum son incorrectos o inseguros.",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "118",
       "title": "Examen 118",
