@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-25",
+  "updatedAt": "2026-11-26",
   "exams": [
+    {
+      "id": "120",
+      "title": "Examen 120",
+      "date": "2026-11-26",
+      "level": "Muy alto",
+      "timeMinutes": 30,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_igualdad_plan",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la medida operativa compatible con el II Plan de Igualdad y la Guía de Igualdad de RTVE para reducir la discriminación por género en la producción de contenidos:",
+          "options": [
+            "Imponer cuotas fijas de presencia por sexo en pantalla independientemente del criterio editorial.",
+            "Concentrar la formación en igualdad exclusivamente en mandos directivos, sin formación obligatoria para equipos de redacción y edición.",
+            "Evitar la contratación de profesionales de un género concreto para cumplir objetivos estadísticos de paridad.",
+            "Incluir controles de revisión que detecten y corrijan expresiones, locuciones o recursos visuales con lenguaje y representación sexista antes de emisión."
+          ],
+          "correctIndex": 3,
+          "explanation": "La correcta es la segunda: implantar controles de revisión y corrección previos a la emisión es una medida preventiva y operativa coherente con el Plan; los distractores son prácticas contraproducentes o insuficientes (las cuotas rígidas vulneran criterios profesionales, excluir un género por estadística es discriminatorio y limitar la formación a directivos no garantiza implantación operativa).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "basic_dbfs",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "¿Cuál es la consecuencia operativa más relevante de mantener picos frecuentes en 0 dBFS en la cadena de audio digital?",
+          "options": [
+            "Reduce el margen dinámico audible al disminuir el ruido de fondo.",
+            "Aumenta el riesgo de clipping y distorsión en procesos posteriores o conversiones, al eliminar el headroom disponible.",
+            "Garantiza compatibilidad con todas las etapas analógicas porque 0 dBFS equivale al 0 V en salida.",
+            "Obliga a usar siempre códecs con mayor compresión para evitar pérdidas."
+          ],
+          "correctIndex": 1,
+          "explanation": "Mantener picos frecuentes en 0 dBFS elimina headroom y eleva el riesgo de clipping o distorsión en procesamiento o conversiones; los otros distractores son técnicamente incorrectos (no aumenta dinámico, 0 dBFS no equivale directamente a 0 V analógico, y no impone usar más compresión).",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "record_servidor_concurrencia",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a parámetros que limitan la concurrencia de reproducciones en un servidor de vídeo:",
+          "options": [
+            "La capacidad de I/O de disco y la CPU influyen directamente en el número de canales simultáneos atendibles.",
+            "Un servidor puede soportar un número ilimitado de reproducciones si se incrementa únicamente la memoria RAM del sistema.",
+            "El ancho de banda de red agregado y la latencia determinan la concurrencia práctica en streaming a usuarios externos.",
+            "Reservar un margen de red sobre la demanda máxima es una práctica recomendada para evitar rebuffering."
+          ],
+          "correctIndex": 1,
+          "explanation": "La tercera es la excepción: incrementar sólo la RAM no elimina otras limitaciones físicas (I/O, CPU, red); las otras afirmaciones describen factores reales que limitan la concurrencia y buenas prácticas operativas (margen de red).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "measure_waveform_luma",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento operativo correcto para verificar y corregir niveles de luminancia legales usando un monitor de forma de onda:",
+          "options": [
+            "Ajustar contraste y saturación en el monitor de programa hasta que la imagen parezca correcta; el waveform sólo sirve para calibración inicial.",
+            "Usar vectorscopio para ajustar luminancia, aplicar una LUT creativa y comprobar por inspección visual en monitor de emisión.",
+            "Visualizar el área de referencia del plano en el waveform, localizar picos y sombras, comparar con los límites legales, aplicar corrección de nivel y volver a verificar en los mismos puntos.",
+            "Exportar el material y confiar en el legalizer de playout sin comprobación previa en el waveform."
+          ],
+          "correctIndex": 2,
+          "explanation": "La primera opción describe el procedimiento apropiado: medir en puntos de referencia con waveform, comparar con límites legales, corregir y verificar. Los distractores usan herramientas inadecuadas para luminancia (vectorscopio no mide niveles de luminancia como primera herramienta), o delegan la verificación sin medición previa (legalizer sin comprobación previa es riesgoso).",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "language_news",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "En la edición urgente de una noticia de última hora destinada a emisión inmediata, ¿qué prioridad operacional debe primar en la coordinación con redacción?",
+          "options": [
+            "Velocidad absoluta: priorizar la salida al aire aún si algunas fuentes no están plenamente verificadas.",
+            "Maximizar recursos visuales y prolongar la pieza para dar contexto aunque exceda la parrilla habitual.",
+            "Priorizar la jerarquía informativa y la verificación de hechos, ajustando la locución y los totales a los recursos y al tiempo disponible.",
+            "Delegar íntegramente la estructura del teletipo a producción y no interferir en la locución."
+          ],
+          "correctIndex": 2,
+          "explanation": "La segunda es correcta: en noticias hay que priorizar verificación y jerarquía informativa, luego adaptar locución, totales y recursos al tiempo; los distractores colocan la velocidad por encima de verificación, extienden innecesariamente la pieza o delegan sin coordinación, lo cual contraviene práctica profesional de redacción y edición de noticias.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "prl_musculoesqueletico",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Medida preventiva más eficaz para reducir el riesgo de trastornos musculoesqueléticos en tareas prolongadas con teclado, ratón y tableta:",
+          "options": [
+            "Ajustar la altura y posición de teclado/ratón para mantener muñeca en posición neutra, apoyar el antebrazo y alternar pausas y cambios de tarea.",
+            "Forzar el uso de reposamuñecas rígido sin ajustar la altura del puesto.",
+            "Incrementar la sensibilidad del ratón al máximo y evitar pausas para mantener fluidez.",
+            "Sujetar la tableta con el antebrazo elevado para facilitar el trazado y mantener postura fija."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta combina ajuste ergonómico (muñeca neutra, apoyo del antebrazo) y pausas periódicas; los otros distractores proponen medidas inadecuadas o lesivas (reposamuñecas rígido sin ajuste, eliminar pausas, mantener antebrazo elevado).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "record_evs_loop",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico más probable cuando una acción marcada durante una grabación en bucle (loop) en servidor tipo EVS no puede recuperarse en archivo final:",
+          "options": [
+            "La acción quedó en el buffer de bucle y fue sobrescrita porque el periodo de retención del bucle era inferior al tiempo transcurrido hasta la consolidación.",
+            "Fallo de permissions en el sistema de archivos impidió la creación de marcadores temporales en el servidor EVS.",
+            "La cámara no grabó el material en raw, por lo que no existe soporte original.",
+            "La red saturada impidió el envío de marcadores al control de playout, aunque la essencia quedó archivada correctamente."
+          ],
+          "correctIndex": 0,
+          "explanation": "La primera opción diagnóstica es la más habitual: en grabación en loop, si la acción no se consolidó a tiempo el buffer circular la sobrescribe; los demás distractores describen causas menos probables o que no coinciden con la imposibilidad de recuperar la acción (permisos o red podrían provocar errores, pero la sobrescritura del buffer es la causa operativa más típica).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_convenio_jornada",
+          "difficulty": "fácil",
+          "questionType": "procedimiento",
+          "prompt": "Según el III Convenio Colectivo, medida operativa que regula la organización de jornada y descansos:",
+          "options": [
+            "Las variaciones de turnos no requieren comunicación previa a los trabajadores.",
+            "Las jornadas pueden extenderse indefinidamente si el trabajador firma autorización diaria.",
+            "No es necesario prever descansos interdiarios en actividades continuas.",
+            "La programación de turnos rotativos debe incorporar compensaciones en tiempo de descanso y respetar los descansos semanales establecidos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La primera es la respuesta correcta: el convenio exige organizar turnos respetando descansos y compensaciones; las otras opciones son contrarias a la regulación laboral y a las obligaciones de planificación y comunicación del convenio.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "prl_derechos_obligaciones",
+          "difficulty": "difícil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción (no corresponde a una obligación del trabajador) en materia de prevención de riesgos laborales:",
+          "options": [
+            "Participar en la formación e información que la empresa facilite sobre riesgos y medidas preventivas.",
+            "Modificar por iniciativa propia los equipos de trabajo para adaptarlos a preferencias personales sin informar al servicio de prevención.",
+            "Utilizar correctamente los medios de protección facilitados por la empresa y colaborar en su mantenimiento.",
+            "Cooperar con la empresa en la investigación de incidentes o accidentes."
+          ],
+          "correctIndex": 1,
+          "explanation": "La tercera es la excepción: modificar equipos por iniciativa propia sin informar no es una obligación y, además, está prohibido. Las otras opciones son obligaciones reales del trabajador (formación, uso correcto de EPIs, cooperación).",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "edit_shared_bins",
+          "difficulty": "fácil",
+          "questionType": "compatibilidad",
+          "prompt": "Práctica técnica compatible con trabajo colaborativo en bins compartidos para prevenir sobrescrituras:",
+          "options": [
+            "Trabajar siempre con copias locales de bins sin mecanismo de sincronización para evitar conflictos en el servidor.",
+            "Permitir que todos los editores abran y editen simultáneamente el mismo bin sin control de versiones.",
+            "Eliminar backups diarios para reducir latencia y confiar en el autosave local de cada estación.",
+            "Implementar bloqueo por bin con control de check‑out/check‑in y permisos de edición por usuario."
+          ],
+          "correctIndex": 3,
+          "explanation": "La primera opción es la práctica correcta: bloqueo de bins y control de check‑out evita sobrescrituras y gestiona permisos; los demás distractores proponen prácticas que aumentan riesgo de pérdida de trabajo o eliminan seguridad (edición simultánea sin control, eliminar backups, copias locales sin sincronización).",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "digital_frame_rate",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Efecto habitual al mezclar material a 24 fps con secuencias a 25 fps sin efectuar conversión de cadencia:",
+          "options": [
+            "Alteración de la duración y posible variación de pitch de audio al reproducir a una cadencia diferente.",
+            "Generación automática de motion vectors más precisos.",
+            "Eliminación de cualquier judder al interpolar automáticamente los fotogramas.",
+            "Compatibilidad perfecta en todos los sistemas de emisión sin necesidad de ajuste."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción correcta señala la alteración de duración y posible cambio de pitch si no se realiza conversión; los demás distractores son falsos (no generan magic motion vectors automáticos ni eliminan judder, y no son compatibles sin ajuste).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "record_backup_321",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "En comparación con confiar únicamente en RAID, ¿qué práctica responde correctamente a la política 3‑2‑1 de copias de seguridad?:",
+          "options": [
+            "Usar RAID5 en el mismo armario con instantáneas diarias como única estrategia de copia.",
+            "Mantener al menos tres copias de los datos, en al menos dos tipos distintos de soporte y con una copia fuera del sitio.",
+            "Duplicar discos en el mismo servidor para tener dos copias locales sin copia externa.",
+            "Realizar solo una copia en la nube sin mantener una copia local redundante."
+          ],
+          "correctIndex": 1,
+          "explanation": "La primera opción define la política 3‑2‑1: tres copias, dos soportes distintos y una copia off‑site. Los otros distractores son prácticas insuficientes (RAID no sustituye a backups off‑site, duplicado local no cumple 3‑2‑1, solo nube sin copia local no sigue la regla de dos soportes).",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "digital_hdr_sdr",
+          "difficulty": "difícil",
+          "questionType": "aplicación",
+          "prompt": "Para entregar un máster HDR a sistemas SDR de emisión con mínima pérdida de información, la medida más adecuada es:",
+          "options": [
+            "Eliminar metadatos HDR del fichero para forzar a los receptores a ajustar la señal.",
+            "Entregar el master HDR tal cual y confiar en que todos los monitores SDR aplicarán la conversión adecuadamente.",
+            "Incrementar la ganancia global del HDR para que en SDR la imagen resulte más brillante.",
+            "Aplicar un mapeo de tonos (tone‑mapping) dirigido que reduzca pico de luminancia y preserve detalles en sombras y medios antes de generar el master SDR."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción correcta es aplicar tone‑mapping dirigido para adaptar el rango dinámico HDR a SDR preservando detalles; confiar en dispositivos SDR o eliminar metadatos no garantiza conservación de la intención y puede provocar pérdida de detalle o sobreexposición; aumentar ganancia global es una solución inadecuada que degradará la imagen.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_chromakey",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Secuencia lógica de comprobaciones y correcciones ante problemas de chromakey (matte imperfecto, spill y bordes):",
+          "options": [
+            "Ajustar primero el keyer para obtener un matte limpio, aplicar corrección anti‑spill, refinar choke/softness y finalmente añadir light wrap para integración.",
+            "Eliminar primero el fondo y luego ajustar balance de color global del sujeto, sin tocar parámetros del keyer.",
+            "Aplicar siempre alto grado de desenfoque al borde para ocultar artefactos sin corregir el spill.",
+            "Sustituir la toma por otra sin chromakey para evitar trabajar en el key."
+          ],
+          "correctIndex": 0,
+          "explanation": "La primera opción sigue el orden operativo correcto: optimizar matte, corregir spill, refinar bordes y añadir light wrap; los distractores evitan trabajar en el keyer, ocultan artefactos con desenfoque (no deseable) o optan por sustituir toma sin resolver el problema.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley17_servicio_publico",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: un espacio informativo de RTVE sistemáticamente omite proporcionar subtitulado y audiodescripción en emisiones de interés general. ¿Qué obligación de servicio público está en riesgo según la Ley 17/2006?",
+          "options": [
+            "La obligación de mantener independencia editorial frente a poderes públicos.",
+            "La obligación de accesibilidad y atención a la diversidad de la audiencia, incluida la provisión de servicios que permitan el acceso a personas con discapacidad sensorial.",
+            "La obligación de no emitir publicidad institucional.",
+            "La obligación de formar a los trabajadores en técnicas de edición avanzada."
+          ],
+          "correctIndex": 1,
+          "explanation": "La primera opción es correcta: la Ley obliga a garantizar accesibilidad (subtitulado, audiodescripción) para el servicio público; las otras opciones no describen la obligación operativa concreta afectada en este caso (independencia editorial u otras obligaciones distintas).",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "language_jcut_lcut",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "En el montaje, se escucha la locución de la siguiente toma antes de que aparezca su imagen en pantalla. ¿Qué recurso de montaje se ha empleado?",
+          "options": [
+            "Jump cut",
+            "L‑cut",
+            "J‑cut",
+            "Match cut"
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta es J‑cut: el audio de la próxima toma entra anticipadamente respecto a su imagen. Los demás distractores no describen ese adelantamiento de audio (L‑cut se opone a este comportamiento).",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "measure_router_crosspoint",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Método operativo para verificar empíricamente un crosspoint concreto en una matriz de vídeo cuando el controlador documental es poco fiable:",
+          "options": [
+            "Reiniciar la matriz y asumir que el crosspoint se habrá corregido automáticamente.",
+            "Confiar únicamente en el registro del controlador y marcar el crosspoint como verificado si aparece en el GUI.",
+            "Enrutar desde la fuente al destino el patrón de prueba y verificar en el punto de destino con monitor y forma de onda; confirmar estado del crosspoint en la unidad física.",
+            "Cambiar la configuración de etiquetas en la base de datos sin comprobar la señal física."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción correcta exige comprobar la señal real en destino mediante patrón y medición (monitor/waveform) y confirmar la indicación física; los otros distractores confían solo en el GUI, en reinicios sin comprobación o en cambios de etiquetas sin verificar la señal efectiva.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "edit_color_order",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Orden de operaciones recomendado en una sesión de colorización para mantener coherencia:",
+          "options": [
+            "Realizar únicamente corrección secundaria y evitar cualquier ajuste primario.",
+            "Aplicar primero el look creativo y después ajustar exposición y balance blanco.",
+            "Normalización de exposición/negros, corrección de balance blanco, ajuste de contraste y saturación (primarias), matching entre planos, y aplicación final del look creativo.",
+            "Exportar antes de hacer matching y luego ajustar en delivery."
+          ],
+          "correctIndex": 2,
+          "explanation": "La secuencia indicada en la primera opción es la correcta: normalizar niveles, ajustar balance y contraste, realizar matching entre planos y finalmente aplicar el look; los otros distractores invierten el orden o omiten pasos esenciales de la cadena de coloración.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "basic_ohm_potencia",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Si una fuente mantiene una tensión fija V aplicada a una carga R, ¿qué ocurre a la corriente y la potencia disipada en la carga al reducir R a la mitad (R/2)?",
+          "options": [
+            "La corriente se duplica y la potencia se reduce a la mitad.",
+            "La corriente se mantiene y la potencia se reduce a la mitad.",
+            "La corriente se reduce a la mitad y la potencia se mantiene.",
+            "La corriente se duplica y la potencia en la carga se duplica."
+          ],
+          "correctIndex": 3,
+          "explanation": "Aplicando V=const: I=V/R, al pasar R→R/2 la corriente I se duplica; potencia P=V*I=V^2/R por tanto al reducir R a la mitad la potencia se duplica también. Los otros distractores contradicen las relaciones de la Ley de Ohm y la expresión de potencia eléctrica.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "digital_bitrate_cbr_vbr",
+          "difficulty": "media",
+          "questionType": "compatibilidad",
+          "prompt": "Seleccione la afirmación que mejor resume la ventaja operativa de VBR frente a CBR en ligazón con sus limitaciones:",
+          "options": [
+            "VBR optimiza calidad/eficiencia asignando bitrate según complejidad del contenido, pero resulta menos predecible para dimensionamiento de red y multiplexación que CBR.",
+            "VBR garantiza un ancho de banda fijo en todo momento, igual que CBR, sin variaciones en la tasa.",
+            "CBR siempre ofrece mejor calidad visual que VBR al usar la misma media rate.",
+            "VBR elimina la necesidad de buffers en el reproductor cliente."
+          ],
+          "correctIndex": 0,
+          "explanation": "La primera opción es correcta: VBR consigue mayor eficiencia y mejor calidad promedio al asignar bitrate según complejidad, pero complica el dimensionamiento de red y sincronización en multiplex; las otras afirmaciones son incorrectas (CBR es el que asegura ancho de banda constante, CBR no siempre ofrece mejor calidad al mismo rate, y VBR no suprime la necesidad de buffers).",
+          "category": "Tratamiento digital de la señal de televisión"
+        }
+      ]
+    },
     {
       "id": "119",
       "title": "Examen 119",
