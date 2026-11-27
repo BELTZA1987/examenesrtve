@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "exams": [
+    {
+      "id": "121",
+      "title": "Examen 121",
+      "date": "2026-11-27",
+      "level": "Muy alto",
+      "timeMinutes": 45,
+      "blocks": [
+        "Temario general y normativa RTVE",
+        "Conocimientos básicos",
+        "Tratamiento digital de la señal de televisión",
+        "Equipos de medida y control",
+        "Grabación y reproducción de vídeo",
+        "Edición de vídeo",
+        "Lenguaje audiovisual y teoría del montaje",
+        "Prevención de riesgos laborales"
+      ],
+      "questions": [
+        {
+          "planIndex": 1,
+          "conceptId": "norm_ley8_financiacion",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a los principios generales del sistema de financiación previsto por la Ley 8/2009:",
+          "options": [
+            "Debe buscarse una fuente de financiación pública estable que garantice la suficiencia de la corporación.",
+            "Se financia exclusivamente por ingresos publicitarios comerciales sin aportación presupuestaria pública.",
+            "El modelo debe proteger la independencia editorial frente a intereses comerciales.",
+            "Se implantan restricciones sobre la explotación con finalidad lucrativa de determinados espacios de programación."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción correcta es la tercera: la Ley 8/2009 no establece la financiación exclusiva por publicidad. Las demás expresan principios de suficiencia pública, independencia y limitaciones al carácter lucrativo, que sí forman parte del marco; la idea de dependencia exclusiva de la publicidad es la excepción.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 2,
+          "conceptId": "edit_offline_online",
+          "difficulty": "fácil",
+          "questionType": "aplicación",
+          "prompt": "Secuencia operativa adecuada para reconformar un montaje realizado sobre proxies a los archivos originales:",
+          "options": [
+            "Editar con proxies → generar lista de decisiones (EDL/AAF) → aplicar la lista para reconformar a los originales.",
+            "Editar con proxies → convertir todos los originales a proxies de mayor calidad → ensamblar final en proxies.",
+            "Editar con proxies → exportar master en proxy → reemplazar el master por originales en la entrega.",
+            "Editar con proxies → sustituir proxies manualmente por originales sin lista de decisiones."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 1 es la correcta: el flujo offline/online exige edición sobre proxies, exportación de una lista de decisiones (EDL/AAF) y uso de esa lista para reconformar exactamente sobre los originales. Las otras opciones omiten la generación o uso de la lista o proponen procedimientos imprecisos.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 3,
+          "conceptId": "measure_true_peak",
+          "difficulty": "difícil",
+          "questionType": "comparación",
+          "prompt": "Comparación válida entre True Peak y Sample Peak en control de entrega de audio:",
+          "options": [
+            "Sample Peak mide la onda reconstruida entre muestras y normalmente supera al True Peak.",
+            "True Peak estima picos inter‑muestra tras reconstrucción del filtro de antialias y suele ser igual o superior al Sample Peak.",
+            "True Peak y Sample Peak son idénticos cuando el audio se mide tras un convertidor D/A.",
+            "Sample Peak corrige la medición por efectos de filtrado de reconstrucción y da la lectura más conservadora."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 2 es correcta: True Peak estima picos entre muestras (post‑reconstrucción) y normalmente es igual o superior al Sample Peak, que solo mide muestras discretas. La 1 invierte la relación; la 3 y 4 son imprecisas respecto al alcance de cada medida.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 4,
+          "conceptId": "prl_en_mision",
+          "difficulty": "difícil",
+          "questionType": "directa",
+          "prompt": "Medida preventiva prioritaria que debe adoptar la empresa antes del desplazamiento para una misión profesional fuera del centro habitual:",
+          "options": [
+            "Proveer únicamente equipo de protección individual (EPI) sin evaluación previa.",
+            "Solicitar al trabajador que firme una exención de responsabilidades antes de salir.",
+            "Confiar en que el trabajador gestione su propio seguro y medidas de protección durante el desplazamiento.",
+            "Realizar evaluación de riesgos específica de la misión y facilitar información y formación al trabajador."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 2 es correcta: la prevención en misión exige evaluación específica de riesgos y la información/formación adecuada antes del desplazamiento. Las otras opciones omiten la evaluación preventiva o delegan responsabilidades al trabajador, lo cual no es procedente.",
+          "category": "Prevención de riesgos laborales"
+        },
+        {
+          "planIndex": 5,
+          "conceptId": "record_soportes_estado_solido",
+          "difficulty": "media",
+          "questionType": "interpretación",
+          "prompt": "Práctica operativa adecuada tras verificar copias de seguridad de ficheros provenientes de un SSD de estado sólido usado en rodaje:",
+          "options": [
+            "Formatear el SSD sin más comprobaciones para liberar espacio inmediatamente.",
+            "Sobrescribir con ceros todo el disco para garantizar rendimiento y seguridad.",
+            "Actualizar firmware del SSD si procede y realizar un 'secure erase' o comando de borrado recomendado por el fabricante después de verificar las copias.",
+            "Conservar el SSD con los ficheros originales y reutilizarlo sin limpieza para evitar sobrecargas de escritura."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es la correcta: tras verificar integridad y trazabilidad de las copias, es recomendable aplicar actualizaciones de firmware y el método de borrado recomendado por el fabricante (secure erase) para restaurar el rendimiento y preparar el soporte. Formatear sin verificar, sobrescribir masivamente o reutilizar sin limpieza pueden perjudicar integridad o vida útil.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 6,
+          "conceptId": "edit_timecode_dropframe",
+          "difficulty": "difícil",
+          "questionType": "interpretación",
+          "prompt": "Indique la afirmación que interpreta correctamente el código de tiempo drop‑frame:",
+          "options": [
+            "Drop‑frame consiste en eliminar físicamente fotogramas del material para ajustar el tiempo real.",
+            "Drop‑frame altera la cadencia de fotogramas real de la imagen registrada.",
+            "Drop‑frame sólo se aplica para acelerar la reproducción en procesos de conformado.",
+            "Drop‑frame ajusta la numeración del timecode saltándose determinados contadores para que el timecode coincida con el tiempo real sin perder fotogramas."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 2 es correcta: el drop‑frame no suprime imágenes, sino que ajusta la numeración del timecode (saltando números de frames en intervalos concretos) para que el conteo coincida con el tiempo real en sistemas con framerates no enteros respecto al reloj. Las otras opciones confunden numeración con eliminación o con alteración de la imagen.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 7,
+          "conceptId": "measure_vectorscope",
+          "difficulty": "media",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico correcto sobre lecturas en un vectorscopio: relación entre ángulo y distancia al centro.",
+          "options": [
+            "El ángulo del punto indica la saturación y la distancia al centro determina el tono; una lectura próxima al marcador de piel indica baja saturación.",
+            "El ángulo del punto indica el tono (hue) y la distancia al centro la saturación; una lectura alineada con la línea de piel y a distancia moderada sugiere tono de piel dentro del estándar con saturación moderada.",
+            "La posición en ángulo determina luminancia y la distancia determina profundidad de bit; la línea de piel no es relevante.",
+            "Una lectura hacia la derecha del vectorscopio siempre indica dominante roja independientemente de la distancia al centro."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 2 es correcta: en vectorscopio el ángulo corresponde al tono (hue) y la distancia al centro a la saturación; una señal alineada con la referencia de piel y no demasiado lejos del centro indica un tono de piel estándar con saturación moderada. Las otras opciones confunden magnitudes o sobregeneralizan.",
+          "category": "Equipos de medida y control"
+        },
+        {
+          "planIndex": 8,
+          "conceptId": "norm_constitucion_igualdad",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Procedimiento ordenado que debe seguir la redacción para atender una queja por posible discriminación en un contenido, según el principio constitucional de igualdad:",
+          "options": [
+            "Archivar la queja automáticamente; solo atender reclamaciones judiciales.",
+            "Analizar la queja, valorar si existe trato discriminatorio, aplicar corrección editorial y documentar las medidas adoptadas.",
+            "Sustituir al autor del contenido sin análisis previo para evitar responsabilidades.",
+            "Publicar una disculpa pública sin revisar el contenido original."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 2 es correcta: el principio de igualdad exige valorar la queja, determinar si existe trato discriminatorio, corregir o matizar el contenido y documentar las acciones. Las otras respuestas omiten evaluación, debido proceso o documentación.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 9,
+          "conceptId": "language_raccord_mirada",
+          "difficulty": "fácil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico inmediato ante este raccord: en el plano A el personaje mira hacia la derecha; en el plano B siguiente aparece mirando hacia la izquierda:",
+          "options": [
+            "Raccord de mirada correcto; la continuidad espacial se mantiene.",
+            "Se trata de una elipsis temporal y no afecta a la coherencia espacial.",
+            "Problema de iluminación, no de raccord.",
+            "Ruptura de raccord por eje de mirada cruzado; incoherencia espacial entre planos."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 2 es correcta: si la dirección de la mirada cambia de derecha a izquierda entre planos contiguos sin motivo, hay una ruptura del raccord espacial (eje de mirada cruzado) que genera incoherencia. No es principalmente un problema de iluminación ni una elipsis.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 10,
+          "conceptId": "digital_proxy_diseno",
+          "difficulty": "fácil",
+          "questionType": "directa",
+          "prompt": "Cuál de los siguientes criterios NO es relevante al diseñar proxies para edición:",
+          "options": [
+            "Aplicar una corrección de color definitiva (LUT creativa) en el proxy.",
+            "Bitrate del proxy para preservar calidad visual en reproducción.",
+            "Códec elegido y su compatibilidad con la estación de edición.",
+            "Resolución objetivo del proxy respecto a la original."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 4 es correcta como no relevante: los proxies deben facilitar edición y trazabilidad (resolución, bitrate y códec), pero no deben llevar correcciones de color definitivas porque eso añadiría complejidad y riesgo de inconsistencias con las originales.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 11,
+          "conceptId": "language_elipsis",
+          "difficulty": "fácil",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a las características de la elipsis en montaje:",
+          "options": [
+            "La elipsis elimina tiempo narrativo manteniendo la comprensión de la acción.",
+            "La elipsis puede acelerar el ritmo narrativo sin perder causa‑efecto esencial.",
+            "La elipsis exige necesariamente que el espectador perciba visualmente el salto temporal de forma ostensible.",
+            "La elipsis se utiliza para comprimir duración manteniendo continuidad narrativa."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es la excepción: la elipsis no exige que el salto temporal sea siempre ostentosamente perceptible; puede ser sutil mientras preserve la comprensión. Las demás describen características habituales de la elipsis.",
+          "category": "Lenguaje audiovisual y teoría del montaje"
+        },
+        {
+          "planIndex": 12,
+          "conceptId": "basic_red_ip",
+          "difficulty": "media",
+          "questionType": "comparación",
+          "prompt": "Diagnóstico más probable: equipo A 192.168.10.5/24 gateway 192.168.11.1 no puede salir a Internet; equipo B en la misma LAN sí. ¿Cuál es la causa más plausible?",
+          "options": [
+            "DNS incorrecto en el equipo A impide resolución de nombres.",
+            "Fallo físico del switch que conecta sólo al equipo A.",
+            "El gateway configurado en el equipo A está en una subred diferente a la del host y por tanto no es alcanzable.",
+            "Conflicto de direcciones IP duplicadas en la red."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 1 es correcta: el gateway 192.168.11.1 no pertenece a la subred 192.168.10.0/24, por lo que el host no puede alcanzar su puerta de enlace y no accede a Internet. Las otras opciones son posibles pero menos consistentes con la información dada.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 13,
+          "conceptId": "record_ingest_capture_import",
+          "difficulty": "media",
+          "questionType": "procedimiento",
+          "prompt": "Seleccione la operación que corresponde a la transferencia en tiempo real desde una cinta al sistema de edición preservando timecode y control VTR:",
+          "options": [
+            "Ingest",
+            "Import",
+            "Link",
+            "Capture"
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 'Capture' es la correcta: capturar implica transferencia en tiempo real controlada por el VTR con preservación de timecode. 'Import' suele ser transferencia archivo‑a‑archivo, 'Link' crea referencias sin copiar, y 'Ingest' es término genérico de incorporación que puede incluir capture pero aquí la descripción técnica específica corresponde a 'capture'.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 14,
+          "conceptId": "edit_trim_modes",
+          "difficulty": "fácil",
+          "questionType": "comparación",
+          "prompt": "¿Qué modo de trim permite cambiar qué parte del material fuente se reproduce dentro de un clip en la secuencia sin alterar la duración ni los puntos de edición adyacentes?",
+          "options": [
+            "Slip",
+            "Roll",
+            "Ripple",
+            "Slide"
+          ],
+          "correctIndex": 0,
+          "explanation": "Slip es correcto: modifica los puntos de entrada/salida del material fuente dentro del clip sin cambiar la posición o duración del clip en la línea de tiempo. Ripple y roll afectan la duración o puntos vecinos; slide desplaza el clip en la secuencia afectando ediciones adyacentes.",
+          "category": "Edición de vídeo"
+        },
+        {
+          "planIndex": 15,
+          "conceptId": "norm_ley13_menores",
+          "difficulty": "difícil",
+          "questionType": "diagnóstico",
+          "prompt": "Diagnóstico: un programa con contenido explícito se emite sin clasificación de edad ni medidas de control de acceso. ¿Qué obligación de la Ley 13/2022 se está incumpliendo?",
+          "options": [
+            "Obligación de conservar los ficheros originales durante 10 años.",
+            "Obligación de subtitular obligatoriamente todo el contenido en emisión.",
+            "Obligación de ofertar siempre versión reducida del programa para menores.",
+            "Obligación de clasificar contenidos por edades y aplicar límites de accesibilidad para menores."
+          ],
+          "correctIndex": 3,
+          "explanation": "La opción 1 es correcta: la Ley 13/2022 exige clasificar contenidos y aplicar medidas de protección y control de acceso para menores. Las demás no reflejan obligaciones centrales de protección de menores establecidas por esa ley.",
+          "category": "Temario general y normativa RTVE"
+        },
+        {
+          "planIndex": 16,
+          "conceptId": "digital_umid",
+          "difficulty": "media",
+          "questionType": "excepción",
+          "prompt": "Indique la afirmación que constituye una excepción respecto a la función operativa del UMID en ficheros audiovisuales:",
+          "options": [
+            "El UMID garantiza la integridad criptográfica (checksum) del fichero original.",
+            "El UMID facilita la trazabilidad del material entre sistemas y procesos de producción.",
+            "El UMID proporciona un identificador único y persistente para un material a lo largo de su vida operativa.",
+            "El UMID permite enlazar metadatos descriptivos asociados al objeto multimedia."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 3 es la excepción: el UMID identifica de forma única y ayuda a la trazabilidad y asociación de metadatos, pero no es un mecanismo de integridad criptográfica por sí mismo (no sustituye a checksums).",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 17,
+          "conceptId": "basic_masa_bucle",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Aplicación práctica ante un zumbido de baja frecuencia (50 Hz) en la monitorización tras conectar equipo externo: medida más apropiada para diagnosticar y corregir un bucle de masa:",
+          "options": [
+            "Invertir la polaridad en una de las señales de audio.",
+            "Insertar un transformador de aislamiento o asegurar una unión de tierra única y común entre equipos.",
+            "Probar desconectar la conexión de tierra en uno de los equipos sin más comprobaciones.",
+            "Aumentar la ganancia del preamplificador para enmascarar el zumbido."
+          ],
+          "correctIndex": 1,
+          "explanation": "La opción 3 es correcta: las soluciones seguras y eficaces para bucles de masa son aislamiento mediante transformador o asegurar un esquema de puesta a tierra única y común; invertir polaridad o desconectar tierra pueden generar problemas o riesgos, y aumentar ganancia agrava el problema.",
+          "category": "Conocimientos básicos"
+        },
+        {
+          "planIndex": 18,
+          "conceptId": "digital_codec_prores_dnx",
+          "difficulty": "media",
+          "questionType": "aplicación",
+          "prompt": "Para garantizar compatibilidad en un flujo de postproducción multiplataforma entre estaciones Windows y macOS que use Avid y otros NLEs, ¿qué códec intermedio resulta más adecuado operativamente?",
+          "options": [
+            "DNxHR en perfil intermedio/alto por su compatibilidad y enfoque para posproducción.",
+            "ProRes 422 HQ exclusivamente por ser el estándar universal sin limitaciones.",
+            "H.264 MP4 por su alta compresión y pequeño tamaño.",
+            "RAW propietario de cámara para todas las etapas de edición en offline."
+          ],
+          "correctIndex": 0,
+          "explanation": "La opción 3 es correcta: DNxHR ofrece perfiles diseñados para postproducción y buena compatibilidad multiplataforma, especialmente en entornos Avid. H.264 no es idóneo como intermedio por compresión; ProRes es ampliamente soportado pero en entornos Windows puede presentar más limitaciones; RAW no es práctico como códec intermedio en edición colaborativa.",
+          "category": "Tratamiento digital de la señal de televisión"
+        },
+        {
+          "planIndex": 19,
+          "conceptId": "record_migracion_archivo",
+          "difficulty": "difícil",
+          "questionType": "compatibilidad",
+          "prompt": "Práctica que mejor responde a mitigar obsolescencia y garantizar preservación operativa de archivos audiovisuales:",
+          "options": [
+            "Almacenar copias originales en su soporte físico indefinidamente y mantener el hardware antiguo.",
+            "Confiar exclusivamente en un único sistema RAID de alta disponibilidad sin copias externas.",
+            "Implementar migración periódica a soportes y formatos actuales, con verificación por checksums y auditorías periódicas.",
+            "Mantener sólo copias en la nube sin control de integridad local."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es correcta: las mejores prácticas incluyen migración periódica a soportes/formatos actuales y verificación mediante checksums y registros. Las otras opciones ponen todos los huevos en una sola cesta o descuidan verificación y redundancia.",
+          "category": "Grabación y reproducción de vídeo"
+        },
+        {
+          "planIndex": 20,
+          "conceptId": "prl_pvd_pantalla",
+          "difficulty": "media",
+          "questionType": "directa",
+          "prompt": "Colocación y configuraciones de pantalla que reducen reflejos y fatiga visual en un puesto de edición:",
+          "options": [
+            "Situar la pantalla con la parte superior por encima del nivel de los ojos y a menos de 30 cm de distancia.",
+            "Orientar la pantalla directamente frente a una ventana para maximizar iluminación natural y situarla a 120 cm de distancia.",
+            "Colocar la pantalla a 50–70 cm de distancia, con la parte superior ligeramente por debajo del nivel de los ojos y evitar la alineación directa con fuentes de luz intensas o ventanas.",
+            "Aumentar brillo al máximo y colocar la pantalla perpendicular a la línea de visión para forzar mirada neutra."
+          ],
+          "correctIndex": 2,
+          "explanation": "La opción 2 es correcta: la recomendación ergonómica incluye distancia 50–70 cm, parte superior de la pantalla ligeramente por debajo del nivel ocular y evitar que las fuentes luminosas generen reflejos directos; las otras opciones proponen distancias o posiciones inadecuadas que aumentan fatiga o reflejos.",
+          "category": "Prevención de riesgos laborales"
+        }
+      ]
+    },
     {
       "id": "120",
       "title": "Examen 120",
